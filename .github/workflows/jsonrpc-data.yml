@@ -1,0 +1,117 @@
+name: Update JSON-RPC Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      sync_target:
+        description: "JSON cache target to generate"
+        required: false
+        default: all
+        type: choice
+        options:
+          - all
+          - market
+          - stablecoins
+          - tokenlist
+      market_limit:
+        description: "CoinGecko market rows to fetch"
+        required: false
+        default: "100"
+      tokenlist_max_rank:
+        description: "Only include tokenlist assets with rank <= this value; 0 keeps all active assets"
+        required: false
+        default: "100"
+  push:
+    branches:
+      - main
+      - master
+    paths-ignore:
+      - "extensions/jsonrpc/data/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jsonrpc-data-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update-jsonrpc-data:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: extensions/jsonrpc/go.mod
+          cache-dependency-path: extensions/jsonrpc/go.sum
+
+      - name: Require CoinGecko API key
+        env:
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+        run: |
+          if [ -z "$COINGECKO_API_KEY" ]; then
+            echo "::error::COINGECKO_API_KEY repository secret is required to generate JSON-RPC data"
+            exit 1
+          fi
+
+      - name: Test JSON-RPC sidecar
+        working-directory: extensions/jsonrpc
+        run: make test
+
+      - name: Generate JSON-RPC data
+        working-directory: extensions/jsonrpc
+        env:
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          COINGECKO_API_BASE_URL: ${{ vars.COINGECKO_API_BASE_URL }}
+          COINGECKO_API_KEY_HEADER: ${{ vars.COINGECKO_API_KEY_HEADER }}
+          DEFILLAMA_STABLECOIN_BASE_URL: ${{ vars.DEFILLAMA_STABLECOIN_BASE_URL }}
+          SYNC_TARGET: ${{ github.event.inputs.sync_target || 'all' }}
+          MARKET_LIMIT: ${{ github.event.inputs.market_limit || '100' }}
+          TOKENLIST_MAX_RANK: ${{ github.event.inputs.tokenlist_max_rank || '100' }}
+        run: |
+          sync_args="--sync-target ${SYNC_TARGET} --market-limit ${MARKET_LIMIT} --tokenlist-max-rank ${TOKENLIST_MAX_RANK}"
+          make sync-once SYNC_ARGS="$sync_args"
+
+      - name: Verify generated files
+        env:
+          SYNC_TARGET: ${{ github.event.inputs.sync_target || 'all' }}
+        run: |
+          case "$SYNC_TARGET" in
+            all)
+              files="market.json stablecoins.json tokenlist.json tokenlist-report.json"
+              ;;
+            market)
+              files="market.json"
+              ;;
+            stablecoins)
+              files="stablecoins.json"
+              ;;
+            tokenlist)
+              files="tokenlist.json tokenlist-report.json"
+              ;;
+            *)
+              echo "::error::unsupported sync_target: $SYNC_TARGET"
+              exit 1
+              ;;
+          esac
+          for file in $files; do
+            test -s "extensions/jsonrpc/data/$file"
+            python3 -m json.tool "extensions/jsonrpc/data/$file" >/dev/null
+          done
+
+      - name: Commit generated JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          find extensions/jsonrpc/data -maxdepth 1 -name '*.json' -exec git add {} +
+          if git diff --cached --quiet; then
+            echo "No JSON data changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update jsonrpc market data"
+          git push
