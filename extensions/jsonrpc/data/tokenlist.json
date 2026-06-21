@@ -1,6 +1,6 @@
 {
   "source": "trustwallet+coingecko",
-  "updatedAt": "2026-06-21T02:51:23Z",
+  "updatedAt": "2026-06-21T03:27:59Z",
   "tokens": [
     {
       "kind": "token",
@@ -19,10 +19,10 @@
         "source": "coingecko",
         "coingeckoId": "bitcoin",
         "marketCapRank": 1,
-        "marketCap": 1286259051104,
-        "totalVolume": 16908714401,
-        "currentPrice": 64188,
-        "lastUpdated": "2026-06-21T02:49:53.493Z"
+        "marketCap": 1290045805162,
+        "totalVolume": 18135831519,
+        "currentPrice": 64354,
+        "lastUpdated": "2026-06-21T03:26:58.714Z"
       },
       "links": [
         {
@@ -52,10 +52,10 @@
         "source": "coingecko",
         "coingeckoId": "bitcoin",
         "marketCapRank": 1,
-        "marketCap": 1286259051104,
-        "totalVolume": 16908714401,
-        "currentPrice": 64188,
-        "lastUpdated": "2026-06-21T02:49:53.493Z"
+        "marketCap": 1290045805162,
+        "totalVolume": 18135831519,
+        "currentPrice": 64354,
+        "lastUpdated": "2026-06-21T03:26:58.714Z"
       },
       "tags": [
         "defi",
@@ -93,10 +93,10 @@
         "source": "coingecko",
         "coingeckoId": "bitcoin",
         "marketCapRank": 1,
-        "marketCap": 1286259051104,
-        "totalVolume": 16908714401,
-        "currentPrice": 64188,
-        "lastUpdated": "2026-06-21T02:49:53.493Z"
+        "marketCap": 1290045805162,
+        "totalVolume": 18135831519,
+        "currentPrice": 64354,
+        "lastUpdated": "2026-06-21T03:26:58.714Z"
       },
       "tags": [
         "defi"
@@ -137,10 +137,10 @@
         "source": "coingecko",
         "coingeckoId": "bitcoin",
         "marketCapRank": 1,
-        "marketCap": 1286259051104,
-        "totalVolume": 16908714401,
-        "currentPrice": 64188,
-        "lastUpdated": "2026-06-21T02:49:53.493Z"
+        "marketCap": 1290045805162,
+        "totalVolume": 18135831519,
+        "currentPrice": 64354,
+        "lastUpdated": "2026-06-21T03:26:58.714Z"
       },
       "links": [
         {
@@ -166,10 +166,10 @@
         "source": "coingecko",
         "coingeckoId": "bitcoin",
         "marketCapRank": 1,
-        "marketCap": 1286259051104,
-        "totalVolume": 16908714401,
-        "currentPrice": 64188,
-        "lastUpdated": "2026-06-21T02:49:53.493Z"
+        "marketCap": 1290045805162,
+        "totalVolume": 18135831519,
+        "currentPrice": 64354,
+        "lastUpdated": "2026-06-21T03:26:58.714Z"
       },
       "links": [
         {
@@ -195,10 +195,10 @@
         "source": "coingecko",
         "coingeckoId": "bitcoin",
         "marketCapRank": 1,
-        "marketCap": 1286259051104,
-        "totalVolume": 16908714401,
-        "currentPrice": 64188,
-        "lastUpdated": "2026-06-21T02:49:53.493Z"
+        "marketCap": 1290045805162,
+        "totalVolume": 18135831519,
+        "currentPrice": 64354,
+        "lastUpdated": "2026-06-21T03:26:58.714Z"
       },
       "links": [
         {
@@ -236,10 +236,10 @@
         "source": "coingecko",
         "coingeckoId": "ethereum",
         "marketCapRank": 2,
-        "marketCap": 209345669903,
-        "totalVolume": 7564524249,
-        "currentPrice": 1735.37,
-        "lastUpdated": "2026-06-21T02:49:53.504Z"
+        "marketCap": 209686890549,
+        "totalVolume": 9060075487,
+        "currentPrice": 1736.61,
+        "lastUpdated": "2026-06-21T03:26:57.915Z"
       },
       "tags": [
         "defi"
@@ -280,10 +280,10 @@
         "source": "coingecko",
         "coingeckoId": "ethereum",
         "marketCapRank": 2,
-        "marketCap": 209345669903,
-        "totalVolume": 7564524249,
-        "currentPrice": 1735.37,
-        "lastUpdated": "2026-06-21T02:49:53.504Z"
+        "marketCap": 209686890549,
+        "totalVolume": 9060075487,
+        "currentPrice": 1736.61,
+        "lastUpdated": "2026-06-21T03:26:57.915Z"
       },
       "tags": [
         "dapp"
@@ -306,10 +306,10 @@
         "source": "coingecko",
         "coingeckoId": "ethereum",
         "marketCapRank": 2,
-        "marketCap": 209345669903,
-        "totalVolume": 7564524249,
-        "currentPrice": 1735.37,
-        "lastUpdated": "2026-06-21T02:49:53.504Z"
+        "marketCap": 209686890549,
+        "totalVolume": 9060075487,
+        "currentPrice": 1736.61,
+        "lastUpdated": "2026-06-21T03:26:57.915Z"
       },
       "tags": [
         "dapp",
@@ -351,10 +351,10 @@
         "source": "coingecko",
         "coingeckoId": "ethereum",
         "marketCapRank": 2,
-        "marketCap": 209345669903,
-        "totalVolume": 7564524249,
-        "currentPrice": 1735.37,
-        "lastUpdated": "2026-06-21T02:49:53.504Z"
+        "marketCap": 209686890549,
+        "totalVolume": 9060075487,
+        "currentPrice": 1736.61,
+        "lastUpdated": "2026-06-21T03:26:57.915Z"
       },
       "tags": [
         "dapp"
@@ -387,10 +387,10 @@
         "source": "coingecko",
         "coingeckoId": "ethereum",
         "marketCapRank": 2,
-        "marketCap": 209345669903,
-        "totalVolume": 7564524249,
-        "currentPrice": 1735.37,
-        "lastUpdated": "2026-06-21T02:49:53.504Z"
+        "marketCap": 209686890549,
+        "totalVolume": 9060075487,
+        "currentPrice": 1736.61,
+        "lastUpdated": "2026-06-21T03:26:57.915Z"
       },
       "tags": [
         "dapp"
@@ -419,10 +419,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -459,10 +459,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -515,10 +515,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -555,10 +555,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -595,10 +595,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -639,10 +639,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin",
@@ -676,10 +676,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -716,10 +716,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -756,10 +756,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "pairs": [
         {
@@ -807,10 +807,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -847,10 +847,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -887,10 +887,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -927,10 +927,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -967,10 +967,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1003,10 +1003,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1043,10 +1043,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1083,10 +1083,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1123,10 +1123,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1163,10 +1163,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin",
@@ -1204,10 +1204,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1244,10 +1244,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1284,10 +1284,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1324,10 +1324,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1360,10 +1360,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1392,10 +1392,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1436,10 +1436,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1480,10 +1480,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1524,10 +1524,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1564,10 +1564,10 @@
         "source": "coingecko",
         "coingeckoId": "tether",
         "marketCapRank": 3,
-        "marketCap": 186211071717,
-        "totalVolume": 31554818589,
-        "currentPrice": 0.998887,
-        "lastUpdated": "2026-06-21T02:49:53.498Z"
+        "marketCap": 186226058040,
+        "totalVolume": 31657445340,
+        "currentPrice": 0.998834,
+        "lastUpdated": "2026-06-21T03:26:57.844Z"
       },
       "tags": [
         "stablecoin"
@@ -1600,10 +1600,10 @@
         "source": "coingecko",
         "coingeckoId": "binancecoin",
         "marketCapRank": 4,
-        "marketCap": 79330473731,
-        "totalVolume": 484440591,
-        "currentPrice": 588.67,
-        "lastUpdated": "2026-06-21T02:49:53.311Z"
+        "marketCap": 79521325449,
+        "totalVolume": 485694790,
+        "currentPrice": 589.96,
+        "lastUpdated": "2026-06-21T03:26:57.857Z"
       }
     },
     {
@@ -1623,10 +1623,10 @@
         "source": "coingecko",
         "coingeckoId": "binancecoin",
         "marketCapRank": 4,
-        "marketCap": 79330473731,
-        "totalVolume": 484440591,
-        "currentPrice": 588.67,
-        "lastUpdated": "2026-06-21T02:49:53.311Z"
+        "marketCap": 79521325449,
+        "totalVolume": 485694790,
+        "currentPrice": 589.96,
+        "lastUpdated": "2026-06-21T03:26:57.857Z"
       },
       "tags": [
         "staking-native",
@@ -1668,10 +1668,10 @@
         "source": "coingecko",
         "coingeckoId": "binancecoin",
         "marketCapRank": 4,
-        "marketCap": 79330473731,
-        "totalVolume": 484440591,
-        "currentPrice": 588.67,
-        "lastUpdated": "2026-06-21T02:49:53.311Z"
+        "marketCap": 79521325449,
+        "totalVolume": 485694790,
+        "currentPrice": 589.96,
+        "lastUpdated": "2026-06-21T03:26:57.857Z"
       },
       "tags": [
         "staking-native"
@@ -1712,10 +1712,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -1756,10 +1756,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -1800,10 +1800,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -1848,10 +1848,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -1884,10 +1884,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin",
@@ -1917,10 +1917,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -1957,10 +1957,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -1993,10 +1993,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2029,10 +2029,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "binance-peg",
@@ -2078,10 +2078,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2126,10 +2126,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2174,10 +2174,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2218,10 +2218,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2266,10 +2266,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "pairs": [
         {
@@ -2326,10 +2326,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin",
@@ -2367,10 +2367,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2407,10 +2407,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "defi",
@@ -2456,10 +2456,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2504,10 +2504,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2540,10 +2540,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2576,10 +2576,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2624,10 +2624,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "defi",
@@ -2658,10 +2658,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "defi",
@@ -2707,10 +2707,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2755,10 +2755,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin",
@@ -2796,10 +2796,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2844,10 +2844,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2892,10 +2892,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2940,10 +2940,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -2988,10 +2988,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -3032,10 +3032,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin",
@@ -3077,10 +3077,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -3117,10 +3117,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin",
@@ -3158,10 +3158,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -3194,10 +3194,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -3242,10 +3242,10 @@
         "source": "coingecko",
         "coingeckoId": "usd-coin",
         "marketCapRank": 5,
-        "marketCap": 74845958438,
-        "totalVolume": 6074082423,
-        "currentPrice": 0.999885,
-        "lastUpdated": "2026-06-21T02:49:53.860Z"
+        "marketCap": 74840754349,
+        "totalVolume": 6063407524,
+        "currentPrice": 0.999846,
+        "lastUpdated": "2026-06-21T03:26:57.850Z"
       },
       "tags": [
         "stablecoin"
@@ -3290,10 +3290,10 @@
         "source": "coingecko",
         "coingeckoId": "ripple",
         "marketCapRank": 6,
-        "marketCap": 71112112014,
-        "totalVolume": 965533044,
+        "marketCap": 71303983649,
+        "totalVolume": 959788592,
         "currentPrice": 1.15,
-        "lastUpdated": "2026-06-21T02:49:53.770Z"
+        "lastUpdated": "2026-06-21T03:26:57.683Z"
       },
       "links": [
         {
@@ -3331,10 +3331,10 @@
         "source": "coingecko",
         "coingeckoId": "solana",
         "marketCapRank": 7,
-        "marketCap": 42462342747,
-        "totalVolume": 2235048980,
-        "currentPrice": 73.21,
-        "lastUpdated": "2026-06-21T02:49:53.609Z"
+        "marketCap": 42758022940,
+        "totalVolume": 2281762978,
+        "currentPrice": 73.67,
+        "lastUpdated": "2026-06-21T03:26:57.676Z"
       },
       "links": [
         {
@@ -3364,10 +3364,10 @@
         "source": "coingecko",
         "coingeckoId": "solana",
         "marketCapRank": 7,
-        "marketCap": 42462342747,
-        "totalVolume": 2235048980,
-        "currentPrice": 73.21,
-        "lastUpdated": "2026-06-21T02:49:53.609Z"
+        "marketCap": 42758022940,
+        "totalVolume": 2281762978,
+        "currentPrice": 73.67,
+        "lastUpdated": "2026-06-21T03:26:57.676Z"
       },
       "tags": [
         "staking-native"
@@ -3408,10 +3408,10 @@
         "source": "coingecko",
         "coingeckoId": "tron",
         "marketCapRank": 8,
-        "marketCap": 30962882939,
-        "totalVolume": 601546472,
-        "currentPrice": 0.326485,
-        "lastUpdated": "2026-06-21T02:49:43.896Z"
+        "marketCap": 30956526546,
+        "totalVolume": 601664115,
+        "currentPrice": 0.326436,
+        "lastUpdated": "2026-06-21T03:26:56.040Z"
       },
       "links": [
         {
@@ -3453,10 +3453,10 @@
         "source": "coingecko",
         "coingeckoId": "tron",
         "marketCapRank": 8,
-        "marketCap": 30962882939,
-        "totalVolume": 601546472,
-        "currentPrice": 0.326485,
-        "lastUpdated": "2026-06-21T02:49:43.896Z"
+        "marketCap": 30956526546,
+        "totalVolume": 601664115,
+        "currentPrice": 0.326436,
+        "lastUpdated": "2026-06-21T03:26:56.040Z"
       },
       "links": [
         {
@@ -3498,10 +3498,10 @@
         "source": "coingecko",
         "coingeckoId": "tron",
         "marketCapRank": 8,
-        "marketCap": 30962882939,
-        "totalVolume": 601546472,
-        "currentPrice": 0.326485,
-        "lastUpdated": "2026-06-21T02:49:43.896Z"
+        "marketCap": 30956526546,
+        "totalVolume": 601664115,
+        "currentPrice": 0.326436,
+        "lastUpdated": "2026-06-21T03:26:56.040Z"
       },
       "tags": [
         "staking-native"
@@ -3542,10 +3542,10 @@
         "source": "coingecko",
         "coingeckoId": "hyperliquid",
         "marketCapRank": 10,
-        "marketCap": 15577223182,
-        "totalVolume": 469175659,
-        "currentPrice": 70,
-        "lastUpdated": "2026-06-21T02:49:44.582Z"
+        "marketCap": 15575567355,
+        "totalVolume": 469114232,
+        "currentPrice": 70.24,
+        "lastUpdated": "2026-06-21T03:26:46.348Z"
       },
       "tags": [
         "defi"
@@ -3586,10 +3586,10 @@
         "source": "coingecko",
         "coingeckoId": "hyperliquid",
         "marketCapRank": 10,
-        "marketCap": 15577223182,
-        "totalVolume": 469175659,
-        "currentPrice": 70,
-        "lastUpdated": "2026-06-21T02:49:44.582Z"
+        "marketCap": 15575567355,
+        "totalVolume": 469114232,
+        "currentPrice": 70.24,
+        "lastUpdated": "2026-06-21T03:26:46.348Z"
       },
       "tags": [
         "defi"
@@ -3630,10 +3630,10 @@
         "source": "coingecko",
         "coingeckoId": "dogecoin",
         "marketCapRank": 11,
-        "marketCap": 14236806026,
-        "totalVolume": 418721896,
-        "currentPrice": 0.083534,
-        "lastUpdated": "2026-06-21T02:49:47.733Z"
+        "marketCap": 12938298967,
+        "totalVolume": 428664602,
+        "currentPrice": 0.083619,
+        "lastUpdated": "2026-06-21T03:26:46.058Z"
       },
       "links": [
         {
@@ -3671,10 +3671,10 @@
         "source": "coingecko",
         "coingeckoId": "usds",
         "marketCapRank": 12,
-        "marketCap": 10328915751,
-        "totalVolume": 38705691,
-        "currentPrice": 0.999659,
-        "lastUpdated": "2026-06-21T02:49:51.736Z"
+        "marketCap": 10328912221,
+        "totalVolume": 38382686,
+        "currentPrice": 0.999643,
+        "lastUpdated": "2026-06-21T03:26:45.699Z"
       },
       "tags": [
         "stablecoin",
@@ -3708,10 +3708,10 @@
         "source": "coingecko",
         "coingeckoId": "usds",
         "marketCapRank": 12,
-        "marketCap": 10328915751,
-        "totalVolume": 38705691,
-        "currentPrice": 0.999659,
-        "lastUpdated": "2026-06-21T02:49:51.736Z"
+        "marketCap": 10328912221,
+        "totalVolume": 38382686,
+        "currentPrice": 0.999643,
+        "lastUpdated": "2026-06-21T03:26:45.699Z"
       },
       "links": [
         {
@@ -3741,10 +3741,10 @@
         "source": "coingecko",
         "coingeckoId": "usds",
         "marketCapRank": 12,
-        "marketCap": 10328915751,
-        "totalVolume": 38705691,
-        "currentPrice": 0.999659,
-        "lastUpdated": "2026-06-21T02:49:51.736Z"
+        "marketCap": 10328912221,
+        "totalVolume": 38382686,
+        "currentPrice": 0.999643,
+        "lastUpdated": "2026-06-21T03:26:45.699Z"
       },
       "links": [
         {
@@ -3770,10 +3770,10 @@
         "source": "coingecko",
         "coingeckoId": "leo-token",
         "marketCapRank": 14,
-        "marketCap": 8828960053,
-        "totalVolume": 310639,
+        "marketCap": 8818808501,
+        "totalVolume": 309967,
         "currentPrice": 9.58,
-        "lastUpdated": "2026-06-21T02:49:48.545Z"
+        "lastUpdated": "2026-06-21T03:26:47.847Z"
       },
       "links": [
         {
@@ -3815,10 +3815,10 @@
         "source": "coingecko",
         "coingeckoId": "zcash",
         "marketCapRank": 15,
-        "marketCap": 7842253488,
-        "totalVolume": 240560412,
-        "currentPrice": 467.65,
-        "lastUpdated": "2026-06-21T02:49:44.743Z"
+        "marketCap": 7907610931,
+        "totalVolume": 295119234,
+        "currentPrice": 471.49,
+        "lastUpdated": "2026-06-21T03:26:46.007Z"
       },
       "links": [
         {
@@ -3856,10 +3856,10 @@
         "source": "coingecko",
         "coingeckoId": "stellar",
         "marketCapRank": 16,
-        "marketCap": 7207434601,
-        "totalVolume": 183839316,
-        "currentPrice": 0.213432,
-        "lastUpdated": "2026-06-21T02:49:46.097Z"
+        "marketCap": 7235730894,
+        "totalVolume": 208715820,
+        "currentPrice": 0.214093,
+        "lastUpdated": "2026-06-21T03:26:57.908Z"
       },
       "links": [
         {
@@ -3897,10 +3897,10 @@
         "source": "coingecko",
         "coingeckoId": "cardano",
         "marketCapRank": 18,
-        "marketCap": 6036796713,
-        "totalVolume": 259654784,
-        "currentPrice": 0.162285,
-        "lastUpdated": "2026-06-21T02:49:46.821Z"
+        "marketCap": 6052269567,
+        "totalVolume": 264659146,
+        "currentPrice": 0.162669,
+        "lastUpdated": "2026-06-21T03:26:55.248Z"
       },
       "tags": [
         "defi"
@@ -3941,10 +3941,10 @@
         "source": "coingecko",
         "coingeckoId": "cardano",
         "marketCapRank": 18,
-        "marketCap": 6036796713,
-        "totalVolume": 259654784,
-        "currentPrice": 0.162285,
-        "lastUpdated": "2026-06-21T02:49:46.821Z"
+        "marketCap": 6052269567,
+        "totalVolume": 264659146,
+        "currentPrice": 0.162669,
+        "lastUpdated": "2026-06-21T03:26:55.248Z"
       },
       "tags": [
         "staking-native"
@@ -3985,10 +3985,10 @@
         "source": "coingecko",
         "coingeckoId": "chainlink",
         "marketCapRank": 20,
-        "marketCap": 5939504025,
-        "totalVolume": 145828452,
-        "currentPrice": 7.94,
-        "lastUpdated": "2026-06-21T02:49:46.820Z"
+        "marketCap": 5952411853,
+        "totalVolume": 147182296,
+        "currentPrice": 7.96,
+        "lastUpdated": "2026-06-21T03:26:48.206Z"
       },
       "tags": [
         "binance-peg",
@@ -4012,10 +4012,10 @@
         "source": "coingecko",
         "coingeckoId": "chainlink",
         "marketCapRank": 20,
-        "marketCap": 5939504025,
-        "totalVolume": 145828452,
-        "currentPrice": 7.94,
-        "lastUpdated": "2026-06-21T02:49:46.820Z"
+        "marketCap": 5952411853,
+        "totalVolume": 147182296,
+        "currentPrice": 7.96,
+        "lastUpdated": "2026-06-21T03:26:48.206Z"
       },
       "links": [
         {
@@ -4053,10 +4053,10 @@
         "source": "coingecko",
         "coingeckoId": "chainlink",
         "marketCapRank": 20,
-        "marketCap": 5939504025,
-        "totalVolume": 145828452,
-        "currentPrice": 7.94,
-        "lastUpdated": "2026-06-21T02:49:46.820Z"
+        "marketCap": 5952411853,
+        "totalVolume": 147182296,
+        "currentPrice": 7.96,
+        "lastUpdated": "2026-06-21T03:26:48.206Z"
       },
       "links": [
         {
@@ -4090,10 +4090,10 @@
         "source": "coingecko",
         "coingeckoId": "chainlink",
         "marketCapRank": 20,
-        "marketCap": 5939504025,
-        "totalVolume": 145828452,
-        "currentPrice": 7.94,
-        "lastUpdated": "2026-06-21T02:49:46.820Z"
+        "marketCap": 5952411853,
+        "totalVolume": 147182296,
+        "currentPrice": 7.96,
+        "lastUpdated": "2026-06-21T03:26:48.206Z"
       },
       "tags": [
         "defi",
@@ -4123,10 +4123,10 @@
         "source": "coingecko",
         "coingeckoId": "chainlink",
         "marketCapRank": 20,
-        "marketCap": 5939504025,
-        "totalVolume": 145828452,
-        "currentPrice": 7.94,
-        "lastUpdated": "2026-06-21T02:49:46.820Z"
+        "marketCap": 5952411853,
+        "totalVolume": 147182296,
+        "currentPrice": 7.96,
+        "lastUpdated": "2026-06-21T03:26:48.206Z"
       },
       "tags": [
         "defi"
@@ -4167,10 +4167,10 @@
         "source": "coingecko",
         "coingeckoId": "chainlink",
         "marketCapRank": 20,
-        "marketCap": 5939504025,
-        "totalVolume": 145828452,
-        "currentPrice": 7.94,
-        "lastUpdated": "2026-06-21T02:49:46.820Z"
+        "marketCap": 5952411853,
+        "totalVolume": 147182296,
+        "currentPrice": 7.96,
+        "lastUpdated": "2026-06-21T03:26:48.206Z"
       },
       "tags": [
         "defi"
@@ -4211,10 +4211,10 @@
         "source": "coingecko",
         "coingeckoId": "chainlink",
         "marketCapRank": 20,
-        "marketCap": 5939504025,
-        "totalVolume": 145828452,
-        "currentPrice": 7.94,
-        "lastUpdated": "2026-06-21T02:49:46.820Z"
+        "marketCap": 5952411853,
+        "totalVolume": 147182296,
+        "currentPrice": 7.96,
+        "lastUpdated": "2026-06-21T03:26:48.206Z"
       },
       "tags": [
         "wrapped"
@@ -4251,10 +4251,10 @@
         "source": "coingecko",
         "coingeckoId": "chainlink",
         "marketCapRank": 20,
-        "marketCap": 5939504025,
-        "totalVolume": 145828452,
-        "currentPrice": 7.94,
-        "lastUpdated": "2026-06-21T02:49:46.820Z"
+        "marketCap": 5952411853,
+        "totalVolume": 147182296,
+        "currentPrice": 7.96,
+        "lastUpdated": "2026-06-21T03:26:48.206Z"
       },
       "tags": [
         "defi"
@@ -4295,10 +4295,10 @@
         "source": "coingecko",
         "coingeckoId": "usd1-wlfi",
         "marketCapRank": 22,
-        "marketCap": 4791703157,
-        "totalVolume": 601629546,
+        "marketCap": 4791225659,
+        "totalVolume": 697852779,
         "currentPrice": 1,
-        "lastUpdated": "2026-06-21T02:49:48.450Z"
+        "lastUpdated": "2026-06-21T03:26:54.200Z"
       },
       "tags": [
         "stablecoin"
@@ -4327,10 +4327,10 @@
         "source": "coingecko",
         "coingeckoId": "usd1-wlfi",
         "marketCapRank": 22,
-        "marketCap": 4791703157,
-        "totalVolume": 601629546,
+        "marketCap": 4791225659,
+        "totalVolume": 697852779,
         "currentPrice": 1,
-        "lastUpdated": "2026-06-21T02:49:48.450Z"
+        "lastUpdated": "2026-06-21T03:26:54.200Z"
       },
       "tags": [
         "stablecoin"
@@ -4359,10 +4359,10 @@
         "source": "coingecko",
         "coingeckoId": "usd1-wlfi",
         "marketCapRank": 22,
-        "marketCap": 4791703157,
-        "totalVolume": 601629546,
+        "marketCap": 4791225659,
+        "totalVolume": 697852779,
         "currentPrice": 1,
-        "lastUpdated": "2026-06-21T02:49:48.450Z"
+        "lastUpdated": "2026-06-21T03:26:54.200Z"
       },
       "tags": [
         "stablecoin"
@@ -4391,10 +4391,10 @@
         "source": "coingecko",
         "coingeckoId": "usd1-wlfi",
         "marketCapRank": 22,
-        "marketCap": 4791703157,
-        "totalVolume": 601629546,
+        "marketCap": 4791225659,
+        "totalVolume": 697852779,
         "currentPrice": 1,
-        "lastUpdated": "2026-06-21T02:49:48.450Z"
+        "lastUpdated": "2026-06-21T03:26:54.200Z"
       },
       "tags": [
         "stablecoin"
@@ -4427,10 +4427,10 @@
         "source": "coingecko",
         "coingeckoId": "usd1-wlfi",
         "marketCapRank": 22,
-        "marketCap": 4791703157,
-        "totalVolume": 601629546,
+        "marketCap": 4791225659,
+        "totalVolume": 697852779,
         "currentPrice": 1,
-        "lastUpdated": "2026-06-21T02:49:48.450Z"
+        "lastUpdated": "2026-06-21T03:26:54.200Z"
       },
       "tags": [
         "stablecoin"
@@ -4459,10 +4459,10 @@
         "source": "coingecko",
         "coingeckoId": "usd1-wlfi",
         "marketCapRank": 22,
-        "marketCap": 4791703157,
-        "totalVolume": 601629546,
+        "marketCap": 4791225659,
+        "totalVolume": 697852779,
         "currentPrice": 1,
-        "lastUpdated": "2026-06-21T02:49:48.450Z"
+        "lastUpdated": "2026-06-21T03:26:54.200Z"
       },
       "tags": [
         "stablecoin"
@@ -4491,10 +4491,10 @@
         "source": "coingecko",
         "coingeckoId": "ethena-usde",
         "marketCapRank": 23,
-        "marketCap": 4494694020,
-        "totalVolume": 35917162,
-        "currentPrice": 0.998875,
-        "lastUpdated": "2026-06-21T02:49:44.191Z"
+        "marketCap": 4494695269,
+        "totalVolume": 42416018,
+        "currentPrice": 0.998884,
+        "lastUpdated": "2026-06-21T03:26:45.086Z"
       },
       "tags": [
         "stablecoin",
@@ -4528,10 +4528,10 @@
         "source": "coingecko",
         "coingeckoId": "ethena-usde",
         "marketCapRank": 23,
-        "marketCap": 4494694020,
-        "totalVolume": 35917162,
-        "currentPrice": 0.998875,
-        "lastUpdated": "2026-06-21T02:49:44.191Z"
+        "marketCap": 4494695269,
+        "totalVolume": 42416018,
+        "currentPrice": 0.998884,
+        "lastUpdated": "2026-06-21T03:26:45.086Z"
       },
       "tags": [
         "stablecoin",
@@ -4569,10 +4569,10 @@
         "source": "coingecko",
         "coingeckoId": "the-open-network",
         "marketCapRank": 24,
-        "marketCap": 4402736212,
-        "totalVolume": 8151110,
-        "currentPrice": 1.64,
-        "lastUpdated": "2026-06-21T02:49:55.164Z"
+        "marketCap": 4433226300,
+        "totalVolume": 33857494,
+        "currentPrice": 1.65,
+        "lastUpdated": "2026-06-21T03:26:44.105Z"
       },
       "tags": [
         "nft"
@@ -4609,10 +4609,10 @@
         "source": "coingecko",
         "coingeckoId": "the-open-network",
         "marketCapRank": 24,
-        "marketCap": 4402736212,
-        "totalVolume": 8151110,
-        "currentPrice": 1.64,
-        "lastUpdated": "2026-06-21T02:49:55.164Z"
+        "marketCap": 4433226300,
+        "totalVolume": 33857494,
+        "currentPrice": 1.65,
+        "lastUpdated": "2026-06-21T03:26:44.105Z"
       },
       "tags": [
         "nft"
@@ -4649,10 +4649,10 @@
         "source": "coingecko",
         "coingeckoId": "the-open-network",
         "marketCapRank": 24,
-        "marketCap": 4402736212,
-        "totalVolume": 8151110,
-        "currentPrice": 1.64,
-        "lastUpdated": "2026-06-21T02:49:55.164Z"
+        "marketCap": 4433226300,
+        "totalVolume": 33857494,
+        "currentPrice": 1.65,
+        "lastUpdated": "2026-06-21T03:26:44.105Z"
       },
       "links": [
         {
@@ -4710,10 +4710,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "tags": [
         "defi",
@@ -4763,10 +4763,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "tags": [
         "binance-peg",
@@ -4817,10 +4817,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "tags": [
         "defi",
@@ -4870,10 +4870,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "pairs": [
         {
@@ -4928,10 +4928,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "tags": [
         "defi",
@@ -4981,10 +4981,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "tags": [
         "defi",
@@ -5034,10 +5034,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "tags": [
         "defi",
@@ -5068,10 +5068,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "tags": [
         "defi",
@@ -5121,10 +5121,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "tags": [
         "defi",
@@ -5174,10 +5174,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "tags": [
         "defi",
@@ -5227,10 +5227,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "tags": [
         "stablecoin",
@@ -5272,10 +5272,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "tags": [
         "stablecoin",
@@ -5317,10 +5317,10 @@
         "source": "coingecko",
         "coingeckoId": "dai",
         "marketCapRank": 25,
-        "marketCap": 4251208095,
-        "totalVolume": 56381482,
-        "currentPrice": 0.999809,
-        "lastUpdated": "2026-06-21T02:49:46.678Z"
+        "marketCap": 4250889468,
+        "totalVolume": 55416316,
+        "currentPrice": 0.999843,
+        "lastUpdated": "2026-06-21T03:26:47.961Z"
       },
       "tags": [
         "defi",
@@ -5370,10 +5370,10 @@
         "source": "coingecko",
         "coingeckoId": "bitcoin-cash",
         "marketCapRank": 27,
-        "marketCap": 3978273995,
-        "totalVolume": 74315222,
-        "currentPrice": 198.41,
-        "lastUpdated": "2026-06-21T02:49:46.647Z"
+        "marketCap": 3993481273,
+        "totalVolume": 74364941,
+        "currentPrice": 199.2,
+        "lastUpdated": "2026-06-21T03:26:51.448Z"
       },
       "links": [
         {
@@ -5411,10 +5411,10 @@
         "source": "coingecko",
         "coingeckoId": "hedera-hashgraph",
         "marketCapRank": 29,
-        "marketCap": 3486803797,
-        "totalVolume": 48938359,
-        "currentPrice": 0.080233,
-        "lastUpdated": "2026-06-21T02:49:44.138Z"
+        "marketCap": 3492725633,
+        "totalVolume": 48412779,
+        "currentPrice": 0.080353,
+        "lastUpdated": "2026-06-21T03:26:50.365Z"
       },
       "tags": [
         "defi"
@@ -5455,10 +5455,10 @@
         "source": "coingecko",
         "coingeckoId": "litecoin",
         "marketCapRank": 30,
-        "marketCap": 3436748252,
-        "totalVolume": 171103337,
-        "currentPrice": 44.48,
-        "lastUpdated": "2026-06-21T02:49:51.339Z"
+        "marketCap": 3442425327,
+        "totalVolume": 170246574,
+        "currentPrice": 44.53,
+        "lastUpdated": "2026-06-21T03:26:51.324Z"
       },
       "links": [
         {
@@ -5496,10 +5496,10 @@
         "source": "coingecko",
         "coingeckoId": "sui",
         "marketCapRank": 32,
-        "marketCap": 2856972920,
-        "totalVolume": 263560945,
-        "currentPrice": 0.709068,
-        "lastUpdated": "2026-06-21T02:49:43.478Z"
+        "marketCap": 2865711779,
+        "totalVolume": 270605808,
+        "currentPrice": 0.711188,
+        "lastUpdated": "2026-06-21T03:26:44.918Z"
       },
       "tags": [
         "defi",
@@ -5541,10 +5541,10 @@
         "source": "coingecko",
         "coingeckoId": "near",
         "marketCapRank": 33,
-        "marketCap": 2821876531,
-        "totalVolume": 232051523,
-        "currentPrice": 2.17,
-        "lastUpdated": "2026-06-21T02:49:41.964Z"
+        "marketCap": 2843789638,
+        "totalVolume": 239939395,
+        "currentPrice": 2.19,
+        "lastUpdated": "2026-06-21T03:26:43.278Z"
       },
       "tags": [
         "staking-native"
@@ -5585,10 +5585,10 @@
         "source": "coingecko",
         "coingeckoId": "global-dollar",
         "marketCapRank": 34,
-        "marketCap": 2809772813,
-        "totalVolume": 52234318,
-        "currentPrice": 0.999887,
-        "lastUpdated": "2026-06-21T02:49:45.102Z"
+        "marketCap": 2809594669,
+        "totalVolume": 41384104,
+        "currentPrice": 0.999876,
+        "lastUpdated": "2026-06-21T03:26:45.939Z"
       },
       "links": [
         {
@@ -5614,10 +5614,10 @@
         "source": "coingecko",
         "coingeckoId": "global-dollar",
         "marketCapRank": 34,
-        "marketCap": 2809772813,
-        "totalVolume": 52234318,
-        "currentPrice": 0.999887,
-        "lastUpdated": "2026-06-21T02:49:45.102Z"
+        "marketCap": 2809594669,
+        "totalVolume": 41384104,
+        "currentPrice": 0.999876,
+        "lastUpdated": "2026-06-21T03:26:45.939Z"
       },
       "links": [
         {
@@ -5643,10 +5643,10 @@
         "source": "coingecko",
         "coingeckoId": "shiba-inu",
         "marketCapRank": 35,
-        "marketCap": 2779752405,
-        "totalVolume": 43046195,
-        "currentPrice": 0.00000472,
-        "lastUpdated": "2026-06-21T02:49:42.194Z"
+        "marketCap": 2785538575,
+        "totalVolume": 44393718,
+        "currentPrice": 0.00000473,
+        "lastUpdated": "2026-06-21T03:26:43.482Z"
       },
       "tags": [
         "deflationary",
@@ -5684,10 +5684,10 @@
         "source": "coingecko",
         "coingeckoId": "shiba-inu",
         "marketCapRank": 35,
-        "marketCap": 2779752405,
-        "totalVolume": 43046195,
-        "currentPrice": 0.00000472,
-        "lastUpdated": "2026-06-21T02:49:42.194Z"
+        "marketCap": 2785538575,
+        "totalVolume": 44393718,
+        "currentPrice": 0.00000473,
+        "lastUpdated": "2026-06-21T03:26:43.482Z"
       },
       "tags": [
         "deflationary",
@@ -5725,10 +5725,10 @@
         "source": "coingecko",
         "coingeckoId": "shiba-inu",
         "marketCapRank": 35,
-        "marketCap": 2779752405,
-        "totalVolume": 43046195,
-        "currentPrice": 0.00000472,
-        "lastUpdated": "2026-06-21T02:49:42.194Z"
+        "marketCap": 2785538575,
+        "totalVolume": 44393718,
+        "currentPrice": 0.00000473,
+        "lastUpdated": "2026-06-21T03:26:43.482Z"
       },
       "tags": [
         "deflationary",
@@ -5766,10 +5766,10 @@
         "source": "coingecko",
         "coingeckoId": "shiba-inu",
         "marketCapRank": 35,
-        "marketCap": 2779752405,
-        "totalVolume": 43046195,
-        "currentPrice": 0.00000472,
-        "lastUpdated": "2026-06-21T02:49:42.194Z"
+        "marketCap": 2785538575,
+        "totalVolume": 44393718,
+        "currentPrice": 0.00000473,
+        "lastUpdated": "2026-06-21T03:26:43.482Z"
       },
       "links": [
         {
@@ -5799,10 +5799,10 @@
         "source": "coingecko",
         "coingeckoId": "shiba-inu",
         "marketCapRank": 35,
-        "marketCap": 2779752405,
-        "totalVolume": 43046195,
-        "currentPrice": 0.00000472,
-        "lastUpdated": "2026-06-21T02:49:42.194Z"
+        "marketCap": 2785538575,
+        "totalVolume": 44393718,
+        "currentPrice": 0.00000473,
+        "lastUpdated": "2026-06-21T03:26:43.482Z"
       },
       "tags": [
         "memes"
@@ -5839,10 +5839,10 @@
         "source": "coingecko",
         "coingeckoId": "paypal-usd",
         "marketCapRank": 36,
-        "marketCap": 2777509898,
-        "totalVolume": 41672622,
-        "currentPrice": 0.99976,
-        "lastUpdated": "2026-06-21T02:49:44.074Z"
+        "marketCap": 2776123201,
+        "totalVolume": 35914708,
+        "currentPrice": 0.999994,
+        "lastUpdated": "2026-06-21T03:26:44.682Z"
       },
       "tags": [
         "stablecoin"
@@ -5879,10 +5879,10 @@
         "source": "coingecko",
         "coingeckoId": "paypal-usd",
         "marketCapRank": 36,
-        "marketCap": 2777509898,
-        "totalVolume": 41672622,
-        "currentPrice": 0.99976,
-        "lastUpdated": "2026-06-21T02:49:44.074Z"
+        "marketCap": 2776123201,
+        "totalVolume": 35914708,
+        "currentPrice": 0.999994,
+        "lastUpdated": "2026-06-21T03:26:44.682Z"
       },
       "tags": [
         "stablecoin"
@@ -5919,10 +5919,10 @@
         "source": "coingecko",
         "coingeckoId": "crypto-com-chain",
         "marketCapRank": 37,
-        "marketCap": 2707035091,
-        "totalVolume": 7353770,
-        "currentPrice": 0.058868,
-        "lastUpdated": "2026-06-21T02:49:47.470Z"
+        "marketCap": 2709864952,
+        "totalVolume": 7305071,
+        "currentPrice": 0.058845,
+        "lastUpdated": "2026-06-21T03:26:47.876Z"
       },
       "links": [
         {
@@ -5964,10 +5964,10 @@
         "source": "coingecko",
         "coingeckoId": "crypto-com-chain",
         "marketCapRank": 37,
-        "marketCap": 2707035091,
-        "totalVolume": 7353770,
-        "currentPrice": 0.058868,
-        "lastUpdated": "2026-06-21T02:49:47.470Z"
+        "marketCap": 2709864952,
+        "totalVolume": 7305071,
+        "currentPrice": 0.058845,
+        "lastUpdated": "2026-06-21T03:26:47.876Z"
       },
       "links": [
         {
@@ -6017,10 +6017,10 @@
         "source": "coingecko",
         "coingeckoId": "crypto-com-chain",
         "marketCapRank": 37,
-        "marketCap": 2707035091,
-        "totalVolume": 7353770,
-        "currentPrice": 0.058868,
-        "lastUpdated": "2026-06-21T02:49:47.470Z"
+        "marketCap": 2709864952,
+        "totalVolume": 7305071,
+        "currentPrice": 0.058845,
+        "lastUpdated": "2026-06-21T03:26:47.876Z"
       },
       "links": [
         {
@@ -6070,10 +6070,10 @@
         "source": "coingecko",
         "coingeckoId": "crypto-com-chain",
         "marketCapRank": 37,
-        "marketCap": 2707035091,
-        "totalVolume": 7353770,
-        "currentPrice": 0.058868,
-        "lastUpdated": "2026-06-21T02:49:47.470Z"
+        "marketCap": 2709864952,
+        "totalVolume": 7305071,
+        "currentPrice": 0.058845,
+        "lastUpdated": "2026-06-21T03:26:47.876Z"
       },
       "tags": [
         "staking-native"
@@ -6114,10 +6114,10 @@
         "source": "coingecko",
         "coingeckoId": "crypto-com-chain",
         "marketCapRank": 37,
-        "marketCap": 2707035091,
-        "totalVolume": 7353770,
-        "currentPrice": 0.058868,
-        "lastUpdated": "2026-06-21T02:49:47.470Z"
+        "marketCap": 2709864952,
+        "totalVolume": 7305071,
+        "currentPrice": 0.058845,
+        "lastUpdated": "2026-06-21T03:26:47.876Z"
       },
       "tags": [
         "defi"
@@ -6162,10 +6162,10 @@
         "source": "coingecko",
         "coingeckoId": "avalanche-2",
         "marketCapRank": 38,
-        "marketCap": 2687117794,
-        "totalVolume": 359467163,
-        "currentPrice": 6.23,
-        "lastUpdated": "2026-06-21T02:49:50.277Z"
+        "marketCap": 2696380775,
+        "totalVolume": 365273516,
+        "currentPrice": 6.25,
+        "lastUpdated": "2026-06-21T03:26:49.051Z"
       },
       "tags": [
         "wrapped"
@@ -6202,10 +6202,10 @@
         "source": "coingecko",
         "coingeckoId": "avalanche-2",
         "marketCapRank": 38,
-        "marketCap": 2687117794,
-        "totalVolume": 359467163,
-        "currentPrice": 6.23,
-        "lastUpdated": "2026-06-21T02:49:50.277Z"
+        "marketCap": 2696380775,
+        "totalVolume": 365273516,
+        "currentPrice": 6.25,
+        "lastUpdated": "2026-06-21T03:26:49.051Z"
       },
       "tags": [
         "defi",
@@ -6239,10 +6239,10 @@
         "source": "coingecko",
         "coingeckoId": "tether-gold",
         "marketCapRank": 39,
-        "marketCap": 2538837118,
-        "totalVolume": 41326961,
-        "currentPrice": 4142.93,
-        "lastUpdated": "2026-06-21T02:49:44.112Z"
+        "marketCap": 2539831489,
+        "totalVolume": 42370672,
+        "currentPrice": 4144.55,
+        "lastUpdated": "2026-06-21T03:26:43.348Z"
       },
       "tags": [
         "stablecoin",
@@ -6276,10 +6276,10 @@
         "source": "coingecko",
         "coingeckoId": "tether-gold",
         "marketCapRank": 39,
-        "marketCap": 2538837118,
-        "totalVolume": 41326961,
-        "currentPrice": 4142.93,
-        "lastUpdated": "2026-06-21T02:49:44.112Z"
+        "marketCap": 2539831489,
+        "totalVolume": 42370672,
+        "currentPrice": 4144.55,
+        "lastUpdated": "2026-06-21T03:26:43.348Z"
       },
       "links": [
         {
@@ -6309,10 +6309,10 @@
         "source": "coingecko",
         "coingeckoId": "ondo-us-dollar-yield",
         "marketCapRank": 42,
-        "marketCap": 2154314354,
-        "totalVolume": 1991185,
+        "marketCap": 2156594302,
+        "totalVolume": 1958642,
         "currentPrice": 1.14,
-        "lastUpdated": "2026-06-21T02:49:54.594Z"
+        "lastUpdated": "2026-06-21T03:26:52.624Z"
       },
       "tags": [
         "stablecoin"
@@ -6349,10 +6349,10 @@
         "source": "coingecko",
         "coingeckoId": "ondo-us-dollar-yield",
         "marketCapRank": 42,
-        "marketCap": 2154314354,
-        "totalVolume": 1991185,
+        "marketCap": 2156594302,
+        "totalVolume": 1958642,
         "currentPrice": 1.14,
-        "lastUpdated": "2026-06-21T02:49:54.594Z"
+        "lastUpdated": "2026-06-21T03:26:52.624Z"
       },
       "tags": [
         "stablecoin"
@@ -6389,10 +6389,10 @@
         "source": "coingecko",
         "coingeckoId": "ondo-us-dollar-yield",
         "marketCapRank": 42,
-        "marketCap": 2154314354,
-        "totalVolume": 1991185,
+        "marketCap": 2156594302,
+        "totalVolume": 1958642,
         "currentPrice": 1.14,
-        "lastUpdated": "2026-06-21T02:49:54.594Z"
+        "lastUpdated": "2026-06-21T03:26:52.624Z"
       },
       "tags": [
         "stablecoin"
@@ -6429,10 +6429,10 @@
         "source": "coingecko",
         "coingeckoId": "worldcoin-wld",
         "marketCapRank": 43,
-        "marketCap": 2077327760,
-        "totalVolume": 299678498,
-        "currentPrice": 0.601154,
-        "lastUpdated": "2026-06-21T02:49:43.505Z"
+        "marketCap": 2101320325,
+        "totalVolume": 300797301,
+        "currentPrice": 0.609392,
+        "lastUpdated": "2026-06-21T03:26:44.626Z"
       },
       "links": [
         {
@@ -6466,10 +6466,10 @@
         "source": "coingecko",
         "coingeckoId": "worldcoin-wld",
         "marketCapRank": 43,
-        "marketCap": 2077327760,
-        "totalVolume": 299678498,
-        "currentPrice": 0.601154,
-        "lastUpdated": "2026-06-21T02:49:43.505Z"
+        "marketCap": 2101320325,
+        "totalVolume": 300797301,
+        "currentPrice": 0.609392,
+        "lastUpdated": "2026-06-21T03:26:44.626Z"
       },
       "links": [
         {
@@ -6503,10 +6503,10 @@
         "source": "coingecko",
         "coingeckoId": "pax-gold",
         "marketCapRank": 44,
-        "marketCap": 1886403953,
-        "totalVolume": 42695661,
-        "currentPrice": 4151.39,
-        "lastUpdated": "2026-06-21T02:49:46.767Z"
+        "marketCap": 1887303687,
+        "totalVolume": 42260762,
+        "currentPrice": 4153.41,
+        "lastUpdated": "2026-06-21T03:26:48.009Z"
       }
     },
     {
@@ -6526,10 +6526,10 @@
         "source": "coingecko",
         "coingeckoId": "world-liberty-financial",
         "marketCapRank": 45,
-        "marketCap": 1860019881,
-        "totalVolume": 16264372,
-        "currentPrice": 0.058483,
-        "lastUpdated": "2026-06-21T02:49:46.666Z"
+        "marketCap": 1863097798,
+        "totalVolume": 16443025,
+        "currentPrice": 0.058634,
+        "lastUpdated": "2026-06-21T03:26:46.096Z"
       },
       "links": [
         {
@@ -6559,10 +6559,10 @@
         "source": "coingecko",
         "coingeckoId": "uniswap",
         "marketCapRank": 46,
-        "marketCap": 1848378021,
-        "totalVolume": 177181472,
-        "currentPrice": 2.97,
-        "lastUpdated": "2026-06-21T02:49:42.268Z"
+        "marketCap": 1855996678,
+        "totalVolume": 179296955,
+        "currentPrice": 2.99,
+        "lastUpdated": "2026-06-21T03:26:43.656Z"
       },
       "tags": [
         "defi",
@@ -6608,10 +6608,10 @@
         "source": "coingecko",
         "coingeckoId": "uniswap",
         "marketCapRank": 46,
-        "marketCap": 1848378021,
-        "totalVolume": 177181472,
-        "currentPrice": 2.97,
-        "lastUpdated": "2026-06-21T02:49:42.268Z"
+        "marketCap": 1855996678,
+        "totalVolume": 179296955,
+        "currentPrice": 2.99,
+        "lastUpdated": "2026-06-21T03:26:43.656Z"
       },
       "tags": [
         "binance-peg",
@@ -6654,10 +6654,10 @@
         "source": "coingecko",
         "coingeckoId": "uniswap",
         "marketCapRank": 46,
-        "marketCap": 1848378021,
-        "totalVolume": 177181472,
-        "currentPrice": 2.97,
-        "lastUpdated": "2026-06-21T02:49:42.268Z"
+        "marketCap": 1855996678,
+        "totalVolume": 179296955,
+        "currentPrice": 2.99,
+        "lastUpdated": "2026-06-21T03:26:43.656Z"
       },
       "tags": [
         "defi",
@@ -6703,10 +6703,10 @@
         "source": "coingecko",
         "coingeckoId": "uniswap",
         "marketCapRank": 46,
-        "marketCap": 1848378021,
-        "totalVolume": 177181472,
-        "currentPrice": 2.97,
-        "lastUpdated": "2026-06-21T02:49:42.268Z"
+        "marketCap": 1855996678,
+        "totalVolume": 179296955,
+        "currentPrice": 2.99,
+        "lastUpdated": "2026-06-21T03:26:43.656Z"
       },
       "links": [
         {
@@ -6748,10 +6748,10 @@
         "source": "coingecko",
         "coingeckoId": "uniswap",
         "marketCapRank": 46,
-        "marketCap": 1848378021,
-        "totalVolume": 177181472,
-        "currentPrice": 2.97,
-        "lastUpdated": "2026-06-21T02:49:42.268Z"
+        "marketCap": 1855996678,
+        "totalVolume": 179296955,
+        "currentPrice": 2.99,
+        "lastUpdated": "2026-06-21T03:26:43.656Z"
       },
       "tags": [
         "defi",
@@ -6781,10 +6781,10 @@
         "source": "coingecko",
         "coingeckoId": "uniswap",
         "marketCapRank": 46,
-        "marketCap": 1848378021,
-        "totalVolume": 177181472,
-        "currentPrice": 2.97,
-        "lastUpdated": "2026-06-21T02:49:42.268Z"
+        "marketCap": 1855996678,
+        "totalVolume": 179296955,
+        "currentPrice": 2.99,
+        "lastUpdated": "2026-06-21T03:26:43.656Z"
       },
       "tags": [
         "defi",
@@ -6830,10 +6830,10 @@
         "source": "coingecko",
         "coingeckoId": "uniswap",
         "marketCapRank": 46,
-        "marketCap": 1848378021,
-        "totalVolume": 177181472,
-        "currentPrice": 2.97,
-        "lastUpdated": "2026-06-21T02:49:42.268Z"
+        "marketCap": 1855996678,
+        "totalVolume": 179296955,
+        "currentPrice": 2.99,
+        "lastUpdated": "2026-06-21T03:26:43.656Z"
       },
       "tags": [
         "defi"
@@ -6870,10 +6870,10 @@
         "source": "coingecko",
         "coingeckoId": "uniswap",
         "marketCapRank": 46,
-        "marketCap": 1848378021,
-        "totalVolume": 177181472,
-        "currentPrice": 2.97,
-        "lastUpdated": "2026-06-21T02:49:42.268Z"
+        "marketCap": 1855996678,
+        "totalVolume": 179296955,
+        "currentPrice": 2.99,
+        "lastUpdated": "2026-06-21T03:26:43.656Z"
       },
       "tags": [
         "defi",
@@ -6919,10 +6919,10 @@
         "source": "coingecko",
         "coingeckoId": "mantle",
         "marketCapRank": 47,
-        "marketCap": 1760962786,
-        "totalVolume": 16523019,
-        "currentPrice": 0.533261,
-        "lastUpdated": "2026-06-21T02:49:43.395Z"
+        "marketCap": 1767191236,
+        "totalVolume": 16599874,
+        "currentPrice": 0.535555,
+        "lastUpdated": "2026-06-21T03:26:44.733Z"
       },
       "links": [
         {
@@ -6952,10 +6952,10 @@
         "source": "coingecko",
         "coingeckoId": "aster-2",
         "marketCapRank": 48,
-        "marketCap": 1738944740,
-        "totalVolume": 91097606,
-        "currentPrice": 0.649863,
-        "lastUpdated": "2026-06-21T02:49:46.100Z"
+        "marketCap": 1747108076,
+        "totalVolume": 89802216,
+        "currentPrice": 0.652917,
+        "lastUpdated": "2026-06-21T03:26:47.592Z"
       },
       "tags": [
         "defi"
@@ -6988,10 +6988,10 @@
         "source": "coingecko",
         "coingeckoId": "ondo-finance",
         "marketCapRank": 49,
-        "marketCap": 1648214154,
-        "totalVolume": 65310303,
-        "currentPrice": 0.338489,
-        "lastUpdated": "2026-06-21T02:49:43.192Z"
+        "marketCap": 1655747919,
+        "totalVolume": 88931124,
+        "currentPrice": 0.3398,
+        "lastUpdated": "2026-06-21T03:26:44.353Z"
       },
       "links": [
         {
@@ -7025,10 +7025,10 @@
         "source": "coingecko",
         "coingeckoId": "polkadot",
         "marketCapRank": 50,
-        "marketCap": 1632463292,
-        "totalVolume": 80054242,
-        "currentPrice": 0.966145,
-        "lastUpdated": "2026-06-21T02:49:42.261Z"
+        "marketCap": 1639052545,
+        "totalVolume": 80388618,
+        "currentPrice": 0.970206,
+        "lastUpdated": "2026-06-21T03:26:49.889Z"
       },
       "tags": [
         "staking-native"
@@ -7069,10 +7069,10 @@
         "source": "coingecko",
         "coingeckoId": "okb",
         "marketCapRank": 52,
-        "marketCap": 1585649632,
-        "totalVolume": 15331229,
-        "currentPrice": 75.54,
-        "lastUpdated": "2026-06-21T02:49:44.399Z"
+        "marketCap": 1592986306,
+        "totalVolume": 15082689,
+        "currentPrice": 75.85,
+        "lastUpdated": "2026-06-21T03:26:58.396Z"
       }
     },
     {
@@ -7092,10 +7092,10 @@
         "source": "coingecko",
         "coingeckoId": "okb",
         "marketCapRank": 52,
-        "marketCap": 1585649632,
-        "totalVolume": 15331229,
-        "currentPrice": 75.54,
-        "lastUpdated": "2026-06-21T02:49:44.399Z"
+        "marketCap": 1592986306,
+        "totalVolume": 15082689,
+        "currentPrice": 75.85,
+        "lastUpdated": "2026-06-21T03:26:58.396Z"
       },
       "links": [
         {
@@ -7137,10 +7137,10 @@
         "source": "coingecko",
         "coingeckoId": "okb",
         "marketCapRank": 52,
-        "marketCap": 1585649632,
-        "totalVolume": 15331229,
-        "currentPrice": 75.54,
-        "lastUpdated": "2026-06-21T02:49:44.399Z"
+        "marketCap": 1592986306,
+        "totalVolume": 15082689,
+        "currentPrice": 75.85,
+        "lastUpdated": "2026-06-21T03:26:58.396Z"
       },
       "links": [
         {
@@ -7174,10 +7174,10 @@
         "source": "coingecko",
         "coingeckoId": "htx-dao",
         "marketCapRank": 53,
-        "marketCap": 1559604180,
-        "totalVolume": 14242757,
+        "marketCap": 1561417347,
+        "totalVolume": 13408541,
         "currentPrice": 0.00000172,
-        "lastUpdated": "2026-06-21T02:49:44.193Z"
+        "lastUpdated": "2026-06-21T03:26:45.162Z"
       },
       "links": [
         {
@@ -7202,15 +7202,15 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xFa2B947eEc368f42195f24F36d2aF29f7c24CeC2/logo.png",
       "logoExists": true,
-      "rank": 55,
+      "rank": 54,
       "market": {
         "source": "coingecko",
         "coingeckoId": "falcon-finance",
-        "marketCapRank": 55,
-        "marketCap": 1459614417,
-        "totalVolume": 543004,
-        "currentPrice": 0.993675,
-        "lastUpdated": "2026-06-21T02:49:52.154Z"
+        "marketCapRank": 54,
+        "marketCap": 1460345051,
+        "totalVolume": 545993,
+        "currentPrice": 0.994884,
+        "lastUpdated": "2026-06-21T03:26:51.060Z"
       },
       "links": [
         {
@@ -7236,10 +7236,10 @@
         "source": "coingecko",
         "coingeckoId": "usdd",
         "marketCapRank": 56,
-        "marketCap": 1365632575,
-        "totalVolume": 20144792,
-        "currentPrice": 0.999036,
-        "lastUpdated": "2026-06-21T02:49:42.974Z"
+        "marketCap": 1365499074,
+        "totalVolume": 20123109,
+        "currentPrice": 0.999027,
+        "lastUpdated": "2026-06-21T03:26:47.284Z"
       },
       "tags": [
         "stablecoin"
@@ -7272,10 +7272,10 @@
         "source": "coingecko",
         "coingeckoId": "usdd",
         "marketCapRank": 56,
-        "marketCap": 1365632575,
-        "totalVolume": 20144792,
-        "currentPrice": 0.999036,
-        "lastUpdated": "2026-06-21T02:49:42.974Z"
+        "marketCap": 1365499074,
+        "totalVolume": 20123109,
+        "currentPrice": 0.999027,
+        "lastUpdated": "2026-06-21T03:26:47.284Z"
       },
       "tags": [
         "stablecoin"
@@ -7308,10 +7308,10 @@
         "source": "coingecko",
         "coingeckoId": "usdd",
         "marketCapRank": 56,
-        "marketCap": 1365632575,
-        "totalVolume": 20144792,
-        "currentPrice": 0.999036,
-        "lastUpdated": "2026-06-21T02:49:42.974Z"
+        "marketCap": 1365499074,
+        "totalVolume": 20123109,
+        "currentPrice": 0.999027,
+        "lastUpdated": "2026-06-21T03:26:47.284Z"
       },
       "tags": [
         "stablecoin"
@@ -7348,10 +7348,10 @@
         "source": "coingecko",
         "coingeckoId": "sky",
         "marketCapRank": 57,
-        "marketCap": 1351869422,
-        "totalVolume": 9305485,
-        "currentPrice": 0.058056,
-        "lastUpdated": "2026-06-21T02:49:44.352Z"
+        "marketCap": 1355322630,
+        "totalVolume": 9341969,
+        "currentPrice": 0.058207,
+        "lastUpdated": "2026-06-21T03:26:57.113Z"
       },
       "tags": [
         "stablecoin",
@@ -7385,10 +7385,10 @@
         "source": "coingecko",
         "coingeckoId": "internet-computer",
         "marketCapRank": 59,
-        "marketCap": 1254833078,
-        "totalVolume": 34422136,
-        "currentPrice": 2.26,
-        "lastUpdated": "2026-06-21T02:49:52.033Z"
+        "marketCap": 1260752858,
+        "totalVolume": 35817731,
+        "currentPrice": 2.28,
+        "lastUpdated": "2026-06-21T03:26:50.280Z"
       },
       "tags": [
         "defi"
@@ -7437,10 +7437,10 @@
         "source": "coingecko",
         "coingeckoId": "pepe",
         "marketCapRank": 61,
-        "marketCap": 1191270497,
-        "totalVolume": 87879529,
-        "currentPrice": 0.00000283,
-        "lastUpdated": "2026-06-21T02:49:43.523Z"
+        "marketCap": 1195006366,
+        "totalVolume": 88567426,
+        "currentPrice": 0.00000284,
+        "lastUpdated": "2026-06-21T03:26:44.515Z"
       },
       "tags": [
         "memes"
@@ -7481,10 +7481,10 @@
         "source": "coingecko",
         "coingeckoId": "pepe",
         "marketCapRank": 61,
-        "marketCap": 1191270497,
-        "totalVolume": 87879529,
-        "currentPrice": 0.00000283,
-        "lastUpdated": "2026-06-21T02:49:43.523Z"
+        "marketCap": 1195006366,
+        "totalVolume": 88567426,
+        "currentPrice": 0.00000284,
+        "lastUpdated": "2026-06-21T03:26:44.515Z"
       },
       "tags": [
         "memes"
@@ -7525,10 +7525,10 @@
         "source": "coingecko",
         "coingeckoId": "morpho",
         "marketCapRank": 62,
-        "marketCap": 1168185200,
-        "totalVolume": 8666559,
+        "marketCap": 1172310229,
+        "totalVolume": 8522305,
         "currentPrice": 1.81,
-        "lastUpdated": "2026-06-21T02:49:43.296Z"
+        "lastUpdated": "2026-06-21T03:26:44.507Z"
       },
       "links": [
         {
@@ -7554,10 +7554,10 @@
         "source": "coingecko",
         "coingeckoId": "morpho",
         "marketCapRank": 62,
-        "marketCap": 1168185200,
-        "totalVolume": 8666559,
+        "marketCap": 1172310229,
+        "totalVolume": 8522305,
         "currentPrice": 1.81,
-        "lastUpdated": "2026-06-21T02:49:43.296Z"
+        "lastUpdated": "2026-06-21T03:26:44.507Z"
       },
       "tags": [
         "defi"
@@ -7590,10 +7590,10 @@
         "source": "coingecko",
         "coingeckoId": "ethereum-classic",
         "marketCapRank": 63,
-        "marketCap": 1160724180,
-        "totalVolume": 53046467,
-        "currentPrice": 7.41,
-        "lastUpdated": "2026-06-21T02:49:44.563Z"
+        "marketCap": 1161555991,
+        "totalVolume": 53157834,
+        "currentPrice": 7.42,
+        "lastUpdated": "2026-06-21T03:26:45.998Z"
       },
       "links": [
         {
@@ -7631,10 +7631,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "defi",
@@ -7692,10 +7692,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "wrapped",
@@ -7754,10 +7754,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "defi",
@@ -7815,10 +7815,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "gamefi"
@@ -7859,10 +7859,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "defi",
@@ -7920,10 +7920,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "defi",
@@ -7981,10 +7981,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "defi",
@@ -8042,10 +8042,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "defi",
@@ -8075,10 +8075,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "defi",
@@ -8136,10 +8136,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "defi",
@@ -8197,10 +8197,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "defi",
@@ -8258,10 +8258,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "defi"
@@ -8298,10 +8298,10 @@
         "source": "coingecko",
         "coingeckoId": "aave",
         "marketCapRank": 64,
-        "marketCap": 1147297739,
-        "totalVolume": 123306204,
-        "currentPrice": 75.59,
-        "lastUpdated": "2026-06-21T02:49:42.368Z"
+        "marketCap": 1153406326,
+        "totalVolume": 123142222,
+        "currentPrice": 76,
+        "lastUpdated": "2026-06-21T03:26:43.534Z"
       },
       "tags": [
         "defi",
@@ -8359,10 +8359,10 @@
         "source": "coingecko",
         "coingeckoId": "quant-network",
         "marketCapRank": 65,
-        "marketCap": 1023693072,
-        "totalVolume": 7594857,
-        "currentPrice": 70.4,
-        "lastUpdated": "2026-06-21T02:49:48.166Z"
+        "marketCap": 1027698611,
+        "totalVolume": 7672657,
+        "currentPrice": 70.74,
+        "lastUpdated": "2026-06-21T03:26:45.183Z"
       },
       "links": [
         {
@@ -8416,10 +8416,10 @@
         "source": "coingecko",
         "coingeckoId": "quant-network",
         "marketCapRank": 65,
-        "marketCap": 1023693072,
-        "totalVolume": 7594857,
-        "currentPrice": 70.4,
-        "lastUpdated": "2026-06-21T02:49:48.166Z"
+        "marketCap": 1027698611,
+        "totalVolume": 7672657,
+        "currentPrice": 70.74,
+        "lastUpdated": "2026-06-21T03:26:45.183Z"
       },
       "links": [
         {
@@ -8473,10 +8473,10 @@
         "source": "coingecko",
         "coingeckoId": "united-stables",
         "marketCapRank": 66,
-        "marketCap": 1011261018,
-        "totalVolume": 3571310,
-        "currentPrice": 0.9999,
-        "lastUpdated": "2026-06-21T02:49:46.602Z"
+        "marketCap": 1011160685,
+        "totalVolume": 3537920,
+        "currentPrice": 0.999898,
+        "lastUpdated": "2026-06-21T03:26:47.814Z"
       },
       "tags": [
         "stablecoin"
@@ -8513,10 +8513,10 @@
         "source": "coingecko",
         "coingeckoId": "kucoin-shares",
         "marketCapRank": 69,
-        "marketCap": 972865495,
-        "totalVolume": 1985310,
-        "currentPrice": 7.23,
-        "lastUpdated": "2026-06-21T02:49:56.047Z"
+        "marketCap": 974767204,
+        "totalVolume": 1953523,
+        "currentPrice": 7.24,
+        "lastUpdated": "2026-06-21T03:26:54.589Z"
       },
       "links": [
         {
@@ -8562,10 +8562,10 @@
         "source": "coingecko",
         "coingeckoId": "cosmos",
         "marketCapRank": 71,
-        "marketCap": 920416331,
-        "totalVolume": 22567127,
+        "marketCap": 920157959,
+        "totalVolume": 23044654,
         "currentPrice": 1.79,
-        "lastUpdated": "2026-06-21T02:49:45.955Z"
+        "lastUpdated": "2026-06-21T03:26:43.901Z"
       },
       "tags": [
         "binance-peg"
@@ -8588,10 +8588,10 @@
         "source": "coingecko",
         "coingeckoId": "cosmos",
         "marketCapRank": 71,
-        "marketCap": 920416331,
-        "totalVolume": 22567127,
+        "marketCap": 920157959,
+        "totalVolume": 23044654,
         "currentPrice": 1.79,
-        "lastUpdated": "2026-06-21T02:49:45.955Z"
+        "lastUpdated": "2026-06-21T03:26:43.901Z"
       },
       "tags": [
         "governance"
@@ -8624,10 +8624,10 @@
         "source": "coingecko",
         "coingeckoId": "cosmos",
         "marketCapRank": 71,
-        "marketCap": 920416331,
-        "totalVolume": 22567127,
+        "marketCap": 920157959,
+        "totalVolume": 23044654,
         "currentPrice": 1.79,
-        "lastUpdated": "2026-06-21T02:49:45.955Z"
+        "lastUpdated": "2026-06-21T03:26:43.901Z"
       },
       "tags": [
         "staking-native"
@@ -8668,10 +8668,10 @@
         "source": "coingecko",
         "coingeckoId": "usdtb",
         "marketCapRank": 72,
-        "marketCap": 916363833,
-        "totalVolume": 2407721,
-        "currentPrice": 0.999586,
-        "lastUpdated": "2026-06-21T02:49:50.479Z"
+        "marketCap": 916342710,
+        "totalVolume": 2407662,
+        "currentPrice": 0.999561,
+        "lastUpdated": "2026-06-21T03:26:55.001Z"
       },
       "links": [
         {
@@ -8697,10 +8697,10 @@
         "source": "coingecko",
         "coingeckoId": "render-token",
         "marketCapRank": 73,
-        "marketCap": 876774312,
-        "totalVolume": 36845102,
-        "currentPrice": 1.69,
-        "lastUpdated": "2026-06-21T02:49:42.008Z"
+        "marketCap": 883391740,
+        "totalVolume": 37766134,
+        "currentPrice": 1.7,
+        "lastUpdated": "2026-06-21T03:26:43.486Z"
       },
       "links": [
         {
@@ -8734,10 +8734,10 @@
         "source": "coingecko",
         "coingeckoId": "render-token",
         "marketCapRank": 73,
-        "marketCap": 876774312,
-        "totalVolume": 36845102,
-        "currentPrice": 1.69,
-        "lastUpdated": "2026-06-21T02:49:42.008Z"
+        "marketCap": 883391740,
+        "totalVolume": 37766134,
+        "currentPrice": 1.7,
+        "lastUpdated": "2026-06-21T03:26:43.486Z"
       },
       "links": [
         {
@@ -8771,10 +8771,10 @@
         "source": "coingecko",
         "coingeckoId": "render-token",
         "marketCapRank": 73,
-        "marketCap": 876774312,
-        "totalVolume": 36845102,
-        "currentPrice": 1.69,
-        "lastUpdated": "2026-06-21T02:49:42.008Z"
+        "marketCap": 883391740,
+        "totalVolume": 37766134,
+        "currentPrice": 1.7,
+        "lastUpdated": "2026-06-21T03:26:43.486Z"
       }
     },
     {
@@ -8794,10 +8794,10 @@
         "source": "coingecko",
         "coingeckoId": "polygon-ecosystem-token",
         "marketCapRank": 75,
-        "marketCap": 847950989,
-        "totalVolume": 48948166,
-        "currentPrice": 0.079522,
-        "lastUpdated": "2026-06-21T02:49:43.859Z"
+        "marketCap": 849007258,
+        "totalVolume": 48213606,
+        "currentPrice": 0.079648,
+        "lastUpdated": "2026-06-21T03:26:45.535Z"
       },
       "links": [
         {
@@ -8831,10 +8831,10 @@
         "source": "coingecko",
         "coingeckoId": "polygon-ecosystem-token",
         "marketCapRank": 75,
-        "marketCap": 847950989,
-        "totalVolume": 48948166,
-        "currentPrice": 0.079522,
-        "lastUpdated": "2026-06-21T02:49:43.859Z"
+        "marketCap": 849007258,
+        "totalVolume": 48213606,
+        "currentPrice": 0.079648,
+        "lastUpdated": "2026-06-21T03:26:45.535Z"
       },
       "links": [
         {
@@ -8872,10 +8872,10 @@
         "source": "coingecko",
         "coingeckoId": "algorand",
         "marketCapRank": 76,
-        "marketCap": 840523771,
-        "totalVolume": 22288904,
-        "currentPrice": 0.094196,
-        "lastUpdated": "2026-06-21T02:49:45.201Z"
+        "marketCap": 840075069,
+        "totalVolume": 22188456,
+        "currentPrice": 0.094193,
+        "lastUpdated": "2026-06-21T03:26:55.524Z"
       },
       "links": [
         {
@@ -8913,10 +8913,10 @@
         "source": "coingecko",
         "coingeckoId": "ethena",
         "marketCapRank": 77,
-        "marketCap": 821283465,
-        "totalVolume": 92367037,
-        "currentPrice": 0.088449,
-        "lastUpdated": "2026-06-21T02:49:44.036Z"
+        "marketCap": 830534391,
+        "totalVolume": 96954802,
+        "currentPrice": 0.089422,
+        "lastUpdated": "2026-06-21T03:26:45.398Z"
       },
       "links": [
         {
@@ -8946,10 +8946,10 @@
         "source": "coingecko",
         "coingeckoId": "nexo",
         "marketCapRank": 80,
-        "marketCap": 799805515,
-        "totalVolume": 4213588,
-        "currentPrice": 0.79852,
-        "lastUpdated": "2026-06-21T02:49:45.461Z"
+        "marketCap": 800260017,
+        "totalVolume": 4578330,
+        "currentPrice": 0.798696,
+        "lastUpdated": "2026-06-21T03:26:45.294Z"
       },
       "links": [
         {
@@ -8999,10 +8999,10 @@
         "source": "coingecko",
         "coingeckoId": "nexo",
         "marketCapRank": 80,
-        "marketCap": 799805515,
-        "totalVolume": 4213588,
-        "currentPrice": 0.79852,
-        "lastUpdated": "2026-06-21T02:49:45.461Z"
+        "marketCap": 800260017,
+        "totalVolume": 4578330,
+        "currentPrice": 0.798696,
+        "lastUpdated": "2026-06-21T03:26:45.294Z"
       },
       "links": [
         {
@@ -9047,15 +9047,15 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/solana/assets/JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN/logo.png",
       "logoExists": true,
-      "rank": 82,
+      "rank": 81,
       "market": {
         "source": "coingecko",
         "coingeckoId": "jupiter-exchange-solana",
-        "marketCapRank": 82,
-        "marketCap": 725403128,
-        "totalVolume": 55253303,
-        "currentPrice": 0.218556,
-        "lastUpdated": "2026-06-21T02:49:43.802Z"
+        "marketCapRank": 81,
+        "marketCap": 739195465,
+        "totalVolume": 56892553,
+        "currentPrice": 0.222645,
+        "lastUpdated": "2026-06-21T03:26:45.271Z"
       },
       "links": [
         {
@@ -9080,15 +9080,15 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xE66747a101bFF2dBA3697199DCcE5b743b454759/logo.png",
       "logoExists": true,
-      "rank": 83,
+      "rank": 84,
       "market": {
         "source": "coingecko",
         "coingeckoId": "gatechain-token",
-        "marketCapRank": 83,
-        "marketCap": 710887471,
-        "totalVolume": 1688998,
-        "currentPrice": 6.69,
-        "lastUpdated": "2026-06-21T02:49:50.868Z"
+        "marketCapRank": 84,
+        "marketCap": 709801569,
+        "totalVolume": 1691939,
+        "currentPrice": 6.66,
+        "lastUpdated": "2026-06-21T03:26:48.849Z"
       },
       "links": [
         {
@@ -9126,10 +9126,10 @@
         "source": "coingecko",
         "coingeckoId": "just",
         "marketCapRank": 85,
-        "marketCap": 702474120,
-        "totalVolume": 27067113,
-        "currentPrice": 0.082291,
-        "lastUpdated": "2026-06-21T02:49:41.957Z"
+        "marketCap": 706072157,
+        "totalVolume": 22253104,
+        "currentPrice": 0.082653,
+        "lastUpdated": "2026-06-21T03:26:43.391Z"
       },
       "tags": [
         "defi"
@@ -9152,10 +9152,10 @@
         "source": "coingecko",
         "coingeckoId": "dexe",
         "marketCapRank": 86,
-        "marketCap": 693945188,
-        "totalVolume": 10533979,
-        "currentPrice": 14.85,
-        "lastUpdated": "2026-06-21T02:49:50.638Z"
+        "marketCap": 691921248,
+        "totalVolume": 10572589,
+        "currentPrice": 14.78,
+        "lastUpdated": "2026-06-21T03:26:45.944Z"
       },
       "tags": [
         "governance",
@@ -9201,10 +9201,10 @@
         "source": "coingecko",
         "coingeckoId": "dexe",
         "marketCapRank": 86,
-        "marketCap": 693945188,
-        "totalVolume": 10533979,
-        "currentPrice": 14.85,
-        "lastUpdated": "2026-06-21T02:49:50.638Z"
+        "marketCap": 691921248,
+        "totalVolume": 10572589,
+        "currentPrice": 14.78,
+        "lastUpdated": "2026-06-21T03:26:45.944Z"
       },
       "tags": [
         "governance",
@@ -9250,10 +9250,10 @@
         "source": "coingecko",
         "coingeckoId": "dexe",
         "marketCapRank": 86,
-        "marketCap": 693945188,
-        "totalVolume": 10533979,
-        "currentPrice": 14.85,
-        "lastUpdated": "2026-06-21T02:49:50.638Z"
+        "marketCap": 691921248,
+        "totalVolume": 10572589,
+        "currentPrice": 14.78,
+        "lastUpdated": "2026-06-21T03:26:45.944Z"
       },
       "tags": [
         "governance",
@@ -9299,10 +9299,10 @@
         "source": "coingecko",
         "coingeckoId": "venice-token",
         "marketCapRank": 87,
-        "marketCap": 679764635,
-        "totalVolume": 17660624,
-        "currentPrice": 14.49,
-        "lastUpdated": "2026-06-21T02:49:44.922Z"
+        "marketCap": 677415406,
+        "totalVolume": 17904189,
+        "currentPrice": 14.47,
+        "lastUpdated": "2026-06-21T03:26:46.237Z"
       },
       "links": [
         {
@@ -9332,10 +9332,10 @@
         "source": "coingecko",
         "coingeckoId": "filecoin",
         "marketCapRank": 89,
-        "marketCap": 621750917,
-        "totalVolume": 39246057,
-        "currentPrice": 0.785968,
-        "lastUpdated": "2026-06-21T02:49:42.233Z"
+        "marketCap": 626477635,
+        "totalVolume": 41728582,
+        "currentPrice": 0.792131,
+        "lastUpdated": "2026-06-21T03:26:53.461Z"
       }
     },
     {
@@ -9355,10 +9355,10 @@
         "source": "coingecko",
         "coingeckoId": "beldex",
         "marketCapRank": 90,
-        "marketCap": 618879017,
-        "totalVolume": 9995892,
-        "currentPrice": 0.079915,
-        "lastUpdated": "2026-06-21T02:49:44.524Z"
+        "marketCap": 621869569,
+        "totalVolume": 10044501,
+        "currentPrice": 0.080361,
+        "lastUpdated": "2026-06-21T03:26:45.778Z"
       },
       "tags": [
         "privacy"
@@ -9391,10 +9391,10 @@
         "source": "coingecko",
         "coingeckoId": "gho",
         "marketCapRank": 91,
-        "marketCap": 597901927,
-        "totalVolume": 3327043,
-        "currentPrice": 0.998188,
-        "lastUpdated": "2026-06-21T02:49:48.731Z"
+        "marketCap": 597867605,
+        "totalVolume": 3208890,
+        "currentPrice": 0.99812,
+        "lastUpdated": "2026-06-21T03:26:52.114Z"
       },
       "links": [
         {
@@ -9424,10 +9424,10 @@
         "source": "coingecko",
         "coingeckoId": "usual-usd",
         "marketCapRank": 95,
-        "marketCap": 553092871,
-        "totalVolume": 918902,
-        "currentPrice": 0.999131,
-        "lastUpdated": "2026-06-21T02:49:43.982Z"
+        "marketCap": 553144586,
+        "totalVolume": 918981,
+        "currentPrice": 0.999216,
+        "lastUpdated": "2026-06-21T03:26:45.392Z"
       },
       "tags": [
         "Stablecoin"
@@ -9459,15 +9459,15 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/aptos/info/logo.png",
       "logoExists": true,
-      "rank": 97,
+      "rank": 96,
       "market": {
         "source": "coingecko",
         "coingeckoId": "aptos",
-        "marketCapRank": 97,
-        "marketCap": 541769874,
-        "totalVolume": 35529770,
-        "currentPrice": 0.651065,
-        "lastUpdated": "2026-06-21T02:49:43.168Z"
+        "marketCapRank": 96,
+        "marketCap": 545672740,
+        "totalVolume": 39108543,
+        "currentPrice": 0.655729,
+        "lastUpdated": "2026-06-21T03:26:44.306Z"
       },
       "tags": [
         "defi",
@@ -9513,10 +9513,10 @@
         "source": "coingecko",
         "coingeckoId": "arbitrum",
         "marketCapRank": 99,
-        "marketCap": 532833461,
-        "totalVolume": 26662758,
-        "currentPrice": 0.083759,
-        "lastUpdated": "2026-06-21T02:49:42.744Z"
+        "marketCap": 533955526,
+        "totalVolume": 28483568,
+        "currentPrice": 0.08401,
+        "lastUpdated": "2026-06-21T03:26:43.819Z"
       },
       "links": [
         {
@@ -9554,10 +9554,10 @@
         "source": "coingecko",
         "coingeckoId": "arbitrum",
         "marketCapRank": 99,
-        "marketCap": 532833461,
-        "totalVolume": 26662758,
-        "currentPrice": 0.083759,
-        "lastUpdated": "2026-06-21T02:49:42.744Z"
+        "marketCap": 533955526,
+        "totalVolume": 28483568,
+        "currentPrice": 0.08401,
+        "lastUpdated": "2026-06-21T03:26:43.819Z"
       },
       "links": [
         {
@@ -9595,10 +9595,10 @@
         "source": "coingecko",
         "coingeckoId": "aerodrome-finance",
         "marketCapRank": 100,
-        "marketCap": 519187700,
-        "totalVolume": 60444057,
-        "currentPrice": 0.543158,
-        "lastUpdated": "2026-06-21T02:49:43.541Z"
+        "marketCap": 523108807,
+        "totalVolume": 59174448,
+        "currentPrice": 0.549368,
+        "lastUpdated": "2026-06-21T03:26:53.647Z"
       },
       "links": [
         {

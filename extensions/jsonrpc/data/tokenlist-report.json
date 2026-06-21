@@ -1,6 +1,6 @@
 {
   "source": "trustwallet+coingecko",
-  "updatedAt": "2026-06-21T02:51:23Z",
+  "updatedAt": "2026-06-21T03:27:59Z",
   "apis": [
     {
       "source": "coingecko",
@@ -38791,7 +38791,7 @@
         "address": "0xe5A1Dd911C289B087202AED0dD85AfbA80373eed",
         "assetId": "c60_t0xe5A1Dd911C289B087202AED0dD85AfbA80373eed",
         "symbol": "\"\"",
-        "name": "\bÃy ",
+        "name": "\u0008Ãy ",
         "status": "abandoned"
       },
       {
@@ -45991,43 +45991,8 @@
         "coingeckoId": "usd-coin",
         "symbol": "USDC",
         "name": "USDC",
-        "platform": "xdc-network",
-        "address": "0xfa2958cb79b0491cc627c1557f441ef849ca8eb1"
-      },
-      {
-        "coingeckoId": "usd-coin",
-        "symbol": "USDC",
-        "name": "USDC",
-        "platform": "plume-network",
-        "address": "0x222365ef19f7947e5484218551b56bb3965aa7af"
-      },
-      {
-        "coingeckoId": "usd-coin",
-        "symbol": "USDC",
-        "name": "USDC",
-        "platform": "morph-l2",
-        "address": "0xcfb1186f4e93d60e60a8bdd997427d1f33bc372b"
-      },
-      {
-        "coingeckoId": "usd-coin",
-        "symbol": "USDC",
-        "name": "USDC",
-        "platform": "world-chain",
-        "address": "0x79a02482a880bce3f13e09da970dc34db4cd24d1"
-      },
-      {
-        "coingeckoId": "usd-coin",
-        "symbol": "USDC",
-        "name": "USDC",
         "platform": "xrp",
         "address": "5553444300000000000000000000000000000000.rGm7WCVp9gb4jZHWTEtGUr4dd74z2XuWhE"
-      },
-      {
-        "coingeckoId": "usd-coin",
-        "symbol": "USDC",
-        "name": "USDC",
-        "platform": "unichain",
-        "address": "0x078d782b760474a361dda0af3839290b0ef57ad6"
       },
       {
         "coingeckoId": "usd-coin",
@@ -46040,8 +46005,43 @@
         "coingeckoId": "usd-coin",
         "symbol": "USDC",
         "name": "USDC",
+        "platform": "world-chain",
+        "address": "0x79a02482a880bce3f13e09da970dc34db4cd24d1"
+      },
+      {
+        "coingeckoId": "usd-coin",
+        "symbol": "USDC",
+        "name": "USDC",
+        "platform": "morph-l2",
+        "address": "0xcfb1186f4e93d60e60a8bdd997427d1f33bc372b"
+      },
+      {
+        "coingeckoId": "usd-coin",
+        "symbol": "USDC",
+        "name": "USDC",
+        "platform": "unichain",
+        "address": "0x078d782b760474a361dda0af3839290b0ef57ad6"
+      },
+      {
+        "coingeckoId": "usd-coin",
+        "symbol": "USDC",
+        "name": "USDC",
+        "platform": "plume-network",
+        "address": "0x222365ef19f7947e5484218551b56bb3965aa7af"
+      },
+      {
+        "coingeckoId": "usd-coin",
+        "symbol": "USDC",
+        "name": "USDC",
         "platform": "starknet",
         "address": "0x033068f6539f8e6e6b131e6b2b814e6c34a5224bc66947c47dab9dfee93b35fb"
+      },
+      {
+        "coingeckoId": "usd-coin",
+        "symbol": "USDC",
+        "name": "USDC",
+        "platform": "xdc-network",
+        "address": "0xfa2958cb79b0491cc627c1557f441ef849ca8eb1"
       },
       {
         "coingeckoId": "figure-heloc",
@@ -46068,78 +46068,8 @@
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "hydration",
-        "address": "asset_registry%2F1000794"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "taiko",
-        "address": "0x917a3964c37993e99a47c779beb5db1e9d13804d"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "berachain",
-        "address": "0x71052bae71c25c78e37fd12e5ff1101a71d9018f"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "superseed",
-        "address": "0x41ccf59e3f30eb624ef8e5ea34b2da96bee472d9"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
         "platform": "plume-network",
         "address": "0xb549b375da0c76f8b3877b9adfdd28378f087a64"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "megaeth",
-        "address": "0xee85aefb15b9489563a6a29891ebe0750aa1a7ae"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "starknet",
-        "address": "0x060f47b96b525c1014fed595e87e98edc3ce0731627a0670e1804ee1a3ca0ee9"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "mode",
-        "address": "0x183e3691eff3524b2315d3703d94f922cbe51f54"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "henesys",
-        "address": "0x76a443768a5e3b8d1aed0105fc250877841deb40"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "bittensor-evm",
-        "address": "0xf09afe78d3c7d359b334d7cb88995751f7ec5e13"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "astar",
-        "address": "0x31efb841d5e0b4082f7e1267dab8de1b853f2a9d"
       },
       {
         "coingeckoId": "chainlink",
@@ -46152,8 +46082,64 @@
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
+        "platform": "etherlink",
+        "address": "0x8ce7618e8f8e514d13889283f58ff03b794e6cc3"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "taiko",
+        "address": "0x917a3964c37993e99a47c779beb5db1e9d13804d"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "unichain",
+        "address": "0xef66491eab4bbb582c57b14778afd8dfb70d8a1a"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "bob-network",
+        "address": "0x5ab885cda7216b163fb6f813dec1e1532516c833"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "katana",
+        "address": "0xc2c447b04e0ed3476ddbdae8e9e39be7159d27b6"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "hemi",
+        "address": "0x63dbe12a6381d64ade47bc3d92abf4393dff4bc8"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
         "platform": "hashkey-chain",
         "address": "0x71052bae71c25c78e37fd12e5ff1101a71d9018f"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "mode",
+        "address": "0x183e3691eff3524b2315d3703d94f922cbe51f54"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "bittensor-evm",
+        "address": "0xf09afe78d3c7d359b334d7cb88995751f7ec5e13"
       },
       {
         "coingeckoId": "chainlink",
@@ -46173,76 +46159,6 @@
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "cronos-zkevm",
-        "address": "0x61170ca9fb9cf98d4c7d684e07be6d969d59667e"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "lens",
-        "address": "0x6e970e8d6758164798290c8db1d79a527ca6e1b2"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "wemix-network",
-        "address": "0x80f1fcdc96b55e459bf52b998abbe2c364935d69"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "zora-network",
-        "address": "0x3662b6f73c5560229d1a98af6e59e6649d568374"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "apechain",
-        "address": "0xf575731b78981b86d34321d875a3d25a48479be6"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "fraxtal",
-        "address": "0xd6a6ba37faac229b9665e86739ca501401f5a940"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "katana",
-        "address": "0xc2c447b04e0ed3476ddbdae8e9e39be7159d27b6"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "x-layer",
-        "address": "0x8af9711b44695a5a081f25ab9903ddb73acf8fa9"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "soneium",
-        "address": "0x32d8f819c8080ae44375f8d383ffd39fc642f3ec"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "etherlink",
-        "address": "0x8ce7618e8f8e514d13889283f58ff03b794e6cc3"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
         "platform": "ink",
         "address": "0x71052bae71c25c78e37fd12e5ff1101a71d9018f"
       },
@@ -46250,29 +46166,29 @@
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "hemi",
-        "address": "0x63dbe12a6381d64ade47bc3d92abf4393dff4bc8"
+        "platform": "megaeth",
+        "address": "0xee85aefb15b9489563a6a29891ebe0750aa1a7ae"
       },
       {
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "sora",
-        "address": "0x008484148dcf23d1b48908393e7a00d5fdc3bf81029a73eeca62a15ebfb1205a"
+        "platform": "abstract",
+        "address": "0x2ea38d6cdb6774992d4a62fe622f4405663729dd"
       },
       {
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "shibarium",
+        "platform": "world-chain",
+        "address": "0x915b648e994d5f31059b38223b9fbe98ae185473"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "lisk",
         "address": "0x71052bae71c25c78e37fd12e5ff1101a71d9018f"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "bob-network",
-        "address": "0x5ab885cda7216b163fb6f813dec1e1532516c833"
       },
       {
         "coingeckoId": "chainlink",
@@ -46285,15 +46201,8 @@
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "kroma",
-        "address": "0xc1f6f7622ad37c3f46cdf6f8aa0344ade80bf450"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "tac",
-        "address": "0xc2be2f77562a6676098e8d363b9d8a33ea009d4e"
+        "platform": "hydration",
+        "address": "asset_registry%2F1000794"
       },
       {
         "coingeckoId": "chainlink",
@@ -46313,6 +46222,41 @@
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
+        "platform": "bitlayer",
+        "address": "0x56b275c0ec034a229a1ded8db17089544bc276d9"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "starknet",
+        "address": "0x060f47b96b525c1014fed595e87e98edc3ce0731627a0670e1804ee1a3ca0ee9"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "henesys",
+        "address": "0x76a443768a5e3b8d1aed0105fc250877841deb40"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "berachain",
+        "address": "0x71052bae71c25c78e37fd12e5ff1101a71d9018f"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "astar",
+        "address": "0x31efb841d5e0b4082f7e1267dab8de1b853f2a9d"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
         "platform": "metal-l2",
         "address": "0x587d19ddf735d6b536aadb1a2a92938eb23b8d5c"
       },
@@ -46320,36 +46264,78 @@
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "world-chain",
-        "address": "0x915b648e994d5f31059b38223b9fbe98ae185473"
+        "platform": "tac",
+        "address": "0xc2be2f77562a6676098e8d363b9d8a33ea009d4e"
       },
       {
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "unichain",
-        "address": "0xef66491eab4bbb582c57b14778afd8dfb70d8a1a"
+        "platform": "sora",
+        "address": "0x008484148dcf23d1b48908393e7a00d5fdc3bf81029a73eeca62a15ebfb1205a"
       },
       {
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "lisk",
+        "platform": "fraxtal",
+        "address": "0xd6a6ba37faac229b9665e86739ca501401f5a940"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "kroma",
+        "address": "0xc1f6f7622ad37c3f46cdf6f8aa0344ade80bf450"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "wemix-network",
+        "address": "0x80f1fcdc96b55e459bf52b998abbe2c364935d69"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "soneium",
+        "address": "0x32d8f819c8080ae44375f8d383ffd39fc642f3ec"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "apechain",
+        "address": "0xf575731b78981b86d34321d875a3d25a48479be6"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "shibarium",
         "address": "0x71052bae71c25c78e37fd12e5ff1101a71d9018f"
       },
       {
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "abstract",
-        "address": "0x2ea38d6cdb6774992d4a62fe622f4405663729dd"
+        "platform": "cronos-zkevm",
+        "address": "0x61170ca9fb9cf98d4c7d684e07be6d969d59667e"
       },
       {
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "bitlayer",
-        "address": "0x56b275c0ec034a229a1ded8db17089544bc276d9"
+        "platform": "zora-network",
+        "address": "0x3662b6f73c5560229d1a98af6e59e6649d568374"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "superseed",
+        "address": "0x41ccf59e3f30eb624ef8e5ea34b2da96bee472d9"
       },
       {
         "coingeckoId": "chainlink",
@@ -46364,6 +46350,20 @@
         "name": "Chainlink",
         "platform": "xdc-network",
         "address": "0xe27dd9bf01b55ce6803c0d81386a04212c718b95"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "lens",
+        "address": "0x6e970e8d6758164798290c8db1d79a527ca6e1b2"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "x-layer",
+        "address": "0x8af9711b44695a5a081f25ab9903ddb73acf8fa9"
       },
       {
         "coingeckoId": "chainlink",
@@ -46390,48 +46390,6 @@
         "coingeckoId": "ethena-usde",
         "symbol": "USDE",
         "name": "Ethena USDe",
-        "platform": "zircuit",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "hyperliquid",
-        "address": "0x2e6d84f2d7ca82e6581e03523e4389f7"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "fraxtal",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "berachain",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "morph-l2",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "swellchain",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
         "platform": "x-layer",
         "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
       },
@@ -46446,7 +46404,49 @@
         "coingeckoId": "ethena-usde",
         "symbol": "USDE",
         "name": "Ethena USDe",
+        "platform": "fraxtal",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "morph-l2",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "berachain",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "hyperliquid",
+        "address": "0x2e6d84f2d7ca82e6581e03523e4389f7"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
         "platform": "megaeth",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "zircuit",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "swellchain",
         "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
       },
       {
@@ -46467,15 +46467,15 @@
         "coingeckoId": "ondo-us-dollar-yield",
         "symbol": "USDY",
         "name": "Ondo US Dollar Yield",
-        "platform": "mantra",
-        "address": "ibc/6749D16BC09F419C090C330FC751FFF1C96143DB7A4D2FCAEC2F348A3E17618A"
+        "platform": "plume-network",
+        "address": "0xd2b65e851be3d80d3c2ce795eb2e78f16cb088b2"
       },
       {
         "coingeckoId": "ondo-us-dollar-yield",
         "symbol": "USDY",
         "name": "Ondo US Dollar Yield",
-        "platform": "plume-network",
-        "address": "0xd2b65e851be3d80d3c2ce795eb2e78f16cb088b2"
+        "platform": "mantra",
+        "address": "ibc/6749D16BC09F419C090C330FC751FFF1C96143DB7A4D2FCAEC2F348A3E17618A"
       },
       {
         "coingeckoId": "worldcoin-wld",
@@ -46551,15 +46551,15 @@
         "coingeckoId": "aave",
         "symbol": "AAVE",
         "name": "Aave",
-        "platform": "hydration",
-        "address": "asset_registry%2F1000624"
+        "platform": "sora",
+        "address": "0x0091bd8d8295b25cab5a7b8b0e44498e678cfc15d872ede3215f7d4c7635ba36"
       },
       {
         "coingeckoId": "aave",
         "symbol": "AAVE",
         "name": "Aave",
-        "platform": "sora",
-        "address": "0x0091bd8d8295b25cab5a7b8b0e44498e678cfc15d872ede3215f7d4c7635ba36"
+        "platform": "hydration",
+        "address": "asset_registry%2F1000624"
       },
       {
         "coingeckoId": "superstate-short-duration-us-government-securities-fund-ustb",
@@ -46572,15 +46572,22 @@
         "coingeckoId": "eutbl",
         "symbol": "EUTBL",
         "name": "Spiko EU T-Bills Money Market Fund",
-        "platform": "starknet",
-        "address": "0x04f5e0de717daa6aa8de63b1bf2e8d7823ec5b21a88461b1519d9dbc956fb7f2"
+        "platform": "etherlink",
+        "address": "0xa0769f7a8fc65e47de93797b4e21c073c117fc80"
       },
       {
         "coingeckoId": "eutbl",
         "symbol": "EUTBL",
         "name": "Spiko EU T-Bills Money Market Fund",
-        "platform": "etherlink",
-        "address": "0xa0769f7a8fc65e47de93797b4e21c073c117fc80"
+        "platform": "starknet",
+        "address": "0x04f5e0de717daa6aa8de63b1bf2e8d7823ec5b21a88461b1519d9dbc956fb7f2"
+      },
+      {
+        "coingeckoId": "cosmos",
+        "symbol": "ATOM",
+        "name": "Cosmos Hub",
+        "platform": "canto",
+        "address": "0xeceeefcee421d8062ef8d6b4d814efe4dc898265"
       },
       {
         "coingeckoId": "cosmos",
@@ -46597,13 +46604,6 @@
         "address": "ibc/A4DB47A9D3CF9A068D454513891B526702455D3EF08FB9EB558C561F9DC2B701"
       },
       {
-        "coingeckoId": "cosmos",
-        "symbol": "ATOM",
-        "name": "Cosmos Hub",
-        "platform": "canto",
-        "address": "0xeceeefcee421d8062ef8d6b4d814efe4dc898265"
-      },
-      {
         "coingeckoId": "janus-henderson-anemoy-treasury-fund",
         "symbol": "JTRSY",
         "name": "Janus Henderson Anemoy Treasury Fund",
@@ -46614,7 +46614,7 @@
         "coingeckoId": "ethena",
         "symbol": "ENA",
         "name": "Ethena",
-        "platform": "mode",
+        "platform": "fraxtal",
         "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
       },
       {
@@ -46628,14 +46628,14 @@
         "coingeckoId": "ethena",
         "symbol": "ENA",
         "name": "Ethena",
-        "platform": "morph-l2",
+        "platform": "mode",
         "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
       },
       {
         "coingeckoId": "ethena",
         "symbol": "ENA",
         "name": "Ethena",
-        "platform": "fraxtal",
+        "platform": "morph-l2",
         "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
       },
       {
@@ -46707,9 +46707,9 @@
         "coingeckoId": "tether",
         "symbol": "USDT",
         "name": "Tether",
-        "platform": "kava",
-        "chain": "kava",
-        "address": "0x919c1c267bc06a7039e03fcc2ef738525769109c"
+        "platform": "near-protocol",
+        "chain": "near",
+        "address": "usdt.tether-token.near"
       },
       {
         "coingeckoId": "tether",
@@ -46723,57 +46723,9 @@
         "coingeckoId": "tether",
         "symbol": "USDT",
         "name": "Tether",
-        "platform": "near-protocol",
-        "chain": "near",
-        "address": "usdt.tether-token.near"
-      },
-      {
-        "coingeckoId": "usd-coin",
-        "symbol": "USDC",
-        "name": "USDC",
-        "platform": "hedera-hashgraph",
-        "chain": "hedera",
-        "address": "0.0.456858"
-      },
-      {
-        "coingeckoId": "usd-coin",
-        "symbol": "USDC",
-        "name": "USDC",
-        "platform": "moonriver",
-        "chain": "moonriver",
-        "address": "0xffffffff7d2b0b761af01ca8e25242976ac0ad7d"
-      },
-      {
-        "coingeckoId": "usd-coin",
-        "symbol": "USDC",
-        "name": "USDC",
-        "platform": "sei-v2",
-        "chain": "seievm",
-        "address": "0xe15fc38f6d8c56af07bbcbe3baf5708a2bf42392"
-      },
-      {
-        "coingeckoId": "usd-coin",
-        "symbol": "USDC",
-        "name": "USDC",
-        "platform": "hyperevm",
-        "chain": "hyperevm",
-        "address": "0xb88339cb7199b77e23db6e890353e22632ba630f"
-      },
-      {
-        "coingeckoId": "usd-coin",
-        "symbol": "USDC",
-        "name": "USDC",
-        "platform": "polkadot",
-        "chain": "polkadot",
-        "address": "1337"
-      },
-      {
-        "coingeckoId": "usd-coin",
-        "symbol": "USDC",
-        "name": "USDC",
-        "platform": "near-protocol",
-        "chain": "near",
-        "address": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+        "platform": "kava",
+        "chain": "kava",
+        "address": "0x919c1c267bc06a7039e03fcc2ef738525769109c"
       },
       {
         "coingeckoId": "usd-coin",
@@ -46787,9 +46739,57 @@
         "coingeckoId": "usd-coin",
         "symbol": "USDC",
         "name": "USDC",
+        "platform": "polkadot",
+        "chain": "polkadot",
+        "address": "1337"
+      },
+      {
+        "coingeckoId": "usd-coin",
+        "symbol": "USDC",
+        "name": "USDC",
+        "platform": "hyperevm",
+        "chain": "hyperevm",
+        "address": "0xb88339cb7199b77e23db6e890353e22632ba630f"
+      },
+      {
+        "coingeckoId": "usd-coin",
+        "symbol": "USDC",
+        "name": "USDC",
+        "platform": "moonriver",
+        "chain": "moonriver",
+        "address": "0xffffffff7d2b0b761af01ca8e25242976ac0ad7d"
+      },
+      {
+        "coingeckoId": "usd-coin",
+        "symbol": "USDC",
+        "name": "USDC",
+        "platform": "near-protocol",
+        "chain": "near",
+        "address": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+      },
+      {
+        "coingeckoId": "usd-coin",
+        "symbol": "USDC",
+        "name": "USDC",
         "platform": "stellar",
         "chain": "stellar",
         "address": "CCW67TSZV3SSS2HXMBQ5JFGCKJNXKZM7UQUWUZPUTHXSTZLEO7SJMI75"
+      },
+      {
+        "coingeckoId": "usd-coin",
+        "symbol": "USDC",
+        "name": "USDC",
+        "platform": "hedera-hashgraph",
+        "chain": "hedera",
+        "address": "0.0.456858"
+      },
+      {
+        "coingeckoId": "usd-coin",
+        "symbol": "USDC",
+        "name": "USDC",
+        "platform": "sei-v2",
+        "chain": "seievm",
+        "address": "0xe15fc38f6d8c56af07bbcbe3baf5708a2bf42392"
       },
       {
         "coingeckoId": "usds",
@@ -46843,206 +46843,6 @@
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "ronin",
-        "chain": "ronin",
-        "address": "0x3902228d6a3d2dc44731fd9d45fee6a61c722d0b"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "neo",
-        "chain": "neo",
-        "address": "0xb25de57d73ab177fc091327bcb725154dfbb5bfb"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "polygon-zkevm",
-        "chain": "polygonzkevm",
-        "address": "0xdb7a504cf869484dd6ac5faf925c8386cbf7573d"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "osmosis",
-        "chain": "osmosis",
-        "address": "ibc/D3327A763C23F01EC43D1F0DB3CEFEC390C362569B6FD191F40A5192F8960049"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "moonbeam",
-        "chain": "moonbeam",
-        "address": "0x012414a392f9fa442a3109f1320c439c45518ac3"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "energi",
-        "chain": "energyweb",
-        "address": "0x68ca48ca2626c415a89756471d4ade2cc9034008"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "metis-andromeda",
-        "chain": "metis",
-        "address": "0xd2fe54d1e5f568eb710ba9d898bf4bd02c7c0353"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "near-protocol",
-        "chain": "near",
-        "address": "514910771af9ca656af840dff83e8264ecf986ca.factory.bridge.near"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "sonic",
-        "chain": "sonic",
-        "address": "0x71052bae71c25c78e37fd12e5ff1101a71d9018f"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "hyperevm",
-        "chain": "hyperevm",
-        "address": "0x1ac2ee68b8d038c982c1e1f73f596927dd70de59"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "moonriver",
-        "chain": "moonriver",
-        "address": "0x8b12ac23bfe11cab03a634c1f117d64a7f2cfd3e"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "rootstock",
-        "chain": "rootstock",
-        "address": "0x938d84942f5d924070a6bb82f8e56a5e2b3098a4"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "klay-token",
-        "chain": "klaytn",
-        "address": "0x7311ded199cc28d80e58e81e8589aa160199fcd2"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "monad",
-        "chain": "monad",
-        "address": "0x6fe981dbd557f81ff66836af0932cba535cbc343"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "mantle",
-        "chain": "mantle",
-        "address": "0xfe36cf0b43aae49fbc5cfc5c0af22a623114e043"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "celo",
-        "chain": "celo",
-        "address": "0xd07294e6e917e07dfdcee882dd1e2565085c2ae0"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "zksync",
-        "chain": "zksync",
-        "address": "0x52869bae3e091e36b0915941577f2d47d8d8b534"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "hedera-hashgraph",
-        "chain": "hedera",
-        "address": "0x7ce6bb2cc2d3fd45a974da6a0f29236cb9513a98"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "harmony-shard-0",
-        "chain": "harmony",
-        "address": "0x218532a12a389a4a92fc0c5fb22901d1c19198aa"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "linea",
-        "chain": "linea",
-        "address": "0xa18152629128738a5c081eb226335fed4b9c95e9"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "plasma",
-        "chain": "plasma",
-        "address": "0x76a443768a5e3b8d1aed0105fc250877841deb40"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "opbnb",
-        "chain": "opbnb",
-        "address": "0x99f0d88b81b758ab07e22c7aba00e0121a882dea"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "scroll",
-        "chain": "scroll",
-        "address": "0x548c6944cba02b9d1c0570102c89de64d258d3ac"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "merlin-chain",
-        "chain": "merlin",
-        "address": "0x71052bae71c25c78e37fd12e5ff1101a71d9018f"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
-        "platform": "base",
-        "chain": "base",
-        "address": "0x88fb150bdc53a65fe94dea0c9ba0a6daf8c6e196"
-      },
-      {
-        "coingeckoId": "chainlink",
-        "symbol": "LINK",
-        "name": "Chainlink",
         "platform": "cronos",
         "chain": "cronos",
         "address": "0x8c80a01f461f297df7f9da3a4f740d7297c8ac85"
@@ -47059,9 +46859,169 @@
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
+        "platform": "energi",
+        "chain": "energyweb",
+        "address": "0x68ca48ca2626c415a89756471d4ade2cc9034008"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "hedera-hashgraph",
+        "chain": "hedera",
+        "address": "0x7ce6bb2cc2d3fd45a974da6a0f29236cb9513a98"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "ronin",
+        "chain": "ronin",
+        "address": "0x3902228d6a3d2dc44731fd9d45fee6a61c722d0b"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "near-protocol",
+        "chain": "near",
+        "address": "514910771af9ca656af840dff83e8264ecf986ca.factory.bridge.near"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "neo",
+        "chain": "neo",
+        "address": "0xb25de57d73ab177fc091327bcb725154dfbb5bfb"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "plasma",
+        "chain": "plasma",
+        "address": "0x76a443768a5e3b8d1aed0105fc250877841deb40"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "harmony-shard-0",
+        "chain": "harmony",
+        "address": "0x218532a12a389a4a92fc0c5fb22901d1c19198aa"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "celo",
+        "chain": "celo",
+        "address": "0xd07294e6e917e07dfdcee882dd1e2565085c2ae0"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "metis-andromeda",
+        "chain": "metis",
+        "address": "0xd2fe54d1e5f568eb710ba9d898bf4bd02c7c0353"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
         "platform": "solana",
         "chain": "solana",
         "address": "LinkhB3afbBKb2EQQu7s7umdZceV3wcvAUJhQAfQ23L"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "moonbeam",
+        "chain": "moonbeam",
+        "address": "0x012414a392f9fa442a3109f1320c439c45518ac3"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "xdai",
+        "chain": "xdai",
+        "address": "0xe2e73a1c69ecf83f464efce6a5be353a37ca09b2"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "sonic",
+        "chain": "sonic",
+        "address": "0x71052bae71c25c78e37fd12e5ff1101a71d9018f"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "zksync",
+        "chain": "zksync",
+        "address": "0x52869bae3e091e36b0915941577f2d47d8d8b534"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "rootstock",
+        "chain": "rootstock",
+        "address": "0x938d84942f5d924070a6bb82f8e56a5e2b3098a4"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "polygon-zkevm",
+        "chain": "polygonzkevm",
+        "address": "0xdb7a504cf869484dd6ac5faf925c8386cbf7573d"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "monad",
+        "chain": "monad",
+        "address": "0x6fe981dbd557f81ff66836af0932cba535cbc343"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "osmosis",
+        "chain": "osmosis",
+        "address": "ibc/D3327A763C23F01EC43D1F0DB3CEFEC390C362569B6FD191F40A5192F8960049"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "opbnb",
+        "chain": "opbnb",
+        "address": "0x99f0d88b81b758ab07e22c7aba00e0121a882dea"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "klay-token",
+        "chain": "klaytn",
+        "address": "0x7311ded199cc28d80e58e81e8589aa160199fcd2"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "merlin-chain",
+        "chain": "merlin",
+        "address": "0x71052bae71c25c78e37fd12e5ff1101a71d9018f"
       },
       {
         "coingeckoId": "chainlink",
@@ -47075,9 +47035,49 @@
         "coingeckoId": "chainlink",
         "symbol": "LINK",
         "name": "Chainlink",
-        "platform": "xdai",
-        "chain": "xdai",
-        "address": "0xe2e73a1c69ecf83f464efce6a5be353a37ca09b2"
+        "platform": "moonriver",
+        "chain": "moonriver",
+        "address": "0x8b12ac23bfe11cab03a634c1f117d64a7f2cfd3e"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "linea",
+        "chain": "linea",
+        "address": "0xa18152629128738a5c081eb226335fed4b9c95e9"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "base",
+        "chain": "base",
+        "address": "0x88fb150bdc53a65fe94dea0c9ba0a6daf8c6e196"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "scroll",
+        "chain": "scroll",
+        "address": "0x548c6944cba02b9d1c0570102c89de64d258d3ac"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "hyperevm",
+        "chain": "hyperevm",
+        "address": "0x1ac2ee68b8d038c982c1e1f73f596927dd70de59"
+      },
+      {
+        "coingeckoId": "chainlink",
+        "symbol": "LINK",
+        "name": "Chainlink",
+        "platform": "mantle",
+        "chain": "mantle",
+        "address": "0xfe36cf0b43aae49fbc5cfc5c0af22a623114e043"
       },
       {
         "coingeckoId": "usd1-wlfi",
@@ -47099,96 +47099,8 @@
         "coingeckoId": "ethena-usde",
         "symbol": "USDE",
         "name": "Ethena USDe",
-        "platform": "linea",
-        "chain": "linea",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "binance-smart-chain",
-        "chain": "smartchain",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "hyperevm",
-        "chain": "hyperevm",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "mantle",
-        "chain": "mantle",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "solana",
-        "chain": "solana",
-        "address": "DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "base",
-        "chain": "base",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "metis-andromeda",
-        "chain": "metis",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "kava",
-        "chain": "kava",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "aptos",
-        "chain": "aptos",
-        "address": "0xf37a8864fe737eb8ec2c2931047047cbaed1beed3fb0e5b7c5526dafd3b9c2e9"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "avalanche",
-        "chain": "avalanchec",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "blast",
-        "chain": "blast",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "scroll",
-        "chain": "scroll",
+        "platform": "arbitrum-one",
+        "chain": "arbitrum",
         "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
       },
       {
@@ -47203,16 +47115,8 @@
         "coingeckoId": "ethena-usde",
         "symbol": "USDE",
         "name": "Ethena USDe",
-        "platform": "optimistic-ethereum",
-        "chain": "optimism",
-        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
-      },
-      {
-        "coingeckoId": "ethena-usde",
-        "symbol": "USDE",
-        "name": "Ethena USDe",
-        "platform": "arbitrum-one",
-        "chain": "arbitrum",
+        "platform": "avalanche",
+        "chain": "avalanchec",
         "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
       },
       {
@@ -47222,6 +47126,102 @@
         "platform": "zksync",
         "chain": "zksync",
         "address": "0x39fe7a0dacce31bd90418e3e659fb0b5f0b3db0d"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "base",
+        "chain": "base",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "blast",
+        "chain": "blast",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "hyperevm",
+        "chain": "hyperevm",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "aptos",
+        "chain": "aptos",
+        "address": "0xf37a8864fe737eb8ec2c2931047047cbaed1beed3fb0e5b7c5526dafd3b9c2e9"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "metis-andromeda",
+        "chain": "metis",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "binance-smart-chain",
+        "chain": "smartchain",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "solana",
+        "chain": "solana",
+        "address": "DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "mantle",
+        "chain": "mantle",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "kava",
+        "chain": "kava",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "scroll",
+        "chain": "scroll",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "linea",
+        "chain": "linea",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
+      },
+      {
+        "coingeckoId": "ethena-usde",
+        "symbol": "USDE",
+        "name": "Ethena USDe",
+        "platform": "optimistic-ethereum",
+        "chain": "optimism",
+        "address": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34"
       },
       {
         "coingeckoId": "the-open-network",
@@ -47251,6 +47251,14 @@
         "coingeckoId": "hashnote-usyc",
         "symbol": "USYC",
         "name": "Circle USYC",
+        "platform": "solana",
+        "chain": "solana",
+        "address": "7LWanZteUKtvFjv4MHYgKXXdAuCQYFPJysL9pxxdRQGn"
+      },
+      {
+        "coingeckoId": "hashnote-usyc",
+        "symbol": "USYC",
+        "name": "Circle USYC",
         "platform": "ethereum",
         "chain": "ethereum",
         "address": "0x136471a34f6ef19fe571effc1ca711fdb8e49f2b"
@@ -47262,14 +47270,6 @@
         "platform": "binance-smart-chain",
         "chain": "smartchain",
         "address": "0x8d0fa28f221eb5735bc71d3a0da67ee5bc821311"
-      },
-      {
-        "coingeckoId": "hashnote-usyc",
-        "symbol": "USYC",
-        "name": "Circle USYC",
-        "platform": "solana",
-        "chain": "solana",
-        "address": "7LWanZteUKtvFjv4MHYgKXXdAuCQYFPJysL9pxxdRQGn"
       },
       {
         "coingeckoId": "sui",
@@ -47294,14 +47294,6 @@
         "platform": "stellar",
         "chain": "stellar",
         "address": "CCCRWH6Q3FNP3I2I57BDLM5AFAT7O6OF6GKQOC6SSJNDAVRZ57SPHGU2"
-      },
-      {
-        "coingeckoId": "blackrock-usd-institutional-digital-liquidity-fund",
-        "symbol": "BUIDL",
-        "name": "BlackRock USD Institutional Digital Liquidity Fund",
-        "platform": "binance-smart-chain",
-        "chain": "smartchain",
-        "address": "0x2d5bdc96d9c8aabbdb38c9a27398513e7e5ef84f"
       },
       {
         "coingeckoId": "blackrock-usd-institutional-digital-liquidity-fund",
@@ -47360,6 +47352,14 @@
         "address": "0x7712c34205737192402172409a8f7ccef8aa2aec"
       },
       {
+        "coingeckoId": "blackrock-usd-institutional-digital-liquidity-fund",
+        "symbol": "BUIDL",
+        "name": "BlackRock USD Institutional Digital Liquidity Fund",
+        "platform": "binance-smart-chain",
+        "chain": "smartchain",
+        "address": "0x2d5bdc96d9c8aabbdb38c9a27398513e7e5ef84f"
+      },
+      {
         "coingeckoId": "ondo-us-dollar-yield",
         "symbol": "USDY",
         "name": "Ondo US Dollar Yield",
@@ -47371,9 +47371,9 @@
         "coingeckoId": "ondo-us-dollar-yield",
         "symbol": "USDY",
         "name": "Ondo US Dollar Yield",
-        "platform": "sei-v2",
-        "chain": "seievm",
-        "address": "0x54cd901491aef397084453f4372b93c33260e2a6"
+        "platform": "aptos",
+        "chain": "aptos",
+        "address": "0xcfea864b32833f157f042618bd845145256b1bf4c0da34a7013b76e42daa53cc"
       },
       {
         "coingeckoId": "ondo-us-dollar-yield",
@@ -47382,22 +47382,6 @@
         "platform": "stellar",
         "chain": "stellar",
         "address": "USDY-GAJMPX5NBOG6TQFPQGRABJEEB2YE7RFRLUKJDZAZGAD5GFX4J7TADAZ6"
-      },
-      {
-        "coingeckoId": "ondo-us-dollar-yield",
-        "symbol": "USDY",
-        "name": "Ondo US Dollar Yield",
-        "platform": "osmosis",
-        "chain": "osmosis",
-        "address": "ibc/23104D411A6EB6031FA92FB75F227422B84989969E91DCAD56A535DD7FF0A373"
-      },
-      {
-        "coingeckoId": "ondo-us-dollar-yield",
-        "symbol": "USDY",
-        "name": "Ondo US Dollar Yield",
-        "platform": "aptos",
-        "chain": "aptos",
-        "address": "0xcfea864b32833f157f042618bd845145256b1bf4c0da34a7013b76e42daa53cc"
       },
       {
         "coingeckoId": "ondo-us-dollar-yield",
@@ -47414,6 +47398,22 @@
         "platform": "sui",
         "chain": "sui",
         "address": "0x960b531667636f39e85867775f52f6b1f220a058c4de786905bdf761e06a56bb::usdy::USDY"
+      },
+      {
+        "coingeckoId": "ondo-us-dollar-yield",
+        "symbol": "USDY",
+        "name": "Ondo US Dollar Yield",
+        "platform": "osmosis",
+        "chain": "osmosis",
+        "address": "ibc/23104D411A6EB6031FA92FB75F227422B84989969E91DCAD56A535DD7FF0A373"
+      },
+      {
+        "coingeckoId": "ondo-us-dollar-yield",
+        "symbol": "USDY",
+        "name": "Ondo US Dollar Yield",
+        "platform": "sei-v2",
+        "chain": "seievm",
+        "address": "0x54cd901491aef397084453f4372b93c33260e2a6"
       },
       {
         "coingeckoId": "world-liberty-financial",
@@ -47443,6 +47443,14 @@
         "coingeckoId": "uniswap",
         "symbol": "UNI",
         "name": "Uniswap",
+        "platform": "xdai",
+        "chain": "xdai",
+        "address": "0x4537e328bf7e4efa29d05caea260d7fe26af9d74"
+      },
+      {
+        "coingeckoId": "uniswap",
+        "symbol": "UNI",
+        "name": "Uniswap",
         "platform": "near-protocol",
         "chain": "near",
         "address": "1f9840a85d5af5bf1d1762f925bdaddc4201f984.factory.bridge.near"
@@ -47464,20 +47472,20 @@
         "address": "0x665b3a802979ec24e076c80025bff33c18eb6007"
       },
       {
-        "coingeckoId": "uniswap",
-        "symbol": "UNI",
-        "name": "Uniswap",
-        "platform": "xdai",
-        "chain": "xdai",
-        "address": "0x4537e328bf7e4efa29d05caea260d7fe26af9d74"
-      },
-      {
         "coingeckoId": "mantle",
         "symbol": "MNT",
         "name": "Mantle",
         "platform": "mantle",
         "chain": "mantle",
         "address": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000"
+      },
+      {
+        "coingeckoId": "polkadot",
+        "symbol": "DOT",
+        "name": "Polkadot",
+        "platform": "binance-smart-chain",
+        "chain": "smartchain",
+        "address": "0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8"
       },
       {
         "coingeckoId": "polkadot",
@@ -47509,14 +47517,6 @@
         "name": "Polkadot",
         "platform": "optimistic-ethereum",
         "chain": "optimism",
-        "address": "0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8"
-      },
-      {
-        "coingeckoId": "polkadot",
-        "symbol": "DOT",
-        "name": "Polkadot",
-        "platform": "binance-smart-chain",
-        "chain": "smartchain",
         "address": "0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8"
       },
       {
@@ -47619,17 +47619,17 @@
         "coingeckoId": "aave",
         "symbol": "AAVE",
         "name": "Aave",
-        "platform": "base",
-        "chain": "base",
-        "address": "0x63706e401c06ac8513145b7687a14804d17f814b"
+        "platform": "optimistic-ethereum",
+        "chain": "optimism",
+        "address": "0x76fb31fb4af56892a25e32cfc43de717950c9278"
       },
       {
         "coingeckoId": "aave",
         "symbol": "AAVE",
         "name": "Aave",
-        "platform": "harmony-shard-0",
-        "chain": "harmony",
-        "address": "0xcf323aad9e522b93f11c352caa519ad0e14eb40f"
+        "platform": "energi",
+        "chain": "energyweb",
+        "address": "0xa7f2f790355e0c32cab03f92f6eb7f488e6f049a"
       },
       {
         "coingeckoId": "aave",
@@ -47651,17 +47651,17 @@
         "coingeckoId": "aave",
         "symbol": "AAVE",
         "name": "Aave",
-        "platform": "optimistic-ethereum",
-        "chain": "optimism",
-        "address": "0x76fb31fb4af56892a25e32cfc43de717950c9278"
+        "platform": "harmony-shard-0",
+        "chain": "harmony",
+        "address": "0xcf323aad9e522b93f11c352caa519ad0e14eb40f"
       },
       {
         "coingeckoId": "aave",
         "symbol": "AAVE",
         "name": "Aave",
-        "platform": "energi",
-        "chain": "energyweb",
-        "address": "0xa7f2f790355e0c32cab03f92f6eb7f488e6f049a"
+        "platform": "base",
+        "chain": "base",
+        "address": "0x63706e401c06ac8513145b7687a14804d17f814b"
       },
       {
         "coingeckoId": "quant-network",
@@ -47715,14 +47715,6 @@
         "coingeckoId": "eutbl",
         "symbol": "EUTBL",
         "name": "Spiko EU T-Bills Money Market Fund",
-        "platform": "arbitrum-one",
-        "chain": "arbitrum",
-        "address": "0xcbeb19549054cc0a6257a77736fc78c367216ce7"
-      },
-      {
-        "coingeckoId": "eutbl",
-        "symbol": "EUTBL",
-        "name": "Spiko EU T-Bills Money Market Fund",
         "platform": "stellar",
         "chain": "stellar",
         "address": "CBGV2QFQBBGEQRUKUMCPO3SZOHDDYO6SCP5CH6TW7EALKVHCXTMWDDOF"
@@ -47750,6 +47742,14 @@
         "platform": "base",
         "chain": "base",
         "address": "0xa0769f7a8fc65e47de93797b4e21c073c117fc80"
+      },
+      {
+        "coingeckoId": "eutbl",
+        "symbol": "EUTBL",
+        "name": "Spiko EU T-Bills Money Market Fund",
+        "platform": "arbitrum-one",
+        "chain": "arbitrum",
+        "address": "0xcbeb19549054cc0a6257a77736fc78c367216ce7"
       },
       {
         "coingeckoId": "cosmos",
@@ -47843,38 +47843,6 @@
         "coingeckoId": "ethena",
         "symbol": "ENA",
         "name": "Ethena",
-        "platform": "base",
-        "chain": "base",
-        "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
-      },
-      {
-        "coingeckoId": "ethena",
-        "symbol": "ENA",
-        "name": "Ethena",
-        "platform": "arbitrum-one",
-        "chain": "arbitrum",
-        "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
-      },
-      {
-        "coingeckoId": "ethena",
-        "symbol": "ENA",
-        "name": "Ethena",
-        "platform": "manta-pacific",
-        "chain": "manta",
-        "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
-      },
-      {
-        "coingeckoId": "ethena",
-        "symbol": "ENA",
-        "name": "Ethena",
-        "platform": "solana",
-        "chain": "solana",
-        "address": "72QvBVwpxqmheEPfaCwWSWqEFsUy3rhWt6JhQBMNTwD1"
-      },
-      {
-        "coingeckoId": "ethena",
-        "symbol": "ENA",
-        "name": "Ethena",
         "platform": "kava",
         "chain": "kava",
         "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
@@ -47883,17 +47851,25 @@
         "coingeckoId": "ethena",
         "symbol": "ENA",
         "name": "Ethena",
-        "platform": "blast",
-        "chain": "blast",
+        "platform": "scroll",
+        "chain": "scroll",
         "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
       },
       {
         "coingeckoId": "ethena",
         "symbol": "ENA",
         "name": "Ethena",
-        "platform": "avalanche",
-        "chain": "avalanchec",
-        "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
+        "platform": "zksync",
+        "chain": "zksync",
+        "address": "0x686b311f82b407f0be842652a98e5619f64cc25f"
+      },
+      {
+        "coingeckoId": "ethena",
+        "symbol": "ENA",
+        "name": "Ethena",
+        "platform": "the-open-network",
+        "chain": "ton",
+        "address": "EQAPh9RCprgg5kKumtJi8uB7nFKctPBwuRUu82JgTGmzklNV"
       },
       {
         "coingeckoId": "ethena",
@@ -47915,9 +47891,9 @@
         "coingeckoId": "ethena",
         "symbol": "ENA",
         "name": "Ethena",
-        "platform": "zksync",
-        "chain": "zksync",
-        "address": "0x686b311f82b407f0be842652a98e5619f64cc25f"
+        "platform": "blast",
+        "chain": "blast",
+        "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
       },
       {
         "coingeckoId": "ethena",
@@ -47931,17 +47907,41 @@
         "coingeckoId": "ethena",
         "symbol": "ENA",
         "name": "Ethena",
-        "platform": "scroll",
-        "chain": "scroll",
+        "platform": "avalanche",
+        "chain": "avalanchec",
         "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
       },
       {
         "coingeckoId": "ethena",
         "symbol": "ENA",
         "name": "Ethena",
-        "platform": "the-open-network",
-        "chain": "ton",
-        "address": "EQAPh9RCprgg5kKumtJi8uB7nFKctPBwuRUu82JgTGmzklNV"
+        "platform": "base",
+        "chain": "base",
+        "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
+      },
+      {
+        "coingeckoId": "ethena",
+        "symbol": "ENA",
+        "name": "Ethena",
+        "platform": "arbitrum-one",
+        "chain": "arbitrum",
+        "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
+      },
+      {
+        "coingeckoId": "ethena",
+        "symbol": "ENA",
+        "name": "Ethena",
+        "platform": "solana",
+        "chain": "solana",
+        "address": "72QvBVwpxqmheEPfaCwWSWqEFsUy3rhWt6JhQBMNTwD1"
+      },
+      {
+        "coingeckoId": "ethena",
+        "symbol": "ENA",
+        "name": "Ethena",
+        "platform": "manta-pacific",
+        "chain": "manta",
+        "address": "0x58538e6a46e07434d7e7375bc268d3cb839c0133"
       },
       {
         "coingeckoId": "stable-2",
@@ -47950,14 +47950,6 @@
         "platform": "binance-smart-chain",
         "chain": "smartchain",
         "address": "0x011ebe7d75e2c9d1e0bd0be0bef5c36f0a90075f"
-      },
-      {
-        "coingeckoId": "nexo",
-        "symbol": "NEXO",
-        "name": "NEXO",
-        "platform": "polygon-pos",
-        "chain": "polygon",
-        "address": "0x41b3966b4ff7b427969ddf5da3627d6aeae9a48e"
       },
       {
         "coingeckoId": "nexo",
@@ -47974,6 +47966,30 @@
         "platform": "fantom",
         "chain": "fantom",
         "address": "0x7c598c96d02398d89fbcb9d41eab3df0c16f227d"
+      },
+      {
+        "coingeckoId": "nexo",
+        "symbol": "NEXO",
+        "name": "NEXO",
+        "platform": "polygon-pos",
+        "chain": "polygon",
+        "address": "0x41b3966b4ff7b427969ddf5da3627d6aeae9a48e"
+      },
+      {
+        "coingeckoId": "janus-henderson-anemoy-aaa-clo-fund",
+        "symbol": "JAAA",
+        "name": "Janus Henderson Anemoy AAA CLO Fund",
+        "platform": "monad",
+        "chain": "monad",
+        "address": "0xad48f183e586e92a591a610397ebf534609df797"
+      },
+      {
+        "coingeckoId": "janus-henderson-anemoy-aaa-clo-fund",
+        "symbol": "JAAA",
+        "name": "Janus Henderson Anemoy AAA CLO Fund",
+        "platform": "avalanche",
+        "chain": "avalanchec",
+        "address": "0x58f93d6b1ef2f44ec379cb975657c132cbed3b6b"
       },
       {
         "coingeckoId": "janus-henderson-anemoy-aaa-clo-fund",
@@ -48008,28 +48024,20 @@
         "address": "0x58f93d6b1ef2f44ec379cb975657c132cbed3b6b"
       },
       {
-        "coingeckoId": "janus-henderson-anemoy-aaa-clo-fund",
-        "symbol": "JAAA",
-        "name": "Janus Henderson Anemoy AAA CLO Fund",
-        "platform": "monad",
-        "chain": "monad",
-        "address": "0xad48f183e586e92a591a610397ebf534609df797"
-      },
-      {
-        "coingeckoId": "janus-henderson-anemoy-aaa-clo-fund",
-        "symbol": "JAAA",
-        "name": "Janus Henderson Anemoy AAA CLO Fund",
-        "platform": "avalanche",
-        "chain": "avalanchec",
-        "address": "0x58f93d6b1ef2f44ec379cb975657c132cbed3b6b"
-      },
-      {
         "coingeckoId": "bianrensheng",
         "symbol": "币安人生",
         "name": "币安人生 (BinanceLife)",
         "platform": "binance-smart-chain",
         "chain": "smartchain",
         "address": "0x924fa68a0fc644485b8df8abfa0a41c2e7744444"
+      },
+      {
+        "coingeckoId": "beldex",
+        "symbol": "BDX",
+        "name": "Beldex",
+        "platform": "binance-smart-chain",
+        "chain": "smartchain",
+        "address": "0x9d10a1ec41Fe7878429BB457e31F9b050D38c633"
       },
       {
         "coingeckoId": "beldex",
@@ -48054,22 +48062,6 @@
         "platform": "base",
         "chain": "base",
         "address": "0x6ad12e761b438bea3ea09f6c6266556bb24c2181"
-      },
-      {
-        "coingeckoId": "beldex",
-        "symbol": "BDX",
-        "name": "Beldex",
-        "platform": "binance-smart-chain",
-        "chain": "smartchain",
-        "address": "0x9d10a1ec41Fe7878429BB457e31F9b050D38c633"
-      },
-      {
-        "coingeckoId": "gho",
-        "symbol": "GHO",
-        "name": "GHO",
-        "platform": "xdai",
-        "chain": "xdai",
-        "address": "0xfc421ad3c883bf9e7c4f42de845c4e4405799e73"
       },
       {
         "coingeckoId": "gho",
@@ -48101,6 +48093,14 @@
         "name": "GHO",
         "platform": "avalanche",
         "chain": "avalanchec",
+        "address": "0xfc421ad3c883bf9e7c4f42de845c4e4405799e73"
+      },
+      {
+        "coingeckoId": "gho",
+        "symbol": "GHO",
+        "name": "GHO",
+        "platform": "xdai",
+        "chain": "xdai",
         "address": "0xfc421ad3c883bf9e7c4f42de845c4e4405799e73"
       },
       {
@@ -48263,7 +48263,7 @@
         "coingeckoId": "pi-network",
         "symbol": "PI",
         "name": "Pi Network",
-        "rank": 54
+        "rank": 55
       },
       {
         "coingeckoId": "bfusd",
@@ -48317,13 +48317,13 @@
         "coingeckoId": "janus-henderson-anemoy-aaa-clo-fund",
         "symbol": "JAAA",
         "name": "Janus Henderson Anemoy AAA CLO Fund",
-        "rank": 81
+        "rank": 82
       },
       {
         "coingeckoId": "bianrensheng",
         "symbol": "币安人生",
         "name": "币安人生 (BinanceLife)",
-        "rank": 84
+        "rank": 83
       },
       {
         "coingeckoId": "flare-networks",
@@ -48350,15 +48350,15 @@
         "rank": 94
       },
       {
-        "coingeckoId": "hash-2",
-        "symbol": "HASH",
-        "name": "Provenance Blockchain",
-        "rank": 96
-      },
-      {
         "coingeckoId": "midnight-3",
         "symbol": "NIGHT",
         "name": "Midnight",
+        "rank": 97
+      },
+      {
+        "coingeckoId": "hash-2",
+        "symbol": "HASH",
+        "name": "Provenance Blockchain",
         "rank": 98
       }
     ],

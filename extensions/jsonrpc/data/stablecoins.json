@@ -1,6 +1,6 @@
 {
   "source": "defillama",
-  "updatedAt": "2026-06-21T02:51:14Z",
+  "updatedAt": "2026-06-21T03:27:58Z",
   "assets": [
     {
       "rank": 1,
@@ -9,7 +9,7 @@
       "coingeckoId": "tether",
       "symbol": "USDT",
       "name": "Tether",
-      "circulating": 186213326356.41052,
+      "circulating": 186201575798.29486,
       "chains": [
         "0G",
         "Abstract",
@@ -141,7 +141,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "aptos",
@@ -1090,7 +1090,7 @@
       "coingeckoId": "usd-coin",
       "symbol": "USDC",
       "name": "USD Coin",
-      "circulating": 74907033588.62932,
+      "circulating": 74913098996.38832,
       "chains": [
         "0G",
         "Abstract",
@@ -1247,7 +1247,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "algorand",
@@ -2581,7 +2581,7 @@
       "coingeckoId": "usds",
       "symbol": "USDS",
       "name": "Sky Dollar",
-      "circulating": 8165174302.799638,
+      "circulating": 8165414940.174051,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -2593,7 +2593,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -2679,7 +2679,7 @@
       "coingeckoId": "usd1-wlfi",
       "symbol": "USD1",
       "name": "World Liberty Financial USD",
-      "circulating": 4809583008.534941,
+      "circulating": 4809783545.667374,
       "chains": [
         "Abcore",
         "Aptos",
@@ -2692,7 +2692,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "aptos",
@@ -2851,7 +2851,7 @@
       "coingeckoId": "ethena-usde",
       "symbol": "USDE",
       "name": "Ethena USDe",
-      "circulating": 4494838314.034721,
+      "circulating": 4494854299.51039,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -2884,7 +2884,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -2957,7 +2957,7 @@
       "coingeckoId": "dai",
       "symbol": "DAI",
       "name": "Dai",
-      "circulating": 4468535483.156058,
+      "circulating": 4468889521.932254,
       "chains": [
         "Arbitrum",
         "Arbitrum Nova",
@@ -3011,7 +3011,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -3590,7 +3590,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -3613,7 +3613,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -3623,7 +3623,7 @@
       "coingeckoId": "global-dollar",
       "symbol": "USDG",
       "name": "Global Dollar",
-      "circulating": 2785569869.65208,
+      "circulating": 2785644442.624218,
       "chains": [
         "Ethereum",
         "Hyperliquid L1",
@@ -3633,7 +3633,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -3686,7 +3686,7 @@
       "coingeckoId": "paypal-usd",
       "symbol": "PYUSD",
       "name": "PayPal USD",
-      "circulating": 2770247406.989865,
+      "circulating": 2770566964.9405527,
       "chains": [
         "Abstract",
         "Arbitrum",
@@ -3708,7 +3708,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -3783,7 +3783,7 @@
       "coingeckoId": "ondo-us-dollar-yield",
       "symbol": "USDY",
       "name": "Ondo US Dollar Yield",
-      "circulating": 2163203180.5669703,
+      "circulating": 2150772032.8523664,
       "chains": [
         "Aptos",
         "Arbitrum",
@@ -3803,7 +3803,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -3910,14 +3910,14 @@
       "coingeckoId": "ripple-usd",
       "symbol": "RLUSD",
       "name": "Ripple USD",
-      "circulating": 1628308190.2118318,
+      "circulating": 1628687157.0270646,
       "chains": [
         "Ethereum",
         "XRPL"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -3927,7 +3927,7 @@
       "coingeckoId": "usdd",
       "symbol": "USDD",
       "name": "USDD",
-      "circulating": 1365900943.4515138,
+      "circulating": 1365502363.2054944,
       "chains": [
         "BSC",
         "Bittorrent",
@@ -3936,7 +3936,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4035,14 +4035,14 @@
       "coingeckoId": "falcon-finance",
       "symbol": "USDF",
       "name": "Falcon USD",
-      "circulating": 1296512522.371234,
+      "circulating": 1296230128.664702,
       "chains": [
         "BSC",
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4074,7 +4074,7 @@
       "coingeckoId": "united-stables",
       "symbol": "U",
       "name": "United Stables",
-      "circulating": 1011256360.9296376,
+      "circulating": 1011353624.6363348,
       "chains": [
         "BSC",
         "Ethereum",
@@ -4082,7 +4082,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "smartchain",
@@ -4125,14 +4125,14 @@
       "coingeckoId": "usdtb",
       "symbol": "USDTB",
       "name": "Ethena USDtb",
-      "circulating": 963829655.9593602,
+      "circulating": 963798681.7955444,
       "chains": [
         "Ethereum",
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4172,7 +4172,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -4182,13 +4182,13 @@
       "coingeckoId": "usdgo",
       "symbol": "USDGO",
       "name": "USDGO",
-      "circulating": 607005518.084653,
+      "circulating": 607050437.6710408,
       "chains": [
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -4198,13 +4198,13 @@
       "coingeckoId": "gho",
       "symbol": "GHO",
       "name": "GHO",
-      "circulating": 597953344.1300122,
+      "circulating": 597945182.4274361,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4247,7 +4247,7 @@
       ],
       "pegType": "peggedRUB",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4330,7 +4330,7 @@
       "coingeckoId": "ylds",
       "symbol": "YLDS",
       "name": "YLDS",
-      "circulating": 572216860.1397306,
+      "circulating": 572271440.3309052,
       "chains": [
         "Ethereum",
         "Provenance",
@@ -4339,7 +4339,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -4349,14 +4349,14 @@
       "coingeckoId": "usual-usd",
       "symbol": "USD0",
       "name": "Usual USD",
-      "circulating": 553090319.3660506,
+      "circulating": 553143516.1781335,
       "chains": [
         "Arbitrum",
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4399,13 +4399,13 @@
       "coingeckoId": "usx",
       "symbol": "USX",
       "name": "Solstice USX",
-      "circulating": 507871212.3890489,
+      "circulating": 507920229.8737025,
       "chains": [
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -4415,7 +4415,7 @@
       "coingeckoId": "true-usd",
       "symbol": "TUSD",
       "name": "TrueUSD",
-      "circulating": 483605052.45696515,
+      "circulating": 483497545.6781475,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -4430,7 +4430,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "avalanchec",
@@ -4705,7 +4705,7 @@
       "coingeckoId": "euro-coin",
       "symbol": "EURC",
       "name": "EURC",
-      "circulating": 434707340.4564464,
+      "circulating": 434707762.40175825,
       "chains": [
         "Avalanche",
         "Base",
@@ -4720,7 +4720,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "avalanchec",
@@ -4836,7 +4836,7 @@
       "defillamaId": "340",
       "symbol": "RWAUSDI",
       "name": "rwaUSDi",
-      "circulating": 359972880.6783205,
+      "circulating": 359990479.33185506,
       "chains": [
         "Arbitrum",
         "Base",
@@ -4845,7 +4845,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -4855,7 +4855,7 @@
       "coingeckoId": "first-digital-usd",
       "symbol": "FDUSD",
       "name": "First Digital USD",
-      "circulating": 351882153.8001397,
+      "circulating": 351883012.90133524,
       "chains": [
         "Arbitrum",
         "BSC",
@@ -4866,7 +4866,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4975,7 +4975,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -4985,7 +4985,7 @@
       "coingeckoId": "m-2-wrong",
       "symbol": "M",
       "name": "M by M0",
-      "circulating": 330945179.069055,
+      "circulating": 330946447.044425,
       "chains": [
         "Arbitrum",
         "Ethereum",
@@ -4998,7 +4998,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -5008,13 +5008,13 @@
       "coingeckoId": "gusd",
       "symbol": "GUSD",
       "name": "Gate USD",
-      "circulating": 319453467.3104706,
+      "circulating": 319435069.9279185,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -5048,7 +5048,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -5058,7 +5058,7 @@
       "coingeckoId": "binance-peg-busd",
       "symbol": "BUSD",
       "name": "Binance Peg BUSD",
-      "circulating": 232692459.0416441,
+      "circulating": 233015541.09619737,
       "chains": [
         "Astar",
         "Aurora",
@@ -5090,7 +5090,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "avalanchec",
@@ -5236,7 +5236,7 @@
       "coingeckoId": "crvusd",
       "symbol": "CRVUSD",
       "name": "crvUSD",
-      "circulating": 222537581.15043968,
+      "circulating": 222540052.58737013,
       "chains": [
         "Arbitrum",
         "BSC",
@@ -5253,7 +5253,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -5296,7 +5296,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -5316,7 +5316,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -5363,7 +5363,7 @@
       "coingeckoId": "usdai",
       "symbol": "USDAI",
       "name": "USD.AI",
-      "circulating": 188175009.91438127,
+      "circulating": 188196510.47965088,
       "chains": [
         "Arbitrum",
         "Ethereum",
@@ -5371,7 +5371,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "plasma",
@@ -5410,13 +5410,13 @@
       "coingeckoId": "usa",
       "symbol": "USAT",
       "name": "USAT",
-      "circulating": 187260518.34204754,
+      "circulating": 187192505.22586125,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -5426,7 +5426,7 @@
       "coingeckoId": "frax",
       "symbol": "FRAX",
       "name": "Frax",
-      "circulating": 186508521.27953893,
+      "circulating": 186497569.7827118,
       "chains": [
         "Arbitrum",
         "Aurora",
@@ -5453,7 +5453,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -5608,7 +5608,7 @@
       "coingeckoId": "re-protocol-reusd",
       "symbol": "REUSD",
       "name": "Re Protocol reUSD",
-      "circulating": 181730691.10928777,
+      "circulating": 181725087.87523007,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -5622,7 +5622,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -5631,14 +5631,14 @@
       "defillamaId": "21",
       "symbol": "FLEXUSD",
       "name": "flexUSD",
-      "circulating": 166333019.63926467,
+      "circulating": 166341151.46624693,
       "chains": [
         "Ethereum",
         "smartBCH"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -5648,7 +5648,7 @@
       "coingeckoId": "satoshi-stablecoin",
       "symbol": "SATUSD",
       "name": "River Stablecoin",
-      "circulating": 158232308.99886414,
+      "circulating": 158387034.55789182,
       "chains": [
         "Arbitrum",
         "BEVM",
@@ -5664,7 +5664,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -5673,13 +5673,13 @@
       "defillamaId": "328",
       "symbol": "MUST",
       "name": "Mustang Finance",
-      "circulating": 154359365.3805019,
+      "circulating": 154366911.82951778,
       "chains": [
         "Saga"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -5689,7 +5689,7 @@
       "coingeckoId": "agora-dollar",
       "symbol": "AUSD",
       "name": "Agora Dollar",
-      "circulating": 149840657.54535204,
+      "circulating": 149853594.2021632,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -5708,7 +5708,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -5837,13 +5837,13 @@
       "coingeckoId": "cash-4",
       "symbol": "CASH",
       "name": "CASH",
-      "circulating": 120301000.82957627,
+      "circulating": 120519522.59457001,
       "chains": [
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -5852,13 +5852,13 @@
       "defillamaId": "389",
       "symbol": "MOVEUSD",
       "name": "CFX MoveUSD",
-      "circulating": 117836775.37142932,
+      "circulating": 117844226.18130642,
       "chains": [
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -5868,7 +5868,7 @@
       "coingeckoId": "frax-usd",
       "symbol": "FRXUSD",
       "name": "Frax USD",
-      "circulating": 114869668.3093708,
+      "circulating": 114852491.6832087,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -5895,7 +5895,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "sonic",
@@ -5927,13 +5927,13 @@
       "coingeckoId": "astherus-usdf",
       "symbol": "USDF",
       "name": "Astherus",
-      "circulating": 114545864.97468387,
+      "circulating": 114543747.9173848,
       "chains": [
         "BSC"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "smartchain",
@@ -5965,13 +5965,13 @@
       "coingeckoId": "avant-usd",
       "symbol": "AVUSD",
       "name": "Avant USD",
-      "circulating": 110720523.02799897,
+      "circulating": 110720363.31362762,
       "chains": [
         "Avalanche"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -5981,14 +5981,14 @@
       "coingeckoId": "societe-generale-forge-eurcv",
       "symbol": "EURCV",
       "name": "EUR CoinVertible",
-      "circulating": 105016231.99096066,
+      "circulating": 105016269.48846576,
       "chains": [
         "Ethereum",
         "Solana"
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6004,7 +6004,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6014,14 +6014,14 @@
       "coingeckoId": "standx-dusd",
       "symbol": "DUSD",
       "name": "StandX DUSD",
-      "circulating": 100476462.09309895,
+      "circulating": 100452956.55743322,
       "chains": [
         "BSC",
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6042,7 +6042,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6059,7 +6059,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6069,13 +6069,13 @@
       "coingeckoId": "nusd-2",
       "symbol": "NUSD",
       "name": "Neutrl USD",
-      "circulating": 91358033.07273613,
+      "circulating": 91375092.43008015,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6085,7 +6085,7 @@
       "coingeckoId": "dola-usd",
       "symbol": "DOLA",
       "name": "Dola",
-      "circulating": 89974785.23165141,
+      "circulating": 89970632.93478161,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -6098,7 +6098,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "optimism",
@@ -6142,7 +6142,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6152,14 +6152,14 @@
       "coingeckoId": "infinifi-usd",
       "symbol": "IUSD",
       "name": "infiniFi USD",
-      "circulating": 77380879.00425944,
+      "circulating": 77382630.8135338,
       "chains": [
         "Ethereum",
         "Tempo"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6169,13 +6169,13 @@
       "coingeckoId": "cygnus-finance-global-usd",
       "symbol": "CGUSD",
       "name": "Cygnus Finance Global USD",
-      "circulating": 75697679.24671,
+      "circulating": 75704959.92958765,
       "chains": [
         "Base"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6185,13 +6185,13 @@
       "coingeckoId": "helio-protocol-hay",
       "symbol": "LISUSD",
       "name": "Lista USD",
-      "circulating": 75161315.08995335,
+      "circulating": 75168848.91790324,
       "chains": [
         "BSC"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "smartchain",
@@ -6230,13 +6230,13 @@
       "coingeckoId": "precious-metals-usd",
       "symbol": "PMUSD",
       "name": "pmUSD",
-      "circulating": 72182639.0323133,
+      "circulating": 72184423.34673283,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6246,13 +6246,13 @@
       "coingeckoId": "usdsui",
       "symbol": "USDSUI",
       "name": "Sui Dollar",
-      "circulating": 71862704.7329519,
+      "circulating": 71901218.68357186,
       "chains": [
         "Sui"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6261,13 +6261,13 @@
       "defillamaId": "97",
       "symbol": "USP",
       "name": "USP Stablecoin",
-      "circulating": 65431112.61385565,
+      "circulating": 65434311.4644999,
       "chains": [
         "Avalanche"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6277,14 +6277,14 @@
       "coingeckoId": "usdu",
       "symbol": "USDU",
       "name": "Unitas",
-      "circulating": 59783369.45828458,
+      "circulating": 59745917.90359789,
       "chains": [
         "BSC",
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6294,14 +6294,14 @@
       "coingeckoId": "f-x-protocol-fxusd",
       "symbol": "FXUSD",
       "name": "fxUSD",
-      "circulating": 57114174.00506072,
+      "circulating": 57148896.481264,
       "chains": [
         "Base",
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6311,14 +6311,14 @@
       "coingeckoId": "eurite",
       "symbol": "EURI",
       "name": "Eurite",
-      "circulating": 56845031.0428168,
+      "circulating": 56893461.03387104,
       "chains": [
         "BSC",
         "Ethereum"
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -6354,13 +6354,13 @@
       "coingeckoId": "fidelity-digital-dollar",
       "symbol": "FIDD",
       "name": "Fidelity Digital Dollar",
-      "circulating": 48840169.81347746,
+      "circulating": 48857133.70964086,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6370,14 +6370,14 @@
       "coingeckoId": "straitsx-xusd",
       "symbol": "XUSD",
       "name": "StraitsX XUSD",
-      "circulating": 46563441.19135067,
+      "circulating": 46565126.349985525,
       "chains": [
         "BSC",
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6387,13 +6387,13 @@
       "coingeckoId": "jupusd",
       "symbol": "JUPUSD",
       "name": "JupUSD",
-      "circulating": 46097244.54765423,
+      "circulating": 46107931.80000814,
       "chains": [
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6403,7 +6403,7 @@
       "coingeckoId": "frankencoin",
       "symbol": "ZCHF",
       "name": "Frankencoin",
-      "circulating": 45051470.197492406,
+      "circulating": 45049169.3889667,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -6416,7 +6416,7 @@
       ],
       "pegType": "peggedCHF",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6426,14 +6426,14 @@
       "coingeckoId": "yuzu-usd",
       "symbol": "YZUSD",
       "name": "Yuzu USD",
-      "circulating": 42791483.74939716,
+      "circulating": 42791057.9980969,
       "chains": [
         "Monad",
         "Plasma"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6443,7 +6443,7 @@
       "coingeckoId": "brla-digital-brla",
       "symbol": "BRLA",
       "name": "BRLA Digital",
-      "circulating": 40845233.02760095,
+      "circulating": 40888545.19769915,
       "chains": [
         "Celo",
         "Gnosis",
@@ -6452,7 +6452,7 @@
       ],
       "pegType": "peggedREAL",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6462,14 +6462,14 @@
       "coingeckoId": "gemini-dollar",
       "symbol": "GUSD",
       "name": "Gemini Dollar",
-      "circulating": 39381231.6744283,
+      "circulating": 39379960.37531229,
       "chains": [
         "Ethereum",
         "Wanchain"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -6520,7 +6520,7 @@
       "coingeckoId": "binance-usd",
       "symbol": "BUSD",
       "name": "Binance USD",
-      "circulating": 37745513.48287648,
+      "circulating": 37822152.545398936,
       "chains": [
         "Astar",
         "Aurora",
@@ -6558,7 +6558,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -6849,7 +6849,7 @@
       "coingeckoId": "metamask-usd",
       "symbol": "MUSD",
       "name": "Metamask USD",
-      "circulating": 36170903.921474,
+      "circulating": 36170804.76722669,
       "chains": [
         "Ethereum",
         "Linea",
@@ -6857,7 +6857,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6874,7 +6874,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6890,7 +6890,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6900,13 +6900,13 @@
       "coingeckoId": "resupply-usd",
       "symbol": "REUSD",
       "name": "Resupply USD",
-      "circulating": 32860485.135441408,
+      "circulating": 32859851.63613009,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6916,7 +6916,7 @@
       "coingeckoId": "noon-usn",
       "symbol": "USN",
       "name": "Noon USN",
-      "circulating": 32748972.022100974,
+      "circulating": 32748227.6279852,
       "chains": [
         "Ethereum",
         "Sophon",
@@ -6924,7 +6924,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -6934,7 +6934,7 @@
       "coingeckoId": "paxos-standard",
       "symbol": "USDP",
       "name": "Pax Dollar",
-      "circulating": 31921689.430654142,
+      "circulating": 31921380.511220798,
       "chains": [
         "BSC",
         "Ethereum",
@@ -6943,7 +6943,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -7036,7 +7036,7 @@
       "coingeckoId": "liquity-bold-2",
       "symbol": "BOLD",
       "name": "Liquity BOLD",
-      "circulating": 31828957.32125979,
+      "circulating": 31829015.83957954,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -7048,7 +7048,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7058,7 +7058,7 @@
       "coingeckoId": "tokenised-gbp",
       "symbol": "TGBP",
       "name": "Tokenised GBP",
-      "circulating": 31221346.60740255,
+      "circulating": 31222935.07950831,
       "chains": [
         "Avalanche",
         "BSC",
@@ -7069,7 +7069,7 @@
       ],
       "pegType": "peggedGBP",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7079,13 +7079,13 @@
       "coingeckoId": "usdh-2",
       "symbol": "USDH",
       "name": "USDH Stablecoin",
-      "circulating": 30941725.86725487,
+      "circulating": 30940763.04161895,
       "chains": [
         "Hyperliquid L1"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7095,7 +7095,7 @@
       "coingeckoId": "openeden-open-dollar",
       "symbol": "USDO",
       "name": "OpenDollar USDO",
-      "circulating": 30487380.336769532,
+      "circulating": 30486382.396925192,
       "chains": [
         "BSC",
         "Base",
@@ -7104,7 +7104,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -7136,7 +7136,7 @@
       "coingeckoId": "monerium-eur-money",
       "symbol": "EURE",
       "name": "Monerium EUR emoney",
-      "circulating": 28921984.932870086,
+      "circulating": 28925035.41929638,
       "chains": [
         "Algorand",
         "Arbitrum",
@@ -7149,7 +7149,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -7189,14 +7189,14 @@
       "coingeckoId": "mezo-usd",
       "symbol": "MUSD",
       "name": "Mezo USD",
-      "circulating": 28719792.98749092,
+      "circulating": 28722750.130167857,
       "chains": [
         "Ethereum",
         "Mezo"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7206,7 +7206,7 @@
       "coingeckoId": "liquity-usd",
       "symbol": "LUSD",
       "name": "Liquity USD",
-      "circulating": 28161892.007310357,
+      "circulating": 28162009.625967976,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -7221,7 +7221,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -7251,7 +7251,7 @@
       "defillamaId": "225",
       "symbol": "ZEUSD",
       "name": "Zoth ZeUSD",
-      "circulating": 27643074.43219597,
+      "circulating": 27644425.86980606,
       "chains": [
         "Avalanche",
         "Ethereum",
@@ -7260,7 +7260,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7270,7 +7270,7 @@
       "coingeckoId": "hex-trust-usdx",
       "symbol": "USDX",
       "name": "Hex Trust USDX",
-      "circulating": 27458490.144309413,
+      "circulating": 27462080.48178281,
       "chains": [
         "Ethereum",
         "Flare",
@@ -7278,28 +7278,11 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
       "rank": 89,
-      "source": "defillama",
-      "defillamaId": "297",
-      "coingeckoId": "main-street-usd",
-      "symbol": "MSUSD",
-      "name": "Main Street USD",
-      "circulating": 27306744.732078362,
-      "chains": [
-        "Ethereum",
-        "Sonic"
-      ],
-      "pegType": "peggedUSD",
-      "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
-      "assets": null
-    },
-    {
-      "rank": 90,
       "source": "defillama",
       "defillamaId": "185",
       "coingeckoId": "gyroscope-gyd",
@@ -7312,33 +7295,33 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
-      "rank": 91,
+      "rank": 90,
       "source": "defillama",
       "defillamaId": "154",
       "coingeckoId": "bucket-protocol-buck-stablecoin",
       "symbol": "BUCK",
       "name": "Bucket Protocol BUCK Stablecoin",
-      "circulating": 25892677.25694207,
+      "circulating": 25928574.810293473,
       "chains": [
         "Sui"
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
-      "rank": 92,
+      "rank": 91,
       "source": "defillama",
       "defillamaId": "10",
       "coingeckoId": "magic-internet-money",
       "symbol": "MIM",
       "name": "Magic Internet Money",
-      "circulating": 25718587.430219974,
+      "circulating": 25718609.529875234,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -7357,7 +7340,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -7516,7 +7499,7 @@
       ]
     },
     {
-      "rank": 93,
+      "rank": 92,
       "source": "defillama",
       "defillamaId": "350",
       "coingeckoId": "citrea-usd",
@@ -7528,17 +7511,17 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
-      "rank": 94,
+      "rank": 93,
       "source": "defillama",
       "defillamaId": "326",
       "coingeckoId": "metronome-synth-usd",
       "symbol": "MSUSD",
       "name": "Metronome Synth USD",
-      "circulating": 23591573.856199235,
+      "circulating": 23591718.552476272,
       "chains": [
         "Base",
         "Ethereum",
@@ -7547,17 +7530,17 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
-      "rank": 95,
+      "rank": 94,
       "source": "defillama",
       "defillamaId": "106",
       "coingeckoId": "electronic-usd",
       "symbol": "EUSD",
       "name": "Electronic USD",
-      "circulating": 23323589.870021217,
+      "circulating": 23322675.214457437,
       "chains": [
         "Arbitrum",
         "Base",
@@ -7565,7 +7548,24 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
+      "assets": null
+    },
+    {
+      "rank": 95,
+      "source": "defillama",
+      "defillamaId": "297",
+      "coingeckoId": "main-street-usd",
+      "symbol": "MSUSD",
+      "name": "Main Street USD",
+      "circulating": 22979526.72654032,
+      "chains": [
+        "Ethereum",
+        "Sonic"
+      ],
+      "pegType": "peggedUSD",
+      "priceSource": "defillama",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7575,7 +7575,7 @@
       "coingeckoId": "neutrino",
       "symbol": "USDN",
       "name": "Neutrino USD",
-      "circulating": 21721249.42681861,
+      "circulating": 21442920.567438878,
       "chains": [
         "BSC",
         "Ethereum",
@@ -7584,7 +7584,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -7664,7 +7664,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7683,7 +7683,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7707,7 +7707,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7717,7 +7717,7 @@
       "coingeckoId": "jpycoin",
       "symbol": "JPYC",
       "name": "JPY Coin",
-      "circulating": 20271811.14962415,
+      "circulating": 20257407.407066118,
       "chains": [
         "Avalanche",
         "Ethereum",
@@ -7725,7 +7725,7 @@
       ],
       "pegType": "peggedJPY",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7734,13 +7734,13 @@
       "defillamaId": "63",
       "symbol": "FUSD",
       "name": "Fantom USD",
-      "circulating": 18935034.57722727,
+      "circulating": 18935960.28894355,
       "chains": [
         "Fantom"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7757,7 +7757,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7773,7 +7773,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7783,13 +7783,13 @@
       "coingeckoId": "honey-3",
       "symbol": "HONEY",
       "name": "Honey",
-      "circulating": 18062092.031594988,
+      "circulating": 18098065.49646142,
       "chains": [
         "Berachain"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7798,7 +7798,7 @@
       "defillamaId": "31",
       "symbol": "USDS",
       "name": "SpiceUSD",
-      "circulating": 18045859.771095462,
+      "circulating": 18046742.012094412,
       "chains": [
         "Avalanche",
         "BSC",
@@ -7807,7 +7807,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -7817,7 +7817,7 @@
       "coingeckoId": "nusd",
       "symbol": "SUSD",
       "name": "sUSD",
-      "circulating": 17401597.472056657,
+      "circulating": 17427798.98561268,
       "chains": [
         "Arbitrum",
         "Ethereum",
@@ -7827,7 +7827,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -7920,7 +7920,7 @@
       "coingeckoId": "celo-dollar",
       "symbol": "USDM",
       "name": "Mento Dollar",
-      "circulating": 17151129.926677186,
+      "circulating": 17148775.18929523,
       "chains": [
         "Celo",
         "Ethereum",
@@ -7930,7 +7930,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "celo",
@@ -7991,7 +7991,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "fantom",
@@ -8108,13 +8108,13 @@
       "coingeckoId": "mu-digital-aznd",
       "symbol": "AZND",
       "name": "Mu Digital AZND",
-      "circulating": 16325172.141201003,
+      "circulating": 16324960.010404762,
       "chains": [
         "Monad"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "monad",
@@ -8148,13 +8148,13 @@
       "defillamaId": "215",
       "symbol": "USDM",
       "name": "Moneta",
-      "circulating": 14544155.715813905,
+      "circulating": 14544866.762593074,
       "chains": [
         "Cardano"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8164,13 +8164,13 @@
       "coingeckoId": "esui-dollar",
       "symbol": "SUIUSDE",
       "name": "eSui Dollar",
-      "circulating": 13467819.567180058,
+      "circulating": 13466478.322098,
       "chains": [
         "Sui"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8180,13 +8180,13 @@
       "coingeckoId": "pathusd",
       "symbol": "PATHUSD",
       "name": "PathUSD",
-      "circulating": 13371706.413225384,
+      "circulating": 13374974.366010157,
       "chains": [
         "Tempo"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8196,13 +8196,13 @@
       "coingeckoId": "usdb",
       "symbol": "USDB",
       "name": "USDB Blast",
-      "circulating": 13147913.188915258,
+      "circulating": 13157950.842653811,
       "chains": [
         "Blast"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "blast",
@@ -8238,14 +8238,14 @@
       "coingeckoId": "usd-coinvertible",
       "symbol": "USDCV",
       "name": "USD CoinVertible",
-      "circulating": 12592600.595110806,
+      "circulating": 12594119.260000326,
       "chains": [
         "Ethereum",
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8255,13 +8255,13 @@
       "coingeckoId": "felix-feusd",
       "symbol": "FEUSD",
       "name": "Felix feUSD",
-      "circulating": 11974053.691145172,
+      "circulating": 11995450.590114359,
       "chains": [
         "Hyperliquid L1"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8271,13 +8271,13 @@
       "coingeckoId": "youves-uusd",
       "symbol": "UUSD",
       "name": "Youves uUSD",
-      "circulating": 11956542.109378755,
+      "circulating": 11936331.22312801,
       "chains": [
         "Tezos"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8287,13 +8287,13 @@
       "coingeckoId": "yusd-stablecoin",
       "symbol": "YUSD",
       "name": "YUSD Stablecoin",
-      "circulating": 11800602.333828054,
+      "circulating": 11801737.328985378,
       "chains": [
         "Avalanche"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8309,7 +8309,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8319,7 +8319,7 @@
       "coingeckoId": "xsgd",
       "symbol": "XSGD",
       "name": "XSGD",
-      "circulating": 11516551.608901083,
+      "circulating": 11525408.076965725,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -8331,7 +8331,7 @@
       ],
       "pegType": "peggedSGD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8416,7 +8416,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8425,14 +8425,14 @@
       "defillamaId": "115",
       "symbol": "R",
       "name": "R",
-      "circulating": 10721073.21518144,
+      "circulating": 10721597.355924144,
       "chains": [
         "Base",
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8442,13 +8442,13 @@
       "coingeckoId": "pinto",
       "symbol": "PINTO",
       "name": "Pinto",
-      "circulating": 10642487.127984,
+      "circulating": 10642488.677302,
       "chains": [
         "Base"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8457,13 +8457,13 @@
       "defillamaId": "308",
       "symbol": "D",
       "name": "Saga Dollar",
-      "circulating": 10387699.832232157,
+      "circulating": 10388207.67473969,
       "chains": [
         "Saga"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8473,7 +8473,7 @@
       "coingeckoId": "alchemix-usd",
       "symbol": "ALUSD",
       "name": "Alchemix USD",
-      "circulating": 10370692.04330726,
+      "circulating": 10371510.66924714,
       "chains": [
         "Arbitrum",
         "Ethereum",
@@ -8482,7 +8482,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8492,14 +8492,14 @@
       "coingeckoId": "worldwide-usd",
       "symbol": "WUSD",
       "name": "Worldwide USD",
-      "circulating": 10370476.17363833,
+      "circulating": 10370882.856819015,
       "chains": [
         "Ethereum",
         "Polygon"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8509,7 +8509,7 @@
       "coingeckoId": "stable-coin-2",
       "symbol": "SBC",
       "name": "Stable Coin",
-      "circulating": 9357123.686794758,
+      "circulating": 9359613.000164125,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -8525,7 +8525,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8535,7 +8535,7 @@
       "coingeckoId": "novatti-australian-digital-dollar",
       "symbol": "AUDD",
       "name": "AUDD",
-      "circulating": 9244569.370688898,
+      "circulating": 9247308.25085583,
       "chains": [
         "Base",
         "Ethereum",
@@ -8548,7 +8548,7 @@
       ],
       "pegType": "peggedAUD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8565,7 +8565,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8604,7 +8604,7 @@
       "coingeckoId": "stasis-eurs",
       "symbol": "EURS",
       "name": "Stasis Euro",
-      "circulating": 8251867.359501347,
+      "circulating": 8252177.379680994,
       "chains": [
         "Algorand",
         "Ethereum",
@@ -8615,7 +8615,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8653,7 +8653,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8663,14 +8663,14 @@
       "coingeckoId": "bitcoin-usd-btcfi",
       "symbol": "BTCUSD",
       "name": "Bitcoin USD",
-      "circulating": 7994598.36203956,
+      "circulating": 7995420.242538034,
       "chains": [
         "Base",
         "Bifrost Network"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8680,7 +8680,7 @@
       "coingeckoId": "anzen-usdz",
       "symbol": "USDZ",
       "name": "Anzen USDz",
-      "circulating": 7860548.176776972,
+      "circulating": 7859615.711037434,
       "chains": [
         "Base",
         "Blast",
@@ -8689,7 +8689,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8699,7 +8699,7 @@
       "coingeckoId": "schuman-europ",
       "symbol": "EUROP",
       "name": "Schuman EUROP",
-      "circulating": 7759081.115046168,
+      "circulating": 7759338.681943917,
       "chains": [
         "Avalanche",
         "Ethereum",
@@ -8708,7 +8708,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8725,7 +8725,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8741,7 +8741,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8763,7 +8763,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8773,13 +8773,13 @@
       "coingeckoId": "origin-dollar",
       "symbol": "OUSD",
       "name": "Origin Dollar",
-      "circulating": 7345711.666142781,
+      "circulating": 7388531.024623008,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8814,13 +8814,13 @@
       "coingeckoId": "usdx",
       "symbol": "USDX",
       "name": "USDX",
-      "circulating": 7287122.9517100295,
+      "circulating": 7175095.732109952,
       "chains": [
         "Kava"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8837,7 +8837,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8847,7 +8847,7 @@
       "coingeckoId": "gyen",
       "symbol": "GYEN",
       "name": "GYEN",
-      "circulating": 6364692.428567657,
+      "circulating": 6365297.508125053,
       "chains": [
         "Arbitrum",
         "Ethereum",
@@ -8857,7 +8857,7 @@
       ],
       "pegType": "peggedJPY",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -8974,13 +8974,13 @@
       "defillamaId": "60",
       "symbol": "HOME",
       "name": "HomeCoin",
-      "circulating": 6066204.152926813,
+      "circulating": 6066500.722559935,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -8996,7 +8996,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9006,13 +9006,13 @@
       "coingeckoId": "anzens-usda",
       "symbol": "USDA",
       "name": "Anzens USDA",
-      "circulating": 5259616.493178462,
+      "circulating": 5253249.946086771,
       "chains": [
         "Cardano"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9022,13 +9022,13 @@
       "coingeckoId": "usdu",
       "symbol": "USDU",
       "name": "USDU Finance",
-      "circulating": 5057437.375958181,
+      "circulating": 5054268.834163015,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9045,7 +9045,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9054,13 +9054,13 @@
       "defillamaId": "89",
       "symbol": "XAI",
       "name": "XAI",
-      "circulating": 4857588.851228697,
+      "circulating": 4857826.333071899,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9070,14 +9070,14 @@
       "coingeckoId": "plume-usd",
       "symbol": "PUSD",
       "name": "Plume USD",
-      "circulating": 4651939.865794721,
+      "circulating": 4648748.466859462,
       "chains": [
         "Ethereum",
         "Plume Mainnet"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9086,14 +9086,14 @@
       "defillamaId": "377",
       "symbol": "USDNR",
       "name": "Nerona USD",
-      "circulating": 4633742.945963088,
+      "circulating": 4631969.593575489,
       "chains": [
         "Ethereum",
         "Fluent"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9109,7 +9109,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9131,7 +9131,7 @@
       ],
       "pegType": "peggedTRY",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -9168,7 +9168,7 @@
       ],
       "pegType": "peggedARS",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "base",
@@ -9325,7 +9325,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9341,7 +9341,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "solana",
@@ -9377,13 +9377,13 @@
       "coingeckoId": "fei-usd",
       "symbol": "FEI",
       "name": "Fei USD",
-      "circulating": 3811995.9957545814,
+      "circulating": 3811653.782806499,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -9413,7 +9413,7 @@
       "coingeckoId": "pht-stablecoin",
       "symbol": "PHT",
       "name": "PHT Stablecoin",
-      "circulating": 3663250.2099150596,
+      "circulating": 3663250.2099150587,
       "chains": [
         "Ethereum",
         "Polygon",
@@ -9421,7 +9421,7 @@
       ],
       "pegType": "peggedPHP",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9430,7 +9430,7 @@
       "defillamaId": "314",
       "symbol": "PUSD",
       "name": "Palm USD",
-      "circulating": 3475744.8385155397,
+      "circulating": 3475914.763619542,
       "chains": [
         "BSC",
         "Ethereum",
@@ -9439,7 +9439,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9449,7 +9449,7 @@
       "coingeckoId": "musd",
       "symbol": "MUSD",
       "name": "mStable USD",
-      "circulating": 3213241.8363198433,
+      "circulating": 3205149.558251113,
       "chains": [
         "Ethereum",
         "Gnosis",
@@ -9457,7 +9457,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -9491,7 +9491,7 @@
       "defillamaId": "291",
       "symbol": "USDP",
       "name": "Parallel USDp",
-      "circulating": 3146441.689807855,
+      "circulating": 3146595.5156656844,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -9520,7 +9520,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9529,14 +9529,14 @@
       "defillamaId": "30",
       "symbol": "DOC",
       "name": "Dollar on Chain",
-      "circulating": 3046413.8329958576,
+      "circulating": 3046562.7686086423,
       "chains": [
         "Arbitrum",
         "Ethereum",
         "Rootstock"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9553,7 +9553,7 @@
       ],
       "pegType": "peggedCNY",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9562,13 +9562,13 @@
       "defillamaId": "70",
       "symbol": "DUSD",
       "name": "DigitalDollar",
-      "circulating": 2952018.1770699453,
+      "circulating": 2952162.4977894058,
       "chains": [
         "Arbitrum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9578,13 +9578,13 @@
       "coingeckoId": "djed",
       "symbol": "DJED",
       "name": "Djed StableCoin",
-      "circulating": 2894802.9739778857,
+      "circulating": 2890839.1079085134,
       "chains": [
         "Cardano"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9594,7 +9594,7 @@
       "coingeckoId": "macropod",
       "symbol": "AUDM",
       "name": "Macropod",
-      "circulating": 2869413.5804389366,
+      "circulating": 2870212.5807472793,
       "chains": [
         "Ethereum",
         "Redbelly",
@@ -9602,7 +9602,7 @@
       ],
       "pegType": "peggedAUD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9612,7 +9612,7 @@
       "coingeckoId": "vnx-swiss-franc",
       "symbol": "VCHF",
       "name": "VNX Swiss Franc",
-      "circulating": 2782570.348571226,
+      "circulating": 2785436.4898209535,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -9628,7 +9628,7 @@
       ],
       "pegType": "peggedCHF",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9637,7 +9637,7 @@
       "defillamaId": "33",
       "symbol": "USDP",
       "name": "USDP Stablecoin",
-      "circulating": 2638238.1741973977,
+      "circulating": 2638367.154579147,
       "chains": [
         "BSC",
         "Ethereum",
@@ -9646,7 +9646,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9656,14 +9656,14 @@
       "coingeckoId": "anchored-coins-eur",
       "symbol": "AEUR",
       "name": "Anchored Coins AEUR",
-      "circulating": 2485250.154438778,
+      "circulating": 2480645.392928894,
       "chains": [
         "BSC",
         "Ethereum"
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9682,7 +9682,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9692,13 +9692,13 @@
       "coingeckoId": "international-stable-currency",
       "symbol": "ISC",
       "name": "International Stable Currency",
-      "circulating": 2422544.1090160618,
+      "circulating": 2432329.622206386,
       "chains": [
         "Solana"
       ],
       "pegType": "peggedVAR",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9708,13 +9708,13 @@
       "coingeckoId": "vai",
       "symbol": "VAI",
       "name": "Vai",
-      "circulating": 2410390.80207195,
+      "circulating": 2410352.668883666,
       "chains": [
         "BSC"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "smartchain",
@@ -9742,7 +9742,7 @@
       "defillamaId": "18",
       "symbol": "NUSD",
       "name": "Nexus USD",
-      "circulating": 2395988.4545518146,
+      "circulating": 2396105.591627822,
       "chains": [
         "Arbitrum",
         "Aurora",
@@ -9759,7 +9759,7 @@
         "Polygon"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9769,13 +9769,13 @@
       "coingeckoId": "rif-us-dollar",
       "symbol": "USDRIF",
       "name": "RIF US Dollar",
-      "circulating": 2312715.686637724,
+      "circulating": 2312694.0792411403,
       "chains": [
         "Rootstock"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9785,13 +9785,13 @@
       "coingeckoId": "solayer-usd",
       "symbol": "SUSD",
       "name": "Solayer USD",
-      "circulating": 2244059.880525453,
+      "circulating": 2244078.308833579,
       "chains": [
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9801,13 +9801,13 @@
       "coingeckoId": "us-sonic-dollar",
       "symbol": "USSD",
       "name": "US Sonic Dollar",
-      "circulating": 2225112.692538113,
+      "circulating": 2225116.672538113,
       "chains": [
         "Sonic"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9817,7 +9817,7 @@
       "coingeckoId": "glo-dollar",
       "symbol": "USDGLO",
       "name": "Glo Dollar",
-      "circulating": 2152894.260928349,
+      "circulating": 2163999.758257512,
       "chains": [
         "Arbitrum",
         "Base",
@@ -9830,7 +9830,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9846,7 +9846,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9856,7 +9856,7 @@
       "coingeckoId": "celo-euro",
       "symbol": "EURM",
       "name": "Mento Euro",
-      "circulating": 2024519.7964038074,
+      "circulating": 2028671.452177999,
       "chains": [
         "Celo",
         "Ethereum",
@@ -9865,7 +9865,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "celo",
@@ -9926,7 +9926,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -9936,7 +9936,7 @@
       "coingeckoId": "ageur",
       "symbol": "EURA",
       "name": "EURA",
-      "circulating": 1835383.5785179413,
+      "circulating": 1829986.3576249687,
       "chains": [
         "Arbitrum",
         "Aurora",
@@ -9950,7 +9950,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -10125,13 +10125,13 @@
       "coingeckoId": "sovryn-dollar",
       "symbol": "DLLR",
       "name": "Sovryn Dollar",
-      "circulating": 1812325.3449073792,
+      "circulating": 1812266.6636530932,
       "chains": [
         "Rootstock"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10150,7 +10150,7 @@
       ],
       "pegType": "peggedCAD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10160,13 +10160,13 @@
       "coingeckoId": "iusd",
       "symbol": "IUSD",
       "name": "iUSD",
-      "circulating": 1621121.797524773,
+      "circulating": 1617100.117304178,
       "chains": [
         "Cardano"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10176,13 +10176,13 @@
       "coingeckoId": "beatusd",
       "symbol": "BEATUSD",
       "name": "Hyperbeat USD",
-      "circulating": 1612901.554325,
+      "circulating": 1613064.978827,
       "chains": [
         "Hyperliquid L1"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10192,13 +10192,13 @@
       "coingeckoId": "solomon-usdv",
       "symbol": "USDV",
       "name": "Solomon USDv",
-      "circulating": 1512170.3583620822,
+      "circulating": 1512315.1064598595,
       "chains": [
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10218,17 +10218,31 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
       "rank": 185,
       "source": "defillama",
+      "defillamaId": "83",
+      "symbol": "USDW",
+      "name": "USDW",
+      "circulating": 1444772.7533418497,
+      "chains": [
+        "EthereumPoW"
+      ],
+      "pegType": "peggedUSD",
+      "updatedAt": "2026-06-21T03:27:58Z",
+      "assets": null
+    },
+    {
+      "rank": 186,
+      "source": "defillama",
       "defillamaId": "197",
       "coingeckoId": "resolv-usr",
       "symbol": "USR",
       "name": "Resolv USD",
-      "circulating": 1459950.3987124008,
+      "circulating": 1435316.8424082391,
       "chains": [
         "BSC",
         "Base",
@@ -10239,21 +10253,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
-      "assets": null
-    },
-    {
-      "rank": 186,
-      "source": "defillama",
-      "defillamaId": "83",
-      "symbol": "USDW",
-      "name": "USDW",
-      "circulating": 1444702.1235430578,
-      "chains": [
-        "EthereumPoW"
-      ],
-      "pegType": "peggedUSD",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10262,14 +10262,14 @@
       "defillamaId": "54",
       "symbol": "USN",
       "name": "USN",
-      "circulating": 1418952.9360219582,
+      "circulating": 1419022.3069730583,
       "chains": [
         "Aurora",
         "Near"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10290,7 +10290,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10306,38 +10306,38 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
       "rank": 190,
       "source": "defillama",
-      "defillamaId": "76",
-      "symbol": "USDI",
-      "name": "Interest Protocol",
-      "circulating": 1293522.7398805516,
-      "chains": [
-        "Ethereum"
-      ],
-      "pegType": "peggedUSD",
-      "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
-      "assets": null
-    },
-    {
-      "rank": 191,
-      "source": "defillama",
       "defillamaId": "152",
       "coingeckoId": "liquid-loans-usdl",
       "symbol": "USDL",
       "name": "Liquid Loans USDL",
-      "circulating": 1291940.4076114343,
+      "circulating": 1296174.7227557746,
       "chains": [
         "PulseChain"
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
+      "assets": null
+    },
+    {
+      "rank": 191,
+      "source": "defillama",
+      "defillamaId": "76",
+      "symbol": "USDI",
+      "name": "Interest Protocol",
+      "circulating": 1293585.978695918,
+      "chains": [
+        "Ethereum"
+      ],
+      "pegType": "peggedUSD",
+      "priceSource": "defillama",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10347,7 +10347,7 @@
       "coingeckoId": "allunity-eur",
       "symbol": "EURAU",
       "name": "AllUnity EUR",
-      "circulating": 1269107.1218159068,
+      "circulating": 1268948.6869989182,
       "chains": [
         "Base",
         "Ethereum",
@@ -10357,7 +10357,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10375,7 +10375,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -10401,13 +10401,13 @@
       "coingeckoId": "usdh",
       "symbol": "USDH",
       "name": "USDH",
-      "circulating": 1223141.3433593179,
+      "circulating": 1223142.0788751957,
       "chains": [
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10416,13 +10416,13 @@
       "defillamaId": "78",
       "symbol": "NOTE",
       "name": "Note",
-      "circulating": 1193137.089352881,
+      "circulating": 1193195.4204310866,
       "chains": [
         "Canto"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10431,39 +10431,23 @@
       "defillamaId": "151",
       "symbol": "ZKUSD",
       "name": "zkUSD Dollar",
-      "circulating": 1178977.3861205333,
+      "circulating": 1179035.0249473925,
       "chains": [
         "ZKsync Era"
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
       "rank": 197,
       "source": "defillama",
-      "defillamaId": "176",
-      "coingeckoId": "fathom-dollar",
-      "symbol": "FXD",
-      "name": "Fathom Dollar",
-      "circulating": 1101392.6882179845,
-      "chains": [
-        "XDC"
-      ],
-      "pegType": "peggedUSD",
-      "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
-      "assets": null
-    },
-    {
-      "rank": 198,
-      "source": "defillama",
       "defillamaId": "40",
       "coingeckoId": "rai",
       "symbol": "RAI",
       "name": "Rai Reflex Index",
-      "circulating": 1007484.4003324062,
+      "circulating": 1142012.5695756422,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -10475,7 +10459,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -10496,13 +10480,29 @@
       ]
     },
     {
+      "rank": 198,
+      "source": "defillama",
+      "defillamaId": "176",
+      "coingeckoId": "fathom-dollar",
+      "symbol": "FXD",
+      "name": "Fathom Dollar",
+      "circulating": 1101392.6882179845,
+      "chains": [
+        "XDC"
+      ],
+      "pegType": "peggedUSD",
+      "priceSource": "coingecko",
+      "updatedAt": "2026-06-21T03:27:58Z",
+      "assets": null
+    },
+    {
       "rank": 199,
       "source": "defillama",
       "defillamaId": "204",
       "coingeckoId": "balanced-dollars",
       "symbol": "BNUSD",
       "name": "Balanced Dollars",
-      "circulating": 937846.7562796433,
+      "circulating": 937816.3897540406,
       "chains": [
         "Arbitrum",
         "Archway",
@@ -10516,7 +10516,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10525,7 +10525,7 @@
       "defillamaId": "390",
       "symbol": "FUSD",
       "name": "FinChain Dollar",
-      "circulating": 937611.0026846245,
+      "circulating": 937656.8413910163,
       "chains": [
         "Avalanche",
         "Ethereum",
@@ -10535,7 +10535,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10544,13 +10544,13 @@
       "defillamaId": "107",
       "symbol": "CZUSD",
       "name": "Czodiac USD",
-      "circulating": 919928.890410579,
+      "circulating": 919973.864659162,
       "chains": [
         "BSC"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10559,13 +10559,13 @@
       "defillamaId": "92",
       "symbol": "PINA",
       "name": "Meme Dollar",
-      "circulating": 913376.3044299606,
+      "circulating": 913420.9583302712,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10581,7 +10581,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -10755,13 +10755,13 @@
       "defillamaId": "167",
       "symbol": "FETH",
       "name": "Fractional ETH",
-      "circulating": 852965.8645078492,
+      "circulating": 853007.5650123372,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedVAR",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10771,14 +10771,14 @@
       "coingeckoId": "cad-digital",
       "symbol": "CADD",
       "name": "CAD Digital",
-      "circulating": 812232.9366812739,
+      "circulating": 812628.1426978061,
       "chains": [
         "Base",
         "Ethereum"
       ],
       "pegType": "peggedCAD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10794,7 +10794,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10810,7 +10810,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10820,13 +10820,13 @@
       "coingeckoId": "rings-scusd",
       "symbol": "SCUSD",
       "name": "Rings scUSD",
-      "circulating": 741351.4345386766,
+      "circulating": 741242.3999030415,
       "chains": [
         "Sonic"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "sonic",
@@ -10857,7 +10857,7 @@
       "defillamaId": "43",
       "symbol": "ZUSD",
       "name": "ZUSD",
-      "circulating": 726773.3196536483,
+      "circulating": 726808.850752065,
       "chains": [
         "Arbitrum",
         "Ethereum",
@@ -10867,7 +10867,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10883,7 +10883,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10899,7 +10899,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10908,7 +10908,7 @@
       "defillamaId": "100",
       "symbol": "DSU",
       "name": "Digital Standard Unit",
-      "circulating": 696268.5327815266,
+      "circulating": 696302.5725365557,
       "chains": [
         "Arbitrum",
         "Ethereum",
@@ -10916,7 +10916,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10926,13 +10926,13 @@
       "coingeckoId": "powercity-pxdc",
       "symbol": "PXDC",
       "name": "PXDC Stablecoin",
-      "circulating": 687040.0573019127,
+      "circulating": 687028.7013836448,
       "chains": [
         "PulseChain"
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10949,7 +10949,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10958,13 +10958,13 @@
       "defillamaId": "41",
       "symbol": "FLOAT",
       "name": "Float Protocol Float",
-      "circulating": 654040.262208445,
+      "circulating": 654072.2374726664,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10980,7 +10980,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -10996,7 +10996,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11020,7 +11020,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11030,13 +11030,13 @@
       "coingeckoId": "let-s-get-hai",
       "symbol": "HAI",
       "name": "Lets Get HAI",
-      "circulating": 560344.631141015,
+      "circulating": 560345.1427898188,
       "chains": [
         "OP Mainnet"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11054,7 +11054,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11070,7 +11070,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11086,7 +11086,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11102,7 +11102,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11123,7 +11123,7 @@
       ],
       "pegType": "peggedREAL",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "base",
@@ -11280,7 +11280,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11299,7 +11299,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11308,13 +11308,13 @@
       "defillamaId": "198",
       "symbol": "AUSD",
       "name": "Stable Jack aUSD",
-      "circulating": 490209.20188725065,
+      "circulating": 490233.1676423575,
       "chains": [
         "Avalanche"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11323,7 +11323,7 @@
       "defillamaId": "27",
       "symbol": "USDK",
       "name": "USDK",
-      "circulating": 488660.3936099545,
+      "circulating": 488684.28364563436,
       "chains": [
         "Ethereum",
         "OKTChain",
@@ -11332,7 +11332,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11348,7 +11348,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11370,7 +11370,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11380,13 +11380,13 @@
       "coingeckoId": "mantra-usd",
       "symbol": "MANTRAUSD",
       "name": "mantraUSD",
-      "circulating": 460463.15945205186,
+      "circulating": 460485.6709579001,
       "chains": [
         "MANTRA"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11395,12 +11395,12 @@
       "defillamaId": "58",
       "symbol": "3USD",
       "name": "3USD",
-      "circulating": 452853.2716841774,
+      "circulating": 452875.4111515043,
       "chains": [
         "Karura"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11416,7 +11416,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11426,13 +11426,13 @@
       "coingeckoId": "nectar",
       "symbol": "NECT",
       "name": "Nectar",
-      "circulating": 412058.7923141204,
+      "circulating": 412012.49546786066,
       "chains": [
         "Berachain"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11448,7 +11448,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11458,13 +11458,13 @@
       "coingeckoId": "asymmetry-usdaf-2",
       "symbol": "USDAF",
       "name": "Asymmetry USDaf V2",
-      "circulating": 387108.1813724662,
+      "circulating": 386824.5407039427,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11480,7 +11480,7 @@
       ],
       "pegType": "peggedJPY",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11490,13 +11490,13 @@
       "coingeckoId": "last-usd",
       "symbol": "USDXL",
       "name": "Last USD",
-      "circulating": 352140.4531622607,
+      "circulating": 352092.0201135552,
       "chains": [
         "Hyperliquid L1"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11512,7 +11512,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11534,7 +11534,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11544,7 +11544,7 @@
       "coingeckoId": "reservoir-rusd",
       "symbol": "RUSD",
       "name": "Reservoir Stablecoin",
-      "circulating": 316483.16428097803,
+      "circulating": 316483.164280978,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -11566,7 +11566,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11575,13 +11575,13 @@
       "defillamaId": "181",
       "symbol": "ZUNUSD",
       "name": "Zunami USD",
-      "circulating": 303328.426136987,
+      "circulating": 303343.25550932385,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11597,7 +11597,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "solana",
@@ -11646,7 +11646,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11655,13 +11655,13 @@
       "defillamaId": "191",
       "symbol": "BITUSD",
       "name": "bitSmiley USD",
-      "circulating": 253476.68812658344,
+      "circulating": 253489.08030569708,
       "chains": [
         "Bitlayer"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11678,7 +11678,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11694,7 +11694,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11710,7 +11710,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11728,7 +11728,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11744,7 +11744,7 @@
       ],
       "pegType": "peggedREAL",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "celo",
@@ -11798,7 +11798,7 @@
       "defillamaId": "227",
       "symbol": "BOLD",
       "name": "Legacy BOLD",
-      "circulating": 230780.60912886966,
+      "circulating": 230791.8917231998,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -11809,7 +11809,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11818,13 +11818,13 @@
       "defillamaId": "164",
       "symbol": "USDCB",
       "name": "USDCB",
-      "circulating": 225176.68037134776,
+      "circulating": 225187.68899614873,
       "chains": [
         "Rootstock"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11840,7 +11840,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11850,14 +11850,14 @@
       "coingeckoId": "inter-stable-token",
       "symbol": "IST",
       "name": "Inter Stable Token",
-      "circulating": 206355.9019616186,
+      "circulating": 206548.40180642303,
       "chains": [
         "Agoric",
         "Osmosis"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11866,14 +11866,14 @@
       "defillamaId": "25",
       "symbol": "RSV",
       "name": "Reserve",
-      "circulating": 206081.33504955578,
+      "circulating": 206091.41012523544,
       "chains": [
         "Ethereum",
         "Gnosis"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11889,7 +11889,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11898,12 +11898,12 @@
       "defillamaId": "59",
       "symbol": "SIGUSD",
       "name": "SigmaUSD",
-      "circulating": 195429.8209999145,
+      "circulating": 195439.3753355178,
       "chains": [
         "Ergo"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11912,13 +11912,13 @@
       "defillamaId": "68",
       "symbol": "USDL",
       "name": "USDLemma",
-      "circulating": 175097.6876074967,
+      "circulating": 175106.24792885504,
       "chains": [
         "Arbitrum",
         "OP Mainnet"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11927,13 +11927,13 @@
       "defillamaId": "130",
       "symbol": "SVUSD",
       "name": "Savvy USD",
-      "circulating": 173754.30674426068,
+      "circulating": 173762.80138929829,
       "chains": [
         "Arbitrum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11952,7 +11952,7 @@
       ],
       "pegType": "peggedGBP",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11961,13 +11961,13 @@
       "defillamaId": "311",
       "symbol": "IAUSD",
       "name": "iAUSD",
-      "circulating": 168331.58797683578,
+      "circulating": 168339.8175114889,
       "chains": [
         "Solana"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -11983,7 +11983,7 @@
       ],
       "pegType": "peggedKES",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "celo",
@@ -12040,7 +12040,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12049,13 +12049,13 @@
       "defillamaId": "34",
       "symbol": "USDB",
       "name": "USD Balance",
-      "circulating": 147514.13617385132,
+      "circulating": 147521.34796760944,
       "chains": [
         "Fantom"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12071,7 +12071,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "tezos",
@@ -12114,7 +12114,7 @@
       ],
       "pegType": "peggedJPY",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "celo",
@@ -12165,13 +12165,13 @@
       "coingeckoId": "quill-usdq",
       "symbol": "USDQ",
       "name": "Quill USD",
-      "circulating": 132133.9590622852,
+      "circulating": 132143.56095377725,
       "chains": [
         "Scroll"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12180,13 +12180,13 @@
       "defillamaId": "337",
       "symbol": "USE",
       "name": "USE",
-      "circulating": 131103.4227364565,
+      "circulating": 131109.83222960937,
       "chains": [
         "Ergo"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12196,7 +12196,7 @@
       "coingeckoId": "davos-protocol",
       "symbol": "DUSD",
       "name": "Davos Protocol",
-      "circulating": 130263.08338257414,
+      "circulating": 130279.35443167733,
       "chains": [
         "Arbitrum",
         "BSC",
@@ -12206,7 +12206,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12223,7 +12223,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12232,7 +12232,7 @@
       "defillamaId": "98",
       "symbol": "EUROE",
       "name": "EUROe Stablecoin",
-      "circulating": 122645.77637376997,
+      "circulating": 122651.77238247432,
       "chains": [
         "Arbitrum",
         "Avalanche",
@@ -12244,7 +12244,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12261,7 +12261,7 @@
       ],
       "pegType": "peggedCHF",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12270,14 +12270,14 @@
       "defillamaId": "144",
       "symbol": "HYUSD",
       "name": "High Yield USD",
-      "circulating": 115509.92656173934,
+      "circulating": 115515.57370708408,
       "chains": [
         "Base",
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12293,7 +12293,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12302,14 +12302,14 @@
       "defillamaId": "124",
       "symbol": "PEUSD",
       "name": "peg-eUSD",
-      "circulating": 108189.37336167032,
+      "circulating": 108194.66261372264,
       "chains": [
         "Arbitrum",
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12325,7 +12325,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12334,14 +12334,14 @@
       "defillamaId": "149",
       "symbol": "USDS",
       "name": "Sable Coin",
-      "circulating": 97250.46113113934,
+      "circulating": 97255.21559255403,
       "chains": [
         "BSC",
         "Base"
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12357,7 +12357,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12373,7 +12373,7 @@
       ],
       "pegType": "peggedPHP",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "celo",
@@ -12430,7 +12430,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "tron",
@@ -12462,7 +12462,7 @@
       ],
       "pegType": "peggedAUD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "celo",
@@ -12512,13 +12512,13 @@
       "defillamaId": "184",
       "symbol": "WEN",
       "name": "Magma Wen",
-      "circulating": 83249.95265921227,
+      "circulating": 83254.02265212632,
       "chains": [
         "IoTeX"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12527,13 +12527,13 @@
       "defillamaId": "71",
       "symbol": "VST",
       "name": "Vesta Stable",
-      "circulating": 81249.89132585979,
+      "circulating": 81253.86353811219,
       "chains": [
         "Arbitrum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12549,7 +12549,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12570,7 +12570,7 @@
       ],
       "pegType": "peggedCLP",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "base",
@@ -12720,13 +12720,13 @@
       "defillamaId": "82",
       "symbol": "ARUSD",
       "name": "arUSD",
-      "circulating": 78363.7458677106,
+      "circulating": 78367.5769796838,
       "chains": [
         "Avalanche"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12735,14 +12735,14 @@
       "defillamaId": "39",
       "symbol": "VOLT",
       "name": "VOLT Protocol",
-      "circulating": 76844.2461594073,
+      "circulating": 76848.00298481519,
       "chains": [
         "Arbitrum",
         "Ethereum"
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12760,7 +12760,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12776,7 +12776,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12785,13 +12785,13 @@
       "defillamaId": "148",
       "symbol": "MYUSD",
       "name": "Mynth MyUSD",
-      "circulating": 68564.21845855725,
+      "circulating": 68567.57048308544,
       "chains": [
         "Cardano"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12807,7 +12807,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12823,7 +12823,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -12844,7 +12844,7 @@
       ],
       "pegType": "peggedMXN",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "base",
@@ -12994,13 +12994,13 @@
       "defillamaId": "357",
       "symbol": "BYC",
       "name": "Bytecash",
-      "circulating": 54621.278339970646,
+      "circulating": 54623.94871044774,
       "chains": [
         "Chia"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13021,7 +13021,7 @@
       ],
       "pegType": "peggedCOP",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "base",
@@ -13172,13 +13172,13 @@
       "coingeckoId": "coinshift-usdl-morpho-vault",
       "symbol": "CSUSDL",
       "name": "Coinshift",
-      "circulating": 53229.84055338817,
+      "circulating": 53228.04280571478,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13187,7 +13187,7 @@
       "defillamaId": "260",
       "symbol": "VUSD",
       "name": "VDollar Finance",
-      "circulating": 53041.80859736318,
+      "circulating": 53044.401749410055,
       "chains": [
         "Base",
         "Ethereum",
@@ -13195,7 +13195,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13204,13 +13204,13 @@
       "defillamaId": "105",
       "symbol": "DCHF",
       "name": "DeFi Franc",
-      "circulating": 52576.57572351851,
+      "circulating": 52579.14613087377,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13220,13 +13220,13 @@
       "coingeckoId": "ethos-reserve-note",
       "symbol": "ERN",
       "name": "Ethos Reserve Note",
-      "circulating": 50859.14568367688,
+      "circulating": 50872.164522397965,
       "chains": [
         "OP Mainnet"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13242,7 +13242,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13251,14 +13251,14 @@
       "defillamaId": "294",
       "symbol": "USDA+",
       "name": "NonDollar",
-      "circulating": 48505.77874311562,
+      "circulating": 48508.15013396293,
       "chains": [
         "Base",
         "OP Mainnet"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13274,7 +13274,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13290,7 +13290,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13307,7 +13307,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13316,12 +13316,12 @@
       "defillamaId": "90",
       "symbol": "RUSD",
       "name": "Redeemable USD",
-      "circulating": 38697.71190796207,
+      "circulating": 38699.60379388181,
       "chains": [
         "Cardano"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13337,7 +13337,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13353,7 +13353,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13374,7 +13374,7 @@
       ],
       "pegType": "peggedPEN",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "base",
@@ -13533,7 +13533,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13542,14 +13542,14 @@
       "defillamaId": "364",
       "symbol": "WAD",
       "name": "Whale Asset Dollar",
-      "circulating": 32219.144442950168,
+      "circulating": 32220.719599276283,
       "chains": [
         "Algorand",
         "Voi Network"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13565,7 +13565,7 @@
       ],
       "pegType": "peggedCOP",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "celo",
@@ -13616,13 +13616,13 @@
       "coingeckoId": "dyad",
       "symbol": "DYAD",
       "name": "Dyad",
-      "circulating": 31533.867169302466,
+      "circulating": 31535.2140819867,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13638,7 +13638,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13648,13 +13648,13 @@
       "coingeckoId": "hyperstable",
       "symbol": "USH",
       "name": "Hyperstable USD",
-      "circulating": 28679.931147768788,
+      "circulating": 28679.645798514503,
       "chains": [
         "Hyperliquid L1"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13670,7 +13670,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13679,13 +13679,13 @@
       "defillamaId": "114",
       "symbol": "CLEVUSD",
       "name": "CLever USD",
-      "circulating": 27114.43511419498,
+      "circulating": 27115.76070724649,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13703,7 +13703,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13712,13 +13712,13 @@
       "defillamaId": "94",
       "symbol": "BAOUSD",
       "name": "BaoUSD",
-      "circulating": 25182.768261104848,
+      "circulating": 25183.99941722092,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13734,7 +13734,7 @@
       ],
       "pegType": "peggedGHS",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13743,14 +13743,14 @@
       "defillamaId": "170",
       "symbol": "EURO3",
       "name": "EURO3",
-      "circulating": 22863.853302561587,
+      "circulating": 22864.97108963482,
       "chains": [
         "Linea",
         "Polygon"
       ],
       "pegType": "peggedEUR",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13759,13 +13759,13 @@
       "defillamaId": "193",
       "symbol": "USC",
       "name": "Chi USC",
-      "circulating": 22672.225285214372,
+      "circulating": 22673.333703817738,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13781,7 +13781,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13791,7 +13791,7 @@
       "coingeckoId": "bob",
       "symbol": "BOB",
       "name": "BOB",
-      "circulating": 21223.58529505311,
+      "circulating": 21222.991310106005,
       "chains": [
         "Arbitrum",
         "BSC",
@@ -13801,7 +13801,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "optimism",
@@ -13899,14 +13899,14 @@
       "defillamaId": "222",
       "symbol": "PAUSD",
       "name": "Parallel USD",
-      "circulating": 19549.339071325856,
+      "circulating": 19550.294815671088,
       "chains": [
         "Ethereum",
         "Polygon"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13923,7 +13923,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13941,7 +13941,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13957,7 +13957,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13966,13 +13966,13 @@
       "defillamaId": "169",
       "symbol": "GAI",
       "name": "GAI Stablecoin",
-      "circulating": 14297.569126960865,
+      "circulating": 14298.268118409824,
       "chains": [
         "Manta"
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13989,7 +13989,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -13998,13 +13998,13 @@
       "defillamaId": "189",
       "symbol": "BTCUSD",
       "name": "btcUSD",
-      "circulating": 13850.797631548927,
+      "circulating": 13851.474780861496,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14013,13 +14013,13 @@
       "defillamaId": "163",
       "symbol": "ULTRA",
       "name": "PrismaLRT Ultra",
-      "circulating": 12913.197141588522,
+      "circulating": 12913.828452708653,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14035,7 +14035,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14051,7 +14051,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14067,7 +14067,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14076,13 +14076,13 @@
       "defillamaId": "208",
       "symbol": "DCKUSD",
       "name": "Dackie USD",
-      "circulating": 11157.656285682417,
+      "circulating": 11158.201770461323,
       "chains": [
         "Base"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14091,7 +14091,7 @@
       "defillamaId": "190",
       "symbol": "RGUSD",
       "name": "Revenue Generating USD",
-      "circulating": 10920.03172081385,
+      "circulating": 10920.565588405427,
       "chains": [
         "Arbitrum",
         "Base",
@@ -14099,7 +14099,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14108,13 +14108,13 @@
       "defillamaId": "259",
       "symbol": "MSD",
       "name": "Arche Protocol MSD",
-      "circulating": 10819.936215470272,
+      "circulating": 10820.465189509545,
       "chains": [
         "Movement"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14123,13 +14123,13 @@
       "defillamaId": "102",
       "symbol": "ANONUSD",
       "name": "Offshift anonUSD",
-      "circulating": 10801.728087675237,
+      "circulating": 10802.256171540419,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14138,14 +14138,14 @@
       "defillamaId": "108",
       "symbol": "D2O",
       "name": "Deuterium",
-      "circulating": 10206.500324906749,
+      "circulating": 10206.99930878209,
       "chains": [
         "Ethereum",
         "Moonbeam"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14154,13 +14154,13 @@
       "defillamaId": "393",
       "symbol": "HAEUR",
       "name": "Harbor haEUR",
-      "circulating": 8984.704375491641,
+      "circulating": 8985.143627190593,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14176,7 +14176,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14185,13 +14185,13 @@
       "defillamaId": "61",
       "symbol": "FIAT",
       "name": "Fixed Income Asset Token",
-      "circulating": 7605.999460573503,
+      "circulating": 7606.371309000079,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14200,13 +14200,13 @@
       "defillamaId": "62",
       "symbol": "PUSD",
       "name": "PUSd",
-      "circulating": 6645.4012185701895,
+      "circulating": 6645.726104471103,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14216,13 +14216,13 @@
       "coingeckoId": "jigsaw-usd",
       "symbol": "JUSD",
       "name": "Jigsaw USD",
-      "circulating": 6534.060859267387,
+      "circulating": 6534.340248851916,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14231,14 +14231,14 @@
       "defillamaId": "128",
       "symbol": "NEX",
       "name": "Nexus",
-      "circulating": 5183.5627376087095,
+      "circulating": 5183.816155934339,
       "chains": [
         "Arbitrum",
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14247,13 +14247,13 @@
       "defillamaId": "223",
       "symbol": "XY",
       "name": "TREN Debt Token",
-      "circulating": 4578.698272609785,
+      "circulating": 4578.9221198184605,
       "chains": [
         "Arbitrum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14262,14 +14262,14 @@
       "defillamaId": "330",
       "symbol": "XPUSD",
       "name": "Gaming XP USD",
-      "circulating": 4007.4949779179774,
+      "circulating": 4007.6908996649845,
       "chains": [
         "Avalanche",
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14278,12 +14278,12 @@
       "defillamaId": "87",
       "symbol": "USDI",
       "name": "USDi",
-      "circulating": 3742.719419662533,
+      "circulating": 3742.902396841868,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14299,7 +14299,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14315,7 +14315,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14324,13 +14324,13 @@
       "defillamaId": "265",
       "symbol": "USDK",
       "name": "Orki USD",
-      "circulating": 2180.7288739506425,
+      "circulating": 2180.8354872372684,
       "chains": [
         "Swellchain"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14346,7 +14346,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14372,7 +14372,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14388,7 +14388,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14397,13 +14397,13 @@
       "defillamaId": "150",
       "symbol": "SCB",
       "name": "USD Stable Colb",
-      "circulating": 821.1528708740757,
+      "circulating": 821.193016078476,
       "chains": [
         "Polygon"
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14412,13 +14412,13 @@
       "defillamaId": "318",
       "symbol": "LITUSD",
       "name": "litUSD",
-      "circulating": 506.88750598335275,
+      "circulating": 506.9122871212595,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14427,13 +14427,13 @@
       "defillamaId": "121",
       "symbol": "SLSD",
       "name": "PSY",
-      "circulating": 403.9581654974445,
+      "circulating": 403.9779145401602,
       "chains": [
         "Arbitrum"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14442,13 +14442,13 @@
       "defillamaId": "182",
       "symbol": "ZUNETH",
       "name": "Zunami ETH",
-      "circulating": 71.09836506618164,
+      "circulating": 71.10184098217653,
       "chains": [
         "Ethereum"
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14464,7 +14464,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14473,12 +14473,12 @@
       "defillamaId": "203",
       "symbol": "CUSD",
       "name": "Chad USD",
-      "circulating": 50.021706689667745,
+      "circulating": 50.024152192461116,
       "chains": [
         "Scroll"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14495,7 +14495,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14504,13 +14504,13 @@
       "defillamaId": "320",
       "symbol": "USDR",
       "name": "Rocky USDr",
-      "circulating": 1.4178861576212995,
+      "circulating": 1.41795547641885,
       "chains": [
         "Sei"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14519,13 +14519,13 @@
       "defillamaId": "375",
       "symbol": "USDMO",
       "name": "Monet USDmo",
-      "circulating": 1.0177935354025,
+      "circulating": 1.017843294139229,
       "chains": [
         "Eden"
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14544,7 +14544,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -14608,7 +14608,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "terra",
@@ -14657,7 +14657,7 @@
       ],
       "pegType": "peggedCNY",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14672,7 +14672,7 @@
       ],
       "pegType": "peggedUAH",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14687,7 +14687,7 @@
       ],
       "pegType": "peggedARS",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14704,7 +14704,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14721,7 +14721,7 @@
       ],
       "pegType": "peggedGBP",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14746,7 +14746,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "solana",
@@ -14787,7 +14787,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14802,7 +14802,7 @@
       ],
       "pegType": "peggedCHF",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14820,7 +14820,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14835,7 +14835,7 @@
       ],
       "pegType": "peggedMXN",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14852,7 +14852,7 @@
       ],
       "pegType": "peggedRUB",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14867,7 +14867,7 @@
       ],
       "pegType": "peggedREAL",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14883,7 +14883,7 @@
       ],
       "pegType": "peggedGBP",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     },
     {
@@ -14898,7 +14898,7 @@
       ],
       "pegType": "peggedCAD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "celo",
@@ -14954,7 +14954,7 @@
       ],
       "pegType": "peggedZAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "celo",
@@ -15010,7 +15010,7 @@
       ],
       "pegType": "peggedNGN",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": [
         {
           "chain": "celo",
@@ -15066,7 +15066,7 @@
       ],
       "pegType": "peggedXOF",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-21T02:51:14Z",
+      "updatedAt": "2026-06-21T03:27:58Z",
       "assets": null
     }
   ]
