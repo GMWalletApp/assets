@@ -1,0 +1,63 @@
+name: Build Homepage Tokenlist
+
+on:
+  workflow_dispatch:
+    inputs:
+      inline_overrides_json:
+        description: "Optional homepage token JSON to merge into homepage_overrides.json and commit"
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: homepage-tokenlist-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-homepage-tokenlist:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build homepage.json
+        env:
+          HOMEPAGE_INLINE_OVERRIDES_JSON: ${{ github.event.inputs.inline_overrides_json || '' }}
+        run: |
+          if [ -n "$HOMEPAGE_INLINE_OVERRIDES_JSON" ]; then
+            python3 data/tokenlists/build_homepage.py --save-inline-overrides
+          else
+            python3 data/tokenlists/build_homepage.py
+          fi
+          python3 -m json.tool data/tokenlists/homepage_overrides.json >/dev/null
+          python3 -m json.tool data/tokenlists/out/homepage.json >/dev/null
+
+      - name: Commit homepage overrides
+        env:
+          HOMEPAGE_INLINE_OVERRIDES_JSON: ${{ github.event.inputs.inline_overrides_json || '' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tokenlists/homepage_overrides.json
+          if git diff --cached --quiet; then
+            echo "No homepage override changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update homepage overrides"
+          git push
+
+      - name: Upload homepage artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: homepage-tokenlist
+          path: data/tokenlists/out/homepage.json
