@@ -1,7 +1,7 @@
 {
   "source": "coingecko",
   "vsCurrency": "usd",
-  "updatedAt": "2026-06-21T03:27:57Z",
+  "updatedAt": "2026-06-25T08:42:54Z",
   "assets": [
     {
       "rank": 1,
@@ -10,11 +10,11 @@
       "symbol": "BTC",
       "name": "Bitcoin",
       "marketCapRank": 1,
-      "marketCap": 1290045805162,
-      "totalVolume": 18135831519,
-      "currentPrice": 64354,
-      "lastUpdated": "2026-06-21T03:26:58.714Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 1235879379967,
+      "totalVolume": 44228878175,
+      "currentPrice": 61649,
+      "lastUpdated": "2026-06-25T08:41:49.188Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "bitcoin",
@@ -195,11 +195,11 @@
       "symbol": "ETH",
       "name": "Ethereum",
       "marketCapRank": 2,
-      "marketCap": 209686890549,
-      "totalVolume": 9060075487,
-      "currentPrice": 1736.61,
-      "lastUpdated": "2026-06-21T03:26:57.915Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 199138585566,
+      "totalVolume": 14670234597,
+      "currentPrice": 1650.02,
+      "lastUpdated": "2026-06-25T08:41:49.553Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -357,11 +357,11 @@
       "symbol": "USDT",
       "name": "Tether",
       "marketCapRank": 3,
-      "marketCap": 186226058040,
-      "totalVolume": 31657445340,
-      "currentPrice": 0.998834,
-      "lastUpdated": "2026-06-21T03:26:57.844Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 186073160024,
+      "totalVolume": 66701564636,
+      "currentPrice": 0.998597,
+      "lastUpdated": "2026-06-25T08:41:48.836Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "aptos",
@@ -1310,11 +1310,11 @@
       "symbol": "BNB",
       "name": "BNB",
       "marketCapRank": 4,
-      "marketCap": 79521325449,
-      "totalVolume": 485694790,
-      "currentPrice": 589.96,
-      "lastUpdated": "2026-06-21T03:26:57.857Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 76644351687,
+      "totalVolume": 905615975,
+      "currentPrice": 568.65,
+      "lastUpdated": "2026-06-25T08:41:48.317Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "smartchain",
@@ -1415,11 +1415,11 @@
       "symbol": "USDC",
       "name": "USDC",
       "marketCapRank": 5,
-      "marketCap": 74840754349,
-      "totalVolume": 6063407524,
-      "currentPrice": 0.999846,
-      "lastUpdated": "2026-06-21T03:26:57.850Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 73776599325,
+      "totalVolume": 16410584580,
+      "currentPrice": 0.999773,
+      "lastUpdated": "2026-06-25T08:41:49.257Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "algorand",
@@ -2753,11 +2753,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "marketCapRank": 6,
-      "marketCap": 71303983649,
-      "totalVolume": 959788592,
-      "currentPrice": 1.15,
-      "lastUpdated": "2026-06-21T03:26:57.683Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 67115707570,
+      "totalVolume": 2198589454,
+      "currentPrice": 1.082,
+      "lastUpdated": "2026-06-25T08:41:48.433Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ripple",
@@ -2802,11 +2802,11 @@
       "symbol": "SOL",
       "name": "Solana",
       "marketCapRank": 7,
-      "marketCap": 42758022940,
-      "totalVolume": 2281762978,
-      "currentPrice": 73.67,
-      "lastUpdated": "2026-06-21T03:26:57.676Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 40026143084,
+      "totalVolume": 3386063647,
+      "currentPrice": 68.95,
+      "lastUpdated": "2026-06-25T08:41:48.453Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "solana",
@@ -2879,11 +2879,11 @@
       "symbol": "TRX",
       "name": "TRON",
       "marketCapRank": 8,
-      "marketCap": 30956526546,
-      "totalVolume": 601664115,
-      "currentPrice": 0.326436,
-      "lastUpdated": "2026-06-21T03:26:56.040Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 31164678348,
+      "totalVolume": 783598493,
+      "currentPrice": 0.328571,
+      "lastUpdated": "2026-06-25T08:41:41.766Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "tron",
@@ -3005,11 +3005,11 @@
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
       "marketCapRank": 9,
-      "marketCap": 19679929568,
-      "totalVolume": 59616904,
-      "currentPrice": 1.034,
-      "lastUpdated": "2026-06-20T13:06:27.774Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 19678593993,
+      "totalVolume": 40072838,
+      "currentPrice": 1.027,
+      "lastUpdated": "2026-06-25T06:00:12.040Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": []
     },
     {
@@ -3019,11 +3019,11 @@
       "symbol": "HYPE",
       "name": "Hyperliquid",
       "marketCapRank": 10,
-      "marketCap": 15575567355,
-      "totalVolume": 469114232,
-      "currentPrice": 70.24,
-      "lastUpdated": "2026-06-21T03:26:46.348Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 14144750056,
+      "totalVolume": 728426976,
+      "currentPrice": 63.59,
+      "lastUpdated": "2026-06-25T08:41:47.168Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "hypeevm",
@@ -3106,11 +3106,11 @@
       "symbol": "DOGE",
       "name": "Dogecoin",
       "marketCapRank": 11,
-      "marketCap": 12938298967,
-      "totalVolume": 428664602,
-      "currentPrice": 0.083619,
-      "lastUpdated": "2026-06-21T03:26:46.058Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 11931432656,
+      "totalVolume": 940579337,
+      "currentPrice": 0.077074,
+      "lastUpdated": "2026-06-25T08:41:47.034Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "doge",
@@ -3155,11 +3155,11 @@
       "symbol": "USDS",
       "name": "USDS",
       "marketCapRank": 12,
-      "marketCap": 10328912221,
-      "totalVolume": 38382686,
-      "currentPrice": 0.999643,
-      "lastUpdated": "2026-06-21T03:26:45.699Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 10327181504,
+      "totalVolume": 39240830,
+      "currentPrice": 0.999771,
+      "lastUpdated": "2026-06-25T08:41:46.745Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -3245,11 +3245,11 @@
       "symbol": "RAIN",
       "name": "Rain",
       "marketCapRank": 13,
-      "marketCap": 8993931869,
-      "totalVolume": 38813038,
-      "currentPrice": 0.01444066,
-      "lastUpdated": "2026-06-21T03:26:47.374Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 9872909472,
+      "totalVolume": 39876586,
+      "currentPrice": 0.01586311,
+      "lastUpdated": "2026-06-25T08:41:38.479Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": []
     },
     {
@@ -3259,11 +3259,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "marketCapRank": 14,
-      "marketCap": 8818808501,
-      "totalVolume": 309967,
-      "currentPrice": 9.58,
-      "lastUpdated": "2026-06-21T03:26:47.847Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 8577858894,
+      "totalVolume": 704524,
+      "currentPrice": 9.32,
+      "lastUpdated": "2026-06-25T08:41:48.161Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -3311,11 +3311,11 @@
       "symbol": "ZEC",
       "name": "Zcash",
       "marketCapRank": 15,
-      "marketCap": 7907610931,
-      "totalVolume": 295119234,
-      "currentPrice": 471.49,
-      "lastUpdated": "2026-06-21T03:26:46.007Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 6994317941,
+      "totalVolume": 404553531,
+      "currentPrice": 416.64,
+      "lastUpdated": "2026-06-25T08:41:47.133Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "zcash",
@@ -3360,11 +3360,11 @@
       "symbol": "XLM",
       "name": "Stellar",
       "marketCapRank": 16,
-      "marketCap": 7235730894,
-      "totalVolume": 208715820,
-      "currentPrice": 0.214093,
-      "lastUpdated": "2026-06-21T03:26:57.908Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 6301612141,
+      "totalVolume": 207296140,
+      "currentPrice": 0.185766,
+      "lastUpdated": "2026-06-25T08:41:41.002Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "stellar",
@@ -3409,113 +3409,39 @@
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
       "marketCapRank": 17,
-      "marketCap": 6236835670,
-      "totalVolume": 35218752,
-      "currentPrice": 52.85,
-      "lastUpdated": "2026-06-21T03:26:44.401Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 5932581272,
+      "totalVolume": 105831429,
+      "currentPrice": 50.2,
+      "lastUpdated": "2026-06-25T08:41:44.992Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": []
     },
     {
       "rank": 18,
       "source": "coingecko",
-      "coingeckoId": "cardano",
-      "symbol": "ADA",
-      "name": "Cardano",
+      "coingeckoId": "canton-network",
+      "symbol": "CC",
+      "name": "Canton",
       "marketCapRank": 18,
-      "marketCap": 6052269567,
-      "totalVolume": 264659146,
-      "currentPrice": 0.162669,
-      "lastUpdated": "2026-06-21T03:26:55.248Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "cardano",
-          "address": "",
-          "assetId": "c1815",
-          "name": "Cardano",
-          "symbol": "ADA",
-          "type": "coin",
-          "decimals": 6,
-          "status": "active",
-          "website": "https://cardano.org",
-          "description": "Cardano (ADA) is a decentralized platform that will allow complex programmable transfers of value in a secure and scalable fashion. Cardano is built in the secure Haskell programming language.",
-          "explorer": "https://cardanoexplorer.com/",
-          "research": "https://research.binance.com/en/projects/cardano",
-          "tags": [
-            "staking-native"
-          ],
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/input-output-hk/cardano-sl/"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/cardano"
-            },
-            {
-              "name": "reddit",
-              "url": "https://reddit.com/r/cardano"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://www.cardano.org/en/academic-papers/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/cardano/info/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "cryptoorg",
-          "address": "0x0e517979C2c1c1522ddB0c73905e0D39b3F990c0",
-          "assetId": "c394_t0x0e517979C2c1c1522ddB0c73905e0D39b3F990c0",
-          "name": "ADA",
-          "symbol": "ADA",
-          "type": "CRC20",
-          "decimals": 6,
-          "status": "active",
-          "website": "https://crypto.org/",
-          "description": "Cardano (ADA) is a decentralized platform that will allow complex programmable transfers of value in a secure and scalable fashion. Cardano is built in the secure Haskell programming language.",
-          "explorer": "https://crypto.org/explorer/account/0x0e517979C2c1c1522ddB0c73905e0D39b3F990c0",
-          "tags": [
-            "defi"
-          ],
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/cardano"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/cardano/"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/CardanoAnnouncements"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/cardano/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/cryptoorg/assets/0x0e517979C2c1c1522ddB0c73905e0D39b3F990c0/logo.png",
-          "logoExists": true
-        }
-      ]
+      "marketCap": 5915621993,
+      "totalVolume": 11831967,
+      "currentPrice": 0.152086,
+      "lastUpdated": "2026-06-25T08:41:37.392Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
     },
     {
       "rank": 19,
       "source": "coingecko",
-      "coingeckoId": "canton-network",
-      "symbol": "CC",
-      "name": "Canton",
+      "coingeckoId": "monero",
+      "symbol": "XMR",
+      "name": "Monero",
       "marketCapRank": 19,
-      "marketCap": 6012023740,
-      "totalVolume": 7447772,
-      "currentPrice": 0.154846,
-      "lastUpdated": "2026-06-21T03:26:47.674Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 5911371444,
+      "totalVolume": 134506600,
+      "currentPrice": 314.91,
+      "lastUpdated": "2026-06-25T08:41:50.350Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": []
     },
     {
@@ -3525,11 +3451,11 @@
       "symbol": "LINK",
       "name": "Chainlink",
       "marketCapRank": 20,
-      "marketCap": 5952411853,
-      "totalVolume": 147182296,
-      "currentPrice": 7.96,
-      "lastUpdated": "2026-06-21T03:26:48.206Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 5615243809,
+      "totalVolume": 296054146,
+      "currentPrice": 7.51,
+      "lastUpdated": "2026-06-25T08:41:43.236Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -3783,29 +3709,117 @@
     {
       "rank": 21,
       "source": "coingecko",
-      "coingeckoId": "monero",
-      "symbol": "XMR",
-      "name": "Monero",
+      "coingeckoId": "cardano",
+      "symbol": "ADA",
+      "name": "Cardano",
       "marketCapRank": 21,
-      "marketCap": 5887171106,
-      "totalVolume": 103371417,
-      "currentPrice": 313.78,
-      "lastUpdated": "2026-06-21T03:26:47.361Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
+      "marketCap": 5560868594,
+      "totalVolume": 622983180,
+      "currentPrice": 0.149314,
+      "lastUpdated": "2026-06-25T08:41:38.543Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "cardano",
+          "address": "",
+          "assetId": "c1815",
+          "name": "Cardano",
+          "symbol": "ADA",
+          "type": "coin",
+          "decimals": 6,
+          "status": "active",
+          "website": "https://cardano.org",
+          "description": "Cardano (ADA) is a decentralized platform that will allow complex programmable transfers of value in a secure and scalable fashion. Cardano is built in the secure Haskell programming language.",
+          "explorer": "https://cardanoexplorer.com/",
+          "research": "https://research.binance.com/en/projects/cardano",
+          "tags": [
+            "staking-native"
+          ],
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/input-output-hk/cardano-sl/"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/cardano"
+            },
+            {
+              "name": "reddit",
+              "url": "https://reddit.com/r/cardano"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://www.cardano.org/en/academic-papers/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/cardano/info/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "cryptoorg",
+          "address": "0x0e517979C2c1c1522ddB0c73905e0D39b3F990c0",
+          "assetId": "c394_t0x0e517979C2c1c1522ddB0c73905e0D39b3F990c0",
+          "name": "ADA",
+          "symbol": "ADA",
+          "type": "CRC20",
+          "decimals": 6,
+          "status": "active",
+          "website": "https://crypto.org/",
+          "description": "Cardano (ADA) is a decentralized platform that will allow complex programmable transfers of value in a secure and scalable fashion. Cardano is built in the secure Haskell programming language.",
+          "explorer": "https://crypto.org/explorer/account/0x0e517979C2c1c1522ddB0c73905e0D39b3F990c0",
+          "tags": [
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/cardano"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/cardano/"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/CardanoAnnouncements"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/cardano/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/cryptoorg/assets/0x0e517979C2c1c1522ddB0c73905e0D39b3F990c0/logo.png",
+          "logoExists": true
+        }
+      ]
     },
     {
       "rank": 22,
       "source": "coingecko",
+      "coingeckoId": "lab",
+      "symbol": "LAB",
+      "name": "LAB",
+      "marketCapRank": 22,
+      "marketCap": 5316540808,
+      "totalVolume": 60725635,
+      "currentPrice": 17.03,
+      "lastUpdated": "2026-06-25T08:41:37.428Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 23,
+      "source": "coingecko",
       "coingeckoId": "usd1-wlfi",
       "symbol": "USD1",
       "name": "USD1",
-      "marketCapRank": 22,
-      "marketCap": 4791225659,
-      "totalVolume": 697852779,
-      "currentPrice": 1,
-      "lastUpdated": "2026-06-21T03:26:54.200Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 23,
+      "marketCap": 4712041378,
+      "totalVolume": 1099183200,
+      "currentPrice": 0.999237,
+      "lastUpdated": "2026-06-25T08:41:48.967Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "aptos",
@@ -3958,226 +3972,17 @@
       ]
     },
     {
-      "rank": 23,
-      "source": "coingecko",
-      "coingeckoId": "ethena-usde",
-      "symbol": "USDE",
-      "name": "Ethena USDe",
-      "marketCapRank": 23,
-      "marketCap": 4494695269,
-      "totalVolume": 42416018,
-      "currentPrice": 0.998884,
-      "lastUpdated": "2026-06-21T03:26:45.086Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ethereum",
-          "address": "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
-          "assetId": "c60_t0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
-          "name": "USDe",
-          "symbol": "USDe",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://ethena.fi/",
-          "description": "Ethena is a synthetic dollar protocol built on Ethereum that will provide a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar denominated savings instrument - the 'Internet Bond'.",
-          "explorer": "https://etherscan.io/token/0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
-          "tags": [
-            "stablecoin",
-            "defi"
-          ],
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/ethena_labs"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/ethena-usde"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x4c9EDD5852cd905f086C759E8383e09bff1E68B3/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "plasma",
-          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
-          "assetId": "plasma:0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
-          "name": "USDe",
-          "symbol": "USDe",
-          "type": "PLASMA",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://ethena.fi/",
-          "description": "Ethena is a synthetic dollar protocol built on Ethereum that will provide a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar denominated savings instrument - the 'Internet Bond'.",
-          "explorer": "https://plasmascan.to/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
-          "tags": [
-            "stablecoin",
-            "defi"
-          ],
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/ethena_labs"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://docs.ethena.fi/ena"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/plasma/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
       "rank": 24,
-      "source": "coingecko",
-      "coingeckoId": "the-open-network",
-      "symbol": "GRAM",
-      "name": "Gram (prev. Toncoin)",
-      "marketCapRank": 24,
-      "marketCap": 4433226300,
-      "totalVolume": 33857494,
-      "currentPrice": 1.65,
-      "lastUpdated": "2026-06-21T03:26:44.105Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ton",
-          "address": "",
-          "assetId": "c607",
-          "name": "Gram (prev. Toncoin)",
-          "symbol": "GRAM",
-          "type": "coin",
-          "decimals": 9,
-          "status": "active",
-          "website": "https://ton.org",
-          "description": "The Open Network is a blockchain-based decentralized computer network. TON is designed to enable processing millions of transactions per second via infinite sharding paradigm. It allows building Web 3.0 empowered by decentralized storage and DNS, instant payments and decentralized services.",
-          "explorer": "https://tonscan.org/",
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/ton-blockchain"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/toncoin/"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/toncoin"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://ton.org/whitepaper.pdf"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/ton_blockchain"
-            },
-            {
-              "name": "telegram_news",
-              "url": "https://t.me/tonblockchain"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/the-open-network"
-            },
-            {
-              "name": "docs",
-              "url": "https://ton.org/docs"
-            },
-            {
-              "name": "source_code",
-              "url": "https://github.com/ton-blockchain/ton"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ton/info/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "ethereum",
-          "address": "0x582d872A1B094FC48F5DE31D3B73F2D9bE47def1",
-          "assetId": "c60_t0x582d872A1B094FC48F5DE31D3B73F2D9bE47def1",
-          "name": "Wrapped TON Coin",
-          "symbol": "TONCOIN",
-          "type": "ERC20",
-          "decimals": 9,
-          "status": "active",
-          "website": "https://ton.org/",
-          "description": "The Open Network is a blockchain-based decentralized computer network. TON is designed to enable processing millions of transactions per second via infinite sharding paradigm. It allows building Web 3.0 empowered by decentralized storage and DNS, instant payments and decentralized services.",
-          "explorer": "https://etherscan.io/token/0x582d872a1b094fc48f5de31d3b73f2d9be47def1",
-          "tags": [
-            "nft"
-          ],
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/newton-blockchain"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/toncoin/"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/tonblockchain"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x582d872A1B094FC48F5DE31D3B73F2D9bE47def1/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "smartchain",
-          "address": "0x76A797A59Ba2C17726896976B7B3747BfD1d220f",
-          "assetId": "c20000714_t0x76A797A59Ba2C17726896976B7B3747BfD1d220f",
-          "name": "Wrapped TON Coin",
-          "symbol": "TONCOIN",
-          "type": "BEP20",
-          "decimals": 9,
-          "status": "active",
-          "website": "https://ton.org/",
-          "description": "The Open Network is a blockchain-based decentralized computer network. TON is designed to enable processing millions of transactions per second via infinite sharding paradigm. It allows building Web 3.0 empowered by decentralized storage and DNS, instant payments and decentralized services.",
-          "explorer": "https://bscscan.com/token/0x76A797A59Ba2C17726896976B7B3747BfD1d220f",
-          "tags": [
-            "nft"
-          ],
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/newton-blockchain"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/toncoin/"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/tonblockchain"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x76A797A59Ba2C17726896976B7B3747BfD1d220f/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 25,
       "source": "coingecko",
       "coingeckoId": "dai",
       "symbol": "DAI",
       "name": "Dai",
-      "marketCapRank": 25,
-      "marketCap": 4250889468,
-      "totalVolume": 55416316,
-      "currentPrice": 0.999843,
-      "lastUpdated": "2026-06-21T03:26:47.961Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 24,
+      "marketCap": 4659634469,
+      "totalVolume": 227938824,
+      "currentPrice": 0.999648,
+      "lastUpdated": "2026-06-25T08:41:38.637Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4743,18 +4548,213 @@
       ]
     },
     {
+      "rank": 25,
+      "source": "coingecko",
+      "coingeckoId": "ethena-usde",
+      "symbol": "USDE",
+      "name": "Ethena USDe",
+      "marketCapRank": 25,
+      "marketCap": 4474171466,
+      "totalVolume": 132190703,
+      "currentPrice": 0.998133,
+      "lastUpdated": "2026-06-25T08:41:46.665Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ethereum",
+          "address": "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+          "assetId": "c60_t0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that will provide a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar denominated savings instrument - the 'Internet Bond'.",
+          "explorer": "https://etherscan.io/token/0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x4c9EDD5852cd905f086C759E8383e09bff1E68B3/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "plasma",
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "assetId": "plasma:0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "PLASMA",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that will provide a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar denominated savings instrument - the 'Internet Bond'.",
+          "explorer": "https://plasmascan.to/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://docs.ethena.fi/ena"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/plasma/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
       "rank": 26,
       "source": "coingecko",
-      "coingeckoId": "lab",
-      "symbol": "LAB",
-      "name": "LAB",
+      "coingeckoId": "the-open-network",
+      "symbol": "GRAM",
+      "name": "Gram (prev. Toncoin)",
       "marketCapRank": 26,
-      "marketCap": 4146830794,
-      "totalVolume": 28841714,
-      "currentPrice": 13.27,
-      "lastUpdated": "2026-06-21T03:26:47.533Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
+      "marketCap": 4296855918,
+      "totalVolume": 4137404,
+      "currentPrice": 1.59,
+      "lastUpdated": "2026-06-25T08:41:43.437Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ton",
+          "address": "",
+          "assetId": "c607",
+          "name": "Gram (prev. Toncoin)",
+          "symbol": "GRAM",
+          "type": "coin",
+          "decimals": 9,
+          "status": "active",
+          "website": "https://ton.org",
+          "description": "The Open Network is a blockchain-based decentralized computer network. TON is designed to enable processing millions of transactions per second via infinite sharding paradigm. It allows building Web 3.0 empowered by decentralized storage and DNS, instant payments and decentralized services.",
+          "explorer": "https://tonscan.org/",
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/ton-blockchain"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/toncoin/"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/toncoin"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://ton.org/whitepaper.pdf"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/ton_blockchain"
+            },
+            {
+              "name": "telegram_news",
+              "url": "https://t.me/tonblockchain"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/the-open-network"
+            },
+            {
+              "name": "docs",
+              "url": "https://ton.org/docs"
+            },
+            {
+              "name": "source_code",
+              "url": "https://github.com/ton-blockchain/ton"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ton/info/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "ethereum",
+          "address": "0x582d872A1B094FC48F5DE31D3B73F2D9bE47def1",
+          "assetId": "c60_t0x582d872A1B094FC48F5DE31D3B73F2D9bE47def1",
+          "name": "Wrapped TON Coin",
+          "symbol": "TONCOIN",
+          "type": "ERC20",
+          "decimals": 9,
+          "status": "active",
+          "website": "https://ton.org/",
+          "description": "The Open Network is a blockchain-based decentralized computer network. TON is designed to enable processing millions of transactions per second via infinite sharding paradigm. It allows building Web 3.0 empowered by decentralized storage and DNS, instant payments and decentralized services.",
+          "explorer": "https://etherscan.io/token/0x582d872a1b094fc48f5de31d3b73f2d9be47def1",
+          "tags": [
+            "nft"
+          ],
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/newton-blockchain"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/toncoin/"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/tonblockchain"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x582d872A1B094FC48F5DE31D3B73F2D9bE47def1/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "smartchain",
+          "address": "0x76A797A59Ba2C17726896976B7B3747BfD1d220f",
+          "assetId": "c20000714_t0x76A797A59Ba2C17726896976B7B3747BfD1d220f",
+          "name": "Wrapped TON Coin",
+          "symbol": "TONCOIN",
+          "type": "BEP20",
+          "decimals": 9,
+          "status": "active",
+          "website": "https://ton.org/",
+          "description": "The Open Network is a blockchain-based decentralized computer network. TON is designed to enable processing millions of transactions per second via infinite sharding paradigm. It allows building Web 3.0 empowered by decentralized storage and DNS, instant payments and decentralized services.",
+          "explorer": "https://bscscan.com/token/0x76A797A59Ba2C17726896976B7B3747BfD1d220f",
+          "tags": [
+            "nft"
+          ],
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/newton-blockchain"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/toncoin/"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/tonblockchain"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x76A797A59Ba2C17726896976B7B3747BfD1d220f/logo.png",
+          "logoExists": true
+        }
+      ]
     },
     {
       "rank": 27,
@@ -4763,11 +4763,11 @@
       "symbol": "BCH",
       "name": "Bitcoin Cash",
       "marketCapRank": 27,
-      "marketCap": 3993481273,
-      "totalVolume": 74364941,
-      "currentPrice": 199.2,
-      "lastUpdated": "2026-06-21T03:26:51.448Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 3938148347,
+      "totalVolume": 138210731,
+      "currentPrice": 196.41,
+      "lastUpdated": "2026-06-25T08:41:38.375Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "bitcoincash",
@@ -4808,16 +4808,51 @@
     {
       "rank": 28,
       "source": "coingecko",
-      "coingeckoId": "memecore",
-      "symbol": "M",
-      "name": "MemeCore",
+      "coingeckoId": "litecoin",
+      "symbol": "LTC",
+      "name": "Litecoin",
       "marketCapRank": 28,
-      "marketCap": 3775113717,
-      "totalVolume": 8087638,
-      "currentPrice": 2.87,
-      "lastUpdated": "2026-06-21T03:26:46.137Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
+      "marketCap": 3224346787,
+      "totalVolume": 280966007,
+      "currentPrice": 41.7,
+      "lastUpdated": "2026-06-25T08:41:43.417Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "litecoin",
+          "address": "",
+          "assetId": "c2",
+          "name": "Litecoin",
+          "symbol": "LTC",
+          "type": "coin",
+          "decimals": 8,
+          "status": "active",
+          "website": "https://litecoin.org/",
+          "description": "Litecoin is a peer-to-peer Internet currency that enables instant, near-zero cost payments to anyone in the world.",
+          "explorer": "https://blockchair.com/litecoin",
+          "research": "https://research.binance.com/en/projects/litecoin",
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/litecoin-project/litecoin"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/LitecoinProject"
+            },
+            {
+              "name": "reddit",
+              "url": "https://reddit.com/r/litecoin"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://www.allcryptowhitepapers.com/litecoin-whitepaper/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/litecoin/info/logo.png",
+          "logoExists": true
+        }
+      ]
     },
     {
       "rank": 29,
@@ -4826,11 +4861,11 @@
       "symbol": "HBAR",
       "name": "Hedera",
       "marketCapRank": 29,
-      "marketCap": 3492725633,
-      "totalVolume": 48412779,
-      "currentPrice": 0.080353,
-      "lastUpdated": "2026-06-21T03:26:50.365Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 3213786194,
+      "totalVolume": 74147972,
+      "currentPrice": 0.073931,
+      "lastUpdated": "2026-06-25T08:41:45.944Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "hedera",
@@ -4873,182 +4908,29 @@
     {
       "rank": 30,
       "source": "coingecko",
-      "coingeckoId": "litecoin",
-      "symbol": "LTC",
-      "name": "Litecoin",
+      "coingeckoId": "hashnote-usyc",
+      "symbol": "USYC",
+      "name": "Circle USYC",
       "marketCapRank": 30,
-      "marketCap": 3442425327,
-      "totalVolume": 170246574,
-      "currentPrice": 44.53,
-      "lastUpdated": "2026-06-21T03:26:51.324Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "litecoin",
-          "address": "",
-          "assetId": "c2",
-          "name": "Litecoin",
-          "symbol": "LTC",
-          "type": "coin",
-          "decimals": 8,
-          "status": "active",
-          "website": "https://litecoin.org/",
-          "description": "Litecoin is a peer-to-peer Internet currency that enables instant, near-zero cost payments to anyone in the world.",
-          "explorer": "https://blockchair.com/litecoin",
-          "research": "https://research.binance.com/en/projects/litecoin",
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/litecoin-project/litecoin"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/LitecoinProject"
-            },
-            {
-              "name": "reddit",
-              "url": "https://reddit.com/r/litecoin"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://www.allcryptowhitepapers.com/litecoin-whitepaper/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/litecoin/info/logo.png",
-          "logoExists": true
-        }
-      ]
+      "marketCap": 3127901584,
+      "totalVolume": 225550,
+      "currentPrice": 1.13,
+      "lastUpdated": "2026-06-24T18:47:11.364Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
     },
     {
       "rank": 31,
       "source": "coingecko",
-      "coingeckoId": "hashnote-usyc",
-      "symbol": "USYC",
-      "name": "Circle USYC",
-      "marketCapRank": 31,
-      "marketCap": 3065825405,
-      "totalVolume": 562932,
-      "currentPrice": 1.13,
-      "lastUpdated": "2026-06-04T17:58:24.894Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 32,
-      "source": "coingecko",
-      "coingeckoId": "sui",
-      "symbol": "SUI",
-      "name": "Sui",
-      "marketCapRank": 32,
-      "marketCap": 2865711779,
-      "totalVolume": 270605808,
-      "currentPrice": 0.711188,
-      "lastUpdated": "2026-06-21T03:26:44.918Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "sui",
-          "address": "",
-          "assetId": "c784",
-          "name": "Sui",
-          "symbol": "SUI",
-          "type": "coin",
-          "decimals": 9,
-          "status": "active",
-          "website": "https://sui.io/",
-          "description": "Sui is a boundless platform to build rich and dynamic on-chain assets from gaming to finance.",
-          "explorer": "https://explorer.sui.io/",
-          "tags": [
-            "defi",
-            "staking-native"
-          ],
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/SuiNetwork"
-            },
-            {
-              "name": "github",
-              "url": "https://github.com/MystenLabs/sui"
-            },
-            {
-              "name": "discord",
-              "url": "https://discord.com/invite/suiglobal"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/sui/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/sui/info/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 33,
-      "source": "coingecko",
-      "coingeckoId": "near",
-      "symbol": "NEAR",
-      "name": "NEAR Protocol",
-      "marketCapRank": 33,
-      "marketCap": 2843789638,
-      "totalVolume": 239939395,
-      "currentPrice": 2.19,
-      "lastUpdated": "2026-06-21T03:26:43.278Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "near",
-          "address": "",
-          "assetId": "c397",
-          "name": "NEAR Protocol",
-          "symbol": "NEAR",
-          "type": "coin",
-          "decimals": 24,
-          "status": "active",
-          "website": "https://near.org",
-          "description": "NEAR is an open source platform that accelerates the development of decentralized applications.",
-          "explorer": "https://explorer.near.org/",
-          "research": "https://research.binance.com/en/projects/near-protocol",
-          "tags": [
-            "staking-native"
-          ],
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/nearprotocol/nearcore"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/nearprotocol"
-            },
-            {
-              "name": "reddit",
-              "url": "https://reddit.com/r/nearprotocol/"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://near.org/papers/the-official-near-white-paper"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/near/info/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 34,
-      "source": "coingecko",
       "coingeckoId": "global-dollar",
       "symbol": "USDG",
       "name": "Global Dollar",
-      "marketCapRank": 34,
-      "marketCap": 2809594669,
-      "totalVolume": 41384104,
-      "currentPrice": 0.999876,
-      "lastUpdated": "2026-06-21T03:26:45.939Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 31,
+      "marketCap": 2904203222,
+      "totalVolume": 64717706,
+      "currentPrice": 0.999701,
+      "lastUpdated": "2026-06-25T08:41:47.479Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -5095,17 +4977,225 @@
       ]
     },
     {
+      "rank": 32,
+      "source": "coingecko",
+      "coingeckoId": "sui",
+      "symbol": "SUI",
+      "name": "Sui",
+      "marketCapRank": 32,
+      "marketCap": 2807867900,
+      "totalVolume": 402866890,
+      "currentPrice": 0.696946,
+      "lastUpdated": "2026-06-25T08:41:44.388Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "sui",
+          "address": "",
+          "assetId": "c784",
+          "name": "Sui",
+          "symbol": "SUI",
+          "type": "coin",
+          "decimals": 9,
+          "status": "active",
+          "website": "https://sui.io/",
+          "description": "Sui is a boundless platform to build rich and dynamic on-chain assets from gaming to finance.",
+          "explorer": "https://explorer.sui.io/",
+          "tags": [
+            "defi",
+            "staking-native"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/SuiNetwork"
+            },
+            {
+              "name": "github",
+              "url": "https://github.com/MystenLabs/sui"
+            },
+            {
+              "name": "discord",
+              "url": "https://discord.com/invite/suiglobal"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/sui/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/sui/info/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 33,
+      "source": "coingecko",
+      "coingeckoId": "avalanche-2",
+      "symbol": "AVAX",
+      "name": "Avalanche",
+      "marketCapRank": 33,
+      "marketCap": 2799254618,
+      "totalVolume": 280637747,
+      "currentPrice": 6.48,
+      "lastUpdated": "2026-06-25T08:41:41.974Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "avalanchec",
+          "address": "",
+          "assetId": "c10009000",
+          "name": "Avalanche C-Chain",
+          "symbol": "AVAX",
+          "type": "coin",
+          "decimals": 18,
+          "status": "active",
+          "website": "http://avax.network",
+          "description": "Avalanche is an open-source platform for launching highly decentralized applications, new financial primitives, and new interoperable blockchains. This is the C-Chain, the default smart contract blockchain on Avalanche that enables the creation of any Ethereum-compatible smart contracts.",
+          "explorer": "https://explorer.avax.network",
+          "research": "https://research.binance.com/en/projects/avalanche",
+          "tags": [
+            "defi",
+            "dapp"
+          ],
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/ava-labs"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://www.avalabs.org/whitepapers"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/info/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "avalanchec",
+          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "assetId": "c10009000_t0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "name": "Wrapped AVAX",
+          "symbol": "WAVAX",
+          "type": "AVALANCHE",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://www.avax.network/",
+          "description": "Avalanche is the fastest smart contracts platform in the blockchain industry, as measured by time-to-finality, and has the most validators securing its activity of any proof-of-stake protocol.",
+          "explorer": "https://snowtrace.io/token/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+          "tags": [
+            "wrapped"
+          ],
+          "links": [
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/avalanche/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/avalanche-2/"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/avalancheavax"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 34,
+      "source": "coingecko",
+      "coingeckoId": "paypal-usd",
+      "symbol": "PYUSD",
+      "name": "PayPal USD",
+      "marketCapRank": 34,
+      "marketCap": 2750812011,
+      "totalVolume": 120844688,
+      "currentPrice": 0.999748,
+      "lastUpdated": "2026-06-25T08:41:44.910Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ethereum",
+          "address": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+          "assetId": "c60_t0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+          "name": "PayPal USD",
+          "symbol": "PYUSD",
+          "type": "ERC20",
+          "decimals": 6,
+          "status": "active",
+          "website": "https://www.paypal.com/us/digital-wallet/manage-money/crypto/pyusd",
+          "description": "PayPal USD is designed to contribute to the opportunity stablecoins offer for payments and is 100% backed by U.S. dollar deposits, short-term U.S Treasuries and similar cash equivalents. PayPal USD is redeemable 1:1 for U.S. dollars and is issued by Paxos Trust Company.",
+          "explorer": "https://etherscan.io/token/0x6c3ea9036406852006290770bedfcaba0e23a0e8",
+          "tags": [
+            "stablecoin"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/PayPal"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/paypal-usd/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/paypal-usd"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x6c3ea9036406852006290770BEdFcAbA0e23A0e8/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "solana",
+          "address": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
+          "assetId": "c501_t2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
+          "name": "PayPal USD",
+          "symbol": "PYUSD",
+          "type": "SPL",
+          "decimals": 6,
+          "status": "active",
+          "website": "https://www.paypal.com/us/digital-wallet/manage-money/crypto/pyusd",
+          "description": "PayPal USD is designed to contribute to the opportunity stablecoins offer for payments and is 100% backed by U.S. dollar deposits, short-term U.S Treasuries and similar cash equivalents.",
+          "explorer": "https://solscan.io/token/2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
+          "tags": [
+            "stablecoin"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/PayPal"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/paypal-usd/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/paypal-usd"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/solana/assets/2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
       "rank": 35,
       "source": "coingecko",
       "coingeckoId": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
       "marketCapRank": 35,
-      "marketCap": 2785538575,
-      "totalVolume": 44393718,
-      "currentPrice": 0.00000473,
-      "lastUpdated": "2026-06-21T03:26:43.482Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 2608976152,
+      "totalVolume": 79847437,
+      "currentPrice": 0.00000443,
+      "lastUpdated": "2026-06-25T08:41:42.006Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -5268,94 +5358,15 @@
     {
       "rank": 36,
       "source": "coingecko",
-      "coingeckoId": "paypal-usd",
-      "symbol": "PYUSD",
-      "name": "PayPal USD",
-      "marketCapRank": 36,
-      "marketCap": 2776123201,
-      "totalVolume": 35914708,
-      "currentPrice": 0.999994,
-      "lastUpdated": "2026-06-21T03:26:44.682Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ethereum",
-          "address": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-          "assetId": "c60_t0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-          "name": "PayPal USD",
-          "symbol": "PYUSD",
-          "type": "ERC20",
-          "decimals": 6,
-          "status": "active",
-          "website": "https://www.paypal.com/us/digital-wallet/manage-money/crypto/pyusd",
-          "description": "PayPal USD is designed to contribute to the opportunity stablecoins offer for payments and is 100% backed by U.S. dollar deposits, short-term U.S Treasuries and similar cash equivalents. PayPal USD is redeemable 1:1 for U.S. dollars and is issued by Paxos Trust Company.",
-          "explorer": "https://etherscan.io/token/0x6c3ea9036406852006290770bedfcaba0e23a0e8",
-          "tags": [
-            "stablecoin"
-          ],
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/PayPal"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/paypal-usd/"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/paypal-usd"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x6c3ea9036406852006290770BEdFcAbA0e23A0e8/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "solana",
-          "address": "2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
-          "assetId": "c501_t2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
-          "name": "PayPal USD",
-          "symbol": "PYUSD",
-          "type": "SPL",
-          "decimals": 6,
-          "status": "active",
-          "website": "https://www.paypal.com/us/digital-wallet/manage-money/crypto/pyusd",
-          "description": "PayPal USD is designed to contribute to the opportunity stablecoins offer for payments and is 100% backed by U.S. dollar deposits, short-term U.S Treasuries and similar cash equivalents.",
-          "explorer": "https://solscan.io/token/2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo",
-          "tags": [
-            "stablecoin"
-          ],
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/PayPal"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/paypal-usd/"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/paypal-usd"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/solana/assets/2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 37,
-      "source": "coingecko",
       "coingeckoId": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "marketCapRank": 37,
-      "marketCap": 2709864952,
-      "totalVolume": 7305071,
-      "currentPrice": 0.058845,
-      "lastUpdated": "2026-06-21T03:26:47.876Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 36,
+      "marketCap": 2603525741,
+      "totalVolume": 10255959,
+      "currentPrice": 0.056551,
+      "lastUpdated": "2026-06-25T08:41:38.160Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "cryptoorg",
@@ -5564,94 +5575,69 @@
       ]
     },
     {
-      "rank": 38,
+      "rank": 37,
       "source": "coingecko",
-      "coingeckoId": "avalanche-2",
-      "symbol": "AVAX",
-      "name": "Avalanche",
-      "marketCapRank": 38,
-      "marketCap": 2696380775,
-      "totalVolume": 365273516,
-      "currentPrice": 6.25,
-      "lastUpdated": "2026-06-21T03:26:49.051Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "coingeckoId": "near",
+      "symbol": "NEAR",
+      "name": "NEAR Protocol",
+      "marketCapRank": 37,
+      "marketCap": 2544809370,
+      "totalVolume": 263527138,
+      "currentPrice": 1.96,
+      "lastUpdated": "2026-06-25T08:41:41.549Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
-          "chain": "avalanchec",
+          "chain": "near",
           "address": "",
-          "assetId": "c10009000",
-          "name": "Avalanche C-Chain",
-          "symbol": "AVAX",
+          "assetId": "c397",
+          "name": "NEAR Protocol",
+          "symbol": "NEAR",
           "type": "coin",
-          "decimals": 18,
+          "decimals": 24,
           "status": "active",
-          "website": "http://avax.network",
-          "description": "Avalanche is an open-source platform for launching highly decentralized applications, new financial primitives, and new interoperable blockchains. This is the C-Chain, the default smart contract blockchain on Avalanche that enables the creation of any Ethereum-compatible smart contracts.",
-          "explorer": "https://explorer.avax.network",
-          "research": "https://research.binance.com/en/projects/avalanche",
+          "website": "https://near.org",
+          "description": "NEAR is an open source platform that accelerates the development of decentralized applications.",
+          "explorer": "https://explorer.near.org/",
+          "research": "https://research.binance.com/en/projects/near-protocol",
           "tags": [
-            "defi",
-            "dapp"
+            "staking-native"
           ],
           "links": [
             {
               "name": "github",
-              "url": "https://github.com/ava-labs"
+              "url": "https://github.com/nearprotocol/nearcore"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/nearprotocol"
+            },
+            {
+              "name": "reddit",
+              "url": "https://reddit.com/r/nearprotocol/"
             },
             {
               "name": "whitepaper",
-              "url": "https://www.avalabs.org/whitepapers"
+              "url": "https://near.org/papers/the-official-near-white-paper"
             }
           ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/info/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "avalanchec",
-          "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
-          "assetId": "c10009000_t0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
-          "name": "Wrapped AVAX",
-          "symbol": "WAVAX",
-          "type": "AVALANCHE",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://www.avax.network/",
-          "description": "Avalanche is the fastest smart contracts platform in the blockchain industry, as measured by time-to-finality, and has the most validators securing its activity of any proof-of-stake protocol.",
-          "explorer": "https://snowtrace.io/token/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
-          "tags": [
-            "wrapped"
-          ],
-          "links": [
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/avalanche/"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/avalanche-2/"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/avalancheavax"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/avalanchec/assets/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7/logo.png",
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/near/info/logo.png",
           "logoExists": true
         }
       ]
     },
     {
-      "rank": 39,
+      "rank": 38,
       "source": "coingecko",
       "coingeckoId": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "marketCapRank": 39,
-      "marketCap": 2539831489,
-      "totalVolume": 42370672,
-      "currentPrice": 4144.55,
-      "lastUpdated": "2026-06-21T03:26:43.348Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 38,
+      "marketCap": 2446418198,
+      "totalVolume": 346144162,
+      "currentPrice": 3992.51,
+      "lastUpdated": "2026-06-25T08:41:46.683Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -5710,44 +5696,30 @@
       ]
     },
     {
-      "rank": 40,
+      "rank": 39,
       "source": "coingecko",
       "coingeckoId": "blackrock-usd-institutional-digital-liquidity-fund",
       "symbol": "BUIDL",
       "name": "BlackRock USD Institutional Digital Liquidity Fund",
-      "marketCapRank": 40,
-      "marketCap": 2384211875,
+      "marketCapRank": 39,
+      "marketCap": 2417392676,
       "currentPrice": 1,
-      "lastUpdated": "2026-06-21T03:25:07.403Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "lastUpdated": "2026-06-25T08:40:13.106Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": []
     },
     {
-      "rank": 41,
-      "source": "coingecko",
-      "coingeckoId": "bittensor",
-      "symbol": "TAO",
-      "name": "Bittensor",
-      "marketCapRank": 41,
-      "marketCap": 2234842365,
-      "totalVolume": 304979852,
-      "currentPrice": 233.3,
-      "lastUpdated": "2026-06-21T03:26:44.299Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 42,
+      "rank": 40,
       "source": "coingecko",
       "coingeckoId": "ondo-us-dollar-yield",
       "symbol": "USDY",
       "name": "Ondo US Dollar Yield",
-      "marketCapRank": 42,
-      "marketCap": 2156594302,
-      "totalVolume": 1958642,
-      "currentPrice": 1.14,
-      "lastUpdated": "2026-06-21T03:26:52.624Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 40,
+      "marketCap": 2145906648,
+      "totalVolume": 4067823,
+      "currentPrice": 1.13,
+      "lastUpdated": "2026-06-25T08:41:45.023Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -5848,121 +5820,31 @@
       ]
     },
     {
-      "rank": 43,
+      "rank": 41,
       "source": "coingecko",
-      "coingeckoId": "worldcoin-wld",
-      "symbol": "WLD",
-      "name": "Worldcoin",
-      "marketCapRank": 43,
-      "marketCap": 2101320325,
-      "totalVolume": 300797301,
-      "currentPrice": 0.609392,
-      "lastUpdated": "2026-06-21T03:26:44.626Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ethereum",
-          "address": "0x163f8C2467924be0ae7B5347228CABF260318753",
-          "assetId": "c60_t0x163f8C2467924be0ae7B5347228CABF260318753",
-          "name": "Worldcoin",
-          "symbol": "WLD",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://worldcoin.org/",
-          "description": "The Worldcoin system revolves around World ID, a privacy-preserving global identity network. World ID enables users to verify their humanness online (`Proof of Personhood`) while maintaining their privacy through zero-knowledge proofs.",
-          "explorer": "https://etherscan.io/token/0x163f8c2467924be0ae7b5347228cabf260318753",
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/worldcoin"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/worldcoin"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/worldcoin-org/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x163f8C2467924be0ae7B5347228CABF260318753/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "optimism",
-          "address": "0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
-          "assetId": "c10000070_t0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
-          "name": "Worldcoin",
-          "symbol": "WLD",
-          "type": "OPTIMISM",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://worldcoin.org/",
-          "description": "The Worldcoin system revolves around World ID, a privacy-preserving global identity network. World ID enables users to verify their humanness online (`Proof of Personhood`) while maintaining their privacy through zero-knowledge proofs.",
-          "explorer": "https://optimistic.etherscan.io/token/0xdc6ff44d5d932cbd77b52e5612ba0529dc6226f1",
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/worldcoin"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/worldcoin"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/worldcoin-org/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/optimism/assets/0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1/logo.png",
-          "logoExists": true
-        }
-      ]
+      "coingeckoId": "bittensor",
+      "symbol": "TAO",
+      "name": "Bittensor",
+      "marketCapRank": 41,
+      "marketCap": 2124358404,
+      "totalVolume": 173125396,
+      "currentPrice": 221.35,
+      "lastUpdated": "2026-06-25T08:41:44.266Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
     },
     {
-      "rank": 44,
-      "source": "coingecko",
-      "coingeckoId": "pax-gold",
-      "symbol": "PAXG",
-      "name": "PAX Gold",
-      "marketCapRank": 44,
-      "marketCap": 1887303687,
-      "totalVolume": 42260762,
-      "currentPrice": 4153.41,
-      "lastUpdated": "2026-06-21T03:26:48.009Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ethereum",
-          "address": "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
-          "assetId": "c60_t0x45804880De22913dAFE09f4980848ECE6EcbAf78",
-          "name": "PAX Gold",
-          "symbol": "PAXG",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://paxos.com/paxgold",
-          "description": "PAX Gold (PAXG) is a digital asset where one token is backed by one fine troy ounce (t oz) of a 400 oz London Good Delivery gold bar, stored in Brink’s gold vaults.",
-          "explorer": "https://etherscan.io/token/0x45804880De22913dAFE09f4980848ECE6EcbAf78",
-          "research": "https://research.binance.com/en/projects/pax-gold",
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x45804880De22913dAFE09f4980848ECE6EcbAf78/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 45,
+      "rank": 42,
       "source": "coingecko",
       "coingeckoId": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "marketCapRank": 45,
-      "marketCap": 1863097798,
-      "totalVolume": 16443025,
-      "currentPrice": 0.058634,
-      "lastUpdated": "2026-06-21T03:26:46.096Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 42,
+      "marketCap": 1948921080,
+      "totalVolume": 42769289,
+      "currentPrice": 0.061337,
+      "lastUpdated": "2026-06-25T08:41:47.448Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -5992,17 +5874,17 @@
       ]
     },
     {
-      "rank": 46,
+      "rank": 43,
       "source": "coingecko",
       "coingeckoId": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "marketCapRank": 46,
-      "marketCap": 1855996678,
-      "totalVolume": 179296955,
-      "currentPrice": 2.99,
-      "lastUpdated": "2026-06-21T03:26:43.656Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 43,
+      "marketCap": 1824731893,
+      "totalVolume": 220340724,
+      "currentPrice": 2.94,
+      "lastUpdated": "2026-06-25T08:41:43.905Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -6308,17 +6190,121 @@
       ]
     },
     {
-      "rank": 47,
+      "rank": 44,
+      "source": "coingecko",
+      "coingeckoId": "pax-gold",
+      "symbol": "PAXG",
+      "name": "PAX Gold",
+      "marketCapRank": 44,
+      "marketCap": 1806168140,
+      "totalVolume": 226597804,
+      "currentPrice": 3994.72,
+      "lastUpdated": "2026-06-25T08:41:43.705Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ethereum",
+          "address": "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
+          "assetId": "c60_t0x45804880De22913dAFE09f4980848ECE6EcbAf78",
+          "name": "PAX Gold",
+          "symbol": "PAXG",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://paxos.com/paxgold",
+          "description": "PAX Gold (PAXG) is a digital asset where one token is backed by one fine troy ounce (t oz) of a 400 oz London Good Delivery gold bar, stored in Brink’s gold vaults.",
+          "explorer": "https://etherscan.io/token/0x45804880De22913dAFE09f4980848ECE6EcbAf78",
+          "research": "https://research.binance.com/en/projects/pax-gold",
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x45804880De22913dAFE09f4980848ECE6EcbAf78/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 45,
+      "source": "coingecko",
+      "coingeckoId": "worldcoin-wld",
+      "symbol": "WLD",
+      "name": "Worldcoin",
+      "marketCapRank": 45,
+      "marketCap": 1800933177,
+      "totalVolume": 313433311,
+      "currentPrice": 0.519547,
+      "lastUpdated": "2026-06-25T08:41:45.084Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ethereum",
+          "address": "0x163f8C2467924be0ae7B5347228CABF260318753",
+          "assetId": "c60_t0x163f8C2467924be0ae7B5347228CABF260318753",
+          "name": "Worldcoin",
+          "symbol": "WLD",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://worldcoin.org/",
+          "description": "The Worldcoin system revolves around World ID, a privacy-preserving global identity network. World ID enables users to verify their humanness online (`Proof of Personhood`) while maintaining their privacy through zero-knowledge proofs.",
+          "explorer": "https://etherscan.io/token/0x163f8c2467924be0ae7b5347228cabf260318753",
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/worldcoin"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/worldcoin"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/worldcoin-org/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x163f8C2467924be0ae7B5347228CABF260318753/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "optimism",
+          "address": "0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
+          "assetId": "c10000070_t0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
+          "name": "Worldcoin",
+          "symbol": "WLD",
+          "type": "OPTIMISM",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://worldcoin.org/",
+          "description": "The Worldcoin system revolves around World ID, a privacy-preserving global identity network. World ID enables users to verify their humanness online (`Proof of Personhood`) while maintaining their privacy through zero-knowledge proofs.",
+          "explorer": "https://optimistic.etherscan.io/token/0xdc6ff44d5d932cbd77b52e5612ba0529dc6226f1",
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/worldcoin"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/worldcoin"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/worldcoin-org/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/optimism/assets/0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 46,
       "source": "coingecko",
       "coingeckoId": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "marketCapRank": 47,
-      "marketCap": 1767191236,
-      "totalVolume": 16599874,
-      "currentPrice": 0.535555,
-      "lastUpdated": "2026-06-21T03:26:44.733Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 46,
+      "marketCap": 1677136244,
+      "totalVolume": 28662207,
+      "currentPrice": 0.50787,
+      "lastUpdated": "2026-06-25T08:41:44.699Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -6348,17 +6334,17 @@
       ]
     },
     {
-      "rank": 48,
+      "rank": 47,
       "source": "coingecko",
       "coingeckoId": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "marketCapRank": 48,
-      "marketCap": 1747108076,
-      "totalVolume": 89802216,
-      "currentPrice": 0.652917,
-      "lastUpdated": "2026-06-21T03:26:47.592Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 47,
+      "marketCap": 1668367312,
+      "totalVolume": 92312913,
+      "currentPrice": 0.62315,
+      "lastUpdated": "2026-06-25T08:41:50.407Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "smartchain",
@@ -6391,127 +6377,17 @@
       ]
     },
     {
-      "rank": 49,
-      "source": "coingecko",
-      "coingeckoId": "ondo-finance",
-      "symbol": "ONDO",
-      "name": "Ondo",
-      "marketCapRank": 49,
-      "marketCap": 1655747919,
-      "totalVolume": 88931124,
-      "currentPrice": 0.3398,
-      "lastUpdated": "2026-06-21T03:26:44.353Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ethereum",
-          "address": "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
-          "assetId": "c60_t0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
-          "name": "Ondo",
-          "symbol": "ONDO",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://ondo.finance/",
-          "description": "Ondo Finance is a decentralized investment banking protocol consisting of on-chain financial products that connect investors with capital demand broadening access, improving transparency, and reducing cost versus the status quo. The ONDO token will govern the Ondo Finance protocol.",
-          "explorer": "https://etherscan.io/token/0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/ondofinance"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/ondofinance"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/ondo-finance/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 50,
-      "source": "coingecko",
-      "coingeckoId": "polkadot",
-      "symbol": "DOT",
-      "name": "Polkadot",
-      "marketCapRank": 50,
-      "marketCap": 1639052545,
-      "totalVolume": 80388618,
-      "currentPrice": 0.970206,
-      "lastUpdated": "2026-06-21T03:26:49.889Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "polkadot",
-          "address": "",
-          "assetId": "c354",
-          "name": "Polkadot",
-          "symbol": "DOT",
-          "type": "coin",
-          "decimals": 10,
-          "status": "active",
-          "website": "https://polkadot.com",
-          "description": "Polkadot is a blockchain project that aims to connect blockchains, to enable the transfer of value and logic across chains. DOT is the native coin of the network.",
-          "explorer": "https://assethub-polkadot.subscan.io/",
-          "research": "https://research.binance.com/en/projects/polkadot",
-          "tags": [
-            "staking-native"
-          ],
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/w3f"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/polkadotnetwork"
-            },
-            {
-              "name": "reddit",
-              "url": "https://reddit.com/r/dot"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://polkadot.network/PolkaDotPaper.pdf"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/polkadot/info/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 51,
-      "source": "coingecko",
-      "coingeckoId": "ripple-usd",
-      "symbol": "RLUSD",
-      "name": "Ripple USD",
-      "marketCapRank": 51,
-      "marketCap": 1628536873,
-      "totalVolume": 25173085,
-      "currentPrice": 1,
-      "lastUpdated": "2026-06-21T03:26:45.596Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 52,
+      "rank": 48,
       "source": "coingecko",
       "coingeckoId": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "marketCapRank": 52,
-      "marketCap": 1592986306,
-      "totalVolume": 15082689,
-      "currentPrice": 75.85,
-      "lastUpdated": "2026-06-21T03:26:58.396Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 48,
+      "marketCap": 1605525177,
+      "totalVolume": 21856639,
+      "currentPrice": 76.45,
+      "lastUpdated": "2026-06-25T08:41:46.861Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "okc",
@@ -6598,17 +6474,31 @@
       ]
     },
     {
-      "rank": 53,
+      "rank": 49,
+      "source": "coingecko",
+      "coingeckoId": "ripple-usd",
+      "symbol": "RLUSD",
+      "name": "Ripple USD",
+      "marketCapRank": 49,
+      "marketCap": 1597425492,
+      "totalVolume": 120468848,
+      "currentPrice": 1,
+      "lastUpdated": "2026-06-25T08:41:46.547Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 50,
       "source": "coingecko",
       "coingeckoId": "htx-dao",
       "symbol": "HTX",
       "name": "HTX DAO",
-      "marketCapRank": 53,
-      "marketCap": 1561417347,
-      "totalVolume": 13408541,
-      "currentPrice": 0.00000172,
-      "lastUpdated": "2026-06-21T03:26:45.162Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 50,
+      "marketCap": 1551212680,
+      "totalVolume": 6471835,
+      "currentPrice": 0.00000171,
+      "lastUpdated": "2026-06-25T08:41:45.532Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "tron",
@@ -6638,17 +6528,113 @@
       ]
     },
     {
-      "rank": 54,
+      "rank": 51,
+      "source": "coingecko",
+      "coingeckoId": "ondo-finance",
+      "symbol": "ONDO",
+      "name": "Ondo",
+      "marketCapRank": 51,
+      "marketCap": 1542532055,
+      "totalVolume": 93960623,
+      "currentPrice": 0.316817,
+      "lastUpdated": "2026-06-25T08:41:43.992Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ethereum",
+          "address": "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
+          "assetId": "c60_t0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
+          "name": "Ondo",
+          "symbol": "ONDO",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ondo.finance/",
+          "description": "Ondo Finance is a decentralized investment banking protocol consisting of on-chain financial products that connect investors with capital demand broadening access, improving transparency, and reducing cost versus the status quo. The ONDO token will govern the Ondo Finance protocol.",
+          "explorer": "https://etherscan.io/token/0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ondofinance"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/ondofinance"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ondo-finance/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 52,
+      "source": "coingecko",
+      "coingeckoId": "polkadot",
+      "symbol": "DOT",
+      "name": "Polkadot",
+      "marketCapRank": 52,
+      "marketCap": 1501502931,
+      "totalVolume": 97232903,
+      "currentPrice": 0.888277,
+      "lastUpdated": "2026-06-25T08:41:41.939Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "polkadot",
+          "address": "",
+          "assetId": "c354",
+          "name": "Polkadot",
+          "symbol": "DOT",
+          "type": "coin",
+          "decimals": 10,
+          "status": "active",
+          "website": "https://polkadot.com",
+          "description": "Polkadot is a blockchain project that aims to connect blockchains, to enable the transfer of value and logic across chains. DOT is the native coin of the network.",
+          "explorer": "https://assethub-polkadot.subscan.io/",
+          "research": "https://research.binance.com/en/projects/polkadot",
+          "tags": [
+            "staking-native"
+          ],
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/w3f"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/polkadotnetwork"
+            },
+            {
+              "name": "reddit",
+              "url": "https://reddit.com/r/dot"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://polkadot.network/PolkaDotPaper.pdf"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/polkadot/info/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 53,
       "source": "coingecko",
       "coingeckoId": "falcon-finance",
       "symbol": "USDF",
       "name": "Falcon USD",
-      "marketCapRank": 54,
-      "marketCap": 1460345051,
-      "totalVolume": 545993,
-      "currentPrice": 0.994884,
-      "lastUpdated": "2026-06-21T03:26:51.060Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 53,
+      "marketCap": 1459546216,
+      "totalVolume": 2107045,
+      "currentPrice": 0.994042,
+      "lastUpdated": "2026-06-25T08:41:48.093Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -6674,31 +6660,17 @@
       ]
     },
     {
-      "rank": 55,
-      "source": "coingecko",
-      "coingeckoId": "pi-network",
-      "symbol": "PI",
-      "name": "Pi Network",
-      "marketCapRank": 55,
-      "marketCap": 1459477515,
-      "totalVolume": 8414036,
-      "currentPrice": 0.135226,
-      "lastUpdated": "2026-06-21T03:26:46.254Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 56,
+      "rank": 54,
       "source": "coingecko",
       "coingeckoId": "usdd",
       "symbol": "USDD",
       "name": "USDD",
-      "marketCapRank": 56,
-      "marketCap": 1365499074,
-      "totalVolume": 20123109,
-      "currentPrice": 0.999027,
-      "lastUpdated": "2026-06-21T03:26:47.284Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 54,
+      "marketCap": 1377375649,
+      "totalVolume": 2258310,
+      "currentPrice": 0.995032,
+      "lastUpdated": "2026-06-25T08:41:45.880Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -6791,17 +6763,45 @@
       ]
     },
     {
+      "rank": 55,
+      "source": "coingecko",
+      "coingeckoId": "pi-network",
+      "symbol": "PI",
+      "name": "Pi Network",
+      "marketCapRank": 55,
+      "marketCap": 1365429173,
+      "totalVolume": 11009994,
+      "currentPrice": 0.126537,
+      "lastUpdated": "2026-06-25T08:41:48.128Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 56,
+      "source": "coingecko",
+      "coingeckoId": "bfusd",
+      "symbol": "BFUSD",
+      "name": "BFUSD",
+      "marketCapRank": 56,
+      "marketCap": 1317675273,
+      "totalVolume": 3269928,
+      "currentPrice": 0.998239,
+      "lastUpdated": "2026-06-25T08:41:49.721Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
       "rank": 57,
       "source": "coingecko",
       "coingeckoId": "sky",
       "symbol": "SKY",
       "name": "Sky",
       "marketCapRank": 57,
-      "marketCap": 1355322630,
-      "totalVolume": 9341969,
-      "currentPrice": 0.058207,
-      "lastUpdated": "2026-06-21T03:26:57.113Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 1260785808,
+      "totalVolume": 9637795,
+      "currentPrice": 0.054108,
+      "lastUpdated": "2026-06-25T08:41:47.067Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -6837,29 +6837,15 @@
     {
       "rank": 58,
       "source": "coingecko",
-      "coingeckoId": "bfusd",
-      "symbol": "BFUSD",
-      "name": "BFUSD",
-      "marketCapRank": 58,
-      "marketCap": 1318687939,
-      "totalVolume": 1023096,
-      "currentPrice": 0.999006,
-      "lastUpdated": "2026-06-21T03:26:47.007Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 59,
-      "source": "coingecko",
       "coingeckoId": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "marketCapRank": 59,
-      "marketCap": 1260752858,
-      "totalVolume": 35817731,
-      "currentPrice": 2.28,
-      "lastUpdated": "2026-06-21T03:26:50.280Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 58,
+      "marketCap": 1255224622,
+      "totalVolume": 66196664,
+      "currentPrice": 2.26,
+      "lastUpdated": "2026-06-25T08:41:46.067Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "internet_computer",
@@ -6908,231 +6894,17 @@
       ]
     },
     {
-      "rank": 60,
-      "source": "coingecko",
-      "coingeckoId": "bitget-token",
-      "symbol": "BGB",
-      "name": "Bitget Token",
-      "marketCapRank": 60,
-      "marketCap": 1240483248,
-      "totalVolume": 10697344,
-      "currentPrice": 1.77,
-      "lastUpdated": "2026-06-21T03:26:43.343Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 61,
-      "source": "coingecko",
-      "coingeckoId": "pepe",
-      "symbol": "PEPE",
-      "name": "Pepe",
-      "marketCapRank": 61,
-      "marketCap": 1195006366,
-      "totalVolume": 88567426,
-      "currentPrice": 0.00000284,
-      "lastUpdated": "2026-06-21T03:26:44.515Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ethereum",
-          "address": "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
-          "assetId": "c60_t0x6982508145454Ce325dDbE47a25d4ec3d2311933",
-          "name": "Pepe",
-          "symbol": "PEPE",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://www.pepe.vip/",
-          "description": "Pepe is a community based memecoin with one mission: to make memecoins great again. Made to honor the iconic meme we all know and love, Pepe is here to take reign as the most memeable memecoin in existence, fueled purely by memetic power. Pepe is for the people.",
-          "explorer": "https://etherscan.io/token/0x6982508145454ce325ddbe47a25d4ec3d2311933",
-          "tags": [
-            "memes"
-          ],
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/pepecoineth"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/pepecoineth"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/pepe/"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/pepe"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x6982508145454Ce325dDbE47a25d4ec3d2311933/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "sui",
-          "address": "0xebbf537bc3686be32fe22b498b42715641bbb209267be72236a352e0444cc5df::sui_pepe::SUI_PEPE",
-          "assetId": "c784_t0xebbf537bc3686be32fe22b498b42715641bbb209267be72236a352e0444cc5df::sui_pepe::SUI_PEPE",
-          "name": "SUI PEPE",
-          "symbol": "SPEPE",
-          "type": "SUI",
-          "decimals": 6,
-          "status": "active",
-          "website": "https://www.pepe.vip/",
-          "description": "Pepe is a community based memecoin with one mission: to make memecoins great again. Made to honor the iconic meme we all know and love, Pepe is here to take reign as the most memeable memecoin in existence, fueled purely by memetic power. Pepe is for the people.",
-          "explorer": "https://explorer.sui.io/address/0xebbf537bc3686be32fe22b498b42715641bbb209267be72236a352e0444cc5df::sui_pepe::SUI_PEPE",
-          "tags": [
-            "memes"
-          ],
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/pepecoineth"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/pepecoineth"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/pepe/"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/pepe"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/sui/assets/0xebbf537bc3686be32fe22b498b42715641bbb209267be72236a352e0444cc5df::sui_pepe::SUI_PEPE/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 62,
-      "source": "coingecko",
-      "coingeckoId": "morpho",
-      "symbol": "MORPHO",
-      "name": "Morpho",
-      "marketCapRank": 62,
-      "marketCap": 1172310229,
-      "totalVolume": 8522305,
-      "currentPrice": 1.81,
-      "lastUpdated": "2026-06-21T03:26:44.507Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "base",
-          "address": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
-          "assetId": "c8453_t0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
-          "name": "Morpho Token",
-          "symbol": "MORPHO",
-          "type": "BASE",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://morpho.org/",
-          "description": "Morpho is an open, efficient, and resilient platform that allows anyone to earn yield and borrow assets. Lenders can earn on Morpho using Morpho Vaults, noncustodial simple to use lending vaults that optimize yields for depositors. Borrowers can borrow any assets directly from Morpho Markets.",
-          "explorer": "https://basescan.org/token/0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
-          "tags": [
-            "defi"
-          ],
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/morpholabs?s=11\u0026t=ZGzrL8B9N7GpbA3YLFvU9A"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/morpho/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "ethereum",
-          "address": "0x58D97B57BB95320F9a05dC918Aef65434969c2B2",
-          "assetId": "c60_t0x58D97B57BB95320F9a05dC918Aef65434969c2B2",
-          "name": "Morpho",
-          "symbol": "MORPHO",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://morpho.org/",
-          "description": "Morpho is an open, efficient, and resilient platform that allows anyone to earn yield and borrow assets. Lenders can earn on Morpho using Morpho Vaults, noncustodial simple to use lending vaults that optimize yields for depositors. Borrowers can borrow any assets directly from Morpho Markets.",
-          "explorer": "https://etherscan.io/token/0x58D97B57BB95320F9a05dC918Aef65434969c2B2",
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/MorphoLabs"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x58D97B57BB95320F9a05dC918Aef65434969c2B2/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 63,
-      "source": "coingecko",
-      "coingeckoId": "ethereum-classic",
-      "symbol": "ETC",
-      "name": "Ethereum Classic",
-      "marketCapRank": 63,
-      "marketCap": 1161555991,
-      "totalVolume": 53157834,
-      "currentPrice": 7.42,
-      "lastUpdated": "2026-06-21T03:26:45.998Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "classic",
-          "address": "",
-          "assetId": "c61",
-          "name": "Ethereum Classic",
-          "symbol": "ETC",
-          "type": "coin",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://ethereumclassic.org/",
-          "description": "Ethereum Classic is an open-source, public, blockchain-based distributed computing platform featuring smart contract functionality.It is a continuation of the original Ethereum blockchain.",
-          "explorer": "https://blockscout.com/etc/mainnet/",
-          "research": "https://research.binance.com/en/projects/ethereum-classic",
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/ethereumclassic/"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/eth_classic"
-            },
-            {
-              "name": "reddit",
-              "url": "https://reddit.com/r/EthereumClassic"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://whitepaperdatabase.com/ethereum-classic-etc-whitepaper/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/classic/info/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 64,
+      "rank": 59,
       "source": "coingecko",
       "coingeckoId": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "marketCapRank": 64,
-      "marketCap": 1153406326,
-      "totalVolume": 123142222,
-      "currentPrice": 76,
-      "lastUpdated": "2026-06-21T03:26:43.534Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 59,
+      "marketCap": 1239405031,
+      "totalVolume": 493422702,
+      "currentPrice": 81.67,
+      "lastUpdated": "2026-06-25T08:41:43.387Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -7768,957 +7540,144 @@
       ]
     },
     {
-      "rank": 65,
+      "rank": 60,
       "source": "coingecko",
-      "coingeckoId": "quant-network",
-      "symbol": "QNT",
-      "name": "Quant",
-      "marketCapRank": 65,
-      "marketCap": 1027698611,
-      "totalVolume": 7672657,
-      "currentPrice": 70.74,
-      "lastUpdated": "2026-06-21T03:26:45.183Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ethereum",
-          "address": "0x4a220E6096B25EADb88358cb44068A3248254675",
-          "assetId": "c60_t0x4a220E6096B25EADb88358cb44068A3248254675",
-          "name": "Quant",
-          "symbol": "QNT",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://quant.network",
-          "description": "The Quant Network team developed Quant as a cryptocurrency token based on the Ethereum blockchain. The solutions offered by Quant include Overledger OS and GoVerify.",
-          "explorer": "https://etherscan.io/token/0x4a220E6096B25EADb88358cb44068A3248254675",
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/quantnetwork"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/quant_network"
-            },
-            {
-              "name": "reddit",
-              "url": "https://reddit.com/r/QuantNetwork/"
-            },
-            {
-              "name": "blog",
-              "url": "https://medium.com/@quant_network"
-            },
-            {
-              "name": "facebook",
-              "url": "https://facebook.com/quantnetwork"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/quantnetworkannouncements"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://files.quant.network/files.quant.network/Quant_Overledger_Whitepaper_v0.1.pdf"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/quant-network/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x4a220E6096B25EADb88358cb44068A3248254675/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "cryptoorg",
-          "address": "0x7d54F4E05f273a9317f723997612Ed64eF53C900",
-          "assetId": "c394_t0x7d54F4E05f273a9317f723997612Ed64eF53C900",
-          "name": "Quant",
-          "symbol": "QNT",
-          "type": "CRC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://quant.network",
-          "description": "The Quant Network team developed Quant as a cryptocurrency token based on the Ethereum blockchain. The solutions offered by Quant include Overledger OS and GoVerify.",
-          "explorer": "https://crypto.org/explorer/account/0x7d54F4E05f273a9317f723997612Ed64eF53C900",
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/quantnetwork"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/quant_network"
-            },
-            {
-              "name": "reddit",
-              "url": "https://reddit.com/r/QuantNetwork/"
-            },
-            {
-              "name": "blog",
-              "url": "https://medium.com/@quant_network"
-            },
-            {
-              "name": "facebook",
-              "url": "https://facebook.com/quantnetwork"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/quantnetworkannouncements"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://files.quant.network/files.quant.network/Quant_Overledger_Whitepaper_v0.1.pdf"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/quant-network/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/cryptoorg/assets/0x7d54F4E05f273a9317f723997612Ed64eF53C900/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 66,
-      "source": "coingecko",
-      "coingeckoId": "united-stables",
-      "symbol": "U",
-      "name": "United Stables",
-      "marketCapRank": 66,
-      "marketCap": 1011160685,
-      "totalVolume": 3537920,
-      "currentPrice": 0.999898,
-      "lastUpdated": "2026-06-21T03:26:47.814Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "smartchain",
-          "address": "0xcE24439F2D9C6a2289F741120FE202248B666666",
-          "assetId": "c20000714_t0xcE24439F2D9C6a2289F741120FE202248B666666",
-          "name": "United Stables",
-          "symbol": "U",
-          "type": "BEP20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://u.tech/",
-          "description": "United Stables develops transparent, secure, and programmable stablecoin infrastructure for global markets. $U is a fully backed, operational-grade stablecoin designed for institutional trading, DeFi liquidity, treasury operations, and cross-border settlement. It’s the first stablecoin to aggregate liquidity, fully backed 1:1 by cash and audited stablecoins.",
-          "explorer": "https://bscscan.com/token/0xcE24439F2D9C6a2289F741120FE202248B666666",
-          "tags": [
-            "stablecoin"
-          ],
-          "links": [
-            {
-              "name": "telegram_news",
-              "url": "https://t.me/Ustables"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/UTechStables"
-            },
-            {
-              "name": "medium",
-              "url": "https://medium.com/@Ustables"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xcE24439F2D9C6a2289F741120FE202248B666666/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 67,
-      "source": "coingecko",
-      "coingeckoId": "superstate-short-duration-us-government-securities-fund-ustb",
-      "symbol": "USTB",
-      "name": "Invesco Short Duration US Government Securities Fund",
-      "marketCapRank": 67,
-      "marketCap": 999608220,
-      "currentPrice": 11.12,
-      "lastUpdated": "2026-06-21T03:25:02.807Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "coingeckoId": "bitget-token",
+      "symbol": "BGB",
+      "name": "Bitget Token",
+      "marketCapRank": 60,
+      "marketCap": 1171420341,
+      "totalVolume": 13504597,
+      "currentPrice": 1.67,
+      "lastUpdated": "2026-06-25T08:41:41.950Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": []
     },
     {
-      "rank": 68,
+      "rank": 61,
       "source": "coingecko",
-      "coingeckoId": "blockchain-capital",
-      "symbol": "BCAP",
-      "name": "Blockchain Capital",
-      "marketCapRank": 68,
-      "marketCap": 975633725,
-      "currentPrice": 107.07,
-      "lastUpdated": "2026-06-21T03:25:08.027Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 69,
-      "source": "coingecko",
-      "coingeckoId": "kucoin-shares",
-      "symbol": "KCS",
-      "name": "KuCoin",
-      "marketCapRank": 69,
-      "marketCap": 974767204,
-      "totalVolume": 1953523,
-      "currentPrice": 7.24,
-      "lastUpdated": "2026-06-21T03:26:54.589Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "coingeckoId": "morpho",
+      "symbol": "MORPHO",
+      "name": "Morpho",
+      "marketCapRank": 61,
+      "marketCap": 1131328125,
+      "totalVolume": 15704819,
+      "currentPrice": 1.75,
+      "lastUpdated": "2026-06-25T08:41:44.786Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
-          "chain": "ethereum",
-          "address": "0xf34960d9d60be18cC1D5Afc1A6F012A723a28811",
-          "assetId": "c60_t0xf34960d9d60be18cC1D5Afc1A6F012A723a28811",
-          "name": "KuCoin Token",
-          "symbol": "KCS",
-          "type": "ERC20",
-          "decimals": 6,
-          "status": "active",
-          "website": "https://kucoin.com",
-          "description": "KCS performs as the key to the entire KuCoin ecosystem, and it will also be the native asset on KuCoin’s decentralized financial services as well as the governance token of KuCoin Community.",
-          "explorer": "https://etherscan.io/token/0xf34960d9d60be18cC1D5Afc1A6F012A723a28811",
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/Kucoin"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/KuCoinCom"
-            },
-            {
-              "name": "facebook",
-              "url": "https://facebook.com/KuCoinOfficial/"
-            },
-            {
-              "name": "blog",
-              "url": "https://medium.com/kucoinexchange"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/Kucoin_Exchange"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/kucoin-shares/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xf34960d9d60be18cC1D5Afc1A6F012A723a28811/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 70,
-      "source": "coingecko",
-      "coingeckoId": "eutbl",
-      "symbol": "EUTBL",
-      "name": "Spiko EU T-Bills Money Market Fund",
-      "marketCapRank": 70,
-      "marketCap": 941390318,
-      "currentPrice": 1.21,
-      "lastUpdated": "2026-06-21T03:25:31.473Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 71,
-      "source": "coingecko",
-      "coingeckoId": "cosmos",
-      "symbol": "ATOM",
-      "name": "Cosmos Hub",
-      "marketCapRank": 71,
-      "marketCap": 920157959,
-      "totalVolume": 23044654,
-      "currentPrice": 1.79,
-      "lastUpdated": "2026-06-21T03:26:43.901Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "cosmos",
-          "address": "",
-          "assetId": "c118",
-          "name": "Cosmos",
-          "symbol": "ATOM",
-          "type": "coin",
-          "decimals": 6,
-          "status": "active",
-          "website": "https://cosmos.network/",
-          "description": "Cosmos is a secure \u0026 scalable blockchain ecosystem where thousands of dApps interoperate to create the foundation for a new token economy.",
-          "explorer": "https://www.mintscan.io/",
-          "research": "https://research.binance.com/en/projects/cosmos-network",
-          "tags": [
-            "staking-native"
-          ],
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/cosmos"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/cosmos"
-            },
-            {
-              "name": "reddit",
-              "url": "https://reddit.com/r/cosmosnetwork"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://cosmos.network/resources/whitepaper"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/cosmos/info/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "smartchain",
-          "address": "0x0Eb3a705fc54725037CC9e008bDede697f62F335",
-          "assetId": "c20000714_t0x0Eb3a705fc54725037CC9e008bDede697f62F335",
-          "name": "BNB pegged Cosmos Token",
-          "symbol": "ATOM",
-          "type": "BEP20",
+          "chain": "base",
+          "address": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
+          "assetId": "c8453_t0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
+          "name": "Morpho Token",
+          "symbol": "MORPHO",
+          "type": "BASE",
           "decimals": 18,
           "status": "active",
-          "website": "https://cosmos.network",
-          "description": "BNB pegged Cosmos Token (ATOM BEP20) is a token issued by Binance on Smart Chain; its price is pegged to Cosmos (ATOM) at a ratio of 1:1.",
-          "explorer": "https://bscscan.com/token/0x0Eb3a705fc54725037CC9e008bDede697f62F335",
-          "research": "https://research.binance.com/en/projects/cosmos-network",
-          "tags": [
-            "binance-peg"
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x0Eb3a705fc54725037CC9e008bDede697f62F335/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "ethereum",
-          "address": "0x8D983cb9388EaC77af0474fA441C4815500Cb7BB",
-          "assetId": "c60_t0x8D983cb9388EaC77af0474fA441C4815500Cb7BB",
-          "name": "Cosmos",
-          "symbol": "ATOM",
-          "type": "ERC20",
-          "decimals": 6,
-          "status": "active",
-          "website": "https://cosmos.network/",
-          "description": "In a nutshell, Cosmos bills itself as a project that solves some of the “hardest problems” facing the blockchain industry. It aims to offer an antidote to “slow, expensive, unscalable and environmentally harmful” proof-of-work protocols, like those used by Bitcoin, by offering an ecosystem of connected blockchains.",
-          "explorer": "https://etherscan.io/address/0x8D983cb9388EaC77af0474fA441C4815500Cb7BB",
-          "tags": [
-            "governance"
-          ],
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/cosmos"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/cosmos/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x8D983cb9388EaC77af0474fA441C4815500Cb7BB/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 72,
-      "source": "coingecko",
-      "coingeckoId": "usdtb",
-      "symbol": "USDTB",
-      "name": "USDtb",
-      "marketCapRank": 72,
-      "marketCap": 916342710,
-      "totalVolume": 2407662,
-      "currentPrice": 0.999561,
-      "lastUpdated": "2026-06-21T03:26:55.001Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ethereum",
-          "address": "0xC139190F447e929f090Edeb554D95AbB8b18aC1C",
-          "assetId": "c60_t0xC139190F447e929f090Edeb554D95AbB8b18aC1C",
-          "name": "USDtb",
-          "symbol": "USDtb",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://usdtb.money/",
-          "description": "Digital Dollars for the Internet Economy. Backed by institutional grade tokenized treasury funds and powered by Ethena Labs",
-          "explorer": "https://etherscan.io/token/0xC139190F447e929f090Edeb554D95AbB8b18aC1C",
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/ethena_labs"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xC139190F447e929f090Edeb554D95AbB8b18aC1C/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 73,
-      "source": "coingecko",
-      "coingeckoId": "render-token",
-      "symbol": "RENDER",
-      "name": "Render",
-      "marketCapRank": 73,
-      "marketCap": 883391740,
-      "totalVolume": 37766134,
-      "currentPrice": 1.7,
-      "lastUpdated": "2026-06-21T03:26:43.486Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ethereum",
-          "address": "0x6De037ef9aD2725EB40118Bb1702EBb27e4Aeb24",
-          "assetId": "c60_t0x6De037ef9aD2725EB40118Bb1702EBb27e4Aeb24",
-          "name": "Render Token",
-          "symbol": "RNDR",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://rendertoken.com/",
-          "description": "Distributed GPU rendering on the blockchain.",
-          "explorer": "https://etherscan.io/token/0x6De037ef9aD2725EB40118Bb1702EBb27e4Aeb24",
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x6De037ef9aD2725EB40118Bb1702EBb27e4Aeb24/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "solana",
-          "address": "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
-          "assetId": "c501_trndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
-          "name": "Render Token",
-          "symbol": "RNDR",
-          "type": "SPL",
-          "decimals": 8,
-          "status": "active",
-          "website": "https://rendertoken.com/",
-          "description": "Distributed GPU rendering on the blockchain.",
-          "explorer": "https://solscan.io/token/rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
-          "links": [
-            {
-              "name": "telegram",
-              "url": "https://t.me/rendernetwork"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/rendernetwork"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/render/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/solana/assets/rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "polygon",
-          "address": "0x61299774020dA444Af134c82fa83E3810b309991",
-          "assetId": "c966_t0x61299774020dA444Af134c82fa83E3810b309991",
-          "name": "Render Token",
-          "symbol": "RNDR",
-          "type": "POLYGON",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://rendertoken.com/",
-          "description": "Distributed GPU rendering on the blockchain.",
-          "explorer": "https://polygonscan.com/token/0x61299774020dA444Af134c82fa83E3810b309991",
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/rendertoken"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/rendertoken"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/render-token/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/polygon/assets/0x61299774020dA444Af134c82fa83E3810b309991/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 74,
-      "source": "coingecko",
-      "coingeckoId": "janus-henderson-anemoy-treasury-fund",
-      "symbol": "JTRSY",
-      "name": "Janus Henderson Anemoy Treasury Fund",
-      "marketCapRank": 74,
-      "marketCap": 868687143,
-      "currentPrice": 1.11,
-      "lastUpdated": "2026-06-21T03:20:08.923Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 75,
-      "source": "coingecko",
-      "coingeckoId": "polygon-ecosystem-token",
-      "symbol": "POL",
-      "name": "POL (ex-MATIC)",
-      "marketCapRank": 75,
-      "marketCap": 849007258,
-      "totalVolume": 48213606,
-      "currentPrice": 0.079648,
-      "lastUpdated": "2026-06-21T03:26:45.535Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "polygon",
-          "address": "",
-          "assetId": "c966",
-          "name": "POL (ex-MATIC)",
-          "symbol": "POL",
-          "type": "coin",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://polygon.technology/",
-          "description": "Polygon (Matic) strives to solve the scalability and usability issues, while not compromising on decentralization and leveraging the existing developer community and ecosystem",
-          "explorer": "https://polygonscan.com/",
-          "research": "https://docs.matic.network/",
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/maticnetwork/"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/0xPolygon"
-            },
-            {
-              "name": "reddit",
-              "url": "https://reddit.com/r/maticnetwork/"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://github.com/maticnetwork/whitepaper"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/polygon/info/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "ethereum",
-          "address": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6",
-          "assetId": "c60_t0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6",
-          "name": "Polygon Ecosystem Token",
-          "symbol": "POL",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://polygon.technology/",
-          "description": "Polygon is a protocol and a framework for building and connecting Ethereum-compatible blockchain networks. Aggregating scalable solutions on Ethereum supporting a multi-chain Ethereum ecosystem.",
-          "explorer": "https://etherscan.io/token/0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6",
-          "links": [
-            {
-              "name": "telegram",
-              "url": "https://t.me/polygonofficial"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/0xPolygon"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/polygon-ecosystem-token/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 76,
-      "source": "coingecko",
-      "coingeckoId": "algorand",
-      "symbol": "ALGO",
-      "name": "Algorand",
-      "marketCapRank": 76,
-      "marketCap": 840075069,
-      "totalVolume": 22188456,
-      "currentPrice": 0.094193,
-      "lastUpdated": "2026-06-21T03:26:55.524Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "algorand",
-          "address": "",
-          "assetId": "c283",
-          "name": "Algorand",
-          "symbol": "ALGO",
-          "type": "coin",
-          "decimals": 6,
-          "status": "active",
-          "website": "http://algorand.foundation",
-          "description": "Algorand is the first blockchain to provide immediate transaction finality. No forking. No uncertainty. Algorand removes the technical barriers that for years undermined mainstream blockchain adoption: decentralization, scale, and security.",
-          "explorer": "https://algoexplorer.io/",
-          "research": "https://research.binance.com/en/projects/algorand",
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/algorand"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/AlgoFoundation"
-            },
-            {
-              "name": "reddit",
-              "url": "https://reddit.com/r/AlgorandOfficial"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://www.algorand.com/resources/white-papers/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/algorand/info/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 77,
-      "source": "coingecko",
-      "coingeckoId": "ethena",
-      "symbol": "ENA",
-      "name": "Ethena",
-      "marketCapRank": 77,
-      "marketCap": 830534391,
-      "totalVolume": 96954802,
-      "currentPrice": 0.089422,
-      "lastUpdated": "2026-06-21T03:26:45.398Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ethereum",
-          "address": "0x57e114B691Db790C35207b2e685D4A43181e6061",
-          "assetId": "c60_t0x57e114B691Db790C35207b2e685D4A43181e6061",
-          "name": "ENA",
-          "symbol": "ENA",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://www.ethena.fi/",
-          "description": "Ethena is a synthetic dollar protocol built on Ethereum that will provide a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument - the 'Internet Bond'.",
-          "explorer": "https://etherscan.io/token/0x57e114B691Db790C35207b2e685D4A43181e6061",
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/ethena_labs"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/ethena_labs"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x57e114B691Db790C35207b2e685D4A43181e6061/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 78,
-      "source": "coingecko",
-      "coingeckoId": "kaspa",
-      "symbol": "KAS",
-      "name": "Kaspa",
-      "marketCapRank": 78,
-      "marketCap": 818671553,
-      "totalVolume": 8087592,
-      "currentPrice": 0.02978004,
-      "lastUpdated": "2026-06-21T03:26:44.221Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 79,
-      "source": "coingecko",
-      "coingeckoId": "stable-2",
-      "symbol": "STABLE",
-      "name": "​​Stable",
-      "marketCapRank": 79,
-      "marketCap": 809500892,
-      "totalVolume": 10564336,
-      "currentPrice": 0.03405661,
-      "lastUpdated": "2026-06-21T03:26:47.383Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 80,
-      "source": "coingecko",
-      "coingeckoId": "nexo",
-      "symbol": "NEXO",
-      "name": "NEXO",
-      "marketCapRank": 80,
-      "marketCap": 800260017,
-      "totalVolume": 4578330,
-      "currentPrice": 0.798696,
-      "lastUpdated": "2026-06-21T03:26:45.294Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ethereum",
-          "address": "0xB62132e35a6c13ee1EE0f84dC5d40bad8d815206",
-          "assetId": "c60_t0xB62132e35a6c13ee1EE0f84dC5d40bad8d815206",
-          "name": "Nexo",
-          "symbol": "NEXO",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "http://nexo.io",
-          "description": "NEXO (NEXO) is a compliant token that is backed by the underlying assets of Nexo’s loan portfolio.",
-          "explorer": "https://etherscan.io/token/0xB62132e35a6c13ee1EE0f84dC5d40bad8d815206",
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/nexofinance/NEXO-Token/"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/NexoFinance"
-            },
-            {
-              "name": "blog",
-              "url": "https://medium.com/nexo"
-            },
-            {
-              "name": "facebook",
-              "url": "https://facebook.com/NexoFinance"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/nexofinance"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://nexo.io/assets/downloads/Nexo-Whitepaper.pdf?=a"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/nexo/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xB62132e35a6c13ee1EE0f84dC5d40bad8d815206/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "binance",
-          "address": "NEXO-A84",
-          "assetId": "c714_tNEXO-A84",
-          "name": "Nexo",
-          "symbol": "NEXO",
-          "type": "BEP2",
-          "decimals": 8,
-          "status": "active",
-          "website": "http://nexo.io",
-          "description": "NEXO (NEXO) is a compliant token that is backed by the underlying assets of Nexo’s loan portfolio.",
-          "explorer": "https://explorer.binance.org/asset/NEXO-A84",
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/nexofinance/NEXO-Token/"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/NexoFinance"
-            },
-            {
-              "name": "blog",
-              "url": "https://medium.com/nexo"
-            },
-            {
-              "name": "facebook",
-              "url": "https://facebook.com/NexoFinance"
-            },
-            {
-              "name": "telegram",
-              "url": "https://t.me/nexofinance"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://nexo.io/assets/downloads/Nexo-Whitepaper.pdf?=a"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/nexo/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/binance/assets/NEXO-A84/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 81,
-      "source": "coingecko",
-      "coingeckoId": "jupiter-exchange-solana",
-      "symbol": "JUP",
-      "name": "Jupiter",
-      "marketCapRank": 81,
-      "marketCap": 739195465,
-      "totalVolume": 56892553,
-      "currentPrice": 0.222645,
-      "lastUpdated": "2026-06-21T03:26:45.271Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "solana",
-          "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
-          "assetId": "c501_tJUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
-          "name": "Jupiter",
-          "symbol": "JUP",
-          "type": "SPL",
-          "decimals": 6,
-          "status": "active",
-          "website": "https://jup.ag/",
-          "description": "As one of the industry's most advanced swap aggregation engines, Jupiter excels in delivering essential liquidity infrastructure for the Solana ecosystem.",
-          "explorer": "https://solscan.io/token/JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/JupiterExchange"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/jupiter-ag/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/solana/assets/JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 82,
-      "source": "coingecko",
-      "coingeckoId": "janus-henderson-anemoy-aaa-clo-fund",
-      "symbol": "JAAA",
-      "name": "Janus Henderson Anemoy AAA CLO Fund",
-      "marketCapRank": 82,
-      "marketCap": 733470725,
-      "currentPrice": 1.039,
-      "lastUpdated": "2026-06-21T03:25:21.371Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 83,
-      "source": "coingecko",
-      "coingeckoId": "bianrensheng",
-      "symbol": "币安人生",
-      "name": "币安人生 (BinanceLife)",
-      "marketCapRank": 83,
-      "marketCap": 714331637,
-      "totalVolume": 9301249,
-      "currentPrice": 0.713964,
-      "lastUpdated": "2026-06-21T03:26:47.511Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 84,
-      "source": "coingecko",
-      "coingeckoId": "gatechain-token",
-      "symbol": "GT",
-      "name": "Gate",
-      "marketCapRank": 84,
-      "marketCap": 709801569,
-      "totalVolume": 1691939,
-      "currentPrice": 6.66,
-      "lastUpdated": "2026-06-21T03:26:48.849Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "ethereum",
-          "address": "0xE66747a101bFF2dBA3697199DCcE5b743b454759",
-          "assetId": "c60_t0xE66747a101bFF2dBA3697199DCcE5b743b454759",
-          "name": "Gatechain Token",
-          "symbol": "GT",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://gatechain.io",
-          "description": "GateChain is a public blockchain dedicated to blockchain asset safety even after private keys are compromised.",
-          "explorer": "https://etherscan.io/token/0xE66747a101bFF2dBA3697199DCcE5b743b454759",
-          "links": [
-            {
-              "name": "github",
-              "url": "https://github.com/gatechain"
-            },
-            {
-              "name": "x",
-              "url": "https://x.com/gatechain_io/photo"
-            },
-            {
-              "name": "blog",
-              "url": "https://medium.com/@gatechain"
-            },
-            {
-              "name": "coingecko",
-              "url": "https://coingecko.com/en/coins/gatechain-token/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xE66747a101bFF2dBA3697199DCcE5b743b454759/logo.png",
-          "logoExists": true
-        }
-      ]
-    },
-    {
-      "rank": 85,
-      "source": "coingecko",
-      "coingeckoId": "just",
-      "symbol": "JST",
-      "name": "JUST",
-      "marketCapRank": 85,
-      "marketCap": 706072157,
-      "totalVolume": 22253104,
-      "currentPrice": 0.082653,
-      "lastUpdated": "2026-06-21T03:26:43.391Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "tron",
-          "address": "TCFLL5dx5ZJdKnWuesXxi1VPwjLVmWZZy9",
-          "assetId": "c195_tTCFLL5dx5ZJdKnWuesXxi1VPwjLVmWZZy9",
-          "name": "JUST",
-          "symbol": "JST",
-          "type": "TRC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://just.network",
-          "description": "JUST aims to build a fair, decentralized financial system that provides stablecoin lending and governance mechanisms for users around the world.",
-          "explorer": "https://tronscan.io/#/token20/TCFLL5dx5ZJdKnWuesXxi1VPwjLVmWZZy9",
-          "research": "https://research.binance.com/en/projects/just",
+          "website": "https://morpho.org/",
+          "description": "Morpho is an open, efficient, and resilient platform that allows anyone to earn yield and borrow assets. Lenders can earn on Morpho using Morpho Vaults, noncustodial simple to use lending vaults that optimize yields for depositors. Borrowers can borrow any assets directly from Morpho Markets.",
+          "explorer": "https://basescan.org/token/0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
           "tags": [
             "defi"
           ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/tron/assets/TCFLL5dx5ZJdKnWuesXxi1VPwjLVmWZZy9/logo.png",
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/morpholabs?s=11\u0026t=ZGzrL8B9N7GpbA3YLFvU9A"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/morpho/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "ethereum",
+          "address": "0x58D97B57BB95320F9a05dC918Aef65434969c2B2",
+          "assetId": "c60_t0x58D97B57BB95320F9a05dC918Aef65434969c2B2",
+          "name": "Morpho",
+          "symbol": "MORPHO",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://morpho.org/",
+          "description": "Morpho is an open, efficient, and resilient platform that allows anyone to earn yield and borrow assets. Lenders can earn on Morpho using Morpho Vaults, noncustodial simple to use lending vaults that optimize yields for depositors. Borrowers can borrow any assets directly from Morpho Markets.",
+          "explorer": "https://etherscan.io/token/0x58D97B57BB95320F9a05dC918Aef65434969c2B2",
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/MorphoLabs"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x58D97B57BB95320F9a05dC918Aef65434969c2B2/logo.png",
           "logoExists": true
         }
       ]
     },
     {
-      "rank": 86,
+      "rank": 62,
+      "source": "coingecko",
+      "coingeckoId": "ethereum-classic",
+      "symbol": "ETC",
+      "name": "Ethereum Classic",
+      "marketCapRank": 62,
+      "marketCap": 1116262167,
+      "totalVolume": 60261916,
+      "currentPrice": 7.13,
+      "lastUpdated": "2026-06-25T08:41:46.972Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "classic",
+          "address": "",
+          "assetId": "c61",
+          "name": "Ethereum Classic",
+          "symbol": "ETC",
+          "type": "coin",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethereumclassic.org/",
+          "description": "Ethereum Classic is an open-source, public, blockchain-based distributed computing platform featuring smart contract functionality.It is a continuation of the original Ethereum blockchain.",
+          "explorer": "https://blockscout.com/etc/mainnet/",
+          "research": "https://research.binance.com/en/projects/ethereum-classic",
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/ethereumclassic/"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/eth_classic"
+            },
+            {
+              "name": "reddit",
+              "url": "https://reddit.com/r/EthereumClassic"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://whitepaperdatabase.com/ethereum-classic-etc-whitepaper/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/classic/info/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 63,
       "source": "coingecko",
       "coingeckoId": "dexe",
       "symbol": "DEXE",
       "name": "DeXe",
-      "marketCapRank": 86,
-      "marketCap": 691921248,
-      "totalVolume": 10572589,
-      "currentPrice": 14.78,
-      "lastUpdated": "2026-06-21T03:26:45.944Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 63,
+      "marketCap": 1081082238,
+      "totalVolume": 21396921,
+      "currentPrice": 23.13,
+      "lastUpdated": "2026-06-25T08:41:44.331Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8846,102 +7805,1058 @@
       ]
     },
     {
-      "rank": 87,
+      "rank": 64,
       "source": "coingecko",
-      "coingeckoId": "venice-token",
-      "symbol": "VVV",
-      "name": "Venice Token",
-      "marketCapRank": 87,
-      "marketCap": 677415406,
-      "totalVolume": 17904189,
-      "currentPrice": 14.47,
-      "lastUpdated": "2026-06-21T03:26:46.237Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "coingeckoId": "pepe",
+      "symbol": "PEPE",
+      "name": "Pepe",
+      "marketCapRank": 64,
+      "marketCap": 1065188749,
+      "totalVolume": 192680552,
+      "currentPrice": 0.00000253,
+      "lastUpdated": "2026-06-25T08:41:44.570Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
-          "chain": "base",
-          "address": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
-          "assetId": "c8453_t0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
-          "name": "Venice",
-          "symbol": "VVV",
-          "type": "BASE",
+          "chain": "ethereum",
+          "address": "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
+          "assetId": "c60_t0x6982508145454Ce325dDbE47a25d4ec3d2311933",
+          "name": "Pepe",
+          "symbol": "PEPE",
+          "type": "ERC20",
           "decimals": 18,
           "status": "active",
-          "website": "https://venice.ai/",
-          "description": "The Venice token (VVV) is an access key for AI agents and developers to consume private, uncensored inference through the Venice API, without paying per request.",
-          "explorer": "https://basescan.org/token/0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+          "website": "https://www.pepe.vip/",
+          "description": "Pepe is a community based memecoin with one mission: to make memecoins great again. Made to honor the iconic meme we all know and love, Pepe is here to take reign as the most memeable memecoin in existence, fueled purely by memetic power. Pepe is for the people.",
+          "explorer": "https://etherscan.io/token/0x6982508145454ce325ddbe47a25d4ec3d2311933",
+          "tags": [
+            "memes"
+          ],
           "links": [
             {
               "name": "x",
-              "url": "https://x.com/AskVenice"
+              "url": "https://x.com/pepecoineth"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/pepecoineth"
             },
             {
               "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/venice-token/"
+              "url": "https://coinmarketcap.com/currencies/pepe/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/pepe"
             }
           ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf/logo.png",
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x6982508145454Ce325dDbE47a25d4ec3d2311933/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "sui",
+          "address": "0xebbf537bc3686be32fe22b498b42715641bbb209267be72236a352e0444cc5df::sui_pepe::SUI_PEPE",
+          "assetId": "c784_t0xebbf537bc3686be32fe22b498b42715641bbb209267be72236a352e0444cc5df::sui_pepe::SUI_PEPE",
+          "name": "SUI PEPE",
+          "symbol": "SPEPE",
+          "type": "SUI",
+          "decimals": 6,
+          "status": "active",
+          "website": "https://www.pepe.vip/",
+          "description": "Pepe is a community based memecoin with one mission: to make memecoins great again. Made to honor the iconic meme we all know and love, Pepe is here to take reign as the most memeable memecoin in existence, fueled purely by memetic power. Pepe is for the people.",
+          "explorer": "https://explorer.sui.io/address/0xebbf537bc3686be32fe22b498b42715641bbb209267be72236a352e0444cc5df::sui_pepe::SUI_PEPE",
+          "tags": [
+            "memes"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/pepecoineth"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/pepecoineth"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/pepe/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/pepe"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/sui/assets/0xebbf537bc3686be32fe22b498b42715641bbb209267be72236a352e0444cc5df::sui_pepe::SUI_PEPE/logo.png",
           "logoExists": true
         }
       ]
     },
     {
-      "rank": 88,
+      "rank": 65,
       "source": "coingecko",
-      "coingeckoId": "flare-networks",
-      "symbol": "FLR",
-      "name": "Flare",
-      "marketCapRank": 88,
-      "marketCap": 639041663,
-      "totalVolume": 2033195,
-      "currentPrice": 0.00738319,
-      "lastUpdated": "2026-06-21T03:26:44.380Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "coingeckoId": "memecore",
+      "symbol": "M",
+      "name": "MemeCore",
+      "marketCapRank": 65,
+      "marketCap": 1029787770,
+      "totalVolume": 25601171,
+      "currentPrice": 0.793305,
+      "lastUpdated": "2026-06-25T08:41:47.831Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": []
     },
     {
-      "rank": 89,
+      "rank": 66,
       "source": "coingecko",
-      "coingeckoId": "filecoin",
-      "symbol": "FIL",
-      "name": "Filecoin",
-      "marketCapRank": 89,
-      "marketCap": 626477635,
-      "totalVolume": 41728582,
-      "currentPrice": 0.792131,
-      "lastUpdated": "2026-06-21T03:26:53.461Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "coingeckoId": "united-stables",
+      "symbol": "U",
+      "name": "United Stables",
+      "marketCapRank": 66,
+      "marketCap": 1017753403,
+      "totalVolume": 4879142,
+      "currentPrice": 0.9997,
+      "lastUpdated": "2026-06-25T08:41:37.941Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
-          "chain": "filecoin",
-          "address": "",
-          "assetId": "c461",
-          "name": "Filecoin",
-          "symbol": "FIL",
-          "type": "coin",
+          "chain": "smartchain",
+          "address": "0xcE24439F2D9C6a2289F741120FE202248B666666",
+          "assetId": "c20000714_t0xcE24439F2D9C6a2289F741120FE202248B666666",
+          "name": "United Stables",
+          "symbol": "U",
+          "type": "BEP20",
           "decimals": 18,
           "status": "active",
-          "website": "https://filecoin.io",
-          "description": "Filecoin provides a blockchain-based marketplace that aims to revolutionize the global storage economy.",
-          "explorer": "https://filfox.info/",
-          "research": "https://research.binance.com/en/projects/filecoin",
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/filecoin/info/logo.png",
+          "website": "https://u.tech/",
+          "description": "United Stables develops transparent, secure, and programmable stablecoin infrastructure for global markets. $U is a fully backed, operational-grade stablecoin designed for institutional trading, DeFi liquidity, treasury operations, and cross-border settlement. It’s the first stablecoin to aggregate liquidity, fully backed 1:1 by cash and audited stablecoins.",
+          "explorer": "https://bscscan.com/token/0xcE24439F2D9C6a2289F741120FE202248B666666",
+          "tags": [
+            "stablecoin"
+          ],
+          "links": [
+            {
+              "name": "telegram_news",
+              "url": "https://t.me/Ustables"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/UTechStables"
+            },
+            {
+              "name": "medium",
+              "url": "https://medium.com/@Ustables"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xcE24439F2D9C6a2289F741120FE202248B666666/logo.png",
           "logoExists": true
         }
       ]
     },
     {
-      "rank": 90,
+      "rank": 67,
+      "source": "coingecko",
+      "coingeckoId": "quant-network",
+      "symbol": "QNT",
+      "name": "Quant",
+      "marketCapRank": 67,
+      "marketCap": 988579917,
+      "totalVolume": 10117152,
+      "currentPrice": 67.97,
+      "lastUpdated": "2026-06-25T08:41:45.339Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ethereum",
+          "address": "0x4a220E6096B25EADb88358cb44068A3248254675",
+          "assetId": "c60_t0x4a220E6096B25EADb88358cb44068A3248254675",
+          "name": "Quant",
+          "symbol": "QNT",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://quant.network",
+          "description": "The Quant Network team developed Quant as a cryptocurrency token based on the Ethereum blockchain. The solutions offered by Quant include Overledger OS and GoVerify.",
+          "explorer": "https://etherscan.io/token/0x4a220E6096B25EADb88358cb44068A3248254675",
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/quantnetwork"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/quant_network"
+            },
+            {
+              "name": "reddit",
+              "url": "https://reddit.com/r/QuantNetwork/"
+            },
+            {
+              "name": "blog",
+              "url": "https://medium.com/@quant_network"
+            },
+            {
+              "name": "facebook",
+              "url": "https://facebook.com/quantnetwork"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/quantnetworkannouncements"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://files.quant.network/files.quant.network/Quant_Overledger_Whitepaper_v0.1.pdf"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/quant-network/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x4a220E6096B25EADb88358cb44068A3248254675/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "cryptoorg",
+          "address": "0x7d54F4E05f273a9317f723997612Ed64eF53C900",
+          "assetId": "c394_t0x7d54F4E05f273a9317f723997612Ed64eF53C900",
+          "name": "Quant",
+          "symbol": "QNT",
+          "type": "CRC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://quant.network",
+          "description": "The Quant Network team developed Quant as a cryptocurrency token based on the Ethereum blockchain. The solutions offered by Quant include Overledger OS and GoVerify.",
+          "explorer": "https://crypto.org/explorer/account/0x7d54F4E05f273a9317f723997612Ed64eF53C900",
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/quantnetwork"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/quant_network"
+            },
+            {
+              "name": "reddit",
+              "url": "https://reddit.com/r/QuantNetwork/"
+            },
+            {
+              "name": "blog",
+              "url": "https://medium.com/@quant_network"
+            },
+            {
+              "name": "facebook",
+              "url": "https://facebook.com/quantnetwork"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/quantnetworkannouncements"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://files.quant.network/files.quant.network/Quant_Overledger_Whitepaper_v0.1.pdf"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/quant-network/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/cryptoorg/assets/0x7d54F4E05f273a9317f723997612Ed64eF53C900/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 68,
+      "source": "coingecko",
+      "coingeckoId": "blockchain-capital",
+      "symbol": "BCAP",
+      "name": "Blockchain Capital",
+      "marketCapRank": 68,
+      "marketCap": 975269240,
+      "currentPrice": 107.03,
+      "lastUpdated": "2026-06-25T08:40:11.217Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 69,
+      "source": "coingecko",
+      "coingeckoId": "kucoin-shares",
+      "symbol": "KCS",
+      "name": "KuCoin",
+      "marketCapRank": 69,
+      "marketCap": 952786318,
+      "totalVolume": 2869693,
+      "currentPrice": 7.08,
+      "lastUpdated": "2026-06-25T08:41:41.451Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ethereum",
+          "address": "0xf34960d9d60be18cC1D5Afc1A6F012A723a28811",
+          "assetId": "c60_t0xf34960d9d60be18cC1D5Afc1A6F012A723a28811",
+          "name": "KuCoin Token",
+          "symbol": "KCS",
+          "type": "ERC20",
+          "decimals": 6,
+          "status": "active",
+          "website": "https://kucoin.com",
+          "description": "KCS performs as the key to the entire KuCoin ecosystem, and it will also be the native asset on KuCoin’s decentralized financial services as well as the governance token of KuCoin Community.",
+          "explorer": "https://etherscan.io/token/0xf34960d9d60be18cC1D5Afc1A6F012A723a28811",
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/Kucoin"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/KuCoinCom"
+            },
+            {
+              "name": "facebook",
+              "url": "https://facebook.com/KuCoinOfficial/"
+            },
+            {
+              "name": "blog",
+              "url": "https://medium.com/kucoinexchange"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/Kucoin_Exchange"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/kucoin-shares/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xf34960d9d60be18cC1D5Afc1A6F012A723a28811/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 70,
+      "source": "coingecko",
+      "coingeckoId": "eutbl",
+      "symbol": "EUTBL",
+      "name": "Spiko EU T-Bills Money Market Fund",
+      "marketCapRank": 70,
+      "marketCap": 925111000,
+      "currentPrice": 1.2,
+      "lastUpdated": "2026-06-25T08:40:35.927Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 71,
+      "source": "coingecko",
+      "coingeckoId": "usdtb",
+      "symbol": "USDTB",
+      "name": "USDtb",
+      "marketCapRank": 71,
+      "marketCap": 920671378,
+      "totalVolume": 14489960,
+      "currentPrice": 1.001,
+      "lastUpdated": "2026-06-25T08:41:47.674Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ethereum",
+          "address": "0xC139190F447e929f090Edeb554D95AbB8b18aC1C",
+          "assetId": "c60_t0xC139190F447e929f090Edeb554D95AbB8b18aC1C",
+          "name": "USDtb",
+          "symbol": "USDtb",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://usdtb.money/",
+          "description": "Digital Dollars for the Internet Economy. Backed by institutional grade tokenized treasury funds and powered by Ethena Labs",
+          "explorer": "https://etherscan.io/token/0xC139190F447e929f090Edeb554D95AbB8b18aC1C",
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xC139190F447e929f090Edeb554D95AbB8b18aC1C/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 72,
+      "source": "coingecko",
+      "coingeckoId": "superstate-short-duration-us-government-securities-fund-ustb",
+      "symbol": "USTB",
+      "name": "Invesco Short Duration US Government Securities Fund",
+      "marketCapRank": 72,
+      "marketCap": 896802417,
+      "currentPrice": 11.12,
+      "lastUpdated": "2026-06-25T08:35:14.060Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 73,
+      "source": "coingecko",
+      "coingeckoId": "janus-henderson-anemoy-treasury-fund",
+      "symbol": "JTRSY",
+      "name": "Janus Henderson Anemoy Treasury Fund",
+      "marketCapRank": 73,
+      "marketCap": 869840310,
+      "currentPrice": 1.11,
+      "lastUpdated": "2026-06-25T08:40:14.574Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 74,
+      "source": "coingecko",
+      "coingeckoId": "stable-2",
+      "symbol": "STABLE",
+      "name": "​​Stable",
+      "marketCapRank": 74,
+      "marketCap": 863297988,
+      "totalVolume": 16911949,
+      "currentPrice": 0.03610295,
+      "lastUpdated": "2026-06-25T08:41:50.409Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 75,
+      "source": "coingecko",
+      "coingeckoId": "cosmos",
+      "symbol": "ATOM",
+      "name": "Cosmos Hub",
+      "marketCapRank": 75,
+      "marketCap": 853942538,
+      "totalVolume": 41179092,
+      "currentPrice": 1.66,
+      "lastUpdated": "2026-06-25T08:41:42.577Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "cosmos",
+          "address": "",
+          "assetId": "c118",
+          "name": "Cosmos",
+          "symbol": "ATOM",
+          "type": "coin",
+          "decimals": 6,
+          "status": "active",
+          "website": "https://cosmos.network/",
+          "description": "Cosmos is a secure \u0026 scalable blockchain ecosystem where thousands of dApps interoperate to create the foundation for a new token economy.",
+          "explorer": "https://www.mintscan.io/",
+          "research": "https://research.binance.com/en/projects/cosmos-network",
+          "tags": [
+            "staking-native"
+          ],
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/cosmos"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/cosmos"
+            },
+            {
+              "name": "reddit",
+              "url": "https://reddit.com/r/cosmosnetwork"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://cosmos.network/resources/whitepaper"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/cosmos/info/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "smartchain",
+          "address": "0x0Eb3a705fc54725037CC9e008bDede697f62F335",
+          "assetId": "c20000714_t0x0Eb3a705fc54725037CC9e008bDede697f62F335",
+          "name": "BNB pegged Cosmos Token",
+          "symbol": "ATOM",
+          "type": "BEP20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://cosmos.network",
+          "description": "BNB pegged Cosmos Token (ATOM BEP20) is a token issued by Binance on Smart Chain; its price is pegged to Cosmos (ATOM) at a ratio of 1:1.",
+          "explorer": "https://bscscan.com/token/0x0Eb3a705fc54725037CC9e008bDede697f62F335",
+          "research": "https://research.binance.com/en/projects/cosmos-network",
+          "tags": [
+            "binance-peg"
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x0Eb3a705fc54725037CC9e008bDede697f62F335/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "ethereum",
+          "address": "0x8D983cb9388EaC77af0474fA441C4815500Cb7BB",
+          "assetId": "c60_t0x8D983cb9388EaC77af0474fA441C4815500Cb7BB",
+          "name": "Cosmos",
+          "symbol": "ATOM",
+          "type": "ERC20",
+          "decimals": 6,
+          "status": "active",
+          "website": "https://cosmos.network/",
+          "description": "In a nutshell, Cosmos bills itself as a project that solves some of the “hardest problems” facing the blockchain industry. It aims to offer an antidote to “slow, expensive, unscalable and environmentally harmful” proof-of-work protocols, like those used by Bitcoin, by offering an ecosystem of connected blockchains.",
+          "explorer": "https://etherscan.io/address/0x8D983cb9388EaC77af0474fA441C4815500Cb7BB",
+          "tags": [
+            "governance"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/cosmos"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/cosmos/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x8D983cb9388EaC77af0474fA441C4815500Cb7BB/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 76,
+      "source": "coingecko",
+      "coingeckoId": "render-token",
+      "symbol": "RENDER",
+      "name": "Render",
+      "marketCapRank": 76,
+      "marketCap": 807262752,
+      "totalVolume": 56473899,
+      "currentPrice": 1.56,
+      "lastUpdated": "2026-06-25T08:41:41.764Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ethereum",
+          "address": "0x6De037ef9aD2725EB40118Bb1702EBb27e4Aeb24",
+          "assetId": "c60_t0x6De037ef9aD2725EB40118Bb1702EBb27e4Aeb24",
+          "name": "Render Token",
+          "symbol": "RNDR",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://rendertoken.com/",
+          "description": "Distributed GPU rendering on the blockchain.",
+          "explorer": "https://etherscan.io/token/0x6De037ef9aD2725EB40118Bb1702EBb27e4Aeb24",
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x6De037ef9aD2725EB40118Bb1702EBb27e4Aeb24/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "solana",
+          "address": "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
+          "assetId": "c501_trndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
+          "name": "Render Token",
+          "symbol": "RNDR",
+          "type": "SPL",
+          "decimals": 8,
+          "status": "active",
+          "website": "https://rendertoken.com/",
+          "description": "Distributed GPU rendering on the blockchain.",
+          "explorer": "https://solscan.io/token/rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof",
+          "links": [
+            {
+              "name": "telegram",
+              "url": "https://t.me/rendernetwork"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/rendernetwork"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/render/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/solana/assets/rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "polygon",
+          "address": "0x61299774020dA444Af134c82fa83E3810b309991",
+          "assetId": "c966_t0x61299774020dA444Af134c82fa83E3810b309991",
+          "name": "Render Token",
+          "symbol": "RNDR",
+          "type": "POLYGON",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://rendertoken.com/",
+          "description": "Distributed GPU rendering on the blockchain.",
+          "explorer": "https://polygonscan.com/token/0x61299774020dA444Af134c82fa83E3810b309991",
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/rendertoken"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/rendertoken"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/render-token/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/polygon/assets/0x61299774020dA444Af134c82fa83E3810b309991/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 77,
+      "source": "coingecko",
+      "coingeckoId": "ethena",
+      "symbol": "ENA",
+      "name": "Ethena",
+      "marketCapRank": 77,
+      "marketCap": 800835468,
+      "totalVolume": 143802262,
+      "currentPrice": 0.086163,
+      "lastUpdated": "2026-06-25T08:41:45.931Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ethereum",
+          "address": "0x57e114B691Db790C35207b2e685D4A43181e6061",
+          "assetId": "c60_t0x57e114B691Db790C35207b2e685D4A43181e6061",
+          "name": "ENA",
+          "symbol": "ENA",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://www.ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that will provide a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument - the 'Internet Bond'.",
+          "explorer": "https://etherscan.io/token/0x57e114B691Db790C35207b2e685D4A43181e6061",
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/ethena_labs"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x57e114B691Db790C35207b2e685D4A43181e6061/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 78,
+      "source": "coingecko",
+      "coingeckoId": "algorand",
+      "symbol": "ALGO",
+      "name": "Algorand",
+      "marketCapRank": 78,
+      "marketCap": 798938574,
+      "totalVolume": 42702652,
+      "currentPrice": 0.089441,
+      "lastUpdated": "2026-06-25T08:41:47.151Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "algorand",
+          "address": "",
+          "assetId": "c283",
+          "name": "Algorand",
+          "symbol": "ALGO",
+          "type": "coin",
+          "decimals": 6,
+          "status": "active",
+          "website": "http://algorand.foundation",
+          "description": "Algorand is the first blockchain to provide immediate transaction finality. No forking. No uncertainty. Algorand removes the technical barriers that for years undermined mainstream blockchain adoption: decentralization, scale, and security.",
+          "explorer": "https://algoexplorer.io/",
+          "research": "https://research.binance.com/en/projects/algorand",
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/algorand"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/AlgoFoundation"
+            },
+            {
+              "name": "reddit",
+              "url": "https://reddit.com/r/AlgorandOfficial"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://www.algorand.com/resources/white-papers/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/algorand/info/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 79,
+      "source": "coingecko",
+      "coingeckoId": "polygon-ecosystem-token",
+      "symbol": "POL",
+      "name": "POL (ex-MATIC)",
+      "marketCapRank": 79,
+      "marketCap": 791283147,
+      "totalVolume": 63227653,
+      "currentPrice": 0.074177,
+      "lastUpdated": "2026-06-25T08:41:45.089Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "polygon",
+          "address": "",
+          "assetId": "c966",
+          "name": "POL (ex-MATIC)",
+          "symbol": "POL",
+          "type": "coin",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://polygon.technology/",
+          "description": "Polygon (Matic) strives to solve the scalability and usability issues, while not compromising on decentralization and leveraging the existing developer community and ecosystem",
+          "explorer": "https://polygonscan.com/",
+          "research": "https://docs.matic.network/",
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/maticnetwork/"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/0xPolygon"
+            },
+            {
+              "name": "reddit",
+              "url": "https://reddit.com/r/maticnetwork/"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://github.com/maticnetwork/whitepaper"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/polygon/info/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "ethereum",
+          "address": "0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6",
+          "assetId": "c60_t0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6",
+          "name": "Polygon Ecosystem Token",
+          "symbol": "POL",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://polygon.technology/",
+          "description": "Polygon is a protocol and a framework for building and connecting Ethereum-compatible blockchain networks. Aggregating scalable solutions on Ethereum supporting a multi-chain Ethereum ecosystem.",
+          "explorer": "https://etherscan.io/token/0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6",
+          "links": [
+            {
+              "name": "telegram",
+              "url": "https://t.me/polygonofficial"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/0xPolygon"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/polygon-ecosystem-token/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x455e53CBB86018Ac2B8092FdCd39d8444aFFC3F6/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 80,
+      "source": "coingecko",
+      "coingeckoId": "kaspa",
+      "symbol": "KAS",
+      "name": "Kaspa",
+      "marketCapRank": 80,
+      "marketCap": 776318282,
+      "totalVolume": 14885596,
+      "currentPrice": 0.02823478,
+      "lastUpdated": "2026-06-25T08:41:43.805Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 81,
+      "source": "coingecko",
+      "coingeckoId": "jupiter-exchange-solana",
+      "symbol": "JUP",
+      "name": "Jupiter",
+      "marketCapRank": 81,
+      "marketCap": 769857264,
+      "totalVolume": 87222838,
+      "currentPrice": 0.23159,
+      "lastUpdated": "2026-06-25T08:41:46.168Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "solana",
+          "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "assetId": "c501_tJUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "name": "Jupiter",
+          "symbol": "JUP",
+          "type": "SPL",
+          "decimals": 6,
+          "status": "active",
+          "website": "https://jup.ag/",
+          "description": "As one of the industry's most advanced swap aggregation engines, Jupiter excels in delivering essential liquidity infrastructure for the Solana ecosystem.",
+          "explorer": "https://solscan.io/token/JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/JupiterExchange"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/jupiter-ag/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/solana/assets/JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 82,
+      "source": "coingecko",
+      "coingeckoId": "nexo",
+      "symbol": "NEXO",
+      "name": "NEXO",
+      "marketCapRank": 82,
+      "marketCap": 758002883,
+      "totalVolume": 10360576,
+      "currentPrice": 0.75792,
+      "lastUpdated": "2026-06-25T08:41:45.835Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ethereum",
+          "address": "0xB62132e35a6c13ee1EE0f84dC5d40bad8d815206",
+          "assetId": "c60_t0xB62132e35a6c13ee1EE0f84dC5d40bad8d815206",
+          "name": "Nexo",
+          "symbol": "NEXO",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "http://nexo.io",
+          "description": "NEXO (NEXO) is a compliant token that is backed by the underlying assets of Nexo’s loan portfolio.",
+          "explorer": "https://etherscan.io/token/0xB62132e35a6c13ee1EE0f84dC5d40bad8d815206",
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/nexofinance/NEXO-Token/"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/NexoFinance"
+            },
+            {
+              "name": "blog",
+              "url": "https://medium.com/nexo"
+            },
+            {
+              "name": "facebook",
+              "url": "https://facebook.com/NexoFinance"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/nexofinance"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://nexo.io/assets/downloads/Nexo-Whitepaper.pdf?=a"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/nexo/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xB62132e35a6c13ee1EE0f84dC5d40bad8d815206/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "binance",
+          "address": "NEXO-A84",
+          "assetId": "c714_tNEXO-A84",
+          "name": "Nexo",
+          "symbol": "NEXO",
+          "type": "BEP2",
+          "decimals": 8,
+          "status": "active",
+          "website": "http://nexo.io",
+          "description": "NEXO (NEXO) is a compliant token that is backed by the underlying assets of Nexo’s loan portfolio.",
+          "explorer": "https://explorer.binance.org/asset/NEXO-A84",
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/nexofinance/NEXO-Token/"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/NexoFinance"
+            },
+            {
+              "name": "blog",
+              "url": "https://medium.com/nexo"
+            },
+            {
+              "name": "facebook",
+              "url": "https://facebook.com/NexoFinance"
+            },
+            {
+              "name": "telegram",
+              "url": "https://t.me/nexofinance"
+            },
+            {
+              "name": "whitepaper",
+              "url": "https://nexo.io/assets/downloads/Nexo-Whitepaper.pdf?=a"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/nexo/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/binance/assets/NEXO-A84/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 83,
+      "source": "coingecko",
+      "coingeckoId": "bianrensheng",
+      "symbol": "币安人生",
+      "name": "币安人生 (BinanceLife)",
+      "marketCapRank": 83,
+      "marketCap": 711132309,
+      "totalVolume": 13566707,
+      "currentPrice": 0.711144,
+      "lastUpdated": "2026-06-25T08:41:37.223Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 84,
+      "source": "coingecko",
+      "coingeckoId": "just",
+      "symbol": "JST",
+      "name": "JUST",
+      "marketCapRank": 84,
+      "marketCap": 699315224,
+      "totalVolume": 26306547,
+      "currentPrice": 0.081848,
+      "lastUpdated": "2026-06-25T08:41:41.709Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "tron",
+          "address": "TCFLL5dx5ZJdKnWuesXxi1VPwjLVmWZZy9",
+          "assetId": "c195_tTCFLL5dx5ZJdKnWuesXxi1VPwjLVmWZZy9",
+          "name": "JUST",
+          "symbol": "JST",
+          "type": "TRC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://just.network",
+          "description": "JUST aims to build a fair, decentralized financial system that provides stablecoin lending and governance mechanisms for users around the world.",
+          "explorer": "https://tronscan.io/#/token20/TCFLL5dx5ZJdKnWuesXxi1VPwjLVmWZZy9",
+          "research": "https://research.binance.com/en/projects/just",
+          "tags": [
+            "defi"
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/tron/assets/TCFLL5dx5ZJdKnWuesXxi1VPwjLVmWZZy9/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 85,
+      "source": "coingecko",
+      "coingeckoId": "gatechain-token",
+      "symbol": "GT",
+      "name": "Gate",
+      "marketCapRank": 85,
+      "marketCap": 692920314,
+      "totalVolume": 3750056,
+      "currentPrice": 6.51,
+      "lastUpdated": "2026-06-25T08:41:38.176Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "ethereum",
+          "address": "0xE66747a101bFF2dBA3697199DCcE5b743b454759",
+          "assetId": "c60_t0xE66747a101bFF2dBA3697199DCcE5b743b454759",
+          "name": "Gatechain Token",
+          "symbol": "GT",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://gatechain.io",
+          "description": "GateChain is a public blockchain dedicated to blockchain asset safety even after private keys are compromised.",
+          "explorer": "https://etherscan.io/token/0xE66747a101bFF2dBA3697199DCcE5b743b454759",
+          "links": [
+            {
+              "name": "github",
+              "url": "https://github.com/gatechain"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/gatechain_io/photo"
+            },
+            {
+              "name": "blog",
+              "url": "https://medium.com/@gatechain"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/gatechain-token/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xE66747a101bFF2dBA3697199DCcE5b743b454759/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 86,
+      "source": "coingecko",
+      "coingeckoId": "janus-henderson-anemoy-aaa-clo-fund",
+      "symbol": "JAAA",
+      "name": "Janus Henderson Anemoy AAA CLO Fund",
+      "marketCapRank": 86,
+      "marketCap": 681505936,
+      "currentPrice": 1.039,
+      "lastUpdated": "2026-06-25T08:30:14.370Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 87,
       "source": "coingecko",
       "coingeckoId": "beldex",
       "symbol": "BDX",
       "name": "Beldex",
-      "marketCapRank": 90,
-      "marketCap": 621869569,
-      "totalVolume": 10044501,
-      "currentPrice": 0.080361,
-      "lastUpdated": "2026-06-21T03:26:45.778Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 87,
+      "marketCap": 658063720,
+      "totalVolume": 12542549,
+      "currentPrice": 0.085249,
+      "lastUpdated": "2026-06-25T08:41:47.320Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "smartchain",
@@ -8974,17 +8889,102 @@
       ]
     },
     {
+      "rank": 88,
+      "source": "coingecko",
+      "coingeckoId": "venice-token",
+      "symbol": "VVV",
+      "name": "Venice Token",
+      "marketCapRank": 88,
+      "marketCap": 629500443,
+      "totalVolume": 31711800,
+      "currentPrice": 13.4,
+      "lastUpdated": "2026-06-25T08:41:48.103Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "base",
+          "address": "0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+          "assetId": "c8453_t0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+          "name": "Venice",
+          "symbol": "VVV",
+          "type": "BASE",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://venice.ai/",
+          "description": "The Venice token (VVV) is an access key for AI agents and developers to consume private, uncensored inference through the Venice API, without paying per request.",
+          "explorer": "https://basescan.org/token/0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf",
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/AskVenice"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/venice-token/"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0xacfE6019Ed1A7Dc6f7B508C02d1b04ec88cC21bf/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
+      "rank": 89,
+      "source": "coingecko",
+      "coingeckoId": "flare-networks",
+      "symbol": "FLR",
+      "name": "Flare",
+      "marketCapRank": 89,
+      "marketCap": 607164379,
+      "totalVolume": 3638638,
+      "currentPrice": 0.00701261,
+      "lastUpdated": "2026-06-25T08:41:44.146Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 90,
+      "source": "coingecko",
+      "coingeckoId": "filecoin",
+      "symbol": "FIL",
+      "name": "Filecoin",
+      "marketCapRank": 90,
+      "marketCap": 597808353,
+      "totalVolume": 92414874,
+      "currentPrice": 0.755678,
+      "lastUpdated": "2026-06-25T08:41:42.077Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": [
+        {
+          "chain": "filecoin",
+          "address": "",
+          "assetId": "c461",
+          "name": "Filecoin",
+          "symbol": "FIL",
+          "type": "coin",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://filecoin.io",
+          "description": "Filecoin provides a blockchain-based marketplace that aims to revolutionize the global storage economy.",
+          "explorer": "https://filfox.info/",
+          "research": "https://research.binance.com/en/projects/filecoin",
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/filecoin/info/logo.png",
+          "logoExists": true
+        }
+      ]
+    },
+    {
       "rank": 91,
       "source": "coingecko",
       "coingeckoId": "gho",
       "symbol": "GHO",
       "name": "GHO",
       "marketCapRank": 91,
-      "marketCap": 597867605,
-      "totalVolume": 3208890,
-      "currentPrice": 0.99812,
-      "lastUpdated": "2026-06-21T03:26:52.114Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 597746480,
+      "totalVolume": 5378776,
+      "currentPrice": 0.997822,
+      "lastUpdated": "2026-06-25T08:41:44.539Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -9016,42 +9016,42 @@
     {
       "rank": 92,
       "source": "coingecko",
-      "coingeckoId": "xdce-crowd-sale",
-      "symbol": "XDC",
-      "name": "XDC Network",
+      "coingeckoId": "spiko-amundi-overnight-swap-fund-eur",
+      "symbol": "EURSAFO",
+      "name": "Spiko Amundi Overnight Swap Fund (EUR)",
       "marketCapRank": 92,
-      "marketCap": 590144248,
-      "totalVolume": 5957505,
-      "currentPrice": 0.02958558,
-      "lastUpdated": "2026-06-21T03:26:44.386Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 593239749,
+      "currentPrice": 1.14,
+      "lastUpdated": "2026-06-25T08:20:02.937Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": []
     },
     {
       "rank": 93,
       "source": "coingecko",
-      "coingeckoId": "ylds",
-      "symbol": "YLDS",
-      "name": "YLDS",
+      "coingeckoId": "xdce-crowd-sale",
+      "symbol": "XDC",
+      "name": "XDC Network",
       "marketCapRank": 93,
-      "marketCap": 574882566,
-      "totalVolume": 1356022,
-      "currentPrice": 0.999799,
-      "lastUpdated": "2026-06-21T03:26:46.735Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 573369446,
+      "totalVolume": 11017437,
+      "currentPrice": 0.02874664,
+      "lastUpdated": "2026-06-25T08:41:44.264Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": []
     },
     {
       "rank": 94,
       "source": "coingecko",
-      "coingeckoId": "spiko-amundi-overnight-swap-fund-eur",
-      "symbol": "EURSAFO",
-      "name": "Spiko Amundi Overnight Swap Fund (EUR)",
+      "coingeckoId": "ylds",
+      "symbol": "YLDS",
+      "name": "YLDS",
       "marketCapRank": 94,
-      "marketCap": 567556674,
-      "currentPrice": 1.15,
-      "lastUpdated": "2026-06-21T03:20:02.073Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 564062455,
+      "totalVolume": 11848350,
+      "currentPrice": 0.999811,
+      "lastUpdated": "2026-06-25T08:41:49.071Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": []
     },
     {
@@ -9061,11 +9061,11 @@
       "symbol": "USD0",
       "name": "Usual USD",
       "marketCapRank": 95,
-      "marketCap": 553144586,
-      "totalVolume": 918981,
-      "currentPrice": 0.999216,
-      "lastUpdated": "2026-06-21T03:26:45.392Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCap": 552990889,
+      "totalVolume": 817432,
+      "currentPrice": 0.998938,
+      "lastUpdated": "2026-06-25T08:41:46.183Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -9104,15 +9104,43 @@
     {
       "rank": 96,
       "source": "coingecko",
+      "coingeckoId": "adi-token",
+      "symbol": "ADI",
+      "name": "ADI",
+      "marketCapRank": 96,
+      "marketCap": 548249776,
+      "totalVolume": 5191546,
+      "currentPrice": 4.38,
+      "lastUpdated": "2026-06-25T08:41:50.273Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 97,
+      "source": "coingecko",
+      "coingeckoId": "midnight-3",
+      "symbol": "NIGHT",
+      "name": "Midnight",
+      "marketCapRank": 97,
+      "marketCap": 532902422,
+      "totalVolume": 12494697,
+      "currentPrice": 0.03209066,
+      "lastUpdated": "2026-06-25T08:41:37.753Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
+    },
+    {
+      "rank": 98,
+      "source": "coingecko",
       "coingeckoId": "aptos",
       "symbol": "APT",
       "name": "Aptos",
-      "marketCapRank": 96,
-      "marketCap": 545672740,
-      "totalVolume": 39108543,
-      "currentPrice": 0.655729,
-      "lastUpdated": "2026-06-21T03:26:44.306Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
+      "marketCapRank": 98,
+      "marketCap": 529048012,
+      "totalVolume": 60318763,
+      "currentPrice": 0.635655,
+      "lastUpdated": "2026-06-25T08:41:45.564Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
       "assets": [
         {
           "chain": "aptos",
@@ -9158,153 +9186,32 @@
       ]
     },
     {
-      "rank": 97,
-      "source": "coingecko",
-      "coingeckoId": "midnight-3",
-      "symbol": "NIGHT",
-      "name": "Midnight",
-      "marketCapRank": 97,
-      "marketCap": 543191884,
-      "totalVolume": 10905403,
-      "currentPrice": 0.03279164,
-      "lastUpdated": "2026-06-21T03:26:47.738Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
-      "rank": 98,
-      "source": "coingecko",
-      "coingeckoId": "hash-2",
-      "symbol": "HASH",
-      "name": "Provenance Blockchain",
-      "marketCapRank": 98,
-      "marketCap": 541858889,
-      "totalVolume": 5406.34,
-      "currentPrice": 0.00995937,
-      "lastUpdated": "2026-06-21T03:26:46.579Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": []
-    },
-    {
       "rank": 99,
       "source": "coingecko",
-      "coingeckoId": "arbitrum",
-      "symbol": "ARB",
-      "name": "Arbitrum",
+      "coingeckoId": "usx",
+      "symbol": "USX",
+      "name": "USX",
       "marketCapRank": 99,
-      "marketCap": 533955526,
-      "totalVolume": 28483568,
-      "currentPrice": 0.08401,
-      "lastUpdated": "2026-06-21T03:26:43.819Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "arbitrum",
-          "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
-          "assetId": "c10042221_t0x912CE59144191C1204E64559FE8253a0e49E6548",
-          "name": "Arbitrum",
-          "symbol": "ARB",
-          "type": "ARBITRUM",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://arbitrum.foundation/",
-          "description": "$ARB tokens can be used to vote on Arbitrum DAO governance proposals, allowing $ARB holders to collectively shape the future of Arbitrum protocols and chains. Token holders can also delegate their voting power to delegates.",
-          "explorer": "https://arbiscan.io/token/0x912ce59144191c1204e64559fe8253a0e49e6548",
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/arbitrum"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://docs.arbitrum.foundation/deployment-addresses"
-            },
-            {
-              "name": "discord",
-              "url": "https://discord.com/arbitrum"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/ru/currencies/arbitrum-iou/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/arbitrum/assets/0x912CE59144191C1204E64559FE8253a0e49E6548/logo.png",
-          "logoExists": true
-        },
-        {
-          "chain": "ethereum",
-          "address": "0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1",
-          "assetId": "c60_t0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1",
-          "name": "Arbitrum",
-          "symbol": "ARB",
-          "type": "ERC20",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://arbitrum.foundation/",
-          "description": "$ARB tokens can be used to vote on Arbitrum DAO governance proposals, allowing $ARB holders to collectively shape the future of Arbitrum protocols and chains. Token holders can also delegate their voting power to delegates.",
-          "explorer": "https://etherscan.io/token/0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1",
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/arbitrum"
-            },
-            {
-              "name": "whitepaper",
-              "url": "https://docs.arbitrum.foundation/deployment-addresses"
-            },
-            {
-              "name": "discord",
-              "url": "https://discord.com/arbitrum"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/ru/currencies/arbitrum-iou/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1/logo.png",
-          "logoExists": true
-        }
-      ]
+      "marketCap": 505196145,
+      "totalVolume": 1080980,
+      "currentPrice": 0.999384,
+      "lastUpdated": "2026-06-25T08:41:49.901Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
     },
     {
       "rank": 100,
       "source": "coingecko",
-      "coingeckoId": "aerodrome-finance",
-      "symbol": "AERO",
-      "name": "Aerodrome Finance",
+      "coingeckoId": "hash-2",
+      "symbol": "HASH",
+      "name": "Provenance Blockchain",
       "marketCapRank": 100,
-      "marketCap": 523108807,
-      "totalVolume": 59174448,
-      "currentPrice": 0.549368,
-      "lastUpdated": "2026-06-21T03:26:53.647Z",
-      "updatedAt": "2026-06-21T03:27:57Z",
-      "assets": [
-        {
-          "chain": "base",
-          "address": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
-          "assetId": "c8453_t0x940181a94A35A4569E4529A3CDfB74e38FD98631",
-          "name": "Aerodrome",
-          "symbol": "AERO",
-          "type": "BASE",
-          "decimals": 18,
-          "status": "active",
-          "website": "https://aerodrome.finance/",
-          "description": "Aerodrome Finance is a next-generation AMM designed to serve as Base's central liquidity hub, combining a powerful liquidity incentive engine, vote-lock governance model, and friendly user experience.",
-          "explorer": "https://basescan.org/token/0x940181a94a35a4569e4529a3cdfb74e38fd98631",
-          "links": [
-            {
-              "name": "x",
-              "url": "https://x.com/AerodromeFi"
-            },
-            {
-              "name": "coinmarketcap",
-              "url": "https://coinmarketcap.com/currencies/aerodrome-finance/"
-            }
-          ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0x940181a94A35A4569E4529A3CDfB74e38FD98631/logo.png",
-          "logoExists": true
-        }
-      ]
+      "marketCap": 505093682,
+      "totalVolume": 8325.24,
+      "currentPrice": 0.00925644,
+      "lastUpdated": "2026-06-25T08:41:48.738Z",
+      "updatedAt": "2026-06-25T08:42:54Z",
+      "assets": []
     }
   ]
 }
