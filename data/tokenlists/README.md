@@ -1,6 +1,7 @@
 # Homepage Tokenlist
 
 `build_homepage.py` builds `out/homepage.json` from the local Trust Wallet `blockchains/*` data.
+`out/homepage.json` is committed back to the repo so it can be fetched directly via GitHub raw URL.
 
 ## Manual overrides
 
@@ -90,8 +91,7 @@ When manual inline JSON is provided, the workflow:
 
 1. merges it into `homepage_overrides.json`
 2. rebuilds `out/homepage.json`
-3. commits `homepage_overrides.json` back to the repo
-4. uploads `out/homepage.json` as a workflow artifact
+3. commits both `homepage_overrides.json` and `out/homepage.json` back to the repo
 
 If no manual override is provided, the manually triggered workflow just rebuilds
 `out/homepage.json` from Trust Wallet assets plus any existing saved overrides.

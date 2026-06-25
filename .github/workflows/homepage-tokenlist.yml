@@ -23,10 +23,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -42,22 +42,16 @@ jobs:
           python3 -m json.tool data/tokenlists/homepage_overrides.json >/dev/null
           python3 -m json.tool data/tokenlists/out/homepage.json >/dev/null
 
-      - name: Commit homepage overrides
+      - name: Commit homepage files
         env:
           HOMEPAGE_INLINE_OVERRIDES_JSON: ${{ github.event.inputs.inline_overrides_json || '' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/tokenlists/homepage_overrides.json
+          git add data/tokenlists/homepage_overrides.json data/tokenlists/out/homepage.json
           if git diff --cached --quiet; then
-            echo "No homepage override changes to commit."
+            echo "No homepage tokenlist changes to commit."
             exit 0
           fi
-          git commit -m "chore: update homepage overrides"
+          git commit -m "chore: update homepage tokenlist"
           git push
-
-      - name: Upload homepage artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: homepage-tokenlist
-          path: data/tokenlists/out/homepage.json

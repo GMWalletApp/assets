@@ -2,5 +2,6 @@
 _cache/
 out/*
 !out/.gitkeep
+!out/homepage.json
 __pycache__/
 *.pyc
