@@ -1,6 +1,6 @@
 {
   "source": "defillama",
-  "updatedAt": "2026-06-25T08:42:55Z",
+  "updatedAt": "2026-06-25T08:57:39Z",
   "assets": [
     {
       "rank": 1,
@@ -141,7 +141,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "aptos",
@@ -1247,7 +1247,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "algorand",
@@ -2593,7 +2593,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -2733,7 +2733,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -3318,7 +3318,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "aptos",
@@ -3510,7 +3510,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -3590,7 +3590,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -3613,7 +3613,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -3633,7 +3633,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -3708,7 +3708,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -3803,7 +3803,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -3917,7 +3917,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -3936,7 +3936,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4042,7 +4042,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4082,7 +4082,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "smartchain",
@@ -4132,7 +4132,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4170,7 +4170,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -4186,7 +4186,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4229,7 +4229,7 @@
       ],
       "pegType": "peggedRUB",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4321,7 +4321,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -4338,7 +4338,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4387,7 +4387,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -4412,7 +4412,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "avalanchec",
@@ -4702,7 +4702,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "avalanchec",
@@ -4827,7 +4827,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -4848,7 +4848,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -4964,7 +4964,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -4980,7 +4980,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -4996,7 +4996,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5030,7 +5030,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5072,7 +5072,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "avalanchec",
@@ -5225,7 +5225,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5243,7 +5243,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "plasma",
@@ -5299,7 +5299,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -5341,7 +5341,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5370,7 +5370,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -5526,7 +5526,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -5695,7 +5695,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5711,7 +5711,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5737,7 +5737,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5752,7 +5752,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5768,7 +5768,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5783,7 +5783,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5799,7 +5799,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "smartchain",
@@ -5858,7 +5858,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "sonic",
@@ -5896,7 +5896,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5913,7 +5913,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5929,7 +5929,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5946,7 +5946,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5967,7 +5967,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -5984,7 +5984,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6007,7 +6007,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "optimism",
@@ -6049,7 +6049,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6065,7 +6065,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6081,7 +6081,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "smartchain",
@@ -6128,7 +6128,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6144,7 +6144,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6161,7 +6161,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6177,7 +6177,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6192,7 +6192,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6209,7 +6209,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6226,7 +6226,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -6269,7 +6269,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6285,7 +6285,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6302,7 +6302,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6318,7 +6318,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6335,7 +6335,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6358,7 +6358,7 @@
       ],
       "pegType": "peggedCHF",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6375,7 +6375,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -6432,7 +6432,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6480,7 +6480,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -6778,7 +6778,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6794,7 +6794,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6812,7 +6812,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6828,7 +6828,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6846,7 +6846,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6865,7 +6865,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -6969,7 +6969,7 @@
       ],
       "pegType": "peggedGBP",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -6991,7 +6991,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7010,7 +7010,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -7056,7 +7056,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -7103,7 +7103,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7128,7 +7128,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -7167,7 +7167,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7185,7 +7185,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7202,7 +7202,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7218,7 +7218,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7237,7 +7237,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7256,7 +7256,7 @@
       ],
       "pegType": "peggedREAL",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7272,7 +7272,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7290,7 +7290,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7309,7 +7309,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7325,7 +7325,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7342,7 +7342,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7358,7 +7358,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7377,7 +7377,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7401,7 +7401,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7419,7 +7419,7 @@
       ],
       "pegType": "peggedJPY",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7434,7 +7434,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7451,7 +7451,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7469,7 +7469,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7485,7 +7485,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -7501,7 +7501,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "fantom",
@@ -7628,7 +7628,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "celo",
@@ -7693,7 +7693,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -7792,7 +7792,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "monad",
@@ -7846,7 +7846,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8016,7 +8016,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8032,7 +8032,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8048,7 +8048,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8064,7 +8064,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "blast",
@@ -8107,7 +8107,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8123,7 +8123,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8145,7 +8145,7 @@
       ],
       "pegType": "peggedSGD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8230,7 +8230,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8246,7 +8246,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8262,7 +8262,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8279,7 +8279,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8295,7 +8295,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8311,7 +8311,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8327,7 +8327,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8342,7 +8342,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8365,7 +8365,7 @@
       ],
       "pegType": "peggedAUD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8384,7 +8384,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8400,7 +8400,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8417,7 +8417,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8472,7 +8472,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8488,7 +8488,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8505,7 +8505,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8526,7 +8526,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8564,7 +8564,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8583,7 +8583,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8602,7 +8602,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8619,7 +8619,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8635,7 +8635,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8657,7 +8657,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8673,7 +8673,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8718,7 +8718,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8771,7 +8771,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8793,7 +8793,7 @@
       ],
       "pegType": "peggedTRY",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8826,7 +8826,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8845,7 +8845,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -8924,7 +8924,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8940,7 +8940,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8956,7 +8956,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8974,7 +8974,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -8990,7 +8990,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9007,7 +9007,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9024,7 +9024,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9039,7 +9039,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9060,7 +9060,7 @@
       ],
       "pegType": "peggedARS",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "base",
@@ -9217,7 +9217,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9233,7 +9233,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9249,7 +9249,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "solana",
@@ -9291,7 +9291,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -9329,7 +9329,7 @@
       ],
       "pegType": "peggedPHP",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9347,7 +9347,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9365,7 +9365,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -9407,7 +9407,7 @@
       ],
       "pegType": "peggedCNY",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9422,7 +9422,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9438,7 +9438,7 @@
         "Rootstock"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9454,7 +9454,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9480,7 +9480,7 @@
       ],
       "pegType": "peggedCHF",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9498,7 +9498,7 @@
       ],
       "pegType": "peggedAUD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9516,7 +9516,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9533,7 +9533,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9549,7 +9549,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9575,7 +9575,7 @@
         "Polygon"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9591,7 +9591,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "smartchain",
@@ -9648,7 +9648,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9664,7 +9664,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9680,7 +9680,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9700,7 +9700,7 @@
       ],
       "pegType": "peggedJPY",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -9824,7 +9824,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9847,7 +9847,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9863,7 +9863,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9882,7 +9882,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "celo",
@@ -9943,7 +9943,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -9967,7 +9967,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -10148,7 +10148,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10167,7 +10167,7 @@
       ],
       "pegType": "peggedCAD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10183,7 +10183,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10199,7 +10199,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10215,7 +10215,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10236,7 +10236,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10256,7 +10256,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10270,7 +10270,7 @@
         "EthereumPoW"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10286,7 +10286,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10302,7 +10302,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10323,7 +10323,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10339,7 +10339,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10354,7 +10354,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10374,7 +10374,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10392,7 +10392,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -10424,7 +10424,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10439,7 +10439,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10454,7 +10454,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10476,7 +10476,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -10512,7 +10512,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10536,7 +10536,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10551,7 +10551,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10566,7 +10566,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10582,7 +10582,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "arbitrum",
@@ -10763,7 +10763,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10778,7 +10778,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10795,7 +10795,7 @@
       ],
       "pegType": "peggedCAD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10811,7 +10811,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10827,7 +10827,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10843,7 +10843,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "sonic",
@@ -10884,7 +10884,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10900,7 +10900,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10916,7 +10916,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10933,7 +10933,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10949,7 +10949,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10964,7 +10964,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10980,7 +10980,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -10996,7 +10996,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11020,7 +11020,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11036,7 +11036,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11052,7 +11052,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11070,7 +11070,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11086,7 +11086,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11102,7 +11102,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11118,7 +11118,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11137,7 +11137,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11158,7 +11158,7 @@
       ],
       "pegType": "peggedREAL",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "base",
@@ -11317,7 +11317,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11332,7 +11332,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11354,7 +11354,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11370,7 +11370,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11384,7 +11384,7 @@
         "Karura"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11400,7 +11400,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11417,7 +11417,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11433,7 +11433,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11449,7 +11449,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11466,7 +11466,7 @@
       ],
       "pegType": "peggedGBP",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11482,7 +11482,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11498,7 +11498,7 @@
       ],
       "pegType": "peggedJPY",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11514,7 +11514,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11530,7 +11530,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11546,7 +11546,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11578,7 +11578,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11600,7 +11600,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11615,7 +11615,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11631,7 +11631,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "solana",
@@ -11680,7 +11680,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11695,7 +11695,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11711,7 +11711,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11729,7 +11729,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11745,7 +11745,7 @@
       ],
       "pegType": "peggedREAL",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "celo",
@@ -11810,7 +11810,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11825,7 +11825,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11842,7 +11842,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11859,7 +11859,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11875,7 +11875,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11891,7 +11891,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11907,7 +11907,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11921,7 +11921,7 @@
         "Ergo"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11937,7 +11937,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "tezos",
@@ -11978,7 +11978,7 @@
         "OP Mainnet"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -11993,7 +11993,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12012,7 +12012,7 @@
       ],
       "pegType": "peggedGBP",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12027,7 +12027,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12043,7 +12043,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12059,7 +12059,7 @@
       ],
       "pegType": "peggedKES",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "celo",
@@ -12116,7 +12116,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12131,7 +12131,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12147,7 +12147,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12162,7 +12162,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12182,7 +12182,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12203,7 +12203,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12220,7 +12220,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12237,7 +12237,7 @@
       ],
       "pegType": "peggedCHF",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12253,7 +12253,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12269,7 +12269,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12285,7 +12285,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12301,7 +12301,7 @@
       ],
       "pegType": "peggedPHP",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "celo",
@@ -12358,7 +12358,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12374,7 +12374,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12390,7 +12390,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12406,7 +12406,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12422,7 +12422,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "tron",
@@ -12453,7 +12453,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12468,7 +12468,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12484,7 +12484,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12499,7 +12499,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12520,7 +12520,7 @@
       ],
       "pegType": "peggedCLP",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "base",
@@ -12677,7 +12677,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12695,7 +12695,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12711,7 +12711,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12726,7 +12726,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12742,7 +12742,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12758,7 +12758,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -12779,7 +12779,7 @@
       ],
       "pegType": "peggedMXN",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "base",
@@ -12941,7 +12941,7 @@
       ],
       "pegType": "peggedCOP",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "base",
@@ -13098,7 +13098,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13113,7 +13113,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13129,7 +13129,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13146,7 +13146,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13161,7 +13161,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13177,7 +13177,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13193,7 +13193,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13209,7 +13209,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13225,7 +13225,7 @@
       ],
       "pegType": "peggedZAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "celo",
@@ -13283,7 +13283,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13297,7 +13297,7 @@
         "Cardano"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13313,7 +13313,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13329,7 +13329,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13350,7 +13350,7 @@
       ],
       "pegType": "peggedPEN",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "base",
@@ -13509,7 +13509,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13525,7 +13525,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13541,7 +13541,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13557,7 +13557,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13572,7 +13572,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13590,7 +13590,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13606,7 +13606,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13621,7 +13621,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13637,7 +13637,7 @@
       ],
       "pegType": "peggedGHS",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13653,7 +13653,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13668,7 +13668,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13684,7 +13684,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13704,7 +13704,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "optimism",
@@ -13809,7 +13809,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13826,7 +13826,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13844,7 +13844,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13859,7 +13859,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13876,7 +13876,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13891,7 +13891,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13907,7 +13907,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13922,7 +13922,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13938,7 +13938,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13953,7 +13953,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13969,7 +13969,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -13985,7 +13985,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14002,7 +14002,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14017,7 +14017,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14032,7 +14032,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14048,7 +14048,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14064,7 +14064,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14080,7 +14080,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14095,7 +14095,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14110,7 +14110,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14125,7 +14125,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14141,7 +14141,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14167,7 +14167,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14183,7 +14183,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14198,7 +14198,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14214,7 +14214,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14228,7 +14228,7 @@
         "Ethereum"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14244,7 +14244,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14260,7 +14260,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14275,7 +14275,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14291,7 +14291,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14307,7 +14307,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14322,7 +14322,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14337,7 +14337,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14352,7 +14352,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14367,7 +14367,7 @@
       ],
       "pegType": "peggedVAR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14383,7 +14383,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14397,7 +14397,7 @@
         "Scroll"
       ],
       "pegType": "peggedUSD",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14414,7 +14414,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14429,7 +14429,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14444,7 +14444,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14463,7 +14463,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "ethereum",
@@ -14527,7 +14527,7 @@
       ],
       "pegType": "peggedUSD",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "terra",
@@ -14576,7 +14576,7 @@
       ],
       "pegType": "peggedCNY",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14591,7 +14591,7 @@
       ],
       "pegType": "peggedUAH",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14606,7 +14606,7 @@
       ],
       "pegType": "peggedARS",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14623,7 +14623,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14640,7 +14640,7 @@
       ],
       "pegType": "peggedGBP",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14665,7 +14665,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "coingecko",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "solana",
@@ -14706,7 +14706,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14721,7 +14721,7 @@
       ],
       "pegType": "peggedCHF",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14739,7 +14739,7 @@
       ],
       "pegType": "peggedEUR",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14754,7 +14754,7 @@
       ],
       "pegType": "peggedMXN",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14771,7 +14771,7 @@
       ],
       "pegType": "peggedRUB",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14786,7 +14786,7 @@
       ],
       "pegType": "peggedREAL",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -14801,7 +14801,7 @@
       ],
       "pegType": "peggedCAD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "celo",
@@ -14857,7 +14857,7 @@
       ],
       "pegType": "peggedAUD",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "celo",
@@ -14913,7 +14913,7 @@
       ],
       "pegType": "peggedCOP",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "celo",
@@ -14970,7 +14970,7 @@
       ],
       "pegType": "peggedJPY",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "celo",
@@ -15026,7 +15026,7 @@
       ],
       "pegType": "peggedNGN",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": [
         {
           "chain": "celo",
@@ -15082,7 +15082,7 @@
       ],
       "pegType": "peggedXOF",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     },
     {
@@ -15100,7 +15100,7 @@
       ],
       "pegType": "peggedGBP",
       "priceSource": "defillama",
-      "updatedAt": "2026-06-25T08:42:55Z",
+      "updatedAt": "2026-06-25T08:57:39Z",
       "assets": null
     }
   ]
