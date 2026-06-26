@@ -25,6 +25,7 @@ type Config struct {
 	TokenListRulesPath           string
 	TokenListBaseOverridesPath   string
 	TokenListManualOverridesPath string
+	TokenListManualTokensPath    string
 	TokenListHotDefaultsPath     string
 	TokenListHotCurrentPath      string
 	VsCurrency                   string
@@ -51,6 +52,7 @@ const (
 	DefaultTokenListRulesPath           = "extensions/jsonrpc/config/tokenlist-rules.json"
 	DefaultTokenListBaseOverridesPath   = "extensions/jsonrpc/config/tokenlist-base-overrides.json"
 	DefaultTokenListManualOverridesPath = "extensions/jsonrpc/config/tokenlist-manual-overrides.json"
+	DefaultTokenListManualTokensPath    = "extensions/jsonrpc/config/tokenlist-manual-tokens.json"
 	DefaultTokenListHotDefaultsPath     = "extensions/jsonrpc/config/tokenlist-hot-defaults.json"
 	DefaultTokenListHotCurrentPath      = "extensions/jsonrpc/config/tokenlist-hot-current.json"
 )
@@ -90,6 +92,9 @@ func NewServer(config Config) *Server {
 	if config.TokenListManualOverridesPath == "" {
 		config.TokenListManualOverridesPath = DefaultTokenListManualOverridesPath
 	}
+	if config.TokenListManualTokensPath == "" {
+		config.TokenListManualTokensPath = DefaultTokenListManualTokensPath
+	}
 	if config.TokenListHotDefaultsPath == "" {
 		config.TokenListHotDefaultsPath = DefaultTokenListHotDefaultsPath
 	}
@@ -117,6 +122,7 @@ func NewServer(config Config) *Server {
 	config.TokenListRulesPath = resolveCachePath(config.Root, config.TokenListRulesPath)
 	config.TokenListBaseOverridesPath = resolveCachePath(config.Root, config.TokenListBaseOverridesPath)
 	config.TokenListManualOverridesPath = resolveCachePath(config.Root, config.TokenListManualOverridesPath)
+	config.TokenListManualTokensPath = resolveCachePath(config.Root, config.TokenListManualTokensPath)
 	config.TokenListHotDefaultsPath = resolveCachePath(config.Root, config.TokenListHotDefaultsPath)
 	config.TokenListHotCurrentPath = resolveCachePath(config.Root, config.TokenListHotCurrentPath)
 
@@ -131,6 +137,7 @@ func NewServer(config Config) *Server {
 		TokenListRulesPath:           config.TokenListRulesPath,
 		TokenListBaseOverridesPath:   config.TokenListBaseOverridesPath,
 		TokenListManualOverridesPath: config.TokenListManualOverridesPath,
+		TokenListManualTokensPath:    config.TokenListManualTokensPath,
 		TokenListHotDefaultsPath:     config.TokenListHotDefaultsPath,
 		TokenListHotCurrentPath:      config.TokenListHotCurrentPath,
 		VsCurrency:                   config.VsCurrency,

@@ -32,6 +32,7 @@ type SyncConfig struct {
 	TokenListRulesPath           string
 	TokenListBaseOverridesPath   string
 	TokenListManualOverridesPath string
+	TokenListManualTokensPath    string
 	TokenListHotDefaultsPath     string
 	TokenListHotCurrentPath      string
 	VsCurrency                   string
@@ -186,6 +187,20 @@ func (s *Syncer) SyncTokenList(ctx context.Context) error {
 	if err != nil {
 		return err
 	}
+	manualTokens, err := loadTokenListManualTokens(s.config.TokenListManualTokensPath)
+	if err != nil {
+		return err
+	}
+	localAssetKeys := make(map[string]struct{}, len(index.nativeAssets)+len(index.tokenAssets))
+	for _, asset := range index.NativeAssets() {
+		localAssetKeys[chainAddressKey(asset.Chain, asset.Address)] = struct{}{}
+	}
+	for _, asset := range index.TokenAssets() {
+		localAssetKeys[chainAddressKey(asset.Chain, asset.Address)] = struct{}{}
+	}
+	if err := validateTokenListManualTokens(s.store.root, manualTokens, localAssetKeys, true, s.config.TokenListManualTokensPath); err != nil {
+		return err
+	}
 	pairsByAssetID, err := s.store.TokenListPairsByAssetID()
 	if err != nil {
 		return err
@@ -215,14 +230,14 @@ func (s *Syncer) SyncTokenList(ctx context.Context) error {
 	}
 
 	now := time.Now().UTC().Format(time.RFC3339)
-	tokenList, report := s.buildAppTokenList(index, coingecko, coinList, stablecoins, pairsByAssetID, config, now)
+	tokenList, report := s.buildAppTokenList(index, coingecko, coinList, stablecoins, pairsByAssetID, config, manualTokens, now)
 	if err := writeJSONAtomic(s.config.TokenListCachePath, tokenList); err != nil {
 		return err
 	}
 	return writeJSONAtomic(s.config.TokenListReportPath, report)
 }
 
-func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDataset, coinList []coinGeckoListItem, stablecoins *defiLlamaStablecoinsResponse, pairsByAssetID map[string][]TokenPair, config *ResolvedTokenListConfig, now string) (*AppTokenList, *TokenListReport) {
+func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDataset, coinList []coinGeckoListItem, stablecoins *defiLlamaStablecoinsResponse, pairsByAssetID map[string][]TokenPair, config *ResolvedTokenListConfig, manualTokens []AppToken, now string) (*AppTokenList, *TokenListReport) {
 	report := &TokenListReport{
 		Source:    "trustwallet+coingecko",
 		UpdatedAt: now,
@@ -320,6 +335,20 @@ func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDatase
 		}
 		return strings.ToLower(tokens[i].Address) < strings.ToLower(tokens[j].Address)
 	})
+
+	for _, token := range manualTokens {
+		normalizeTokenListManualToken(&token)
+		tokens = append(tokens, token)
+		if token.Rank > 0 {
+			report.Market.RankedAssets++
+		}
+		if hasTag(token.Tags, "stablecoin") {
+			report.Stablecoin.TaggedAssets++
+		}
+		if token.Hot {
+			report.Hot.EnabledAssets++
+		}
+	}
 
 	report.Local.OutputTokens = len(tokens)
 	return &AppTokenList{

@@ -39,6 +39,7 @@ Common flags:
 --tokenlist-rules extensions/jsonrpc/config/tokenlist-rules.json
 --tokenlist-base-overrides extensions/jsonrpc/config/tokenlist-base-overrides.json
 --tokenlist-manual-overrides extensions/jsonrpc/config/tokenlist-manual-overrides.json
+--tokenlist-manual-tokens extensions/jsonrpc/config/tokenlist-manual-tokens.json
 --tokenlist-hot-defaults extensions/jsonrpc/config/tokenlist-hot-defaults.json
 --tokenlist-hot-current extensions/jsonrpc/config/tokenlist-hot-current.json
 --coingecko-vs-currency usd
@@ -88,6 +89,7 @@ The service also reads extension-local rules from:
 <assets-root>/extensions/jsonrpc/config/tokenlist-rules.json
 <assets-root>/extensions/jsonrpc/config/tokenlist-base-overrides.json
 <assets-root>/extensions/jsonrpc/config/tokenlist-manual-overrides.json
+<assets-root>/extensions/jsonrpc/config/tokenlist-manual-tokens.json
 <assets-root>/extensions/jsonrpc/config/tokenlist-hot-defaults.json
 <assets-root>/extensions/jsonrpc/config/tokenlist-hot-current.json
 ```
@@ -195,6 +197,8 @@ It is manual-only and supports:
 ```text
 override_upsert
 override_delete
+manual_token_upsert
+manual_token_delete
 hot_replace_current
 hot_add_current
 hot_remove_current
@@ -202,6 +206,8 @@ hot_reset_current
 ```
 
 Each config run updates the relevant config file, regenerates `tokenlist.json` and `tokenlist-report.json`, then commits both config and output.
+
+`manual_token_upsert` accepts a final token object, array, or `{ "tokens": [...] }` wrapper, but only supports `kind="token"`. Manual native assets are intentionally rejected. `manual_token_delete` reads only `chain` and `address`.
 
 ## Security Notes
 

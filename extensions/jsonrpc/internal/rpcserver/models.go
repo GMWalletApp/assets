@@ -287,6 +287,12 @@ type TokenListHotEntry struct {
 	Address string `json:"address,omitempty"`
 }
 
+type TokenListManualTokensFile struct {
+	Tokens []AppToken `json:"tokens"`
+}
+
+type TokenListManualTokens = TokenListManualTokensFile
+
 type rpcRequest struct {
 	JSONRPC string          `json:"jsonrpc"`
 	Method  string          `json:"method"`

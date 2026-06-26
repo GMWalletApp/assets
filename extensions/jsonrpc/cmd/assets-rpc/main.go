@@ -41,6 +41,7 @@ func main() {
 	flag.StringVar(&config.TokenListRulesPath, "tokenlist-rules", rpcserver.DefaultTokenListRulesPath, "tokenlist rules path, relative to --root unless absolute")
 	flag.StringVar(&config.TokenListBaseOverridesPath, "tokenlist-base-overrides", rpcserver.DefaultTokenListBaseOverridesPath, "tokenlist base overrides path, relative to --root unless absolute")
 	flag.StringVar(&config.TokenListManualOverridesPath, "tokenlist-manual-overrides", rpcserver.DefaultTokenListManualOverridesPath, "tokenlist manual overrides path, relative to --root unless absolute")
+	flag.StringVar(&config.TokenListManualTokensPath, "tokenlist-manual-tokens", rpcserver.DefaultTokenListManualTokensPath, "tokenlist manual tokens path, relative to --root unless absolute")
 	flag.StringVar(&config.TokenListHotDefaultsPath, "tokenlist-hot-defaults", rpcserver.DefaultTokenListHotDefaultsPath, "tokenlist default hot list path, relative to --root unless absolute")
 	flag.StringVar(&config.TokenListHotCurrentPath, "tokenlist-hot-current", rpcserver.DefaultTokenListHotCurrentPath, "tokenlist current hot list path, relative to --root unless absolute")
 	flag.StringVar(&config.VsCurrency, "coingecko-vs-currency", "usd", "CoinGecko quote currency")

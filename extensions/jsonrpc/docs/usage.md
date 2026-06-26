@@ -67,6 +67,7 @@ Default tokenlist config:
 extensions/jsonrpc/config/tokenlist-rules.json
 extensions/jsonrpc/config/tokenlist-base-overrides.json
 extensions/jsonrpc/config/tokenlist-manual-overrides.json
+extensions/jsonrpc/config/tokenlist-manual-tokens.json
 extensions/jsonrpc/config/tokenlist-hot-defaults.json
 extensions/jsonrpc/config/tokenlist-hot-current.json
 ```
@@ -89,6 +90,7 @@ https://raw.githubusercontent.com/<owner>/<repo>/<branch>/extensions/jsonrpc/dat
 - DefiLlama-derived `stablecoin` tag
 - top-level `hot: true|false` from hot config
 - base/manual override display and market binding
+- manual tokens appended from Action-managed final-token entries
 
 `tokenlist-report.json` records CoinGecko API inputs, local asset counts, market association counts, missing platform mappings, external contracts missing from this repository, filtered assets, and missing logos.
 
@@ -101,6 +103,7 @@ The tokenlist configuration is split by responsibility and never writes back to 
 - `tokenlist-rules.json`: generic mapping/tag/filter rules
 - `tokenlist-base-overrides.json`: long-lived override entries managed by PR
 - `tokenlist-manual-overrides.json`: Action-managed manual override entries
+- `tokenlist-manual-tokens.json`: Action-managed final token entries appended after generated assets; only `kind=token` is supported
 - `tokenlist-hot-defaults.json`: long-lived default hot entries managed by PR
 - `tokenlist-hot-current.json`: Action-managed current-period hot entries
 
@@ -217,12 +220,41 @@ Manual generation runs can override `sync_target` and `market_limit`. Push-trigg
 
 - `override_upsert`
 - `override_delete`
+- `manual_token_upsert`
+- `manual_token_delete`
 - `hot_replace_current`
 - `hot_add_current`
 - `hot_remove_current`
 - `hot_reset_current`
 
 It updates config files, regenerates `tokenlist.json` and `tokenlist-report.json`, then commits both config and generated output.
+
+Manual token example:
+
+```json
+{
+  "kind": "token",
+  "chain": "solana",
+  "address": "METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
+  "assetId": "solana:METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
+  "name": "Meteora",
+  "symbol": "MET",
+  "decimals": 6,
+  "status": "active",
+  "hot": true
+}
+```
+
+Delete uses only `chain` and `address`, for example:
+
+```json
+{
+  "chain": "solana",
+  "address": "METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL"
+}
+```
+
+`manual_token_upsert` only supports contract-token style entries with `kind: "token"`. Manual native assets are intentionally not supported because every valid chain already has a generated native asset.
 
 Generation workflow:
 

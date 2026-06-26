@@ -696,6 +696,7 @@ func TestApplyTokenListConfigOperationUpdatesManualOverridesAndHotCurrent(t *tes
 	overrideResult, err := ApplyTokenListConfigOperation(
 		root,
 		DefaultTokenListManualOverridesPath,
+		DefaultTokenListManualTokensPath,
 		DefaultTokenListHotCurrentPath,
 		TokenListConfigOperationOverrideUpsert,
 		`{"assetOverrides":[{"chain":"smartchain","address":"`+testUSDTAddress+`","displayName":"New Name","addTags":["manual-tag"]},{"chain":"plasma","address":"0x00000000000000000000000000000000000000aa","displaySymbol":"USDE"}]}`,
@@ -710,6 +711,7 @@ func TestApplyTokenListConfigOperationUpdatesManualOverridesAndHotCurrent(t *tes
 	hotResult, err := ApplyTokenListConfigOperation(
 		root,
 		DefaultTokenListManualOverridesPath,
+		DefaultTokenListManualTokensPath,
 		DefaultTokenListHotCurrentPath,
 		TokenListConfigOperationHotReplaceCurrent,
 		`{"tokens":[{"chain":"plasma","address":"0x00000000000000000000000000000000000000aa"},{"chain":"smartchain","address":""}]}`,
@@ -754,22 +756,55 @@ func TestApplyTokenListConfigOperationUpdatesManualOverridesAndHotCurrent(t *tes
 
 func TestApplyTokenListConfigOperationRejectsInvalidInput(t *testing.T) {
 	root := newFixtureRoot(t)
+	addNativeChain(t, root, "plasma", map[string]any{
+		"name":     "Plasma",
+		"symbol":   "XPL",
+		"type":     "coin",
+		"decimals": 18,
+		"status":   "active",
+	})
 
-	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationOverrideUpsert, `{"chain":"unknown","address":"0x1"}`); err == nil {
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationOverrideUpsert, `{"chain":"unknown","address":"0x1"}`); err == nil {
 		t.Fatal("expected unknown chain override to fail")
 	}
-	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationHotAddCurrent, `{"address":"0x1"}`); err == nil {
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenUpsert, `{"chain":"unknown","kind":"token","address":"0x1"}`); err == nil {
+		t.Fatal("expected unknown chain manual token to fail")
+	}
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenUpsert, `{"chain":"smartchain","kind":"token"}`); err == nil {
+		t.Fatal("expected token manual token without address to fail")
+	}
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenUpsert, `{"tokens":[{"chain":"plasma","kind":"token","address":"0x00000000000000000000000000000000000000aa"},{"chain":"plasma","kind":"token","address":"0x00000000000000000000000000000000000000aa"}]}`); err == nil {
+		t.Fatal("expected duplicate manual token payload to fail")
+	}
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenUpsert, `{"chain":"smartchain","kind":"token","address":"`+testUSDTAddress+`"}`); err == nil {
+		t.Fatal("expected manual token local asset conflict to fail")
+	}
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenUpsert, `{"chain":"plasma","kind":"native","assetId":"plasma"}`); err == nil {
+		t.Fatal("expected native manual token to be rejected")
+	}
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenDelete, `{"address":"0x1"}`); err == nil {
+		t.Fatal("expected manual token delete without chain to fail")
+	}
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationHotAddCurrent, `{"address":"0x1"}`); err == nil {
 		t.Fatal("expected hot token without chain to fail")
 	}
-	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationHotResetCurrent, `{"tokens":[]}`); err == nil {
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationHotResetCurrent, `{"tokens":[]}`); err == nil {
 		t.Fatal("expected hot_reset_current with payload to fail")
 	}
 }
 
 func TestApplyTokenListConfigOperationDeleteAddRemoveAndReset(t *testing.T) {
 	root := newFixtureRoot(t)
+	addNativeChain(t, root, "plasma", map[string]any{
+		"name":     "Plasma",
+		"symbol":   "XPL",
+		"type":     "coin",
+		"decimals": 18,
+		"status":   "active",
+	})
 
 	manualPath := filepath.Join(root, DefaultTokenListManualOverridesPath)
+	manualTokensPath := filepath.Join(root, DefaultTokenListManualTokensPath)
 	hotCurrentPath := filepath.Join(root, DefaultTokenListHotCurrentPath)
 	mustWriteJSON(t, manualPath, TokenListAssetOverridesFile{
 		AssetOverrides: []TokenListAssetOverride{
@@ -785,6 +820,15 @@ func TestApplyTokenListConfigOperationDeleteAddRemoveAndReset(t *testing.T) {
 			},
 		},
 	})
+	mustWriteJSON(t, manualTokensPath, TokenListManualTokensFile{
+		Tokens: []AppToken{{
+			Kind:    "token",
+			Chain:   "plasma",
+			Address: "0x00000000000000000000000000000000000000aa",
+			AssetID: "plasma:0x00000000000000000000000000000000000000aa",
+			Name:    "Delete Me",
+		}},
+	})
 	mustWriteJSON(t, hotCurrentPath, TokenListHotList{
 		Tokens: []TokenListHotEntry{{
 			Chain:   "smartchain",
@@ -792,7 +836,7 @@ func TestApplyTokenListConfigOperationDeleteAddRemoveAndReset(t *testing.T) {
 		}},
 	})
 
-	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationOverrideDelete, `{"chain":"smartchain","address":"0x00000000000000000000000000000000000000aa"}`); err != nil {
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationOverrideDelete, `{"chain":"smartchain","address":"0x00000000000000000000000000000000000000aa"}`); err != nil {
 		t.Fatalf("apply override delete: %v", err)
 	}
 	var manual TokenListAssetOverridesFile
@@ -803,7 +847,21 @@ func TestApplyTokenListConfigOperationDeleteAddRemoveAndReset(t *testing.T) {
 		t.Fatalf("expected override delete to keep only smartchain entry, got %+v", manual.AssetOverrides)
 	}
 
-	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationHotAddCurrent, `{"tokens":[{"chain":"smartchain","address":"`+testUSDTAddress+`"},{"chain":"smartchain","address":""}]}`); err != nil {
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenDelete, `{"chain":"plasma","address":"0x00000000000000000000000000000000000000aa"}`); err != nil {
+		t.Fatalf("apply manual token delete: %v", err)
+	}
+	var manualTokens TokenListManualTokensFile
+	if err := readJSONFile(manualTokensPath, &manualTokens); err != nil {
+		t.Fatalf("read manual tokens: %v", err)
+	}
+	if len(manualTokens.Tokens) != 0 {
+		t.Fatalf("expected manual token delete to clear file, got %+v", manualTokens.Tokens)
+	}
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenDelete, `{"chain":"plasma","address":"0x00000000000000000000000000000000000000aa"}`); err != nil {
+		t.Fatalf("apply idempotent manual token delete: %v", err)
+	}
+
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationHotAddCurrent, `{"tokens":[{"chain":"smartchain","address":"`+testUSDTAddress+`"},{"chain":"smartchain","address":""}]}`); err != nil {
 		t.Fatalf("apply hot add: %v", err)
 	}
 	var hotCurrent TokenListHotList
@@ -814,7 +872,7 @@ func TestApplyTokenListConfigOperationDeleteAddRemoveAndReset(t *testing.T) {
 		t.Fatalf("expected deduped hot current add result, got %+v", hotCurrent.Tokens)
 	}
 
-	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationHotRemoveCurrent, `{"chain":"smartchain","address":"`+testUSDTAddress+`"}`); err != nil {
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationHotRemoveCurrent, `{"chain":"smartchain","address":"`+testUSDTAddress+`"}`); err != nil {
 		t.Fatalf("apply hot remove: %v", err)
 	}
 	if err := readJSONFile(hotCurrentPath, &hotCurrent); err != nil {
@@ -824,7 +882,7 @@ func TestApplyTokenListConfigOperationDeleteAddRemoveAndReset(t *testing.T) {
 		t.Fatalf("expected only native hot entry to remain, got %+v", hotCurrent.Tokens)
 	}
 
-	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationHotResetCurrent, ""); err != nil {
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationHotResetCurrent, ""); err != nil {
 		t.Fatalf("apply hot reset: %v", err)
 	}
 	if err := readJSONFile(hotCurrentPath, &hotCurrent); err != nil {
@@ -832,6 +890,64 @@ func TestApplyTokenListConfigOperationDeleteAddRemoveAndReset(t *testing.T) {
 	}
 	if len(hotCurrent.Tokens) != 0 {
 		t.Fatalf("expected hot current to be cleared, got %+v", hotCurrent.Tokens)
+	}
+}
+
+func TestApplyTokenListConfigOperationUpsertsManualTokens(t *testing.T) {
+	root := newFixtureRoot(t)
+	addNativeChain(t, root, "plasma", map[string]any{
+		"name":     "Plasma",
+		"symbol":   "XPL",
+		"type":     "coin",
+		"decimals": 18,
+		"status":   "active",
+	})
+
+	manualTokensPath := filepath.Join(root, DefaultTokenListManualTokensPath)
+	mustWriteJSON(t, manualTokensPath, TokenListManualTokensFile{
+		Tokens: []AppToken{{
+			Kind:       "token",
+			Chain:      "plasma",
+			Address:    "0x00000000000000000000000000000000000000aa",
+			AssetID:    "plasma:0x00000000000000000000000000000000000000aa",
+			Name:       "Old Token",
+			Symbol:     "OLD",
+			Decimals:   18,
+			Status:     "active",
+			LogoURI:    "https://example.com/old.png",
+			LogoExists: true,
+		}},
+	})
+
+	result, err := ApplyTokenListConfigOperation(
+		root,
+		DefaultTokenListManualOverridesPath,
+		DefaultTokenListManualTokensPath,
+		DefaultTokenListHotCurrentPath,
+		TokenListConfigOperationManualTokenUpsert,
+		`{"tokens":[{"kind":"token","chain":"plasma","address":"0x00000000000000000000000000000000000000aa","assetId":"plasma:0x00000000000000000000000000000000000000aa","name":"New Token","symbol":"NEW","decimals":18,"status":"active","logoURI":"https://example.com/new.png","logoExists":true,"hot":true},{"kind":"token","chain":"plasma","address":"0x00000000000000000000000000000000000000bb","assetId":"plasma:0x00000000000000000000000000000000000000bb","name":"Second Token","symbol":"TWO","decimals":18,"status":"active","hot":false}]}`,
+	)
+	if err != nil {
+		t.Fatalf("apply manual token upsert: %v", err)
+	}
+	if result.ManualOverridesUpdated || !result.ManualTokensUpdated || result.HotCurrentUpdated {
+		t.Fatalf("expected only manual tokens to be updated, got %+v", result)
+	}
+
+	var manualTokens TokenListManualTokensFile
+	if err := readJSONFile(manualTokensPath, &manualTokens); err != nil {
+		t.Fatalf("read manual tokens: %v", err)
+	}
+	if len(manualTokens.Tokens) != 2 {
+		t.Fatalf("expected two manual tokens, got %+v", manualTokens.Tokens)
+	}
+	replaced := findAppToken(manualTokens.Tokens, "plasma", "0x00000000000000000000000000000000000000aa")
+	if replaced == nil || replaced.Name != "New Token" || replaced.Symbol != "NEW" || !replaced.Hot {
+		t.Fatalf("expected existing manual token to be replaced, got %+v", replaced)
+	}
+	second := findAppToken(manualTokens.Tokens, "plasma", "0x00000000000000000000000000000000000000bb")
+	if second == nil || second.Symbol != "TWO" {
+		t.Fatalf("expected new manual token to be appended, got %+v", manualTokens.Tokens)
 	}
 }
 
@@ -939,6 +1055,136 @@ func TestTokenListSyncAppliesManualOverridesAndHotList(t *testing.T) {
 	}
 	if len(report.Issues.MissingHotAssets) != 0 {
 		t.Fatalf("unexpected missing hot assets: %+v", report.Issues.MissingHotAssets)
+	}
+}
+
+func TestTokenListSyncAppendsManualTokens(t *testing.T) {
+	root := newFixtureRoot(t)
+	addNativeChain(t, root, "plasma", map[string]any{
+		"name":     "Plasma",
+		"symbol":   "XPL",
+		"type":     "coin",
+		"decimals": 18,
+		"status":   "active",
+	})
+	manualTokensPath := filepath.Join(root, DefaultTokenListManualTokensPath)
+	mustWriteJSON(t, manualTokensPath, TokenListManualTokensFile{
+		Tokens: []AppToken{{
+			Kind:       "token",
+			Chain:      "plasma",
+			Address:    "0x00000000000000000000000000000000000000aa",
+			AssetID:    "plasma:0x00000000000000000000000000000000000000aa",
+			Name:       "Manual USDM",
+			Symbol:     "USDM",
+			Decimals:   6,
+			Status:     "active",
+			LogoURI:    "https://example.com/usdm.png",
+			LogoExists: true,
+			Rank:       88,
+			Market: &AppTokenMarket{
+				Source:        "manual",
+				CoinGeckoID:   "manual-usdm",
+				MarketCapRank: 88,
+			},
+			Tags: []string{"stablecoin", "defi"},
+			Hot:  true,
+		}},
+	})
+
+	syncer := NewSyncer(NewStore(root, "https://cdn.example"), SyncConfig{
+		TokenListCachePath:        filepath.Join(root, "data", "tokenlist.json"),
+		TokenListReportPath:       filepath.Join(root, "data", "tokenlist-report.json"),
+		TokenListRulesPath:        filepath.Join(root, "extensions", "jsonrpc", "config", "tokenlist-rules.json"),
+		TokenListManualTokensPath: manualTokensPath,
+		CoinGeckoAPIKey:           "test-key",
+		CoinGeckoBaseURL:          "https://coingecko.test",
+		DefiLlamaBaseURL:          "https://defillama.test",
+	})
+	syncer.client = &http.Client{Transport: roundTripFunc(func(r *http.Request) (*http.Response, error) {
+		switch r.URL.Host + r.URL.Path {
+		case "coingecko.test/coins/markets":
+			return jsonResponse(`[]`), nil
+		case "coingecko.test/coins/list":
+			return jsonResponse(`[]`), nil
+		case "defillama.test/stablecoins":
+			return jsonResponse(`{"peggedAssets":[]}`), nil
+		default:
+			return &http.Response{StatusCode: http.StatusNotFound, Body: io.NopCloser(bytes.NewReader(nil)), Header: make(http.Header)}, nil
+		}
+	})}
+
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	if err := syncer.SyncTokenList(ctx); err != nil {
+		t.Fatalf("sync tokenlist: %v", err)
+	}
+
+	var tokenList AppTokenList
+	if err := readJSONFile(filepath.Join(root, "data", "tokenlist.json"), &tokenList); err != nil {
+		t.Fatalf("read tokenlist: %v", err)
+	}
+	manual := findAppToken(tokenList.Tokens, "plasma", "0x00000000000000000000000000000000000000aa")
+	if manual == nil || manual.Name != "Manual USDM" || manual.Market == nil || manual.Market.CoinGeckoID != "manual-usdm" || !manual.Hot || !hasTag(manual.Tags, "stablecoin") {
+		t.Fatalf("expected manual token to be appended verbatim, got %+v", manual)
+	}
+	if tokenList.Tokens[len(tokenList.Tokens)-1].Chain != "plasma" || !strings.EqualFold(tokenList.Tokens[len(tokenList.Tokens)-1].Address, "0x00000000000000000000000000000000000000aa") {
+		t.Fatalf("expected manual token to be appended after generated tokens, got %+v", tokenList.Tokens[len(tokenList.Tokens)-1])
+	}
+
+	var report TokenListReport
+	if err := readJSONFile(filepath.Join(root, "data", "tokenlist-report.json"), &report); err != nil {
+		t.Fatalf("read tokenlist report: %v", err)
+	}
+	if report.Local.OutputTokens != len(tokenList.Tokens) {
+		t.Fatalf("expected output token count to include manual tokens, got %+v", report.Local)
+	}
+	if report.Market.RankedAssets != 1 {
+		t.Fatalf("expected manual token rank to contribute to rankedAssets, got %+v", report.Market)
+	}
+	if report.Hot.EnabledAssets != 1 {
+		t.Fatalf("expected manual hot token to contribute to hot count, got %+v", report.Hot)
+	}
+}
+
+func TestTokenListSyncRejectsManualTokenLocalConflicts(t *testing.T) {
+	root := newFixtureRoot(t)
+	manualTokensPath := filepath.Join(root, DefaultTokenListManualTokensPath)
+	mustWriteJSON(t, manualTokensPath, TokenListManualTokensFile{
+		Tokens: []AppToken{{
+			Kind:    "token",
+			Chain:   "smartchain",
+			Address: testUSDTAddress,
+			AssetID: "manual-usdt",
+			Name:    "Manual USDT",
+		}},
+	})
+
+	syncer := NewSyncer(NewStore(root, "https://cdn.example"), SyncConfig{
+		TokenListCachePath:        filepath.Join(root, "data", "tokenlist.json"),
+		TokenListReportPath:       filepath.Join(root, "data", "tokenlist-report.json"),
+		TokenListRulesPath:        filepath.Join(root, "extensions", "jsonrpc", "config", "tokenlist-rules.json"),
+		TokenListManualTokensPath: manualTokensPath,
+		CoinGeckoAPIKey:           "test-key",
+		CoinGeckoBaseURL:          "https://coingecko.test",
+		DefiLlamaBaseURL:          "https://defillama.test",
+	})
+	syncer.client = &http.Client{Transport: roundTripFunc(func(r *http.Request) (*http.Response, error) {
+		switch r.URL.Host + r.URL.Path {
+		case "coingecko.test/coins/markets":
+			return jsonResponse(`[]`), nil
+		case "coingecko.test/coins/list":
+			return jsonResponse(`[]`), nil
+		case "defillama.test/stablecoins":
+			return jsonResponse(`{"peggedAssets":[]}`), nil
+		default:
+			return &http.Response{StatusCode: http.StatusNotFound, Body: io.NopCloser(bytes.NewReader(nil)), Header: make(http.Header)}, nil
+		}
+	})}
+
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	if err := syncer.SyncTokenList(ctx); err == nil || !strings.Contains(err.Error(), "conflicts with a local asset") {
+		t.Fatalf("expected manual token conflict to fail sync, got %v", err)
 	}
 }
 
