@@ -1,3 +1,26 @@
 {
-  "tokens": []
+  "tokens": [
+    {
+      "kind": "token",
+      "chain": "solana",
+      "hot": true,
+      "address": "METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
+      "assetId": "solana:METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL",
+      "name": "Meteora",
+      "symbol": "MET",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets.meteora.ag/met-token.svg",
+      "logoExists": true,
+      "tags": [
+        "defi"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://meteora.ag"
+        }
+      ]
+    }
+  ]
 }
