@@ -28,21 +28,14 @@ The service can run as a one-shot sync job without starting HTTP:
 COINGECKO_API_KEY=xxx make sync-once
 ```
 
-By default, `market.json` fetches up to 100 CoinGecko market rows before local asset matching, and `tokenlist.json` keeps assets with `rank <= 100`. To use a different market window or generate only one cache:
+By default, `market.json` and `tokenlist.json` use the top 1000 CoinGecko market rows for market enrichment. To use a different market window or generate only one cache:
 
 ```bash
 COINGECKO_API_KEY=xxx make sync-once SYNC_ARGS="--sync-target market --market-limit 250"
-make sync-once SYNC_ARGS="--sync-target stablecoins"
-COINGECKO_API_KEY=xxx make sync-once SYNC_ARGS="--sync-target tokenlist"
+COINGECKO_API_KEY=xxx make sync-once SYNC_ARGS="--sync-target tokenlist --market-limit 1000"
 ```
 
-To generate an app tokenlist containing only assets associated with the top 100 market rows:
-
-```bash
-COINGECKO_API_KEY=xxx make sync-once SYNC_ARGS="--sync-target tokenlist --market-limit 100 --tokenlist-max-rank 100"
-```
-
-`--market-limit` controls the CoinGecko market window used for `market.json`, `market` enrichment, and rank matching. `--tokenlist-max-rank` controls whether `tokenlist.json` keeps all active local assets or only assets with `rank <= N`; the default is `100`, and `0` keeps all active assets.
+`--market-limit` controls the CoinGecko market window used for `market.json` and tokenlist market enrichment. It does not trim the generated tokenlist; all local assets remain eligible unless filtered by `excludedStatuses`.
 
 CoinGecko Demo API is used by default:
 
@@ -64,15 +57,18 @@ Default output:
 
 ```text
 extensions/jsonrpc/data/market.json
-extensions/jsonrpc/data/stablecoins.json
 extensions/jsonrpc/data/tokenlist.json
 extensions/jsonrpc/data/tokenlist-report.json
 ```
 
-Default tokenlist rules:
+Default tokenlist config:
 
 ```text
 extensions/jsonrpc/config/tokenlist-rules.json
+extensions/jsonrpc/config/tokenlist-base-overrides.json
+extensions/jsonrpc/config/tokenlist-manual-overrides.json
+extensions/jsonrpc/config/tokenlist-hot-defaults.json
+extensions/jsonrpc/config/tokenlist-hot-current.json
 ```
 
 These JSON files are intentionally inside the repository tree, so they can be committed and read directly through GitHub Raw, a CDN, or a Worker.
@@ -81,24 +77,32 @@ Example raw URLs after pushing to GitHub:
 
 ```text
 https://raw.githubusercontent.com/<owner>/<repo>/<branch>/extensions/jsonrpc/data/market.json
-https://raw.githubusercontent.com/<owner>/<repo>/<branch>/extensions/jsonrpc/data/stablecoins.json
 https://raw.githubusercontent.com/<owner>/<repo>/<branch>/extensions/jsonrpc/data/tokenlist.json
 https://raw.githubusercontent.com/<owner>/<repo>/<branch>/extensions/jsonrpc/data/tokenlist-report.json
 ```
 
 `market.json` is generated from CoinGecko plus local Trust Wallet asset metadata.
 
-`stablecoins.json` is an independent DefiLlama ranking cache plus local Trust Wallet asset metadata.
+`tokenlist.json` is the app packaging list. It contains local native coins and contract tokens after status filtering, plus:
 
-`tokenlist.json` is the app packaging list. It contains active native coins and contract tokens with local name/symbol/decimals/logo metadata, ordered by CoinGecko market capitalization when a local asset can be associated with a CoinGecko market row.
+- CoinGecko `market` and `rank`
+- DefiLlama-derived `stablecoin` tag
+- top-level `hot: true|false` from hot config
+- base/manual override display and market binding
 
 `tokenlist-report.json` records CoinGecko API inputs, local asset counts, market association counts, missing platform mappings, external contracts missing from this repository, filtered assets, and missing logos.
 
-Generated files use local repository metadata as the source of truth. CoinGecko market data is used for ranking and market entity association, not as proof that a token is official, bridged, or supported for trading. `--sync-target` accepts `all`, `market`, `stablecoins`, or `tokenlist`; the default is `all`.
+Generated files use local repository metadata as the source of truth. CoinGecko market data is used for ranking and market entity association, not as proof that a token is official, bridged, or supported for trading. `--sync-target` accepts `all`, `market`, or `tokenlist`; the default is `all`.
 
 ## Tokenlist Rules
 
-`extensions/jsonrpc/config/tokenlist-rules.json` is an extension-local rules file. It is not part of upstream Trust Wallet asset metadata and it is never written back to `blockchains/**`. It only affects generated caches such as `tokenlist.json`, `market.json`, `stablecoins.json`, and diagnostics in `tokenlist-report.json`.
+The tokenlist configuration is split by responsibility and never writes back to `blockchains/**`:
+
+- `tokenlist-rules.json`: generic mapping/tag/filter rules
+- `tokenlist-base-overrides.json`: long-lived override entries managed by PR
+- `tokenlist-manual-overrides.json`: Action-managed manual override entries
+- `tokenlist-hot-defaults.json`: long-lived default hot entries managed by PR
+- `tokenlist-hot-current.json`: Action-managed current-period hot entries
 
 Use `--tokenlist-rules` to point at a different rules file:
 
@@ -110,6 +114,7 @@ The rules file has four top-level sections:
 
 ```json
 {
+  "excludedStatuses": ["spam", "abandoned"],
   "platformMappings": {
     "plasma": "plasma",
     "near-protocol": "near",
@@ -119,15 +124,6 @@ The rules file has four top-level sections:
     "ethereum": ["ethereum", "arbitrum", "base", "optimism"],
     "polygon-ecosystem-token": ["polygon"]
   },
-  "assetOverrides": [
-    {
-      "chain": "smartchain",
-      "address": "0x55d398326f99059fF775485246999027B3197955",
-      "coingeckoId": "tether",
-      "displayName": "Binance-Peg Tether USD",
-      "addTags": ["stablecoin", "binance-peg"]
-    }
-  ],
   "marketTagRules": [
     {
       "coingeckoId": "usd-coin",
@@ -141,25 +137,60 @@ The rules file has four top-level sections:
 
 `nativeMarketMappings` maps CoinGecko market IDs to native chain assets, which have no contract address. This is how Arbitrum, Base, or Optimism native gas ETH can inherit the Ethereum market rank. Use an empty list, such as `"arbitrum": []`, to suppress an old built-in native mapping while still letting contract token matching handle the market row.
 
-`assetOverrides` targets one local token by `chain + address`. It can bind a generated token to a `coingeckoId`, override generated `name` or `symbol` through `displayName`/`displaySymbol`, and add app tags through `addTags`. It cannot change `address`, `decimals`, `type`, `logoURI`, or any source `blockchains/**/info.json` file.
-
 `marketTagRules` adds tags to generated tokens that are associated with a CoinGecko market ID. For example, `tether`, `usd-coin`, and `dai` can consistently receive `stablecoin`.
+
+Override files use this shape:
+
+```json
+{
+  "assetOverrides": [
+    {
+      "chain": "smartchain",
+      "address": "0x55d398326f99059fF775485246999027B3197955",
+      "coingeckoId": "tether",
+      "displayName": "Binance-Peg Tether USD",
+      "addTags": ["stablecoin", "binance-peg"]
+    }
+  ]
+}
+```
+
+Hot files use this shape:
+
+```json
+{
+  "tokens": [
+    {
+      "chain": "smartchain",
+      "address": "0x55d398326f99059fF775485246999027B3197955"
+    },
+    {
+      "chain": "smartchain",
+      "address": ""
+    }
+  ]
+}
+```
 
 Rule priority:
 
 ```text
 platformMappings and nativeMarketMappings: rules first, built-in mapping fallback second.
-assetOverrides: applied after market association and before final sort.
-marketTagRules: applied after assetOverrides.
+effective overrides = base overrides + manual overrides, with manual taking precedence on the same chain + address.
+effective hot = hot defaults union hot current.
+marketTagRules: applied after market association and override resolution.
 ```
 
 `tokenlist-report.json` includes `rules` counters and `issues.ruleIssues`. Use these diagnostics to find unused or broken rules, such as an override pointing to a missing local asset or a CoinGecko ID that is outside the synced market window.
 
-## GitHub Action
+## GitHub Actions
 
-The repository includes `.github/workflows/jsonrpc-data.yml`.
+The repository includes two workflows:
 
-It runs on:
+- `.github/workflows/jsonrpc-data.yml`
+- `.github/workflows/jsonrpc-tokenlist-config.yml`
+
+`jsonrpc-data.yml` handles generation only:
 
 ```text
 push to main or master
@@ -180,9 +211,20 @@ COINGECKO_API_KEY_HEADER
 DEFILLAMA_STABLECOIN_BASE_URL
 ```
 
-Manual workflow runs can override `sync_target`, `market_limit`, and `tokenlist_max_rank`. Push-triggered runs use `sync_target=all`, `market_limit=100`, and `tokenlist_max_rank=100`.
+Manual generation runs can override `sync_target` and `market_limit`. Push-triggered runs use `sync_target=all` and `market_limit=1000`.
 
-The workflow runs:
+`jsonrpc-tokenlist-config.yml` is manual-only and manages:
+
+- `override_upsert`
+- `override_delete`
+- `hot_replace_current`
+- `hot_add_current`
+- `hot_remove_current`
+- `hot_reset_current`
+
+It updates config files, regenerates `tokenlist.json` and `tokenlist-report.json`, then commits both config and generated output.
+
+Generation workflow:
 
 ```bash
 cd extensions/jsonrpc
@@ -194,7 +236,6 @@ Then it commits generated files when they change:
 
 ```text
 extensions/jsonrpc/data/market.json
-extensions/jsonrpc/data/stablecoins.json
 extensions/jsonrpc/data/tokenlist.json
 extensions/jsonrpc/data/tokenlist-report.json
 ```
@@ -212,16 +253,14 @@ CoinGecko GET https://api.coingecko.com/api/v3/coins/list?include_platform=true
 
 Used market fields include price, market cap, market cap rank, total volume, symbol, and name. Native coins are associated through an explicit CoinGecko ID to local chain mapping. Contract tokens are associated through local `coingecko`/`coinmarketcap` links and, when available, CoinGecko platform contract addresses by chain and address. These associations do not imply official issuance or trading support. `--market-limit` can reduce the synced market window, for example `--market-limit 100` for the top 100 rows. `COINGECKO_API_KEY` is required for sync. Demo keys use `https://api.coingecko.com/api/v3` with `x-cg-demo-api-key`; Pro keys use `https://pro-api.coingecko.com/api/v3` with `x-cg-pro-api-key`.
 
-`stablecoins.json`:
+`tokenlist.json` enrichment:
 
 ```text
 DefiLlama GET https://stablecoins.llama.fi/stablecoins?includePrices=true
 CoinGecko GET https://api.coingecko.com/api/v3/coins/list?include_platform=true
 ```
 
-Used fields include stablecoin name, symbol, peg type, circulating value, and chain distribution. DefiLlama does not require an API key.
-
-`tokenlist.json` does not call DefiLlama. Stablecoin sync uses DefiLlama only for the separate `stablecoins.json` cache. Neither tokenlist nor stablecoin sync binds assets by symbol/name.
+DefiLlama is used only to tag matched assets as `stablecoin` during tokenlist generation. There is no separate `stablecoins.json` output.
 
 ## Start JSON-RPC HTTP
 
@@ -342,7 +381,7 @@ This returns the upstream per-chain Trust Wallet tokenlist file.
 }
 ```
 
-This returns the generated app packaging list from `extensions/jsonrpc/data/tokenlist.json`. `limit` controls the response size at request time; it does not fetch more market data than was synced. To make larger ranked windows available at runtime, generate caches with a larger `--market-limit` and `--tokenlist-max-rank`.
+This returns the generated app packaging list from `extensions/jsonrpc/data/tokenlist.json`. `limit` controls the response size at request time; it does not fetch more market data than was synced. To make larger ranked windows available at runtime, generate caches with a larger `--market-limit`. `maxRank` is a read-time filter only; it does not change what was generated into the file.
 
 ## Rankings
 
@@ -370,45 +409,6 @@ Supported `order` values:
 market_cap_desc
 volume_desc
 market_cap_rank_asc
-```
-
-### `getStablecoinRankings`
-
-```json
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "getStablecoinRankings",
-  "params": {
-    "limit": 100,
-    "offset": 0,
-    "onlyWithAssets": true
-  }
-}
-```
-
-### `listStablecoins`
-
-```json
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "listStablecoins",
-  "params": {
-    "chain": "smartchain",
-    "limit": 100,
-    "offset": 0,
-    "onlyWithAssets": true
-  }
-}
-```
-
-If `data/stablecoins.json` exists, this reads DefiLlama-enriched cache. Otherwise it falls back to local assets tagged `stablecoin`.
-
-### `getStablecoinBySymbol`
-
-```json
-{"jsonrpc":"2.0","id":1,"method":"getStablecoinBySymbol","params":{"symbol":"USDT"}}
 ```
 
 ### `getAssetMarket`
@@ -442,7 +442,6 @@ Default cache paths are relative to `--root`:
 
 ```text
 extensions/jsonrpc/data/market.json
-extensions/jsonrpc/data/stablecoins.json
 extensions/jsonrpc/data/tokenlist.json
 extensions/jsonrpc/data/tokenlist-report.json
 ```
@@ -453,7 +452,6 @@ Override them when needed:
 ../../bin/assets-rpc \
   --root ../.. \
   --market-cache /cache/market.json \
-  --stablecoin-cache /cache/stablecoins.json \
   --tokenlist-cache /cache/tokenlist.json \
   --tokenlist-report /cache/tokenlist-report.json
 ```

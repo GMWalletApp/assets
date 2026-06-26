@@ -14,41 +14,45 @@ import (
 )
 
 type Config struct {
-	Addr                string
-	Root                string
-	AssetBaseURL        string
-	MarketSyncEnabled   bool
-	MarketSyncInterval  time.Duration
-	MarketCachePath     string
-	StablecoinCachePath string
-	TokenListCachePath  string
-	TokenListReportPath string
-	TokenListRulesPath  string
-	VsCurrency          string
-	CoinGeckoAPIKey     string
-	CoinGeckoBaseURL    string
-	CoinGeckoKeyHeader  string
-	DefiLlamaBaseURL    string
-	MarketLimit         int
-	TokenListMaxRank    int
+	Addr                         string
+	Root                         string
+	AssetBaseURL                 string
+	MarketSyncEnabled            bool
+	MarketSyncInterval           time.Duration
+	MarketCachePath              string
+	TokenListCachePath           string
+	TokenListReportPath          string
+	TokenListRulesPath           string
+	TokenListBaseOverridesPath   string
+	TokenListManualOverridesPath string
+	TokenListHotDefaultsPath     string
+	TokenListHotCurrentPath      string
+	VsCurrency                   string
+	CoinGeckoAPIKey              string
+	CoinGeckoBaseURL             string
+	CoinGeckoKeyHeader           string
+	DefiLlamaBaseURL             string
+	MarketLimit                  int
 }
 
 type SyncTarget string
 
 const (
-	SyncTargetAll         SyncTarget = "all"
-	SyncTargetMarket      SyncTarget = "market"
-	SyncTargetStablecoins SyncTarget = "stablecoins"
-	SyncTargetTokenList   SyncTarget = "tokenlist"
+	SyncTargetAll       SyncTarget = "all"
+	SyncTargetMarket    SyncTarget = "market"
+	SyncTargetTokenList SyncTarget = "tokenlist"
 )
 
 const (
-	DefaultAssetBaseURL        = "https://assets-cdn.trustwallet.com"
-	DefaultMarketCachePath     = "extensions/jsonrpc/data/market.json"
-	DefaultStablecoinCachePath = "extensions/jsonrpc/data/stablecoins.json"
-	DefaultTokenListCachePath  = "extensions/jsonrpc/data/tokenlist.json"
-	DefaultTokenListReportPath = "extensions/jsonrpc/data/tokenlist-report.json"
-	DefaultTokenListRulesPath  = "extensions/jsonrpc/config/tokenlist-rules.json"
+	DefaultAssetBaseURL                 = "https://assets-cdn.trustwallet.com"
+	DefaultMarketCachePath              = "extensions/jsonrpc/data/market.json"
+	DefaultTokenListCachePath           = "extensions/jsonrpc/data/tokenlist.json"
+	DefaultTokenListReportPath          = "extensions/jsonrpc/data/tokenlist-report.json"
+	DefaultTokenListRulesPath           = "extensions/jsonrpc/config/tokenlist-rules.json"
+	DefaultTokenListBaseOverridesPath   = "extensions/jsonrpc/config/tokenlist-base-overrides.json"
+	DefaultTokenListManualOverridesPath = "extensions/jsonrpc/config/tokenlist-manual-overrides.json"
+	DefaultTokenListHotDefaultsPath     = "extensions/jsonrpc/config/tokenlist-hot-defaults.json"
+	DefaultTokenListHotCurrentPath      = "extensions/jsonrpc/config/tokenlist-hot-current.json"
 )
 
 type Server struct {
@@ -71,9 +75,6 @@ func NewServer(config Config) *Server {
 	if config.MarketCachePath == "" {
 		config.MarketCachePath = DefaultMarketCachePath
 	}
-	if config.StablecoinCachePath == "" {
-		config.StablecoinCachePath = DefaultStablecoinCachePath
-	}
 	if config.TokenListCachePath == "" {
 		config.TokenListCachePath = DefaultTokenListCachePath
 	}
@@ -82,6 +83,18 @@ func NewServer(config Config) *Server {
 	}
 	if config.TokenListRulesPath == "" {
 		config.TokenListRulesPath = DefaultTokenListRulesPath
+	}
+	if config.TokenListBaseOverridesPath == "" {
+		config.TokenListBaseOverridesPath = DefaultTokenListBaseOverridesPath
+	}
+	if config.TokenListManualOverridesPath == "" {
+		config.TokenListManualOverridesPath = DefaultTokenListManualOverridesPath
+	}
+	if config.TokenListHotDefaultsPath == "" {
+		config.TokenListHotDefaultsPath = DefaultTokenListHotDefaultsPath
+	}
+	if config.TokenListHotCurrentPath == "" {
+		config.TokenListHotCurrentPath = DefaultTokenListHotCurrentPath
 	}
 	if config.VsCurrency == "" {
 		config.VsCurrency = "usd"
@@ -99,28 +112,33 @@ func NewServer(config Config) *Server {
 		config.DefiLlamaBaseURL = DefiLlamaBaseURLFromEnv()
 	}
 	config.MarketCachePath = resolveCachePath(config.Root, config.MarketCachePath)
-	config.StablecoinCachePath = resolveCachePath(config.Root, config.StablecoinCachePath)
 	config.TokenListCachePath = resolveCachePath(config.Root, config.TokenListCachePath)
 	config.TokenListReportPath = resolveCachePath(config.Root, config.TokenListReportPath)
 	config.TokenListRulesPath = resolveCachePath(config.Root, config.TokenListRulesPath)
+	config.TokenListBaseOverridesPath = resolveCachePath(config.Root, config.TokenListBaseOverridesPath)
+	config.TokenListManualOverridesPath = resolveCachePath(config.Root, config.TokenListManualOverridesPath)
+	config.TokenListHotDefaultsPath = resolveCachePath(config.Root, config.TokenListHotDefaultsPath)
+	config.TokenListHotCurrentPath = resolveCachePath(config.Root, config.TokenListHotCurrentPath)
 
 	store := NewStore(config.Root, config.AssetBaseURL)
-	cache := NewCacheStore(config.MarketCachePath, config.StablecoinCachePath)
+	cache := NewCacheStore(config.MarketCachePath)
 	syncer := NewSyncer(store, SyncConfig{
-		Enabled:             config.MarketSyncEnabled,
-		Interval:            config.MarketSyncInterval,
-		MarketCachePath:     config.MarketCachePath,
-		StablecoinCachePath: config.StablecoinCachePath,
-		TokenListCachePath:  config.TokenListCachePath,
-		TokenListReportPath: config.TokenListReportPath,
-		TokenListRulesPath:  config.TokenListRulesPath,
-		VsCurrency:          config.VsCurrency,
-		CoinGeckoAPIKey:     config.CoinGeckoAPIKey,
-		CoinGeckoBaseURL:    config.CoinGeckoBaseURL,
-		CoinGeckoKeyHeader:  config.CoinGeckoKeyHeader,
-		DefiLlamaBaseURL:    config.DefiLlamaBaseURL,
-		MarketLimit:         config.MarketLimit,
-		TokenListMaxRank:    config.TokenListMaxRank,
+		Enabled:                      config.MarketSyncEnabled,
+		Interval:                     config.MarketSyncInterval,
+		MarketCachePath:              config.MarketCachePath,
+		TokenListCachePath:           config.TokenListCachePath,
+		TokenListReportPath:          config.TokenListReportPath,
+		TokenListRulesPath:           config.TokenListRulesPath,
+		TokenListBaseOverridesPath:   config.TokenListBaseOverridesPath,
+		TokenListManualOverridesPath: config.TokenListManualOverridesPath,
+		TokenListHotDefaultsPath:     config.TokenListHotDefaultsPath,
+		TokenListHotCurrentPath:      config.TokenListHotCurrentPath,
+		VsCurrency:                   config.VsCurrency,
+		CoinGeckoAPIKey:              config.CoinGeckoAPIKey,
+		CoinGeckoBaseURL:             config.CoinGeckoBaseURL,
+		CoinGeckoKeyHeader:           config.CoinGeckoKeyHeader,
+		DefiLlamaBaseURL:             config.DefiLlamaBaseURL,
+		MarketLimit:                  config.MarketLimit,
 	})
 
 	return &Server{
@@ -168,8 +186,6 @@ func ParseSyncTarget(value string) (SyncTarget, error) {
 		return SyncTargetAll, nil
 	case SyncTargetMarket:
 		return SyncTargetMarket, nil
-	case SyncTargetStablecoins:
-		return SyncTargetStablecoins, nil
 	case SyncTargetTokenList:
 		return SyncTargetTokenList, nil
 	default:
@@ -183,9 +199,6 @@ func (s *Server) SyncOnce(ctx context.Context, target SyncTarget) error {
 		if err := s.syncer.SyncMarket(ctx); err != nil {
 			return fmt.Errorf("market sync failed: %w", err)
 		}
-		if err := s.syncer.SyncStablecoins(ctx); err != nil {
-			return fmt.Errorf("stablecoin sync failed: %w", err)
-		}
 		if err := s.syncer.SyncTokenList(ctx); err != nil {
 			return fmt.Errorf("tokenlist sync failed: %w", err)
 		}
@@ -193,11 +206,6 @@ func (s *Server) SyncOnce(ctx context.Context, target SyncTarget) error {
 	case SyncTargetMarket:
 		if err := s.syncer.SyncMarket(ctx); err != nil {
 			return fmt.Errorf("market sync failed: %w", err)
-		}
-		return nil
-	case SyncTargetStablecoins:
-		if err := s.syncer.SyncStablecoins(ctx); err != nil {
-			return fmt.Errorf("stablecoin sync failed: %w", err)
 		}
 		return nil
 	case SyncTargetTokenList:
@@ -222,12 +230,6 @@ func (s *Server) call(method string, params []byte) (any, *RPCError) {
 		return s.getAssetByID(params)
 	case "getTokenList":
 		return s.getTokenList(params)
-	case "listStablecoins":
-		return s.listStablecoins(params)
-	case "getStablecoinRankings":
-		return s.getStablecoinRankings(params)
-	case "getStablecoinBySymbol":
-		return s.getStablecoinBySymbol(params)
 	case "getMarketRankings":
 		return s.getMarketRankings(params)
 	case "getAssetMarket":
@@ -288,70 +290,6 @@ func (s *Server) getTokenList(params []byte) (any, *RPCError) {
 	}
 	result, readErr := s.store.GetTokenList(p.Chain, p.Extended)
 	return result, toRPCError(readErr)
-}
-
-func (s *Server) listStablecoins(params []byte) (any, *RPCError) {
-	var p struct {
-		Chain          string `json:"chain"`
-		Limit          int    `json:"limit"`
-		Offset         int    `json:"offset"`
-		OnlyWithAssets bool   `json:"onlyWithAssets"`
-	}
-	if err := decodeParams(params, &p); err != nil {
-		return nil, err
-	}
-
-	cache, err := s.cache.ReadStablecoins()
-	if err != nil {
-		return nil, toRPCError(err)
-	}
-	if len(cache.Assets) > 0 {
-		if p.Chain != "" {
-			cache = filterStablecoinCacheByChain(cache, p.Chain)
-		}
-		return filterStablecoinRankings(cache, p.Limit, p.Offset, p.OnlyWithAssets), nil
-	}
-
-	result, readErr := s.store.ListStablecoinsFromLocal(p.Chain, p.Limit, p.Offset, p.OnlyWithAssets)
-	return result, toRPCError(readErr)
-}
-
-func (s *Server) getStablecoinRankings(params []byte) (any, *RPCError) {
-	var p struct {
-		Limit          int  `json:"limit"`
-		Offset         int  `json:"offset"`
-		OnlyWithAssets bool `json:"onlyWithAssets"`
-	}
-	if err := decodeParams(params, &p); err != nil {
-		return nil, err
-	}
-	cache, readErr := s.cache.ReadStablecoins()
-	if readErr != nil {
-		return nil, toRPCError(readErr)
-	}
-	return filterStablecoinRankings(cache, p.Limit, p.Offset, p.OnlyWithAssets), nil
-}
-
-func (s *Server) getStablecoinBySymbol(params []byte) (any, *RPCError) {
-	var p struct {
-		Symbol string `json:"symbol"`
-	}
-	if err := decodeParams(params, &p); err != nil {
-		return nil, err
-	}
-	if p.Symbol == "" {
-		return nil, invalidParams("symbol is required")
-	}
-
-	cache, readErr := s.cache.ReadStablecoins()
-	if readErr != nil {
-		return nil, toRPCError(readErr)
-	}
-	items := findStablecoinBySymbol(cache, p.Symbol)
-	if len(items) == 0 {
-		return nil, notFound("stablecoin not found")
-	}
-	return items, nil
 }
 
 func (s *Server) getMarketRankings(params []byte) (any, *RPCError) {
@@ -442,29 +380,6 @@ func toRPCError(err error) *RPCError {
 		return rpcErr
 	}
 	return internalError(err.Error())
-}
-
-func filterStablecoinCacheByChain(cache *StablecoinCache, chain string) *StablecoinCache {
-	filtered := &StablecoinCache{
-		Source:    cache.Source,
-		UpdatedAt: cache.UpdatedAt,
-		Assets:    make([]StablecoinAsset, 0, len(cache.Assets)),
-	}
-
-	for _, item := range cache.Assets {
-		var assets []AssetDetail
-		for _, asset := range item.Assets {
-			if stringsEqualFold(asset.Chain, chain) {
-				assets = append(assets, asset)
-			}
-		}
-		if len(assets) > 0 {
-			item.Assets = assets
-			filtered.Assets = append(filtered.Assets, item)
-		}
-	}
-
-	return filtered
 }
 
 func stringsEqualFold(a, b string) bool {

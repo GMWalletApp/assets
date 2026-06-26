@@ -5,19 +5,70 @@ import (
 	"strings"
 )
 
+var defaultExcludedStatuses = []string{"spam", "abandoned"}
+
+type ResolvedTokenListConfig struct {
+	PlatformMappings     map[string]string
+	NativeMarketMappings map[string][]string
+	MarketTagRules       []TokenListMarketTagRule
+	ExcludedStatuses     []string
+
+	BaseOverrides   []TokenListAssetOverride
+	ManualOverrides []TokenListAssetOverride
+	AssetOverrides  []TokenListAssetOverride
+
+	HotDefaults []TokenListHotEntry
+	HotCurrent  []TokenListHotEntry
+	HotEntries  []TokenListHotEntry
+}
+
 func loadTokenListRules(path string) (*TokenListRules, error) {
 	rules := &TokenListRules{}
-	if strings.TrimSpace(path) == "" {
-		return rules, nil
-	}
-	if err := readJSONFile(path, rules); err != nil {
-		if os.IsNotExist(err) {
-			return rules, nil
+	if strings.TrimSpace(path) != "" {
+		if err := readJSONFile(path, rules); err != nil {
+			if !os.IsNotExist(err) {
+				return nil, err
+			}
 		}
-		return nil, err
 	}
 	rules.normalize()
 	return rules, nil
+}
+
+func loadResolvedTokenListConfig(rulesPath, baseOverridesPath, manualOverridesPath, hotDefaultsPath, hotCurrentPath string) (*ResolvedTokenListConfig, error) {
+	rules, err := loadTokenListRules(rulesPath)
+	if err != nil {
+		return nil, err
+	}
+	baseOverrides, err := loadTokenListAssetOverrides(baseOverridesPath)
+	if err != nil {
+		return nil, err
+	}
+	manualOverrides, err := loadTokenListAssetOverrides(manualOverridesPath)
+	if err != nil {
+		return nil, err
+	}
+	hotDefaults, err := loadTokenListHotEntries(hotDefaultsPath)
+	if err != nil {
+		return nil, err
+	}
+	hotCurrent, err := loadTokenListHotEntries(hotCurrentPath)
+	if err != nil {
+		return nil, err
+	}
+
+	return &ResolvedTokenListConfig{
+		PlatformMappings:     rules.PlatformMappings,
+		NativeMarketMappings: rules.NativeMarketMappings,
+		MarketTagRules:       rules.MarketTagRules,
+		ExcludedStatuses:     rules.ExcludedStatuses,
+		BaseOverrides:        mergeTokenListAssetOverrides(nil, baseOverrides),
+		ManualOverrides:      mergeTokenListAssetOverrides(nil, manualOverrides),
+		AssetOverrides:       mergeTokenListAssetOverrides(baseOverrides, manualOverrides),
+		HotDefaults:          dedupeTokenListHotEntries(hotDefaults),
+		HotCurrent:           dedupeTokenListHotEntries(hotCurrent),
+		HotEntries:           dedupeTokenListHotEntries(append(append([]TokenListHotEntry{}, hotDefaults...), hotCurrent...)),
+	}, nil
 }
 
 func (rules *TokenListRules) normalize() {
@@ -46,40 +97,42 @@ func (rules *TokenListRules) normalize() {
 	}
 	rules.NativeMarketMappings = nativeMappings
 
-	for i := range rules.AssetOverrides {
-		rules.AssetOverrides[i].Chain = strings.ToLower(strings.TrimSpace(rules.AssetOverrides[i].Chain))
-		rules.AssetOverrides[i].Address = strings.TrimSpace(rules.AssetOverrides[i].Address)
-		rules.AssetOverrides[i].CoinGeckoID = normalizeExternalID(rules.AssetOverrides[i].CoinGeckoID)
-		rules.AssetOverrides[i].DisplayName = strings.TrimSpace(rules.AssetOverrides[i].DisplayName)
-		rules.AssetOverrides[i].DisplaySymbol = strings.TrimSpace(rules.AssetOverrides[i].DisplaySymbol)
-		rules.AssetOverrides[i].AddTags = appendUniqueStrings(nil, rules.AssetOverrides[i].AddTags...)
-	}
-
 	for i := range rules.MarketTagRules {
 		rules.MarketTagRules[i].CoinGeckoID = normalizeExternalID(rules.MarketTagRules[i].CoinGeckoID)
 		rules.MarketTagRules[i].AddTags = appendUniqueStrings(nil, rules.MarketTagRules[i].AddTags...)
+		rules.MarketTagRules[i].AddTags = removeStringTag(rules.MarketTagRules[i].AddTags, "hot")
+	}
+
+	if rules.ExcludedStatuses == nil {
+		rules.ExcludedStatuses = append([]string(nil), defaultExcludedStatuses...)
+	} else if len(rules.ExcludedStatuses) == 0 {
+		rules.ExcludedStatuses = []string{}
+	} else {
+		rules.ExcludedStatuses = appendUniqueStrings(nil, rules.ExcludedStatuses...)
 	}
 }
 
-func (rules *TokenListRules) ruleStats() ReportRuleStats {
-	if rules == nil {
+func (config *ResolvedTokenListConfig) ruleStats() ReportRuleStats {
+	if config == nil {
 		return ReportRuleStats{}
 	}
 	return ReportRuleStats{
-		ConfiguredPlatformMappings:     len(rules.PlatformMappings),
-		ConfiguredNativeMarketMappings: len(rules.NativeMarketMappings),
-		ConfiguredAssetOverrides:       len(rules.AssetOverrides),
-		ConfiguredMarketTagRules:       len(rules.MarketTagRules),
+		ConfiguredPlatformMappings:     len(config.PlatformMappings),
+		ConfiguredNativeMarketMappings: len(config.NativeMarketMappings),
+		ConfiguredAssetOverrides:       len(config.AssetOverrides),
+		BaseAssetOverrides:             len(config.BaseOverrides),
+		ManualAssetOverrides:           len(config.ManualOverrides),
+		ConfiguredMarketTagRules:       len(config.MarketTagRules),
 	}
 }
 
-func coinGeckoPlatformChainWithRules(platform string, rules *TokenListRules) (string, bool, bool) {
+func coinGeckoPlatformChainWithRules(platform string, config *ResolvedTokenListConfig) (string, bool, bool) {
 	platform = normalizeExternalID(platform)
 	if platform == "" {
 		return "", false, false
 	}
-	if rules != nil {
-		if chain, ok := rules.PlatformMappings[platform]; ok {
+	if config != nil {
+		if chain, ok := config.PlatformMappings[platform]; ok {
 			return chain, true, chain != ""
 		}
 	}
@@ -87,26 +140,26 @@ func coinGeckoPlatformChainWithRules(platform string, rules *TokenListRules) (st
 	return chain, false, ok
 }
 
-func coinGeckoNativeChainsWithRules(coingeckoID string, rules *TokenListRules) ([]string, bool) {
+func coinGeckoNativeChainsWithRules(coingeckoID string, config *ResolvedTokenListConfig) ([]string, bool) {
 	coingeckoID = normalizeExternalID(coingeckoID)
 	if coingeckoID == "" {
 		return nil, false
 	}
-	if rules != nil {
-		if chains, ok := rules.NativeMarketMappings[coingeckoID]; ok {
+	if config != nil {
+		if chains, ok := config.NativeMarketMappings[coingeckoID]; ok {
 			return append([]string(nil), chains...), true
 		}
 	}
 	return append([]string(nil), coinGeckoNativeChains[coingeckoID]...), false
 }
 
-func (rules *TokenListRules) assetOverride(chain, address string) (*TokenListAssetOverride, bool) {
-	if rules == nil {
+func (config *ResolvedTokenListConfig) assetOverride(chain, address string) (*TokenListAssetOverride, bool) {
+	if config == nil {
 		return nil, false
 	}
 	key := chainAddressKey(chain, address)
-	for i := len(rules.AssetOverrides) - 1; i >= 0; i-- {
-		override := &rules.AssetOverrides[i]
+	for i := len(config.AssetOverrides) - 1; i >= 0; i-- {
+		override := &config.AssetOverrides[i]
 		if chainAddressKey(override.Chain, override.Address) == key {
 			return override, true
 		}
@@ -114,18 +167,35 @@ func (rules *TokenListRules) assetOverride(chain, address string) (*TokenListAss
 	return nil, false
 }
 
-func (rules *TokenListRules) marketTagRules(coingeckoID string) []TokenListMarketTagRule {
-	if rules == nil {
+func (config *ResolvedTokenListConfig) marketTagRules(coingeckoID string) []TokenListMarketTagRule {
+	if config == nil {
 		return nil
 	}
 	coingeckoID = normalizeExternalID(coingeckoID)
 	var matches []TokenListMarketTagRule
-	for _, rule := range rules.MarketTagRules {
+	for _, rule := range config.MarketTagRules {
 		if rule.CoinGeckoID == coingeckoID {
 			matches = append(matches, rule)
 		}
 	}
 	return matches
+}
+
+func (config *ResolvedTokenListConfig) isExcludedStatus(status string) bool {
+	status = strings.ToLower(strings.TrimSpace(status))
+	if status == "" {
+		return false
+	}
+	statuses := defaultExcludedStatuses
+	if config != nil && config.ExcludedStatuses != nil {
+		statuses = config.ExcludedStatuses
+	}
+	for _, excluded := range statuses {
+		if status == excluded {
+			return true
+		}
+	}
+	return false
 }
 
 func appendUniqueStrings(dst []string, values ...string) []string {
@@ -146,4 +216,25 @@ func appendUniqueStrings(dst []string, values ...string) []string {
 		}
 	}
 	return dst
+}
+
+func removeStringTag(values []string, tag string) []string {
+	if len(values) == 0 {
+		return values
+	}
+	tag = strings.ToLower(strings.TrimSpace(tag))
+	if tag == "" {
+		return values
+	}
+	filtered := values[:0]
+	for _, value := range values {
+		if strings.EqualFold(strings.TrimSpace(value), tag) {
+			continue
+		}
+		filtered = append(filtered, value)
+	}
+	if len(filtered) == 0 {
+		return nil
+	}
+	return filtered
 }

@@ -1,0 +1,104 @@
+name: Update JSON-RPC Tokenlist Config
+
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: "Tokenlist config operation"
+        required: true
+        type: choice
+        options:
+          - override_upsert
+          - override_delete
+          - hot_replace_current
+          - hot_add_current
+          - hot_remove_current
+          - hot_reset_current
+      payload_json:
+        description: "Operation payload JSON. Leave empty only for hot_reset_current."
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jsonrpc-tokenlist-config-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  update-tokenlist-config:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: extensions/jsonrpc/go.mod
+          cache-dependency-path: extensions/jsonrpc/go.sum
+
+      - name: Require CoinGecko API key
+        env:
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+        run: |
+          if [ -z "$COINGECKO_API_KEY" ]; then
+            echo "::error::COINGECKO_API_KEY repository secret is required to generate JSON-RPC data"
+            exit 1
+          fi
+
+      - name: Test JSON-RPC sidecar
+        working-directory: extensions/jsonrpc
+        run: make test
+
+      - name: Update tokenlist config
+        working-directory: extensions/jsonrpc
+        env:
+          OPERATION: ${{ github.event.inputs.operation }}
+          PAYLOAD_JSON: ${{ github.event.inputs.payload_json || '' }}
+        run: |
+          go run ./cmd/tokenlist-config \
+            --root ../.. \
+            --operation "$OPERATION" \
+            --payload-json "$PAYLOAD_JSON"
+          python3 -m json.tool config/tokenlist-base-overrides.json >/dev/null
+          python3 -m json.tool config/tokenlist-manual-overrides.json >/dev/null
+          python3 -m json.tool config/tokenlist-hot-defaults.json >/dev/null
+          python3 -m json.tool config/tokenlist-hot-current.json >/dev/null
+
+      - name: Generate tokenlist
+        working-directory: extensions/jsonrpc
+        env:
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          COINGECKO_API_BASE_URL: ${{ vars.COINGECKO_API_BASE_URL }}
+          COINGECKO_API_KEY_HEADER: ${{ vars.COINGECKO_API_KEY_HEADER }}
+          DEFILLAMA_STABLECOIN_BASE_URL: ${{ vars.DEFILLAMA_STABLECOIN_BASE_URL }}
+        run: |
+          make sync-once SYNC_ARGS="--sync-target tokenlist --market-limit 1000"
+
+      - name: Verify generated files
+        run: |
+          for file in tokenlist.json tokenlist-report.json; do
+            test -s "extensions/jsonrpc/data/$file"
+            python3 -m json.tool "extensions/jsonrpc/data/$file" >/dev/null
+          done
+
+      - name: Commit tokenlist config and output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add extensions/jsonrpc/config/tokenlist-base-overrides.json
+          git add extensions/jsonrpc/config/tokenlist-manual-overrides.json
+          git add extensions/jsonrpc/config/tokenlist-hot-defaults.json
+          git add extensions/jsonrpc/config/tokenlist-hot-current.json
+          git add extensions/jsonrpc/data/tokenlist.json extensions/jsonrpc/data/tokenlist-report.json
+          if git diff --cached --quiet; then
+            echo "No tokenlist config changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update jsonrpc tokenlist config"
+          git push

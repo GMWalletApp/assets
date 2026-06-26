@@ -276,10 +276,10 @@ func (idx *AssetIndex) MatchMarketPlatforms(platforms map[string]string) []Asset
 	return idx.MatchMarketPlatformsWithRules(platforms, nil)
 }
 
-func (idx *AssetIndex) MatchMarketPlatformsWithRules(platforms map[string]string, rules *TokenListRules) []AssetDetail {
+func (idx *AssetIndex) MatchMarketPlatformsWithRules(platforms map[string]string, config *ResolvedTokenListConfig) []AssetDetail {
 	var matches []AssetDetail
 	for platform, address := range platforms {
-		chain, _, ok := coinGeckoPlatformChainWithRules(platform, rules)
+		chain, _, ok := coinGeckoPlatformChainWithRules(platform, config)
 		if !ok {
 			continue
 		}
@@ -313,8 +313,8 @@ func (idx *AssetIndex) MatchNativeMarket(coingeckoID string) []AssetDetail {
 	return idx.MatchNativeMarketWithRules(coingeckoID, nil)
 }
 
-func (idx *AssetIndex) MatchNativeMarketWithRules(coingeckoID string, rules *TokenListRules) []AssetDetail {
-	chains, _ := coinGeckoNativeChainsWithRules(coingeckoID, rules)
+func (idx *AssetIndex) MatchNativeMarketWithRules(coingeckoID string, config *ResolvedTokenListConfig) []AssetDetail {
+	chains, _ := coinGeckoNativeChainsWithRules(coingeckoID, config)
 	matches := make([]AssetDetail, 0, len(chains))
 	for _, chain := range chains {
 		if asset, ok := idx.byChainAndAddress[chainAddressKey(chain, "")]; ok {

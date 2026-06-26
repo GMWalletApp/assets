@@ -119,6 +119,7 @@ type AppTokenList struct {
 type AppToken struct {
 	Kind       string          `json:"kind"`
 	Chain      string          `json:"chain"`
+	Hot        bool            `json:"hot"`
 	Address    string          `json:"address"`
 	AssetID    string          `json:"assetId"`
 	Type       string          `json:"type,omitempty"`
@@ -146,13 +147,15 @@ type AppTokenMarket struct {
 }
 
 type TokenListReport struct {
-	Source    string             `json:"source"`
-	UpdatedAt string             `json:"updatedAt,omitempty"`
-	APIs      []ReportAPIRequest `json:"apis"`
-	Local     ReportLocalStats   `json:"local"`
-	Market    ReportMarketStats  `json:"market"`
-	Rules     ReportRuleStats    `json:"rules"`
-	Issues    ReportIssues       `json:"issues"`
+	Source     string                `json:"source"`
+	UpdatedAt  string                `json:"updatedAt,omitempty"`
+	APIs       []ReportAPIRequest    `json:"apis"`
+	Local      ReportLocalStats      `json:"local"`
+	Market     ReportMarketStats     `json:"market"`
+	Stablecoin ReportStablecoinStats `json:"stablecoin"`
+	Hot        ReportHotStats        `json:"hot"`
+	Rules      ReportRuleStats       `json:"rules"`
+	Issues     ReportIssues          `json:"issues"`
 }
 
 type ReportAPIRequest struct {
@@ -166,7 +169,6 @@ type ReportLocalStats struct {
 	TokenAssets  int `json:"tokenAssets"`
 	OutputTokens int `json:"outputTokens"`
 	Filtered     int `json:"filtered"`
-	RankFiltered int `json:"rankFiltered,omitempty"`
 	MissingLogos int `json:"missingLogos"`
 }
 
@@ -174,14 +176,26 @@ type ReportMarketStats struct {
 	Rows             int `json:"rows"`
 	NativeMatches    int `json:"nativeMatches"`
 	TokenMatches     int `json:"tokenMatches"`
+	RankedAssets     int `json:"rankedAssets"`
 	UnmatchedRows    int `json:"unmatchedRows"`
 	UnmappedPlatform int `json:"unmappedPlatform"`
 	MissingAssets    int `json:"missingAssets"`
 }
 
+type ReportStablecoinStats struct {
+	TaggedAssets int `json:"taggedAssets"`
+}
+
+type ReportHotStats struct {
+	DefaultEntries int `json:"defaultEntries"`
+	CurrentEntries int `json:"currentEntries"`
+	EnabledAssets  int `json:"enabledAssets"`
+}
+
 type ReportIssues struct {
 	FilteredAssets        []ReportAssetRef    `json:"filteredAssets,omitempty"`
 	MissingLogos          []ReportAssetRef    `json:"missingLogos,omitempty"`
+	MissingHotAssets      []ReportAssetRef    `json:"missingHotAssets,omitempty"`
 	UnmappedPlatforms     []ReportPlatformRef `json:"unmappedPlatforms,omitempty"`
 	MissingPlatformAssets []ReportPlatformRef `json:"missingPlatformAssets,omitempty"`
 	UnmatchedMarketRows   []ReportMarketRef   `json:"unmatchedMarketRows,omitempty"`
@@ -192,6 +206,8 @@ type ReportRuleStats struct {
 	ConfiguredPlatformMappings     int `json:"configuredPlatformMappings"`
 	ConfiguredNativeMarketMappings int `json:"configuredNativeMarketMappings"`
 	ConfiguredAssetOverrides       int `json:"configuredAssetOverrides"`
+	BaseAssetOverrides             int `json:"baseAssetOverrides"`
+	ManualAssetOverrides           int `json:"manualAssetOverrides"`
 	ConfiguredMarketTagRules       int `json:"configuredMarketTagRules"`
 	PlatformMappingHits            int `json:"platformMappingHits"`
 	NativeMarketMappingHits        int `json:"nativeMarketMappingHits"`
@@ -237,9 +253,15 @@ type ReportRuleIssue struct {
 type TokenListRules struct {
 	PlatformMappings     map[string]string        `json:"platformMappings,omitempty"`
 	NativeMarketMappings map[string][]string      `json:"nativeMarketMappings,omitempty"`
-	AssetOverrides       []TokenListAssetOverride `json:"assetOverrides,omitempty"`
 	MarketTagRules       []TokenListMarketTagRule `json:"marketTagRules,omitempty"`
+	ExcludedStatuses     []string                 `json:"excludedStatuses"`
 }
+
+type TokenListAssetOverridesFile struct {
+	AssetOverrides []TokenListAssetOverride `json:"assetOverrides"`
+}
+
+type TokenListManualOverrides = TokenListAssetOverridesFile
 
 type TokenListAssetOverride struct {
 	Chain         string   `json:"chain,omitempty"`
@@ -254,6 +276,15 @@ type TokenListAssetOverride struct {
 type TokenListMarketTagRule struct {
 	CoinGeckoID string   `json:"coingeckoId,omitempty"`
 	AddTags     []string `json:"addTags,omitempty"`
+}
+
+type TokenListHotList struct {
+	Tokens []TokenListHotEntry `json:"tokens"`
+}
+
+type TokenListHotEntry struct {
+	Chain   string `json:"chain,omitempty"`
+	Address string `json:"address,omitempty"`
 }
 
 type rpcRequest struct {

@@ -1,0 +1,1024 @@
+{
+  "tokens": [
+    {
+      "chain": "bitcoin",
+      "address": ""
+    },
+    {
+      "chain": "optimism",
+      "address": ""
+    },
+    {
+      "chain": "ethereum",
+      "address": ""
+    },
+    {
+      "chain": "base",
+      "address": ""
+    },
+    {
+      "chain": "arbitrum",
+      "address": ""
+    },
+    {
+      "chain": "zklink",
+      "address": "0x2F8A25ac62179B31D62D7F80884AE57464699059"
+    },
+    {
+      "chain": "tron",
+      "address": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t"
+    },
+    {
+      "chain": "ton",
+      "address": "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs"
+    },
+    {
+      "chain": "sui",
+      "address": "0x375f70cf2ae4c00bf37117d0c85a2c71545e6ee05c4a5c7d282cd66a4504b068::usdt::USDT"
+    },
+    {
+      "chain": "solana",
+      "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"
+    },
+    {
+      "chain": "smartchain",
+      "address": "0x55d398326f99059fF775485246999027B3197955"
+    },
+    {
+      "chain": "scroll",
+      "address": "0xf55BEC9cafDbE8730f096Aa55dad6D22d44099Df"
+    },
+    {
+      "chain": "polygonzkevm",
+      "address": "0x1E4a5963aBFD975d8c9021ce480b42188849D41d"
+    },
+    {
+      "chain": "polygon",
+      "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F"
+    },
+    {
+      "chain": "optimism",
+      "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58"
+    },
+    {
+      "chain": "opbnb",
+      "address": "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3"
+    },
+    {
+      "chain": "moonriver",
+      "address": "0xB44a9B6905aF7c801311e8F4E76932ee959c663C"
+    },
+    {
+      "chain": "mantle",
+      "address": "0x201EBa5CC46D216Ce6DC03F6a759e8E766e956aE"
+    },
+    {
+      "chain": "kavaevm",
+      "address": "0x919C1c267BC06a7039e03fcc2eF738525769109c"
+    },
+    {
+      "chain": "kava",
+      "address": "usdt"
+    },
+    {
+      "chain": "ethereum",
+      "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+    },
+    {
+      "chain": "elrond",
+      "address": "USDT-f8c08c"
+    },
+    {
+      "chain": "cryptoorg",
+      "address": "0x66e428c3f67a68878562e79A0234c1F83c208770"
+    },
+    {
+      "chain": "cfxevm",
+      "address": "0xfe97E85d13ABD9c1c33384E796F10B73905637cE"
+    },
+    {
+      "chain": "celo",
+      "address": "0x48065fbBE25f71C9282ddf5e1cD6D6A887483D5e"
+    },
+    {
+      "chain": "cardano",
+      "address": "asset1l58ned7zvj57pxyp94kkqqyxvjelvtpcjjh743"
+    },
+    {
+      "chain": "base",
+      "address": "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2"
+    },
+    {
+      "chain": "avalanchec",
+      "address": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7"
+    },
+    {
+      "chain": "arbitrum",
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9"
+    },
+    {
+      "chain": "aptos",
+      "address": "0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b"
+    },
+    {
+      "chain": "algorand",
+      "address": "312769"
+    },
+    {
+      "chain": "smartchain",
+      "address": ""
+    },
+    {
+      "chain": "binance",
+      "address": ""
+    },
+    {
+      "chain": "zksync",
+      "address": "0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4"
+    },
+    {
+      "chain": "zksync",
+      "address": "0x1d17CBcF0D6D143135aE902365D2E5e2A16538D4"
+    },
+    {
+      "chain": "zklink",
+      "address": "0x1a1A3b2ff016332e866787B311fcB63928464509"
+    },
+    {
+      "chain": "tron",
+      "address": "TEkxiTehnzSmSe2XqrBj4w32RUN966rdz8"
+    },
+    {
+      "chain": "sui",
+      "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC"
+    },
+    {
+      "chain": "stellar",
+      "address": "USDC-GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"
+    },
+    {
+      "chain": "solana",
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+    },
+    {
+      "chain": "smartchain",
+      "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d"
+    },
+    {
+      "chain": "scroll",
+      "address": "0x06eFdBFf2a14a7c8E15944D1F4A48F9F95F663A4"
+    },
+    {
+      "chain": "ronin",
+      "address": "0x0B7007c13325C48911F73A2daD5FA5dCBf808aDc"
+    },
+    {
+      "chain": "polygonzkevm",
+      "address": "0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035"
+    },
+    {
+      "chain": "polygon",
+      "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+    },
+    {
+      "chain": "optimism",
+      "address": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85"
+    },
+    {
+      "chain": "moonriver",
+      "address": "0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D"
+    },
+    {
+      "chain": "monad",
+      "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603"
+    },
+    {
+      "chain": "linea",
+      "address": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff"
+    },
+    {
+      "chain": "klaytn",
+      "address": "0x6270B58BE569a7c0b8f47594F191631Ae5b2C86C"
+    },
+    {
+      "chain": "fantom",
+      "address": "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75"
+    },
+    {
+      "chain": "ethereum",
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+    },
+    {
+      "chain": "elrond",
+      "address": "USDC-c76f1f"
+    },
+    {
+      "chain": "celo",
+      "address": "0xcebA9300f2b948710d2653dD7B07f33A8B32118C"
+    },
+    {
+      "chain": "cardano",
+      "address": "asset1fc7e54kds62yggplh0vs65vcgrmn5n577per23"
+    },
+    {
+      "chain": "base",
+      "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+    },
+    {
+      "chain": "avalanchec",
+      "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E"
+    },
+    {
+      "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831"
+    },
+    {
+      "chain": "aptos",
+      "address": "0xbae207659db88bea0cbead6da0ed00aac12edcdda169e591cd41c94180b46f3b"
+    },
+    {
+      "chain": "algorand",
+      "address": "31566704"
+    },
+    {
+      "chain": "acalaevm",
+      "address": "0x07DF96D1341A7d16Ba1AD431E2c847d978BC2bCe"
+    },
+    {
+      "chain": "ripple",
+      "address": ""
+    },
+    {
+      "chain": "solana",
+      "address": ""
+    },
+    {
+      "chain": "tron",
+      "address": ""
+    },
+    {
+      "chain": "hyperevm",
+      "address": ""
+    },
+    {
+      "chain": "hypeevm",
+      "address": ""
+    },
+    {
+      "chain": "doge",
+      "address": ""
+    },
+    {
+      "chain": "zcash",
+      "address": ""
+    },
+    {
+      "chain": "stellar",
+      "address": ""
+    },
+    {
+      "chain": "cardano",
+      "address": ""
+    },
+    {
+      "chain": "zklink",
+      "address": "0xF573fA04A73d5AC442F3DEa8741317fEaA3cDeab"
+    },
+    {
+      "chain": "smartchain",
+      "address": "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3"
+    },
+    {
+      "chain": "scroll",
+      "address": "0xcA77eB3fEFe3725Dc33bccB54eDEFc3D9f764f97"
+    },
+    {
+      "chain": "polygon",
+      "address": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063"
+    },
+    {
+      "chain": "optimism",
+      "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1"
+    },
+    {
+      "chain": "fantom",
+      "address": "0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E"
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+    },
+    {
+      "chain": "base",
+      "address": "0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb"
+    },
+    {
+      "chain": "arbitrum",
+      "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1"
+    },
+    {
+      "chain": "acalaevm",
+      "address": "0x54A37A01cD75B616D63E0ab665bFfdb0143c52AE"
+    },
+    {
+      "chain": "ton",
+      "address": ""
+    },
+    {
+      "chain": "bitcoincash",
+      "address": ""
+    },
+    {
+      "chain": "hedera",
+      "address": ""
+    },
+    {
+      "chain": "litecoin",
+      "address": ""
+    },
+    {
+      "chain": "sui",
+      "address": ""
+    },
+    {
+      "chain": "avalanchec",
+      "address": ""
+    },
+    {
+      "chain": "cryptoorg",
+      "address": ""
+    },
+    {
+      "chain": "cronos",
+      "address": ""
+    },
+    {
+      "chain": "near",
+      "address": ""
+    },
+    {
+      "chain": "okc",
+      "address": ""
+    },
+    {
+      "chain": "polkadot",
+      "address": ""
+    },
+    {
+      "chain": "internet_computer",
+      "address": ""
+    },
+    {
+      "chain": "classic",
+      "address": ""
+    },
+    {
+      "chain": "cosmos",
+      "address": ""
+    },
+    {
+      "chain": "algorand",
+      "address": ""
+    },
+    {
+      "chain": "polygon",
+      "address": ""
+    },
+    {
+      "chain": "filecoin",
+      "address": ""
+    },
+    {
+      "chain": "acala",
+      "address": ""
+    },
+    {
+      "chain": "acalaevm",
+      "address": ""
+    },
+    {
+      "chain": "aeternity",
+      "address": ""
+    },
+    {
+      "chain": "agoric",
+      "address": ""
+    },
+    {
+      "chain": "aion",
+      "address": ""
+    },
+    {
+      "chain": "akash",
+      "address": ""
+    },
+    {
+      "chain": "aptos",
+      "address": ""
+    },
+    {
+      "chain": "aptos",
+      "address": "0x407a220699982ebb514568d007938d2447d33667e4418372ffec1ddb24491b6c::coin::T"
+    },
+    {
+      "chain": "aptos",
+      "address": "0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea::coin::T"
+    },
+    {
+      "chain": "arbitrumgoerli",
+      "address": ""
+    },
+    {
+      "chain": "aurora",
+      "address": ""
+    },
+    {
+      "chain": "avalanchecfuji",
+      "address": ""
+    },
+    {
+      "chain": "avalanchex",
+      "address": ""
+    },
+    {
+      "chain": "axelar",
+      "address": ""
+    },
+    {
+      "chain": "band",
+      "address": ""
+    },
+    {
+      "chain": "binance",
+      "address": "DAI-D75"
+    },
+    {
+      "chain": "binance",
+      "address": "USDC-CD2"
+    },
+    {
+      "chain": "binance",
+      "address": "USDT-6D8"
+    },
+    {
+      "chain": "bitcoingold",
+      "address": ""
+    },
+    {
+      "chain": "blast",
+      "address": ""
+    },
+    {
+      "chain": "bluzelle",
+      "address": ""
+    },
+    {
+      "chain": "bnbt",
+      "address": ""
+    },
+    {
+      "chain": "boba",
+      "address": ""
+    },
+    {
+      "chain": "bouncebit",
+      "address": ""
+    },
+    {
+      "chain": "btcdiamond",
+      "address": ""
+    },
+    {
+      "chain": "callisto",
+      "address": ""
+    },
+    {
+      "chain": "celo",
+      "address": ""
+    },
+    {
+      "chain": "cfxevm",
+      "address": ""
+    },
+    {
+      "chain": "comdex",
+      "address": ""
+    },
+    {
+      "chain": "coreum",
+      "address": ""
+    },
+    {
+      "chain": "crescent",
+      "address": ""
+    },
+    {
+      "chain": "dash",
+      "address": ""
+    },
+    {
+      "chain": "decred",
+      "address": ""
+    },
+    {
+      "chain": "digibyte",
+      "address": ""
+    },
+    {
+      "chain": "ecash",
+      "address": ""
+    },
+    {
+      "chain": "elrond",
+      "address": ""
+    },
+    {
+      "chain": "energyweb",
+      "address": ""
+    },
+    {
+      "chain": "eos",
+      "address": ""
+    },
+    {
+      "chain": "ethereumpow",
+      "address": ""
+    },
+    {
+      "chain": "everscale",
+      "address": ""
+    },
+    {
+      "chain": "evmos",
+      "address": ""
+    },
+    {
+      "chain": "fantom",
+      "address": ""
+    },
+    {
+      "chain": "fetch",
+      "address": ""
+    },
+    {
+      "chain": "fio",
+      "address": ""
+    },
+    {
+      "chain": "firo",
+      "address": ""
+    },
+    {
+      "chain": "fusion",
+      "address": ""
+    },
+    {
+      "chain": "gbnb",
+      "address": ""
+    },
+    {
+      "chain": "gochain",
+      "address": ""
+    },
+    {
+      "chain": "goerlitestnet",
+      "address": ""
+    },
+    {
+      "chain": "greenfield",
+      "address": ""
+    },
+    {
+      "chain": "groestlcoin",
+      "address": ""
+    },
+    {
+      "chain": "harmony",
+      "address": ""
+    },
+    {
+      "chain": "heco",
+      "address": ""
+    },
+    {
+      "chain": "hoo",
+      "address": ""
+    },
+    {
+      "chain": "icon",
+      "address": ""
+    },
+    {
+      "chain": "iost",
+      "address": ""
+    },
+    {
+      "chain": "iotex",
+      "address": ""
+    },
+    {
+      "chain": "iotexevm",
+      "address": ""
+    },
+    {
+      "chain": "iris",
+      "address": ""
+    },
+    {
+      "chain": "juno",
+      "address": ""
+    },
+    {
+      "chain": "kava",
+      "address": ""
+    },
+    {
+      "chain": "kavaevm",
+      "address": ""
+    },
+    {
+      "chain": "kcc",
+      "address": ""
+    },
+    {
+      "chain": "kcc",
+      "address": "0x980a5AfEf3D17aD98635F6C5aebCBAedEd3c3430"
+    },
+    {
+      "chain": "kcc",
+      "address": "0x0039f574eE5cC39bdD162E9A88e3EB1f111bAF48"
+    },
+    {
+      "chain": "kin",
+      "address": ""
+    },
+    {
+      "chain": "klaytn",
+      "address": ""
+    },
+    {
+      "chain": "komodo",
+      "address": ""
+    },
+    {
+      "chain": "kujira",
+      "address": ""
+    },
+    {
+      "chain": "kusama",
+      "address": ""
+    },
+    {
+      "chain": "linea",
+      "address": ""
+    },
+    {
+      "chain": "manta",
+      "address": ""
+    },
+    {
+      "chain": "mantle",
+      "address": ""
+    },
+    {
+      "chain": "mars",
+      "address": ""
+    },
+    {
+      "chain": "megaeth",
+      "address": ""
+    },
+    {
+      "chain": "merlin",
+      "address": ""
+    },
+    {
+      "chain": "meter",
+      "address": ""
+    },
+    {
+      "chain": "metis",
+      "address": ""
+    },
+    {
+      "chain": "monad",
+      "address": ""
+    },
+    {
+      "chain": "moonbasealpha",
+      "address": ""
+    },
+    {
+      "chain": "moonbeam",
+      "address": ""
+    },
+    {
+      "chain": "moonriver",
+      "address": ""
+    },
+    {
+      "chain": "nano",
+      "address": ""
+    },
+    {
+      "chain": "nativecanto",
+      "address": ""
+    },
+    {
+      "chain": "nativeevmos",
+      "address": ""
+    },
+    {
+      "chain": "nativeinjective",
+      "address": ""
+    },
+    {
+      "chain": "neblio",
+      "address": ""
+    },
+    {
+      "chain": "nebulas",
+      "address": ""
+    },
+    {
+      "chain": "neo",
+      "address": ""
+    },
+    {
+      "chain": "neon",
+      "address": ""
+    },
+    {
+      "chain": "neutron",
+      "address": ""
+    },
+    {
+      "chain": "neutrontestnet",
+      "address": ""
+    },
+    {
+      "chain": "nimiq",
+      "address": ""
+    },
+    {
+      "chain": "noble",
+      "address": ""
+    },
+    {
+      "chain": "nuls",
+      "address": ""
+    },
+    {
+      "chain": "okc",
+      "address": "0xc946DAf81b08146B1C7A8Da2A851Ddf2B3EAaf85"
+    },
+    {
+      "chain": "okc",
+      "address": "0x382bB369d343125BfB2117af9c149795C6C65C50"
+    },
+    {
+      "chain": "okx",
+      "address": ""
+    },
+    {
+      "chain": "okxchain",
+      "address": ""
+    },
+    {
+      "chain": "ontology",
+      "address": ""
+    },
+    {
+      "chain": "opbnb",
+      "address": ""
+    },
+    {
+      "chain": "optimismgoerli",
+      "address": ""
+    },
+    {
+      "chain": "osmosis",
+      "address": ""
+    },
+    {
+      "chain": "pactus",
+      "address": ""
+    },
+    {
+      "chain": "persistence",
+      "address": ""
+    },
+    {
+      "chain": "pivx",
+      "address": ""
+    },
+    {
+      "chain": "plasma",
+      "address": ""
+    },
+    {
+      "chain": "platon",
+      "address": ""
+    },
+    {
+      "chain": "poa",
+      "address": ""
+    },
+    {
+      "chain": "polygonmumbai",
+      "address": ""
+    },
+    {
+      "chain": "polygonzkevm",
+      "address": ""
+    },
+    {
+      "chain": "qtum",
+      "address": ""
+    },
+    {
+      "chain": "quasar",
+      "address": ""
+    },
+    {
+      "chain": "ravencoin",
+      "address": ""
+    },
+    {
+      "chain": "ronin",
+      "address": ""
+    },
+    {
+      "chain": "rootstock",
+      "address": ""
+    },
+    {
+      "chain": "scroll",
+      "address": ""
+    },
+    {
+      "chain": "secret",
+      "address": ""
+    },
+    {
+      "chain": "sei",
+      "address": ""
+    },
+    {
+      "chain": "seievm",
+      "address": ""
+    },
+    {
+      "chain": "sepolia",
+      "address": ""
+    },
+    {
+      "chain": "smartbch",
+      "address": ""
+    },
+    {
+      "chain": "smartchain",
+      "address": "0x3413a030EF81a3dD5a302F4B4D11d911e12ed337"
+    },
+    {
+      "chain": "solana",
+      "address": "EjmyN6qEC1Tf1JxiG1ae7UTJhUxSwk1TCWNWqxWV4J6o"
+    },
+    {
+      "chain": "sommelier",
+      "address": ""
+    },
+    {
+      "chain": "sonic",
+      "address": ""
+    },
+    {
+      "chain": "sonic",
+      "address": "0x6047828dc181963ba44974801FF68e538dA5eaF9"
+    },
+    {
+      "chain": "stargaze",
+      "address": ""
+    },
+    {
+      "chain": "stratis",
+      "address": ""
+    },
+    {
+      "chain": "stride",
+      "address": ""
+    },
+    {
+      "chain": "syscoin",
+      "address": ""
+    },
+    {
+      "chain": "teritori",
+      "address": ""
+    },
+    {
+      "chain": "terra",
+      "address": "terra1zmclyfepfmqvfqflu8r3lv6f75trmg05z7xq95"
+    },
+    {
+      "chain": "terra",
+      "address": ""
+    },
+    {
+      "chain": "terrav2",
+      "address": ""
+    },
+    {
+      "chain": "tezos",
+      "address": ""
+    },
+    {
+      "chain": "tftm",
+      "address": ""
+    },
+    {
+      "chain": "theta",
+      "address": ""
+    },
+    {
+      "chain": "thorchain",
+      "address": ""
+    },
+    {
+      "chain": "thundertoken",
+      "address": ""
+    },
+    {
+      "chain": "tia",
+      "address": ""
+    },
+    {
+      "chain": "tomochain",
+      "address": ""
+    },
+    {
+      "chain": "umee",
+      "address": ""
+    },
+    {
+      "chain": "vechain",
+      "address": ""
+    },
+    {
+      "chain": "verge",
+      "address": ""
+    },
+    {
+      "chain": "viacoin",
+      "address": ""
+    },
+    {
+      "chain": "wanchain",
+      "address": ""
+    },
+    {
+      "chain": "waves",
+      "address": ""
+    },
+    {
+      "chain": "wemix",
+      "address": ""
+    },
+    {
+      "chain": "xdai",
+      "address": ""
+    },
+    {
+      "chain": "xrplevm",
+      "address": ""
+    },
+    {
+      "chain": "zelcash",
+      "address": ""
+    },
+    {
+      "chain": "zen",
+      "address": ""
+    },
+    {
+      "chain": "zetachain",
+      "address": ""
+    },
+    {
+      "chain": "zetaevm",
+      "address": ""
+    },
+    {
+      "chain": "zilliqa",
+      "address": ""
+    },
+    {
+      "chain": "zklink",
+      "address": ""
+    },
+    {
+      "chain": "zksync",
+      "address": ""
+    }
+  ]
+}

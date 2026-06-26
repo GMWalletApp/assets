@@ -8,12 +8,11 @@ import (
 )
 
 type CacheStore struct {
-	marketPath     string
-	stablecoinPath string
+	marketPath string
 }
 
-func NewCacheStore(marketPath, stablecoinPath string) *CacheStore {
-	return &CacheStore{marketPath: marketPath, stablecoinPath: stablecoinPath}
+func NewCacheStore(marketPath string) *CacheStore {
+	return &CacheStore{marketPath: marketPath}
 }
 
 func (c *CacheStore) ReadMarket() (*MarketCache, error) {
@@ -21,17 +20,6 @@ func (c *CacheStore) ReadMarket() (*MarketCache, error) {
 	if err := readJSONFile(c.marketPath, &cache); err != nil {
 		if os.IsNotExist(err) {
 			return &MarketCache{Source: "coingecko", Assets: []MarketAsset{}}, nil
-		}
-		return nil, err
-	}
-	return &cache, nil
-}
-
-func (c *CacheStore) ReadStablecoins() (*StablecoinCache, error) {
-	var cache StablecoinCache
-	if err := readJSONFile(c.stablecoinPath, &cache); err != nil {
-		if os.IsNotExist(err) {
-			return &StablecoinCache{Source: "defillama", Assets: []StablecoinAsset{}}, nil
 		}
 		return nil, err
 	}
@@ -106,24 +94,6 @@ func filterMarketRankings(cache *MarketCache, order string, limit, offset int, o
 	return paginateMarket(items, limit, offset)
 }
 
-func filterStablecoinRankings(cache *StablecoinCache, limit, offset int, onlyWithAssets bool) []StablecoinAsset {
-	items := make([]StablecoinAsset, 0, len(cache.Assets))
-	for _, item := range cache.Assets {
-		if onlyWithAssets && len(item.Assets) == 0 {
-			continue
-		}
-		item.Source = defaultString(item.Source, cache.Source)
-		item.UpdatedAt = defaultString(item.UpdatedAt, cache.UpdatedAt)
-		items = append(items, item)
-	}
-
-	sort.SliceStable(items, func(i, j int) bool {
-		return items[i].Circulating > items[j].Circulating
-	})
-
-	return paginateStablecoins(items, limit, offset)
-}
-
 func filterAppTokenList(cache *AppTokenList, chain string, limit, offset, maxRank int, onlyWithMarket bool) *AppTokenList {
 	filtered := &AppTokenList{
 		Source:    cache.Source,
@@ -157,17 +127,6 @@ func findMarketByAsset(cache *MarketCache, chain, address string) []MarketAsset 
 				matches = append(matches, item)
 				break
 			}
-		}
-	}
-	return matches
-}
-
-func findStablecoinBySymbol(cache *StablecoinCache, symbol string) []StablecoinAsset {
-	symbol = strings.ToUpper(strings.TrimSpace(symbol))
-	var matches []StablecoinAsset
-	for _, item := range cache.Assets {
-		if strings.ToUpper(item.Symbol) == symbol {
-			matches = append(matches, item)
 		}
 	}
 	return matches

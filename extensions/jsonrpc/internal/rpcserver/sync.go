@@ -18,27 +18,28 @@ const (
 	DefaultCoinGeckoBaseURL   = "https://api.coingecko.com/api/v3"
 	DefaultCoinGeckoKeyHeader = "x-cg-demo-api-key"
 	DefaultDefiLlamaBaseURL   = "https://stablecoins.llama.fi"
-	DefaultMarketLimit        = 100
-	DefaultTokenListMaxRank   = 100
+	DefaultMarketLimit        = 1000
 	defaultHTTPClientTimeout  = 30 * time.Second
 	defaultMarketPerPage      = 250
 )
 
 type SyncConfig struct {
-	Enabled             bool
-	Interval            time.Duration
-	MarketCachePath     string
-	StablecoinCachePath string
-	TokenListCachePath  string
-	TokenListReportPath string
-	TokenListRulesPath  string
-	VsCurrency          string
-	CoinGeckoAPIKey     string
-	CoinGeckoKeyHeader  string
-	CoinGeckoBaseURL    string
-	DefiLlamaBaseURL    string
-	MarketLimit         int
-	TokenListMaxRank    int
+	Enabled                      bool
+	Interval                     time.Duration
+	MarketCachePath              string
+	TokenListCachePath           string
+	TokenListReportPath          string
+	TokenListRulesPath           string
+	TokenListBaseOverridesPath   string
+	TokenListManualOverridesPath string
+	TokenListHotDefaultsPath     string
+	TokenListHotCurrentPath      string
+	VsCurrency                   string
+	CoinGeckoAPIKey              string
+	CoinGeckoKeyHeader           string
+	CoinGeckoBaseURL             string
+	DefiLlamaBaseURL             string
+	MarketLimit                  int
 }
 
 type Syncer struct {
@@ -73,9 +74,6 @@ func NewSyncer(store *Store, config SyncConfig) *Syncer {
 	if config.MarketLimit <= 0 {
 		config.MarketLimit = DefaultMarketLimit
 	}
-	if config.TokenListMaxRank < 0 {
-		config.TokenListMaxRank = 0
-	}
 
 	return &Syncer{
 		store:  store,
@@ -84,8 +82,14 @@ func NewSyncer(store *Store, config SyncConfig) *Syncer {
 	}
 }
 
-func (s *Syncer) loadTokenListRules() (*TokenListRules, error) {
-	return loadTokenListRules(s.config.TokenListRulesPath)
+func (s *Syncer) loadTokenListConfig() (*ResolvedTokenListConfig, error) {
+	return loadResolvedTokenListConfig(
+		s.config.TokenListRulesPath,
+		s.config.TokenListBaseOverridesPath,
+		s.config.TokenListManualOverridesPath,
+		s.config.TokenListHotDefaultsPath,
+		s.config.TokenListHotCurrentPath,
+	)
 }
 
 func (s *Syncer) Run(ctx context.Context) {
@@ -112,9 +116,6 @@ func (s *Syncer) syncOnce(ctx context.Context) {
 	if err := s.SyncMarket(ctx); err != nil {
 		log.Printf("market sync failed: %v", err)
 	}
-	if err := s.SyncStablecoins(ctx); err != nil {
-		log.Printf("stablecoin sync failed: %v", err)
-	}
 	if err := s.SyncTokenList(ctx); err != nil {
 		log.Printf("tokenlist sync failed: %v", err)
 	}
@@ -130,7 +131,7 @@ func (s *Syncer) SyncMarket(ctx context.Context) error {
 	if err != nil {
 		return err
 	}
-	rules, err := s.loadTokenListRules()
+	config, err := s.loadTokenListConfig()
 	if err != nil {
 		return err
 	}
@@ -153,10 +154,10 @@ func (s *Syncer) SyncMarket(ctx context.Context) error {
 		if rank == 0 {
 			rank = i + 1
 		}
-		assets := index.MatchNativeMarketWithRules(market.ID, rules)
-		assets = appendUniqueAssets(assets, index.MatchMarketPlatformsWithRules(coingecko.PlatformsByID[market.ID], rules))
+		assets := index.MatchNativeMarketWithRules(market.ID, config)
+		assets = appendUniqueAssets(assets, index.MatchMarketPlatformsWithRules(coingecko.PlatformsByID[market.ID], config))
 		assets = appendUniqueAssets(assets, index.MatchExternalMarket(market.ID))
-		assets = applyAssetDetailRulesToAssets(assets, market.ID, rules)
+		assets = applyAssetDetailRulesToAssets(assets, market.ID, config)
 		cache.Assets = append(cache.Assets, MarketAsset{
 			Rank:          rank,
 			Source:        "coingecko",
@@ -176,78 +177,12 @@ func (s *Syncer) SyncMarket(ctx context.Context) error {
 	return writeJSONAtomic(s.config.MarketCachePath, cache)
 }
 
-func (s *Syncer) SyncStablecoins(ctx context.Context) error {
-	index, err := s.store.BuildAssetIndex()
-	if err != nil {
-		return err
-	}
-	rules, err := s.loadTokenListRules()
-	if err != nil {
-		return err
-	}
-
-	stablecoins, err := s.fetchDefiLlamaStablecoins(ctx)
-	if err != nil {
-		return err
-	}
-	coins, err := s.fetchCoinGeckoCoinList(ctx)
-	if err != nil {
-		return err
-	}
-	platformsByID := platformsByCoinID(coins)
-
-	now := time.Now().UTC().Format(time.RFC3339)
-	cache := StablecoinCache{
-		Source:    "defillama",
-		UpdatedAt: now,
-		Assets:    make([]StablecoinAsset, 0, len(stablecoins.PeggedAssets)),
-	}
-
-	for _, stablecoin := range stablecoins.PeggedAssets {
-		circulating := stablecoin.CirculatingUSD()
-		coinGeckoID := stablecoin.CoinGeckoID()
-		assets := appendUniqueAssets(index.MatchMarketPlatformsWithRules(platformsByID[coinGeckoID], rules), index.MatchExternalMarket(coinGeckoID))
-		assets = applyAssetDetailRulesToAssets(assets, coinGeckoID, rules)
-		cache.Assets = append(cache.Assets, StablecoinAsset{
-			Source:      "defillama",
-			DefiLlamaID: stablecoin.IDString(),
-			CoinGeckoID: coinGeckoID,
-			Symbol:      strings.ToUpper(stablecoin.Symbol),
-			Name:        stablecoin.Name,
-			Circulating: circulating,
-			Chains:      stablecoin.Chains(),
-			PegType:     stablecoin.PegType,
-			PriceSource: stablecoin.PriceSource,
-			UpdatedAt:   now,
-			Assets:      assets,
-		})
-	}
-
-	sort.SliceStable(cache.Assets, func(i, j int) bool {
-		return cache.Assets[i].Circulating > cache.Assets[j].Circulating
-	})
-	for i := range cache.Assets {
-		cache.Assets[i].Rank = i + 1
-	}
-
-	return writeJSONAtomic(s.config.StablecoinCachePath, cache)
-}
-
 func (s *Syncer) SyncTokenList(ctx context.Context) error {
-	if s.config.CoinGeckoAPIKey == "" {
-		log.Print("COINGECKO_API_KEY is not set; skipping tokenlist sync")
-		return nil
-	}
-
 	index, err := s.store.BuildAssetIndex()
 	if err != nil {
 		return err
 	}
-	coingecko, err := s.fetchCoinGeckoDataset(ctx)
-	if err != nil {
-		return err
-	}
-	rules, err := s.loadTokenListRules()
+	config, err := s.loadTokenListConfig()
 	if err != nil {
 		return err
 	}
@@ -256,44 +191,56 @@ func (s *Syncer) SyncTokenList(ctx context.Context) error {
 		return err
 	}
 
+	var coingecko *coinGeckoDataset
+	if s.config.CoinGeckoAPIKey == "" {
+		log.Print("COINGECKO_API_KEY is not set; tokenlist sync will skip market enrichment")
+	} else {
+		coingecko, err = s.fetchCoinGeckoDataset(ctx)
+		if err != nil {
+			return err
+		}
+	}
+	coinList := []coinGeckoListItem(nil)
+	if coingecko != nil {
+		coinList = coingecko.Coins
+	} else {
+		coinList, err = s.fetchCoinGeckoCoinList(ctx)
+		if err != nil {
+			return err
+		}
+	}
+	stablecoins, err := s.fetchDefiLlamaStablecoins(ctx)
+	if err != nil {
+		return err
+	}
+
 	now := time.Now().UTC().Format(time.RFC3339)
-	tokenList, report := s.buildAppTokenList(index, coingecko, pairsByAssetID, rules, now)
+	tokenList, report := s.buildAppTokenList(index, coingecko, coinList, stablecoins, pairsByAssetID, config, now)
 	if err := writeJSONAtomic(s.config.TokenListCachePath, tokenList); err != nil {
 		return err
 	}
 	return writeJSONAtomic(s.config.TokenListReportPath, report)
 }
 
-func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDataset, pairsByAssetID map[string][]TokenPair, rules *TokenListRules, now string) (*AppTokenList, *TokenListReport) {
-	marketLimit := s.marketLimit()
+func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDataset, coinList []coinGeckoListItem, stablecoins *defiLlamaStablecoinsResponse, pairsByAssetID map[string][]TokenPair, config *ResolvedTokenListConfig, now string) (*AppTokenList, *TokenListReport) {
 	report := &TokenListReport{
 		Source:    "trustwallet+coingecko",
 		UpdatedAt: now,
-		APIs: []ReportAPIRequest{
-			{
-				Source: "coingecko",
-				URL:    strings.TrimRight(s.config.CoinGeckoBaseURL, "/") + "/coins/markets",
-				Params: map[string]string{
-					"vs_currency": s.config.VsCurrency,
-					"order":       "market_cap_desc",
-					"limit":       strconv.Itoa(marketLimit),
-					"sparkline":   "false",
-				},
-			},
-			{
-				Source: "coingecko",
-				URL:    strings.TrimRight(s.config.CoinGeckoBaseURL, "/") + "/coins/list",
-				Params: map[string]string{"include_platform": "true"},
-			},
-		},
-		Rules: rules.ruleStats(),
+		APIs:      s.tokenListReportAPIs(coingecko != nil),
+		Rules:     config.ruleStats(),
 	}
 	report.Local.NativeAssets = len(index.nativeAssets)
 	report.Local.TokenAssets = len(index.tokenAssets)
-	report.Market.Rows = len(coingecko.Markets)
-	reportTokenListRuleIssues(index, coingecko, rules, report)
+	report.Hot.DefaultEntries = len(config.HotDefaults)
+	report.Hot.CurrentEntries = len(config.HotCurrent)
+	if coingecko != nil {
+		report.Market.Rows = len(coingecko.Markets)
+	}
+	reportTokenListRuleIssues(index, coingecko, config, report)
 
-	marketByAsset := s.buildMarketByAsset(index, coingecko, rules, report)
+	marketByAsset := s.buildMarketByAsset(index, coingecko, config, report)
+	stablecoinAssetKeys := buildStablecoinAssetKeys(index, coinList, stablecoins, config)
+	hotAssetKeys := buildHotAssetKeys(index, config.HotEntries, report)
 
 	tokens := make([]AppToken, 0, len(index.nativeAssets)+len(index.tokenAssets))
 	for _, asset := range append(index.NativeAssets(), index.TokenAssets()...) {
@@ -301,7 +248,7 @@ func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDatase
 		if asset.Address == "" {
 			kind = "native"
 		}
-		if isExcludedAssetStatus(asset.Status) {
+		if config.isExcludedStatus(asset.Status) {
 			report.Local.Filtered++
 			report.Issues.FilteredAssets = append(report.Issues.FilteredAssets, reportAssetRef(kind, asset))
 			continue
@@ -310,6 +257,7 @@ func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDatase
 		token := AppToken{
 			Kind:       kind,
 			Chain:      asset.Chain,
+			Hot:        false,
 			Address:    asset.Address,
 			AssetID:    asset.AssetID,
 			Type:       asset.Type,
@@ -320,23 +268,35 @@ func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDatase
 			LogoURI:    asset.LogoURI,
 			LogoExists: asset.LogoExists,
 			Pairs:      pairsByAssetID[asset.AssetID],
-			Tags:       asset.Tags,
+			Tags:       removeStringTag(append([]string(nil), asset.Tags...), "hot"),
 			Links:      asset.Links,
 		}
 		if market := marketByAsset[key]; market != nil {
 			token.Market = market
 			token.Rank = market.MarketCapRank
 		}
-		applyTokenListRules(&token, rules, report)
-		if s.config.TokenListMaxRank > 0 && (token.Rank == 0 || token.Rank > s.config.TokenListMaxRank) {
-			report.Local.RankFiltered++
-			continue
+		applyTokenListRules(&token, config, report)
+		if _, ok := stablecoinAssetKeys[key]; ok {
+			token.Tags = appendUniqueStrings(token.Tags, "stablecoin")
 		}
+		if _, ok := hotAssetKeys[key]; ok {
+			token.Hot = true
+		}
+		token.Tags = removeStringTag(token.Tags, "hot")
 		if !asset.LogoExists {
 			report.Local.MissingLogos++
 			report.Issues.MissingLogos = append(report.Issues.MissingLogos, reportAssetRef(kind, asset))
 		}
 		tokens = append(tokens, token)
+		if token.Rank > 0 {
+			report.Market.RankedAssets++
+		}
+		if hasTag(token.Tags, "stablecoin") {
+			report.Stablecoin.TaggedAssets++
+		}
+		if token.Hot {
+			report.Hot.EnabledAssets++
+		}
 	}
 
 	sort.SliceStable(tokens, func(i, j int) bool {
@@ -369,8 +329,40 @@ func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDatase
 	}, report
 }
 
-func (s *Syncer) buildMarketByAsset(index *AssetIndex, coingecko *coinGeckoDataset, rules *TokenListRules, report *TokenListReport) map[string]*AppTokenMarket {
+func (s *Syncer) tokenListReportAPIs(includeMarket bool) []ReportAPIRequest {
+	apis := make([]ReportAPIRequest, 0, 3)
+	if includeMarket {
+		apis = append(apis, ReportAPIRequest{
+			Source: "coingecko",
+			URL:    strings.TrimRight(s.config.CoinGeckoBaseURL, "/") + "/coins/markets",
+			Params: map[string]string{
+				"vs_currency": s.config.VsCurrency,
+				"order":       "market_cap_desc",
+				"limit":       strconv.Itoa(s.marketLimit()),
+				"sparkline":   "false",
+			},
+		})
+	}
+	apis = append(apis,
+		ReportAPIRequest{
+			Source: "coingecko",
+			URL:    strings.TrimRight(s.config.CoinGeckoBaseURL, "/") + "/coins/list",
+			Params: map[string]string{"include_platform": "true"},
+		},
+		ReportAPIRequest{
+			Source: "defillama",
+			URL:    strings.TrimRight(s.config.DefiLlamaBaseURL, "/") + "/stablecoins",
+			Params: map[string]string{"includePrices": "true"},
+		},
+	)
+	return apis
+}
+
+func (s *Syncer) buildMarketByAsset(index *AssetIndex, coingecko *coinGeckoDataset, config *ResolvedTokenListConfig, report *TokenListReport) map[string]*AppTokenMarket {
 	result := map[string]*AppTokenMarket{}
+	if coingecko == nil {
+		return result
+	}
 	for i, market := range coingecko.Markets {
 		rank := market.MarketCapRank
 		if rank == 0 {
@@ -388,7 +380,7 @@ func (s *Syncer) buildMarketByAsset(index *AssetIndex, coingecko *coinGeckoDatas
 
 		matched := false
 		seen := map[string]struct{}{}
-		nativeMatches, usedNativeRule := matchNativeMarketWithRules(index, market.ID, rules)
+		nativeMatches, usedNativeRule := matchNativeMarketWithRules(index, market.ID, config)
 		if count := setBestMarketMatches(result, seen, nativeMatches, enrichment); count > 0 {
 			matched = true
 			report.Market.NativeMatches += count
@@ -397,7 +389,7 @@ func (s *Syncer) buildMarketByAsset(index *AssetIndex, coingecko *coinGeckoDatas
 			}
 		}
 
-		tokenMatches := matchCoinGeckoPlatforms(index, market.ID, market.Symbol, market.Name, coingecko.PlatformsByID[market.ID], rules, report)
+		tokenMatches := matchCoinGeckoPlatforms(index, market.ID, market.Symbol, market.Name, coingecko.PlatformsByID[market.ID], config, report)
 		if count := setBestMarketMatches(result, seen, tokenMatches, enrichment); count > 0 {
 			matched = true
 			report.Market.TokenMatches += count
@@ -409,7 +401,7 @@ func (s *Syncer) buildMarketByAsset(index *AssetIndex, coingecko *coinGeckoDatas
 			report.Market.TokenMatches += count
 		}
 
-		overrideMatches := matchAssetOverrideMarket(index, rules, market.ID)
+		overrideMatches := matchAssetOverrideMarket(index, config, market.ID)
 		if count := setBestMarketMatches(result, seen, overrideMatches, enrichment); count > 0 {
 			matched = true
 			report.Market.TokenMatches += count
@@ -429,14 +421,63 @@ func (s *Syncer) buildMarketByAsset(index *AssetIndex, coingecko *coinGeckoDatas
 	return result
 }
 
-func matchCoinGeckoPlatforms(index *AssetIndex, coinGeckoID, symbol, name string, platforms map[string]string, rules *TokenListRules, report *TokenListReport) []AssetDetail {
+func buildStablecoinAssetKeys(index *AssetIndex, coinList []coinGeckoListItem, stablecoins *defiLlamaStablecoinsResponse, config *ResolvedTokenListConfig) map[string]struct{} {
+	keys := map[string]struct{}{}
+	if index == nil || stablecoins == nil {
+		return keys
+	}
+
+	platformsByID := platformsByCoinID(coinList)
+	for _, stablecoin := range stablecoins.PeggedAssets {
+		coinGeckoID := stablecoin.CoinGeckoID()
+		if coinGeckoID == "" {
+			continue
+		}
+
+		assets := appendUniqueAssets(index.MatchMarketPlatformsWithRules(platformsByID[coinGeckoID], config), index.MatchExternalMarket(coinGeckoID))
+		assets = appendUniqueAssets(assets, matchAssetOverrideMarket(index, config, coinGeckoID))
+		for _, asset := range assets {
+			keys[assetLookupKey(asset)] = struct{}{}
+		}
+	}
+
+	return keys
+}
+
+func buildHotAssetKeys(index *AssetIndex, hotEntries []TokenListHotEntry, report *TokenListReport) map[string]struct{} {
+	keys := map[string]struct{}{}
+	if index == nil {
+		return keys
+	}
+	for _, item := range hotEntries {
+		asset, ok := index.byChainAndAddress[chainAddressKey(item.Chain, item.Address)]
+		if !ok {
+			if report != nil {
+				kind := "token"
+				if strings.TrimSpace(item.Address) == "" {
+					kind = "native"
+				}
+				report.Issues.MissingHotAssets = append(report.Issues.MissingHotAssets, ReportAssetRef{
+					Kind:    kind,
+					Chain:   item.Chain,
+					Address: item.Address,
+				})
+			}
+			continue
+		}
+		keys[assetLookupKey(asset)] = struct{}{}
+	}
+	return keys
+}
+
+func matchCoinGeckoPlatforms(index *AssetIndex, coinGeckoID, symbol, name string, platforms map[string]string, config *ResolvedTokenListConfig, report *TokenListReport) []AssetDetail {
 	var matches []AssetDetail
 	for platform, address := range platforms {
 		address = strings.TrimSpace(address)
 		if address == "" {
 			continue
 		}
-		chain, usedRule, ok := coinGeckoPlatformChainWithRules(platform, rules)
+		chain, usedRule, ok := coinGeckoPlatformChainWithRules(platform, config)
 		if !ok {
 			if report != nil {
 				report.Market.UnmappedPlatform++
@@ -473,8 +514,8 @@ func matchCoinGeckoPlatforms(index *AssetIndex, coinGeckoID, symbol, name string
 	return matches
 }
 
-func matchNativeMarketWithRules(index *AssetIndex, coingeckoID string, rules *TokenListRules) ([]AssetDetail, bool) {
-	chains, usedRule := coinGeckoNativeChainsWithRules(coingeckoID, rules)
+func matchNativeMarketWithRules(index *AssetIndex, coingeckoID string, config *ResolvedTokenListConfig) ([]AssetDetail, bool) {
+	chains, usedRule := coinGeckoNativeChainsWithRules(coingeckoID, config)
 	matches := make([]AssetDetail, 0, len(chains))
 	for _, chain := range chains {
 		if asset, ok := index.byChainAndAddress[chainAddressKey(chain, "")]; ok {
@@ -484,13 +525,13 @@ func matchNativeMarketWithRules(index *AssetIndex, coingeckoID string, rules *To
 	return matches, usedRule
 }
 
-func matchAssetOverrideMarket(index *AssetIndex, rules *TokenListRules, coingeckoID string) []AssetDetail {
-	if rules == nil {
+func matchAssetOverrideMarket(index *AssetIndex, config *ResolvedTokenListConfig, coingeckoID string) []AssetDetail {
+	if config == nil {
 		return nil
 	}
 	coingeckoID = normalizeExternalID(coingeckoID)
 	var matches []AssetDetail
-	for _, override := range rules.AssetOverrides {
+	for _, override := range config.AssetOverrides {
 		if override.CoinGeckoID != coingeckoID {
 			continue
 		}
@@ -502,8 +543,8 @@ func matchAssetOverrideMarket(index *AssetIndex, rules *TokenListRules, coingeck
 	return matches
 }
 
-func applyTokenListRules(token *AppToken, rules *TokenListRules, report *TokenListReport) {
-	if token == nil || rules == nil {
+func applyTokenListRules(token *AppToken, config *ResolvedTokenListConfig, report *TokenListReport) {
+	if token == nil || config == nil {
 		return
 	}
 
@@ -512,7 +553,7 @@ func applyTokenListRules(token *AppToken, rules *TokenListRules, report *TokenLi
 		coinGeckoID = token.Market.CoinGeckoID
 	}
 
-	if override, ok := rules.assetOverride(token.Chain, token.Address); ok {
+	if override, ok := config.assetOverride(token.Chain, token.Address); ok {
 		report.Rules.AssetOverrideHits++
 		if override.DisplayName != "" {
 			token.Name = override.DisplayName
@@ -526,7 +567,7 @@ func applyTokenListRules(token *AppToken, rules *TokenListRules, report *TokenLi
 		}
 	}
 
-	for _, rule := range rules.marketTagRules(coinGeckoID) {
+	for _, rule := range config.marketTagRules(coinGeckoID) {
 		if len(rule.AddTags) == 0 {
 			continue
 		}
@@ -538,23 +579,23 @@ func applyTokenListRules(token *AppToken, rules *TokenListRules, report *TokenLi
 	}
 }
 
-func applyAssetDetailRulesToAssets(assets []AssetDetail, coingeckoID string, rules *TokenListRules) []AssetDetail {
-	if rules == nil || len(assets) == 0 {
+func applyAssetDetailRulesToAssets(assets []AssetDetail, coingeckoID string, config *ResolvedTokenListConfig) []AssetDetail {
+	if config == nil || len(assets) == 0 {
 		return assets
 	}
 	out := append([]AssetDetail(nil), assets...)
 	for i := range out {
-		applyAssetDetailRules(&out[i], coingeckoID, rules)
+		applyAssetDetailRules(&out[i], coingeckoID, config)
 	}
 	return out
 }
 
-func applyAssetDetailRules(asset *AssetDetail, coingeckoID string, rules *TokenListRules) {
-	if asset == nil || rules == nil {
+func applyAssetDetailRules(asset *AssetDetail, coingeckoID string, config *ResolvedTokenListConfig) {
+	if asset == nil || config == nil {
 		return
 	}
 
-	if override, ok := rules.assetOverride(asset.Chain, asset.Address); ok {
+	if override, ok := config.assetOverride(asset.Chain, asset.Address); ok {
 		if override.DisplayName != "" {
 			asset.Name = override.DisplayName
 		}
@@ -567,22 +608,24 @@ func applyAssetDetailRules(asset *AssetDetail, coingeckoID string, rules *TokenL
 		}
 	}
 
-	for _, rule := range rules.marketTagRules(coingeckoID) {
+	for _, rule := range config.marketTagRules(coingeckoID) {
 		asset.Tags = appendUniqueStrings(asset.Tags, rule.AddTags...)
 	}
 }
 
-func reportTokenListRuleIssues(index *AssetIndex, coingecko *coinGeckoDataset, rules *TokenListRules, report *TokenListReport) {
-	if rules == nil || report == nil {
+func reportTokenListRuleIssues(index *AssetIndex, coingecko *coinGeckoDataset, config *ResolvedTokenListConfig, report *TokenListReport) {
+	if config == nil || report == nil {
 		return
 	}
 
 	marketIDs := map[string]struct{}{}
-	for _, market := range coingecko.Markets {
-		marketIDs[normalizeExternalID(market.ID)] = struct{}{}
+	if coingecko != nil {
+		for _, market := range coingecko.Markets {
+			marketIDs[normalizeExternalID(market.ID)] = struct{}{}
+		}
 	}
 
-	for platform, chain := range rules.PlatformMappings {
+	for platform, chain := range config.PlatformMappings {
 		if _, ok := index.byChainAndAddress[chainAddressKey(chain, "")]; !ok {
 			report.Issues.RuleIssues = append(report.Issues.RuleIssues, ReportRuleIssue{
 				Rule:   "platformMappings",
@@ -599,13 +642,15 @@ func reportTokenListRuleIssues(index *AssetIndex, coingecko *coinGeckoDataset, r
 		}
 	}
 
-	for coingeckoID, chains := range rules.NativeMarketMappings {
-		if _, ok := marketIDs[coingeckoID]; !ok {
-			report.Issues.RuleIssues = append(report.Issues.RuleIssues, ReportRuleIssue{
-				Rule:        "nativeMarketMappings",
-				Reason:      "coingecko market not in synced market window",
-				CoinGeckoID: coingeckoID,
-			})
+	for coingeckoID, chains := range config.NativeMarketMappings {
+		if len(marketIDs) > 0 {
+			if _, ok := marketIDs[coingeckoID]; !ok {
+				report.Issues.RuleIssues = append(report.Issues.RuleIssues, ReportRuleIssue{
+					Rule:        "nativeMarketMappings",
+					Reason:      "coingecko market not in synced market window",
+					CoinGeckoID: coingeckoID,
+				})
+			}
 		}
 		for _, chain := range chains {
 			if _, ok := index.byChainAndAddress[chainAddressKey(chain, "")]; !ok {
@@ -619,7 +664,7 @@ func reportTokenListRuleIssues(index *AssetIndex, coingecko *coinGeckoDataset, r
 		}
 	}
 
-	for _, override := range rules.AssetOverrides {
+	for _, override := range config.AssetOverrides {
 		if override.Chain == "" || override.Address == "" {
 			report.Issues.RuleIssues = append(report.Issues.RuleIssues, ReportRuleIssue{
 				Rule:        "assetOverrides",
@@ -640,19 +685,21 @@ func reportTokenListRuleIssues(index *AssetIndex, coingecko *coinGeckoDataset, r
 			})
 		}
 		if override.CoinGeckoID != "" {
-			if _, ok := marketIDs[override.CoinGeckoID]; !ok {
-				report.Issues.RuleIssues = append(report.Issues.RuleIssues, ReportRuleIssue{
-					Rule:        "assetOverrides",
-					Reason:      "coingecko market not in synced market window",
-					Chain:       override.Chain,
-					Address:     override.Address,
-					CoinGeckoID: override.CoinGeckoID,
-				})
+			if len(marketIDs) > 0 {
+				if _, ok := marketIDs[override.CoinGeckoID]; !ok {
+					report.Issues.RuleIssues = append(report.Issues.RuleIssues, ReportRuleIssue{
+						Rule:        "assetOverrides",
+						Reason:      "coingecko market not in synced market window",
+						Chain:       override.Chain,
+						Address:     override.Address,
+						CoinGeckoID: override.CoinGeckoID,
+					})
+				}
 			}
 		}
 	}
 
-	for _, rule := range rules.MarketTagRules {
+	for _, rule := range config.MarketTagRules {
 		if rule.CoinGeckoID == "" {
 			report.Issues.RuleIssues = append(report.Issues.RuleIssues, ReportRuleIssue{
 				Rule:   "marketTagRules",
@@ -660,12 +707,14 @@ func reportTokenListRuleIssues(index *AssetIndex, coingecko *coinGeckoDataset, r
 			})
 			continue
 		}
-		if _, ok := marketIDs[rule.CoinGeckoID]; !ok {
-			report.Issues.RuleIssues = append(report.Issues.RuleIssues, ReportRuleIssue{
-				Rule:        "marketTagRules",
-				Reason:      "coingecko market not in synced market window",
-				CoinGeckoID: rule.CoinGeckoID,
-			})
+		if len(marketIDs) > 0 {
+			if _, ok := marketIDs[rule.CoinGeckoID]; !ok {
+				report.Issues.RuleIssues = append(report.Issues.RuleIssues, ReportRuleIssue{
+					Rule:        "marketTagRules",
+					Reason:      "coingecko market not in synced market window",
+					CoinGeckoID: rule.CoinGeckoID,
+				})
+			}
 		}
 	}
 }
@@ -694,10 +743,6 @@ func setBestMarketMatches(markets map[string]*AppTokenMarket, seen map[string]st
 
 func assetLookupKey(asset AssetDetail) string {
 	return chainAddressKey(asset.Chain, asset.Address)
-}
-
-func isExcludedAssetStatus(status string) bool {
-	return strings.EqualFold(status, "spam") || strings.EqualFold(status, "abandoned")
 }
 
 func reportAssetRef(kind string, asset AssetDetail) ReportAssetRef {

@@ -34,16 +34,18 @@ Common flags:
 --market-sync-enabled true
 --market-sync-interval 6h
 --market-cache extensions/jsonrpc/data/market.json
---stablecoin-cache extensions/jsonrpc/data/stablecoins.json
 --tokenlist-cache extensions/jsonrpc/data/tokenlist.json
 --tokenlist-report extensions/jsonrpc/data/tokenlist-report.json
 --tokenlist-rules extensions/jsonrpc/config/tokenlist-rules.json
+--tokenlist-base-overrides extensions/jsonrpc/config/tokenlist-base-overrides.json
+--tokenlist-manual-overrides extensions/jsonrpc/config/tokenlist-manual-overrides.json
+--tokenlist-hot-defaults extensions/jsonrpc/config/tokenlist-hot-defaults.json
+--tokenlist-hot-current extensions/jsonrpc/config/tokenlist-hot-current.json
 --coingecko-vs-currency usd
 --coingecko-base-url https://api.coingecko.com/api/v3
 --coingecko-api-key-header x-cg-demo-api-key
 --defillama-base-url https://stablecoins.llama.fi
---market-limit 100
---tokenlist-max-rank 100
+--market-limit 1000
 ```
 
 Environment:
@@ -55,7 +57,7 @@ COINGECKO_API_KEY_HEADER=x-cg-demo-api-key
 DEFILLAMA_STABLECOIN_BASE_URL=https://stablecoins.llama.fi
 ```
 
-Only `COINGECKO_API_KEY` is required for market sync. The URL/header environment variables are optional overrides. DefiLlama stablecoin sync does not require an API key.
+Only `COINGECKO_API_KEY` is required for market sync. The URL/header environment variables are optional overrides. DefiLlama stablecoin tag enrichment does not require an API key.
 
 For CoinGecko Pro:
 
@@ -72,7 +74,6 @@ By default, the service writes:
 
 ```text
 <assets-root>/extensions/jsonrpc/data/market.json
-<assets-root>/extensions/jsonrpc/data/stablecoins.json
 <assets-root>/extensions/jsonrpc/data/tokenlist.json
 <assets-root>/extensions/jsonrpc/data/tokenlist-report.json
 ```
@@ -85,9 +86,13 @@ The service also reads extension-local rules from:
 
 ```text
 <assets-root>/extensions/jsonrpc/config/tokenlist-rules.json
+<assets-root>/extensions/jsonrpc/config/tokenlist-base-overrides.json
+<assets-root>/extensions/jsonrpc/config/tokenlist-manual-overrides.json
+<assets-root>/extensions/jsonrpc/config/tokenlist-hot-defaults.json
+<assets-root>/extensions/jsonrpc/config/tokenlist-hot-current.json
 ```
 
-This rules file is maintained separately from upstream Trust Wallet asset data. It is used only while generating extension caches; it does not modify `blockchains/**/info.json`, logos, tokenlist files, or other upstream asset files.
+These files are maintained separately from upstream Trust Wallet asset data. They are used only while generating extension caches; they do not modify `blockchains/**/info.json`, logos, tokenlist files, or other upstream asset files.
 
 ## One-Shot Static JSON Deployment
 
@@ -98,27 +103,19 @@ cd /srv/assets/extensions/jsonrpc
 COINGECKO_API_KEY=xxx make sync-once
 ```
 
-`market.json` defaults to up to 100 CoinGecko market rows, and `tokenlist.json` defaults to assets with `rank <= 100`. For a different one-shot market window or a single cache target:
+`market.json` and tokenlist market enrichment default to the top 1000 CoinGecko rows. For a different one-shot market window or a single cache target:
 
 ```bash
 COINGECKO_API_KEY=xxx make sync-once SYNC_ARGS="--sync-target market --market-limit 250"
-make sync-once SYNC_ARGS="--sync-target stablecoins"
 COINGECKO_API_KEY=xxx make sync-once SYNC_ARGS="--sync-target tokenlist"
 ```
 
-For a smaller app package containing only assets associated with the top 100 market rows:
-
-```bash
-COINGECKO_API_KEY=xxx make sync-once SYNC_ARGS="--sync-target tokenlist --market-limit 100 --tokenlist-max-rank 100"
-```
-
-`--market-limit` limits the CoinGecko market rows fetched. `--tokenlist-max-rank` filters `tokenlist.json`; the default is `100`, and `0` keeps all active local assets.
+`--market-limit` limits the CoinGecko market rows fetched for `market.json` and tokenlist market enrichment. It does not trim `tokenlist.json`; status filtering and config rules decide inclusion.
 
 Then publish or commit:
 
 ```text
 extensions/jsonrpc/data/market.json
-extensions/jsonrpc/data/stablecoins.json
 extensions/jsonrpc/data/tokenlist.json
 extensions/jsonrpc/data/tokenlist-report.json
 ```
@@ -127,18 +124,17 @@ Example raw URLs:
 
 ```text
 https://raw.githubusercontent.com/<owner>/<repo>/<branch>/extensions/jsonrpc/data/market.json
-https://raw.githubusercontent.com/<owner>/<repo>/<branch>/extensions/jsonrpc/data/stablecoins.json
 https://raw.githubusercontent.com/<owner>/<repo>/<branch>/extensions/jsonrpc/data/tokenlist.json
 https://raw.githubusercontent.com/<owner>/<repo>/<branch>/extensions/jsonrpc/data/tokenlist-report.json
 ```
 
 The generated files use local chain/address/decimals/logo/explorer metadata as the source of truth. `tokenlist.json` ranks local native coins and contract tokens by CoinGecko market capitalization when they can be associated with a CoinGecko market row through an explicit native mapping, local CoinGecko/CoinMarketCap links, or CoinGecko platform contract addresses. This association does not mean the token is official, bridged, or supported for trading; local tags such as `stablecoin` or `binance-peg` remain the token metadata for that distinction.
 
-`extensions/jsonrpc/config/tokenlist-rules.json` can add extension-local mapping and display rules for generated caches. Keep this file when syncing or merging upstream Trust Wallet asset updates. If upstream changes a token address or removes an asset, the next `tokenlist-report.json` will list the affected rule under `issues.ruleIssues`.
+`extensions/jsonrpc/config/tokenlist-rules.json` only holds generic rules. Asset-level overrides and hot lists live in the four companion config files. Keep all five config files when syncing or merging upstream Trust Wallet asset updates. If upstream changes a token address or removes an asset, the next `tokenlist-report.json` will list the affected rule under `issues.ruleIssues`.
 
 ## GitHub Actions Static JSON Generation
 
-The workflow is:
+Generation workflow:
 
 ```text
 .github/workflows/jsonrpc-data.yml
@@ -151,7 +147,7 @@ push to main or master
 workflow_dispatch
 ```
 
-Manual `workflow_dispatch` runs accept `sync_target` (`all`, `market`, `stablecoins`, or `tokenlist`), `market_limit`, and `tokenlist_max_rank`. Push-triggered runs use `all`, `market_limit=100`, and `tokenlist_max_rank=100`.
+Manual `workflow_dispatch` runs accept `sync_target` (`all` or `tokenlist`) and `market_limit`. Push-triggered runs use `all` and `market_limit=1000`.
 
 Before enabling it, configure this repository secret:
 
@@ -174,7 +170,7 @@ On each run, it:
 2. Sets up Go from extensions/jsonrpc/go.mod
 3. Runs sidecar tests
 4. Runs make sync-once
-5. Validates market.json, stablecoins.json, tokenlist.json, and tokenlist-report.json
+5. Validates market.json, tokenlist.json, and tokenlist-report.json
 6. Commits changed JSON files back to the same branch
 ```
 
@@ -182,12 +178,30 @@ Generated files:
 
 ```text
 extensions/jsonrpc/data/market.json
-extensions/jsonrpc/data/stablecoins.json
 extensions/jsonrpc/data/tokenlist.json
 extensions/jsonrpc/data/tokenlist-report.json
 ```
 
 These files can be served directly from GitHub Raw, a static CDN, or a Worker without running the RPC server.
+
+Tokenlist config CRUD workflow:
+
+```text
+.github/workflows/jsonrpc-tokenlist-config.yml
+```
+
+It is manual-only and supports:
+
+```text
+override_upsert
+override_delete
+hot_replace_current
+hot_add_current
+hot_remove_current
+hot_reset_current
+```
+
+Each config run updates the relevant config file, regenerates `tokenlist.json` and `tokenlist-report.json`, then commits both config and output.
 
 ## Security Notes
 
@@ -235,14 +249,16 @@ docker run --rm \
   --addr :8080 \
   --root /srv/assets \
   --market-cache /cache/market.json \
-  --stablecoin-cache /cache/stablecoins.json
+  --tokenlist-cache /cache/tokenlist.json \
+  --tokenlist-report /cache/tokenlist-report.json
 ```
 
 If the repository is writable and you want GitHub Raw-compatible paths, use the defaults instead:
 
 ```bash
 --market-cache extensions/jsonrpc/data/market.json
---stablecoin-cache extensions/jsonrpc/data/stablecoins.json
+--tokenlist-cache extensions/jsonrpc/data/tokenlist.json
+--tokenlist-report extensions/jsonrpc/data/tokenlist-report.json
 ```
 
 ## Upstream Sync Workflow
@@ -285,5 +301,5 @@ curl -sS http://127.0.0.1:8080/rpc \
 
 - If CoinGecko sync fails, the service keeps serving the previous `market.json`.
 - If `COINGECKO_API_KEY` is missing, market sync is skipped.
-- If DefiLlama sync fails, the service keeps serving the previous `stablecoins.json`.
+- If DefiLlama sync fails, tokenlist generation keeps using the previous `tokenlist.json` until the next successful sync.
 - If caches do not exist yet, ranking methods return empty lists; local asset lookup still works.

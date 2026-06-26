@@ -10,17 +10,11 @@ on:
         type: choice
         options:
           - all
-          - market
-          - stablecoins
           - tokenlist
       market_limit:
-        description: "CoinGecko market rows to fetch"
+        description: "CoinGecko market rows to fetch for market.json and tokenlist enrichment"
         required: false
-        default: "100"
-      tokenlist_max_rank:
-        description: "Only include tokenlist assets with rank <= this value; 0 keeps all active assets"
-        required: false
-        default: "100"
+        default: "1000"
   push:
     branches:
       - main
@@ -70,32 +64,26 @@ jobs:
           COINGECKO_API_BASE_URL: ${{ vars.COINGECKO_API_BASE_URL }}
           COINGECKO_API_KEY_HEADER: ${{ vars.COINGECKO_API_KEY_HEADER }}
           DEFILLAMA_STABLECOIN_BASE_URL: ${{ vars.DEFILLAMA_STABLECOIN_BASE_URL }}
-          SYNC_TARGET: ${{ github.event.inputs.sync_target || 'all' }}
-          MARKET_LIMIT: ${{ github.event.inputs.market_limit || '100' }}
-          TOKENLIST_MAX_RANK: ${{ github.event.inputs.tokenlist_max_rank || '100' }}
+          SYNC_TARGET_INPUT: ${{ github.event.inputs.sync_target || 'all' }}
+          MARKET_LIMIT: ${{ github.event.inputs.market_limit || '1000' }}
         run: |
-          sync_args="--sync-target ${SYNC_TARGET} --market-limit ${MARKET_LIMIT} --tokenlist-max-rank ${TOKENLIST_MAX_RANK}"
+          sync_args="--sync-target ${SYNC_TARGET_INPUT} --market-limit ${MARKET_LIMIT}"
           make sync-once SYNC_ARGS="$sync_args"
 
       - name: Verify generated files
         env:
-          SYNC_TARGET: ${{ github.event.inputs.sync_target || 'all' }}
+          SYNC_TARGET_INPUT: ${{ github.event.inputs.sync_target || 'all' }}
         run: |
-          case "$SYNC_TARGET" in
+          sync_target="${SYNC_TARGET_INPUT}"
+          case "$sync_target" in
             all)
-              files="market.json stablecoins.json tokenlist.json tokenlist-report.json"
-              ;;
-            market)
-              files="market.json"
-              ;;
-            stablecoins)
-              files="stablecoins.json"
+              files="market.json tokenlist.json tokenlist-report.json"
               ;;
             tokenlist)
               files="tokenlist.json tokenlist-report.json"
               ;;
             *)
-              echo "::error::unsupported sync_target: $SYNC_TARGET"
+              echo "::error::unsupported sync_target: $sync_target"
               exit 1
               ;;
           esac
@@ -108,10 +96,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          find extensions/jsonrpc/data -maxdepth 1 -name '*.json' -exec git add {} +
+          git add extensions/jsonrpc/data/market.json
+          git add extensions/jsonrpc/data/tokenlist.json
+          git add extensions/jsonrpc/data/tokenlist-report.json
           if git diff --cached --quiet; then
             echo "No JSON data changes to commit."
             exit 0
           fi
-          git commit -m "chore: update jsonrpc market data"
+          git commit -m "chore: update jsonrpc data"
           git push

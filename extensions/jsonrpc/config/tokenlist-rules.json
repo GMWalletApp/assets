@@ -1,4 +1,8 @@
 {
+  "excludedStatuses": [
+    "spam",
+    "abandoned"
+  ],
   "platformMappings": {
     "akash": "akash",
     "cosmos": "cosmos",
@@ -45,69 +49,6 @@
       "solana"
     ]
   },
-  "assetOverrides": [
-    {
-      "chain": "smartchain",
-      "address": "0x55d398326f99059fF775485246999027B3197955",
-      "coingeckoId": "tether",
-      "displayName": "Binance-Peg Tether USD",
-      "addTags": [
-        "stablecoin",
-        "binance-peg"
-      ],
-      "note": "BSC pegged USDT; market identity is tether, not an official support assertion."
-    },
-    {
-      "chain": "plasma",
-      "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
-      "coingeckoId": "ethena-usde",
-      "addTags": [
-        "stablecoin",
-        "defi"
-      ],
-      "note": "Matches CoinGecko ethena-usde platform plasma."
-    },
-    {
-      "chain": "polygon",
-      "address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
-      "coingeckoId": "usd-coin",
-      "displaySymbol": "USDC.e",
-      "addTags": [
-        "stablecoin",
-        "bridged"
-      ]
-    },
-    {
-      "chain": "arbitrum",
-      "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
-      "coingeckoId": "usd-coin",
-      "displaySymbol": "USDC.e",
-      "addTags": [
-        "stablecoin",
-        "bridged"
-      ]
-    },
-    {
-      "chain": "optimism",
-      "address": "0x7F5c764cBc14f9669B88837ca1490cCa17c31607",
-      "coingeckoId": "usd-coin",
-      "displaySymbol": "USDC.e",
-      "addTags": [
-        "stablecoin",
-        "bridged"
-      ]
-    },
-    {
-      "chain": "avalanchec",
-      "address": "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664",
-      "coingeckoId": "usd-coin",
-      "displaySymbol": "USDC.e",
-      "addTags": [
-        "stablecoin",
-        "bridged"
-      ]
-    }
-  ],
   "marketTagRules": [
     {
       "coingeckoId": "tether",
