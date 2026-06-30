@@ -263,6 +263,12 @@ func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDatase
 		if asset.Address == "" {
 			kind = "native"
 		}
+		if config.isExcludedChain(asset.Chain) {
+			report.Local.Filtered++
+			report.Rules.ExcludedChainHits++
+			report.Issues.FilteredAssets = append(report.Issues.FilteredAssets, reportAssetRef(kind, asset))
+			continue
+		}
 		if config.isExcludedStatus(asset.Status) {
 			report.Local.Filtered++
 			report.Issues.FilteredAssets = append(report.Issues.FilteredAssets, reportAssetRef(kind, asset))
@@ -338,6 +344,20 @@ func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDatase
 
 	for _, token := range manualTokens {
 		normalizeTokenListManualToken(&token)
+		if config.isExcludedChain(token.Chain) {
+			report.Local.Filtered++
+			report.Rules.ExcludedChainHits++
+			report.Issues.FilteredAssets = append(report.Issues.FilteredAssets, ReportAssetRef{
+				Kind:    token.Kind,
+				Chain:   token.Chain,
+				Address: token.Address,
+				AssetID: token.AssetID,
+				Symbol:  token.Symbol,
+				Name:    token.Name,
+				Status:  token.Status,
+			})
+			continue
+		}
 		tokens = append(tokens, token)
 		if token.Rank > 0 {
 			report.Market.RankedAssets++

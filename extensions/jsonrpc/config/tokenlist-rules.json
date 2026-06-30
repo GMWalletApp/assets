@@ -3,6 +3,9 @@
     "spam",
     "abandoned"
   ],
+  "excludedChains": [
+    "binance"
+  ],
   "platformMappings": {
     "akash": "akash",
     "cosmos": "cosmos",

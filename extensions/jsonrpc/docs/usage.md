@@ -113,11 +113,12 @@ Use `--tokenlist-rules` to point at a different rules file:
 COINGECKO_API_KEY=xxx make sync-once SYNC_ARGS="--sync-target tokenlist --tokenlist-rules extensions/jsonrpc/config/tokenlist-rules.json"
 ```
 
-The rules file has four top-level sections:
+The rules file has five top-level sections:
 
 ```json
 {
   "excludedStatuses": ["spam", "abandoned"],
+  "excludedChains": ["binance"],
   "platformMappings": {
     "plasma": "plasma",
     "near-protocol": "near",
@@ -135,6 +136,10 @@ The rules file has four top-level sections:
   ]
 }
 ```
+
+`excludedStatuses` filters local assets by Trust Wallet asset status. The default excludes `spam` and `abandoned`.
+
+`excludedChains` filters complete local chains out of the app tokenlist output. `binance` is BNB Beacon Chain / BEP2, which has been shut down since 2024-12-03, so it is excluded from app packaging. BSC assets remain under the local `smartchain` chain handle.
 
 `platformMappings` maps CoinGecko `platforms` keys to this repository's `blockchains/<chain>` handles. Add a rule when CoinGecko returns a valid platform/address but `tokenlist-report.json` lists it under `issues.unmappedPlatforms`.
 

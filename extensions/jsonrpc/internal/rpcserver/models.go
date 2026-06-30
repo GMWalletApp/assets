@@ -209,11 +209,13 @@ type ReportRuleStats struct {
 	BaseAssetOverrides             int `json:"baseAssetOverrides"`
 	ManualAssetOverrides           int `json:"manualAssetOverrides"`
 	ConfiguredMarketTagRules       int `json:"configuredMarketTagRules"`
+	ConfiguredExcludedChains       int `json:"configuredExcludedChains"`
 	PlatformMappingHits            int `json:"platformMappingHits"`
 	NativeMarketMappingHits        int `json:"nativeMarketMappingHits"`
 	AssetOverrideMarketHits        int `json:"assetOverrideMarketHits"`
 	AssetOverrideHits              int `json:"assetOverrideHits"`
 	MarketTagRuleHits              int `json:"marketTagRuleHits"`
+	ExcludedChainHits              int `json:"excludedChainHits"`
 }
 
 type ReportAssetRef struct {
@@ -255,6 +257,7 @@ type TokenListRules struct {
 	NativeMarketMappings map[string][]string      `json:"nativeMarketMappings,omitempty"`
 	MarketTagRules       []TokenListMarketTagRule `json:"marketTagRules,omitempty"`
 	ExcludedStatuses     []string                 `json:"excludedStatuses"`
+	ExcludedChains       []string                 `json:"excludedChains,omitempty"`
 }
 
 type TokenListAssetOverridesFile struct {

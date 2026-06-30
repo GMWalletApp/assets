@@ -666,6 +666,66 @@ func TestTokenListSyncAllowsEmptyExcludedStatuses(t *testing.T) {
 	}
 }
 
+func TestTokenListSyncExcludesConfiguredChains(t *testing.T) {
+	root := newFixtureRoot(t)
+	const bep2Address = "YFII-061"
+	const manualBEP2Address = "MANUAL-001"
+
+	addNativeChain(t, root, "binance", map[string]any{
+		"name":     "BNB Beacon Chain",
+		"symbol":   "BNB",
+		"type":     "coin",
+		"decimals": 8,
+		"status":   "active",
+	})
+	addAsset(t, root, "binance", bep2Address, map[string]any{
+		"name":     "YFIIBEP2",
+		"type":     "BEP2",
+		"symbol":   "YFII",
+		"decimals": 8,
+		"status":   "active",
+		"id":       bep2Address,
+	})
+
+	index, err := NewStore(root, "https://cdn.example").BuildAssetIndex()
+	if err != nil {
+		t.Fatalf("build asset index: %v", err)
+	}
+	config := &ResolvedTokenListConfig{ExcludedChains: []string{"binance"}}
+	manualTokens := []AppToken{{
+		Kind:     "token",
+		Chain:    "binance",
+		Address:  manualBEP2Address,
+		AssetID:  "c714_t" + manualBEP2Address,
+		Name:     "Manual BEP2",
+		Symbol:   "MBEP2",
+		Decimals: 8,
+		Status:   "active",
+	}}
+
+	syncer := NewSyncer(NewStore(root, "https://cdn.example"), SyncConfig{})
+	tokenList, report := syncer.buildAppTokenList(index, nil, nil, nil, nil, config, manualTokens, "2026-07-01T00:00:00Z")
+
+	if findAppToken(tokenList.Tokens, "smartchain", testUSDTAddress) == nil {
+		t.Fatalf("expected smartchain token to remain, got %+v", tokenList.Tokens)
+	}
+	if findAppToken(tokenList.Tokens, "binance", "") != nil {
+		t.Fatalf("expected binance native to be excluded, got %+v", tokenList.Tokens)
+	}
+	if findAppToken(tokenList.Tokens, "binance", bep2Address) != nil {
+		t.Fatalf("expected generated BEP2 token to be excluded, got %+v", tokenList.Tokens)
+	}
+	if findAppToken(tokenList.Tokens, "binance", manualBEP2Address) != nil {
+		t.Fatalf("expected manual BEP2 token to be excluded, got %+v", tokenList.Tokens)
+	}
+	if report.Rules.ConfiguredExcludedChains != 1 || report.Rules.ExcludedChainHits != 3 {
+		t.Fatalf("unexpected excluded chain stats: %+v", report.Rules)
+	}
+	if report.Local.Filtered != 3 || report.Local.OutputTokens != len(tokenList.Tokens) {
+		t.Fatalf("unexpected local stats: %+v", report.Local)
+	}
+}
+
 func TestApplyTokenListConfigOperationUpdatesManualOverridesAndHotCurrent(t *testing.T) {
 	root := newFixtureRoot(t)
 	addNativeChain(t, root, "plasma", map[string]any{
@@ -1500,6 +1560,21 @@ func TestTokenListRulesCanSuppressBuiltInNativeMapping(t *testing.T) {
 	}
 	if len(chains) != 0 {
 		t.Fatalf("expected empty native mapping override, got %v", chains)
+	}
+}
+
+func TestLoadTokenListRulesNormalizesExcludedChains(t *testing.T) {
+	rulesPath := filepath.Join(t.TempDir(), "rules.json")
+	mustWriteJSON(t, rulesPath, TokenListRules{
+		ExcludedChains: []string{" Binance ", "BINANCE", "", "SmartChain "},
+	})
+
+	rules, err := loadTokenListRules(rulesPath)
+	if err != nil {
+		t.Fatalf("load tokenlist rules: %v", err)
+	}
+	if got := strings.Join(rules.ExcludedChains, ","); got != "binance,smartchain" {
+		t.Fatalf("unexpected excluded chains: %v", rules.ExcludedChains)
 	}
 }
 

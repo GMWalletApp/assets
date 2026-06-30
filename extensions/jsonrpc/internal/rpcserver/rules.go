@@ -12,6 +12,7 @@ type ResolvedTokenListConfig struct {
 	NativeMarketMappings map[string][]string
 	MarketTagRules       []TokenListMarketTagRule
 	ExcludedStatuses     []string
+	ExcludedChains       []string
 
 	BaseOverrides   []TokenListAssetOverride
 	ManualOverrides []TokenListAssetOverride
@@ -62,6 +63,7 @@ func loadResolvedTokenListConfig(rulesPath, baseOverridesPath, manualOverridesPa
 		NativeMarketMappings: rules.NativeMarketMappings,
 		MarketTagRules:       rules.MarketTagRules,
 		ExcludedStatuses:     rules.ExcludedStatuses,
+		ExcludedChains:       rules.ExcludedChains,
 		BaseOverrides:        mergeTokenListAssetOverrides(nil, baseOverrides),
 		ManualOverrides:      mergeTokenListAssetOverrides(nil, manualOverrides),
 		AssetOverrides:       mergeTokenListAssetOverrides(baseOverrides, manualOverrides),
@@ -110,6 +112,8 @@ func (rules *TokenListRules) normalize() {
 	} else {
 		rules.ExcludedStatuses = appendUniqueStrings(nil, rules.ExcludedStatuses...)
 	}
+
+	rules.ExcludedChains = appendUniqueStrings(nil, rules.ExcludedChains...)
 }
 
 func (config *ResolvedTokenListConfig) ruleStats() ReportRuleStats {
@@ -123,6 +127,7 @@ func (config *ResolvedTokenListConfig) ruleStats() ReportRuleStats {
 		BaseAssetOverrides:             len(config.BaseOverrides),
 		ManualAssetOverrides:           len(config.ManualOverrides),
 		ConfiguredMarketTagRules:       len(config.MarketTagRules),
+		ConfiguredExcludedChains:       len(config.ExcludedChains),
 	}
 }
 
@@ -192,6 +197,19 @@ func (config *ResolvedTokenListConfig) isExcludedStatus(status string) bool {
 	}
 	for _, excluded := range statuses {
 		if status == excluded {
+			return true
+		}
+	}
+	return false
+}
+
+func (config *ResolvedTokenListConfig) isExcludedChain(chain string) bool {
+	chain = strings.ToLower(strings.TrimSpace(chain))
+	if chain == "" || config == nil {
+		return false
+	}
+	for _, excluded := range config.ExcludedChains {
+		if chain == excluded {
 			return true
 		}
 	}
