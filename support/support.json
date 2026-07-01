@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 1,
+  "assetBaseURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support",
+  "exchanges": [
+    {
+      "id": "1inch",
+      "name": "1inch",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/1inch/logo.svg"
+    },
+    {
+      "id": "aevo",
+      "name": "Aevo",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/aevo/logo.svg"
+    },
+    {
+      "id": "balancer",
+      "name": "Balancer",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/balancer/logo.svg"
+    },
+    {
+      "id": "bancor",
+      "name": "Bancor",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/bancor/logo.svg"
+    },
+    {
+      "id": "binance",
+      "name": "Binance",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/binance/logo.svg"
+    },
+    {
+      "id": "bitfinex",
+      "name": "Bitfinex",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/bitfinex/logo.svg"
+    },
+    {
+      "id": "bitget",
+      "name": "Bitget",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/bitget/logo.svg"
+    },
+    {
+      "id": "bithumb",
+      "name": "Bithumb",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/bithumb/logo.svg"
+    },
+    {
+      "id": "bitstamp",
+      "name": "Bitstamp",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/bitstamp/logo.svg"
+    },
+    {
+      "id": "btcturk",
+      "name": "BTC Turk",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/btcturk/logo.svg"
+    },
+    {
+      "id": "bybit",
+      "name": "Bybit",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/bybit/logo.svg"
+    },
+    {
+      "id": "coinbase",
+      "name": "Coinbase",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/coinbase/logo.svg"
+    },
+    {
+      "id": "cowswap",
+      "name": "Cow Swap",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/cowswap/logo.svg"
+    },
+    {
+      "id": "crypto-com",
+      "name": "Crypto.com",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/crypto-com/logo.svg"
+    },
+    {
+      "id": "exodus",
+      "name": "Exodus",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/exodus/logo.svg"
+    },
+    {
+      "id": "gate-io",
+      "name": "Gate Io",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/gate-io/logo.svg"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/gemini/logo.svg"
+    },
+    {
+      "id": "hyperliquid",
+      "name": "Hyperliquid",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/hyperliquid/logo.svg"
+    },
+    {
+      "id": "kraken",
+      "name": "Kraken",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/kraken/logo.svg"
+    },
+    {
+      "id": "kucoin",
+      "name": "Kucoin",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/kucoin/logo.svg"
+    },
+    {
+      "id": "odos",
+      "name": "Odos",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/odos/logo.svg"
+    },
+    {
+      "id": "okx",
+      "name": "OkX",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/okx/logo.svg"
+    },
+    {
+      "id": "pancake-swap",
+      "name": "Pancake Swap",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/pancake-swap/logo.svg"
+    },
+    {
+      "id": "para-swap",
+      "name": "ParaSwap",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/para-swap/logo.svg"
+    },
+    {
+      "id": "paradex",
+      "name": "Paradex",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/paradex/logo.svg"
+    },
+    {
+      "id": "paribu",
+      "name": "Paribu",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/paribu/logo.svg"
+    },
+    {
+      "id": "sushiswap",
+      "name": "Sushi Swap",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/sushiswap/logo.svg"
+    },
+    {
+      "id": "swissborg",
+      "name": "SwissBorg",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/swissborg/logo.svg"
+    },
+    {
+      "id": "uniswap",
+      "name": "Uniswap",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/uniswap/logo.svg"
+    },
+    {
+      "id": "upbit",
+      "name": "UpBit",
+      "type": "cex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/upbit/logo.svg"
+    }
+  ],
+  "wallets": [
+    {
+      "id": "alfa1",
+      "name": "alfa1",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/alfa1/logo.svg"
+    },
+    {
+      "id": "alpha-wallet",
+      "name": "alpha wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/alpha-wallet/logo.svg"
+    },
+    {
+      "id": "ambire",
+      "name": "Ambire",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ambire/logo.svg"
+    },
+    {
+      "id": "argent",
+      "name": "argent x",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/argent/logo.svg"
+    },
+    {
+      "id": "atomic",
+      "name": "Atomic",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/atomic/logo.svg"
+    },
+    {
+      "id": "backpack",
+      "name": "backpack",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/backpack/logo.svg"
+    },
+    {
+      "id": "bitbox",
+      "name": "Bitbox",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/bitbox/logo.svg"
+    },
+    {
+      "id": "blue",
+      "name": "Blue Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/blue/logo.svg"
+    },
+    {
+      "id": "clave",
+      "name": "clave",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/clave/logo.svg"
+    },
+    {
+      "id": "coin98",
+      "name": "coin98",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/coin98/logo.svg"
+    },
+    {
+      "id": "coinbase",
+      "name": "coinbase wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/coinbase/logo.svg"
+    },
+    {
+      "id": "cypherock",
+      "name": "Cypherock",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/cypherock/logo.svg"
+    },
+    {
+      "id": "daimo",
+      "name": "Daimo Pay",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/daimo/logo.svg"
+    },
+    {
+      "id": "enkrypt",
+      "name": "enkrypt",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/enkrypt/logo.svg"
+    },
+    {
+      "id": "exodus",
+      "name": "Exodus",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/exodus/logo.svg"
+    },
+    {
+      "id": "glow",
+      "name": "Glow",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/glow/logo.svg"
+    },
+    {
+      "id": "imtoken",
+      "name": "imToken",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/imtoken/logo.svg"
+    },
+    {
+      "id": "keplr",
+      "name": "Keplr",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/keplr/logo.svg"
+    },
+    {
+      "id": "kraken",
+      "name": "kraken wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/kraken/logo.svg"
+    },
+    {
+      "id": "kukai",
+      "name": "Kukai",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/kukai/logo.svg"
+    },
+    {
+      "id": "ledger",
+      "name": "ledger",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ledger/logo.svg"
+    },
+    {
+      "id": "lit",
+      "name": "lit protocol",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/lit/logo.svg"
+    },
+    {
+      "id": "metamask",
+      "name": "MetaMask",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/metamask/logo.svg"
+    },
+    {
+      "id": "my-ether-wallet",
+      "name": "MyEtherWallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/my-ether-wallet/logo.svg"
+    },
+    {
+      "id": "obvious",
+      "name": "obvious wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/obvious/logo.svg"
+    },
+    {
+      "id": "okpay",
+      "name": "OKPay",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/okpay/logo.svg"
+    },
+    {
+      "id": "okx",
+      "name": "okx wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/okx/logo.svg"
+    },
+    {
+      "id": "pecunity-wallet",
+      "name": "Pecunity",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/pecunity-wallet/logo.svg"
+    },
+    {
+      "id": "phantom",
+      "name": "phantom",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/phantom/logo.svg"
+    },
+    {
+      "id": "pillar",
+      "name": "Pillar",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/pillar/logo.svg"
+    },
+    {
+      "id": "portal",
+      "name": "portal",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/portal/logo.svg"
+    },
+    {
+      "id": "rabby",
+      "name": "rabby",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/rabby/logo.svg"
+    },
+    {
+      "id": "rainbow",
+      "name": "rainbow",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/rainbow/logo.svg"
+    },
+    {
+      "id": "ronin",
+      "name": "ronin",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ronin/logo.svg"
+    },
+    {
+      "id": "safe",
+      "name": "safe wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/safe/logo.svg"
+    },
+    {
+      "id": "sender",
+      "name": "sender",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/sender/logo.svg"
+    },
+    {
+      "id": "sequence",
+      "name": "sequence",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/sequence/logo.svg"
+    },
+    {
+      "id": "solflare",
+      "name": "Solflare",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/solflare/logo.svg"
+    },
+    {
+      "id": "soul",
+      "name": "soul",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/soul/logo.svg"
+    },
+    {
+      "id": "squads",
+      "name": "squads",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/squads/logo.svg"
+    },
+    {
+      "id": "temple",
+      "name": "Temple",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/temple/logo.svg"
+    },
+    {
+      "id": "token-pocket",
+      "name": "token pocket",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/token-pocket/logo.svg"
+    },
+    {
+      "id": "trezor",
+      "name": "trezor",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/trezor/logo.svg"
+    },
+    {
+      "id": "trust",
+      "name": "trust wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/trust/logo.svg"
+    },
+    {
+      "id": "unipass",
+      "name": "unipass",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/unipass/logo.svg"
+    },
+    {
+      "id": "venly",
+      "name": "venly",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/venly/logo.svg"
+    },
+    {
+      "id": "wallet-3",
+      "name": "wallet3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/wallet-3/logo.svg"
+    },
+    {
+      "id": "wallet-connect",
+      "name": "wallet connect",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/wallet-connect/logo.svg"
+    },
+    {
+      "id": "xdefi",
+      "name": "xdefi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/xdefi/logo.svg"
+    },
+    {
+      "id": "zengo",
+      "name": "zengo",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/zengo/logo.svg"
+    },
+    {
+      "id": "zerion",
+      "name": "zerion",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/zerion/logo.svg"
+    }
+  ]
+}
