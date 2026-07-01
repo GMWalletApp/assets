@@ -1,0 +1,59 @@
+name: Compress JSON Zstd
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: compress-json-zstd-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  compress-json-zstd:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Install zstd
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zstd
+
+      - name: Compress JSON files
+        run: |
+          set -euo pipefail
+          files=(
+            "support/support.json"
+            "extensions/jsonrpc/data/tokenlist.json"
+            "data/tokenlists/out/homepage.json"
+          )
+
+          for file in "${files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "::error::Required JSON file not found: $file"
+              exit 1
+            fi
+            python3 -m json.tool "$file" >/dev/null
+            zstd --ultra -22 --force --keep "$file" -o "$file.zst"
+            zstd --test "$file.zst"
+          done
+
+      - name: Commit compressed JSON files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            support/support.json.zst \
+            extensions/jsonrpc/data/tokenlist.json.zst \
+            data/tokenlists/out/homepage.json.zst
+          if git diff --cached --quiet; then
+            echo "No compressed JSON changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update compressed json artifacts"
+          git push
