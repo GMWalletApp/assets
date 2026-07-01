@@ -1,0 +1,153 @@
+name: Replace Generated Logo URL Prefix
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_prefix:
+        description: "Existing generated logo URL prefix"
+        required: true
+        default: "https://assets-cdn.trustwallet.com"
+        type: string
+      to_prefix:
+        description: "Replacement generated logo URL prefix"
+        required: true
+        default: "https://cdn.jsdelivr.net/gh/trustwallet/assets@master"
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: replace-json-logo-url-prefix-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  replace-generated-logo-url-prefix:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    env:
+      FROM_PREFIX: ${{ inputs.from_prefix }}
+      TO_PREFIX: ${{ inputs.to_prefix }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate inputs and files
+        run: |
+          set -euo pipefail
+
+          if [ -z "$FROM_PREFIX" ]; then
+            echo "::error::from_prefix is required"
+            exit 1
+          fi
+          if [ -z "$TO_PREFIX" ]; then
+            echo "::error::to_prefix is required"
+            exit 1
+          fi
+          if [ "$FROM_PREFIX" = "$TO_PREFIX" ]; then
+            echo "::error::from_prefix and to_prefix must be different"
+            exit 1
+          fi
+          case "$TO_PREFIX" in
+            *"$FROM_PREFIX"*)
+              echo "::error::to_prefix must not contain from_prefix"
+              exit 1
+              ;;
+          esac
+          case "$FROM_PREFIX" in
+            https://*) ;;
+            *)
+              echo "::error::from_prefix must start with https://"
+              exit 1
+              ;;
+          esac
+          case "$TO_PREFIX" in
+            https://*) ;;
+            *)
+              echo "::error::to_prefix must start with https://"
+              exit 1
+              ;;
+          esac
+
+          for file in data/tokenlists/out/homepage.json extensions/jsonrpc/data/tokenlist.json; do
+            if [ ! -s "$file" ]; then
+              echo "::error::$file is missing or empty"
+              exit 1
+            fi
+          done
+
+      - name: Replace generated logo URL prefix
+        run: |
+          set -euo pipefail
+
+          files=(
+            data/tokenlists/out/homepage.json
+            extensions/jsonrpc/data/tokenlist.json
+          )
+
+          count_prefix() {
+            prefix="$1"
+            shift
+            PREFIX="$prefix" perl -0ne '$count += () = /\Q$ENV{PREFIX}\E/g; END { print "$count\n" }' "$@"
+          }
+
+          from_before=$(count_prefix "$FROM_PREFIX" "${files[@]}")
+          to_before=$(count_prefix "$TO_PREFIX" "${files[@]}")
+          echo "from_prefix matches before replacement: $from_before"
+          echo "to_prefix matches before replacement: $to_before"
+
+          if [ "$from_before" -eq 0 ]; then
+            for file in "${files[@]}"; do
+              python3 -m json.tool "$file" >/dev/null
+              file_to_before=$(count_prefix "$TO_PREFIX" "$file")
+              if [ "$file_to_before" -eq 0 ]; then
+                echo "::error::$file has no from_prefix occurrences and does not contain to_prefix. Check workflow inputs."
+                exit 1
+              fi
+            done
+            echo "::notice::No from_prefix occurrences found; all target files already contain to_prefix. Nothing to replace."
+            exit 0
+          fi
+
+          perl -0pi -e 's/\Q$ENV{FROM_PREFIX}\E/$ENV{TO_PREFIX}/g' "${files[@]}"
+
+          for file in "${files[@]}"; do
+            python3 -m json.tool "$file" >/dev/null
+          done
+
+          from_after=$(count_prefix "$FROM_PREFIX" "${files[@]}")
+          to_after=$(count_prefix "$TO_PREFIX" "${files[@]}")
+          echo "from_prefix matches after replacement: $from_after"
+          echo "to_prefix matches after replacement: $to_after"
+
+          if [ "$from_after" -ne 0 ]; then
+            echo "::error::from_prefix is still present after replacement"
+            exit 1
+          fi
+          if [ "$to_after" -eq 0 ]; then
+            echo "::error::to_prefix was not found after replacement"
+            exit 1
+          fi
+          for file in "${files[@]}"; do
+            file_to_after=$(count_prefix "$TO_PREFIX" "$file")
+            if [ "$file_to_after" -eq 0 ]; then
+              echo "::error::to_prefix was not found in $file after replacement"
+              exit 1
+            fi
+          done
+
+      - name: Commit generated JSON
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tokenlists/out/homepage.json
+          git add extensions/jsonrpc/data/tokenlist.json
+          if git diff --cached --quiet; then
+            echo "No generated URL prefix changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: replace generated logo url prefix"
+          git push
