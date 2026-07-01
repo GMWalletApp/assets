@@ -1,0 +1,65 @@
+name: Sync Support Logos
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_ref:
+        description: "GMWalletApp/crypto-icons branch, tag, or commit to sync"
+        required: false
+        default: "main"
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-support-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sync-support:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Checkout crypto-icons source
+        env:
+          SOURCE_REF: ${{ github.event.inputs.source_ref || 'main' }}
+          UPSTREAM_URL: https://github.com/GMWalletApp/crypto-icons.git
+        run: |
+          set -euo pipefail
+          UPSTREAM_DIR="$RUNNER_TEMP/crypto-icons"
+          rm -rf "$UPSTREAM_DIR"
+          if git clone --depth 1 --branch "$SOURCE_REF" "$UPSTREAM_URL" "$UPSTREAM_DIR"; then
+            exit 0
+          fi
+          rm -rf "$UPSTREAM_DIR"
+          git clone --depth 1 "$UPSTREAM_URL" "$UPSTREAM_DIR"
+          git -C "$UPSTREAM_DIR" fetch --depth 1 origin "$SOURCE_REF" || true
+          git -C "$UPSTREAM_DIR" checkout "$SOURCE_REF"
+
+      - name: Sync support logos
+        run: |
+          python3 support/sync_support.py --source "$RUNNER_TEMP/crypto-icons"
+          python3 -m json.tool support/support.json >/dev/null
+          python3 support/sync_support.py --validate-output
+
+      - name: Commit support files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add support/
+          if git diff --cached --quiet; then
+            echo "No support logo changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: sync support logos"
+          git push
