@@ -61,9 +61,6 @@ CHAIN_ORDER = [
     "optimism",
     "base",
     "avalanchec",
-    "fantom",
-    "linea",
-    "zksync",
     "solana",
     "tron",
 ]
@@ -81,9 +78,6 @@ CHAIN_CONFIG = {
     "optimism": {"chainName": "Optimism", "nativeSymbol": "ETH", "nativeName": "Ethereum", "chainId": 10},
     "base": {"chainName": "Base", "nativeSymbol": "ETH", "nativeName": "Ethereum", "chainId": 8453},
     "avalanchec": {"chainName": "Avalanche", "nativeSymbol": "AVAX", "nativeName": "Avalanche", "chainId": 43114},
-    "fantom": {"chainName": "Fantom", "nativeSymbol": "FTM", "nativeName": "Fantom", "chainId": 250},
-    "linea": {"chainName": "Linea", "nativeSymbol": "ETH", "nativeName": "Ethereum", "chainId": 59144},
-    "zksync": {"chainName": "zkSync Era", "nativeSymbol": "ETH", "nativeName": "Ethereum", "chainId": 324},
     "solana": {"chainName": "Solana", "nativeSymbol": "SOL", "nativeName": "Solana", "chainId": None},
     "tron": {"chainName": "TRON", "nativeSymbol": "TRX", "nativeName": "TRON", "chainId": None},
 }
