@@ -4,7 +4,7 @@ Output:
   out/homepage.json = {
     "generatedAt": "...",
     "chainOrder": [...],
-    "slotOrder": ["native", "usdt", "usdc", "dai"],
+    "slotOrder": ["native", "usdt", "usdc", "usds"],
     "chains": [...],
     "tokens": [...]
   }
@@ -12,7 +12,7 @@ Output:
 Rules:
   - include one native coin per configured chain
   - include BTC only as bitcoin native
-  - for each non-bitcoin chain, include at most one USDT, one USDC, and one DAI
+  - for each non-bitcoin chain, include at most one USDT, one USDC, and one USDS
   - if multiple candidates exist for a slot, rank them and choose the top-ranked one
   - if a slot has no matching asset in this repo, skip it and report it
 
@@ -56,11 +56,6 @@ CHAIN_ORDER = [
     "ethereum",
     "bitcoin",
     "smartchain",
-    "polygon",
-    "arbitrum",
-    "optimism",
-    "base",
-    "avalanchec",
     "solana",
     "tron",
 ]
@@ -73,24 +68,19 @@ CHAIN_CONFIG = {
     "ethereum": {"chainName": "Ethereum", "nativeSymbol": "ETH", "nativeName": "Ethereum", "chainId": 1},
     "bitcoin": {"chainName": "Bitcoin", "nativeSymbol": "BTC", "nativeName": "Bitcoin", "chainId": None},
     "smartchain": {"chainName": "BNB Smart Chain", "nativeSymbol": "BNB", "nativeName": "BNB", "chainId": 56},
-    "polygon": {"chainName": "Polygon", "nativeSymbol": "POL", "nativeName": "Polygon", "chainId": 137},
-    "arbitrum": {"chainName": "Arbitrum", "nativeSymbol": "ETH", "nativeName": "Ethereum", "chainId": 42161},
-    "optimism": {"chainName": "Optimism", "nativeSymbol": "ETH", "nativeName": "Ethereum", "chainId": 10},
-    "base": {"chainName": "Base", "nativeSymbol": "ETH", "nativeName": "Ethereum", "chainId": 8453},
-    "avalanchec": {"chainName": "Avalanche", "nativeSymbol": "AVAX", "nativeName": "Avalanche", "chainId": 43114},
     "solana": {"chainName": "Solana", "nativeSymbol": "SOL", "nativeName": "Solana", "chainId": None},
     "tron": {"chainName": "TRON", "nativeSymbol": "TRX", "nativeName": "TRON", "chainId": None},
 }
 
-SLOT_ORDER = ["native", "usdt", "usdc", "dai"]
-TARGET_SLOTS = ["usdt", "usdc", "dai"]
+SLOT_ORDER = ["native", "usdt", "usdc", "usds"]
+TARGET_SLOTS = ["usdt", "usdc", "usds"]
 TOKENLESS_CHAINS = {"bitcoin"}
 
 SLOT_META = {
     "native": {"displayName": None, "displaySymbol": None},
     "usdt": {"displayName": "Tether", "displaySymbol": "USDT"},
     "usdc": {"displayName": "USD Coin", "displaySymbol": "USDC"},
-    "dai": {"displayName": "Dai", "displaySymbol": "DAI"},
+    "usds": {"displayName": "USDS", "displaySymbol": "USDS"},
 }
 
 NAME_PENALTY_TERMS = (
@@ -108,6 +98,7 @@ class SlotRule:
     fallback_symbols: tuple[str, ...] = ()
     banned_symbols: tuple[str, ...] = ()
     preferred_name_terms: tuple[str, ...] = ()
+    required_name_terms: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -133,10 +124,10 @@ SLOT_RULES = {
         fallback_symbols=("USDC.E",),
         preferred_name_terms=("usd coin", "usdc"),
     ),
-    "dai": SlotRule(
-        preferred_symbols=("DAI",),
-        fallback_symbols=("DAI.E",),
-        preferred_name_terms=("dai",),
+    "usds": SlotRule(
+        preferred_symbols=("USDS",),
+        preferred_name_terms=("usds",),
+        required_name_terms=("usds",),
     ),
 }
 
@@ -304,6 +295,8 @@ def pick_slot_address(chain: str, slot: str, catalog: AssetCatalog) -> str | Non
         if symbol in rule.banned_symbols:
             continue
         if symbol not in rule.preferred_symbols and symbol not in rule.fallback_symbols:
+            continue
+        if rule.required_name_terms and not any(term in candidate.name.lower() for term in rule.required_name_terms):
             continue
         ranked.append((candidate_sort_key(slot, candidate), candidate))
 
