@@ -53,8 +53,6 @@ EXPORT_CHAIN_KEYS = {
 CANONICAL_CHAIN_KEYS = {export: canonical for canonical, export in EXPORT_CHAIN_KEYS.items()}
 
 CHAIN_ORDER = [
-    "ethereum",
-    "bitcoin",
     "smartchain",
     "solana",
     "tron",
@@ -65,8 +63,6 @@ CHAIN_ORDER = [
 # homepage chain header fields explicit here, while token metadata still comes
 # directly from blockchains/<chain>/assets/<address>/info.json.
 CHAIN_CONFIG = {
-    "ethereum": {"chainName": "Ethereum", "nativeSymbol": "ETH", "nativeName": "Ethereum", "chainId": 1},
-    "bitcoin": {"chainName": "Bitcoin", "nativeSymbol": "BTC", "nativeName": "Bitcoin", "chainId": None},
     "smartchain": {"chainName": "BNB Smart Chain", "nativeSymbol": "BNB", "nativeName": "BNB", "chainId": 56},
     "solana": {"chainName": "Solana", "nativeSymbol": "SOL", "nativeName": "Solana", "chainId": None},
     "tron": {"chainName": "TRON", "nativeSymbol": "TRX", "nativeName": "TRON", "chainId": None},
