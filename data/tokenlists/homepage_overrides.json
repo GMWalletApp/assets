@@ -1,3 +1,16 @@
 {
-  "tokens": []
+  "tokens": [
+    {
+      "chain": "bsc",
+      "slot": "euri",
+      "kind": "token",
+      "symbol": "EURI",
+      "name": "EURITE",
+      "address": "0x9d1A7A3191102e9F900Faa10540837ba84dCBAE7",
+      "decimals": 18,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x9d1A7A3191102e9F900Faa10540837ba84dCBAE7/logo.png",
+      "explorer": "https://bscscan.com/token/0x9d1A7A3191102e9F900Faa10540837ba84dCBAE7",
+      "source": "manual-override:eurite-official"
+    }
+  ]
 }

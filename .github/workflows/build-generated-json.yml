@@ -1,0 +1,138 @@
+name: Build Generated JSON
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-generated-json-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-generated-json:
+    runs-on: ubuntu-latest
+    env:
+      FROM_PREFIX: "https://assets-cdn.trustwallet.com"
+      TO_PREFIX: "https://cdn.jsdelivr.net/gh/trustwallet/assets@master"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: extensions/jsonrpc/go.mod
+          cache-dependency-path: extensions/jsonrpc/go.sum
+
+      - name: Install zstd
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zstd
+
+      - name: Require CoinGecko API key
+        env:
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+        run: |
+          if [ -z "$COINGECKO_API_KEY" ]; then
+            echo "::error::COINGECKO_API_KEY repository secret is required to generate the token list"
+            exit 1
+          fi
+
+      - name: Build homepage
+        run: |
+          python3 data/tokenlists/build_homepage.py
+          python3 -m json.tool data/tokenlists/homepage_overrides.json >/dev/null
+          python3 -m json.tool data/tokenlists/out/homepage.json >/dev/null
+
+      - name: Test JSON-RPC sidecar
+        working-directory: extensions/jsonrpc
+        run: make test
+
+      - name: Build token list
+        working-directory: extensions/jsonrpc
+        env:
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          COINGECKO_API_BASE_URL: ${{ vars.COINGECKO_API_BASE_URL }}
+          COINGECKO_API_KEY_HEADER: ${{ vars.COINGECKO_API_KEY_HEADER }}
+          DEFILLAMA_STABLECOIN_BASE_URL: ${{ vars.DEFILLAMA_STABLECOIN_BASE_URL }}
+        run: |
+          make sync-once SYNC_ARGS="--sync-target tokenlist --market-limit 1000"
+          python3 -m json.tool data/tokenlist.json >/dev/null
+          python3 -m json.tool data/tokenlist-report.json >/dev/null
+
+      - name: Replace generated logo URL prefix
+        run: |
+          set -euo pipefail
+
+          files=(
+            data/tokenlists/out/homepage.json
+            extensions/jsonrpc/data/tokenlist.json
+          )
+
+          for file in "${files[@]}"; do
+            if [ ! -s "$file" ]; then
+              echo "::error::Required JSON file not found: $file"
+              exit 1
+            fi
+          done
+
+          FROM_PREFIX="$FROM_PREFIX" TO_PREFIX="$TO_PREFIX" \
+            perl -0pi -e 's/\Q$ENV{FROM_PREFIX}\E/$ENV{TO_PREFIX}/g' "${files[@]}"
+
+          for file in "${files[@]}"; do
+            python3 -m json.tool "$file" >/dev/null
+            if grep -Fq "$FROM_PREFIX" "$file"; then
+              echo "::error::$file still contains the source logo URL prefix"
+              exit 1
+            fi
+            if ! grep -Fq "$TO_PREFIX" "$file"; then
+              echo "::error::$file does not contain the replacement logo URL prefix"
+              exit 1
+            fi
+          done
+
+      - name: Compress JSON files
+        run: |
+          set -euo pipefail
+
+          files=(
+            support/support.json
+            extensions/jsonrpc/data/tokenlist.json
+            data/tokenlists/out/homepage.json
+          )
+
+          for file in "${files[@]}"; do
+            if [ ! -s "$file" ]; then
+              echo "::error::Required JSON file not found: $file"
+              exit 1
+            fi
+            python3 -m json.tool "$file" >/dev/null
+            zstd --ultra -22 --force --keep "$file" -o "$file.zst"
+            zstd --test "$file.zst"
+          done
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/tokenlists/out/homepage.json \
+            data/tokenlists/out/homepage.json.zst \
+            extensions/jsonrpc/data/tokenlist.json \
+            extensions/jsonrpc/data/tokenlist-report.json \
+            extensions/jsonrpc/data/tokenlist.json.zst \
+            support/support.json.zst
+          if git diff --cached --quiet; then
+            echo "No generated JSON changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: rebuild generated json"
+          git push

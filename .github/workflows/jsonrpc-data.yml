@@ -15,13 +15,6 @@ on:
         description: "CoinGecko market rows to fetch for market.json and tokenlist enrichment"
         required: false
         default: "1000"
-  push:
-    branches:
-      - main
-      - master
-    paths-ignore:
-      - "extensions/jsonrpc/data/**"
-
 permissions:
   contents: write
 
