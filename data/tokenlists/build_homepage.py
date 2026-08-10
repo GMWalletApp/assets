@@ -4,7 +4,7 @@ Output:
   out/homepage.json = {
     "generatedAt": "...",
     "chainOrder": [...],
-    "slotOrder": ["native", "usdt", "usdc", "usds", "euri", "gyen"],
+    "slotOrder": ["native", "usdt", "usdc", "usds", "eurc", "eure", "euri", "gyen"],
     "chains": [...],
     "tokens": [...]
   }
@@ -12,7 +12,7 @@ Output:
 Rules:
   - include one native coin per configured chain
   - include BTC only as bitcoin native
-  - for each non-bitcoin chain, include at most one USDT, USDC, USDS, EURI, and GYEN
+  - for each non-bitcoin chain, include at most one USDT, USDC, USDS, EURC, EURe, EURI, and GYEN
   - if multiple candidates exist for a slot, rank them and choose the top-ranked one
   - if a slot has no matching asset in this repo, skip it and report it
 
@@ -74,8 +74,8 @@ CHAIN_CONFIG = {
     "tron": {"chainName": "TRON", "nativeSymbol": "TRX", "nativeName": "TRON", "chainId": None},
 }
 
-SLOT_ORDER = ["native", "usdt", "usdc", "usds", "euri", "gyen"]
-TARGET_SLOTS = ["usdt", "usdc", "usds", "euri", "gyen"]
+SLOT_ORDER = ["native", "usdt", "usdc", "usds", "eurc", "eure", "euri", "gyen"]
+TARGET_SLOTS = ["usdt", "usdc", "usds", "eurc", "eure", "euri", "gyen"]
 TOKENLESS_CHAINS = {"bitcoin"}
 
 SLOT_META = {
@@ -83,6 +83,8 @@ SLOT_META = {
     "usdt": {"displayName": "Tether", "displaySymbol": "USDT"},
     "usdc": {"displayName": "USD Coin", "displaySymbol": "USDC"},
     "usds": {"displayName": "USDS", "displaySymbol": "USDS"},
+    "eurc": {"displayName": "EURC", "displaySymbol": "EURC"},
+    "eure": {"displayName": "Monerium EURe", "displaySymbol": "EURe"},
     "euri": {"displayName": "Eurite", "displaySymbol": "EURI"},
     "gyen": {"displayName": "GYEN", "displaySymbol": "GYEN"},
 }
@@ -132,6 +134,14 @@ SLOT_RULES = {
         preferred_symbols=("USDS",),
         preferred_name_terms=("usds",),
         required_name_terms=("usds",),
+    ),
+    "eurc": SlotRule(
+        preferred_symbols=("EURC",),
+        preferred_name_terms=("eurc", "euro coin"),
+    ),
+    "eure": SlotRule(
+        preferred_symbols=("EURE",),
+        preferred_name_terms=("monerium", "eure"),
     ),
     "euri": SlotRule(
         preferred_symbols=("EURI",),

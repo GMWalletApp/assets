@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T17:25:48Z",
+  "generatedAt": "2026-08-10T19:10:01Z",
   "chainOrder": [
     "ethereum",
     "bsc",
@@ -13,6 +13,8 @@
     "usdt",
     "usdc",
     "usds",
+    "eurc",
+    "eure",
     "euri",
     "gyen"
   ],
@@ -29,10 +31,12 @@
         "usdt",
         "usdc",
         "usds",
+        "eurc",
+        "eure",
         "euri",
         "gyen"
       ],
-      "tokenCount": 6
+      "tokenCount": 8
     },
     {
       "key": "bsc",
@@ -61,9 +65,10 @@
         "usdt",
         "usdc",
         "usds",
+        "eure",
         "gyen"
       ],
-      "tokenCount": 5
+      "tokenCount": 6
     },
     {
       "key": "polygon",
@@ -75,9 +80,10 @@
       "availableSlots": [
         "native",
         "usdt",
-        "usdc"
+        "usdc",
+        "eure"
       ],
-      "tokenCount": 3
+      "tokenCount": 4
     },
     {
       "key": "solana",
@@ -90,9 +96,10 @@
         "native",
         "usdt",
         "usdc",
+        "eurc",
         "gyen"
       ],
-      "tokenCount": 4
+      "tokenCount": 5
     },
     {
       "key": "tron",
@@ -181,6 +188,42 @@
       "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0xdC035D45d973E3EC169d2276DDab16f1e407384F/logo.png",
       "explorer": "https://etherscan.io/token/0xdC035D45d973E3EC169d2276DDab16f1e407384F",
       "source": "trustwallet-asset"
+    },
+    {
+      "id": "ethereum:eurc",
+      "chain": "ethereum",
+      "chainName": "Ethereum",
+      "chainId": 1,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/info/logo.png",
+      "slot": "eurc",
+      "kind": "token",
+      "displaySymbol": "EURC",
+      "displayName": "EURC",
+      "symbol": "EURC",
+      "name": "EURC",
+      "address": "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+      "decimals": 6,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c/logo.png",
+      "explorer": "https://etherscan.io/token/0x1abaea1f7c830bd89acc67ec4af516284b1bc33c",
+      "source": "trustwallet-asset"
+    },
+    {
+      "id": "ethereum:eure",
+      "chain": "ethereum",
+      "chainName": "Ethereum",
+      "chainId": 1,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/info/logo.png",
+      "slot": "eure",
+      "kind": "token",
+      "displaySymbol": "EURe",
+      "displayName": "Monerium EURe",
+      "symbol": "EURe",
+      "name": "Monerium EURe",
+      "address": "0x39b8B6385416f4cA36a20319F70D28621895279D",
+      "decimals": 18,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x3231Cb76718CDeF2155FC47b5286d82e6eDA273f/logo.png",
+      "explorer": "https://etherscan.io/token/0x39b8B6385416f4cA36a20319F70D28621895279D",
+      "source": "manual-override:monerium-official"
     },
     {
       "id": "ethereum:euri",
@@ -363,6 +406,24 @@
       "source": "trustwallet-asset"
     },
     {
+      "id": "arbitrum:eure",
+      "chain": "arbitrum",
+      "chainName": "Arbitrum",
+      "chainId": 42161,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/arbitrum/info/logo.png",
+      "slot": "eure",
+      "kind": "token",
+      "displaySymbol": "EURe",
+      "displayName": "Monerium EURe",
+      "symbol": "EURe",
+      "name": "Monerium EURe",
+      "address": "0x0c06cCF38114ddfc35e07427B9424adcca9F44F8",
+      "decimals": 18,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x3231Cb76718CDeF2155FC47b5286d82e6eDA273f/logo.png",
+      "explorer": "https://arbiscan.io/token/0x0c06cCF38114ddfc35e07427B9424adcca9F44F8",
+      "source": "manual-override:monerium-official"
+    },
+    {
       "id": "arbitrum:gyen",
       "chain": "arbitrum",
       "chainName": "Arbitrum",
@@ -435,6 +496,24 @@
       "source": "trustwallet-asset"
     },
     {
+      "id": "polygon:eure",
+      "chain": "polygon",
+      "chainName": "Polygon",
+      "chainId": 137,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/polygon/info/logo.png",
+      "slot": "eure",
+      "kind": "token",
+      "displaySymbol": "EURe",
+      "displayName": "Monerium EURe",
+      "symbol": "EURe",
+      "name": "Monerium EURe",
+      "address": "0xE0aEa583266584DafBB3f9C3211d5588c73fEa8d",
+      "decimals": 18,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x3231Cb76718CDeF2155FC47b5286d82e6eDA273f/logo.png",
+      "explorer": "https://polygonscan.com/token/0xE0aEa583266584DafBB3f9C3211d5588c73fEa8d",
+      "source": "manual-override:monerium-official"
+    },
+    {
       "id": "solana:native",
       "chain": "solana",
       "chainName": "Solana",
@@ -487,6 +566,24 @@
       "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/solana/assets/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
       "explorer": "https://solscan.io/token/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
       "source": "trustwallet-asset"
+    },
+    {
+      "id": "solana:eurc",
+      "chain": "solana",
+      "chainName": "Solana",
+      "chainId": null,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/solana/info/logo.png",
+      "slot": "eurc",
+      "kind": "token",
+      "displaySymbol": "EURC",
+      "displayName": "EURC",
+      "symbol": "EURC",
+      "name": "EURC",
+      "address": "HzwqbKZw8HxMN6bF2yFZNrht3c2iXXzpKcFu7uBEDKtr",
+      "decimals": 6,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c/logo.png",
+      "explorer": "https://explorer.solana.com/address/HzwqbKZw8HxMN6bF2yFZNrht3c2iXXzpKcFu7uBEDKtr",
+      "source": "manual-override:circle-official"
     },
     {
       "id": "solana:gyen",

@@ -1,6 +1,6 @@
 {
   "source": "trustwallet+coingecko",
-  "updatedAt": "2026-08-10T17:25:50Z",
+  "updatedAt": "2026-08-10T19:10:00Z",
   "apis": [
     {
       "source": "coingecko",
@@ -30,7 +30,7 @@
   "local": {
     "nativeAssets": 187,
     "tokenAssets": 15176,
-    "outputTokens": 10075,
+    "outputTokens": 10086,
     "filtered": 5290,
     "missingLogos": 0
   },
@@ -44,7 +44,7 @@
     "missingAssets": 1339
   },
   "stablecoin": {
-    "taggedAssets": 347
+    "taggedAssets": 358
   },
   "hot": {
     "defaultEntries": 255,

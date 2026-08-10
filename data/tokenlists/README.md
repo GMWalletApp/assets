@@ -21,7 +21,7 @@ Each override token should use the same shape as a `homepage.json` token item.
 Required fields:
 
 - `chain`: canonical chain key like `zksync` or export key like `bsc`
-- `slot`: `usdt`, `usdc`, `usds`, `euri`, or `gyen`
+- `slot`: `usdt`, `usdc`, `usds`, `eurc`, `eure`, `euri`, or `gyen`
 - `kind`: must be `token`
 - `symbol`
 - `name`

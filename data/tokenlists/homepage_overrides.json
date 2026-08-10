@@ -1,6 +1,18 @@
 {
   "tokens": [
     {
+      "chain": "ethereum",
+      "slot": "eure",
+      "kind": "token",
+      "symbol": "EURe",
+      "name": "Monerium EURe",
+      "address": "0x39b8B6385416f4cA36a20319F70D28621895279D",
+      "decimals": 18,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x3231Cb76718CDeF2155FC47b5286d82e6eDA273f/logo.png",
+      "explorer": "https://etherscan.io/token/0x39b8B6385416f4cA36a20319F70D28621895279D",
+      "source": "manual-override:monerium-official"
+    },
+    {
       "chain": "bsc",
       "slot": "euri",
       "kind": "token",
@@ -11,6 +23,42 @@
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x9d1A7A3191102e9F900Faa10540837ba84dCBAE7/logo.png",
       "explorer": "https://bscscan.com/token/0x9d1A7A3191102e9F900Faa10540837ba84dCBAE7",
       "source": "manual-override:eurite-official"
+    },
+    {
+      "chain": "arbitrum",
+      "slot": "eure",
+      "kind": "token",
+      "symbol": "EURe",
+      "name": "Monerium EURe",
+      "address": "0x0c06cCF38114ddfc35e07427B9424adcca9F44F8",
+      "decimals": 18,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x3231Cb76718CDeF2155FC47b5286d82e6eDA273f/logo.png",
+      "explorer": "https://arbiscan.io/token/0x0c06cCF38114ddfc35e07427B9424adcca9F44F8",
+      "source": "manual-override:monerium-official"
+    },
+    {
+      "chain": "polygon",
+      "slot": "eure",
+      "kind": "token",
+      "symbol": "EURe",
+      "name": "Monerium EURe",
+      "address": "0xE0aEa583266584DafBB3f9C3211d5588c73fEa8d",
+      "decimals": 18,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x3231Cb76718CDeF2155FC47b5286d82e6eDA273f/logo.png",
+      "explorer": "https://polygonscan.com/token/0xE0aEa583266584DafBB3f9C3211d5588c73fEa8d",
+      "source": "manual-override:monerium-official"
+    },
+    {
+      "chain": "solana",
+      "slot": "eurc",
+      "kind": "token",
+      "symbol": "EURC",
+      "name": "EURC",
+      "address": "HzwqbKZw8HxMN6bF2yFZNrht3c2iXXzpKcFu7uBEDKtr",
+      "decimals": 6,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c/logo.png",
+      "explorer": "https://explorer.solana.com/address/HzwqbKZw8HxMN6bF2yFZNrht3c2iXXzpKcFu7uBEDKtr",
+      "source": "manual-override:circle-official"
     }
   ]
 }
