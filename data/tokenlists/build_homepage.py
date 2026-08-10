@@ -55,6 +55,8 @@ CANONICAL_CHAIN_KEYS = {export: canonical for canonical, export in EXPORT_CHAIN_
 CHAIN_ORDER = [
     "ethereum",
     "smartchain",
+    "arbitrum",
+    "polygon",
     "solana",
     "tron",
 ]
@@ -66,6 +68,8 @@ CHAIN_ORDER = [
 CHAIN_CONFIG = {
     "ethereum": {"chainName": "Ethereum", "nativeSymbol": "ETH", "nativeName": "Ethereum", "chainId": 1},
     "smartchain": {"chainName": "BNB Smart Chain", "nativeSymbol": "BNB", "nativeName": "BNB", "chainId": 56},
+    "arbitrum": {"chainName": "Arbitrum", "nativeSymbol": "ETH", "nativeName": "Ethereum", "chainId": 42161},
+    "polygon": {"chainName": "Polygon", "nativeSymbol": "POL", "nativeName": "POL", "chainId": 137},
     "solana": {"chainName": "Solana", "nativeSymbol": "SOL", "nativeName": "Solana", "chainId": None},
     "tron": {"chainName": "TRON", "nativeSymbol": "TRX", "nativeName": "TRON", "chainId": None},
 }
