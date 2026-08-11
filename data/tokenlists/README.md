@@ -21,7 +21,7 @@ Each override token should use the same shape as a `homepage.json` token item.
 Required fields:
 
 - `chain`: canonical chain key like `zksync` or export key like `bsc`
-- `slot`: `usdt`, `usdc`, `usds`, `eurc`, `eure`, `euri`, or `gyen`
+- `slot`: `usdt`, `usdt0`, `usdc`, `usds`, `usdd`, `usd1`, `usdg`, `eurc`, `eure`, `euri`, `gyen`, or `jpyc`
 - `kind`: must be `token`
 - `symbol`
 - `name`
@@ -52,6 +52,7 @@ consistent:
 - `kind`
 - `displaySymbol`
 - `displayName`
+- `tags`: `[]` for native coins and `["stablecoin"]` for stablecoin slots
 
 Example:
 
@@ -68,6 +69,7 @@ Example:
       "kind": "token",
       "displaySymbol": "USDT",
       "displayName": "Tether",
+      "tags": ["stablecoin"],
       "symbol": "USDT",
       "name": "Bridged USDT",
       "address": "0x493257fD37EDB34451f62EDf8D2a0C418852bA4C",

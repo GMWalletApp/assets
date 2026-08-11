@@ -4,7 +4,7 @@ Output:
   out/homepage.json = {
     "generatedAt": "...",
     "chainOrder": [...],
-    "slotOrder": ["native", "usdt", "usdc", "usds", "eurc", "eure", "euri", "gyen"],
+    "slotOrder": ["native", "usdt", "usdt0", "usdc", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"],
     "chains": [...],
     "tokens": [...]
   }
@@ -12,7 +12,8 @@ Output:
 Rules:
   - include one native coin per configured chain
   - include BTC only as bitcoin native
-  - for each non-bitcoin chain, include at most one USDT, USDC, USDS, EURC, EURe, EURI, and GYEN
+  - for each non-bitcoin chain, include at most one token for each configured homepage slot
+  - tag every configured stablecoin slot with "stablecoin"
   - if multiple candidates exist for a slot, rank them and choose the top-ranked one
   - if a slot has no matching asset in this repo, skip it and report it
 
@@ -74,19 +75,42 @@ CHAIN_CONFIG = {
     "tron": {"chainName": "TRON", "nativeSymbol": "TRX", "nativeName": "TRON", "chainId": None},
 }
 
-SLOT_ORDER = ["native", "usdt", "usdc", "usds", "eurc", "eure", "euri", "gyen"]
-TARGET_SLOTS = ["usdt", "usdc", "usds", "eurc", "eure", "euri", "gyen"]
+SLOT_ORDER = ["native", "usdt", "usdt0", "usdc", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"]
+TARGET_SLOTS = ["usdt", "usdt0", "usdc", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"]
 TOKENLESS_CHAINS = {"bitcoin"}
+STABLECOIN_SLOTS = frozenset(TARGET_SLOTS)
+
+# Restrict newly curated assets to issuer-verified deployments requested for
+# the homepage. This prevents another same-symbol Trust Wallet asset from
+# silently expanding homepage support to an unreviewed chain.
+SLOT_CHAIN_ALLOWLISTS = {
+    "usdt0": {"arbitrum", "polygon"},
+    "usdd": {"ethereum", "smartchain", "tron"},
+    "usd1": {"ethereum", "smartchain", "solana"},
+    "usdg": {"ethereum", "solana"},
+    "jpyc": {"ethereum", "polygon"},
+}
+
+# Homepage shows the issuer's current product identity once per chain. The
+# complete token list retains both USDT and USDT0 records for compatibility.
+SLOT_CHAIN_DENYLISTS = {
+    "usdt": {"arbitrum", "polygon"},
+}
 
 SLOT_META = {
     "native": {"displayName": None, "displaySymbol": None},
     "usdt": {"displayName": "Tether", "displaySymbol": "USDT"},
+    "usdt0": {"displayName": "USDT0", "displaySymbol": "USDT0"},
     "usdc": {"displayName": "USD Coin", "displaySymbol": "USDC"},
     "usds": {"displayName": "USDS", "displaySymbol": "USDS"},
+    "usdd": {"displayName": "Decentralized USD", "displaySymbol": "USDD"},
+    "usd1": {"displayName": "World Liberty Financial USD", "displaySymbol": "USD1"},
+    "usdg": {"displayName": "Global Dollar", "displaySymbol": "USDG"},
     "eurc": {"displayName": "EURC", "displaySymbol": "EURC"},
     "eure": {"displayName": "Monerium EURe", "displaySymbol": "EURe"},
     "euri": {"displayName": "Eurite", "displaySymbol": "EURI"},
     "gyen": {"displayName": "GYEN", "displaySymbol": "GYEN"},
+    "jpyc": {"displayName": "JPY Coin", "displaySymbol": "JPYC"},
 }
 
 NAME_PENALTY_TERMS = (
@@ -125,6 +149,10 @@ SLOT_RULES = {
         banned_symbols=("USDT0", "USDT+"),
         preferred_name_terms=("tether", "usdt"),
     ),
+    "usdt0": SlotRule(
+        preferred_symbols=("USDT0",),
+        preferred_name_terms=("usdt0",),
+    ),
     "usdc": SlotRule(
         preferred_symbols=("USDC",),
         fallback_symbols=("USDC.E",),
@@ -134,6 +162,18 @@ SLOT_RULES = {
         preferred_symbols=("USDS",),
         preferred_name_terms=("usds",),
         required_name_terms=("usds",),
+    ),
+    "usdd": SlotRule(
+        preferred_symbols=("USDD",),
+        preferred_name_terms=("decentralized usd", "usdd"),
+    ),
+    "usd1": SlotRule(
+        preferred_symbols=("USD1",),
+        preferred_name_terms=("world liberty financial", "usd1"),
+    ),
+    "usdg": SlotRule(
+        preferred_symbols=("USDG",),
+        preferred_name_terms=("global dollar", "usdg"),
     ),
     "eurc": SlotRule(
         preferred_symbols=("EURC",),
@@ -150,6 +190,10 @@ SLOT_RULES = {
     "gyen": SlotRule(
         preferred_symbols=("GYEN",),
         preferred_name_terms=("gyen", "gmo jpy"),
+    ),
+    "jpyc": SlotRule(
+        preferred_symbols=("JPYC",),
+        preferred_name_terms=("jpy coin", "jpyc"),
     ),
 }
 
@@ -168,6 +212,10 @@ def canonical_chain_key(chain: str) -> str:
 
 def canonical_symbol(symbol: str | None) -> str:
     return (symbol or "").strip().upper()
+
+
+def tags_for_slot(slot: str) -> list[str]:
+    return ["stablecoin"] if slot in STABLECOIN_SLOTS else []
 
 
 def build_chain_logo_uri(chain: str) -> str:
@@ -437,6 +485,7 @@ def build_manual_token(chain_meta: dict[str, Any], entry: dict[str, Any]) -> dic
         "kind": "token",
         "displaySymbol": slot_meta["displaySymbol"],
         "displayName": slot_meta["displayName"],
+        "tags": tags_for_slot(entry["slot"]),
         "symbol": entry["symbol"],
         "name": entry["name"],
         "address": entry["address"],
@@ -527,7 +576,16 @@ def compute_missing_slots(tokens: list[dict[str, Any]], chain_meta_by_canonical:
             continue
         export_key = chain_meta_by_canonical[canonical]["exportKey"]
         present = by_chain.get(export_key, set())
-        slots = [slot for slot in TARGET_SLOTS if slot not in present]
+        slots = [
+            slot
+            for slot in TARGET_SLOTS
+            if slot not in present
+            and (
+                SLOT_CHAIN_ALLOWLISTS.get(slot) is None
+                or canonical in SLOT_CHAIN_ALLOWLISTS[slot]
+            )
+            and canonical not in SLOT_CHAIN_DENYLISTS.get(slot, set())
+        ]
         if slots:
             missing[canonical] = slots
     return missing
@@ -573,6 +631,7 @@ def build_native_token(chain_meta: dict[str, Any]) -> dict[str, Any]:
         "kind": "native",
         "displaySymbol": chain_meta["symbol"],
         "displayName": chain_meta["nativeName"],
+        "tags": tags_for_slot("native"),
         "symbol": chain_meta["symbol"],
         "name": chain_meta["nativeName"],
         "address": None,
@@ -601,6 +660,7 @@ def build_slot_token(
         "kind": "token",
         "displaySymbol": slot_meta["displaySymbol"],
         "displayName": slot_meta["displayName"],
+        "tags": tags_for_slot(slot),
         "symbol": token.get("symbol"),
         "name": token.get("name"),
         "address": token.get("address"),
@@ -630,6 +690,11 @@ def main() -> int:
 
         if chain not in TOKENLESS_CHAINS:
             for slot in TARGET_SLOTS:
+                allowed_chains = SLOT_CHAIN_ALLOWLISTS.get(slot)
+                if allowed_chains is not None and chain not in allowed_chains:
+                    continue
+                if chain in SLOT_CHAIN_DENYLISTS.get(slot, set()):
+                    continue
                 address = pick_slot_address(chain, slot, catalog)
                 if address is None:
                     continue

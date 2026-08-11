@@ -1,6 +1,6 @@
 {
   "source": "trustwallet+coingecko",
-  "updatedAt": "2026-08-10T19:16:59Z",
+  "updatedAt": "2026-08-11T07:33:04Z",
   "tokens": [
     {
       "kind": "token",
@@ -264459,6 +264459,397 @@
         {
           "name": "explorer",
           "url": "https://bscscan.com/token/0x9d1A7A3191102e9F900Faa10540837ba84dCBAE7"
+        }
+      ]
+    },
+  {
+    "kind": "token",
+    "chain": "ethereum",
+    "hot": false,
+    "address": "0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
+    "assetId": "c60_t0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
+    "type": "ERC20",
+    "name": "JPY Coin",
+    "symbol": "JPYC",
+    "decimals": 18,
+    "status": "active",
+    "logoURI": "https://github.com/jpycoin.png",
+    "logoExists": true,
+    "tags": [
+      "stablecoin"
+    ],
+    "links": [
+      {
+        "name": "website",
+        "url": "https://jpyc.co.jp/"
+      },
+      {
+        "name": "explorer",
+        "url": "https://etherscan.io/token/0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29"
+      }
+    ]
+  },
+  {
+    "kind": "token",
+    "chain": "polygon",
+    "hot": false,
+    "address": "0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
+    "assetId": "c966_t0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
+    "type": "POLYGON",
+    "name": "JPY Coin",
+    "symbol": "JPYC",
+    "decimals": 18,
+    "status": "active",
+    "logoURI": "https://github.com/jpycoin.png",
+    "logoExists": true,
+    "tags": [
+      "stablecoin"
+    ],
+    "links": [
+      {
+        "name": "website",
+        "url": "https://jpyc.co.jp/"
+      },
+      {
+        "name": "explorer",
+        "url": "https://polygonscan.com/token/0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29"
+      }
+    ]
+  },
+  {
+    "kind": "token",
+    "chain": "avalanchec",
+    "hot": false,
+    "address": "0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
+    "assetId": "c10009000_t0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
+    "type": "AVALANCHE",
+    "name": "JPY Coin",
+    "symbol": "JPYC",
+    "decimals": 18,
+    "status": "active",
+    "logoURI": "https://github.com/jpycoin.png",
+    "logoExists": true,
+    "tags": [
+      "stablecoin"
+    ],
+    "links": [
+      {
+        "name": "website",
+        "url": "https://jpyc.co.jp/"
+      },
+        {
+          "name": "explorer",
+          "url": "https://snowtrace.io/token/0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "arbitrum",
+      "hot": false,
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "assetId": "usdt0:arbitrum:0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "type": "ARBITRUM",
+      "name": "USDT0",
+      "symbol": "USDT0",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://arbiscan.io/address/0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "polygon",
+      "hot": false,
+      "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+      "assetId": "usdt0:polygon:0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+      "type": "POLYGON",
+      "name": "USDT0",
+      "symbol": "USDT0",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://polygonscan.com/token/0xc2132d05d31c914a87c6611c10748aeb04b58e8f"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "cfxevm",
+      "hot": false,
+      "address": "0xaf37E8B6C9ED7f6318979f56Fc287d76c30847ff",
+      "assetId": "c1030_t0xaf37E8B6C9ED7f6318979f56Fc287d76c30847ff",
+      "type": "CONFLUX",
+      "name": "USDT0",
+      "symbol": "USDT0",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://evm.confluxscan.org/address/0xaf37E8B6C9ED7f6318979f56Fc287d76c30847ff"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "hyperevm",
+      "hot": false,
+      "address": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+      "assetId": "hyperevm:0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+      "type": "HYPEREVM",
+      "name": "USDT0",
+      "symbol": "USDT0",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://hyperevmscan.io/token/0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "hedera",
+      "hot": false,
+      "address": "0x00000000000000000000000000000000009Ce723",
+      "assetId": "hedera:0x00000000000000000000000000000000009Ce723",
+      "type": "HEDERA",
+      "name": "USDT0",
+      "symbol": "USDT0",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://hashscan.io/mainnet/token/0x00000000000000000000000000000000009Ce723"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "mantle",
+      "hot": false,
+      "address": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+      "assetId": "c5000_t0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+      "type": "MANTLE",
+      "name": "USDT0",
+      "symbol": "USDT0",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://mantlescan.xyz/address/0x779Ded0c9e1022225f8E0630b35a9b54bE713736"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "optimism",
+      "hot": false,
+      "address": "0x01bFF41798a0BcF287b996046Ca68b395DbC1071",
+      "assetId": "c10000070_t0x01bFF41798a0BcF287b996046Ca68b395DbC1071",
+      "type": "OPTIMISM",
+      "name": "USDT0",
+      "symbol": "USDT0",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://optimistic.etherscan.io/address/0x01bFF41798a0BcF287b996046Ca68b395DbC1071"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "rootstock",
+      "hot": false,
+      "address": "0x779dED0C9e1022225F8e0630b35A9B54Be713736",
+      "assetId": "rootstock:0x779dED0C9e1022225F8e0630b35A9B54Be713736",
+      "type": "ROOTSTOCK",
+      "name": "USDT0",
+      "symbol": "USDT0",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://rootstock.blockscout.com/address/0x779dED0C9e1022225F8e0630b35A9B54Be713736"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "sei",
+      "hot": false,
+      "address": "0x9151434b16b9763660705744891fA906F660EcC5",
+      "assetId": "c19000118_t0x9151434b16b9763660705744891fA906F660EcC5",
+      "type": "SEI",
+      "name": "USDT0",
+      "symbol": "USDT0",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://seiscan.io/address/0x9151434b16b9763660705744891fA906F660EcC5"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "stellar",
+      "hot": false,
+      "address": "CBSJZEIO5C7KC2SF3MKSNXXJSW5G3VTNBX4ATMKUI3B2MR4JKM4R26YF",
+      "assetId": "c148_tCBSJZEIO5C7KC2SF3MKSNXXJSW5G3VTNBX4ATMKUI3B2MR4JKM4R26YF",
+      "type": "STELLAR",
+      "name": "USDT0",
+      "symbol": "USDT0",
+      "decimals": 7,
+      "status": "active",
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://stellar.expert/explorer/public/contract/CBSJZEIO5C7KC2SF3MKSNXXJSW5G3VTNBX4ATMKUI3B2MR4JKM4R26YF"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
         }
       ]
     }

@@ -103,7 +103,7 @@ The tokenlist configuration is split by responsibility and never writes back to 
 - `tokenlist-rules.json`: generic mapping/tag/filter rules
 - `tokenlist-base-overrides.json`: long-lived override entries managed by PR
 - `tokenlist-manual-overrides.json`: Action-managed manual override entries
-- `tokenlist-manual-tokens.json`: Action-managed final token entries appended after generated assets; only `kind=token` is supported
+- `tokenlist-manual-tokens.json`: Action-managed final token entries appended after generated assets; only `kind=token` is supported. A manual entry may intentionally reuse a local token's chain and address (for example, separate `USDT` and `USDT0` representations), but it must use a distinct, non-empty `assetId`.
 - `tokenlist-hot-defaults.json`: long-lived default hot entries managed by PR
 - `tokenlist-hot-current.json`: Action-managed current-period hot entries
 

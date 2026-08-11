@@ -471,9 +471,10 @@ func normalizeTokenListManualToken(entry *AppToken) {
 	entry.Kind = strings.ToLower(strings.TrimSpace(entry.Kind))
 	entry.Chain = strings.ToLower(strings.TrimSpace(entry.Chain))
 	entry.Address = strings.TrimSpace(entry.Address)
+	entry.AssetID = strings.TrimSpace(entry.AssetID)
 }
 
-func validateActionTokenListManualToken(root string, entry *AppToken, localAssetKeys map[string]struct{}, origin string) error {
+func validateActionTokenListManualToken(root string, entry *AppToken, localAssetKeys map[string]string, origin string) error {
 	normalizeTokenListManualToken(entry)
 	if entry.Chain == "" {
 		return fmt.Errorf("%s: manual token missing chain", origin)
@@ -486,17 +487,25 @@ func validateActionTokenListManualToken(root string, entry *AppToken, localAsset
 		if entry.Address == "" {
 			return fmt.Errorf("%s: manual token %s missing address", origin, entry.Chain)
 		}
+		if entry.AssetID == "" {
+			return fmt.Errorf("%s: manual token %s/%s missing assetId", origin, entry.Chain, entry.Address)
+		}
 	default:
 		return fmt.Errorf("%s: manual token %s/%s has unsupported kind %q; only kind=token is allowed", origin, entry.Chain, entry.Address, entry.Kind)
 	}
-	if _, ok := localAssetKeys[chainAddressKey(entry.Chain, entry.Address)]; ok {
-		return fmt.Errorf("%s: manual token %s/%s conflicts with a local asset", origin, entry.Chain, entry.Address)
+	// Manual tokens may intentionally duplicate a local chain/address when the
+	// same deployed contract has another official product representation (for
+	// example, USDT and USDT0). It remains a separate final token-list object,
+	// so reusing the local assetId is still rejected.
+	if localAssetID, ok := localAssetKeys[chainAddressKey(entry.Chain, entry.Address)]; ok && strings.EqualFold(localAssetID, entry.AssetID) {
+		return fmt.Errorf("%s: manual token %s/%s conflicts with local assetId %s", origin, entry.Chain, entry.Address, entry.AssetID)
 	}
 	return nil
 }
 
-func validateTokenListManualTokens(root string, entries []AppToken, localAssetKeys map[string]struct{}, rejectDuplicateKeys bool, origin string) error {
+func validateTokenListManualTokens(root string, entries []AppToken, localAssetKeys map[string]string, rejectDuplicateKeys bool, origin string) error {
 	seen := map[string]struct{}{}
+	seenAssetIDs := map[string]struct{}{}
 	for i := range entries {
 		if err := validateActionTokenListManualToken(root, &entries[i], localAssetKeys, origin); err != nil {
 			return err
@@ -506,21 +515,26 @@ func validateTokenListManualTokens(root string, entries []AppToken, localAssetKe
 			return fmt.Errorf("%s: duplicate manual token key %s/%s", origin, entries[i].Chain, entries[i].Address)
 		}
 		seen[key] = struct{}{}
+		assetIDKey := strings.ToLower(entries[i].AssetID)
+		if _, ok := seenAssetIDs[assetIDKey]; ok {
+			return fmt.Errorf("%s: duplicate manual token assetId %s", origin, entries[i].AssetID)
+		}
+		seenAssetIDs[assetIDKey] = struct{}{}
 	}
 	return nil
 }
 
-func buildTokenListLocalAssetKeySet(root string) (map[string]struct{}, error) {
+func buildTokenListLocalAssetKeySet(root string) (map[string]string, error) {
 	index, err := NewStore(root, DefaultAssetBaseURL).BuildAssetIndex()
 	if err != nil {
 		return nil, err
 	}
-	keys := make(map[string]struct{}, len(index.nativeAssets)+len(index.tokenAssets))
+	keys := make(map[string]string, len(index.nativeAssets)+len(index.tokenAssets))
 	for _, asset := range index.NativeAssets() {
-		keys[chainAddressKey(asset.Chain, asset.Address)] = struct{}{}
+		keys[chainAddressKey(asset.Chain, asset.Address)] = asset.AssetID
 	}
 	for _, asset := range index.TokenAssets() {
-		keys[chainAddressKey(asset.Chain, asset.Address)] = struct{}{}
+		keys[chainAddressKey(asset.Chain, asset.Address)] = asset.AssetID
 	}
 	return keys, nil
 }

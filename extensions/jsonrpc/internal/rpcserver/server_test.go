@@ -836,8 +836,11 @@ func TestApplyTokenListConfigOperationRejectsInvalidInput(t *testing.T) {
 	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenUpsert, `{"tokens":[{"chain":"plasma","kind":"token","address":"0x00000000000000000000000000000000000000aa"},{"chain":"plasma","kind":"token","address":"0x00000000000000000000000000000000000000aa"}]}`); err == nil {
 		t.Fatal("expected duplicate manual token payload to fail")
 	}
-	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenUpsert, `{"chain":"smartchain","kind":"token","address":"`+testUSDTAddress+`"}`); err == nil {
-		t.Fatal("expected manual token local asset conflict to fail")
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenUpsert, `{"chain":"smartchain","kind":"token","address":"`+testUSDTAddress+`","assetId":"usdt0:smartchain:`+testUSDTAddress+`","symbol":"USDT0"}`); err != nil {
+		t.Fatalf("expected distinct manual representation of local asset to succeed: %v", err)
+	}
+	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenUpsert, `{"chain":"smartchain","kind":"token","address":"`+testUSDTAddress+`","assetId":"c20000714_t`+testUSDTAddress+`","symbol":"USDT0"}`); err == nil {
+		t.Fatal("expected reuse of local assetId to fail")
 	}
 	if _, err := ApplyTokenListConfigOperation(root, DefaultTokenListManualOverridesPath, DefaultTokenListManualTokensPath, DefaultTokenListHotCurrentPath, TokenListConfigOperationManualTokenUpsert, `{"chain":"plasma","kind":"native","assetId":"plasma"}`); err == nil {
 		t.Fatal("expected native manual token to be rejected")
@@ -1206,16 +1209,18 @@ func TestTokenListSyncAppendsManualTokens(t *testing.T) {
 	}
 }
 
-func TestTokenListSyncRejectsManualTokenLocalConflicts(t *testing.T) {
+func TestTokenListSyncAllowsDistinctManualRepresentationOfLocalAsset(t *testing.T) {
 	root := newFixtureRoot(t)
 	manualTokensPath := filepath.Join(root, DefaultTokenListManualTokensPath)
 	mustWriteJSON(t, manualTokensPath, TokenListManualTokensFile{
 		Tokens: []AppToken{{
-			Kind:    "token",
-			Chain:   "smartchain",
-			Address: testUSDTAddress,
-			AssetID: "manual-usdt",
-			Name:    "Manual USDT",
+			Kind:     "token",
+			Chain:    "smartchain",
+			Address:  testUSDTAddress,
+			AssetID:  "usdt0:smartchain:" + testUSDTAddress,
+			Name:     "USDT0",
+			Symbol:   "USDT0",
+			Decimals: 6,
 		}},
 	})
 
@@ -1243,8 +1248,24 @@ func TestTokenListSyncRejectsManualTokenLocalConflicts(t *testing.T) {
 
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
-	if err := syncer.SyncTokenList(ctx); err == nil || !strings.Contains(err.Error(), "conflicts with a local asset") {
-		t.Fatalf("expected manual token conflict to fail sync, got %v", err)
+	if err := syncer.SyncTokenList(ctx); err != nil {
+		t.Fatalf("expected distinct manual representation to sync: %v", err)
+	}
+
+	var tokenList AppTokenList
+	if err := readJSONFile(filepath.Join(root, "data", "tokenlist.json"), &tokenList); err != nil {
+		t.Fatalf("read tokenlist: %v", err)
+	}
+	matching := 0
+	foundUSDT0 := false
+	for _, token := range tokenList.Tokens {
+		if token.Chain == "smartchain" && strings.EqualFold(token.Address, testUSDTAddress) {
+			matching++
+			foundUSDT0 = foundUSDT0 || token.AssetID == "usdt0:smartchain:"+testUSDTAddress && token.Symbol == "USDT0"
+		}
+	}
+	if matching != 2 || !foundUSDT0 {
+		t.Fatalf("expected generated USDT plus manual USDT0 representation, got %+v", tokenList.Tokens)
 	}
 }
 

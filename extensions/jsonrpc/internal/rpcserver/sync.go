@@ -191,12 +191,12 @@ func (s *Syncer) SyncTokenList(ctx context.Context) error {
 	if err != nil {
 		return err
 	}
-	localAssetKeys := make(map[string]struct{}, len(index.nativeAssets)+len(index.tokenAssets))
+	localAssetKeys := make(map[string]string, len(index.nativeAssets)+len(index.tokenAssets))
 	for _, asset := range index.NativeAssets() {
-		localAssetKeys[chainAddressKey(asset.Chain, asset.Address)] = struct{}{}
+		localAssetKeys[chainAddressKey(asset.Chain, asset.Address)] = asset.AssetID
 	}
 	for _, asset := range index.TokenAssets() {
-		localAssetKeys[chainAddressKey(asset.Chain, asset.Address)] = struct{}{}
+		localAssetKeys[chainAddressKey(asset.Chain, asset.Address)] = asset.AssetID
 	}
 	if err := validateTokenListManualTokens(s.store.root, manualTokens, localAssetKeys, true, s.config.TokenListManualTokensPath); err != nil {
 		return err
