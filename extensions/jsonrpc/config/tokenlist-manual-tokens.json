@@ -626,6 +626,202 @@
         {"name": "explorer", "url": "https://stellar.expert/explorer/public/contract/CBSJZEIO5C7KC2SF3MKSNXXJSW5G3VTNBX4ATMKUI3B2MR4JKM4R26YF"},
         {"name": "deployments", "url": "https://docs.usdt0.to/technical-documentation/deployments"}
       ]
+    },
+    {
+      "kind": "token",
+      "chain": "ethereum",
+      "hot": false,
+      "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "assetId": "c60_t0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "type": "ERC20",
+      "name": "Coinbase Wrapped BTC",
+      "symbol": "cbBTC",
+      "decimals": 8,
+      "status": "active",
+      "logoURI": "https://assets.coingecko.com/coins/images/40143/large/cbbtc.webp",
+      "logoExists": true,
+      "tags": ["wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.coinbase.com/cbbtc"},
+        {"name": "explorer", "url": "https://etherscan.io/token/0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "base",
+      "hot": false,
+      "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "assetId": "c8453_t0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "type": "BASE",
+      "name": "Coinbase Wrapped BTC",
+      "symbol": "cbBTC",
+      "decimals": 8,
+      "status": "active",
+      "logoURI": "https://assets.coingecko.com/coins/images/40143/large/cbbtc.webp",
+      "logoExists": true,
+      "tags": ["wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.coinbase.com/cbbtc"},
+        {"name": "explorer", "url": "https://basescan.org/token/0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "arbitrum",
+      "hot": false,
+      "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "assetId": "c10042221_t0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "type": "ARBITRUM",
+      "name": "Coinbase Wrapped BTC",
+      "symbol": "cbBTC",
+      "decimals": 8,
+      "status": "active",
+      "logoURI": "https://assets.coingecko.com/coins/images/40143/large/cbbtc.webp",
+      "logoExists": true,
+      "tags": ["wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.coinbase.com/cbbtc"},
+        {"name": "explorer", "url": "https://arbiscan.io/token/0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "solana",
+      "hot": false,
+      "address": "cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij",
+      "assetId": "c501_tcbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij",
+      "type": "SPL",
+      "name": "Coinbase Wrapped BTC",
+      "symbol": "cbBTC",
+      "decimals": 8,
+      "status": "active",
+      "logoURI": "https://assets.coingecko.com/coins/images/40143/large/cbbtc.webp",
+      "logoExists": true,
+      "tags": ["wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.coinbase.com/cbbtc"},
+        {"name": "explorer", "url": "https://explorer.solana.com/address/cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "solana",
+      "hot": false,
+      "address": "5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ",
+      "assetId": "c501_t5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ",
+      "type": "SPL",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
+      "logoExists": true,
+      "tags": ["wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.wbtc.network/"},
+        {"name": "explorer", "url": "https://solscan.io/token/5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ"},
+        {"name": "transparency", "url": "https://wbtc.network/transparency"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "tron",
+      "hot": false,
+      "address": "TYhWwKpw43ENFWBTGpzLHn3882f2au7SMi",
+      "assetId": "c195_tTYhWwKpw43ENFWBTGpzLHn3882f2au7SMi",
+      "type": "TRC20",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
+      "logoExists": true,
+      "tags": ["wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.wbtc.network/"},
+        {"name": "explorer", "url": "https://tronscan.org/#/token20/TYhWwKpw43ENFWBTGpzLHn3882f2au7SMi"},
+        {"name": "transparency", "url": "https://wbtc.network/transparency"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "smartchain",
+      "hot": false,
+      "address": "0x39665e85a68a4d7328b8799135E2ff301a0Ca86f",
+      "assetId": "c20000714_t0x39665e85a68a4d7328b8799135E2ff301a0Ca86f",
+      "type": "BEP20",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
+      "logoExists": true,
+      "tags": ["wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.wbtc.network/"},
+        {"name": "explorer", "url": "https://bscscan.com/token/0x39665e85a68a4d7328b8799135E2ff301a0Ca86f"},
+        {"name": "transparency", "url": "https://wbtc.network/transparency"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "base",
+      "hot": false,
+      "address": "0x1ceA84203673764244E05693e42E6Ace62bE9BA5",
+      "assetId": "c8453_t0x1ceA84203673764244E05693e42E6Ace62bE9BA5",
+      "type": "BASE",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
+      "logoExists": true,
+      "tags": ["wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.wbtc.network/"},
+        {"name": "explorer", "url": "https://basescan.org/token/0x1ceA84203673764244E05693e42E6Ace62bE9BA5"},
+        {"name": "transparency", "url": "https://wbtc.network/transparency"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "kavaevm",
+      "hot": false,
+      "address": "0xb5c4423a65B953905949548276654C96fcaE6992",
+      "assetId": "c10002222_t0xb5c4423a65B953905949548276654C96fcaE6992",
+      "type": "KAVAEVM",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
+      "logoExists": true,
+      "tags": ["wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.wbtc.network/"},
+        {"name": "explorer", "url": "https://kavascan.com/token/0xb5c4423a65B953905949548276654C96fcaE6992"},
+        {"name": "transparency", "url": "https://wbtc.network/transparency"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "osmosis",
+      "hot": false,
+      "address": "osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743",
+      "assetId": "c10000118_tosmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743",
+      "type": "OSMOSIS",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
+      "logoExists": true,
+      "tags": ["wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.wbtc.network/"},
+        {"name": "explorer", "url": "https://celatone.osmosis.zone/osmosis-1/contracts/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743"},
+        {"name": "transparency", "url": "https://wbtc.network/transparency"}
+      ]
     }
   ]
 }
