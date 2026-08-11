@@ -822,6 +822,482 @@
         {"name": "explorer", "url": "https://celatone.osmosis.zone/osmosis-1/contracts/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743"},
         {"name": "transparency", "url": "https://wbtc.network/transparency"}
       ]
+    },
+    {
+      "kind": "token",
+      "chain": "ethereum",
+      "hot": false,
+      "address": "0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
+      "assetId": "c60_t0xBe9895146f7AF43049ca1c1AE358B0541Ea49704",
+      "type": "ERC20",
+      "name": "Coinbase Wrapped Staked ETH",
+      "symbol": "cbETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.coinbase.com/cbeth"},
+        {"name": "explorer", "url": "https://etherscan.io/token/0xBe9895146f7AF43049ca1c1AE358B0541Ea49704"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "arbitrum",
+      "hot": false,
+      "address": "0x1DEBd73E752bEaF79865Fd6446b0c970EaE7732f",
+      "assetId": "c10042221_t0x1DEBd73E752bEaF79865Fd6446b0c970EaE7732f",
+      "type": "ARBITRUM",
+      "name": "Coinbase Wrapped Staked ETH",
+      "symbol": "cbETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.coinbase.com/cbeth"},
+        {"name": "explorer", "url": "https://arbiscan.io/token/0x1DEBd73E752bEaF79865Fd6446b0c970EaE7732f"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "optimism",
+      "hot": false,
+      "address": "0xadDb6A0412DE1BA0F936DCaeb8Aaa24578dcF3B2",
+      "assetId": "c10000070_t0xadDb6A0412DE1BA0F936DCaeb8Aaa24578dcF3B2",
+      "type": "OPTIMISM",
+      "name": "Coinbase Wrapped Staked ETH",
+      "symbol": "cbETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.coinbase.com/cbeth"},
+        {"name": "explorer", "url": "https://optimistic.etherscan.io/token/0xadDb6A0412DE1BA0F936DCaeb8Aaa24578dcF3B2"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "polygon",
+      "hot": false,
+      "address": "0x4b4327dB1600B8B1440163F667e199CEf35385f5",
+      "assetId": "c966_t0x4b4327dB1600B8B1440163F667e199CEf35385f5",
+      "type": "POLYGON",
+      "name": "Coinbase Wrapped Staked ETH",
+      "symbol": "cbETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.coinbase.com/cbeth"},
+        {"name": "explorer", "url": "https://polygonscan.com/token/0x4b4327dB1600B8B1440163F667e199CEf35385f5"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "ethereum",
+      "hot": false,
+      "address": "0x35fA164735182de50811E8e2E824cFb9B6118ac2",
+      "assetId": "c60_t0x35fA164735182de50811E8e2E824cFb9B6118ac2",
+      "type": "ERC20",
+      "name": "ether.fi ETH",
+      "symbol": "eETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
+      "logoExists": true,
+      "tags": ["staking"],
+      "links": [
+        {"name": "website", "url": "https://www.ether.fi/"},
+        {"name": "explorer", "url": "https://etherscan.io/token/0x35fA164735182de50811E8e2E824cFb9B6118ac2"},
+        {"name": "deployments", "url": "https://etherfi.gitbook.io/etherfi/contracts-and-integrations/deployed-contracts"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "arbitrum",
+      "hot": false,
+      "address": "0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe",
+      "assetId": "c10042221_t0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe",
+      "type": "ARBITRUM",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.ether.fi/"},
+        {"name": "explorer", "url": "https://arbiscan.io/token/0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe"},
+        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "avalanchec",
+      "hot": false,
+      "address": "0xA3D68b74bF0528fdD07263c60d6488749044914b",
+      "assetId": "c10009000_t0xA3D68b74bF0528fdD07263c60d6488749044914b",
+      "type": "AVALANCHE",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.ether.fi/"},
+        {"name": "explorer", "url": "https://snowtrace.io/token/0xA3D68b74bF0528fdD07263c60d6488749044914b"},
+        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "blast",
+      "hot": false,
+      "address": "0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
+      "assetId": "c81457_t0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
+      "type": "BLAST",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.ether.fi/"},
+        {"name": "explorer", "url": "https://blastscan.io/token/0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A"},
+        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "base",
+      "hot": false,
+      "address": "0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
+      "assetId": "c8453_t0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
+      "type": "BASE",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.ether.fi/"},
+        {"name": "explorer", "url": "https://basescan.org/token/0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A"},
+        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "linea",
+      "hot": false,
+      "address": "0x1Bf74C010E6320bab11e2e5A532b5AC15e0b8aA6",
+      "assetId": "c59144_t0x1Bf74C010E6320bab11e2e5A532b5AC15e0b8aA6",
+      "type": "LINEA",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.ether.fi/"},
+        {"name": "explorer", "url": "https://lineascan.build/token/0x1Bf74C010E6320bab11e2e5A532b5AC15e0b8aA6"},
+        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "scroll",
+      "hot": false,
+      "address": "0x01f0a31698C4d065659b9bdC21B3610292a1c506",
+      "assetId": "c534352_t0x01f0a31698C4d065659b9bdC21B3610292a1c506",
+      "type": "SCROLL",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.ether.fi/"},
+        {"name": "explorer", "url": "https://scrollscan.com/token/0x01f0a31698C4d065659b9bdC21B3610292a1c506"},
+        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "smartchain",
+      "hot": false,
+      "address": "0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
+      "assetId": "c20000714_t0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A",
+      "type": "BEP20",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.ether.fi/"},
+        {"name": "explorer", "url": "https://bscscan.com/token/0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A"},
+        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "optimism",
+      "hot": false,
+      "address": "0x5A7fACB970D094B6C7FF1df0eA68D99E6e73CBFF",
+      "assetId": "c10000070_t0x5A7fACB970D094B6C7FF1df0eA68D99E6e73CBFF",
+      "type": "OPTIMISM",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.ether.fi/"},
+        {"name": "explorer", "url": "https://optimistic.etherscan.io/token/0x5A7fACB970D094B6C7FF1df0eA68D99E6e73CBFF"},
+        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "zksync",
+      "hot": false,
+      "address": "0xc1Fa6E2E8667d9bE0Ca938a54c7E0285E9Df924a",
+      "assetId": "c10000324_t0xc1Fa6E2E8667d9bE0Ca938a54c7E0285E9Df924a",
+      "type": "ZKSYNC",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.ether.fi/"},
+        {"name": "explorer", "url": "https://explorer.zksync.io/address/0xc1Fa6E2E8667d9bE0Ca938a54c7E0285E9Df924a"},
+        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "sonic",
+      "hot": false,
+      "address": "0xA3D68b74bF0528fdD07263c60d6488749044914b",
+      "assetId": "sonic:0xA3D68b74bF0528fdD07263c60d6488749044914b",
+      "type": "SONIC",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.ether.fi/"},
+        {"name": "explorer", "url": "https://sonicscan.org/token/0xA3D68b74bF0528fdD07263c60d6488749044914b"},
+        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "hyperevm",
+      "hot": false,
+      "address": "0xA3D68b74bF0528fdD07263c60d6488749044914b",
+      "assetId": "hyperevm:0xA3D68b74bF0528fdD07263c60d6488749044914b",
+      "type": "HYPEREVM",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://www.ether.fi/"},
+        {"name": "explorer", "url": "https://hyperevmscan.io/token/0xA3D68b74bF0528fdD07263c60d6488749044914b"},
+        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "arbitrum",
+      "hot": false,
+      "address": "0x5979D7b546E38E414F7E9822514be443A4800529",
+      "assetId": "c10042221_t0x5979D7b546E38E414F7E9822514be443A4800529",
+      "type": "ARBITRUM",
+      "name": "Wrapped stETH",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://lido.fi/"},
+        {"name": "explorer", "url": "https://arbiscan.io/token/0x5979D7b546E38E414F7E9822514be443A4800529"},
+        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "optimism",
+      "hot": false,
+      "address": "0x76A50b8c7349cCDDb7578c6627e79b5d99D24138",
+      "assetId": "c10000070_t0x76A50b8c7349cCDDb7578c6627e79b5d99D24138",
+      "type": "OPTIMISM",
+      "name": "Lido Staked ETH",
+      "symbol": "stETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84/logo.png",
+      "logoExists": true,
+      "tags": ["staking"],
+      "links": [
+        {"name": "website", "url": "https://lido.fi/"},
+        {"name": "explorer", "url": "https://optimistic.etherscan.io/token/0x76A50b8c7349cCDDb7578c6627e79b5d99D24138"},
+        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "base",
+      "hot": false,
+      "address": "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
+      "assetId": "c8453_t0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
+      "type": "BASE",
+      "name": "Wrapped stETH",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://lido.fi/"},
+        {"name": "explorer", "url": "https://basescan.org/token/0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452"},
+        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "linea",
+      "hot": false,
+      "address": "0xB5beDd42000b71FddE22D3eE8a79Bd49A568fC8F",
+      "assetId": "c59144_t0xB5beDd42000b71FddE22D3eE8a79Bd49A568fC8F",
+      "type": "LINEA",
+      "name": "Wrapped stETH",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://lido.fi/"},
+        {"name": "explorer", "url": "https://lineascan.build/token/0xB5beDd42000b71FddE22D3eE8a79Bd49A568fC8F"},
+        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "smartchain",
+      "hot": false,
+      "address": "0x26c5e01524d2E6280A48F2c50fF6De7e52E9611C",
+      "assetId": "c20000714_t0x26c5e01524d2E6280A48F2c50fF6De7e52E9611C",
+      "type": "BEP20",
+      "name": "Wrapped stETH",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://lido.fi/"},
+        {"name": "explorer", "url": "https://bscscan.com/token/0x26c5e01524d2E6280A48F2c50fF6De7e52E9611C"},
+        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "zksync",
+      "hot": false,
+      "address": "0x703b52F2b28fEbcB60E1372858AF5b18849FE867",
+      "assetId": "c10000324_t0x703b52F2b28fEbcB60E1372858AF5b18849FE867",
+      "type": "ZKSYNC",
+      "name": "Wrapped stETH",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://lido.fi/"},
+        {"name": "explorer", "url": "https://explorer.zksync.io/address/0x703b52F2b28fEbcB60E1372858AF5b18849FE867"},
+        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "mantle",
+      "hot": false,
+      "address": "0x458ed78EB972a369799fb278c0243b25e5242A83",
+      "assetId": "c5000_t0x458ed78EB972a369799fb278c0243b25e5242A83",
+      "type": "MANTLE",
+      "name": "Wrapped stETH",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://lido.fi/"},
+        {"name": "explorer", "url": "https://mantlescan.xyz/token/0x458ed78EB972a369799fb278c0243b25e5242A83"},
+        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "polygon",
+      "hot": false,
+      "address": "0x03b54A6e9a984069379fae1a4fC4dBAE93B3bCCD",
+      "assetId": "c966_t0x03b54A6e9a984069379fae1a4fC4dBAE93B3bCCD",
+      "type": "POLYGON",
+      "name": "Wrapped stETH",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
+      "logoExists": true,
+      "tags": ["staking", "wrapped"],
+      "links": [
+        {"name": "website", "url": "https://lido.fi/"},
+        {"name": "explorer", "url": "https://polygonscan.com/token/0x03b54A6e9a984069379fae1a4fC4dBAE93B3bCCD"},
+        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+      ]
     }
   ]
 }

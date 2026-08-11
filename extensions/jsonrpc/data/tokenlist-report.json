@@ -30,7 +30,7 @@
   "local": {
     "nativeAssets": 187,
     "tokenAssets": 15176,
-    "outputTokens": 10109,
+    "outputTokens": 10133,
     "filtered": 5290,
     "missingLogos": 0
   },
@@ -54,15 +54,15 @@
   "rules": {
     "configuredPlatformMappings": 16,
     "configuredNativeMarketMappings": 8,
-    "configuredAssetOverrides": 6,
+    "configuredAssetOverrides": 13,
     "baseAssetOverrides": 6,
-    "manualAssetOverrides": 0,
+    "manualAssetOverrides": 7,
     "configuredMarketTagRules": 4,
     "configuredExcludedChains": 1,
     "platformMappingHits": 9,
     "nativeMarketMappingHits": 11,
     "assetOverrideMarketHits": 0,
-    "assetOverrideHits": 6,
+    "assetOverrideHits": 13,
     "marketTagRuleHits": 5,
     "excludedChainHits": 200
   },

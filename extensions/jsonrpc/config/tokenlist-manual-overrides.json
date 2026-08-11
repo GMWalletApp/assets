@@ -1,3 +1,40 @@
 {
-  "assetOverrides": []
+  "assetOverrides": [
+    {
+      "chain": "base",
+      "address": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
+      "addTags": ["staking", "wrapped"]
+    },
+    {
+      "chain": "ethereum",
+      "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+      "addTags": ["staking"]
+    },
+    {
+      "chain": "ethereum",
+      "address": "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
+      "addTags": ["staking", "wrapped"]
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
+      "addTags": ["staking", "wrapped"]
+    },
+    {
+      "chain": "optimism",
+      "address": "0x1F32b1c2345538c0c6f582fCB022739c4A194Ebb",
+      "addTags": ["staking", "wrapped"]
+    },
+    {
+      "chain": "scroll",
+      "address": "0xf610A9dfB7C89644979b4A0f27063E9e7d7Cda32",
+      "displayName": "Wrapped stETH",
+      "addTags": ["staking", "wrapped"]
+    },
+    {
+      "chain": "plasma",
+      "address": "0xA3D68b74bF0528fdD07263c60d6488749044914b",
+      "addTags": ["staking", "wrapped"]
+    }
+  ]
 }
