@@ -4,7 +4,7 @@ Output:
   out/homepage.json = {
     "generatedAt": "...",
     "chainOrder": [...],
-    "slotOrder": ["native", "usdt", "usdt0", "usdc", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"],
+    "slotOrder": ["native", "usdt", "usdt0", "usdc", "usds", "usde", "usdd", "usd1", "usdg", "rlusd", "u", "eurc", "eure", "euri", "gyen", "jpyc", ...],
     "chains": [...],
     "tokens": [...]
   }
@@ -75,20 +75,63 @@ CHAIN_CONFIG = {
     "tron": {"chainName": "TRON", "nativeSymbol": "TRX", "nativeName": "TRON", "chainId": None},
 }
 
-SLOT_ORDER = ["native", "usdt", "usdt0", "usdc", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"]
-TARGET_SLOTS = ["usdt", "usdt0", "usdc", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"]
+SLOT_ORDER = [
+    "native", "usdt", "usdt0", "usdc", "usds", "usde", "usdd", "usd1", "usdg", "rlusd", "u",
+    "eurc", "eure", "euri", "gyen", "jpyc", "wbtc", "wbeth", "beth", "bnsol", "arb", "jup",
+    "aave", "pendle", "pepe", "link", "uni", "shib", "xaut", "ena", "wld", "ondo", "sky",
+    "nexo", "pengu", "crv", "ethfi", "ldo", "spk", "arkm", "c98",
+]
+TARGET_SLOTS = SLOT_ORDER[1:]
 TOKENLESS_CHAINS = {"bitcoin"}
-STABLECOIN_SLOTS = frozenset(TARGET_SLOTS)
+STABLECOIN_SLOTS = frozenset({
+    "usdt", "usdt0", "usdc", "usds", "usde", "usdd", "usd1", "usdg", "rlusd", "u",
+    "eurc", "eure", "euri", "gyen", "jpyc",
+})
+SLOT_TAGS = {
+    "wbtc": ["wrapped"],
+    "wbeth": ["staking", "wrapped"],
+    "beth": ["staking"],
+    "bnsol": ["staking", "wrapped"],
+}
 
 # Restrict newly curated assets to issuer-verified deployments requested for
 # the homepage. This prevents another same-symbol Trust Wallet asset from
 # silently expanding homepage support to an unreviewed chain.
 SLOT_CHAIN_ALLOWLISTS = {
     "usdt0": {"arbitrum", "polygon"},
+    "usde": {"ethereum", "smartchain", "arbitrum", "solana"},
     "usdd": {"ethereum", "smartchain", "tron"},
-    "usd1": {"ethereum", "smartchain", "solana"},
+    "usd1": {"ethereum", "smartchain", "solana", "tron"},
     "usdg": {"ethereum", "solana"},
+    "rlusd": {"ethereum"},
+    "u": {"ethereum", "smartchain", "tron"},
+    "eure": {"ethereum", "arbitrum", "polygon"},
     "jpyc": {"ethereum", "polygon"},
+    "wbtc": {"ethereum", "smartchain", "arbitrum", "polygon", "solana", "tron"},
+    "wbeth": {"ethereum", "smartchain"},
+    "beth": {"smartchain"},
+    "bnsol": {"solana"},
+    "arb": {"arbitrum"},
+    "jup": {"solana"},
+    "aave": {"ethereum", "arbitrum", "polygon"},
+    "pendle": {"ethereum", "smartchain", "arbitrum"},
+    "pepe": {"ethereum"},
+    "link": {"ethereum", "arbitrum", "polygon"},
+    "uni": {"ethereum", "arbitrum", "polygon"},
+    "shib": {"ethereum"},
+    "xaut": {"ethereum", "smartchain"},
+    "ena": {"ethereum"},
+    "wld": {"ethereum"},
+    "ondo": {"ethereum"},
+    "sky": {"ethereum"},
+    "nexo": {"ethereum"},
+    "pengu": {"solana"},
+    "crv": {"ethereum", "arbitrum", "polygon"},
+    "ethfi": {"ethereum"},
+    "ldo": {"ethereum", "arbitrum"},
+    "spk": {"ethereum"},
+    "arkm": {"ethereum"},
+    "c98": {"ethereum", "smartchain", "polygon", "solana"},
 }
 
 # Homepage shows the issuer's current product identity once per chain. The
@@ -103,14 +146,42 @@ SLOT_META = {
     "usdt0": {"displayName": "USDT0", "displaySymbol": "USDT0"},
     "usdc": {"displayName": "USD Coin", "displaySymbol": "USDC"},
     "usds": {"displayName": "USDS", "displaySymbol": "USDS"},
+    "usde": {"displayName": "USDe", "displaySymbol": "USDe"},
     "usdd": {"displayName": "Decentralized USD", "displaySymbol": "USDD"},
     "usd1": {"displayName": "World Liberty Financial USD", "displaySymbol": "USD1"},
     "usdg": {"displayName": "Global Dollar", "displaySymbol": "USDG"},
+    "rlusd": {"displayName": "Ripple USD", "displaySymbol": "RLUSD"},
+    "u": {"displayName": "United Stables", "displaySymbol": "U"},
     "eurc": {"displayName": "EURC", "displaySymbol": "EURC"},
     "eure": {"displayName": "Monerium EURe", "displaySymbol": "EURe"},
     "euri": {"displayName": "Eurite", "displaySymbol": "EURI"},
     "gyen": {"displayName": "GYEN", "displaySymbol": "GYEN"},
     "jpyc": {"displayName": "JPY Coin", "displaySymbol": "JPYC"},
+    "wbtc": {"displayName": "Wrapped Bitcoin", "displaySymbol": "WBTC"},
+    "wbeth": {"displayName": "Wrapped Binance Beacon ETH", "displaySymbol": "wBETH"},
+    "beth": {"displayName": "Binance Beacon ETH", "displaySymbol": "BETH"},
+    "bnsol": {"displayName": "Binance Staked SOL", "displaySymbol": "BNSOL"},
+    "arb": {"displayName": "Arbitrum", "displaySymbol": "ARB"},
+    "jup": {"displayName": "Jupiter", "displaySymbol": "JUP"},
+    "aave": {"displayName": "Aave", "displaySymbol": "AAVE"},
+    "pendle": {"displayName": "Pendle", "displaySymbol": "PENDLE"},
+    "pepe": {"displayName": "Pepe", "displaySymbol": "PEPE"},
+    "link": {"displayName": "Chainlink", "displaySymbol": "LINK"},
+    "uni": {"displayName": "Uniswap", "displaySymbol": "UNI"},
+    "shib": {"displayName": "Shiba Inu", "displaySymbol": "SHIB"},
+    "xaut": {"displayName": "Tether Gold", "displaySymbol": "XAUt"},
+    "ena": {"displayName": "Ethena", "displaySymbol": "ENA"},
+    "wld": {"displayName": "Worldcoin", "displaySymbol": "WLD"},
+    "ondo": {"displayName": "Ondo", "displaySymbol": "ONDO"},
+    "sky": {"displayName": "Sky", "displaySymbol": "SKY"},
+    "nexo": {"displayName": "Nexo", "displaySymbol": "NEXO"},
+    "pengu": {"displayName": "Pudgy Penguins", "displaySymbol": "PENGU"},
+    "crv": {"displayName": "Curve DAO Token", "displaySymbol": "CRV"},
+    "ethfi": {"displayName": "ether.fi", "displaySymbol": "ETHFI"},
+    "ldo": {"displayName": "Lido DAO", "displaySymbol": "LDO"},
+    "spk": {"displayName": "Spark", "displaySymbol": "SPK"},
+    "arkm": {"displayName": "Arkham", "displaySymbol": "ARKM"},
+    "c98": {"displayName": "Coin98", "displaySymbol": "C98"},
 }
 
 NAME_PENALTY_TERMS = (
@@ -163,6 +234,10 @@ SLOT_RULES = {
         preferred_name_terms=("usds",),
         required_name_terms=("usds",),
     ),
+    "usde": SlotRule(
+        preferred_symbols=("USDE",),
+        preferred_name_terms=("usde", "ethena"),
+    ),
     "usdd": SlotRule(
         preferred_symbols=("USDD",),
         preferred_name_terms=("decentralized usd", "usdd"),
@@ -174,6 +249,15 @@ SLOT_RULES = {
     "usdg": SlotRule(
         preferred_symbols=("USDG",),
         preferred_name_terms=("global dollar", "usdg"),
+    ),
+    "rlusd": SlotRule(
+        preferred_symbols=("RLUSD",),
+        preferred_name_terms=("ripple usd", "rlusd"),
+    ),
+    "u": SlotRule(
+        preferred_symbols=("U",),
+        preferred_name_terms=("united stables",),
+        required_name_terms=("united stables",),
     ),
     "eurc": SlotRule(
         preferred_symbols=("EURC",),
@@ -195,6 +279,80 @@ SLOT_RULES = {
         preferred_symbols=("JPYC",),
         preferred_name_terms=("jpy coin", "jpyc"),
     ),
+    "wbtc": SlotRule(preferred_symbols=("WBTC",), preferred_name_terms=("wrapped btc", "wrapped bitcoin")),
+    "wbeth": SlotRule(preferred_symbols=("WBETH",), preferred_name_terms=("wrapped binance beacon eth",)),
+    "beth": SlotRule(preferred_symbols=("BETH",), preferred_name_terms=("binance beacon eth",)),
+    "bnsol": SlotRule(preferred_symbols=("BNSOL",), preferred_name_terms=("binance staked sol",)),
+    "arb": SlotRule(preferred_symbols=("ARB",), preferred_name_terms=("arbitrum",)),
+    "jup": SlotRule(preferred_symbols=("JUP",), preferred_name_terms=("jupiter",)),
+    "aave": SlotRule(preferred_symbols=("AAVE",), preferred_name_terms=("aave",)),
+    "pendle": SlotRule(preferred_symbols=("PENDLE",), preferred_name_terms=("pendle",)),
+    "pepe": SlotRule(preferred_symbols=("PEPE",), preferred_name_terms=("pepe",)),
+    "link": SlotRule(preferred_symbols=("LINK",), preferred_name_terms=("chainlink",)),
+    "uni": SlotRule(preferred_symbols=("UNI",), preferred_name_terms=("uniswap",)),
+    "shib": SlotRule(preferred_symbols=("SHIB",), preferred_name_terms=("shiba inu",)),
+    "xaut": SlotRule(preferred_symbols=("XAUT",), preferred_name_terms=("tether gold",)),
+    "ena": SlotRule(preferred_symbols=("ENA",), preferred_name_terms=("ethena", "ena")),
+    "wld": SlotRule(preferred_symbols=("WLD",), preferred_name_terms=("worldcoin",)),
+    "ondo": SlotRule(preferred_symbols=("ONDO",), preferred_name_terms=("ondo",)),
+    "sky": SlotRule(preferred_symbols=("SKY",), preferred_name_terms=("sky",)),
+    "nexo": SlotRule(preferred_symbols=("NEXO",), preferred_name_terms=("nexo",)),
+    "pengu": SlotRule(preferred_symbols=("PENGU",), preferred_name_terms=("pudgy penguins",)),
+    "crv": SlotRule(preferred_symbols=("CRV",), preferred_name_terms=("curve",)),
+    "ethfi": SlotRule(preferred_symbols=("ETHFI",), preferred_name_terms=("ether.fi",)),
+    "ldo": SlotRule(preferred_symbols=("LDO",), preferred_name_terms=("lido dao",)),
+    "spk": SlotRule(preferred_symbols=("SPK",), preferred_name_terms=("spark",)),
+    "arkm": SlotRule(preferred_symbols=("ARKM",), preferred_name_terms=("arkham",)),
+    "c98": SlotRule(preferred_symbols=("C98",), preferred_name_terms=("coin98",)),
+}
+
+# Pin every newly curated local asset to a reviewed chain/address pair. Symbol
+# matching remains the fallback for legacy slots, while these entries fail
+# loudly if a future upstream update removes or deactivates the official asset.
+CURATED_SLOT_ADDRESSES = {
+    ("ethereum", "usde"): "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+    ("smartchain", "u"): "0xcE24439F2D9C6a2289F741120FE202248B666666",
+    ("ethereum", "wbtc"): "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+    ("arbitrum", "wbtc"): "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+    ("polygon", "wbtc"): "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6",
+    ("ethereum", "wbeth"): "0xa2E3356610840701BDf5611a53974510Ae27E2e1",
+    ("smartchain", "wbeth"): "0xa2E3356610840701BDf5611a53974510Ae27E2e1",
+    ("smartchain", "beth"): "0x250632378E573c6Be1AC2f97Fcdf00515d0Aa91B",
+    ("arbitrum", "arb"): "0x912CE59144191C1204E64559FE8253a0e49E6548",
+    ("solana", "jup"): "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+    ("ethereum", "aave"): "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+    ("arbitrum", "aave"): "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
+    ("polygon", "aave"): "0xD6DF932A45C0f255f85145f286eA0b292B21C90B",
+    ("ethereum", "pendle"): "0x808507121B80c02388fAd14726482e061B8da827",
+    ("smartchain", "pendle"): "0xb3Ed0A426155B79B898849803E3B36552f7ED507",
+    ("arbitrum", "pendle"): "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
+    ("ethereum", "pepe"): "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
+    ("ethereum", "link"): "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+    ("arbitrum", "link"): "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
+    ("polygon", "link"): "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
+    ("ethereum", "uni"): "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+    ("arbitrum", "uni"): "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
+    ("polygon", "uni"): "0xb33EaAd8d922B1083446DC23f610c2567fB5180f",
+    ("ethereum", "shib"): "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
+    ("ethereum", "xaut"): "0x68749665FF8D2d112Fa859AA293F07A622782F38",
+    ("smartchain", "xaut"): "0x21cAef8A43163Eea865baeE23b9C2E327696A3bf",
+    ("ethereum", "ena"): "0x57e114B691Db790C35207b2e685D4A43181e6061",
+    ("ethereum", "wld"): "0x163f8C2467924be0ae7B5347228CABF260318753",
+    ("ethereum", "ondo"): "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
+    ("ethereum", "sky"): "0x56072C95FAA701256059aa122697B133aDEd9279",
+    ("ethereum", "nexo"): "0xB62132e35a6c13ee1EE0f84dC5d40bad8d815206",
+    ("solana", "pengu"): "2zMMhcVQEXDtdE6vsFS7S7D5oUodfJHE8vd1gnBouauv",
+    ("ethereum", "crv"): "0xD533a949740bb3306d119CC777fa900bA034cd52",
+    ("arbitrum", "crv"): "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
+    ("polygon", "crv"): "0x172370d5Cd63279eFa6d502DAB29171933a610AF",
+    ("ethereum", "ethfi"): "0xFe0c30065B384F05761f15d0CC899D4F9F9Cc0eB",
+    ("ethereum", "ldo"): "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
+    ("arbitrum", "ldo"): "0x13Ad51ed4F1B7e9Dc168d8a00cB3f4dDD85EfA60",
+    ("ethereum", "arkm"): "0x6E2a43be0B1d33b726f0CA3b8de60b3482b8b050",
+    ("ethereum", "c98"): "0xAE12C5930881c53715B369ceC7606B70d8EB229f",
+    ("smartchain", "c98"): "0xaEC945e04baF28b135Fa7c640f624f8D90F1C3a6",
+    ("polygon", "c98"): "0x77f56cf9365955486B12C4816992388eE8606f0E",
+    ("solana", "c98"): "C98A4nkJXhpVZNAZdHUA95RpTF3T4whtQubL3YobiUX9",
 }
 
 
@@ -215,7 +373,8 @@ def canonical_symbol(symbol: str | None) -> str:
 
 
 def tags_for_slot(slot: str) -> list[str]:
-    return ["stablecoin"] if slot in STABLECOIN_SLOTS else []
+    tags = ["stablecoin"] if slot in STABLECOIN_SLOTS else []
+    return tags + SLOT_TAGS.get(slot, [])
 
 
 def build_chain_logo_uri(chain: str) -> str:
@@ -355,6 +514,13 @@ def candidate_sort_key(slot: str, candidate: AssetCandidate) -> tuple:
 
 
 def pick_slot_address(chain: str, slot: str, catalog: AssetCatalog) -> str | None:
+    curated_address = CURATED_SLOT_ADDRESSES.get((chain, slot))
+    if curated_address is not None:
+        candidate = catalog.candidate_by_address(chain, curated_address)
+        if candidate.status != "active":
+            raise ValueError(f"curated homepage asset is not active: {chain}:{slot}:{curated_address}")
+        return candidate.address
+
     rule = SLOT_RULES[slot]
     ranked: list[tuple[tuple, AssetCandidate]] = []
 

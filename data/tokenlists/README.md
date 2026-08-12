@@ -21,7 +21,7 @@ Each override token should use the same shape as a `homepage.json` token item.
 Required fields:
 
 - `chain`: canonical chain key like `zksync` or export key like `bsc`
-- `slot`: `usdt`, `usdt0`, `usdc`, `usds`, `usdd`, `usd1`, `usdg`, `eurc`, `eure`, `euri`, `gyen`, or `jpyc`
+- `slot`: one of the entries in `build_homepage.py`'s `TARGET_SLOTS`
 - `kind`: must be `token`
 - `symbol`
 - `name`
@@ -52,7 +52,7 @@ consistent:
 - `kind`
 - `displaySymbol`
 - `displayName`
-- `tags`: `[]` for native coins and `["stablecoin"]` for stablecoin slots
+- `tags`: derived from the slot (for example `stablecoin`, `staking`, or `wrapped`)
 
 Example:
 

@@ -119,6 +119,138 @@
       "logoURI": "https://github.com/jpycoin.png",
       "explorer": "https://polygonscan.com/token/0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
       "source": "manual-override:jpyc-official"
+    },
+    {
+      "chain": "ethereum",
+      "slot": "rlusd",
+      "kind": "token",
+      "symbol": "RLUSD",
+      "name": "Ripple USD",
+      "address": "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
+      "decimals": 18,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ripple/assets/524C555344000000000000000000000000000000.rMxCKbEDwqr76QuheSUMdEGf4B9xJ8m5De/logo.png",
+      "explorer": "https://etherscan.io/token/0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
+      "source": "manual-override:ripple-official"
+    },
+    {
+      "chain": "solana",
+      "slot": "bnsol",
+      "kind": "token",
+      "symbol": "BNSOL",
+      "name": "Binance Staked SOL",
+      "address": "BNso1VUJnh4zcfpZa6986Ea66P6TCp59hvtNJ8b1X85",
+      "decimals": 9,
+      "logoURI": "https://coin-images.coingecko.com/coins/images/40132/large/bnsol.png?1725968367",
+      "explorer": "https://explorer.solana.com/address/BNso1VUJnh4zcfpZa6986Ea66P6TCp59hvtNJ8b1X85",
+      "source": "manual-override:binance-official"
+    },
+    {
+      "chain": "ethereum",
+      "slot": "spk",
+      "kind": "token",
+      "symbol": "SPK",
+      "name": "Spark",
+      "address": "0xc20059e0317DE91738d13af027DfC4a50781b066",
+      "decimals": 18,
+      "logoURI": "https://coin-images.coingecko.com/coins/images/38637/large/Spark-Logomark-RGB.png",
+      "explorer": "https://etherscan.io/token/0xc20059e0317DE91738d13af027DfC4a50781b066",
+      "source": "manual-override:spark-official"
+    },
+    {
+      "chain": "bsc",
+      "slot": "wbtc",
+      "kind": "token",
+      "symbol": "WBTC",
+      "name": "Wrapped BTC",
+      "address": "0x39665e85a68a4d7328b8799135E2ff301a0Ca86f",
+      "decimals": 8,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
+      "explorer": "https://bscscan.com/token/0x39665e85a68a4d7328b8799135E2ff301a0Ca86f",
+      "source": "manual-override:wbtc-official"
+    },
+    {
+      "chain": "solana",
+      "slot": "wbtc",
+      "kind": "token",
+      "symbol": "WBTC",
+      "name": "Wrapped BTC",
+      "address": "5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ",
+      "decimals": 8,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
+      "explorer": "https://explorer.solana.com/address/5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ",
+      "source": "manual-override:wbtc-official"
+    },
+    {
+      "chain": "tron",
+      "slot": "wbtc",
+      "kind": "token",
+      "symbol": "WBTC",
+      "name": "Wrapped BTC",
+      "address": "TYhWwKpw43ENFWBTGpzLHn3882f2au7SMi",
+      "decimals": 8,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
+      "explorer": "https://tronscan.org/#/token20/TYhWwKpw43ENFWBTGpzLHn3882f2au7SMi",
+      "source": "manual-override:wbtc-official"
+    },
+    {
+      "chain": "bsc",
+      "slot": "usde",
+      "kind": "token",
+      "symbol": "USDe",
+      "name": "USDe",
+      "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+      "decimals": 18,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x4c9EDD5852cd905f086C759E8383e09bff1E68B3/logo.png",
+      "explorer": "https://bscscan.com/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+      "source": "manual-override:ethena-official"
+    },
+    {
+      "chain": "arbitrum",
+      "slot": "usde",
+      "kind": "token",
+      "symbol": "USDe",
+      "name": "USDe",
+      "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+      "decimals": 18,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x4c9EDD5852cd905f086C759E8383e09bff1E68B3/logo.png",
+      "explorer": "https://arbiscan.io/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+      "source": "manual-override:ethena-official"
+    },
+    {
+      "chain": "solana",
+      "slot": "usde",
+      "kind": "token",
+      "symbol": "USDe",
+      "name": "USDe",
+      "address": "DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT",
+      "decimals": 9,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x4c9EDD5852cd905f086C759E8383e09bff1E68B3/logo.png",
+      "explorer": "https://explorer.solana.com/address/DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT",
+      "source": "manual-override:ethena-official"
+    },
+    {
+      "chain": "ethereum",
+      "slot": "u",
+      "kind": "token",
+      "symbol": "U",
+      "name": "United Stables",
+      "address": "0xcE24439F2D9C6a2289F741120FE202248B666666",
+      "decimals": 18,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xcE24439F2D9C6a2289F741120FE202248B666666/logo.png",
+      "explorer": "https://etherscan.io/token/0xcE24439F2D9C6a2289F741120FE202248B666666",
+      "source": "manual-override:united-stables-official"
+    },
+    {
+      "chain": "tron",
+      "slot": "u",
+      "kind": "token",
+      "symbol": "U",
+      "name": "United Stables",
+      "address": "TFNirp6PbqYE1ZTtWuCMUKJWLNZkoCoeFJ",
+      "decimals": 18,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xcE24439F2D9C6a2289F741120FE202248B666666/logo.png",
+      "explorer": "https://tronscan.org/#/token20/TFNirp6PbqYE1ZTtWuCMUKJWLNZkoCoeFJ",
+      "source": "manual-override:united-stables-official"
     }
   ]
 }
