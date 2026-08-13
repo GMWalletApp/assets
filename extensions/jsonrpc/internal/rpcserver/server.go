@@ -28,6 +28,10 @@ type Config struct {
 	TokenListManualTokensPath    string
 	TokenListHotDefaultsPath     string
 	TokenListHotCurrentPath      string
+	ManagedListDBPath            string
+	ManagedListFilesDir          string
+	ManagedListSeedDefaults      bool
+	ManagedListPackAfterSeed     bool
 	VsCurrency                   string
 	CoinGeckoAPIKey              string
 	CoinGeckoBaseURL             string
@@ -55,6 +59,8 @@ const (
 	DefaultTokenListManualTokensPath    = "extensions/jsonrpc/config/tokenlist-manual-tokens.json"
 	DefaultTokenListHotDefaultsPath     = "extensions/jsonrpc/config/tokenlist-hot-defaults.json"
 	DefaultTokenListHotCurrentPath      = "extensions/jsonrpc/config/tokenlist-hot-current.json"
+	DefaultManagedListDBPath            = "extensions/jsonrpc/data/lists.sqlite"
+	DefaultManagedListFilesDir          = "extensions/jsonrpc/data/lists"
 )
 
 type Server struct {
@@ -62,6 +68,7 @@ type Server struct {
 	store  *Store
 	cache  *CacheStore
 	syncer *Syncer
+	lists  *ManagedListService
 }
 
 func NewServer(config Config) *Server {
@@ -101,6 +108,12 @@ func NewServer(config Config) *Server {
 	if config.TokenListHotCurrentPath == "" {
 		config.TokenListHotCurrentPath = DefaultTokenListHotCurrentPath
 	}
+	if config.ManagedListDBPath == "" {
+		config.ManagedListDBPath = DefaultManagedListDBPath
+	}
+	if config.ManagedListFilesDir == "" {
+		config.ManagedListFilesDir = DefaultManagedListFilesDir
+	}
 	if config.VsCurrency == "" {
 		config.VsCurrency = "usd"
 	}
@@ -125,9 +138,18 @@ func NewServer(config Config) *Server {
 	config.TokenListManualTokensPath = resolveCachePath(config.Root, config.TokenListManualTokensPath)
 	config.TokenListHotDefaultsPath = resolveCachePath(config.Root, config.TokenListHotDefaultsPath)
 	config.TokenListHotCurrentPath = resolveCachePath(config.Root, config.TokenListHotCurrentPath)
+	config.ManagedListDBPath = resolveCachePath(config.Root, config.ManagedListDBPath)
+	config.ManagedListFilesDir = resolveCachePath(config.Root, config.ManagedListFilesDir)
 
 	store := NewStore(config.Root, config.AssetBaseURL)
 	cache := NewCacheStore(config.MarketCachePath)
+	lists := NewManagedListService(
+		config.ManagedListDBPath,
+		config.ManagedListFilesDir,
+		config.TokenListCachePath,
+		filepath.Join(config.Root, "data", "tokenlists", "out", "homepage.json"),
+		store,
+	)
 	syncer := NewSyncer(store, SyncConfig{
 		Enabled:                      config.MarketSyncEnabled,
 		Interval:                     config.MarketSyncInterval,
@@ -153,12 +175,31 @@ func NewServer(config Config) *Server {
 		store:  store,
 		cache:  cache,
 		syncer: syncer,
+		lists:  lists,
 	}
 }
 
 func (s *Server) Start(ctx context.Context) error {
 	mux := http.NewServeMux()
 	mux.Handle("/rpc", s.Handler())
+	mux.Handle("/api/lists", s.listAPIHandler())
+	mux.Handle("/api/lists/", s.listAPIHandler())
+	mux.Handle("/api/pack/", s.packAPIHandler())
+	mux.Handle("/files/", managedFilesHandler(s.config.ManagedListFilesDir))
+
+	if err := s.lists.Init(); err != nil {
+		return fmt.Errorf("managed list database init failed: %w", err)
+	}
+	if s.config.ManagedListSeedDefaults {
+		if err := s.lists.SeedDefaultLists(); err != nil {
+			return fmt.Errorf("managed list seed failed: %w", err)
+		}
+		if s.config.ManagedListPackAfterSeed {
+			if _, err := s.lists.PackAll(); err != nil {
+				return fmt.Errorf("managed list pack after seed failed: %w", err)
+			}
+		}
+	}
 
 	if s.config.MarketSyncEnabled {
 		go s.syncer.Run(ctx)

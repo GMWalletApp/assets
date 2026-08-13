@@ -1690,6 +1690,312 @@ func TestSyncOnceTargetSkipsMarketCacheForTokenList(t *testing.T) {
 	}
 }
 
+func TestManagedListCRUDAndPack(t *testing.T) {
+	root := newFixtureRoot(t)
+	server := NewServer(Config{
+		Root:                root,
+		AssetBaseURL:        "https://cdn.example",
+		ManagedListDBPath:   filepath.Join(root, "managed.sqlite"),
+		ManagedListFilesDir: filepath.Join(root, "files"),
+	})
+
+	list, err := server.lists.UpsertList(ManagedList{
+		Key:         "USDT",
+		Name:        "USDT List",
+		Description: "All supported USDT variants",
+		Enabled:     true,
+	})
+	if err != nil {
+		t.Fatalf("upsert list: %v", err)
+	}
+	if list.Key != "usdt" || !list.Enabled {
+		t.Fatalf("unexpected managed list: %+v", list)
+	}
+
+	item, err := server.lists.UpsertItem("usdt", ManagedListItem{
+		Token: ManagedToken{
+			Chain:   "smartchain",
+			Address: testUSDTAddress,
+		},
+		Rank:          1,
+		Enabled:       true,
+		Display:       true,
+		Slot:          "usdt",
+		DisplaySymbol: "USDT",
+	})
+	if err != nil {
+		t.Fatalf("upsert item: %v", err)
+	}
+	if item.Token.Symbol != "USDT" || item.Token.Source != "trustwallet-asset" || !item.Token.LogoExists {
+		t.Fatalf("expected item to be hydrated from local assets, got %+v", item)
+	}
+
+	items, err := server.lists.ListItems("usdt")
+	if err != nil {
+		t.Fatalf("list items: %v", err)
+	}
+	if len(items) != 1 {
+		t.Fatalf("expected one item, got %+v", items)
+	}
+
+	packed, err := server.lists.PackList("usdt")
+	if err != nil {
+		t.Fatalf("pack list: %v", err)
+	}
+	if packed.TokenCount != 1 || packed.JSONSize == 0 || packed.ZstdSize == 0 || packed.ZstdSHA256 == "" {
+		t.Fatalf("unexpected pack result: %+v", packed)
+	}
+	if !fileExists(filepath.Join(root, "files", "usdt.json")) || !fileExists(filepath.Join(root, "files", "usdt.json.zst")) {
+		t.Fatalf("expected packed files to exist: %+v", packed)
+	}
+
+	var output ManagedListOutput
+	if err := readJSONFile(filepath.Join(root, "files", "usdt.json"), &output); err != nil {
+		t.Fatalf("read packed json: %v", err)
+	}
+	if output.Key != "usdt" || len(output.Tokens) != 1 || output.Tokens[0].Symbol != "USDT" {
+		t.Fatalf("unexpected packed output: %+v", output)
+	}
+	if !output.Tokens[0].Display || output.Tokens[0].Slot != "usdt" || output.Tokens[0].DisplaySymbol != "USDT" || output.Tokens[0].ChainName == "" || output.Tokens[0].Explorer == "" {
+		t.Fatalf("expected homepage-style fields in packed output, got %+v", output.Tokens[0])
+	}
+
+	manifest, err := server.lists.PackAll()
+	if err != nil {
+		t.Fatalf("pack all: %v", err)
+	}
+	if len(manifest.Files) != 1 || manifest.Files[0].ListKey != "usdt" {
+		t.Fatalf("unexpected manifest: %+v", manifest)
+	}
+	if !fileExists(filepath.Join(root, "files", "manifest.json")) {
+		t.Fatal("expected manifest file to exist")
+	}
+}
+
+func TestManagedListRESTAPI(t *testing.T) {
+	root := newFixtureRoot(t)
+	server := NewServer(Config{
+		Root:                root,
+		AssetBaseURL:        "https://cdn.example",
+		ManagedListDBPath:   filepath.Join(root, "managed.sqlite"),
+		ManagedListFilesDir: filepath.Join(root, "files"),
+	})
+
+	rec := doHTTP(t, server.listAPIHandler(), http.MethodPost, "/api/lists", `{"key":"usdc","name":"USDC List","enabled":true}`)
+	if rec.Code != http.StatusOK {
+		t.Fatalf("create list status=%d body=%s", rec.Code, rec.Body.String())
+	}
+
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodPost, "/api/lists/usdc/items", `{"token":{"chain":"smartchain","address":"`+testUSDTAddress+`"},"slot":"usdc","rank":7,"enabled":true,"displaySymbol":"USDC"}`)
+	if rec.Code != http.StatusOK {
+		t.Fatalf("create item status=%d body=%s", rec.Code, rec.Body.String())
+	}
+
+	var item ManagedListItem
+	if err := json.Unmarshal(rec.Body.Bytes(), &item); err != nil {
+		t.Fatalf("decode item: %v", err)
+	}
+	if item.Token.Symbol != "USDT" || item.DisplaySymbol != "USDC" || item.Rank != 7 || !item.Display || item.Slot != "usdc" {
+		t.Fatalf("unexpected REST item: %+v", item)
+	}
+
+	rec = doHTTP(t, server.packAPIHandler(), http.MethodPost, "/api/pack/usdc", "")
+	if rec.Code != http.StatusOK {
+		t.Fatalf("pack status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	if !fileExists(filepath.Join(root, "files", "usdc.json.zst")) {
+		t.Fatal("expected REST pack to write zstd output")
+	}
+}
+
+func TestManagedListRESTAPIPreservesDisplayFalseAndNativeItems(t *testing.T) {
+	root := newFixtureRoot(t)
+	addNativeChain(t, root, "ethereum", map[string]any{
+		"name":     "Ethereum",
+		"symbol":   "ETH",
+		"type":     "coin",
+		"decimals": 18,
+		"status":   "active",
+		"explorer": "https://etherscan.io/",
+	})
+	server := NewServer(Config{
+		Root:                root,
+		AssetBaseURL:        "https://cdn.example",
+		ManagedListDBPath:   filepath.Join(root, "managed.sqlite"),
+		ManagedListFilesDir: filepath.Join(root, "files"),
+	})
+
+	rec := doHTTP(t, server.listAPIHandler(), http.MethodPost, "/api/lists", `{"key":"eth","name":"ETH List","enabled":true}`)
+	if rec.Code != http.StatusOK {
+		t.Fatalf("create list status=%d body=%s", rec.Code, rec.Body.String())
+	}
+
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodPost, "/api/lists/eth/items", `{"token":{"kind":"native","chain":"ethereum","address":""},"slot":"native","rank":1,"enabled":true,"display":false,"displaySymbol":"ETH"}`)
+	if rec.Code != http.StatusOK {
+		t.Fatalf("create native item status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	var item ManagedListItem
+	if err := json.Unmarshal(rec.Body.Bytes(), &item); err != nil {
+		t.Fatalf("decode item: %v", err)
+	}
+	if item.Display || item.Token.Kind != "native" || item.Token.Address != "" || item.Token.ChainName != "Ethereum" {
+		t.Fatalf("expected native item with display=false, got %+v", item)
+	}
+
+	rec = doHTTP(t, server.packAPIHandler(), http.MethodPost, "/api/pack/eth", "")
+	if rec.Code != http.StatusOK {
+		t.Fatalf("pack eth status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	var output ManagedListOutput
+	if err := readJSONFile(filepath.Join(root, "files", "eth.json"), &output); err != nil {
+		t.Fatalf("read eth output: %v", err)
+	}
+	if len(output.Tokens) != 1 || output.Tokens[0].Display || output.Tokens[0].Slot != "native" || output.Tokens[0].ChainLogoURI == "" {
+		t.Fatalf("expected packed native display=false item, got %+v", output.Tokens)
+	}
+
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodDelete, "/api/lists/eth/items/ethereum/native", "")
+	if rec.Code != http.StatusOK {
+		t.Fatalf("delete native item status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	items, err := server.lists.ListItems("eth")
+	if err != nil {
+		t.Fatalf("list eth after delete: %v", err)
+	}
+	if len(items) != 0 {
+		t.Fatalf("expected native item to be deleted, got %+v", items)
+	}
+}
+
+func TestManagedListSeedsDefaultMultichainLists(t *testing.T) {
+	root := newFixtureRoot(t)
+	tokenListPath := filepath.Join(root, DefaultTokenListCachePath)
+	homepagePath := filepath.Join(root, "data", "tokenlists", "out", "homepage.json")
+	mustWriteJSON(t, tokenListPath, AppTokenList{
+		Source:    "test",
+		UpdatedAt: "2026-08-14T00:00:00Z",
+		Tokens: []AppToken{
+			{
+				Kind:       "token",
+				Chain:      "ethereum",
+				Address:    "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+				AssetID:    "c60_t0xdAC17F958D2ee523a2206206994597C13D831ec7",
+				Name:       "Tether",
+				Symbol:     "USDT",
+				Decimals:   6,
+				Status:     "active",
+				LogoURI:    "https://cdn.example/eth-usdt.png",
+				LogoExists: true,
+				Rank:       1,
+				Tags:       []string{"stablecoin"},
+			},
+			{
+				Kind:       "token",
+				Chain:      "arbitrum",
+				Address:    "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+				AssetID:    "c10042221_t0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9",
+				Name:       "USDT0",
+				Symbol:     "USDT0",
+				Decimals:   6,
+				Status:     "active",
+				LogoURI:    "https://cdn.example/arb-usdt0.png",
+				LogoExists: true,
+				Rank:       2,
+				Tags:       []string{"stablecoin"},
+			},
+			{
+				Kind:       "native",
+				Chain:      "ethereum",
+				Address:    "",
+				AssetID:    "c60",
+				Name:       "Ethereum",
+				Symbol:     "ETH",
+				Decimals:   18,
+				Status:     "active",
+				LogoURI:    "https://cdn.example/eth.png",
+				LogoExists: true,
+				Rank:       3,
+			},
+			{
+				Kind:       "token",
+				Chain:      "polygon",
+				Address:    "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+				AssetID:    "c966_t0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
+				Name:       "Dai Stablecoin",
+				Symbol:     "DAI",
+				Decimals:   18,
+				Status:     "active",
+				LogoExists: true,
+				Tags:       []string{"stablecoin"},
+			},
+		},
+	})
+	mustWriteJSON(t, homepagePath, map[string]any{
+		"tokens": []map[string]any{
+			{
+				"id":            "ethereum:usdt",
+				"chain":         "ethereum",
+				"slot":          "usdt",
+				"kind":          "token",
+				"displaySymbol": "USDT",
+				"displayName":   "Tether",
+				"symbol":        "USDT",
+				"name":          "Tether",
+				"address":       "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+				"decimals":      6,
+				"logoURI":       "https://cdn.example/eth-usdt.png",
+				"tags":          []string{"stablecoin"},
+				"source":        "trustwallet-asset",
+			},
+		},
+	})
+
+	server := NewServer(Config{
+		Root:                root,
+		AssetBaseURL:        "https://cdn.example",
+		ManagedListDBPath:   filepath.Join(root, "managed.sqlite"),
+		ManagedListFilesDir: filepath.Join(root, "files"),
+	})
+	if err := server.lists.SeedDefaultLists(); err != nil {
+		t.Fatalf("seed default lists: %v", err)
+	}
+	if err := server.lists.SeedDefaultLists(); err != nil {
+		t.Fatalf("seed should be idempotent: %v", err)
+	}
+
+	usdt, err := server.lists.ListItems("usdt")
+	if err != nil {
+		t.Fatalf("list usdt: %v", err)
+	}
+	if len(usdt) != 2 || !usdt[0].Display || usdt[0].Slot != "usdt" {
+		t.Fatalf("expected USDT list to include USDT and USDT0, got %+v", usdt)
+	}
+
+	stablecoins, err := server.lists.ListItems("stablecoin")
+	if err != nil {
+		t.Fatalf("list stablecoin: %v", err)
+	}
+	if len(stablecoins) != 3 {
+		t.Fatalf("expected three stablecoin seed items, got %+v", stablecoins)
+	}
+
+	ethItems, err := server.lists.ListItems("eth")
+	if err != nil {
+		t.Fatalf("list eth: %v", err)
+	}
+	if len(ethItems) != 1 || ethItems[0].Token.Kind != "native" || ethItems[0].Token.Address != "" {
+		t.Fatalf("expected native ETH seed item, got %+v", ethItems)
+	}
+
+	homepage, err := server.lists.ListItems("homepage")
+	if err != nil {
+		t.Fatalf("list homepage: %v", err)
+	}
+	if len(homepage) != 1 || homepage[0].DisplaySymbol != "USDT" || homepage[0].Slot != "usdt" || !homepage[0].Display {
+		t.Fatalf("expected homepage seed item with display symbol, got %+v", homepage)
+	}
+}
+
 func newFixtureRoot(t *testing.T) string {
 	t.Helper()
 
@@ -1817,6 +2123,17 @@ func doRPC(t *testing.T, server *Server, request any, response *rpcResponse) {
 	if err := json.Unmarshal(rec.Body.Bytes(), response); err != nil {
 		t.Fatalf("decode response: %v body=%s", err, rec.Body.String())
 	}
+}
+
+func doHTTP(t *testing.T, handler http.Handler, method, path, body string) *httptest.ResponseRecorder {
+	t.Helper()
+	req := httptest.NewRequest(method, path, strings.NewReader(body))
+	if body != "" {
+		req.Header.Set("Content-Type", "application/json")
+	}
+	rec := httptest.NewRecorder()
+	handler.ServeHTTP(rec, req)
+	return rec
 }
 
 func mustWriteJSON(t *testing.T, path string, value any) {

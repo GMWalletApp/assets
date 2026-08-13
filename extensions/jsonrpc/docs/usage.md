@@ -61,6 +61,113 @@ extensions/jsonrpc/data/tokenlist.json
 extensions/jsonrpc/data/tokenlist-report.json
 ```
 
+## Managed Token Lists
+
+The service also exposes a SQLite-backed list manager for app-specific groups
+such as `usdt`, `usdc`, `stablecoin`, `eth`, `usds`, `dai`, `homepage`, and
+`tokenlist`.
+
+Default storage and packed output:
+
+```text
+extensions/jsonrpc/data/lists.sqlite
+extensions/jsonrpc/data/lists/<list>.json
+extensions/jsonrpc/data/lists/<list>.json.zst
+extensions/jsonrpc/data/lists/manifest.json
+```
+
+On startup, `assets-rpc` seeds default managed lists from the current generated
+files without overwriting existing list items:
+
+- `tokenlist`: every token in `extensions/jsonrpc/data/tokenlist.json`; this is the generic app token list
+- `usdt`: `USDT` and `USDT0`, so app surfaces can use one USDT family list
+- `usdc`, `usds`, `dai`, `eth`: exact symbol lists
+- `stablecoin`: tokens tagged `stablecoin`
+- `homepage`: tokens in `data/tokenlists/out/homepage.json`
+
+Business lists other than the generic `tokenlist` carry homepage-style item
+metadata:
+
+- `slot`: list-specific display slot, such as `usdt`, `stablecoin`, or `native`
+- `display`: app visibility flag; disabled display items can stay in the list for controlled rollout
+- `displayName` and `displaySymbol`: list-level presentation overrides
+- `chainName`, `chainId`, `chainLogoURI`, `explorer`, `logoURI`, and tags
+
+`enabled` and `display` have different meanings. `enabled:false` excludes the
+item from packed files. `display:false` keeps the item in packed files but tells
+the app not to show it by default.
+
+Override paths when starting the service:
+
+```bash
+go run ./cmd/assets-rpc \
+  --root ../.. \
+  --managed-list-db extensions/jsonrpc/data/lists.sqlite \
+  --managed-list-files-dir extensions/jsonrpc/data/lists \
+  --managed-list-seed-defaults=true \
+  --managed-list-pack-after-seed=false
+```
+
+CRUD endpoints:
+
+```text
+GET    /api/lists
+POST   /api/lists
+GET    /api/lists/{listKey}
+PATCH  /api/lists/{listKey}
+DELETE /api/lists/{listKey}
+
+GET    /api/lists/{listKey}/items
+POST   /api/lists/{listKey}/items
+PATCH  /api/lists/{listKey}/items/{chain}/{address}
+DELETE /api/lists/{listKey}/items/{chain}/{address}
+
+POST   /api/pack/{listKey}
+POST   /api/pack/all
+GET    /files/{listKey}.json
+GET    /files/{listKey}.json.zst
+GET    /files/manifest.json
+```
+
+Create a list:
+
+```bash
+curl -sS http://localhost:8080/api/lists \
+  -H 'content-type: application/json' \
+  --data '{"key":"usdt","name":"USDT List","enabled":true}'
+```
+
+Add an existing repository asset to a list. When `chain` and `address` match
+`blockchains/<chain>/assets/<address>/info.json`, the service hydrates symbol,
+name, decimals, logo, status, tags, and asset ID from the local asset repository.
+
+```bash
+curl -sS http://localhost:8080/api/lists/usdt/items \
+  -H 'content-type: application/json' \
+  --data '{
+    "token": {
+      "chain": "smartchain",
+      "address": "0x55d398326f99059fF775485246999027B3197955"
+    },
+    "slot": "usdt",
+    "rank": 1,
+    "enabled": true,
+    "display": true,
+    "displaySymbol": "USDT"
+  }'
+```
+
+Pack one list and download the compressed file:
+
+```bash
+curl -sS -X POST http://localhost:8080/api/pack/usdt
+curl -O http://localhost:8080/files/usdt.json.zst
+```
+
+`POST /api/pack/all` writes every enabled list and updates `manifest.json`.
+SQLite stores list membership and display overrides; the local `blockchains/**`
+asset tree remains the source for base token metadata.
+
 Default tokenlist config:
 
 ```text
