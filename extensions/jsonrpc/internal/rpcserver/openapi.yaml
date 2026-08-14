@@ -1,0 +1,667 @@
+openapi: 3.1.0
+info:
+  title: Sparkdance Managed Lists API
+  version: 1.0.0
+  description: |
+    CRUD API for multi-chain token lists. A list detail is one aggregate document
+    containing list-level presentation settings and its managed items. Item routes
+    remain available for independent editing. Administrative authentication is
+    expected to be enforced by the deployment proxy (for example, Caddy basic_auth).
+servers:
+  - url: /
+tags:
+  - name: Lists
+  - name: Items
+  - name: Pack
+  - name: Published Files
+paths:
+  /api/lists:
+    get:
+      tags: [Lists]
+      operationId: listManagedLists
+      summary: List all managed-list summaries
+      security: [{basicAuth: []}]
+      responses:
+        '200':
+          description: List summaries
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/ManagedList'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    post:
+      tags: [Lists]
+      operationId: createManagedList
+      summary: Create a list
+      security: [{basicAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ListCreate'}
+      responses:
+        '201':
+          description: Created list aggregate
+          headers:
+            Location: {schema: {type: string}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListDocument'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/lists/{listKey}:
+    parameters:
+      - $ref: '#/components/parameters/ListKey'
+    get:
+      tags: [Lists]
+      operationId: getManagedList
+      summary: Get list metadata and all managed items
+      security: [{basicAuth: []}]
+      responses:
+        '200':
+          description: Complete management document
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListDocument'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    put:
+      tags: [Lists]
+      operationId: replaceManagedList
+      summary: Replace a list or create it at this key
+      security: [{basicAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ListReplace'}
+      responses:
+        '200':
+          description: Replaced list aggregate
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListDocument'}
+        '201':
+          description: Created list aggregate
+          headers:
+            Location: {schema: {type: string}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListDocument'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    patch:
+      tags: [Lists]
+      operationId: patchManagedList
+      summary: Modify individual list-level fields
+      description: The list key is immutable. Omitted fields are preserved.
+      security: [{basicAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ListPatch'}
+      responses:
+        '200':
+          description: Updated list aggregate
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListDocument'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    delete:
+      tags: [Lists]
+      operationId: deleteManagedList
+      summary: Delete a list and its memberships
+      security: [{basicAuth: []}]
+      responses:
+        '204': {description: Deleted}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/lists/{listKey}/items:
+    parameters:
+      - $ref: '#/components/parameters/ListKey'
+    get:
+      tags: [Items]
+      operationId: listManagedListItems
+      summary: List independently editable items
+      security: [{basicAuth: []}]
+      responses:
+        '200':
+          description: Managed items
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/ManagedListItem'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    post:
+      tags: [Items]
+      operationId: createManagedListItem
+      summary: Add a new item to a list
+      description: |
+        Existing repository metadata is hydrated when chain and address match a
+        local asset. A complete ManagedListItem returned by tokenlist, homepage,
+        a stablecoin family, or any other list can be posted unchanged here;
+        response timestamps are accepted but ignored and regenerated.
+      security: [{basicAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ItemCreate'}
+      responses:
+        '201':
+          description: Created item
+          headers:
+            Location: {schema: {type: string}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListItem'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/lists/{listKey}/items/{chain}/{address}:
+    parameters:
+      - $ref: '#/components/parameters/ListKey'
+      - $ref: '#/components/parameters/Chain'
+      - $ref: '#/components/parameters/Address'
+    get:
+      tags: [Items]
+      operationId: getManagedListItem
+      summary: Get one managed item
+      security: [{basicAuth: []}]
+      responses:
+        '200':
+          description: Managed item
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListItem'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    put:
+      tags: [Items]
+      operationId: replaceManagedListItem
+      summary: Replace an item or create it at this identity
+      description: token.chain and token.address, when supplied, must match the path.
+      security: [{basicAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ItemReplace'}
+      responses:
+        '200':
+          description: Replaced item
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListItem'}
+        '201':
+          description: Created item
+          headers:
+            Location: {schema: {type: string}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListItem'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    patch:
+      tags: [Items]
+      operationId: patchManagedListItem
+      summary: Modify individual item or token metadata fields
+      description: Omitted fields are preserved. Token chain and address are immutable.
+      security: [{basicAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ItemPatch'}
+      responses:
+        '200':
+          description: Updated item
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListItem'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    delete:
+      tags: [Items]
+      operationId: deleteManagedListItem
+      summary: Remove an item from a list
+      security: [{basicAuth: []}]
+      responses:
+        '204': {description: Deleted}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/pack/{listKey}:
+    parameters:
+      - $ref: '#/components/parameters/ListKey'
+    post:
+      tags: [Pack]
+      operationId: packManagedList
+      summary: Build one aggregate JSON and zstd list artifact
+      security: [{basicAuth: []}]
+      responses:
+        '200':
+          description: Generated artifact metadata
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/PackFile'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/pack/all:
+    post:
+      tags: [Pack]
+      operationId: packAllManagedLists
+      summary: Build all enabled lists and the manifest
+      security: [{basicAuth: []}]
+      responses:
+        '200':
+          description: Generated manifest
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/PackManifest'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /files/{outputName}.json:
+    parameters:
+      - $ref: '#/components/parameters/OutputName'
+    get:
+      tags: [Published Files]
+      operationId: downloadPackedListJSON
+      summary: Download a public aggregate list as JSON
+      description: |
+        Generated by POST /api/pack/{listKey} or POST /api/pack/all. outputName
+        comes from the list's outputPath (without the final .json), so it does not
+        have to equal listKey. Use jsonUrl from PackFile or manifest.json as the
+        authoritative public URL. An outputPath containing subdirectories adds
+        those path segments below /files/.
+      responses:
+        '200':
+          description: Packed list document
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/PackedListDocument'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /files/{outputName}.json.zst:
+    parameters:
+      - $ref: '#/components/parameters/OutputName'
+    get:
+      tags: [Published Files]
+      operationId: downloadPackedListZstd
+      summary: Download the Zstandard-compressed aggregate list
+      description: Use zstdUrl from PackFile or manifest.json as the authoritative public URL.
+      responses:
+        '200':
+          description: Zstandard-compressed bytes of the corresponding JSON document
+          content:
+            application/zstd:
+              schema: {type: string, format: binary}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /files/manifest.json:
+    get:
+      tags: [Published Files]
+      operationId: downloadPackManifest
+      summary: Download the public artifact manifest
+      responses:
+        '200':
+          description: Pack manifest
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/PackManifest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /openapi.yaml:
+    get:
+      tags: [Published Files]
+      operationId: downloadOpenAPI
+      summary: Download this OpenAPI 3.1 contract
+      responses:
+        '200':
+          description: OpenAPI YAML
+          content:
+            application/yaml:
+              schema: {type: string}
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: Authentication is provided by the deployment proxy.
+  parameters:
+    ListKey:
+      name: listKey
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: '^[a-z0-9][a-z0-9._-]*$'
+      example: usdt
+    OutputName:
+      name: outputName
+      in: path
+      required: true
+      description: The configured outputPath without its final `.json`; this can differ from listKey.
+      schema: {type: string, minLength: 1}
+      example: usdt
+    Chain:
+      name: chain
+      in: path
+      required: true
+      schema: {type: string, minLength: 1}
+      example: ethereum
+    Address:
+      name: address
+      in: path
+      required: true
+      description: Contract address or the literal `native` for a native asset.
+      schema: {type: string, minLength: 1}
+      example: 0xdAC17F958D2ee523a2206206994597C13D831ec7
+  responses:
+    InvalidRequest:
+      description: Invalid JSON, unknown field, validation error, or path/body mismatch
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/ErrorResponse'}
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/ErrorResponse'}
+    Conflict:
+      description: Resource already exists
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/ErrorResponse'}
+    InternalError:
+      description: Internal server error
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/ErrorResponse'}
+  schemas:
+    ManagedList:
+      type: object
+      required: [key, enabled]
+      properties:
+        key: {type: string}
+        name: {type: string}
+        description: {type: string}
+        displayName: {type: string}
+        displaySymbol: {type: string}
+        logoURI: {type: string, format: uri}
+        outputPath: {type: string, description: Portable relative JSON path using forward-slash separators; unique across lists.}
+        enabled: {type: boolean}
+        createdAt: {type: string, format: date-time}
+        updatedAt: {type: string, format: date-time}
+    ManagedListDocument:
+      allOf:
+        - $ref: '#/components/schemas/ManagedList'
+        - type: object
+          required: [items]
+          properties:
+            items:
+              type: array
+              items: {$ref: '#/components/schemas/ManagedListItem'}
+    ListCreate:
+      type: object
+      additionalProperties: false
+      required: [key]
+      properties:
+        key: {type: string, pattern: '^[a-z0-9][a-z0-9._-]*$'}
+        name: {type: string}
+        description: {type: string}
+        displayName: {type: string}
+        displaySymbol: {type: string}
+        logoURI: {type: string, format: uri}
+        outputPath: {type: string, description: Portable relative JSON path using forward-slash separators; unique across lists.}
+        enabled: {type: boolean, default: true}
+    ListReplace:
+      type: object
+      additionalProperties: false
+      properties:
+        key: {type: string, description: If present, must match listKey.}
+        name: {type: string}
+        description: {type: string}
+        displayName: {type: string}
+        displaySymbol: {type: string}
+        logoURI: {type: string, format: uri}
+        outputPath: {type: string, description: Portable relative JSON path using forward-slash separators; unique across lists.}
+        enabled: {type: boolean}
+    ListPatch:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties:
+        name: {type: string}
+        description: {type: string}
+        displayName: {type: string}
+        displaySymbol: {type: string}
+        logoURI: {type: string}
+        outputPath: {type: string, description: Portable relative JSON path using forward-slash separators; unique across lists.}
+        enabled: {type: boolean}
+    ManagedToken:
+      type: object
+      required: [kind, chain, address, decimals, logoExists, hot]
+      properties:
+        kind: {type: string, enum: [token, native]}
+        chain: {type: string}
+        chainName: {type: string}
+        chainId: {type: integer}
+        chainLogoURI: {type: string}
+        address: {type: string, description: Empty for native assets.}
+        assetId: {type: string}
+        type: {type: string}
+        name: {type: string}
+        symbol: {type: string}
+        decimals: {type: integer, minimum: 0, maximum: 255}
+        status: {type: string}
+        logoURI: {type: string}
+        logoExists: {type: boolean}
+        explorer: {type: string}
+        tags: {type: array, items: {type: string}, uniqueItems: true}
+        hot: {type: boolean}
+        market: {$ref: '#/components/schemas/ManagedTokenMarket'}
+        pairs: {type: array, items: {$ref: '#/components/schemas/TokenPair'}}
+        links: {type: array, items: {$ref: '#/components/schemas/Link'}}
+    ManagedListItem:
+      type: object
+      required: [token, enabled, display]
+      properties:
+        token: {$ref: '#/components/schemas/ManagedToken'}
+        slot: {type: string}
+        rank: {type: integer, minimum: 0}
+        enabled: {type: boolean}
+        display: {type: boolean}
+        displayName: {type: string}
+        displaySymbol: {type: string}
+        displayLogoURI: {type: string}
+        createdAt: {type: string, format: date-time}
+        updatedAt: {type: string, format: date-time}
+    PackedListDocument:
+      type: object
+      required: [key, enabled, generatedAt, version, items]
+      properties:
+        key: {type: string}
+        name: {type: string}
+        description: {type: string}
+        displayName: {type: string}
+        displaySymbol: {type: string}
+        logoURI: {type: string}
+        outputPath: {type: string}
+        enabled: {type: boolean}
+        createdAt: {type: string, format: date-time}
+        updatedAt: {type: string, format: date-time}
+        generatedAt: {type: string, format: date-time}
+        version: {type: integer, minimum: 1}
+        items:
+          type: array
+          items: {$ref: '#/components/schemas/PackedListItem'}
+    PackedListItem:
+      type: object
+      required: [kind, chain, address, display, decimals, logoExists, hot]
+      properties:
+        id: {type: string}
+        slot: {type: string}
+        kind: {type: string, enum: [token, native]}
+        chain: {type: string}
+        chainName: {type: string}
+        chainId: {type: integer}
+        chainLogoURI: {type: string}
+        address: {type: string}
+        assetId: {type: string}
+        type: {type: string}
+        display: {type: boolean}
+        displayName: {type: string}
+        displaySymbol: {type: string}
+        name: {type: string}
+        symbol: {type: string}
+        decimals: {type: integer, minimum: 0, maximum: 255}
+        status: {type: string}
+        logoURI: {type: string}
+        logoExists: {type: boolean}
+        explorer: {type: string}
+        rank: {type: integer, minimum: 0}
+        tags: {type: array, items: {type: string}}
+        hot: {type: boolean}
+        market: {$ref: '#/components/schemas/ManagedTokenMarket'}
+        pairs: {type: array, items: {$ref: '#/components/schemas/TokenPair'}}
+        links: {type: array, items: {$ref: '#/components/schemas/Link'}}
+    ItemCreate:
+      type: object
+      additionalProperties: false
+      required: [token]
+      properties:
+        token: {$ref: '#/components/schemas/ManagedTokenInput'}
+        slot: {type: string}
+        rank: {type: integer, minimum: 0}
+        enabled: {type: boolean, default: true}
+        display: {type: boolean, default: true}
+        displayName: {type: string}
+        displaySymbol: {type: string}
+        displayLogoURI: {type: string}
+        createdAt: {type: string, format: date-time, description: Accepted when copying an item and ignored on write.}
+        updatedAt: {type: string, format: date-time, description: Accepted when copying an item and ignored on write.}
+    ItemReplace:
+      allOf:
+        - $ref: '#/components/schemas/ItemCreate'
+    ItemPatch:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties:
+        token: {$ref: '#/components/schemas/ManagedTokenPatch'}
+        slot: {type: string}
+        rank: {type: integer, minimum: 0}
+        enabled: {type: boolean}
+        display: {type: boolean}
+        displayName: {type: string}
+        displaySymbol: {type: string}
+        displayLogoURI: {type: string}
+    ManagedTokenInput:
+      type: object
+      additionalProperties: false
+      required: [chain]
+      properties:
+        kind: {type: string, enum: [token, native]}
+        chain: {type: string}
+        chainName: {type: string}
+        chainId: {type: integer}
+        chainLogoURI: {type: string}
+        address: {type: string}
+        assetId: {type: string}
+        type: {type: string}
+        name: {type: string}
+        symbol: {type: string}
+        decimals: {type: integer, minimum: 0, maximum: 255}
+        status: {type: string}
+        logoURI: {type: string}
+        logoExists: {type: boolean}
+        explorer: {type: string}
+        tags: {type: array, items: {type: string}}
+        hot: {type: boolean}
+        market: {$ref: '#/components/schemas/ManagedTokenMarket'}
+        pairs: {type: array, items: {$ref: '#/components/schemas/TokenPair'}}
+        links: {type: array, items: {$ref: '#/components/schemas/Link'}}
+    ManagedTokenPatch:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties:
+        kind: {type: string, enum: [token, native]}
+        chain: {type: string, description: Must match the path; cannot be changed.}
+        chainName: {type: string}
+        chainId: {type: integer}
+        chainLogoURI: {type: string}
+        address: {type: string, description: Must match the path; cannot be changed.}
+        assetId: {type: string}
+        type: {type: string}
+        name: {type: string}
+        symbol: {type: string}
+        decimals: {type: integer, minimum: 0, maximum: 255}
+        status: {type: string}
+        logoURI: {type: string}
+        logoExists: {type: boolean}
+        explorer: {type: string}
+        tags: {type: array, items: {type: string}}
+        hot: {type: boolean}
+        market: {$ref: '#/components/schemas/ManagedTokenMarket'}
+        pairs: {type: array, items: {$ref: '#/components/schemas/TokenPair'}}
+        links: {type: array, items: {$ref: '#/components/schemas/Link'}}
+    ManagedTokenMarket:
+      type: object
+      additionalProperties: false
+      properties:
+        coingeckoId: {type: string}
+        marketCapRank: {type: integer, minimum: 0}
+        marketCap: {type: number}
+        totalVolume: {type: number}
+        currentPrice: {type: number}
+        lastUpdated: {type: string, format: date-time}
+    TokenPair:
+      type: object
+      additionalProperties: false
+      properties:
+        base: {type: string}
+    Link:
+      type: object
+      additionalProperties: false
+      properties:
+        name: {type: string}
+        url: {type: string}
+    PackFile:
+      type: object
+      required: [listKey, jsonPath, zstdPath, jsonUrl, zstdUrl, jsonSize, zstdSize, jsonSha256, zstdSha256, tokenCount, generatedAt]
+      properties:
+        listKey: {type: string}
+        jsonPath: {type: string, description: Portable path relative to the managed-list output directory.}
+        zstdPath: {type: string, description: Portable path relative to the managed-list output directory.}
+        jsonUrl: {type: string}
+        zstdUrl: {type: string}
+        jsonSize: {type: integer, format: int64}
+        zstdSize: {type: integer, format: int64}
+        jsonSha256: {type: string}
+        zstdSha256: {type: string}
+        tokenCount: {type: integer}
+        generatedAt: {type: string, format: date-time}
+    PackManifest:
+      type: object
+      required: [generatedAt, files]
+      properties:
+        generatedAt: {type: string, format: date-time}
+        files: {type: array, items: {$ref: '#/components/schemas/PackFile'}}
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: object
+          required: [code, message]
+          properties:
+            code: {type: string, enum: [invalid_request, not_found, conflict, method_not_allowed, internal_error]}
+            message: {type: string}

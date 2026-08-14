@@ -3,16 +3,20 @@ package rpcserver
 import (
 	"database/sql"
 	"encoding/json"
+	"errors"
 	"os"
 	"strings"
 	"time"
 )
 
 type seedListSpec struct {
-	Key         string
-	Name        string
-	Description string
-	Match       func(ManagedToken) bool
+	Key           string
+	Name          string
+	Description   string
+	DisplayName   string
+	DisplaySymbol string
+	LogoURI       string
+	Match         func(ManagedToken) bool
 }
 
 var appTokenSeedLists = []seedListSpec{
@@ -23,19 +27,37 @@ var appTokenSeedLists = []seedListSpec{
 		Match:       func(ManagedToken) bool { return true },
 	},
 	{
-		Key:         "usdt",
-		Name:        "USDT List",
-		Description: "Multi-chain USDT family list, including USDT0 variants where the app should treat them as the USDT slot.",
+		Key:           "usdt",
+		Name:          "USDT List",
+		Description:   "Multi-chain USDT family list, including USDT0 variants where the app should treat them as the USDT slot.",
+		DisplayName:   "Tether USD",
+		DisplaySymbol: "USDT",
+		LogoURI:       DefaultUSDTFamilyLogoURI,
 		Match: func(token ManagedToken) bool {
 			symbol := strings.ToUpper(token.Symbol)
 			return symbol == "USDT" || symbol == "USDT0"
 		},
 	},
 	{
-		Key:         "usdc",
-		Name:        "USDC List",
-		Description: "Multi-chain USDC list.",
-		Match:       matchSymbol("USDC"),
+		Key:           "usdc",
+		Name:          "USDC List",
+		Description:   "Multi-chain native and bridged USDC family list.",
+		DisplayName:   "USD Coin",
+		DisplaySymbol: "USDC",
+		LogoURI:       "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+		Match: func(token ManagedToken) bool {
+			symbol := strings.ToUpper(token.Symbol)
+			return symbol == "USDC" || symbol == "USDC.E"
+		},
+	},
+	{
+		Key:           "usdg",
+		Name:          "USDG List",
+		Description:   "Multi-chain Global Dollar list.",
+		DisplayName:   "Global Dollar",
+		DisplaySymbol: "USDG",
+		LogoURI:       "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xe343167631d89B6Ffc58B88d6b7fB0228795491D/logo.png",
+		Match:         matchSymbol("USDG"),
 	},
 	{
 		Key:         "stablecoin",
@@ -52,10 +74,15 @@ var appTokenSeedLists = []seedListSpec{
 		Match:       matchSymbol("ETH"),
 	},
 	{
-		Key:         "usds",
-		Name:        "USDS List",
-		Description: "Multi-chain USDS list.",
-		Match:       matchSymbol("USDS"),
+		Key:           "usds",
+		Name:          "USDS List",
+		Description:   "Multi-chain Sky USDS list.",
+		DisplayName:   "USDS",
+		DisplaySymbol: "USDS",
+		LogoURI:       "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xdC035D45d973E3EC169d2276DDab16f1e407384F/logo.png",
+		Match: func(token ManagedToken) bool {
+			return strings.EqualFold(token.Symbol, "USDS") && strings.Contains(strings.ToUpper(token.Name), "USDS")
+		},
 	},
 	{
 		Key:         "dai",
@@ -87,7 +114,7 @@ func (s *ManagedListService) seedFromAppTokenList(db *sql.DB) error {
 	}
 
 	for _, spec := range appTokenSeedLists {
-		if err := seedList(db, spec.Key, spec.Name, spec.Description, spec.Key+".json"); err != nil {
+		if err := seedList(db, spec.Key, spec.Name, spec.Description, spec.DisplayName, spec.DisplaySymbol, spec.LogoURI, spec.Key+".json"); err != nil {
 			return err
 		}
 		rank := 1
@@ -99,13 +126,60 @@ func (s *ManagedListService) seedFromAppTokenList(db *sql.DB) error {
 			if spec.Key != "tokenlist" {
 				slot = spec.Key
 			}
-			if err := seedListItem(db, spec.Key, s.enrichChainContext(token), slot, rank, true, "", "", "seed:"+s.tokenListSeedPath); err != nil {
+			display := defaultManagedListDisplay(spec.Key, token.Chain)
+			if err := seedListItem(db, spec.Key, s.enrichChainContext(token), slot, rank, display, "", "", ""); err != nil {
 				return err
 			}
 			rank++
 		}
 	}
 	return nil
+}
+
+func (s *ManagedListService) seedFromManualTokenList(db *sql.DB) error {
+	if strings.TrimSpace(s.manualTokensPath) == "" {
+		return nil
+	}
+	tokens, err := loadTokenListManualTokens(s.manualTokensPath)
+	if err != nil {
+		return err
+	}
+	for _, spec := range appTokenSeedLists {
+		if err := seedList(db, spec.Key, spec.Name, spec.Description, spec.DisplayName, spec.DisplaySymbol, spec.LogoURI, spec.Key+".json"); err != nil {
+			return err
+		}
+		rank, err := nextSeedRank(db, spec.Key)
+		if err != nil {
+			return err
+		}
+		for _, appToken := range tokens {
+			token := managedTokenFromAppToken(appToken)
+			if !spec.Match(token) {
+				continue
+			}
+			slot := ""
+			if spec.Key != "tokenlist" {
+				slot = spec.Key
+			}
+			display := defaultManagedListDisplay(spec.Key, token.Chain)
+			if err := seedListItem(db, spec.Key, s.enrichChainContext(token), slot, rank, display, "", "", ""); err != nil {
+				return err
+			}
+			rank++
+		}
+	}
+	return nil
+}
+
+func nextSeedRank(db *sql.DB, listKey string) (int, error) {
+	var rank int
+	err := db.QueryRow(`
+		select coalesce(max(li.rank), 0) + 1
+		from list_items li
+		join lists l on l.id = li.list_id
+		where l.key = ?
+	`, normalizeListKey(listKey)).Scan(&rank)
+	return rank, err
 }
 
 func (s *ManagedListService) seedFromHomepage(db *sql.DB) error {
@@ -122,29 +196,33 @@ func (s *ManagedListService) seedFromHomepage(db *sql.DB) error {
 
 	var source struct {
 		Tokens []struct {
-			ID            string   `json:"id"`
-			Chain         string   `json:"chain"`
-			Slot          string   `json:"slot"`
-			Kind          string   `json:"kind"`
-			DisplaySymbol string   `json:"displaySymbol"`
-			DisplayName   string   `json:"displayName"`
-			ChainName     string   `json:"chainName"`
-			ChainID       int      `json:"chainId"`
-			ChainLogoURI  string   `json:"chainLogoURI"`
-			Tags          []string `json:"tags"`
-			Symbol        string   `json:"symbol"`
-			Name          string   `json:"name"`
-			Address       *string  `json:"address"`
-			Decimals      int      `json:"decimals"`
-			LogoURI       string   `json:"logoURI"`
-			Explorer      string   `json:"explorer"`
-			Source        string   `json:"source"`
+			ID             string          `json:"id"`
+			Chain          string          `json:"chain"`
+			Slot           string          `json:"slot"`
+			Kind           string          `json:"kind"`
+			DisplaySymbol  string          `json:"displaySymbol"`
+			DisplayName    string          `json:"displayName"`
+			DisplayLogoURI string          `json:"displayLogoURI"`
+			ChainName      string          `json:"chainName"`
+			ChainID        int             `json:"chainId"`
+			ChainLogoURI   string          `json:"chainLogoURI"`
+			Tags           []string        `json:"tags"`
+			Symbol         string          `json:"symbol"`
+			Name           string          `json:"name"`
+			Address        *string         `json:"address"`
+			Decimals       int             `json:"decimals"`
+			LogoURI        string          `json:"logoURI"`
+			Explorer       string          `json:"explorer"`
+			Hot            bool            `json:"hot"`
+			Market         *AppTokenMarket `json:"market"`
+			Pairs          []TokenPair     `json:"pairs"`
+			Links          []Link          `json:"links"`
 		} `json:"tokens"`
 	}
 	if err := json.Unmarshal(data, &source); err != nil {
 		return err
 	}
-	if err := seedList(db, "homepage", "Homepage List", "Curated homepage token list from data/tokenlists/out/homepage.json.", "homepage.json"); err != nil {
+	if err := seedList(db, "homepage", "Homepage List", "Curated homepage token list from data/tokenlists/out/homepage.json.", "", "", "", "homepage.json"); err != nil {
 		return err
 	}
 	for i, token := range source.Tokens {
@@ -168,26 +246,65 @@ func (s *ManagedListService) seedFromHomepage(db *sql.DB) error {
 			LogoExists:   token.LogoURI != "",
 			Explorer:     token.Explorer,
 			Tags:         appendUniqueStrings(nil, token.Tags...),
-			Source:       defaultString(token.Source, "seed-homepage"),
+			Hot:          token.Hot,
+			Market:       managedTokenMarketFromAppToken(token.Market),
+			Pairs:        append([]TokenPair(nil), token.Pairs...),
+			Links:        append([]Link(nil), token.Links...),
 		}
-		if err := seedListItem(db, "homepage", s.enrichChainContext(managed), token.Slot, i+1, true, token.DisplayName, token.DisplaySymbol, "seed:"+s.homepageSeedPath); err != nil {
+		managed, err = preserveManagedTokenUIFromDB(db, managed)
+		if err != nil {
+			return err
+		}
+		if err := seedListItem(db, "homepage", s.enrichChainContext(managed), token.Slot, i+1, true, token.DisplayName, token.DisplaySymbol, token.DisplayLogoURI); err != nil {
 			return err
 		}
 	}
 	return nil
 }
 
-func seedList(db *sql.DB, key, name, description, outputPath string) error {
+func preserveManagedTokenUIFromDB(db *sql.DB, token ManagedToken) (ManagedToken, error) {
+	var hot int
+	var marketJSON, pairsJSON, linksJSON string
+	err := db.QueryRow(`select hot, market_json, pairs_json, links_json from tokens where chain = ? and address = ?`, token.Chain, token.Address).Scan(&hot, &marketJSON, &pairsJSON, &linksJSON)
+	if errors.Is(err, sql.ErrNoRows) {
+		return token, nil
+	}
+	if err != nil {
+		return ManagedToken{}, err
+	}
+	token.Hot = hot != 0
+	if marketJSON != "" && marketJSON != "null" {
+		if err := json.Unmarshal([]byte(marketJSON), &token.Market); err != nil {
+			return ManagedToken{}, err
+		}
+	}
+	if pairsJSON != "" {
+		if err := json.Unmarshal([]byte(pairsJSON), &token.Pairs); err != nil {
+			return ManagedToken{}, err
+		}
+	}
+	if linksJSON != "" {
+		if err := json.Unmarshal([]byte(linksJSON), &token.Links); err != nil {
+			return ManagedToken{}, err
+		}
+	}
+	return token, nil
+}
+
+func seedList(db *sql.DB, key, name, description, displayName, displaySymbol, logoURI, outputPath string) error {
 	now := time.Now().UTC().Format(time.RFC3339)
 	_, err := db.Exec(`
-		insert into lists(key, name, description, output_path, enabled, created_at, updated_at)
-		values(?, ?, ?, ?, 1, ?, ?)
-		on conflict(key) do nothing
-	`, normalizeListKey(key), name, description, outputPath, now, now)
+		insert into lists(key, name, description, display_name, display_symbol, logo_uri, output_path, enabled, created_at, updated_at)
+		values(?, ?, ?, ?, ?, ?, ?, 1, ?, ?)
+		on conflict(key) do update set
+			display_name = case when lists.display_name = '' then excluded.display_name else lists.display_name end,
+			display_symbol = case when lists.display_symbol = '' then excluded.display_symbol else lists.display_symbol end,
+			logo_uri = case when lists.logo_uri = '' then excluded.logo_uri else lists.logo_uri end
+	`, normalizeListKey(key), name, description, displayName, displaySymbol, logoURI, outputPath, now, now)
 	return err
 }
 
-func seedListItem(db *sql.DB, listKey string, token ManagedToken, slot string, rank int, display bool, displayName, displaySymbol, note string) error {
+func seedListItem(db *sql.DB, listKey string, token ManagedToken, slot string, rank int, display bool, displayName, displaySymbol, displayLogoURI string) error {
 	token.Chain = normalizeChain(token.Chain)
 	token.Address = strings.TrimSpace(token.Address)
 	if token.Chain == "" {
@@ -200,11 +317,20 @@ func seedListItem(db *sql.DB, listKey string, token ManagedToken, slot string, r
 			token.Kind = "token"
 		}
 	}
-	if token.Source == "" {
-		token.Source = "seed"
-	}
 	token.Tags = appendUniqueStrings(nil, token.Tags...)
 	tagsJSON, err := json.Marshal(token.Tags)
+	if err != nil {
+		return err
+	}
+	marketJSON, err := json.Marshal(token.Market)
+	if err != nil {
+		return err
+	}
+	pairsJSON, err := json.Marshal(token.Pairs)
+	if err != nil {
+		return err
+	}
+	linksJSON, err := json.Marshal(token.Links)
 	if err != nil {
 		return err
 	}
@@ -217,8 +343,8 @@ func seedListItem(db *sql.DB, listKey string, token ManagedToken, slot string, r
 	defer tx.Rollback()
 
 	_, err = tx.Exec(`
-		insert into tokens(kind, chain, chain_name, chain_id, chain_logo_uri, address, asset_id, type, name, symbol, decimals, status, logo_uri, logo_exists, explorer, tags_json, source, created_at, updated_at)
-		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+		insert into tokens(kind, chain, chain_name, chain_id, chain_logo_uri, address, asset_id, type, name, symbol, decimals, status, logo_uri, logo_exists, explorer, tags_json, hot, market_json, pairs_json, links_json, created_at, updated_at)
+		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 		on conflict(chain, address) do update set
 			kind = excluded.kind,
 			chain_name = excluded.chain_name,
@@ -234,9 +360,12 @@ func seedListItem(db *sql.DB, listKey string, token ManagedToken, slot string, r
 			logo_exists = excluded.logo_exists,
 			explorer = excluded.explorer,
 			tags_json = excluded.tags_json,
-			source = excluded.source,
+			hot = excluded.hot,
+			market_json = excluded.market_json,
+			pairs_json = excluded.pairs_json,
+			links_json = excluded.links_json,
 			updated_at = excluded.updated_at
-	`, token.Kind, token.Chain, token.ChainName, token.ChainID, token.ChainLogoURI, token.Address, token.AssetID, token.Type, token.Name, token.Symbol, token.Decimals, token.Status, token.LogoURI, boolToInt(token.LogoExists), token.Explorer, string(tagsJSON), token.Source, now, now)
+	`, token.Kind, token.Chain, token.ChainName, token.ChainID, token.ChainLogoURI, token.Address, token.AssetID, token.Type, token.Name, token.Symbol, token.Decimals, token.Status, token.LogoURI, boolToInt(token.LogoExists), token.Explorer, string(tagsJSON), boolToInt(token.Hot), string(marketJSON), string(pairsJSON), string(linksJSON), now, now)
 	if err != nil {
 		return err
 	}
@@ -249,10 +378,10 @@ func seedListItem(db *sql.DB, listKey string, token ManagedToken, slot string, r
 		return err
 	}
 	_, err = tx.Exec(`
-		insert into list_items(list_id, token_id, slot, rank, enabled, display, display_name, display_symbol, note, created_at, updated_at)
+		insert into list_items(list_id, token_id, slot, rank, enabled, display, display_name, display_symbol, display_logo_uri, created_at, updated_at)
 		values(?, ?, ?, ?, 1, ?, ?, ?, ?, ?, ?)
 		on conflict(list_id, token_id) do nothing
-	`, listID, tokenID, normalizeSlot(slot), rank, boolToInt(display), displayName, displaySymbol, note, now, now)
+	`, listID, tokenID, normalizeSlot(slot), rank, boolToInt(display), displayName, displaySymbol, displayLogoURI, now, now)
 	if err != nil {
 		return err
 	}
@@ -272,14 +401,55 @@ func managedTokenFromAppToken(token AppToken) ManagedToken {
 		Status:     token.Status,
 		LogoURI:    token.LogoURI,
 		LogoExists: token.LogoExists,
+		Explorer:   appTokenLink(token, "explorer"),
 		Tags:       appendUniqueStrings(nil, token.Tags...),
-		Source:     "seed-tokenlist",
+		Hot:        token.Hot,
+		Market:     managedTokenMarketFromAppToken(token.Market),
+		Pairs:      append([]TokenPair(nil), token.Pairs...),
+		Links:      append([]Link(nil), token.Links...),
 	}
+}
+
+func managedTokenMarketFromAppToken(market *AppTokenMarket) *ManagedTokenMarket {
+	if market == nil {
+		return nil
+	}
+	return &ManagedTokenMarket{
+		CoinGeckoID:   market.CoinGeckoID,
+		MarketCapRank: market.MarketCapRank,
+		MarketCap:     market.MarketCap,
+		TotalVolume:   market.TotalVolume,
+		CurrentPrice:  market.CurrentPrice,
+		LastUpdated:   market.LastUpdated,
+	}
+}
+
+func appTokenLink(token AppToken, name string) string {
+	for _, link := range token.Links {
+		if strings.EqualFold(strings.TrimSpace(link.Name), name) {
+			return strings.TrimSpace(link.URL)
+		}
+	}
+	return ""
 }
 
 func matchSymbol(symbol string) func(ManagedToken) bool {
 	want := strings.ToUpper(symbol)
 	return func(token ManagedToken) bool {
 		return strings.ToUpper(token.Symbol) == want
+	}
+}
+
+func defaultManagedListDisplay(listKey, chain string) bool {
+	switch normalizeListKey(listKey) {
+	case "usdt", "usdc", "usdg", "usds":
+		switch normalizeChain(chain) {
+		case "arbitrum", "polygon", "smartchain", "ethereum", "tron":
+			return true
+		default:
+			return false
+		}
+	default:
+		return true
 	}
 }

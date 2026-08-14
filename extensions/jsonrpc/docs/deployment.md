@@ -42,6 +42,9 @@ Common flags:
 --tokenlist-manual-tokens extensions/jsonrpc/config/tokenlist-manual-tokens.json
 --tokenlist-hot-defaults extensions/jsonrpc/config/tokenlist-hot-defaults.json
 --tokenlist-hot-current extensions/jsonrpc/config/tokenlist-hot-current.json
+--managed-list-db extensions/jsonrpc/data/lists.sqlite
+--managed-list-files-dir extensions/jsonrpc/data/lists
+--managed-list-public-base-url /files
 --coingecko-vs-currency usd
 --coingecko-base-url https://api.coingecko.com/api/v3
 --coingecko-api-key-header x-cg-demo-api-key
@@ -95,6 +98,189 @@ The service also reads extension-local rules from:
 ```
 
 These files are maintained separately from upstream Trust Wallet asset data. They are used only while generating extension caches; they do not modify `blockchains/**/info.json`, logos, tokenlist files, or other upstream asset files.
+
+Managed-list mode additionally writes:
+
+```text
+<managed-list-db>
+<managed-list-files-dir>/<listKey>.json
+<managed-list-files-dir>/<listKey>.json.zst
+<managed-list-files-dir>/manifest.json
+```
+
+`<managed-list-db>` is the SQLite file path, not a directory. Both its parent
+directory and the complete managed-list files
+directory must be writable by the service account. The assets repository itself
+can remain read-only when cache and managed-list paths point to a separate
+writable directory.
+
+## Production Managed-List Deployment
+
+The following layout keeps the checked-out repository read-only at runtime and
+stores all mutable state under `/var/lib/assets-rpc`:
+
+```text
+/srv/assets/                         assets repository
+/srv/assets/bin/assets-rpc          installed binary
+/var/lib/assets-rpc/market.json     generated market cache
+/var/lib/assets-rpc/tokenlist.json  generated large token list
+/var/lib/assets-rpc/report.json     generation report
+/var/lib/assets-rpc/lists.sqlite    managed-list database
+/var/lib/assets-rpc/lists/          public JSON, Zstd, and manifest files
+/etc/assets-rpc/env                 server-only environment variables
+```
+
+Create the service account and writable directories. On Debian/Ubuntu, for
+example:
+
+```bash
+sudo useradd --system --home /var/lib/assets-rpc --shell /usr/sbin/nologin assets-rpc
+sudo install -d -o assets-rpc -g assets-rpc -m 0750 \
+  /var/lib/assets-rpc \
+  /var/lib/assets-rpc/lists
+sudo install -d -o root -g assets-rpc -m 0750 /etc/assets-rpc
+```
+
+Then build and install the binary:
+
+```bash
+cd /srv/assets/extensions/jsonrpc
+go test ./...
+make build BIN_DIR=/tmp/assets-rpc-build
+sudo install -d -o root -g root -m 0755 /srv/assets/bin
+sudo install -m 0755 /tmp/assets-rpc-build/assets-rpc /srv/assets/bin/assets-rpc
+```
+
+Store secrets in `/etc/assets-rpc/env` and restrict the file to root and the
+service account:
+
+```dotenv
+COINGECKO_API_KEY=replace-me
+```
+
+Set its ownership and mode after creating it:
+
+```bash
+sudo chown root:assets-rpc /etc/assets-rpc/env
+sudo chmod 0640 /etc/assets-rpc/env
+```
+
+Before the first service start, generate the large tokenlist used to seed
+`tokenlist`, stablecoin families, and other managed lists:
+
+```bash
+sudo -u assets-rpc sh -c '
+  set -a
+  . /etc/assets-rpc/env
+  exec /srv/assets/bin/assets-rpc \
+    --root /srv/assets \
+    --sync-once \
+    --sync-target all \
+    --market-cache /var/lib/assets-rpc/market.json \
+    --tokenlist-cache /var/lib/assets-rpc/tokenlist.json \
+    --tokenlist-report /var/lib/assets-rpc/report.json
+'
+```
+
+The first normal start should use `--managed-list-seed-defaults=true` and
+`--managed-list-pack-after-seed=true`. This creates the initial SQLite schema, seeds the
+default lists, and immediately publishes JSON/Zstd artifacts plus the manifest.
+Later starts are idempotent: seeding does not overwrite existing list
+memberships, and schema creation safely skips tables that already exist.
+
+Background market synchronization refreshes the source tokenlist cache. Newly
+discovered tokens are imported into managed lists on the next service start;
+restart the unit after a desired sync and the configured pack-after-seed step
+will republish the enabled lists.
+
+The main HTTP surfaces are:
+
+```text
+Authenticated administration:
+  /api/lists
+  /api/lists/*
+  /api/pack/*
+
+Public read-only publication:
+  /files/<listKey>.json
+  /files/<listKey>.json.zst
+  /files/manifest.json
+  /openapi.yaml
+
+Existing read-only RPC:
+  /rpc
+```
+
+Calling `POST /api/pack/<listKey>` republishes one list. Calling
+`POST /api/pack/all` republishes every enabled list and atomically refreshes
+`manifest.json`. A published file returns `404` until its list has been packed.
+
+## Manual GitHub Action: Root `output/`
+
+The manual workflow is:
+
+```text
+.github/workflows/build-managed-list-output.yml
+```
+
+Run **Build Managed List Output** from the Actions tab and enter only the public
+domain, including its scheme but without a path, for example:
+
+```text
+https://assets.example.com
+```
+
+Every run deletes and rebuilds the fixed repository-root `output/` directory
+from the currently committed large tokenlist, manual-token config, and homepage
+list. It creates and commits:
+
+```text
+output/manifest.json
+output/tokenlist.json
+output/tokenlist.json.zst
+output/usdt.json
+output/usdt.json.zst
+output/usdc.json
+output/usdc.json.zst
+output/usdg.json
+output/usdg.json.zst
+output/usds.json
+output/usds.json.zst
+output/stablecoin.json
+output/stablecoin.json.zst
+output/homepage.json
+output/homepage.json.zst
+output/eth.json
+output/eth.json.zst
+output/dai.json
+output/dai.json.zst
+```
+
+The workflow automatically includes any additional enabled default lists in the
+future. It validates every JSON file, tests every Zstd file, checks required
+lists, and verifies that manifest paths are portable. With the example domain,
+manifest URLs are generated as:
+
+```text
+https://assets.example.com/output/usdt.json
+https://assets.example.com/output/usdt.json.zst
+```
+
+The workflow then commits only changes under `output/` with the message
+`chore: update managed list output` and pushes to the manually selected branch.
+It does not call CoinGecko; run **Update JSON-RPC Data** first when the committed
+large tokenlist itself needs refreshing, and run **Build Homepage Tokenlist**
+first when homepage inputs changed.
+
+The same generator can be run locally without starting the HTTP server:
+
+```bash
+cd extensions/jsonrpc
+make pack-lists-once \
+  PACK_LIST_ARGS="--managed-list-db /tmp/assets-lists.sqlite \
+  --managed-list-files-dir ../../output \
+  --managed-list-public-base-url https://assets.example.com/output"
+```
 
 ## One-Shot Static JSON Deployment
 
@@ -213,11 +399,38 @@ Each config run updates the relevant config file, regenerates `tokenlist.json` a
 
 - Store `COINGECKO_API_KEY` in GitHub Secrets or a server-local environment file that is not committed.
 - Do not commit generated `.env` files, API keys, private keys, wallet seed phrases, or personal paths.
-- The JSON-RPC endpoint is read-only and rejects request bodies larger than 1 MiB, but public deployments should still use normal HTTP protection such as a reverse proxy, TLS, and rate limiting.
-- For private/internal deployments, bind the service to localhost with `--addr 127.0.0.1:8080` and expose it through your own gateway.
+- The JSON-RPC endpoint, `/files/`, and `/openapi.yaml` are read-only. Every `/api/lists*` and `/api/pack/*` operation is administrative and must not be exposed without authentication.
+- The service intentionally delegates administrative authentication to Caddy. Bind the service to localhost with `--addr 127.0.0.1:8080`, protect the administrative paths with Caddy `basic_auth`, and expose the service through Caddy.
 - The GitHub workflow only passes `COINGECKO_API_KEY` to the key-check and JSON generation steps, and automatic push runs are limited to `main` and `master`.
 
+Example Caddy configuration:
+
+```caddyfile
+assets.example.com {
+	@managed path /api/lists /api/lists/* /api/pack/*
+	basic_auth @managed {
+		admin $2a$14$REPLACE_WITH_CADDY_HASH_PASSWORD_OUTPUT
+	}
+
+	reverse_proxy 127.0.0.1:8080
+}
+```
+
+Generate the password hash with `caddy hash-password`. Keep `/files/*` outside
+the authenticated matcher when applications need to download packed JSON,
+Zstandard files, and `manifest.json` without credentials. `/openapi.yaml` is
+also read-only and can remain public for API clients and documentation tools.
+
+Validate and reload Caddy after installing the configuration:
+
+```bash
+sudo caddy validate --config /etc/caddy/Caddyfile
+sudo systemctl reload caddy
+```
+
 ## systemd Example
+
+Save the following unit as `/etc/systemd/system/assets-rpc.service`:
 
 ```ini
 [Unit]
@@ -227,18 +440,41 @@ Wants=network-online.target
 
 [Service]
 Type=simple
+User=assets-rpc
+Group=assets-rpc
 WorkingDirectory=/srv/assets/extensions/jsonrpc
-Environment=COINGECKO_API_KEY=replace-me
+EnvironmentFile=/etc/assets-rpc/env
 ExecStart=/srv/assets/bin/assets-rpc \
-  --addr :8080 \
+  --addr 127.0.0.1:8080 \
   --root /srv/assets \
   --market-sync-enabled=true \
-  --market-sync-interval=6h
+  --market-sync-interval=6h \
+  --market-cache /var/lib/assets-rpc/market.json \
+  --tokenlist-cache /var/lib/assets-rpc/tokenlist.json \
+  --tokenlist-report /var/lib/assets-rpc/report.json \
+  --managed-list-db /var/lib/assets-rpc/lists.sqlite \
+  --managed-list-files-dir /var/lib/assets-rpc/lists \
+  --managed-list-seed-defaults=true \
+  --managed-list-pack-after-seed=true
 Restart=always
 RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/assets-rpc
 
 [Install]
 WantedBy=multi-user.target
+```
+
+Install and start the unit:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now assets-rpc
+sudo systemctl status assets-rpc
+sudo journalctl -u assets-rpc -n 100 --no-pager
 ```
 
 ## Container Pattern
@@ -247,7 +483,7 @@ Build the binary in a Go builder image, then run it with the assets repository m
 
 ```bash
 docker run --rm \
-  -p 8080:8080 \
+  -p 127.0.0.1:8080:8080 \
   -e COINGECKO_API_KEY=xxx \
   -v /srv/assets:/srv/assets:ro \
   -v /srv/assets-cache:/cache \
@@ -256,8 +492,19 @@ docker run --rm \
   --root /srv/assets \
   --market-cache /cache/market.json \
   --tokenlist-cache /cache/tokenlist.json \
-  --tokenlist-report /cache/tokenlist-report.json
+  --tokenlist-report /cache/tokenlist-report.json \
+  --managed-list-db /cache/lists.sqlite \
+  --managed-list-files-dir /cache/lists \
+  --managed-list-seed-defaults=true \
+  --managed-list-pack-after-seed=true
 ```
+
+The managed-list database and generated list files must use the writable cache
+mount when the assets repository is mounted read-only. The loopback-only port
+mapping is intended to be placed behind the authenticated Caddy configuration
+above. Before the first long-running container start, run the same image once
+with `--sync-once` and the `/cache` market/tokenlist/report paths so the large
+tokenlist exists before managed-list seeding.
 
 If the repository is writable and you want GitHub Raw-compatible paths, use the defaults instead:
 
@@ -281,6 +528,22 @@ systemctl restart assets-rpc
 
 Because the sidecar is isolated under `extensions/jsonrpc`, upstream changes to `blockchains/`, `internal/`, `cmd/`, or `Makefile` should not conflict with the service code.
 
+Before replacing the binary, back up the SQLite database and generated manifest.
+The safest simple procedure is to stop the service briefly so the database copy
+is consistent:
+
+```bash
+sudo systemctl stop assets-rpc
+sudo cp -a /var/lib/assets-rpc/lists.sqlite /var/lib/assets-rpc/lists.sqlite.backup
+sudo cp -a /var/lib/assets-rpc/lists/manifest.json /var/lib/assets-rpc/manifest.json.backup
+sudo systemctl start assets-rpc
+```
+
+This release introduces the initial SQLite schema and intentionally contains no
+legacy-schema compatibility layer. To roll back, stop the service, restore the
+previous binary and database backup, then start it again. Generated JSON/Zstd
+artifacts can always be rebuilt from SQLite with `POST /api/pack/all`.
+
 Automated upstream sync is possible, but direct auto-merge is usually riskier than opening a PR. A safe pattern is:
 
 ```text
@@ -301,6 +564,29 @@ Use `listChains` as a simple readiness check:
 curl -sS http://127.0.0.1:8080/rpc \
   -H 'Content-Type: application/json' \
   --data '{"jsonrpc":"2.0","id":1,"method":"listChains","params":{}}'
+```
+
+For a complete managed-list deployment check through Caddy:
+
+```bash
+# OpenAPI is public.
+curl -fsS https://assets.example.com/openapi.yaml >/dev/null
+
+# Administrative reads and writes require Caddy credentials.
+curl -fsS -u admin:password https://assets.example.com/api/lists >/dev/null
+curl -fsS -u admin:password -X POST https://assets.example.com/api/pack/all
+
+# Published files are public and have the expected formats.
+curl -fsS https://assets.example.com/files/manifest.json | jq .
+curl -fsS https://assets.example.com/files/usdt.json | jq '.key, (.items | length)'
+curl -fsS https://assets.example.com/files/usdt.json.zst -o /tmp/usdt.json.zst
+zstd -t /tmp/usdt.json.zst
+```
+
+Also verify that unauthenticated administrative access is rejected:
+
+```bash
+test "$(curl -sS -o /dev/null -w '%{http_code}' https://assets.example.com/api/lists)" = "401"
 ```
 
 ## Failure Behavior

@@ -9,6 +9,7 @@ const (
 	ErrCodeInvalidParams  = -32602
 	ErrCodeInternal       = -32603
 	ErrCodeNotFound       = -32004
+	ErrCodeConflict       = -32009
 )
 
 type RPCError struct {
@@ -26,6 +27,10 @@ func invalidParams(message string) *RPCError {
 
 func notFound(message string) *RPCError {
 	return &RPCError{Code: ErrCodeNotFound, Message: message}
+}
+
+func conflict(message string) *RPCError {
+	return &RPCError{Code: ErrCodeConflict, Message: message}
 }
 
 func internalError(message string) *RPCError {

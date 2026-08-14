@@ -8,99 +8,135 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"path"
 	"path/filepath"
 	"sort"
 	"strings"
 	"time"
 
 	"github.com/klauspost/compress/zstd"
-	_ "github.com/mattn/go-sqlite3"
+	_ "modernc.org/sqlite"
 )
 
 type ManagedListService struct {
 	dbPath            string
 	filesDir          string
 	tokenListSeedPath string
+	manualTokensPath  string
 	homepageSeedPath  string
+	publicBaseURL     string
 	store             *Store
 }
 
 type ManagedList struct {
-	Key         string `json:"key"`
-	Name        string `json:"name,omitempty"`
-	Description string `json:"description,omitempty"`
-	OutputPath  string `json:"outputPath,omitempty"`
-	Enabled     bool   `json:"enabled"`
-	CreatedAt   string `json:"createdAt,omitempty"`
-	UpdatedAt   string `json:"updatedAt,omitempty"`
+	Key           string `json:"key"`
+	Name          string `json:"name,omitempty"`
+	Description   string `json:"description,omitempty"`
+	DisplayName   string `json:"displayName,omitempty"`
+	DisplaySymbol string `json:"displaySymbol,omitempty"`
+	LogoURI       string `json:"logoURI,omitempty"`
+	OutputPath    string `json:"outputPath,omitempty"`
+	Enabled       bool   `json:"enabled"`
+	CreatedAt     string `json:"createdAt,omitempty"`
+	UpdatedAt     string `json:"updatedAt,omitempty"`
 }
 
 type ManagedToken struct {
-	Kind         string   `json:"kind"`
-	Chain        string   `json:"chain"`
-	ChainName    string   `json:"chainName,omitempty"`
-	ChainID      int      `json:"chainId,omitempty"`
-	ChainLogoURI string   `json:"chainLogoURI,omitempty"`
-	Address      string   `json:"address"`
-	AssetID      string   `json:"assetId,omitempty"`
-	Type         string   `json:"type,omitempty"`
-	Name         string   `json:"name,omitempty"`
-	Symbol       string   `json:"symbol,omitempty"`
-	Decimals     int      `json:"decimals"`
-	Status       string   `json:"status,omitempty"`
-	LogoURI      string   `json:"logoURI,omitempty"`
-	LogoExists   bool     `json:"logoExists"`
-	Explorer     string   `json:"explorer,omitempty"`
-	Tags         []string `json:"tags,omitempty"`
-	Source       string   `json:"source,omitempty"`
+	Kind         string              `json:"kind"`
+	Chain        string              `json:"chain"`
+	ChainName    string              `json:"chainName,omitempty"`
+	ChainID      int                 `json:"chainId,omitempty"`
+	ChainLogoURI string              `json:"chainLogoURI,omitempty"`
+	Address      string              `json:"address"`
+	AssetID      string              `json:"assetId,omitempty"`
+	Type         string              `json:"type,omitempty"`
+	Name         string              `json:"name,omitempty"`
+	Symbol       string              `json:"symbol,omitempty"`
+	Decimals     int                 `json:"decimals"`
+	Status       string              `json:"status,omitempty"`
+	LogoURI      string              `json:"logoURI,omitempty"`
+	LogoExists   bool                `json:"logoExists"`
+	Explorer     string              `json:"explorer,omitempty"`
+	Tags         []string            `json:"tags,omitempty"`
+	Hot          bool                `json:"hot"`
+	Market       *ManagedTokenMarket `json:"market,omitempty"`
+	Pairs        []TokenPair         `json:"pairs,omitempty"`
+	Links        []Link              `json:"links,omitempty"`
+}
+
+type ManagedTokenMarket struct {
+	CoinGeckoID   string  `json:"coingeckoId,omitempty"`
+	MarketCapRank int     `json:"marketCapRank,omitempty"`
+	MarketCap     float64 `json:"marketCap,omitempty"`
+	TotalVolume   float64 `json:"totalVolume,omitempty"`
+	CurrentPrice  float64 `json:"currentPrice,omitempty"`
+	LastUpdated   string  `json:"lastUpdated,omitempty"`
 }
 
 type ManagedListItem struct {
-	Token         ManagedToken `json:"token"`
-	Slot          string       `json:"slot,omitempty"`
-	Rank          int          `json:"rank,omitempty"`
-	Enabled       bool         `json:"enabled"`
-	Display       bool         `json:"display"`
-	DisplayName   string       `json:"displayName,omitempty"`
-	DisplaySymbol string       `json:"displaySymbol,omitempty"`
-	Note          string       `json:"note,omitempty"`
-	CreatedAt     string       `json:"createdAt,omitempty"`
-	UpdatedAt     string       `json:"updatedAt,omitempty"`
+	Token          ManagedToken `json:"token"`
+	Slot           string       `json:"slot,omitempty"`
+	Rank           int          `json:"rank,omitempty"`
+	Enabled        bool         `json:"enabled"`
+	Display        bool         `json:"display"`
+	DisplayName    string       `json:"displayName,omitempty"`
+	DisplaySymbol  string       `json:"displaySymbol,omitempty"`
+	DisplayLogoURI string       `json:"displayLogoURI,omitempty"`
+	CreatedAt      string       `json:"createdAt,omitempty"`
+	UpdatedAt      string       `json:"updatedAt,omitempty"`
+}
+
+// ManagedListDocument is the complete management view of a list. Items remain
+// independently editable, but readers do not need a second request to assemble
+// the list.
+type ManagedListDocument struct {
+	ManagedList
+	Items []ManagedListItem `json:"items"`
 }
 
 type ManagedListOutput struct {
-	Key         string             `json:"key"`
-	Name        string             `json:"name,omitempty"`
-	Description string             `json:"description,omitempty"`
-	GeneratedAt string             `json:"generatedAt"`
-	Version     int                `json:"version"`
-	Tokens      []ManagedListToken `json:"tokens"`
+	Key           string             `json:"key"`
+	Name          string             `json:"name,omitempty"`
+	Description   string             `json:"description,omitempty"`
+	DisplayName   string             `json:"displayName,omitempty"`
+	DisplaySymbol string             `json:"displaySymbol,omitempty"`
+	LogoURI       string             `json:"logoURI,omitempty"`
+	OutputPath    string             `json:"outputPath,omitempty"`
+	Enabled       bool               `json:"enabled"`
+	CreatedAt     string             `json:"createdAt,omitempty"`
+	UpdatedAt     string             `json:"updatedAt,omitempty"`
+	GeneratedAt   string             `json:"generatedAt"`
+	Version       int                `json:"version"`
+	Items         []ManagedListToken `json:"items"`
 }
 
 type ManagedListToken struct {
-	ID            string   `json:"id,omitempty"`
-	Slot          string   `json:"slot,omitempty"`
-	Kind          string   `json:"kind"`
-	Chain         string   `json:"chain"`
-	ChainName     string   `json:"chainName,omitempty"`
-	ChainID       int      `json:"chainId,omitempty"`
-	ChainLogoURI  string   `json:"chainLogoURI,omitempty"`
-	Address       string   `json:"address"`
-	AssetID       string   `json:"assetId,omitempty"`
-	Type          string   `json:"type,omitempty"`
-	Display       bool     `json:"display"`
-	DisplayName   string   `json:"displayName,omitempty"`
-	DisplaySymbol string   `json:"displaySymbol,omitempty"`
-	Name          string   `json:"name,omitempty"`
-	Symbol        string   `json:"symbol,omitempty"`
-	Decimals      int      `json:"decimals"`
-	Status        string   `json:"status,omitempty"`
-	LogoURI       string   `json:"logoURI,omitempty"`
-	LogoExists    bool     `json:"logoExists"`
-	Explorer      string   `json:"explorer,omitempty"`
-	Rank          int      `json:"rank,omitempty"`
-	Tags          []string `json:"tags,omitempty"`
-	Source        string   `json:"source,omitempty"`
+	ID            string              `json:"id,omitempty"`
+	Slot          string              `json:"slot,omitempty"`
+	Kind          string              `json:"kind"`
+	Chain         string              `json:"chain"`
+	ChainName     string              `json:"chainName,omitempty"`
+	ChainID       int                 `json:"chainId,omitempty"`
+	ChainLogoURI  string              `json:"chainLogoURI,omitempty"`
+	Address       string              `json:"address"`
+	AssetID       string              `json:"assetId,omitempty"`
+	Type          string              `json:"type,omitempty"`
+	Display       bool                `json:"display"`
+	DisplayName   string              `json:"displayName,omitempty"`
+	DisplaySymbol string              `json:"displaySymbol,omitempty"`
+	Name          string              `json:"name,omitempty"`
+	Symbol        string              `json:"symbol,omitempty"`
+	Decimals      int                 `json:"decimals"`
+	Status        string              `json:"status,omitempty"`
+	LogoURI       string              `json:"logoURI,omitempty"`
+	LogoExists    bool                `json:"logoExists"`
+	Explorer      string              `json:"explorer,omitempty"`
+	Rank          int                 `json:"rank,omitempty"`
+	Tags          []string            `json:"tags,omitempty"`
+	Hot           bool                `json:"hot"`
+	Market        *ManagedTokenMarket `json:"market,omitempty"`
+	Pairs         []TokenPair         `json:"pairs,omitempty"`
+	Links         []Link              `json:"links,omitempty"`
 }
 
 type PackFile struct {
@@ -122,12 +158,14 @@ type PackManifest struct {
 	Files       []PackFile `json:"files"`
 }
 
-func NewManagedListService(dbPath, filesDir, tokenListSeedPath, homepageSeedPath string, store *Store) *ManagedListService {
+func NewManagedListService(dbPath, filesDir, tokenListSeedPath, manualTokensPath, homepageSeedPath, publicBaseURL string, store *Store) *ManagedListService {
 	return &ManagedListService{
 		dbPath:            dbPath,
 		filesDir:          filesDir,
 		tokenListSeedPath: tokenListSeedPath,
+		manualTokensPath:  manualTokensPath,
 		homepageSeedPath:  homepageSeedPath,
+		publicBaseURL:     strings.TrimRight(strings.TrimSpace(publicBaseURL), "/"),
 		store:             store,
 	}
 }
@@ -138,7 +176,7 @@ func (s *ManagedListService) Init() error {
 		return err
 	}
 	defer db.Close()
-	return migrateManagedListDB(db)
+	return initializeManagedListSchema(db)
 }
 
 func (s *ManagedListService) SeedDefaultLists() error {
@@ -151,6 +189,9 @@ func (s *ManagedListService) SeedDefaultLists() error {
 	if err := s.seedFromAppTokenList(db); err != nil {
 		return err
 	}
+	if err := s.seedFromManualTokenList(db); err != nil {
+		return err
+	}
 	return s.seedFromHomepage(db)
 }
 
@@ -161,13 +202,13 @@ func (s *ManagedListService) ListLists() ([]ManagedList, error) {
 	}
 	defer db.Close()
 
-	rows, err := db.Query(`select key, name, description, output_path, enabled, created_at, updated_at from lists order by key`)
+	rows, err := db.Query(`select key, name, description, display_name, display_symbol, logo_uri, output_path, enabled, created_at, updated_at from lists order by key`)
 	if err != nil {
 		return nil, err
 	}
 	defer rows.Close()
 
-	var lists []ManagedList
+	lists := []ManagedList{}
 	for rows.Next() {
 		list, err := scanManagedList(rows)
 		if err != nil {
@@ -190,7 +231,7 @@ func (s *ManagedListService) GetList(key string) (*ManagedList, error) {
 	}
 	defer db.Close()
 
-	row := db.QueryRow(`select key, name, description, output_path, enabled, created_at, updated_at from lists where key = ?`, key)
+	row := db.QueryRow(`select key, name, description, display_name, display_symbol, logo_uri, output_path, enabled, created_at, updated_at from lists where key = ?`, key)
 	list, err := scanManagedList(row)
 	if errors.Is(err, sql.ErrNoRows) {
 		return nil, notFound("list not found")
@@ -203,12 +244,20 @@ func (s *ManagedListService) UpsertList(input ManagedList) (*ManagedList, error)
 	if input.Key == "" {
 		return nil, invalidParams("list key is required")
 	}
+	if !validListKey(input.Key) {
+		return nil, invalidParams("list key may contain only lowercase letters, numbers, '.', '_' and '-'")
+	}
 	if input.Name == "" {
 		input.Name = input.Key
 	}
 	if input.OutputPath == "" {
 		input.OutputPath = input.Key + ".json"
 	}
+	outputPath, err := safePackOutputPath(input.Key, input.OutputPath)
+	if err != nil {
+		return nil, err
+	}
+	input.OutputPath = filepath.ToSlash(outputPath)
 	now := time.Now().UTC().Format(time.RFC3339)
 
 	db, err := s.open()
@@ -216,19 +265,40 @@ func (s *ManagedListService) UpsertList(input ManagedList) (*ManagedList, error)
 		return nil, err
 	}
 	defer db.Close()
+	var conflictingKey string
+	if err := db.QueryRow(`select key from lists where lower(output_path) = lower(?) and key <> ? limit 1`, input.OutputPath, input.Key).Scan(&conflictingKey); err == nil {
+		return nil, conflict("outputPath is already used by list " + conflictingKey)
+	} else if !errors.Is(err, sql.ErrNoRows) {
+		return nil, err
+	}
+
+	var previous *ManagedList
+	if current, scanErr := scanManagedList(db.QueryRow(`select key, name, description, display_name, display_symbol, logo_uri, output_path, enabled, created_at, updated_at from lists where key = ?`, input.Key)); scanErr == nil {
+		previous = &current
+	} else if !errors.Is(scanErr, sql.ErrNoRows) {
+		return nil, scanErr
+	}
 
 	_, err = db.Exec(`
-		insert into lists(key, name, description, output_path, enabled, created_at, updated_at)
-		values(?, ?, ?, ?, ?, ?, ?)
+		insert into lists(key, name, description, display_name, display_symbol, logo_uri, output_path, enabled, created_at, updated_at)
+		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 		on conflict(key) do update set
 			name = excluded.name,
 			description = excluded.description,
+			display_name = excluded.display_name,
+			display_symbol = excluded.display_symbol,
+			logo_uri = excluded.logo_uri,
 			output_path = excluded.output_path,
 			enabled = excluded.enabled,
 			updated_at = excluded.updated_at
-	`, input.Key, input.Name, input.Description, input.OutputPath, boolToInt(input.Enabled), now, now)
+	`, input.Key, input.Name, input.Description, input.DisplayName, input.DisplaySymbol, input.LogoURI, input.OutputPath, boolToInt(input.Enabled), now, now)
 	if err != nil {
 		return nil, err
+	}
+	if previous != nil && (!input.Enabled || previous.OutputPath != input.OutputPath) {
+		if err := s.prunePackedArtifacts(previous.Key, previous.OutputPath); err != nil {
+			return nil, err
+		}
 	}
 	return s.GetList(input.Key)
 }
@@ -243,6 +313,14 @@ func (s *ManagedListService) DeleteList(key string) error {
 		return err
 	}
 	defer db.Close()
+	row := db.QueryRow(`select key, name, description, display_name, display_symbol, logo_uri, output_path, enabled, created_at, updated_at from lists where key = ?`, key)
+	list, err := scanManagedList(row)
+	if errors.Is(err, sql.ErrNoRows) {
+		return notFound("list not found")
+	}
+	if err != nil {
+		return err
+	}
 	result, err := db.Exec(`delete from lists where key = ?`, key)
 	if err != nil {
 		return err
@@ -251,7 +329,7 @@ func (s *ManagedListService) DeleteList(key string) error {
 	if err == nil && count == 0 {
 		return notFound("list not found")
 	}
-	return nil
+	return s.prunePackedArtifacts(list.Key, list.OutputPath)
 }
 
 func (s *ManagedListService) ListItems(listKey string) ([]ManagedListItem, error) {
@@ -264,11 +342,18 @@ func (s *ManagedListService) ListItems(listKey string) ([]ManagedListItem, error
 		return nil, err
 	}
 	defer db.Close()
+	var exists int
+	if err := db.QueryRow(`select 1 from lists where key = ?`, listKey).Scan(&exists); errors.Is(err, sql.ErrNoRows) {
+		return nil, notFound("list not found")
+	} else if err != nil {
+		return nil, err
+	}
 
 	rows, err := db.Query(`
 		select t.kind, t.chain, t.chain_name, t.chain_id, t.chain_logo_uri, t.address, t.asset_id, t.type,
-			t.name, t.symbol, t.decimals, t.status, t.logo_uri, t.logo_exists, t.explorer, t.tags_json, t.source,
-			li.slot, li.rank, li.enabled, li.display, li.display_name, li.display_symbol, li.note, li.created_at, li.updated_at
+			t.name, t.symbol, t.decimals, t.status, t.logo_uri, t.logo_exists, t.explorer, t.tags_json,
+			t.hot, t.market_json, t.pairs_json, t.links_json,
+			li.slot, li.rank, li.enabled, li.display, li.display_name, li.display_symbol, li.display_logo_uri, li.created_at, li.updated_at
 		from list_items li
 		join lists l on l.id = li.list_id
 		join tokens t on t.id = li.token_id
@@ -280,7 +365,7 @@ func (s *ManagedListService) ListItems(listKey string) ([]ManagedListItem, error
 	}
 	defer rows.Close()
 
-	var items []ManagedListItem
+	items := []ManagedListItem{}
 	for rows.Next() {
 		item, err := scanManagedListItem(rows)
 		if err != nil {
@@ -291,12 +376,49 @@ func (s *ManagedListService) ListItems(listKey string) ([]ManagedListItem, error
 	return items, rows.Err()
 }
 
+func (s *ManagedListService) GetListDocument(listKey string) (*ManagedListDocument, error) {
+	list, err := s.GetList(listKey)
+	if err != nil {
+		return nil, err
+	}
+	items, err := s.ListItems(list.Key)
+	if err != nil {
+		return nil, err
+	}
+	if items == nil {
+		items = []ManagedListItem{}
+	}
+	return &ManagedListDocument{ManagedList: *list, Items: items}, nil
+}
+
 func (s *ManagedListService) UpsertItem(listKey string, input ManagedListItem) (*ManagedListItem, error) {
+	return s.saveItem(listKey, input, true)
+}
+
+// SaveItem persists the supplied token metadata as-is. It is used by PUT and
+// PATCH after the API layer has merged and validated the requested changes.
+func (s *ManagedListService) SaveItem(listKey string, input ManagedListItem) (*ManagedListItem, error) {
+	return s.saveItem(listKey, input, false)
+}
+
+func (s *ManagedListService) saveItem(listKey string, input ManagedListItem, hydrate bool) (*ManagedListItem, error) {
 	listKey = normalizeListKey(listKey)
 	if listKey == "" {
 		return nil, invalidParams("list key is required")
 	}
-	token, err := s.resolveManagedToken(input.Token)
+	if input.Rank < 0 {
+		return nil, invalidParams("rank must be greater than or equal to zero")
+	}
+	var token ManagedToken
+	var err error
+	if hydrate {
+		token, err = s.resolveManagedToken(input.Token)
+	} else {
+		token, err = validateManagedToken(input.Token)
+		if err == nil {
+			token = s.enrichChainContext(token)
+		}
+	}
 	if err != nil {
 		return nil, err
 	}
@@ -325,9 +447,21 @@ func (s *ManagedListService) UpsertItem(listKey string, input ManagedListItem) (
 	if err != nil {
 		return nil, err
 	}
+	marketJSON, err := json.Marshal(token.Market)
+	if err != nil {
+		return nil, err
+	}
+	pairsJSON, err := json.Marshal(token.Pairs)
+	if err != nil {
+		return nil, err
+	}
+	linksJSON, err := json.Marshal(token.Links)
+	if err != nil {
+		return nil, err
+	}
 	_, err = tx.Exec(`
-		insert into tokens(kind, chain, chain_name, chain_id, chain_logo_uri, address, asset_id, type, name, symbol, decimals, status, logo_uri, logo_exists, explorer, tags_json, source, created_at, updated_at)
-		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+		insert into tokens(kind, chain, chain_name, chain_id, chain_logo_uri, address, asset_id, type, name, symbol, decimals, status, logo_uri, logo_exists, explorer, tags_json, hot, market_json, pairs_json, links_json, created_at, updated_at)
+		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 		on conflict(chain, address) do update set
 			kind = excluded.kind,
 			chain_name = excluded.chain_name,
@@ -343,9 +477,12 @@ func (s *ManagedListService) UpsertItem(listKey string, input ManagedListItem) (
 			logo_exists = excluded.logo_exists,
 			explorer = excluded.explorer,
 			tags_json = excluded.tags_json,
-			source = excluded.source,
+			hot = excluded.hot,
+			market_json = excluded.market_json,
+			pairs_json = excluded.pairs_json,
+			links_json = excluded.links_json,
 			updated_at = excluded.updated_at
-	`, token.Kind, token.Chain, token.ChainName, token.ChainID, token.ChainLogoURI, token.Address, token.AssetID, token.Type, token.Name, token.Symbol, token.Decimals, token.Status, token.LogoURI, boolToInt(token.LogoExists), token.Explorer, string(tagsJSON), token.Source, now, now)
+	`, token.Kind, token.Chain, token.ChainName, token.ChainID, token.ChainLogoURI, token.Address, token.AssetID, token.Type, token.Name, token.Symbol, token.Decimals, token.Status, token.LogoURI, boolToInt(token.LogoExists), token.Explorer, string(tagsJSON), boolToInt(token.Hot), string(marketJSON), string(pairsJSON), string(linksJSON), now, now)
 	if err != nil {
 		return nil, err
 	}
@@ -355,7 +492,7 @@ func (s *ManagedListService) UpsertItem(listKey string, input ManagedListItem) (
 		return nil, err
 	}
 	_, err = tx.Exec(`
-		insert into list_items(list_id, token_id, slot, rank, enabled, display, display_name, display_symbol, note, created_at, updated_at)
+		insert into list_items(list_id, token_id, slot, rank, enabled, display, display_name, display_symbol, display_logo_uri, created_at, updated_at)
 		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 		on conflict(list_id, token_id) do update set
 			slot = excluded.slot,
@@ -364,9 +501,9 @@ func (s *ManagedListService) UpsertItem(listKey string, input ManagedListItem) (
 			display = excluded.display,
 			display_name = excluded.display_name,
 			display_symbol = excluded.display_symbol,
-			note = excluded.note,
+			display_logo_uri = excluded.display_logo_uri,
 			updated_at = excluded.updated_at
-	`, listID, tokenID, normalizeSlot(input.Slot), input.Rank, boolToInt(input.Enabled), boolToInt(input.Display), input.DisplayName, input.DisplaySymbol, input.Note, now, now)
+	`, listID, tokenID, normalizeSlot(input.Slot), input.Rank, boolToInt(input.Enabled), boolToInt(input.Display), input.DisplayName, input.DisplaySymbol, input.DisplayLogoURI, now, now)
 	if err != nil {
 		return nil, err
 	}
@@ -391,8 +528,9 @@ func (s *ManagedListService) GetItem(listKey, chain, address string) (*ManagedLi
 	defer db.Close()
 	row := db.QueryRow(`
 		select t.kind, t.chain, t.chain_name, t.chain_id, t.chain_logo_uri, t.address, t.asset_id, t.type,
-			t.name, t.symbol, t.decimals, t.status, t.logo_uri, t.logo_exists, t.explorer, t.tags_json, t.source,
-			li.slot, li.rank, li.enabled, li.display, li.display_name, li.display_symbol, li.note, li.created_at, li.updated_at
+			t.name, t.symbol, t.decimals, t.status, t.logo_uri, t.logo_exists, t.explorer, t.tags_json,
+			t.hot, t.market_json, t.pairs_json, t.links_json,
+			li.slot, li.rank, li.enabled, li.display, li.display_name, li.display_symbol, li.display_logo_uri, li.created_at, li.updated_at
 		from list_items li
 		join lists l on l.id = li.list_id
 		join tokens t on t.id = li.token_id
@@ -480,15 +618,23 @@ func (s *ManagedListService) open() (*sql.DB, error) {
 	if err := os.MkdirAll(filepath.Dir(s.dbPath), 0o755); err != nil {
 		return nil, err
 	}
-	db, err := sql.Open("sqlite3", s.dbPath)
+	db, err := sql.Open("sqlite", s.dbPath)
 	if err != nil {
 		return nil, err
 	}
-	if _, err := db.Exec(`pragma foreign_keys = on`); err != nil {
-		db.Close()
-		return nil, err
+	db.SetMaxOpenConns(1)
+	db.SetMaxIdleConns(1)
+	for _, pragma := range []string{
+		`pragma busy_timeout = 5000`,
+		`pragma journal_mode = wal`,
+		`pragma foreign_keys = on`,
+	} {
+		if _, err := db.Exec(pragma); err != nil {
+			db.Close()
+			return nil, err
+		}
 	}
-	if err := migrateManagedListDB(db); err != nil {
+	if err := initializeManagedListSchema(db); err != nil {
 		db.Close()
 		return nil, err
 	}
@@ -506,35 +652,38 @@ func (s *ManagedListService) resolveManagedToken(input ManagedToken) (ManagedTok
 	}
 	if input.Address != "" {
 		if detail, err := s.store.GetAssetByAddress(input.Chain, input.Address); err == nil {
-			token := s.enrichChainContext(managedTokenFromAsset(*detail))
-			if input.Source != "" {
-				token.Source = input.Source
-			}
-			return token, nil
+			return s.enrichChainContext(mergeManagedTokenUI(managedTokenFromAsset(*detail), input)), nil
 		}
 	}
 	if input.Kind == "native" {
 		if detail, err := s.store.readNativeAssetDetail(input.Chain, filepath.Join(s.store.root, "blockchains", input.Chain, "info")); err == nil {
-			token := managedTokenFromAsset(*detail)
-			if input.Source != "" {
-				token.Source = input.Source
-			}
-			return s.enrichChainContext(token), nil
+			return s.enrichChainContext(mergeManagedTokenUI(managedTokenFromAsset(*detail), input)), nil
 		}
 	}
-	if input.Kind == "" {
-		input.Kind = "token"
+	input, err := validateManagedToken(input)
+	if err != nil {
+		return ManagedToken{}, err
 	}
-	if input.Source == "" {
-		input.Source = "manual"
-	}
-	input.Tags = appendUniqueStrings(nil, input.Tags...)
 	return s.enrichChainContext(input), nil
+}
+
+func mergeManagedTokenUI(base, input ManagedToken) ManagedToken {
+	base.Hot = input.Hot
+	base.Market = input.Market
+	base.Pairs = append([]TokenPair(nil), input.Pairs...)
+	base.Links = append([]Link(nil), input.Links...)
+	if base.Explorer == "" {
+		base.Explorer = input.Explorer
+	}
+	return base
 }
 
 func (s *ManagedListService) enrichChainContext(token ManagedToken) ManagedToken {
 	if token.Chain == "" || s.store == nil {
 		return token
+	}
+	if normalizeChain(token.Chain) == "polygon" {
+		token.ChainLogoURI = DefaultPolygonLogoURI
 	}
 	info, err := s.store.GetChainInfo(token.Chain)
 	if err != nil {
@@ -584,7 +733,7 @@ func (s *ManagedListService) writePackedList(output ManagedListOutput, outputPat
 	}
 	zstdBytes := encoder.EncodeAll(jsonBytes, nil)
 	encoder.Close()
-	if err := os.WriteFile(zstdPath, zstdBytes, 0o644); err != nil {
+	if err := writeBytesAtomic(zstdPath, zstdBytes); err != nil {
 		return nil, err
 	}
 	jsonInfo, err := os.Stat(jsonPath)
@@ -595,20 +744,61 @@ func (s *ManagedListService) writePackedList(output ManagedListOutput, outputPat
 	if err != nil {
 		return nil, err
 	}
-	jsonURL := "/files/" + filepath.ToSlash(relativePath)
+	relativePath = filepath.ToSlash(relativePath)
+	publicBaseURL := s.publicBaseURL
+	if publicBaseURL == "" {
+		publicBaseURL = DefaultManagedListPublicBaseURL
+	}
+	jsonURL := strings.TrimRight(publicBaseURL, "/") + "/" + relativePath
 	return &PackFile{
 		ListKey:     output.Key,
-		JSONPath:    jsonPath,
-		ZstdPath:    zstdPath,
+		JSONPath:    relativePath,
+		ZstdPath:    relativePath + ".zst",
 		JSONURL:     jsonURL,
 		ZstdURL:     jsonURL + ".zst",
 		JSONSize:    jsonInfo.Size(),
 		ZstdSize:    zstdInfo.Size(),
 		JSONSHA256:  sha256Hex(jsonBytes),
 		ZstdSHA256:  sha256Hex(zstdBytes),
-		TokenCount:  len(output.Tokens),
+		TokenCount:  len(output.Items),
 		GeneratedAt: output.GeneratedAt,
 	}, nil
+}
+
+func (s *ManagedListService) prunePackedArtifacts(listKey, outputPath string) error {
+	relativePath, err := safePackOutputPath(listKey, outputPath)
+	if err != nil {
+		return err
+	}
+	for _, path := range []string{
+		filepath.Join(s.filesDir, relativePath),
+		filepath.Join(s.filesDir, relativePath) + ".zst",
+	} {
+		if err := os.Remove(path); err != nil && !os.IsNotExist(err) {
+			return err
+		}
+	}
+
+	manifestPath := filepath.Join(s.filesDir, "manifest.json")
+	var manifest PackManifest
+	if err := readJSONFile(manifestPath, &manifest); err != nil {
+		if os.IsNotExist(err) {
+			return nil
+		}
+		return err
+	}
+	files := manifest.Files[:0]
+	for _, file := range manifest.Files {
+		if file.ListKey != listKey {
+			files = append(files, file)
+		}
+	}
+	if len(files) == len(manifest.Files) {
+		return nil
+	}
+	manifest.Files = files
+	manifest.GeneratedAt = time.Now().UTC().Format(time.RFC3339)
+	return writeJSONAtomic(manifestPath, manifest)
 }
 
 func safePackOutputPath(listKey, outputPath string) (string, error) {
@@ -616,23 +806,54 @@ func safePackOutputPath(listKey, outputPath string) (string, error) {
 	if outputPath == "" {
 		outputPath = normalizeListKey(listKey) + ".json"
 	}
-	outputPath = filepath.Clean(outputPath)
-	if filepath.IsAbs(outputPath) || outputPath == "." || strings.HasPrefix(outputPath, ".."+string(filepath.Separator)) || outputPath == ".." {
+	if strings.ContainsAny(outputPath, "\\:\x00") {
+		return "", invalidParams("outputPath must be a portable relative path using '/' separators")
+	}
+	outputPath = path.Clean(outputPath)
+	if strings.HasPrefix(outputPath, "/") || outputPath == "." || strings.HasPrefix(outputPath, "../") || outputPath == ".." {
 		return "", invalidParams("outputPath must stay inside managed list files directory")
 	}
 	if !strings.HasSuffix(outputPath, ".json") {
 		outputPath += ".json"
 	}
-	return outputPath, nil
+	return filepath.FromSlash(outputPath), nil
 }
 
-func migrateManagedListDB(db *sql.DB) error {
+func writeBytesAtomic(filePath string, data []byte) error {
+	directory := filepath.Dir(filePath)
+	if err := os.MkdirAll(directory, 0o755); err != nil {
+		return err
+	}
+	temporary, err := os.CreateTemp(directory, ".tmp-*.zst")
+	if err != nil {
+		return err
+	}
+	temporaryPath := temporary.Name()
+	defer os.Remove(temporaryPath)
+	if _, err := temporary.Write(data); err != nil {
+		temporary.Close()
+		return err
+	}
+	if err := temporary.Chmod(0o644); err != nil {
+		temporary.Close()
+		return err
+	}
+	if err := temporary.Close(); err != nil {
+		return err
+	}
+	return os.Rename(temporaryPath, filePath)
+}
+
+func initializeManagedListSchema(db *sql.DB) error {
 	stmts := []string{
 		`create table if not exists lists (
 			id integer primary key autoincrement,
 			key text not null unique,
 			name text not null default '',
 			description text not null default '',
+			display_name text not null default '',
+			display_symbol text not null default '',
+			logo_uri text not null default '',
 			output_path text not null default '',
 			enabled integer not null default 1,
 			created_at text not null,
@@ -656,7 +877,10 @@ func migrateManagedListDB(db *sql.DB) error {
 			logo_exists integer not null default 0,
 			explorer text not null default '',
 			tags_json text not null default '[]',
-			source text not null default '',
+			hot integer not null default 0,
+			market_json text not null default 'null',
+			pairs_json text not null default '[]',
+			links_json text not null default '[]',
 			created_at text not null,
 			updated_at text not null,
 			unique(chain, address)
@@ -671,7 +895,7 @@ func migrateManagedListDB(db *sql.DB) error {
 			display integer not null default 1,
 			display_name text not null default '',
 			display_symbol text not null default '',
-			note text not null default '',
+			display_logo_uri text not null default '',
 			created_at text not null,
 			updated_at text not null,
 			unique(list_id, token_id)
@@ -682,24 +906,11 @@ func migrateManagedListDB(db *sql.DB) error {
 			return err
 		}
 	}
-	alterStmts := []string{
-		`alter table tokens add column chain_name text not null default ''`,
-		`alter table tokens add column chain_id integer not null default 0`,
-		`alter table tokens add column chain_logo_uri text not null default ''`,
-		`alter table tokens add column explorer text not null default ''`,
-		`alter table list_items add column slot text not null default ''`,
-		`alter table list_items add column display integer not null default 1`,
-	}
-	for _, stmt := range alterStmts {
-		if _, err := db.Exec(stmt); err != nil && !isDuplicateColumnError(err) {
-			return err
-		}
-	}
 	return nil
 }
 
 func buildManagedListOutput(list ManagedList, items []ManagedListItem, generatedAt string) ManagedListOutput {
-	tokens := make([]ManagedListToken, 0, len(items))
+	packedItems := make([]ManagedListToken, 0, len(items))
 	for _, item := range items {
 		if !item.Enabled {
 			continue
@@ -712,8 +923,20 @@ func buildManagedListOutput(list ManagedList, items []ManagedListItem, generated
 		symbol := token.Symbol
 		if item.DisplaySymbol != "" {
 			symbol = item.DisplaySymbol
+		} else if list.DisplaySymbol != "" {
+			symbol = list.DisplaySymbol
 		}
-		tokens = append(tokens, ManagedListToken{
+		if item.DisplayName == "" && list.DisplayName != "" {
+			name = list.DisplayName
+		}
+		logoURI := token.LogoURI
+		if list.LogoURI != "" {
+			logoURI = list.LogoURI
+		}
+		if item.DisplayLogoURI != "" {
+			logoURI = item.DisplayLogoURI
+		}
+		packedItems = append(packedItems, ManagedListToken{
 			ID:            managedListTokenID(list.Key, item.Slot, token),
 			Slot:          item.Slot,
 			Kind:          token.Kind,
@@ -731,21 +954,31 @@ func buildManagedListOutput(list ManagedList, items []ManagedListItem, generated
 			Symbol:        token.Symbol,
 			Decimals:      token.Decimals,
 			Status:        token.Status,
-			LogoURI:       token.LogoURI,
-			LogoExists:    token.LogoExists,
+			LogoURI:       logoURI,
+			LogoExists:    logoURI != "",
 			Explorer:      token.Explorer,
 			Rank:          item.Rank,
 			Tags:          token.Tags,
-			Source:        token.Source,
+			Hot:           token.Hot,
+			Market:        token.Market,
+			Pairs:         token.Pairs,
+			Links:         token.Links,
 		})
 	}
 	return ManagedListOutput{
-		Key:         list.Key,
-		Name:        list.Name,
-		Description: list.Description,
-		GeneratedAt: generatedAt,
-		Version:     1,
-		Tokens:      tokens,
+		Key:           list.Key,
+		Name:          list.Name,
+		Description:   list.Description,
+		DisplayName:   list.DisplayName,
+		DisplaySymbol: list.DisplaySymbol,
+		LogoURI:       list.LogoURI,
+		OutputPath:    list.OutputPath,
+		Enabled:       list.Enabled,
+		CreatedAt:     list.CreatedAt,
+		UpdatedAt:     list.UpdatedAt,
+		GeneratedAt:   generatedAt,
+		Version:       1,
+		Items:         packedItems,
 	}
 }
 
@@ -764,7 +997,7 @@ func managedTokenFromAsset(asset AssetDetail) ManagedToken {
 		LogoExists: asset.LogoExists,
 		Explorer:   asset.Explorer,
 		Tags:       appendUniqueStrings(nil, asset.Tags...),
-		Source:     "trustwallet-asset",
+		Links:      append([]Link(nil), asset.Links...),
 	}
 }
 
@@ -782,30 +1015,40 @@ type managedListScanner interface {
 func scanManagedList(scanner managedListScanner) (ManagedList, error) {
 	var list ManagedList
 	var enabled int
-	err := scanner.Scan(&list.Key, &list.Name, &list.Description, &list.OutputPath, &enabled, &list.CreatedAt, &list.UpdatedAt)
+	err := scanner.Scan(&list.Key, &list.Name, &list.Description, &list.DisplayName, &list.DisplaySymbol, &list.LogoURI, &list.OutputPath, &enabled, &list.CreatedAt, &list.UpdatedAt)
 	list.Enabled = enabled != 0
 	return list, err
 }
 
 func scanManagedListItem(scanner managedListScanner) (ManagedListItem, error) {
 	var item ManagedListItem
-	var tagsJSON string
-	var logoExists, enabled, display int
+	var tagsJSON, marketJSON, pairsJSON, linksJSON string
+	var logoExists, hot, enabled, display int
 	err := scanner.Scan(
 		&item.Token.Kind, &item.Token.Chain, &item.Token.ChainName, &item.Token.ChainID, &item.Token.ChainLogoURI,
 		&item.Token.Address, &item.Token.AssetID, &item.Token.Type, &item.Token.Name, &item.Token.Symbol,
 		&item.Token.Decimals, &item.Token.Status, &item.Token.LogoURI, &logoExists, &item.Token.Explorer,
-		&tagsJSON, &item.Token.Source, &item.Slot, &item.Rank, &enabled, &display, &item.DisplayName,
-		&item.DisplaySymbol, &item.Note, &item.CreatedAt, &item.UpdatedAt,
+		&tagsJSON, &hot, &marketJSON, &pairsJSON, &linksJSON, &item.Slot, &item.Rank, &enabled, &display, &item.DisplayName,
+		&item.DisplaySymbol, &item.DisplayLogoURI, &item.CreatedAt, &item.UpdatedAt,
 	)
 	if err != nil {
 		return item, err
 	}
 	item.Token.LogoExists = logoExists != 0
+	item.Token.Hot = hot != 0
 	item.Enabled = enabled != 0
 	item.Display = display != 0
 	if tagsJSON != "" {
 		_ = json.Unmarshal([]byte(tagsJSON), &item.Token.Tags)
+	}
+	if marketJSON != "" && marketJSON != "null" {
+		_ = json.Unmarshal([]byte(marketJSON), &item.Token.Market)
+	}
+	if pairsJSON != "" {
+		_ = json.Unmarshal([]byte(pairsJSON), &item.Token.Pairs)
+	}
+	if linksJSON != "" {
+		_ = json.Unmarshal([]byte(linksJSON), &item.Token.Links)
 	}
 	return item, nil
 }
@@ -816,16 +1059,55 @@ func normalizeListKey(key string) string {
 	return key
 }
 
+func validListKey(key string) bool {
+	if key == "" {
+		return false
+	}
+	for _, char := range key {
+		if (char >= 'a' && char <= 'z') || (char >= '0' && char <= '9') || char == '.' || char == '_' || char == '-' {
+			continue
+		}
+		return false
+	}
+	return true
+}
+
+func validateManagedToken(token ManagedToken) (ManagedToken, error) {
+	token.Chain = normalizeChain(token.Chain)
+	token.Address = strings.TrimSpace(token.Address)
+	token.Kind = strings.ToLower(strings.TrimSpace(token.Kind))
+	if token.Chain == "" {
+		return ManagedToken{}, invalidParams("token chain is required")
+	}
+	if token.Kind == "" {
+		if token.Address == "" {
+			token.Kind = "native"
+		} else {
+			token.Kind = "token"
+		}
+	}
+	if token.Kind != "native" && token.Kind != "token" {
+		return ManagedToken{}, invalidParams("token kind must be 'native' or 'token'")
+	}
+	if token.Kind == "native" && token.Address != "" {
+		return ManagedToken{}, invalidParams("native token address must be empty")
+	}
+	if token.Kind == "token" && token.Address == "" {
+		return ManagedToken{}, invalidParams("token address is required")
+	}
+	if token.Decimals < 0 || token.Decimals > 255 {
+		return ManagedToken{}, invalidParams("token decimals must be between 0 and 255")
+	}
+	token.Tags = appendUniqueStrings(nil, token.Tags...)
+	return token, nil
+}
+
 func normalizeChain(chain string) string {
 	return strings.ToLower(strings.TrimSpace(chain))
 }
 
 func normalizeSlot(slot string) string {
 	return strings.ToLower(strings.TrimSpace(slot))
-}
-
-func isDuplicateColumnError(err error) bool {
-	return strings.Contains(strings.ToLower(err.Error()), "duplicate column name")
 }
 
 func managedListTokenID(listKey, slot string, token ManagedToken) string {

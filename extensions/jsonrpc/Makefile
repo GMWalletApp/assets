@@ -14,7 +14,7 @@ ifeq ($(GOOS),windows)
 	EXT := .exe
 endif
 
-.PHONY: all build build-target build-all test tidy run sync-once clean help
+.PHONY: all build build-target build-all test tidy run sync-once pack-lists-once clean help
 
 all: test build
 
@@ -45,6 +45,9 @@ run:
 sync-once:
 	$(GO) run $(CMD) --root ../.. --sync-once $(SYNC_ARGS)
 
+pack-lists-once:
+	$(GO) run $(CMD) --root ../.. --managed-list-pack-once $(PACK_LIST_ARGS)
+
 clean:
 	rm -rf $(DIST_DIR)
 	rm -f $(BIN_DIR)/$(APP) $(BIN_DIR)/$(APP).exe
@@ -56,6 +59,8 @@ help:
 	@echo "  make test        Run tests"
 	@echo "  make run         Start JSON-RPC server on :8080"
 	@echo "  make sync-once   Generate JSON caches and exit"
+	@echo "  make pack-lists-once  Seed and pack all managed lists, then exit"
 	@echo "Variables:"
 	@echo "  GOOS=$(GOOS) GOARCH=$(GOARCH) BIN_DIR=$(BIN_DIR) DIST_DIR=$(DIST_DIR)"
 	@echo "  SYNC_ARGS=$(SYNC_ARGS)"
+	@echo "  PACK_LIST_ARGS=$(PACK_LIST_ARGS)"

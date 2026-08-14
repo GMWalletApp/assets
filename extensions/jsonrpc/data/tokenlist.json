@@ -8861,7 +8861,7 @@
       "symbol": "POL",
       "decimals": 18,
       "status": "active",
-      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/polygon/info/logo.png",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/data/static/poly.svg",
       "logoExists": true,
       "rank": 77,
       "market": {

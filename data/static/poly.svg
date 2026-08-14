@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     role="img"
+     aria-label="Polygon"
+     width="114"
+     height="114"
+     viewBox="0 0 114 114"
+     fill="none">
+  <title>Polygon purple avatar icon</title>
+  <g transform="translate(0.158 0)">
+    <rect width="113.684" height="114" rx="56.8421" fill="#670DE5"/>
+    <path d="M49.506 48.866L44.235 45.815L28.422 54.967V73.269L44.235 82.421L60.049 73.269V44.798L68.834 39.714L77.62 44.798V54.967L68.834 60.05L63.563 57.001V65.134L68.834 68.185L84.647 59.034V40.731L68.834 31.579L53.021 40.731V69.202L44.235 74.286L35.45 69.202V59.034L44.235 53.95L49.506 57V48.866Z" fill="#FFFFFF"/>
+  </g>
+</svg>

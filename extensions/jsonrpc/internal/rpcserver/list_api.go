@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"mime"
 	"net/http"
 	"path/filepath"
 	"strings"
@@ -23,9 +24,9 @@ func (s *Server) listAPIHandler() http.Handler {
 			case http.MethodGet:
 				s.handleListLists(w)
 			case http.MethodPost:
-				s.handleUpsertList(w, r, "")
+				s.handleCreateList(w, r)
 			default:
-				writeMethodNotAllowed(w)
+				writeMethodNotAllowed(w, http.MethodGet, http.MethodPost)
 			}
 			return
 		}
@@ -35,12 +36,14 @@ func (s *Server) listAPIHandler() http.Handler {
 			switch r.Method {
 			case http.MethodGet:
 				s.handleGetList(w, listKey)
-			case http.MethodPatch, http.MethodPut:
-				s.handleUpsertList(w, r, listKey)
+			case http.MethodPut:
+				s.handleReplaceList(w, r, listKey)
+			case http.MethodPatch:
+				s.handlePatchList(w, r, listKey)
 			case http.MethodDelete:
 				s.handleDeleteList(w, listKey)
 			default:
-				writeMethodNotAllowed(w)
+				writeMethodNotAllowed(w, http.MethodGet, http.MethodPut, http.MethodPatch, http.MethodDelete)
 			}
 			return
 		}
@@ -55,9 +58,9 @@ func (s *Server) listAPIHandler() http.Handler {
 			case http.MethodGet:
 				s.handleListItems(w, listKey)
 			case http.MethodPost:
-				s.handleUpsertListItem(w, r, listKey, "", "")
+				s.handleCreateListItem(w, r, listKey)
 			default:
-				writeMethodNotAllowed(w)
+				writeMethodNotAllowed(w, http.MethodGet, http.MethodPost)
 			}
 			return
 		}
@@ -69,12 +72,16 @@ func (s *Server) listAPIHandler() http.Handler {
 		chain := parts[2]
 		address := parts[3]
 		switch r.Method {
-		case http.MethodPatch, http.MethodPut:
-			s.handleUpsertListItem(w, r, listKey, chain, address)
+		case http.MethodGet:
+			s.handleGetListItem(w, listKey, chain, address)
+		case http.MethodPut:
+			s.handleReplaceListItem(w, r, listKey, chain, address)
+		case http.MethodPatch:
+			s.handlePatchListItem(w, r, listKey, chain, address)
 		case http.MethodDelete:
 			s.handleDeleteListItem(w, listKey, chain, address)
 		default:
-			writeMethodNotAllowed(w)
+			writeMethodNotAllowed(w, http.MethodGet, http.MethodPut, http.MethodPatch, http.MethodDelete)
 		}
 	})
 }
@@ -82,7 +89,7 @@ func (s *Server) listAPIHandler() http.Handler {
 func (s *Server) packAPIHandler() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if r.Method != http.MethodPost {
-			writeMethodNotAllowed(w)
+			writeMethodNotAllowed(w, http.MethodPost)
 			return
 		}
 		listKey := strings.Trim(strings.TrimPrefix(r.URL.Path, "/api/pack"), "/")
@@ -106,29 +113,147 @@ func (s *Server) handleListLists(w http.ResponseWriter) {
 }
 
 func (s *Server) handleGetList(w http.ResponseWriter, key string) {
-	list, err := s.lists.GetList(key)
+	list, err := s.lists.GetListDocument(key)
 	writeJSONResultOrError(w, list, err)
 }
 
-func (s *Server) handleUpsertList(w http.ResponseWriter, r *http.Request, key string) {
-	var input ManagedList
+type managedListWriteRequest struct {
+	Key           *string `json:"key"`
+	Name          *string `json:"name"`
+	Description   *string `json:"description"`
+	DisplayName   *string `json:"displayName"`
+	DisplaySymbol *string `json:"displaySymbol"`
+	LogoURI       *string `json:"logoURI"`
+	OutputPath    *string `json:"outputPath"`
+	Enabled       *bool   `json:"enabled"`
+}
+
+func (input managedListWriteRequest) apply(list *ManagedList) {
+	if input.Key != nil {
+		list.Key = *input.Key
+	}
+	if input.Name != nil {
+		list.Name = strings.TrimSpace(*input.Name)
+	}
+	if input.Description != nil {
+		list.Description = strings.TrimSpace(*input.Description)
+	}
+	if input.DisplayName != nil {
+		list.DisplayName = strings.TrimSpace(*input.DisplayName)
+	}
+	if input.DisplaySymbol != nil {
+		list.DisplaySymbol = strings.TrimSpace(*input.DisplaySymbol)
+	}
+	if input.LogoURI != nil {
+		list.LogoURI = strings.TrimSpace(*input.LogoURI)
+	}
+	if input.OutputPath != nil {
+		list.OutputPath = strings.TrimSpace(*input.OutputPath)
+	}
+	if input.Enabled != nil {
+		list.Enabled = *input.Enabled
+	}
+}
+
+func (input managedListWriteRequest) emptyPatch() bool {
+	return input.Key == nil && input.Name == nil && input.Description == nil && input.DisplayName == nil && input.DisplaySymbol == nil && input.LogoURI == nil && input.OutputPath == nil && input.Enabled == nil
+}
+
+func (s *Server) handleCreateList(w http.ResponseWriter, r *http.Request) {
+	input := managedListWriteRequest{}
 	if err := decodeHTTPJSON(r, &input); err != nil {
 		writeJSONError(w, http.StatusBadRequest, err.Error())
 		return
 	}
-	if key != "" {
-		input.Key = key
+	if input.Key == nil || strings.TrimSpace(*input.Key) == "" {
+		writeJSONError(w, http.StatusBadRequest, "key is required")
+		return
 	}
-	if r.Method == http.MethodPost && !input.Enabled {
-		input.Enabled = true
+	key := normalizeListKey(*input.Key)
+	if _, err := s.lists.GetList(key); err == nil {
+		writeJSONResultOrErrorStatus(w, nil, conflict("list already exists"), http.StatusCreated)
+		return
+	} else if !isNotFoundError(err) {
+		writeJSONResultOrError(w, nil, err)
+		return
 	}
-	list, err := s.lists.UpsertList(input)
-	writeJSONResultOrError(w, list, err)
+	list := ManagedList{Key: key, Enabled: true}
+	input.apply(&list)
+	created, err := s.lists.UpsertList(list)
+	if err != nil {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	w.Header().Set("Location", "/api/lists/"+created.Key)
+	document, err := s.lists.GetListDocument(created.Key)
+	writeJSONResultOrErrorStatus(w, document, err, http.StatusCreated)
+}
+
+func (s *Server) handleReplaceList(w http.ResponseWriter, r *http.Request, key string) {
+	input := managedListWriteRequest{}
+	if err := decodeHTTPJSON(r, &input); err != nil {
+		writeJSONError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	if input.Key != nil && normalizeListKey(*input.Key) != normalizeListKey(key) {
+		writeJSONError(w, http.StatusBadRequest, "request key must match the path key")
+		return
+	}
+	_, getErr := s.lists.GetList(key)
+	status := http.StatusOK
+	if isNotFoundError(getErr) {
+		status = http.StatusCreated
+	} else if getErr != nil {
+		writeJSONResultOrError(w, nil, getErr)
+		return
+	}
+	list := ManagedList{Key: key}
+	input.apply(&list)
+	list.Key = key
+	updated, err := s.lists.UpsertList(list)
+	if err != nil {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	if status == http.StatusCreated {
+		w.Header().Set("Location", "/api/lists/"+updated.Key)
+	}
+	document, err := s.lists.GetListDocument(updated.Key)
+	writeJSONResultOrErrorStatus(w, document, err, status)
+}
+
+func (s *Server) handlePatchList(w http.ResponseWriter, r *http.Request, key string) {
+	existing, err := s.lists.GetList(key)
+	if err != nil {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	input := managedListWriteRequest{}
+	if err := decodeHTTPJSON(r, &input); err != nil {
+		writeJSONError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	if input.Key != nil {
+		writeJSONError(w, http.StatusBadRequest, "list key is immutable")
+		return
+	}
+	if input.emptyPatch() {
+		writeJSONError(w, http.StatusBadRequest, "at least one mutable list field is required")
+		return
+	}
+	input.apply(existing)
+	updated, err := s.lists.UpsertList(*existing)
+	if err != nil {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	document, err := s.lists.GetListDocument(updated.Key)
+	writeJSONResultOrError(w, document, err)
 }
 
 func (s *Server) handleDeleteList(w http.ResponseWriter, key string) {
 	err := s.lists.DeleteList(key)
-	writeJSONResultOrError(w, map[string]bool{"deleted": err == nil}, err)
+	writeNoContentOrError(w, err)
 }
 
 func (s *Server) handleListItems(w http.ResponseWriter, key string) {
@@ -136,64 +261,292 @@ func (s *Server) handleListItems(w http.ResponseWriter, key string) {
 	writeJSONResultOrError(w, items, err)
 }
 
-func (s *Server) handleUpsertListItem(w http.ResponseWriter, r *http.Request, listKey, chain, address string) {
-	var request managedListItemRequest
+type managedListItemWriteRequest struct {
+	Token          *ManagedToken `json:"token"`
+	Slot           *string       `json:"slot"`
+	Rank           *int          `json:"rank"`
+	Enabled        *bool         `json:"enabled"`
+	Display        *bool         `json:"display"`
+	DisplayName    *string       `json:"displayName"`
+	DisplaySymbol  *string       `json:"displaySymbol"`
+	DisplayLogoURI *string       `json:"displayLogoURI"`
+	CreatedAt      *string       `json:"createdAt"`
+	UpdatedAt      *string       `json:"updatedAt"`
+}
+
+type managedTokenPatch struct {
+	Kind         *string             `json:"kind"`
+	Chain        *string             `json:"chain"`
+	ChainName    *string             `json:"chainName"`
+	ChainID      *int                `json:"chainId"`
+	ChainLogoURI *string             `json:"chainLogoURI"`
+	Address      *string             `json:"address"`
+	AssetID      *string             `json:"assetId"`
+	Type         *string             `json:"type"`
+	Name         *string             `json:"name"`
+	Symbol       *string             `json:"symbol"`
+	Decimals     *int                `json:"decimals"`
+	Status       *string             `json:"status"`
+	LogoURI      *string             `json:"logoURI"`
+	LogoExists   *bool               `json:"logoExists"`
+	Explorer     *string             `json:"explorer"`
+	Tags         *[]string           `json:"tags"`
+	Hot          *bool               `json:"hot"`
+	Market       *ManagedTokenMarket `json:"market"`
+	Pairs        *[]TokenPair        `json:"pairs"`
+	Links        *[]Link             `json:"links"`
+}
+
+type managedListItemPatch struct {
+	Token          *managedTokenPatch `json:"token"`
+	Slot           *string            `json:"slot"`
+	Rank           *int               `json:"rank"`
+	Enabled        *bool              `json:"enabled"`
+	Display        *bool              `json:"display"`
+	DisplayName    *string            `json:"displayName"`
+	DisplaySymbol  *string            `json:"displaySymbol"`
+	DisplayLogoURI *string            `json:"displayLogoURI"`
+}
+
+func (s *Server) handleCreateListItem(w http.ResponseWriter, r *http.Request, listKey string) {
+	if _, err := s.lists.GetList(listKey); err != nil {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	request := managedListItemWriteRequest{}
 	if err := decodeHTTPJSON(r, &request); err != nil {
 		writeJSONError(w, http.StatusBadRequest, err.Error())
 		return
 	}
-	input := request.toManagedListItem()
-	if chain != "" {
-		input.Token.Chain = chain
+	if request.Token == nil {
+		writeJSONError(w, http.StatusBadRequest, "token is required")
+		return
 	}
-	if address != "" {
-		input.Token.Address = pathAddressToTokenAddress(address)
-		if input.Token.Address == "" && input.Token.Kind == "" {
-			input.Token.Kind = "native"
-		}
-	}
-	if r.Method == http.MethodPost && request.Enabled == nil {
-		input.Enabled = true
-	}
-	if r.Method == http.MethodPost && request.Display == nil {
-		input.Display = true
+	input := ManagedListItem{Token: *request.Token, Enabled: true, Display: true}
+	applyListItemWrite(request, &input)
+	if _, err := s.lists.GetItem(listKey, input.Token.Chain, input.Token.Address); err == nil {
+		writeJSONResultOrErrorStatus(w, nil, conflict("list item already exists"), http.StatusCreated)
+		return
+	} else if !isNotFoundError(err) {
+		writeJSONResultOrError(w, nil, err)
+		return
 	}
 	item, err := s.lists.UpsertItem(listKey, input)
+	if err == nil {
+		w.Header().Set("Location", listItemLocation(listKey, item.Token.Chain, item.Token.Address))
+	}
+	writeJSONResultOrErrorStatus(w, item, err, http.StatusCreated)
+}
+
+func (s *Server) handleGetListItem(w http.ResponseWriter, listKey, chain, address string) {
+	item, err := s.lists.GetItem(listKey, chain, pathAddressToTokenAddress(address))
 	writeJSONResultOrError(w, item, err)
+}
+
+func (s *Server) handleReplaceListItem(w http.ResponseWriter, r *http.Request, listKey, chain, address string) {
+	request := managedListItemWriteRequest{}
+	if err := decodeHTTPJSON(r, &request); err != nil {
+		writeJSONError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	if request.Token == nil {
+		writeJSONError(w, http.StatusBadRequest, "token is required")
+		return
+	}
+	pathAddress := pathAddressToTokenAddress(address)
+	if err := validateItemIdentity(*request.Token, chain, pathAddress); err != nil {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	_, getErr := s.lists.GetItem(listKey, chain, pathAddress)
+	status := http.StatusOK
+	if isNotFoundError(getErr) {
+		status = http.StatusCreated
+	} else if getErr != nil {
+		writeJSONResultOrError(w, nil, getErr)
+		return
+	}
+	input := ManagedListItem{Token: *request.Token}
+	input.Token.Chain = chain
+	input.Token.Address = pathAddress
+	if pathAddress == "" && input.Token.Kind == "" {
+		input.Token.Kind = "native"
+	}
+	applyListItemWrite(request, &input)
+	item, err := s.lists.SaveItem(listKey, input)
+	if err == nil && status == http.StatusCreated {
+		w.Header().Set("Location", listItemLocation(listKey, item.Token.Chain, item.Token.Address))
+	}
+	writeJSONResultOrErrorStatus(w, item, err, status)
+}
+
+func (s *Server) handlePatchListItem(w http.ResponseWriter, r *http.Request, listKey, chain, address string) {
+	pathAddress := pathAddressToTokenAddress(address)
+	item, err := s.lists.GetItem(listKey, chain, pathAddress)
+	if err != nil {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	patch := managedListItemPatch{}
+	if err := decodeHTTPJSON(r, &patch); err != nil {
+		writeJSONError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	if patch.empty() {
+		writeJSONError(w, http.StatusBadRequest, "at least one mutable item field is required")
+		return
+	}
+	if err := applyListItemPatch(patch, item, chain, pathAddress); err != nil {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	updated, err := s.lists.SaveItem(listKey, *item)
+	writeJSONResultOrError(w, updated, err)
 }
 
 func (s *Server) handleDeleteListItem(w http.ResponseWriter, listKey, chain, address string) {
 	err := s.lists.DeleteItem(listKey, chain, pathAddressToTokenAddress(address))
-	writeJSONResultOrError(w, map[string]bool{"deleted": err == nil}, err)
+	writeNoContentOrError(w, err)
 }
 
-type managedListItemRequest struct {
-	Token         ManagedToken `json:"token"`
-	Slot          string       `json:"slot,omitempty"`
-	Rank          int          `json:"rank,omitempty"`
-	Enabled       *bool        `json:"enabled,omitempty"`
-	Display       *bool        `json:"display,omitempty"`
-	DisplayName   string       `json:"displayName,omitempty"`
-	DisplaySymbol string       `json:"displaySymbol,omitempty"`
-	Note          string       `json:"note,omitempty"`
+func applyListItemWrite(request managedListItemWriteRequest, item *ManagedListItem) {
+	if request.Slot != nil {
+		item.Slot = strings.TrimSpace(*request.Slot)
+	}
+	if request.Rank != nil {
+		item.Rank = *request.Rank
+	}
+	if request.Enabled != nil {
+		item.Enabled = *request.Enabled
+	}
+	if request.Display != nil {
+		item.Display = *request.Display
+	}
+	if request.DisplayName != nil {
+		item.DisplayName = strings.TrimSpace(*request.DisplayName)
+	}
+	if request.DisplaySymbol != nil {
+		item.DisplaySymbol = strings.TrimSpace(*request.DisplaySymbol)
+	}
+	if request.DisplayLogoURI != nil {
+		item.DisplayLogoURI = strings.TrimSpace(*request.DisplayLogoURI)
+	}
 }
 
-func (r managedListItemRequest) toManagedListItem() ManagedListItem {
-	item := ManagedListItem{
-		Token:         r.Token,
-		Slot:          r.Slot,
-		Rank:          r.Rank,
-		DisplayName:   r.DisplayName,
-		DisplaySymbol: r.DisplaySymbol,
-		Note:          r.Note,
+func (patch managedListItemPatch) empty() bool {
+	return (patch.Token == nil || patch.Token.empty()) && patch.Slot == nil && patch.Rank == nil && patch.Enabled == nil && patch.Display == nil && patch.DisplayName == nil && patch.DisplaySymbol == nil && patch.DisplayLogoURI == nil
+}
+
+func (patch managedTokenPatch) empty() bool {
+	return patch.Kind == nil && patch.Chain == nil && patch.ChainName == nil && patch.ChainID == nil && patch.ChainLogoURI == nil && patch.Address == nil && patch.AssetID == nil && patch.Type == nil && patch.Name == nil && patch.Symbol == nil && patch.Decimals == nil && patch.Status == nil && patch.LogoURI == nil && patch.LogoExists == nil && patch.Explorer == nil && patch.Tags == nil && patch.Hot == nil && patch.Market == nil && patch.Pairs == nil && patch.Links == nil
+}
+
+func applyListItemPatch(patch managedListItemPatch, item *ManagedListItem, chain, address string) error {
+	if patch.Token != nil {
+		if patch.Token.Chain != nil && normalizeChain(*patch.Token.Chain) != normalizeChain(chain) {
+			return invalidParams("token chain is immutable and must match the path")
+		}
+		if patch.Token.Address != nil && !strings.EqualFold(strings.TrimSpace(*patch.Token.Address), address) {
+			return invalidParams("token address is immutable and must match the path")
+		}
+		applyManagedTokenPatch(*patch.Token, &item.Token)
 	}
-	if r.Enabled != nil {
-		item.Enabled = *r.Enabled
+	if patch.Slot != nil {
+		item.Slot = strings.TrimSpace(*patch.Slot)
 	}
-	if r.Display != nil {
-		item.Display = *r.Display
+	if patch.Rank != nil {
+		item.Rank = *patch.Rank
 	}
-	return item
+	if patch.Enabled != nil {
+		item.Enabled = *patch.Enabled
+	}
+	if patch.Display != nil {
+		item.Display = *patch.Display
+	}
+	if patch.DisplayName != nil {
+		item.DisplayName = strings.TrimSpace(*patch.DisplayName)
+	}
+	if patch.DisplaySymbol != nil {
+		item.DisplaySymbol = strings.TrimSpace(*patch.DisplaySymbol)
+	}
+	if patch.DisplayLogoURI != nil {
+		item.DisplayLogoURI = strings.TrimSpace(*patch.DisplayLogoURI)
+	}
+	return nil
+}
+
+func applyManagedTokenPatch(patch managedTokenPatch, token *ManagedToken) {
+	if patch.Kind != nil {
+		token.Kind = *patch.Kind
+	}
+	if patch.ChainName != nil {
+		token.ChainName = *patch.ChainName
+	}
+	if patch.ChainID != nil {
+		token.ChainID = *patch.ChainID
+	}
+	if patch.ChainLogoURI != nil {
+		token.ChainLogoURI = *patch.ChainLogoURI
+	}
+	if patch.AssetID != nil {
+		token.AssetID = *patch.AssetID
+	}
+	if patch.Type != nil {
+		token.Type = *patch.Type
+	}
+	if patch.Name != nil {
+		token.Name = *patch.Name
+	}
+	if patch.Symbol != nil {
+		token.Symbol = *patch.Symbol
+	}
+	if patch.Decimals != nil {
+		token.Decimals = *patch.Decimals
+	}
+	if patch.Status != nil {
+		token.Status = *patch.Status
+	}
+	if patch.LogoURI != nil {
+		token.LogoURI = *patch.LogoURI
+	}
+	if patch.LogoExists != nil {
+		token.LogoExists = *patch.LogoExists
+	}
+	if patch.Explorer != nil {
+		token.Explorer = *patch.Explorer
+	}
+	if patch.Tags != nil {
+		token.Tags = *patch.Tags
+	}
+	if patch.Hot != nil {
+		token.Hot = *patch.Hot
+	}
+	if patch.Market != nil {
+		token.Market = patch.Market
+	}
+	if patch.Pairs != nil {
+		token.Pairs = *patch.Pairs
+	}
+	if patch.Links != nil {
+		token.Links = *patch.Links
+	}
+}
+
+func validateItemIdentity(token ManagedToken, chain, address string) error {
+	if token.Chain != "" && normalizeChain(token.Chain) != normalizeChain(chain) {
+		return invalidParams("token chain must match the path")
+	}
+	if token.Address != "" && !strings.EqualFold(strings.TrimSpace(token.Address), address) {
+		return invalidParams("token address must match the path")
+	}
+	return nil
+}
+
+func listItemLocation(listKey, chain, address string) string {
+	if address == "" {
+		address = "native"
+	}
+	return "/api/lists/" + normalizeListKey(listKey) + "/items/" + normalizeChain(chain) + "/" + address
 }
 
 func pathAddressToTokenAddress(address string) string {
@@ -206,9 +559,18 @@ func pathAddressToTokenAddress(address string) string {
 
 func decodeHTTPJSON(r *http.Request, target any) error {
 	defer r.Body.Close()
+	mediaType, _, err := mime.ParseMediaType(r.Header.Get("Content-Type"))
+	if err != nil || mediaType != "application/json" {
+		return fmt.Errorf("Content-Type must be application/json")
+	}
 	limited := io.LimitReader(r.Body, maxRequestBodyBytes+1)
-	if err := json.NewDecoder(limited).Decode(target); err != nil {
+	decoder := json.NewDecoder(limited)
+	decoder.DisallowUnknownFields()
+	if err := decoder.Decode(target); err != nil {
 		return err
+	}
+	if err := decoder.Decode(&struct{}{}); err != io.EOF {
+		return fmt.Errorf("request body must contain exactly one JSON object")
 	}
 	if counter, ok := limited.(*io.LimitedReader); ok && counter.N == 0 {
 		return fmt.Errorf("request body too large")
@@ -217,6 +579,10 @@ func decodeHTTPJSON(r *http.Request, target any) error {
 }
 
 func writeJSONResultOrError(w http.ResponseWriter, result any, err error) {
+	writeJSONResultOrErrorStatus(w, result, err, http.StatusOK)
+}
+
+func writeJSONResultOrErrorStatus(w http.ResponseWriter, result any, err error, successStatus int) {
 	if err != nil {
 		status := http.StatusInternalServerError
 		var rpcErr *RPCError
@@ -226,6 +592,8 @@ func writeJSONResultOrError(w http.ResponseWriter, result any, err error) {
 				status = http.StatusBadRequest
 			case ErrCodeNotFound:
 				status = http.StatusNotFound
+			case ErrCodeConflict:
+				status = http.StatusConflict
 			}
 			writeJSONError(w, status, rpcErr.Message)
 			return
@@ -234,21 +602,55 @@ func writeJSONResultOrError(w http.ResponseWriter, result any, err error) {
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(successStatus)
 	if err := json.NewEncoder(w).Encode(result); err != nil {
-		w.WriteHeader(http.StatusInternalServerError)
+		return
 	}
 }
 
 func writeJSONError(w http.ResponseWriter, status int, message string) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(status)
-	_ = json.NewEncoder(w).Encode(map[string]string{"error": message})
+	_ = json.NewEncoder(w).Encode(map[string]any{"error": map[string]string{
+		"code":    httpErrorCode(status),
+		"message": message,
+	}})
 }
 
-func writeMethodNotAllowed(w http.ResponseWriter) {
-	w.WriteHeader(http.StatusMethodNotAllowed)
+func writeNoContentOrError(w http.ResponseWriter, err error) {
+	if err != nil {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	w.WriteHeader(http.StatusNoContent)
+}
+
+func writeMethodNotAllowed(w http.ResponseWriter, allowed ...string) {
+	w.Header().Set("Allow", strings.Join(allowed, ", "))
+	writeJSONError(w, http.StatusMethodNotAllowed, "method not allowed")
+}
+
+func httpErrorCode(status int) string {
+	switch status {
+	case http.StatusBadRequest:
+		return "invalid_request"
+	case http.StatusNotFound:
+		return "not_found"
+	case http.StatusConflict:
+		return "conflict"
+	case http.StatusMethodNotAllowed:
+		return "method_not_allowed"
+	default:
+		return "internal_error"
+	}
+}
+
+func isNotFoundError(err error) bool {
+	var rpcErr *RPCError
+	return errors.As(err, &rpcErr) && rpcErr.Code == ErrCodeNotFound
 }
 
 func managedFilesHandler(filesDir string) http.Handler {
+	_ = mime.AddExtensionType(".zst", "application/zstd")
 	return http.StripPrefix("/files/", http.FileServer(http.Dir(filepath.Clean(filesDir))))
 }

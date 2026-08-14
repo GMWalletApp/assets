@@ -1,0 +1,134 @@
+name: Build Managed List Output
+
+on:
+  workflow_dispatch:
+    inputs:
+      domain:
+        description: "Public domain only, for example https://assets.example.com"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: managed-list-output-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-managed-list-output:
+    if: github.ref_type == 'branch' && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: extensions/jsonrpc/go.mod
+          cache-dependency-path: extensions/jsonrpc/go.sum
+
+      - name: Validate domain
+        env:
+          PUBLISH_DOMAIN: ${{ inputs.domain }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import sys
+          from urllib.parse import urlparse
+
+          value = os.environ["PUBLISH_DOMAIN"].strip()
+          if any(character.isspace() for character in value):
+              sys.exit("domain must not contain whitespace")
+          parsed = urlparse(value)
+          if parsed.scheme not in {"http", "https"} or not parsed.hostname:
+              sys.exit("domain must be an absolute http(s) URL, for example https://assets.example.com")
+          if parsed.username or parsed.password:
+              sys.exit("domain must not contain credentials")
+          try:
+              parsed.port
+          except ValueError as error:
+              sys.exit(f"invalid domain port: {error}")
+          if parsed.path not in {"", "/"} or parsed.params or parsed.query or parsed.fragment:
+              sys.exit("domain must not contain a path, query, or fragment")
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as environment:
+              environment.write(f"PUBLISH_DOMAIN={value.rstrip('/')}\n")
+          PY
+
+      - name: Test managed-list generator
+        working-directory: extensions/jsonrpc
+        run: make test
+
+      - name: Generate output directory
+        working-directory: extensions/jsonrpc
+        run: |
+          set -euo pipefail
+          output_dir="$GITHUB_WORKSPACE/output"
+          runtime_dir="$RUNNER_TEMP/managed-list-output"
+
+          rm -rf "$output_dir" "$runtime_dir"
+          mkdir -p "$output_dir" "$runtime_dir"
+
+          go run ./cmd/assets-rpc \
+            --root ../.. \
+            --market-sync-enabled=false \
+            --managed-list-db "$runtime_dir/lists.sqlite" \
+            --managed-list-files-dir "$output_dir" \
+            --managed-list-public-base-url "$PUBLISH_DOMAIN/output" \
+            --managed-list-pack-once
+
+      - name: Verify JSON and Zstd artifacts
+        run: |
+          set -euo pipefail
+          expected_lists=(tokenlist usdt usdc usdg usds stablecoin homepage eth dai)
+          static_base="https://raw.githubusercontent.com/GMWalletApp/assets/main/data/static"
+
+          python3 -m json.tool output/manifest.json >/dev/null
+          for key in "${expected_lists[@]}"; do
+            jq -e --arg key "$key" 'any(.files[]; .listKey == $key)' output/manifest.json >/dev/null
+            test -s "output/$key.json"
+            test -s "output/$key.json.zst"
+          done
+
+          for file in output/*.json; do
+            python3 -m json.tool "$file" >/dev/null
+          done
+
+          sudo apt-get update
+          sudo apt-get install -y zstd
+          for file in output/*.json.zst; do
+            zstd --test "$file"
+          done
+
+          jq -e --arg prefix "$PUBLISH_DOMAIN/output/" '
+            (.files | length) >= 9 and
+            (all(.files[];
+              (.jsonUrl | startswith($prefix)) and
+              (.zstdUrl | startswith($prefix)) and
+              (.jsonPath | startswith("/") | not) and
+              (.zstdPath | startswith("/") | not)
+            ))
+          ' output/manifest.json >/dev/null
+
+          jq -e --arg logo "$static_base/USDT.svg" \
+            '.logoURI == $logo and all(.items[]; .logoURI == $logo)' \
+            output/usdt.json >/dev/null
+          for list in "${expected_lists[@]}"; do
+            jq -e --arg logo "$static_base/poly.svg" \
+              'all(.items[] | select(.chain == "polygon"); .chainLogoURI == $logo)' \
+              "output/$list.json" >/dev/null
+          done
+
+      - name: Commit managed-list output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A output
+          if git diff --cached --quiet; then
+            echo "No managed-list output changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update managed list output"
+          git push

@@ -15,6 +15,7 @@ import (
 func main() {
 	var config rpcserver.Config
 	var syncOnce bool
+	var managedListPackOnce bool
 	var syncTarget string
 
 	coinGeckoBaseURL := rpcserver.CoinGeckoBaseURLFromEnv()
@@ -46,6 +47,7 @@ func main() {
 	flag.StringVar(&config.TokenListHotCurrentPath, "tokenlist-hot-current", rpcserver.DefaultTokenListHotCurrentPath, "tokenlist current hot list path, relative to --root unless absolute")
 	flag.StringVar(&config.ManagedListDBPath, "managed-list-db", rpcserver.DefaultManagedListDBPath, "SQLite database path for managed token lists, relative to --root unless absolute")
 	flag.StringVar(&config.ManagedListFilesDir, "managed-list-files-dir", rpcserver.DefaultManagedListFilesDir, "directory for managed list JSON and zstd outputs, relative to --root unless absolute")
+	flag.StringVar(&config.ManagedListPublicBaseURL, "managed-list-public-base-url", rpcserver.DefaultManagedListPublicBaseURL, "public URL prefix used in the managed list manifest")
 	flag.BoolVar(&config.ManagedListSeedDefaults, "managed-list-seed-defaults", true, "seed default managed lists from tokenlist.json and homepage.json on startup without overwriting existing list items")
 	flag.BoolVar(&config.ManagedListPackAfterSeed, "managed-list-pack-after-seed", false, "pack all enabled managed lists after startup seeding")
 	flag.StringVar(&config.VsCurrency, "coingecko-vs-currency", "usd", "CoinGecko quote currency")
@@ -54,6 +56,7 @@ func main() {
 	flag.StringVar(&config.DefiLlamaBaseURL, "defillama-base-url", defiLlamaBaseURL, "DefiLlama stablecoin tag sync API base URL")
 	flag.IntVar(&config.MarketLimit, "market-limit", rpcserver.DefaultMarketLimit, "maximum CoinGecko market rows to sync")
 	flag.BoolVar(&syncOnce, "sync-once", false, "sync market/tokenlist JSON caches and exit without starting HTTP")
+	flag.BoolVar(&managedListPackOnce, "managed-list-pack-once", false, "initialize, seed, and pack all managed lists, then exit")
 	flag.StringVar(&syncTarget, "sync-target", string(rpcserver.SyncTargetAll), "sync-once target: all, market, or tokenlist")
 	flag.Parse()
 
@@ -61,6 +64,9 @@ func main() {
 	defer stop()
 
 	server := rpcserver.NewServer(config)
+	if syncOnce && managedListPackOnce {
+		log.Fatal("--sync-once and --managed-list-pack-once cannot be used together")
+	}
 	if syncOnce {
 		target, err := rpcserver.ParseSyncTarget(syncTarget)
 		if err != nil {
@@ -69,6 +75,14 @@ func main() {
 		if err := server.SyncOnce(ctx, target); err != nil {
 			log.Fatalf("sync failed: %v", err)
 		}
+		return
+	}
+	if managedListPackOnce {
+		manifest, err := server.PackManagedListsOnce()
+		if err != nil {
+			log.Fatalf("managed list pack failed: %v", err)
+		}
+		log.Printf("packed %d managed lists", len(manifest.Files))
 		return
 	}
 

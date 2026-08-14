@@ -30,6 +30,7 @@ type Config struct {
 	TokenListHotCurrentPath      string
 	ManagedListDBPath            string
 	ManagedListFilesDir          string
+	ManagedListPublicBaseURL     string
 	ManagedListSeedDefaults      bool
 	ManagedListPackAfterSeed     bool
 	VsCurrency                   string
@@ -61,6 +62,10 @@ const (
 	DefaultTokenListHotCurrentPath      = "extensions/jsonrpc/config/tokenlist-hot-current.json"
 	DefaultManagedListDBPath            = "extensions/jsonrpc/data/lists.sqlite"
 	DefaultManagedListFilesDir          = "extensions/jsonrpc/data/lists"
+	DefaultManagedListPublicBaseURL     = "/files"
+	DefaultRepositoryStaticBaseURL      = "https://raw.githubusercontent.com/GMWalletApp/assets/main/data/static"
+	DefaultUSDTFamilyLogoURI            = DefaultRepositoryStaticBaseURL + "/USDT.svg"
+	DefaultPolygonLogoURI               = DefaultRepositoryStaticBaseURL + "/poly.svg"
 )
 
 type Server struct {
@@ -114,6 +119,9 @@ func NewServer(config Config) *Server {
 	if config.ManagedListFilesDir == "" {
 		config.ManagedListFilesDir = DefaultManagedListFilesDir
 	}
+	if strings.TrimSpace(config.ManagedListPublicBaseURL) == "" {
+		config.ManagedListPublicBaseURL = DefaultManagedListPublicBaseURL
+	}
 	if config.VsCurrency == "" {
 		config.VsCurrency = "usd"
 	}
@@ -147,7 +155,9 @@ func NewServer(config Config) *Server {
 		config.ManagedListDBPath,
 		config.ManagedListFilesDir,
 		config.TokenListCachePath,
+		config.TokenListManualTokensPath,
 		filepath.Join(config.Root, "data", "tokenlists", "out", "homepage.json"),
+		config.ManagedListPublicBaseURL,
 		store,
 	)
 	syncer := NewSyncer(store, SyncConfig{
@@ -179,6 +189,20 @@ func NewServer(config Config) *Server {
 	}
 }
 
+func (s *Server) PackManagedListsOnce() (*PackManifest, error) {
+	if err := s.lists.Init(); err != nil {
+		return nil, fmt.Errorf("managed list database init failed: %w", err)
+	}
+	if err := s.lists.SeedDefaultLists(); err != nil {
+		return nil, fmt.Errorf("managed list seed failed: %w", err)
+	}
+	manifest, err := s.lists.PackAll()
+	if err != nil {
+		return nil, fmt.Errorf("managed list pack failed: %w", err)
+	}
+	return manifest, nil
+}
+
 func (s *Server) Start(ctx context.Context) error {
 	mux := http.NewServeMux()
 	mux.Handle("/rpc", s.Handler())
@@ -186,6 +210,7 @@ func (s *Server) Start(ctx context.Context) error {
 	mux.Handle("/api/lists/", s.listAPIHandler())
 	mux.Handle("/api/pack/", s.packAPIHandler())
 	mux.Handle("/files/", managedFilesHandler(s.config.ManagedListFilesDir))
+	mux.Handle("/openapi.yaml", openAPIHandler())
 
 	if err := s.lists.Init(); err != nil {
 		return fmt.Errorf("managed list database init failed: %w", err)

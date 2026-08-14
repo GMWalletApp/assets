@@ -1,6 +1,126 @@
 {
   "tokens": [
     {
+      "kind": "token", "chain": "arbitrum", "hot": false,
+      "address": "0x004B506865409877C9fA29bfb1ebA929984B9bbC", "assetId": "usdg:arbitrum:0x004B506865409877C9fA29bfb1ebA929984B9bbC",
+      "type": "ARBITRUM", "name": "Global Dollar", "symbol": "USDG", "decimals": 6, "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xe343167631d89B6Ffc58B88d6b7fB0228795491D/logo.png", "logoExists": true,
+      "tags": ["stablecoin"],
+      "links": [
+        {"name": "website", "url": "https://globaldollar.com/"},
+        {"name": "explorer", "url": "https://arbiscan.io/token/0x004B506865409877C9fA29bfb1ebA929984B9bbC"},
+        {"name": "official-deployments", "url": "https://docs.paxos.com/guides/stablecoin/usdg/mainnet"}
+      ]
+    },
+    {
+      "kind": "token", "chain": "hedera", "hot": false,
+      "address": "0.0.456858", "assetId": "usdc:hedera:0.0.456858",
+      "type": "HEDERA", "name": "USD Coin", "symbol": "USDC", "decimals": 6, "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png", "logoExists": true,
+      "tags": ["stablecoin"],
+      "links": [{"name": "explorer", "url": "https://hashscan.io/mainnet/token/0.0.456858"}, {"name": "official-deployments", "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"}]
+    },
+    {
+      "kind": "token", "chain": "hyperevm", "hot": false,
+      "address": "0xb88339CB7199b77E23DB6E890353E22632Ba630f", "assetId": "usdc:hyperevm:0xb88339CB7199b77E23DB6E890353E22632Ba630f",
+      "type": "HYPEREVM", "name": "USD Coin", "symbol": "USDC", "decimals": 6, "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png", "logoExists": true,
+      "tags": ["stablecoin"],
+      "links": [{"name": "explorer", "url": "https://hyperevmscan.io/token/0xb88339CB7199b77E23DB6E890353E22632Ba630f"}, {"name": "official-deployments", "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"}]
+    },
+    {
+      "kind": "token", "chain": "near", "hot": false,
+      "address": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1", "assetId": "usdc:near:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+      "type": "NEP141", "name": "USD Coin", "symbol": "USDC", "decimals": 6, "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png", "logoExists": true,
+      "tags": ["stablecoin"],
+      "links": [{"name": "explorer", "url": "https://nearblocks.io/token/17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"}, {"name": "official-deployments", "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"}]
+    },
+    {
+      "kind": "token", "chain": "polkadot", "hot": false,
+      "address": "1337", "assetId": "usdc:polkadot:assethub:1337",
+      "type": "ASSETHUB", "name": "USD Coin", "symbol": "USDC", "decimals": 6, "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png", "logoExists": true,
+      "tags": ["stablecoin"],
+      "links": [{"name": "explorer", "url": "https://assethub-polkadot.subscan.io/assets/1337"}, {"name": "official-deployments", "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"}]
+    },
+    {
+      "kind": "token", "chain": "sei", "hot": false,
+      "address": "0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392", "assetId": "usdc:sei:0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392",
+      "type": "SEI", "name": "USD Coin", "symbol": "USDC", "decimals": 6, "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png", "logoExists": true,
+      "tags": ["stablecoin"],
+      "links": [{"name": "explorer", "url": "https://seiscan.io/token/0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392"}, {"name": "official-deployments", "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"}]
+    },
+    {
+      "kind": "token", "chain": "xdc", "hot": false,
+      "address": "0xfA2958CB79b0491CC627c1557F441eF849Ca8eb1", "assetId": "usdc:xdc:0xfA2958CB79b0491CC627c1557F441eF849Ca8eb1",
+      "type": "XRC20", "name": "USD Coin", "symbol": "USDC", "decimals": 6, "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png", "logoExists": true,
+      "tags": ["stablecoin"],
+      "links": [{"name": "explorer", "url": "https://xdcscan.com/token/0xfA2958CB79b0491CC627c1557F441eF849Ca8eb1"}, {"name": "official-deployments", "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"}]
+    },
+    {
+      "kind": "token",
+      "chain": "near",
+      "hot": false,
+      "address": "usdt.tether-token.near",
+      "assetId": "near:usdt.tether-token.near",
+      "type": "NEP141",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+      "logoExists": true,
+      "tags": ["stablecoin"],
+      "links": [
+        {"name": "website", "url": "https://tether.to/"},
+        {"name": "explorer", "url": "https://nearblocks.io/token/usdt.tether-token.near"},
+        {"name": "official-deployments", "url": "https://tether.to/en/supported-protocols/"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "polkadot",
+      "hot": false,
+      "address": "1984",
+      "assetId": "polkadot:assethub:1984",
+      "type": "ASSETHUB",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+      "logoExists": true,
+      "tags": ["stablecoin"],
+      "links": [
+        {"name": "website", "url": "https://tether.to/"},
+        {"name": "explorer", "url": "https://statemint.statescan.io/#/assets/1984"},
+        {"name": "official-deployments", "url": "https://tether.to/en/supported-protocols/"}
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "tezos",
+      "hot": false,
+      "address": "KT1XnTn74bUtxHfDtBmm2bGZAQfhPbvKWR8o",
+      "assetId": "tezos:KT1XnTn74bUtxHfDtBmm2bGZAQfhPbvKWR8o:0",
+      "type": "FA2",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+      "logoExists": true,
+      "tags": ["stablecoin"],
+      "links": [
+        {"name": "website", "url": "https://tether.to/"},
+        {"name": "explorer", "url": "https://better-call.dev/mainnet/KT1XnTn74bUtxHfDtBmm2bGZAQfhPbvKWR8o/operations"},
+        {"name": "official-deployments", "url": "https://tether.to/en/supported-protocols/"}
+      ]
+    },
+    {
       "kind": "token",
       "chain": "smartchain",
       "hot": false,

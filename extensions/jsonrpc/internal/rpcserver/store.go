@@ -72,7 +72,7 @@ func (s *Store) GetChainInfo(chain string) (map[string]any, error) {
 	info["chain"] = chain
 	logoPath := filepath.Join(s.root, "blockchains", chain, "info", "logo.png")
 	info["logoExists"] = fileExists(logoPath)
-	info["logoURI"] = fmt.Sprintf("%s/blockchains/%s/info/logo.png", s.assetBaseURL, chain)
+	info["logoURI"] = s.chainLogoURI(chain)
 
 	return info, nil
 }
@@ -414,7 +414,7 @@ func (s *Store) readNativeAssetDetail(chain, infoDir string) (*AssetDetail, erro
 		Research:    info.Research,
 		Tags:        info.Tags,
 		Links:       info.Links,
-		LogoURI:     fmt.Sprintf("%s/blockchains/%s/info/logo.png", s.assetBaseURL, chain),
+		LogoURI:     s.chainLogoURI(chain),
 		LogoExists:  fileExists(filepath.Join(infoDir, "logo.png")),
 		ShortDesc:   info.ShortDesc,
 		Audit:       info.Audit,
@@ -425,6 +425,13 @@ func (s *Store) readNativeAssetDetail(chain, infoDir string) (*AssetDetail, erro
 	}
 
 	return detail, nil
+}
+
+func (s *Store) chainLogoURI(chain string) string {
+	if normalizeChain(chain) == "polygon" {
+		return DefaultPolygonLogoURI
+	}
+	return fmt.Sprintf("%s/blockchains/%s/info/logo.png", s.assetBaseURL, chain)
 }
 
 func (s *Store) readAssetDetail(chain, address, assetDir string) (*AssetDetail, error) {

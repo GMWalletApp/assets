@@ -8234,7 +8234,7 @@
               "url": "https://github.com/maticnetwork/whitepaper"
             }
           ],
-          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/polygon/info/logo.png",
+          "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/data/static/poly.svg",
           "logoExists": true
         },
         {
