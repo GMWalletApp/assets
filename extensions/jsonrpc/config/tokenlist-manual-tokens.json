@@ -1,64 +1,197 @@
 {
   "tokens": [
     {
-      "kind": "token", "chain": "arbitrum", "hot": false,
-      "address": "0x004B506865409877C9fA29bfb1ebA929984B9bbC", "assetId": "usdg:arbitrum:0x004B506865409877C9fA29bfb1ebA929984B9bbC",
-      "type": "ARBITRUM", "name": "Global Dollar", "symbol": "USDG", "decimals": 6, "status": "active",
-      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xe343167631d89B6Ffc58B88d6b7fB0228795491D/logo.png", "logoExists": true,
-      "tags": ["stablecoin"],
+      "kind": "token",
+      "chain": "arbitrum",
+      "hot": false,
+      "address": "0x004B506865409877C9fA29bfb1ebA929984B9bbC",
+      "assetId": "usdg:arbitrum:0x004B506865409877C9fA29bfb1ebA929984B9bbC",
+      "type": "ARBITRUM",
+      "name": "Global Dollar",
+      "symbol": "USDG",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xe343167631d89B6Ffc58B88d6b7fB0228795491D/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://globaldollar.com/"},
-        {"name": "explorer", "url": "https://arbiscan.io/token/0x004B506865409877C9fA29bfb1ebA929984B9bbC"},
-        {"name": "official-deployments", "url": "https://docs.paxos.com/guides/stablecoin/usdg/mainnet"}
+        {
+          "name": "website",
+          "url": "https://globaldollar.com/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://arbiscan.io/token/0x004B506865409877C9fA29bfb1ebA929984B9bbC"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://docs.paxos.com/guides/stablecoin/usdg/mainnet"
+        }
       ]
     },
     {
-      "kind": "token", "chain": "hedera", "hot": false,
-      "address": "0.0.456858", "assetId": "usdc:hedera:0.0.456858",
-      "type": "HEDERA", "name": "USD Coin", "symbol": "USDC", "decimals": 6, "status": "active",
-      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png", "logoExists": true,
-      "tags": ["stablecoin"],
-      "links": [{"name": "explorer", "url": "https://hashscan.io/mainnet/token/0.0.456858"}, {"name": "official-deployments", "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"}]
+      "kind": "token",
+      "chain": "hedera",
+      "hot": false,
+      "address": "0.0.456858",
+      "assetId": "usdc:hedera:0.0.456858",
+      "type": "HEDERA",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "explorer",
+          "url": "https://hashscan.io/mainnet/token/0.0.456858"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+        }
+      ]
     },
     {
-      "kind": "token", "chain": "hyperevm", "hot": false,
-      "address": "0xb88339CB7199b77E23DB6E890353E22632Ba630f", "assetId": "usdc:hyperevm:0xb88339CB7199b77E23DB6E890353E22632Ba630f",
-      "type": "HYPEREVM", "name": "USD Coin", "symbol": "USDC", "decimals": 6, "status": "active",
-      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png", "logoExists": true,
-      "tags": ["stablecoin"],
-      "links": [{"name": "explorer", "url": "https://hyperevmscan.io/token/0xb88339CB7199b77E23DB6E890353E22632Ba630f"}, {"name": "official-deployments", "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"}]
+      "kind": "token",
+      "chain": "hyperevm",
+      "hot": false,
+      "address": "0xb88339CB7199b77E23DB6E890353E22632Ba630f",
+      "assetId": "usdc:hyperevm:0xb88339CB7199b77E23DB6E890353E22632Ba630f",
+      "type": "HYPEREVM",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "explorer",
+          "url": "https://hyperevmscan.io/token/0xb88339CB7199b77E23DB6E890353E22632Ba630f"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+        }
+      ]
     },
     {
-      "kind": "token", "chain": "near", "hot": false,
-      "address": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1", "assetId": "usdc:near:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
-      "type": "NEP141", "name": "USD Coin", "symbol": "USDC", "decimals": 6, "status": "active",
-      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png", "logoExists": true,
-      "tags": ["stablecoin"],
-      "links": [{"name": "explorer", "url": "https://nearblocks.io/token/17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"}, {"name": "official-deployments", "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"}]
+      "kind": "token",
+      "chain": "near",
+      "hot": false,
+      "address": "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+      "assetId": "usdc:near:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+      "type": "NEP141",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "explorer",
+          "url": "https://nearblocks.io/token/17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+        }
+      ]
     },
     {
-      "kind": "token", "chain": "polkadot", "hot": false,
-      "address": "1337", "assetId": "usdc:polkadot:assethub:1337",
-      "type": "ASSETHUB", "name": "USD Coin", "symbol": "USDC", "decimals": 6, "status": "active",
-      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png", "logoExists": true,
-      "tags": ["stablecoin"],
-      "links": [{"name": "explorer", "url": "https://assethub-polkadot.subscan.io/assets/1337"}, {"name": "official-deployments", "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"}]
+      "kind": "token",
+      "chain": "polkadot",
+      "hot": false,
+      "address": "1337",
+      "assetId": "usdc:polkadot:assethub:1337",
+      "type": "ASSETHUB",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "explorer",
+          "url": "https://assethub-polkadot.subscan.io/assets/1337"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+        }
+      ]
     },
     {
-      "kind": "token", "chain": "sei", "hot": false,
-      "address": "0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392", "assetId": "usdc:sei:0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392",
-      "type": "SEI", "name": "USD Coin", "symbol": "USDC", "decimals": 6, "status": "active",
-      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png", "logoExists": true,
-      "tags": ["stablecoin"],
-      "links": [{"name": "explorer", "url": "https://seiscan.io/token/0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392"}, {"name": "official-deployments", "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"}]
+      "kind": "token",
+      "chain": "sei",
+      "hot": false,
+      "address": "0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392",
+      "assetId": "usdc:sei:0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392",
+      "type": "SEI",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "explorer",
+          "url": "https://seiscan.io/token/0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+        }
+      ]
     },
     {
-      "kind": "token", "chain": "xdc", "hot": false,
-      "address": "0xfA2958CB79b0491CC627c1557F441eF849Ca8eb1", "assetId": "usdc:xdc:0xfA2958CB79b0491CC627c1557F441eF849Ca8eb1",
-      "type": "XRC20", "name": "USD Coin", "symbol": "USDC", "decimals": 6, "status": "active",
-      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png", "logoExists": true,
-      "tags": ["stablecoin"],
-      "links": [{"name": "explorer", "url": "https://xdcscan.com/token/0xfA2958CB79b0491CC627c1557F441eF849Ca8eb1"}, {"name": "official-deployments", "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"}]
+      "kind": "token",
+      "chain": "xdc",
+      "hot": false,
+      "address": "0xfA2958CB79b0491CC627c1557F441eF849Ca8eb1",
+      "assetId": "usdc:xdc:0xfA2958CB79b0491CC627c1557F441eF849Ca8eb1",
+      "type": "XRC20",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "explorer",
+          "url": "https://xdcscan.com/token/0xfA2958CB79b0491CC627c1557F441eF849Ca8eb1"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://developers.circle.com/stablecoins/usdc-contract-addresses"
+        }
+      ]
     },
     {
       "kind": "token",
@@ -73,11 +206,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://tether.to/"},
-        {"name": "explorer", "url": "https://nearblocks.io/token/usdt.tether-token.near"},
-        {"name": "official-deployments", "url": "https://tether.to/en/supported-protocols/"}
+        {
+          "name": "website",
+          "url": "https://tether.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://nearblocks.io/token/usdt.tether-token.near"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://tether.to/en/supported-protocols/"
+        }
       ]
     },
     {
@@ -93,11 +237,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://tether.to/"},
-        {"name": "explorer", "url": "https://statemint.statescan.io/#/assets/1984"},
-        {"name": "official-deployments", "url": "https://tether.to/en/supported-protocols/"}
+        {
+          "name": "website",
+          "url": "https://tether.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://statemint.statescan.io/#/assets/1984"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://tether.to/en/supported-protocols/"
+        }
       ]
     },
     {
@@ -113,11 +268,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://tether.to/"},
-        {"name": "explorer", "url": "https://better-call.dev/mainnet/KT1XnTn74bUtxHfDtBmm2bGZAQfhPbvKWR8o/operations"},
-        {"name": "official-deployments", "url": "https://tether.to/en/supported-protocols/"}
+        {
+          "name": "website",
+          "url": "https://tether.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://better-call.dev/mainnet/KT1XnTn74bUtxHfDtBmm2bGZAQfhPbvKWR8o/operations"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://tether.to/en/supported-protocols/"
+        }
       ]
     },
     {
@@ -145,7 +311,8 @@
           "name": "explorer",
           "url": "https://bscscan.com/token/0x45E51bc23D592EB2DBA86da3985299f7895d66Ba"
         }
-      ]
+      ],
+      "receive_list": true
     },
     {
       "kind": "token",
@@ -275,7 +442,8 @@
           "name": "explorer",
           "url": "https://etherscan.io/token/0x39b8B6385416f4cA36a20319F70D28621895279D"
         }
-      ]
+      ],
+      "receive_list": true
     },
     {
       "kind": "token",
@@ -302,7 +470,8 @@
           "name": "explorer",
           "url": "https://gnosisscan.io/token/0x420CA0f9B9b604cE0fd9C18EF134C705e5Fa3430"
         }
-      ]
+      ],
+      "receive_list": true
     },
     {
       "kind": "token",
@@ -329,7 +498,8 @@
           "name": "explorer",
           "url": "https://polygonscan.com/token/0xE0aEa583266584DafBB3f9C3211d5588c73fEa8d"
         }
-      ]
+      ],
+      "receive_list": true
     },
     {
       "kind": "token",
@@ -356,7 +526,8 @@
           "name": "explorer",
           "url": "https://arbiscan.io/token/0x0c06cCF38114ddfc35e07427B9424adcca9F44F8"
         }
-      ]
+      ],
+      "receive_list": true
     },
     {
       "kind": "token",
@@ -383,7 +554,8 @@
           "name": "explorer",
           "url": "https://basescan.org/token/0xbf6e2966A9C3D99C9E4D069E04f7Bdb9C8aa762C"
         }
-      ]
+      ],
+      "receive_list": true
     },
     {
       "kind": "token",
@@ -410,7 +582,8 @@
           "name": "explorer",
           "url": "https://lineascan.build/token/0x3ff47c5Bf409C86533FE1f4907524d304062428D"
         }
-      ]
+      ],
+      "receive_list": true
     },
     {
       "kind": "token",
@@ -437,7 +610,8 @@
           "name": "docs",
           "url": "https://docs.noble.xyz/modules/florin/"
         }
-      ]
+      ],
+      "receive_list": true
     },
     {
       "kind": "token",
@@ -560,11 +734,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://usdt0.to/"},
-        {"name": "explorer", "url": "https://arbiscan.io/address/0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"},
-        {"name": "deployments", "url": "https://docs.usdt0.to/technical-documentation/deployments"}
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://arbiscan.io/address/0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
       ]
     },
     {
@@ -580,11 +765,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://usdt0.to/"},
-        {"name": "explorer", "url": "https://polygonscan.com/token/0xc2132d05d31c914a87c6611c10748aeb04b58e8f"},
-        {"name": "deployments", "url": "https://docs.usdt0.to/technical-documentation/deployments"}
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://polygonscan.com/token/0xc2132d05d31c914a87c6611c10748aeb04b58e8f"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
       ]
     },
     {
@@ -600,11 +796,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://usdt0.to/"},
-        {"name": "explorer", "url": "https://evm.confluxscan.org/address/0xaf37E8B6C9ED7f6318979f56Fc287d76c30847ff"},
-        {"name": "deployments", "url": "https://docs.usdt0.to/technical-documentation/deployments"}
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://evm.confluxscan.org/address/0xaf37E8B6C9ED7f6318979f56Fc287d76c30847ff"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
       ]
     },
     {
@@ -620,11 +827,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://usdt0.to/"},
-        {"name": "explorer", "url": "https://hyperevmscan.io/token/0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb"},
-        {"name": "deployments", "url": "https://docs.usdt0.to/technical-documentation/deployments"}
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://hyperevmscan.io/token/0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
       ]
     },
     {
@@ -640,11 +858,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://usdt0.to/"},
-        {"name": "explorer", "url": "https://hashscan.io/mainnet/token/0x00000000000000000000000000000000009Ce723"},
-        {"name": "deployments", "url": "https://docs.usdt0.to/technical-documentation/deployments"}
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://hashscan.io/mainnet/token/0x00000000000000000000000000000000009Ce723"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
       ]
     },
     {
@@ -660,11 +889,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://usdt0.to/"},
-        {"name": "explorer", "url": "https://mantlescan.xyz/address/0x779Ded0c9e1022225f8E0630b35a9b54bE713736"},
-        {"name": "deployments", "url": "https://docs.usdt0.to/technical-documentation/deployments"}
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://mantlescan.xyz/address/0x779Ded0c9e1022225f8E0630b35a9b54bE713736"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
       ]
     },
     {
@@ -680,11 +920,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://usdt0.to/"},
-        {"name": "explorer", "url": "https://optimistic.etherscan.io/address/0x01bFF41798a0BcF287b996046Ca68b395DbC1071"},
-        {"name": "deployments", "url": "https://docs.usdt0.to/technical-documentation/deployments"}
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://optimistic.etherscan.io/address/0x01bFF41798a0BcF287b996046Ca68b395DbC1071"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
       ]
     },
     {
@@ -700,11 +951,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://usdt0.to/"},
-        {"name": "explorer", "url": "https://rootstock.blockscout.com/address/0x779dED0C9e1022225F8e0630b35A9B54Be713736"},
-        {"name": "deployments", "url": "https://docs.usdt0.to/technical-documentation/deployments"}
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://rootstock.blockscout.com/address/0x779dED0C9e1022225F8e0630b35A9B54Be713736"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
       ]
     },
     {
@@ -720,11 +982,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://usdt0.to/"},
-        {"name": "explorer", "url": "https://seiscan.io/address/0x9151434b16b9763660705744891fA906F660EcC5"},
-        {"name": "deployments", "url": "https://docs.usdt0.to/technical-documentation/deployments"}
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://seiscan.io/address/0x9151434b16b9763660705744891fA906F660EcC5"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
       ]
     },
     {
@@ -740,11 +1013,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
       "logoExists": true,
-      "tags": ["stablecoin"],
+      "tags": [
+        "stablecoin"
+      ],
       "links": [
-        {"name": "website", "url": "https://usdt0.to/"},
-        {"name": "explorer", "url": "https://stellar.expert/explorer/public/contract/CBSJZEIO5C7KC2SF3MKSNXXJSW5G3VTNBX4ATMKUI3B2MR4JKM4R26YF"},
-        {"name": "deployments", "url": "https://docs.usdt0.to/technical-documentation/deployments"}
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://stellar.expert/explorer/public/contract/CBSJZEIO5C7KC2SF3MKSNXXJSW5G3VTNBX4ATMKUI3B2MR4JKM4R26YF"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.usdt0.to/technical-documentation/deployments"
+        }
       ]
     },
     {
@@ -760,10 +1044,18 @@
       "status": "active",
       "logoURI": "https://assets.coingecko.com/coins/images/40143/large/cbbtc.webp",
       "logoExists": true,
-      "tags": ["wrapped"],
+      "tags": [
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.coinbase.com/cbbtc"},
-        {"name": "explorer", "url": "https://etherscan.io/token/0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"}
+        {
+          "name": "website",
+          "url": "https://www.coinbase.com/cbbtc"
+        },
+        {
+          "name": "explorer",
+          "url": "https://etherscan.io/token/0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"
+        }
       ]
     },
     {
@@ -779,10 +1071,18 @@
       "status": "active",
       "logoURI": "https://assets.coingecko.com/coins/images/40143/large/cbbtc.webp",
       "logoExists": true,
-      "tags": ["wrapped"],
+      "tags": [
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.coinbase.com/cbbtc"},
-        {"name": "explorer", "url": "https://basescan.org/token/0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"}
+        {
+          "name": "website",
+          "url": "https://www.coinbase.com/cbbtc"
+        },
+        {
+          "name": "explorer",
+          "url": "https://basescan.org/token/0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"
+        }
       ]
     },
     {
@@ -798,10 +1098,18 @@
       "status": "active",
       "logoURI": "https://assets.coingecko.com/coins/images/40143/large/cbbtc.webp",
       "logoExists": true,
-      "tags": ["wrapped"],
+      "tags": [
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.coinbase.com/cbbtc"},
-        {"name": "explorer", "url": "https://arbiscan.io/token/0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"}
+        {
+          "name": "website",
+          "url": "https://www.coinbase.com/cbbtc"
+        },
+        {
+          "name": "explorer",
+          "url": "https://arbiscan.io/token/0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"
+        }
       ]
     },
     {
@@ -817,10 +1125,18 @@
       "status": "active",
       "logoURI": "https://assets.coingecko.com/coins/images/40143/large/cbbtc.webp",
       "logoExists": true,
-      "tags": ["wrapped"],
+      "tags": [
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.coinbase.com/cbbtc"},
-        {"name": "explorer", "url": "https://explorer.solana.com/address/cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij"}
+        {
+          "name": "website",
+          "url": "https://www.coinbase.com/cbbtc"
+        },
+        {
+          "name": "explorer",
+          "url": "https://explorer.solana.com/address/cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij"
+        }
       ]
     },
     {
@@ -836,11 +1152,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "logoExists": true,
-      "tags": ["wrapped"],
+      "tags": [
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.wbtc.network/"},
-        {"name": "explorer", "url": "https://solscan.io/token/5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ"},
-        {"name": "transparency", "url": "https://wbtc.network/transparency"}
+        {
+          "name": "website",
+          "url": "https://www.wbtc.network/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://solscan.io/token/5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ"
+        },
+        {
+          "name": "transparency",
+          "url": "https://wbtc.network/transparency"
+        }
       ]
     },
     {
@@ -856,11 +1183,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "logoExists": true,
-      "tags": ["wrapped"],
+      "tags": [
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.wbtc.network/"},
-        {"name": "explorer", "url": "https://tronscan.org/#/token20/TYhWwKpw43ENFWBTGpzLHn3882f2au7SMi"},
-        {"name": "transparency", "url": "https://wbtc.network/transparency"}
+        {
+          "name": "website",
+          "url": "https://www.wbtc.network/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://tronscan.org/#/token20/TYhWwKpw43ENFWBTGpzLHn3882f2au7SMi"
+        },
+        {
+          "name": "transparency",
+          "url": "https://wbtc.network/transparency"
+        }
       ]
     },
     {
@@ -876,11 +1214,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "logoExists": true,
-      "tags": ["wrapped"],
+      "tags": [
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.wbtc.network/"},
-        {"name": "explorer", "url": "https://bscscan.com/token/0x39665e85a68a4d7328b8799135E2ff301a0Ca86f"},
-        {"name": "transparency", "url": "https://wbtc.network/transparency"}
+        {
+          "name": "website",
+          "url": "https://www.wbtc.network/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://bscscan.com/token/0x39665e85a68a4d7328b8799135E2ff301a0Ca86f"
+        },
+        {
+          "name": "transparency",
+          "url": "https://wbtc.network/transparency"
+        }
       ]
     },
     {
@@ -896,11 +1245,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "logoExists": true,
-      "tags": ["wrapped"],
+      "tags": [
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.wbtc.network/"},
-        {"name": "explorer", "url": "https://basescan.org/token/0x1ceA84203673764244E05693e42E6Ace62bE9BA5"},
-        {"name": "transparency", "url": "https://wbtc.network/transparency"}
+        {
+          "name": "website",
+          "url": "https://www.wbtc.network/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://basescan.org/token/0x1ceA84203673764244E05693e42E6Ace62bE9BA5"
+        },
+        {
+          "name": "transparency",
+          "url": "https://wbtc.network/transparency"
+        }
       ]
     },
     {
@@ -916,11 +1276,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "logoExists": true,
-      "tags": ["wrapped"],
+      "tags": [
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.wbtc.network/"},
-        {"name": "explorer", "url": "https://kavascan.com/token/0xb5c4423a65B953905949548276654C96fcaE6992"},
-        {"name": "transparency", "url": "https://wbtc.network/transparency"}
+        {
+          "name": "website",
+          "url": "https://www.wbtc.network/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://kavascan.com/token/0xb5c4423a65B953905949548276654C96fcaE6992"
+        },
+        {
+          "name": "transparency",
+          "url": "https://wbtc.network/transparency"
+        }
       ]
     },
     {
@@ -936,11 +1307,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "logoExists": true,
-      "tags": ["wrapped"],
+      "tags": [
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.wbtc.network/"},
-        {"name": "explorer", "url": "https://celatone.osmosis.zone/osmosis-1/contracts/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743"},
-        {"name": "transparency", "url": "https://wbtc.network/transparency"}
+        {
+          "name": "website",
+          "url": "https://www.wbtc.network/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://celatone.osmosis.zone/osmosis-1/contracts/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743"
+        },
+        {
+          "name": "transparency",
+          "url": "https://wbtc.network/transparency"
+        }
       ]
     },
     {
@@ -956,10 +1338,19 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.coinbase.com/cbeth"},
-        {"name": "explorer", "url": "https://etherscan.io/token/0xBe9895146f7AF43049ca1c1AE358B0541Ea49704"}
+        {
+          "name": "website",
+          "url": "https://www.coinbase.com/cbeth"
+        },
+        {
+          "name": "explorer",
+          "url": "https://etherscan.io/token/0xBe9895146f7AF43049ca1c1AE358B0541Ea49704"
+        }
       ]
     },
     {
@@ -975,10 +1366,19 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.coinbase.com/cbeth"},
-        {"name": "explorer", "url": "https://arbiscan.io/token/0x1DEBd73E752bEaF79865Fd6446b0c970EaE7732f"}
+        {
+          "name": "website",
+          "url": "https://www.coinbase.com/cbeth"
+        },
+        {
+          "name": "explorer",
+          "url": "https://arbiscan.io/token/0x1DEBd73E752bEaF79865Fd6446b0c970EaE7732f"
+        }
       ]
     },
     {
@@ -994,10 +1394,19 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.coinbase.com/cbeth"},
-        {"name": "explorer", "url": "https://optimistic.etherscan.io/token/0xadDb6A0412DE1BA0F936DCaeb8Aaa24578dcF3B2"}
+        {
+          "name": "website",
+          "url": "https://www.coinbase.com/cbeth"
+        },
+        {
+          "name": "explorer",
+          "url": "https://optimistic.etherscan.io/token/0xadDb6A0412DE1BA0F936DCaeb8Aaa24578dcF3B2"
+        }
       ]
     },
     {
@@ -1013,10 +1422,19 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.coinbase.com/cbeth"},
-        {"name": "explorer", "url": "https://polygonscan.com/token/0x4b4327dB1600B8B1440163F667e199CEf35385f5"}
+        {
+          "name": "website",
+          "url": "https://www.coinbase.com/cbeth"
+        },
+        {
+          "name": "explorer",
+          "url": "https://polygonscan.com/token/0x4b4327dB1600B8B1440163F667e199CEf35385f5"
+        }
       ]
     },
     {
@@ -1032,11 +1450,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
       "logoExists": true,
-      "tags": ["staking"],
+      "tags": [
+        "staking"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.ether.fi/"},
-        {"name": "explorer", "url": "https://etherscan.io/token/0x35fA164735182de50811E8e2E824cFb9B6118ac2"},
-        {"name": "deployments", "url": "https://etherfi.gitbook.io/etherfi/contracts-and-integrations/deployed-contracts"}
+        {
+          "name": "website",
+          "url": "https://www.ether.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://etherscan.io/token/0x35fA164735182de50811E8e2E824cFb9B6118ac2"
+        },
+        {
+          "name": "deployments",
+          "url": "https://etherfi.gitbook.io/etherfi/contracts-and-integrations/deployed-contracts"
+        }
       ]
     },
     {
@@ -1052,11 +1481,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.ether.fi/"},
-        {"name": "explorer", "url": "https://arbiscan.io/token/0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe"},
-        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+        {
+          "name": "website",
+          "url": "https://www.ether.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://arbiscan.io/token/0x35751007a407ca6FEFfE80b3cB397736D2cf4dbe"
+        },
+        {
+          "name": "deployments",
+          "url": "https://github.com/etherfi-protocol/weETH-cross-chain"
+        }
       ]
     },
     {
@@ -1072,11 +1513,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.ether.fi/"},
-        {"name": "explorer", "url": "https://snowtrace.io/token/0xA3D68b74bF0528fdD07263c60d6488749044914b"},
-        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+        {
+          "name": "website",
+          "url": "https://www.ether.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://snowtrace.io/token/0xA3D68b74bF0528fdD07263c60d6488749044914b"
+        },
+        {
+          "name": "deployments",
+          "url": "https://github.com/etherfi-protocol/weETH-cross-chain"
+        }
       ]
     },
     {
@@ -1092,11 +1545,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.ether.fi/"},
-        {"name": "explorer", "url": "https://blastscan.io/token/0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A"},
-        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+        {
+          "name": "website",
+          "url": "https://www.ether.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://blastscan.io/token/0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A"
+        },
+        {
+          "name": "deployments",
+          "url": "https://github.com/etherfi-protocol/weETH-cross-chain"
+        }
       ]
     },
     {
@@ -1112,11 +1577,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.ether.fi/"},
-        {"name": "explorer", "url": "https://basescan.org/token/0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A"},
-        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+        {
+          "name": "website",
+          "url": "https://www.ether.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://basescan.org/token/0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A"
+        },
+        {
+          "name": "deployments",
+          "url": "https://github.com/etherfi-protocol/weETH-cross-chain"
+        }
       ]
     },
     {
@@ -1132,11 +1609,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.ether.fi/"},
-        {"name": "explorer", "url": "https://lineascan.build/token/0x1Bf74C010E6320bab11e2e5A532b5AC15e0b8aA6"},
-        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+        {
+          "name": "website",
+          "url": "https://www.ether.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://lineascan.build/token/0x1Bf74C010E6320bab11e2e5A532b5AC15e0b8aA6"
+        },
+        {
+          "name": "deployments",
+          "url": "https://github.com/etherfi-protocol/weETH-cross-chain"
+        }
       ]
     },
     {
@@ -1152,11 +1641,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.ether.fi/"},
-        {"name": "explorer", "url": "https://scrollscan.com/token/0x01f0a31698C4d065659b9bdC21B3610292a1c506"},
-        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+        {
+          "name": "website",
+          "url": "https://www.ether.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://scrollscan.com/token/0x01f0a31698C4d065659b9bdC21B3610292a1c506"
+        },
+        {
+          "name": "deployments",
+          "url": "https://github.com/etherfi-protocol/weETH-cross-chain"
+        }
       ]
     },
     {
@@ -1172,11 +1673,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.ether.fi/"},
-        {"name": "explorer", "url": "https://bscscan.com/token/0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A"},
-        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+        {
+          "name": "website",
+          "url": "https://www.ether.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://bscscan.com/token/0x04C0599Ae5A44757c0af6F9eC3b93da8976c150A"
+        },
+        {
+          "name": "deployments",
+          "url": "https://github.com/etherfi-protocol/weETH-cross-chain"
+        }
       ]
     },
     {
@@ -1192,11 +1705,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.ether.fi/"},
-        {"name": "explorer", "url": "https://optimistic.etherscan.io/token/0x5A7fACB970D094B6C7FF1df0eA68D99E6e73CBFF"},
-        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+        {
+          "name": "website",
+          "url": "https://www.ether.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://optimistic.etherscan.io/token/0x5A7fACB970D094B6C7FF1df0eA68D99E6e73CBFF"
+        },
+        {
+          "name": "deployments",
+          "url": "https://github.com/etherfi-protocol/weETH-cross-chain"
+        }
       ]
     },
     {
@@ -1212,11 +1737,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.ether.fi/"},
-        {"name": "explorer", "url": "https://explorer.zksync.io/address/0xc1Fa6E2E8667d9bE0Ca938a54c7E0285E9Df924a"},
-        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+        {
+          "name": "website",
+          "url": "https://www.ether.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://explorer.zksync.io/address/0xc1Fa6E2E8667d9bE0Ca938a54c7E0285E9Df924a"
+        },
+        {
+          "name": "deployments",
+          "url": "https://github.com/etherfi-protocol/weETH-cross-chain"
+        }
       ]
     },
     {
@@ -1232,11 +1769,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.ether.fi/"},
-        {"name": "explorer", "url": "https://sonicscan.org/token/0xA3D68b74bF0528fdD07263c60d6488749044914b"},
-        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+        {
+          "name": "website",
+          "url": "https://www.ether.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://sonicscan.org/token/0xA3D68b74bF0528fdD07263c60d6488749044914b"
+        },
+        {
+          "name": "deployments",
+          "url": "https://github.com/etherfi-protocol/weETH-cross-chain"
+        }
       ]
     },
     {
@@ -1252,11 +1801,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://www.ether.fi/"},
-        {"name": "explorer", "url": "https://hyperevmscan.io/token/0xA3D68b74bF0528fdD07263c60d6488749044914b"},
-        {"name": "deployments", "url": "https://github.com/etherfi-protocol/weETH-cross-chain"}
+        {
+          "name": "website",
+          "url": "https://www.ether.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://hyperevmscan.io/token/0xA3D68b74bF0528fdD07263c60d6488749044914b"
+        },
+        {
+          "name": "deployments",
+          "url": "https://github.com/etherfi-protocol/weETH-cross-chain"
+        }
       ]
     },
     {
@@ -1272,11 +1833,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://lido.fi/"},
-        {"name": "explorer", "url": "https://arbiscan.io/token/0x5979D7b546E38E414F7E9822514be443A4800529"},
-        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+        {
+          "name": "website",
+          "url": "https://lido.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://arbiscan.io/token/0x5979D7b546E38E414F7E9822514be443A4800529"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.lido.fi/deployed-contracts/"
+        }
       ]
     },
     {
@@ -1292,11 +1865,22 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84/logo.png",
       "logoExists": true,
-      "tags": ["staking"],
+      "tags": [
+        "staking"
+      ],
       "links": [
-        {"name": "website", "url": "https://lido.fi/"},
-        {"name": "explorer", "url": "https://optimistic.etherscan.io/token/0x76A50b8c7349cCDDb7578c6627e79b5d99D24138"},
-        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+        {
+          "name": "website",
+          "url": "https://lido.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://optimistic.etherscan.io/token/0x76A50b8c7349cCDDb7578c6627e79b5d99D24138"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.lido.fi/deployed-contracts/"
+        }
       ]
     },
     {
@@ -1312,11 +1896,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://lido.fi/"},
-        {"name": "explorer", "url": "https://basescan.org/token/0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452"},
-        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+        {
+          "name": "website",
+          "url": "https://lido.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://basescan.org/token/0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.lido.fi/deployed-contracts/"
+        }
       ]
     },
     {
@@ -1332,11 +1928,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://lido.fi/"},
-        {"name": "explorer", "url": "https://lineascan.build/token/0xB5beDd42000b71FddE22D3eE8a79Bd49A568fC8F"},
-        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+        {
+          "name": "website",
+          "url": "https://lido.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://lineascan.build/token/0xB5beDd42000b71FddE22D3eE8a79Bd49A568fC8F"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.lido.fi/deployed-contracts/"
+        }
       ]
     },
     {
@@ -1352,11 +1960,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://lido.fi/"},
-        {"name": "explorer", "url": "https://bscscan.com/token/0x26c5e01524d2E6280A48F2c50fF6De7e52E9611C"},
-        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+        {
+          "name": "website",
+          "url": "https://lido.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://bscscan.com/token/0x26c5e01524d2E6280A48F2c50fF6De7e52E9611C"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.lido.fi/deployed-contracts/"
+        }
       ]
     },
     {
@@ -1372,11 +1992,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://lido.fi/"},
-        {"name": "explorer", "url": "https://explorer.zksync.io/address/0x703b52F2b28fEbcB60E1372858AF5b18849FE867"},
-        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+        {
+          "name": "website",
+          "url": "https://lido.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://explorer.zksync.io/address/0x703b52F2b28fEbcB60E1372858AF5b18849FE867"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.lido.fi/deployed-contracts/"
+        }
       ]
     },
     {
@@ -1392,11 +2024,23 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://lido.fi/"},
-        {"name": "explorer", "url": "https://mantlescan.xyz/token/0x458ed78EB972a369799fb278c0243b25e5242A83"},
-        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+        {
+          "name": "website",
+          "url": "https://lido.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://mantlescan.xyz/token/0x458ed78EB972a369799fb278c0243b25e5242A83"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.lido.fi/deployed-contracts/"
+        }
       ]
     },
     {
@@ -1412,11 +2056,109 @@
       "status": "active",
       "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0/logo.png",
       "logoExists": true,
-      "tags": ["staking", "wrapped"],
+      "tags": [
+        "staking",
+        "wrapped"
+      ],
       "links": [
-        {"name": "website", "url": "https://lido.fi/"},
-        {"name": "explorer", "url": "https://polygonscan.com/token/0x03b54A6e9a984069379fae1a4fC4dBAE93B3bCCD"},
-        {"name": "deployments", "url": "https://docs.lido.fi/deployed-contracts/"}
+        {
+          "name": "website",
+          "url": "https://lido.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://polygonscan.com/token/0x03b54A6e9a984069379fae1a4fC4dBAE93B3bCCD"
+        },
+        {
+          "name": "deployments",
+          "url": "https://docs.lido.fi/deployed-contracts/"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "ethereum",
+      "hot": false,
+      "address": "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
+      "assetId": "rlusd:ethereum:0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
+      "type": "ERC20",
+      "name": "Ripple USD",
+      "symbol": "RLUSD",
+      "decimals": 18,
+      "status": "active",
+      "logoExists": false,
+      "receive_list": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://ripple.com/solutions/stablecoin/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://etherscan.io/token/0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://docs.ripple.com/products/stablecoin/developer-resources/rlusd-on-the-xrpl"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "solana",
+      "hot": false,
+      "address": "BNso1VUJnh4zcfpZa6986Ea66P6TCp59hvtNJ8b1X85",
+      "assetId": "bnsol:solana:BNso1VUJnh4zcfpZa6986Ea66P6TCp59hvtNJ8b1X85",
+      "type": "SPL",
+      "name": "Binance Staked SOL",
+      "symbol": "BNSOL",
+      "decimals": 9,
+      "status": "active",
+      "logoExists": false,
+      "receive_list": true,
+      "tags": [
+        "staking"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://www.binance.com/en/solana-staking"
+        },
+        {
+          "name": "explorer",
+          "url": "https://solscan.io/token/BNso1VUJnh4zcfpZa6986Ea66P6TCp59hvtNJ8b1X85"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "ethereum",
+      "hot": false,
+      "address": "0xC20059E0317De91738D13AF027DfC4a50781b066",
+      "assetId": "spk:ethereum:0xC20059E0317De91738D13AF027DfC4a50781b066",
+      "type": "ERC20",
+      "name": "Spark",
+      "symbol": "SPK",
+      "decimals": 18,
+      "status": "active",
+      "logoExists": false,
+      "receive_list": true,
+      "tags": [
+        "defi",
+        "governance"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://spark.fi/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://etherscan.io/token/0xC20059E0317De91738D13AF027DfC4a50781b066"
+        }
       ]
     }
   ]

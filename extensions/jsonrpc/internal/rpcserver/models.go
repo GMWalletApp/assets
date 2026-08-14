@@ -122,23 +122,24 @@ type AppTokenList struct {
 }
 
 type AppToken struct {
-	Kind       string          `json:"kind"`
-	Chain      string          `json:"chain"`
-	Hot        bool            `json:"hot"`
-	Address    string          `json:"address"`
-	AssetID    string          `json:"assetId"`
-	Type       string          `json:"type,omitempty"`
-	Name       string          `json:"name,omitempty"`
-	Symbol     string          `json:"symbol,omitempty"`
-	Decimals   int             `json:"decimals"`
-	Status     string          `json:"status,omitempty"`
-	LogoURI    string          `json:"logoURI,omitempty"`
-	LogoExists bool            `json:"logoExists"`
-	Rank       int             `json:"rank,omitempty"`
-	Market     *AppTokenMarket `json:"market,omitempty"`
-	Pairs      []TokenPair     `json:"pairs,omitempty"`
-	Tags       []string        `json:"tags,omitempty"`
-	Links      []Link          `json:"links,omitempty"`
+	Kind        string          `json:"kind"`
+	Chain       string          `json:"chain"`
+	Hot         bool            `json:"hot"`
+	Address     string          `json:"address"`
+	AssetID     string          `json:"assetId"`
+	Type        string          `json:"type,omitempty"`
+	Name        string          `json:"name,omitempty"`
+	Symbol      string          `json:"symbol,omitempty"`
+	Decimals    int             `json:"decimals"`
+	Status      string          `json:"status,omitempty"`
+	LogoURI     string          `json:"logoURI,omitempty"`
+	LogoExists  bool            `json:"logoExists"`
+	Rank        int             `json:"rank,omitempty"`
+	ReceiveList bool            `json:"receive_list,omitempty"`
+	Market      *AppTokenMarket `json:"market,omitempty"`
+	Pairs       []TokenPair     `json:"pairs,omitempty"`
+	Tags        []string        `json:"tags,omitempty"`
+	Links       []Link          `json:"links,omitempty"`
 }
 
 type AppTokenMarket struct {
@@ -278,6 +279,7 @@ type TokenListAssetOverride struct {
 	DisplayName   string   `json:"displayName,omitempty"`
 	DisplaySymbol string   `json:"displaySymbol,omitempty"`
 	AddTags       []string `json:"addTags,omitempty"`
+	ReceiveList   *bool    `json:"receive_list,omitempty"`
 	Note          string   `json:"note,omitempty"`
 }
 

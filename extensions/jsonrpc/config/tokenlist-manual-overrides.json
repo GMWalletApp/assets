@@ -3,38 +3,648 @@
     {
       "chain": "base",
       "address": "0x2Ae3F1Ec7F1F5012CFEab0185bfc7aa3cf0DEc22",
-      "addTags": ["staking", "wrapped"]
+      "addTags": [
+        "staking",
+        "wrapped"
+      ]
     },
     {
       "chain": "ethereum",
       "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
-      "addTags": ["staking"]
+      "addTags": [
+        "staking"
+      ]
     },
     {
       "chain": "ethereum",
       "address": "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
-      "addTags": ["staking", "wrapped"]
+      "addTags": [
+        "staking",
+        "wrapped"
+      ]
     },
     {
       "chain": "ethereum",
       "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
-      "addTags": ["staking", "wrapped"]
+      "addTags": [
+        "staking",
+        "wrapped"
+      ]
     },
     {
       "chain": "optimism",
       "address": "0x1F32b1c2345538c0c6f582fCB022739c4A194Ebb",
-      "addTags": ["staking", "wrapped"]
+      "addTags": [
+        "staking",
+        "wrapped"
+      ]
     },
     {
       "chain": "scroll",
       "address": "0xf610A9dfB7C89644979b4A0f27063E9e7d7Cda32",
       "displayName": "Wrapped stETH",
-      "addTags": ["staking", "wrapped"]
+      "addTags": [
+        "staking",
+        "wrapped"
+      ]
     },
     {
       "chain": "plasma",
       "address": "0xA3D68b74bF0528fdD07263c60d6488749044914b",
-      "addTags": ["staking", "wrapped"]
+      "addTags": [
+        "staking",
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "aptos",
+      "address": "0x05fabd1b12e39967a3c24e91b7b8f67719a6dacee74f3c8b9fb7d93e855437d2",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "arbitrum",
+      "address": "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
+      "receive_list": true
+    },
+    {
+      "chain": "arbitrum",
+      "address": "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
+      "receive_list": true
+    },
+    {
+      "chain": "arbitrum",
+      "address": "0x13Ad51ed4F1B7e9Dc168d8a00cB3f4dDD85EfA60",
+      "receive_list": true,
+      "addTags": [
+        "staking"
+      ]
+    },
+    {
+      "chain": "arbitrum",
+      "address": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "arbitrum",
+      "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+      "receive_list": true
+    },
+    {
+      "chain": "arbitrum",
+      "address": "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
+      "receive_list": true
+    },
+    {
+      "chain": "arbitrum",
+      "address": "0xf97f4df75117a78c1A5a0DBb814Af92458539FB4",
+      "receive_list": true
+    },
+    {
+      "chain": "arbitrum",
+      "address": "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
+      "receive_list": true
+    },
+    {
+      "chain": "avalanchec",
+      "address": "0x02D980A0D7AF3fb7Cf7Df8cB35d9eDBCF355f665",
+      "receive_list": true
+    },
+    {
+      "chain": "avalanchec",
+      "address": "0x249848BeCA43aC405b8102Ec90Dd5F22CA513c06",
+      "receive_list": true
+    },
+    {
+      "chain": "avalanchec",
+      "address": "0x5947BB275c521040051D82396192181b413227A3",
+      "receive_list": true
+    },
+    {
+      "chain": "avalanchec",
+      "address": "0x63a72806098Bd3D9520cC43356dD78afe5D386D9",
+      "receive_list": true
+    },
+    {
+      "chain": "avalanchec",
+      "address": "0x8cE2Dee54bB9921a2AE0A63dBb2DF8eD88B91dD9",
+      "receive_list": true
+    },
+    {
+      "chain": "avalanchec",
+      "address": "0x8eBAf22B6F053dFFeaf46f4Dd9eFA95D89ba8580",
+      "receive_list": true
+    },
+    {
+      "chain": "avalanchec",
+      "address": "0xcf799767d366d789e8B446981C2D578E241fa25c",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "base",
+      "address": "0x1ceA84203673764244E05693e42E6Ace62bE9BA5",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "base",
+      "address": "0x8Ee73c484A26e0A5df2Ee2a4960B789967dd0415",
+      "receive_list": true
+    },
+    {
+      "chain": "blast",
+      "address": "0xF7bc58b8D8f97ADC129cfC4c9f45Ce3C0E1D2692",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "cryptoorg",
+      "address": "0xbED48612BC69fA1CaB67052b42a95FB30C1bcFee",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x163f8C2467924be0ae7B5347228CABF260318753",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x4f8e5DE400DE08B164E7421B3EE387f461beCD1A",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x56072C95FAA701256059aa122697B133aDEd9279",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x57e114B691Db790C35207b2e685D4A43181e6061",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32",
+      "receive_list": true,
+      "addTags": [
+        "staking"
+      ]
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x6E2a43be0B1d33b726f0CA3b8de60b3482b8b050",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x808507121B80c02388fAd14726482e061B8da827",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "ethereum",
+      "address": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0xa2E3356610840701BDf5611a53974510Ae27E2e1",
+      "receive_list": true,
+      "addTags": [
+        "wrapped",
+        "staking"
+      ]
+    },
+    {
+      "chain": "ethereum",
+      "address": "0xAE12C5930881c53715B369ceC7606B70d8EB229f",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0xB62132e35a6c13ee1EE0f84dC5d40bad8d815206",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0xD533a949740bb3306d119CC777fa900bA034cd52",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
+      "address": "0xFe0c30065B384F05761f15d0CC899D4F9F9Cc0eB",
+      "receive_list": true,
+      "addTags": [
+        "staking"
+      ]
+    },
+    {
+      "chain": "fantom",
+      "address": "0x6a07A792ab2965C72a5B8088d3a069A7aC3a993B",
+      "receive_list": true
+    },
+    {
+      "chain": "fantom",
+      "address": "0xb3654dc3D10Ea7645f8319668E8F54d2574FBdC8",
+      "receive_list": true
+    },
+    {
+      "chain": "fantom",
+      "address": "0xE6c259bc0FCE25b71fE95A00361D3878E16232C3",
+      "receive_list": true
+    },
+    {
+      "chain": "heco",
+      "address": "0x202b4936fE1a82A4965220860aE46d7d3939Bb25",
+      "receive_list": true
+    },
+    {
+      "chain": "heco",
+      "address": "0x22C54cE8321A4015740eE1109D9cBc25815C46E6",
+      "receive_list": true
+    },
+    {
+      "chain": "heco",
+      "address": "0x9e004545c59D359F6B7BFB06a26390b087717b42",
+      "receive_list": true
+    },
+    {
+      "chain": "kavaevm",
+      "address": "0xb5c4423a65B953905949548276654C96fcaE6992",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "kcc",
+      "address": "0x73b6086955c820370A18002F60E9b51FB67d7e1A",
+      "receive_list": true
+    },
+    {
+      "chain": "kcc",
+      "address": "0xE76e97C157658004eE22e01C03a5e21A4655A2Fd",
+      "receive_list": true
+    },
+    {
+      "chain": "linea",
+      "address": "0x1789e0043623282D5DCc7F213d703C6D8BAfBB04",
+      "receive_list": true
+    },
+    {
+      "chain": "merlin",
+      "address": "0xF6D226f9Dc15d9bB51182815b320D3fBE324e1bA",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "monad",
+      "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "monad",
+      "address": "0x111111d2bf19e43C34263401e0CAd979eD1cdb61",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "optimism",
+      "address": "0x350a791Bfc2C21F9Ed5d10980Dad2e2638ffa7f6",
+      "receive_list": true
+    },
+    {
+      "chain": "optimism",
+      "address": "0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
+      "receive_list": true
+    },
+    {
+      "chain": "plasma",
+      "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "plasma",
+      "address": "",
+      "receive_list": true,
+      "addTags": [
+        "defi"
+      ]
+    },
+    {
+      "chain": "polygon",
+      "address": "0x172370d5Cd63279eFa6d502DAB29171933a610AF",
+      "receive_list": true
+    },
+    {
+      "chain": "polygon",
+      "address": "0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "polygon",
+      "address": "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
+      "receive_list": true
+    },
+    {
+      "chain": "polygon",
+      "address": "0x77f56cf9365955486B12C4816992388eE8606f0E",
+      "receive_list": true
+    },
+    {
+      "chain": "polygon",
+      "address": "0xb33EaAd8d922B1083446DC23f610c2567fB5180f",
+      "receive_list": true
+    },
+    {
+      "chain": "polygon",
+      "address": "0xD6DF932A45C0f255f85145f286eA0b292B21C90B",
+      "receive_list": true
+    },
+    {
+      "chain": "ripple",
+      "address": "524C555344000000000000000000000000000000.rMxCKbEDwqr76QuheSUMdEGf4B9xJ8m5De",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "scroll",
+      "address": "0x3C1BCa5a656e69edCD0D4E36BEbb3FcDAcA60Cf1",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "scroll",
+      "address": "0x434cdA25E8a2CA5D9c1C449a8Cb6bCbF719233E8",
+      "receive_list": true
+    },
+    {
+      "chain": "scroll",
+      "address": "0x79379C0E09a41d7978f883a56246290eE9a8c4d3",
+      "receive_list": true
+    },
+    {
+      "chain": "scroll",
+      "address": "0xB755039eDc7910C1F1BD985D48322E55A31AC0bF",
+      "receive_list": true
+    },
+    {
+      "chain": "smartchain",
+      "address": "0x21cAef8A43163Eea865baeE23b9C2E327696A3bf",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "smartchain",
+      "address": "0x39665e85a68a4d7328b8799135E2ff301a0Ca86f",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "smartchain",
+      "address": "0x8d0D000Ee44948FC98c9B98A4FA4921476f08B0d",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "smartchain",
+      "address": "0xa2E3356610840701BDf5611a53974510Ae27E2e1",
+      "receive_list": true,
+      "addTags": [
+        "wrapped",
+        "staking"
+      ]
+    },
+    {
+      "chain": "smartchain",
+      "address": "0xaEC945e04baF28b135Fa7c640f624f8D90F1C3a6",
+      "receive_list": true
+    },
+    {
+      "chain": "smartchain",
+      "address": "0xb3Ed0A426155B79B898849803E3B36552f7ED507",
+      "receive_list": true
+    },
+    {
+      "chain": "smartchain",
+      "address": "0xBf5140A22578168FD562DCcF235E5D43A02ce9B1",
+      "receive_list": true
+    },
+    {
+      "chain": "smartchain",
+      "address": "0xcE24439F2D9C6a2289F741120FE202248B666666",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "smartchain",
+      "address": "0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD",
+      "receive_list": true
+    },
+    {
+      "chain": "smartchain",
+      "address": "0xfb6115445Bff7b52FeB98650C87f44907E58f802",
+      "receive_list": true
+    },
+    {
+      "chain": "solana",
+      "address": "2zMMhcVQEXDtdE6vsFS7S7D5oUodfJHE8vd1gnBouauv",
+      "receive_list": true
+    },
+    {
+      "chain": "solana",
+      "address": "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "solana",
+      "address": "3vAs4D1WE6Na4tCgt4BApgFfENbm8WY7q4cSPD1yM4Cg",
+      "receive_list": true
+    },
+    {
+      "chain": "solana",
+      "address": "5XZw2LKTyrfvfiskJ78AMpackRjPcyCif1WhUsPDuVqQ",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "solana",
+      "address": "C98A4nkJXhpVZNAZdHUA95RpTF3T4whtQubL3YobiUX9",
+      "receive_list": true
+    },
+    {
+      "chain": "solana",
+      "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+      "receive_list": true
+    },
+    {
+      "chain": "solana",
+      "address": "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "sonic",
+      "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "sonic",
+      "address": "0x2fb960611bdC322A9a4A994252658Cae9fe2eeA1",
+      "receive_list": true
+    },
+    {
+      "chain": "sonic",
+      "address": "0xf1eF7d2D4C0c881cd634481e0586ed5d2871A74B",
+      "receive_list": true
+    },
+    {
+      "chain": "tron",
+      "address": "TPFqcBAaaUMCSVRCqPaQ9QnzKhmuoLR6Rc",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "tron",
+      "address": "TXDk8mbtRbXeYuMNS83CfKPaYYT8XWv9Hz",
+      "receive_list": true,
+      "addTags": [
+        "stablecoin"
+      ]
+    },
+    {
+      "chain": "tron",
+      "address": "TYhWwKpw43ENFWBTGpzLHn3882f2au7SMi",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
+    },
+    {
+      "chain": "xdai",
+      "address": "0xDF613aF6B44a31299E48131e9347F034347E2F00",
+      "receive_list": true
+    },
+    {
+      "chain": "zklink",
+      "address": "0xDa4AaEd3A53962c83B35697Cd138cc6df43aF71f",
+      "receive_list": true,
+      "addTags": [
+        "wrapped"
+      ]
     }
   ]
 }

@@ -1037,6 +1037,7 @@ func TestTokenListSyncAppliesManualOverridesAndHotList(t *testing.T) {
 			Address:     testUSDTAddress,
 			DisplayName: "Manual Override Name",
 			AddTags:     []string{"manual-tag"},
+			ReceiveList: boolPtr(true),
 		}},
 	})
 	mustWriteJSON(t, hotDefaultsPath, TokenListHotList{
@@ -1092,7 +1093,7 @@ func TestTokenListSyncAppliesManualOverridesAndHotList(t *testing.T) {
 		t.Fatalf("read tokenlist: %v", err)
 	}
 	usdt := findAppToken(tokenList.Tokens, "smartchain", testUSDTAddress)
-	if usdt == nil || usdt.Name != "Manual Override Name" || !hasTag(usdt.Tags, "manual-tag") || hasTag(usdt.Tags, "base-tag") || hasTag(usdt.Tags, "hot") || !usdt.Hot {
+	if usdt == nil || usdt.Name != "Manual Override Name" || !hasTag(usdt.Tags, "manual-tag") || hasTag(usdt.Tags, "base-tag") || hasTag(usdt.Tags, "hot") || !usdt.Hot || !usdt.ReceiveList {
 		t.Fatalf("expected manual override precedence plus hot bool, got %+v", usdt)
 	}
 	native := findAppToken(tokenList.Tokens, "smartchain", "")
@@ -2809,6 +2810,10 @@ func mustRemarshal(t *testing.T, input any, output any) {
 	if err := json.Unmarshal(data, output); err != nil {
 		t.Fatal(err)
 	}
+}
+
+func boolPtr(value bool) *bool {
+	return &value
 }
 
 type roundTripFunc func(*http.Request) (*http.Response, error)

@@ -610,6 +610,9 @@ func applyTokenListRules(token *AppToken, config *ResolvedTokenListConfig, repor
 		if override.DisplaySymbol != "" {
 			token.Symbol = override.DisplaySymbol
 		}
+		if override.ReceiveList != nil {
+			token.ReceiveList = *override.ReceiveList
+		}
 		token.Tags = appendUniqueStrings(token.Tags, override.AddTags...)
 		if coinGeckoID == "" {
 			coinGeckoID = override.CoinGeckoID

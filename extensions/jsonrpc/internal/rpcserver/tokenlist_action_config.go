@@ -408,7 +408,7 @@ func validateActionTokenListAssetOverride(root string, entry *TokenListAssetOver
 	if !tokenListChainExists(root, entry.Chain) {
 		return fmt.Errorf("asset override uses unknown chain %q", entry.Chain)
 	}
-	if entry.Address == "" {
+	if entry.Address == "" && !tokenListNativeAssetExists(root, entry.Chain) {
 		return fmt.Errorf("asset override %s missing address", entry.Chain)
 	}
 	return nil
@@ -440,6 +440,12 @@ func tokenListChainExists(root, chain string) bool {
 	infoPath := filepath.Join(root, "blockchains", chain, "info", "info.json")
 	info, err := os.Stat(infoPath)
 	return err == nil && !info.IsDir()
+}
+
+func tokenListNativeAssetExists(root, chain string) bool {
+	infoPath := filepath.Join(root, "blockchains", chain, "info", "info.json")
+	var info assetInfoFile
+	return readJSONFile(infoPath, &info) == nil && strings.TrimSpace(info.Name) != ""
 }
 
 func normalizeTokenListAssetOverride(entry *TokenListAssetOverride) {
