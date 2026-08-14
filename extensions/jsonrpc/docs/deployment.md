@@ -202,8 +202,8 @@ Authenticated administration:
   /api/pack/*
 
 Public read-only publication:
-  /files/<listKey>.json
-  /files/<listKey>.json.zst
+  /files/<outputName>.json
+  /files/<outputName>.json.zst
   /files/manifest.json
   /openapi.yaml
 
@@ -254,6 +254,8 @@ output/eth.json
 output/eth.json.zst
 output/dai.json
 output/dai.json.zst
+output/support.json
+output/support.json.zst
 ```
 
 The workflow automatically includes any additional enabled default lists in the

@@ -64,8 +64,8 @@ extensions/jsonrpc/data/tokenlist-report.json
 ## Managed Token Lists
 
 The service also exposes a SQLite-backed list manager for app-specific groups
-such as `usdt`, `usdc`, `usdg`, `usds`, `stablecoin`, `eth`, `dai`, `homepage`, and
-`tokenlist`.
+such as `usdt`, `usdc`, `usdg`, `usds`, `stablecoin`, `eth`, `dai`, `homepage`,
+`tokenlist`, and the exchange/wallet `support` list.
 
 Default storage and packed output:
 
@@ -86,7 +86,17 @@ files without overwriting existing list items:
 - `usds`: Sky USDS deployments; unrelated tokens that happen to reuse the `USDS` symbol are excluded
 - `dai`, `eth`: exact symbol lists
 - `stablecoin`: tokens tagged `stablecoin`
-- `homepage`: tokens in `data/tokenlists/out/homepage.json`
+- `homepage`: direct homepage tokens plus enabled multi-chain list includes
+- `support`: exchanges/DEXes and wallets seeded from `support/support.json`,
+  plus the repository `data/static/bitget-wallet.svg` and
+  `data/static/uniswap-wallet.svg` wallet entries
+
+By default, homepage includes `usdt`, `usdc`, `usdg`, and `usds`. An include's
+`tag` is the source list key. Packing reads that list directly from SQLite,
+assigns the tag as each expanded item's `slot`, and replaces duplicate direct
+homepage entries by normalized chain/address identity. No loopback HTTP request
+is made. This keeps one family definition while the packed homepage remains a
+flat array of the same item shape used by every other list.
 
 Business lists other than the generic `tokenlist` carry homepage-style item
 metadata:
@@ -148,10 +158,24 @@ PUT    /api/lists/{listKey}/items/{chain}/{address}
 PATCH  /api/lists/{listKey}/items/{chain}/{address}
 DELETE /api/lists/{listKey}/items/{chain}/{address}
 
+GET    /api/lists/{listKey}/includes
+POST   /api/lists/{listKey}/includes
+GET    /api/lists/{listKey}/includes/{tag}
+PUT    /api/lists/{listKey}/includes/{tag}
+PATCH  /api/lists/{listKey}/includes/{tag}
+DELETE /api/lists/{listKey}/includes/{tag}
+
+GET    /api/lists/support/{exchanges|wallets}
+POST   /api/lists/support/{exchanges|wallets}
+GET    /api/lists/support/{exchanges|wallets}/{id}
+PUT    /api/lists/support/{exchanges|wallets}/{id}
+PATCH  /api/lists/support/{exchanges|wallets}/{id}
+DELETE /api/lists/support/{exchanges|wallets}/{id}
+
 POST   /api/pack/{listKey}
 POST   /api/pack/all
-GET    /files/{listKey}.json
-GET    /files/{listKey}.json.zst
+GET    /files/{outputName}.json
+GET    /files/{outputName}.json.zst
 GET    /files/manifest.json
 GET    /openapi.yaml
 ```
@@ -162,9 +186,15 @@ return `201` with `Location`; deletes return an empty `204`; duplicate POSTs
 return `409`; missing resources return `404`.
 
 `GET /api/lists/{listKey}` returns one complete management document: the list
-fields (`key`, name, shared display fields, output settings, timestamps) plus an
-`items` array. The dedicated `/items` routes remain available for editing an
-individual item.
+fields (`key`, name, shared display fields, output settings, timestamps), an
+`includes` array, and an `items` array. The dedicated routes remain available
+for editing an individual include or token item.
+
+`GET /api/lists/support` instead returns the same list-level fields together
+with `schemaVersion`, `assetBaseURI`, `exchanges`, and `wallets`. Support-entry
+`rank`, `enabled`, and timestamps are management fields. Packing omits disabled
+entries and publishes the frontend-compatible `support.json` shape containing
+only `id`, `name`, optional exchange `type`, and `logoURI`.
 
 All managed lists use the same `ManagedListItem` shape. The large `tokenlist`
 therefore exposes the same token, chain, logo, explorer, tags, `hot`, market,
@@ -182,9 +212,21 @@ curl -sS http://localhost:8080/api/lists/tokenlist/items/ethereum/0xdAC17F958D2e
       --data-binary @-
 ```
 
-Packed `/files/{listKey}.json` files use the same aggregate boundary: list-level
+Packed `/files/{outputName}.json` files use the same aggregate boundary: list-level
 metadata and the enabled, presentation-resolved entries are emitted together in
 the `items` array.
+
+Include a multi-chain family in homepage:
+
+```bash
+curl -sS http://localhost:8080/api/lists/homepage/includes \
+  -H 'content-type: application/json' \
+  --data '{"tag":"usdt","rank":10,"enabled":true}'
+```
+
+The source list must exist. Self-includes and indirect cycles are rejected.
+Setting an include to `enabled:false` keeps the relationship in SQLite but
+stops expanding it into the packed target list.
 
 The service does not implement application-level authentication. In deployed
 environments, protect `/api/lists*` and `/api/pack/*` with Caddy authentication;

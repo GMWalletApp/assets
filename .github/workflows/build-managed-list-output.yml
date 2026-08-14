@@ -82,7 +82,7 @@ jobs:
       - name: Verify JSON and Zstd artifacts
         run: |
           set -euo pipefail
-          expected_lists=(tokenlist usdt usdc usdg usds stablecoin homepage eth dai)
+          expected_lists=(tokenlist usdt usdc usdg usds stablecoin homepage eth dai support)
           static_base="https://raw.githubusercontent.com/GMWalletApp/assets/main/data/static"
 
           python3 -m json.tool output/manifest.json >/dev/null
@@ -103,7 +103,7 @@ jobs:
           done
 
           jq -e --arg prefix "$PUBLISH_DOMAIN/output/" '
-            (.files | length) >= 9 and
+            (.files | length) >= 10 and
             (all(.files[];
               (.jsonUrl | startswith($prefix)) and
               (.zstdUrl | startswith($prefix)) and
@@ -116,10 +116,20 @@ jobs:
             '.logoURI == $logo and all(.items[]; .logoURI == $logo)' \
             output/usdt.json >/dev/null
           for list in "${expected_lists[@]}"; do
+            if [ "$list" = support ]; then
+              continue
+            fi
             jq -e --arg logo "$static_base/poly.svg" \
               'all(.items[] | select(.chain == "polygon"); .chainLogoURI == $logo)' \
               "output/$list.json" >/dev/null
           done
+          jq -e --arg bitget "$static_base/bitget-wallet.svg" --arg uniswap "$static_base/uniswap-wallet.svg" '
+            .schemaVersion == 1 and
+            any(.exchanges[]; .id == "bitget" and .type == "cex") and
+            any(.exchanges[]; .id == "uniswap" and .type == "dex") and
+            any(.wallets[]; .id == "bitget-wallet" and .logoURI == $bitget) and
+            any(.wallets[]; .id == "uniswap" and .logoURI == $uniswap)
+          ' output/support.json >/dev/null
 
       - name: Commit managed-list output
         run: |

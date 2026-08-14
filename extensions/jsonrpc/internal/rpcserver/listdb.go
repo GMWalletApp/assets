@@ -86,12 +86,60 @@ type ManagedListItem struct {
 	UpdatedAt      string       `json:"updatedAt,omitempty"`
 }
 
+// ManagedListInclude links a list to another managed list. Tag is both the
+// source list key and the slot assigned to the source items when they are
+// expanded into the target's packed output.
+type ManagedListInclude struct {
+	Tag       string `json:"tag"`
+	Rank      int    `json:"rank,omitempty"`
+	Enabled   bool   `json:"enabled"`
+	CreatedAt string `json:"createdAt,omitempty"`
+	UpdatedAt string `json:"updatedAt,omitempty"`
+}
+
 // ManagedListDocument is the complete management view of a list. Items remain
 // independently editable, but readers do not need a second request to assemble
 // the list.
 type ManagedListDocument struct {
 	ManagedList
-	Items []ManagedListItem `json:"items"`
+	Includes []ManagedListInclude `json:"includes"`
+	Items    []ManagedListItem    `json:"items"`
+}
+
+// ManagedSupportEntry is an exchange or wallet shown by clients. Rank,
+// enabled and timestamps are management-only fields and are omitted from the
+// published support.json document.
+type ManagedSupportEntry struct {
+	ID        string `json:"id"`
+	Name      string `json:"name"`
+	Type      string `json:"type,omitempty"`
+	LogoURI   string `json:"logoURI"`
+	Rank      int    `json:"rank,omitempty"`
+	Enabled   bool   `json:"enabled"`
+	CreatedAt string `json:"createdAt,omitempty"`
+	UpdatedAt string `json:"updatedAt,omitempty"`
+}
+
+type ManagedSupportDocument struct {
+	ManagedList
+	SchemaVersion int                   `json:"schemaVersion"`
+	AssetBaseURI  string                `json:"assetBaseURI"`
+	Exchanges     []ManagedSupportEntry `json:"exchanges"`
+	Wallets       []ManagedSupportEntry `json:"wallets"`
+}
+
+type PublishedSupportEntry struct {
+	ID      string `json:"id"`
+	Name    string `json:"name"`
+	Type    string `json:"type,omitempty"`
+	LogoURI string `json:"logoURI"`
+}
+
+type PublishedSupportDocument struct {
+	SchemaVersion int                     `json:"schemaVersion"`
+	AssetBaseURI  string                  `json:"assetBaseURI"`
+	Exchanges     []PublishedSupportEntry `json:"exchanges"`
+	Wallets       []PublishedSupportEntry `json:"wallets"`
 }
 
 type ManagedListOutput struct {
@@ -192,7 +240,13 @@ func (s *ManagedListService) SeedDefaultLists() error {
 	if err := s.seedFromManualTokenList(db); err != nil {
 		return err
 	}
-	return s.seedFromHomepage(db)
+	if err := s.seedFromHomepage(db); err != nil {
+		return err
+	}
+	if err := seedHomepageIncludes(db); err != nil {
+		return err
+	}
+	return s.seedSupportList(db)
 }
 
 func (s *ManagedListService) ListLists() ([]ManagedList, error) {
@@ -388,7 +442,157 @@ func (s *ManagedListService) GetListDocument(listKey string) (*ManagedListDocume
 	if items == nil {
 		items = []ManagedListItem{}
 	}
-	return &ManagedListDocument{ManagedList: *list, Items: items}, nil
+	includes, err := s.ListIncludes(list.Key)
+	if err != nil {
+		return nil, err
+	}
+	if includes == nil {
+		includes = []ManagedListInclude{}
+	}
+	return &ManagedListDocument{ManagedList: *list, Includes: includes, Items: items}, nil
+}
+
+func (s *ManagedListService) ListIncludes(listKey string) ([]ManagedListInclude, error) {
+	listKey = normalizeListKey(listKey)
+	db, err := s.open()
+	if err != nil {
+		return nil, err
+	}
+	defer db.Close()
+	var exists int
+	if err := db.QueryRow(`select 1 from lists where key = ?`, listKey).Scan(&exists); errors.Is(err, sql.ErrNoRows) {
+		return nil, notFound("list not found")
+	} else if err != nil {
+		return nil, err
+	}
+	rows, err := db.Query(`
+		select source.key, li.rank, li.enabled, li.created_at, li.updated_at
+		from list_includes li
+		join lists target on target.id = li.list_id
+		join lists source on source.id = li.source_list_id
+		where target.key = ?
+		order by li.rank asc, source.key asc
+	`, listKey)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	includes := []ManagedListInclude{}
+	for rows.Next() {
+		include, err := scanManagedListInclude(rows)
+		if err != nil {
+			return nil, err
+		}
+		includes = append(includes, include)
+	}
+	return includes, rows.Err()
+}
+
+func (s *ManagedListService) GetInclude(listKey, tag string) (*ManagedListInclude, error) {
+	listKey, tag = normalizeListKey(listKey), normalizeListKey(tag)
+	db, err := s.open()
+	if err != nil {
+		return nil, err
+	}
+	defer db.Close()
+	include, err := scanManagedListInclude(db.QueryRow(`
+		select source.key, li.rank, li.enabled, li.created_at, li.updated_at
+		from list_includes li
+		join lists target on target.id = li.list_id
+		join lists source on source.id = li.source_list_id
+		where target.key = ? and source.key = ?
+	`, listKey, tag))
+	if errors.Is(err, sql.ErrNoRows) {
+		return nil, notFound("list include not found")
+	}
+	return &include, err
+}
+
+func (s *ManagedListService) SaveInclude(listKey string, input ManagedListInclude) (*ManagedListInclude, error) {
+	listKey, input.Tag = normalizeListKey(listKey), normalizeListKey(input.Tag)
+	if !validListKey(listKey) || !validListKey(input.Tag) {
+		return nil, invalidParams("list key and include tag must be valid list keys")
+	}
+	if listKey == input.Tag {
+		return nil, invalidParams("a list cannot include itself")
+	}
+	if input.Rank < 0 {
+		return nil, invalidParams("rank must be greater than or equal to zero")
+	}
+	db, err := s.open()
+	if err != nil {
+		return nil, err
+	}
+	defer db.Close()
+	tx, err := db.Begin()
+	if err != nil {
+		return nil, err
+	}
+	defer tx.Rollback()
+	var targetID, sourceID int64
+	if err := tx.QueryRow(`select id from lists where key = ?`, listKey).Scan(&targetID); errors.Is(err, sql.ErrNoRows) {
+		return nil, notFound("list not found")
+	} else if err != nil {
+		return nil, err
+	}
+	if err := tx.QueryRow(`select id from lists where key = ?`, input.Tag).Scan(&sourceID); errors.Is(err, sql.ErrNoRows) {
+		return nil, notFound("included list not found")
+	} else if err != nil {
+		return nil, err
+	}
+	var cycle int
+	err = tx.QueryRow(`
+		with recursive reachable(id) as (
+			select source_list_id from list_includes where list_id = ?
+			union
+			select li.source_list_id from list_includes li join reachable r on li.list_id = r.id
+		)
+		select 1 from reachable where id = ? limit 1
+	`, sourceID, targetID).Scan(&cycle)
+	if err == nil {
+		return nil, conflict("list include would create a cycle")
+	}
+	if !errors.Is(err, sql.ErrNoRows) {
+		return nil, err
+	}
+	now := time.Now().UTC().Format(time.RFC3339)
+	_, err = tx.Exec(`
+		insert into list_includes(list_id, source_list_id, rank, enabled, created_at, updated_at)
+		values(?, ?, ?, ?, ?, ?)
+		on conflict(list_id, source_list_id) do update set
+			rank = excluded.rank,
+			enabled = excluded.enabled,
+			updated_at = excluded.updated_at
+	`, targetID, sourceID, input.Rank, boolToInt(input.Enabled), now, now)
+	if err != nil {
+		return nil, err
+	}
+	if err := tx.Commit(); err != nil {
+		return nil, err
+	}
+	return s.GetInclude(listKey, input.Tag)
+}
+
+func (s *ManagedListService) DeleteInclude(listKey, tag string) error {
+	listKey, tag = normalizeListKey(listKey), normalizeListKey(tag)
+	db, err := s.open()
+	if err != nil {
+		return err
+	}
+	defer db.Close()
+	result, err := db.Exec(`
+		delete from list_includes
+		where list_id = (select id from lists where key = ?)
+		  and source_list_id = (select id from lists where key = ?)
+	`, listKey, tag)
+	if err != nil {
+		return err
+	}
+	count, err := result.RowsAffected()
+	if err == nil && count == 0 {
+		return notFound("list include not found")
+	}
+	return err
 }
 
 func (s *ManagedListService) UpsertItem(listKey string, input ManagedListItem) (*ManagedListItem, error) {
@@ -576,16 +780,15 @@ func (s *ManagedListService) DeleteItem(listKey, chain, address string) error {
 }
 
 func (s *ManagedListService) PackList(listKey string) (*PackFile, error) {
-	list, err := s.GetList(listKey)
+	generatedAt := time.Now().UTC().Format(time.RFC3339)
+	if normalizeListKey(listKey) == "support" {
+		return s.packSupportList(generatedAt)
+	}
+	output, err := s.buildExpandedManagedListOutput(listKey, generatedAt, map[string]bool{})
 	if err != nil {
 		return nil, err
 	}
-	items, err := s.ListItems(list.Key)
-	if err != nil {
-		return nil, err
-	}
-	output := buildManagedListOutput(*list, items, time.Now().UTC().Format(time.RFC3339))
-	return s.writePackedList(output, list.OutputPath)
+	return s.writePackedList(output, output.OutputPath)
 }
 
 func (s *ManagedListService) PackAll() (*PackManifest, error) {
@@ -598,11 +801,16 @@ func (s *ManagedListService) PackAll() (*PackManifest, error) {
 		if !list.Enabled {
 			continue
 		}
-		items, err := s.ListItems(list.Key)
-		if err != nil {
-			return nil, err
+		var packed *PackFile
+		if list.Key == "support" {
+			packed, err = s.packSupportList(manifest.GeneratedAt)
+		} else {
+			var output ManagedListOutput
+			output, err = s.buildExpandedManagedListOutput(list.Key, manifest.GeneratedAt, map[string]bool{})
+			if err == nil {
+				packed, err = s.writePackedList(output, list.OutputPath)
+			}
 		}
-		packed, err := s.writePackedList(buildManagedListOutput(list, items, manifest.GeneratedAt), list.OutputPath)
 		if err != nil {
 			return nil, err
 		}
@@ -711,16 +919,20 @@ func (s *ManagedListService) enrichChainContext(token ManagedToken) ManagedToken
 }
 
 func (s *ManagedListService) writePackedList(output ManagedListOutput, outputPath string) (*PackFile, error) {
+	return s.writePackedDocument(output.Key, outputPath, output, len(output.Items), output.GeneratedAt)
+}
+
+func (s *ManagedListService) writePackedDocument(listKey, outputPath string, document any, itemCount int, generatedAt string) (*PackFile, error) {
 	if err := os.MkdirAll(s.filesDir, 0o755); err != nil {
 		return nil, err
 	}
-	relativePath, err := safePackOutputPath(output.Key, outputPath)
+	relativePath, err := safePackOutputPath(listKey, outputPath)
 	if err != nil {
 		return nil, err
 	}
 	jsonPath := filepath.Join(s.filesDir, relativePath)
 	zstdPath := jsonPath + ".zst"
-	if err := writeJSONAtomic(jsonPath, output); err != nil {
+	if err := writeJSONAtomic(jsonPath, document); err != nil {
 		return nil, err
 	}
 	jsonBytes, err := os.ReadFile(jsonPath)
@@ -751,7 +963,7 @@ func (s *ManagedListService) writePackedList(output ManagedListOutput, outputPat
 	}
 	jsonURL := strings.TrimRight(publicBaseURL, "/") + "/" + relativePath
 	return &PackFile{
-		ListKey:     output.Key,
+		ListKey:     listKey,
 		JSONPath:    relativePath,
 		ZstdPath:    relativePath + ".zst",
 		JSONURL:     jsonURL,
@@ -760,8 +972,8 @@ func (s *ManagedListService) writePackedList(output ManagedListOutput, outputPat
 		ZstdSize:    zstdInfo.Size(),
 		JSONSHA256:  sha256Hex(jsonBytes),
 		ZstdSHA256:  sha256Hex(zstdBytes),
-		TokenCount:  len(output.Items),
-		GeneratedAt: output.GeneratedAt,
+		TokenCount:  itemCount,
+		GeneratedAt: generatedAt,
 	}, nil
 }
 
@@ -859,6 +1071,16 @@ func initializeManagedListSchema(db *sql.DB) error {
 			created_at text not null,
 			updated_at text not null
 		)`,
+		`create table if not exists list_includes (
+			id integer primary key autoincrement,
+			list_id integer not null references lists(id) on delete cascade,
+			source_list_id integer not null references lists(id) on delete cascade,
+			rank integer not null default 0,
+			enabled integer not null default 1,
+			created_at text not null,
+			updated_at text not null,
+			unique(list_id, source_list_id)
+		)`,
 		`create table if not exists tokens (
 			id integer primary key autoincrement,
 			kind text not null default 'token',
@@ -899,6 +1121,20 @@ func initializeManagedListSchema(db *sql.DB) error {
 			created_at text not null,
 			updated_at text not null,
 			unique(list_id, token_id)
+		)`,
+		`create table if not exists support_entries (
+			id integer primary key autoincrement,
+			list_id integer not null references lists(id) on delete cascade,
+			category text not null check(category in ('exchanges', 'wallets')),
+			entry_id text not null,
+			name text not null,
+			type text not null default '',
+			logo_uri text not null,
+			rank integer not null default 0,
+			enabled integer not null default 1,
+			created_at text not null,
+			updated_at text not null,
+			unique(list_id, category, entry_id)
 		)`,
 	}
 	for _, stmt := range stmts {
@@ -982,6 +1218,90 @@ func buildManagedListOutput(list ManagedList, items []ManagedListItem, generated
 	}
 }
 
+func (s *ManagedListService) buildExpandedManagedListOutput(listKey, generatedAt string, visiting map[string]bool) (ManagedListOutput, error) {
+	listKey = normalizeListKey(listKey)
+	if visiting[listKey] {
+		return ManagedListOutput{}, conflict("list include cycle detected")
+	}
+	visiting[listKey] = true
+	defer delete(visiting, listKey)
+
+	list, err := s.GetList(listKey)
+	if err != nil {
+		return ManagedListOutput{}, err
+	}
+	items, err := s.ListItems(listKey)
+	if err != nil {
+		return ManagedListOutput{}, err
+	}
+	output := buildManagedListOutput(*list, items, generatedAt)
+	includes, err := s.ListIncludes(listKey)
+	if err != nil {
+		return ManagedListOutput{}, err
+	}
+	if len(includes) == 0 {
+		return output, nil
+	}
+
+	included := make([]ManagedListToken, 0)
+	includedIdentities := map[string]struct{}{}
+	for _, include := range includes {
+		if !include.Enabled {
+			continue
+		}
+		source, err := s.buildExpandedManagedListOutput(include.Tag, generatedAt, visiting)
+		if err != nil {
+			return ManagedListOutput{}, err
+		}
+		if !source.Enabled {
+			continue
+		}
+		for _, token := range source.Items {
+			identity := managedListTokenIdentity(token)
+			if _, exists := includedIdentities[identity]; exists {
+				continue
+			}
+			includedIdentities[identity] = struct{}{}
+			token.Slot = include.Tag
+			if include.Rank > 0 {
+				token.Rank = include.Rank
+			}
+			included = append(included, token)
+		}
+	}
+
+	combined := make([]ManagedListToken, 0, len(output.Items)+len(included))
+	for _, token := range output.Items {
+		if _, replaced := includedIdentities[managedListTokenIdentity(token)]; replaced {
+			continue
+		}
+		combined = append(combined, token)
+	}
+	combined = append(combined, included...)
+	sort.SliceStable(combined, func(i, j int) bool {
+		if combined[i].Rank != combined[j].Rank {
+			return combined[i].Rank < combined[j].Rank
+		}
+		if combined[i].Slot != combined[j].Slot {
+			return combined[i].Slot < combined[j].Slot
+		}
+		if combined[i].Chain != combined[j].Chain {
+			return combined[i].Chain < combined[j].Chain
+		}
+		return strings.ToLower(combined[i].Address) < strings.ToLower(combined[j].Address)
+	})
+	output.Items = combined
+	return output, nil
+}
+
+func managedListTokenIdentity(token ManagedListToken) string {
+	address := strings.TrimSpace(token.Address)
+	if strings.HasPrefix(strings.ToLower(address), "0x") {
+		address = strings.ToLower(address)
+	}
+	return normalizeChain(token.Chain) + "\x00" + address
+}
+
 func managedTokenFromAsset(asset AssetDetail) ManagedToken {
 	return ManagedToken{
 		Kind:       defaultString(assetKind(asset), "token"),
@@ -1051,6 +1371,14 @@ func scanManagedListItem(scanner managedListScanner) (ManagedListItem, error) {
 		_ = json.Unmarshal([]byte(linksJSON), &item.Token.Links)
 	}
 	return item, nil
+}
+
+func scanManagedListInclude(scanner managedListScanner) (ManagedListInclude, error) {
+	var include ManagedListInclude
+	var enabled int
+	err := scanner.Scan(&include.Tag, &include.Rank, &enabled, &include.CreatedAt, &include.UpdatedAt)
+	include.Enabled = enabled != 0
+	return include, err
 }
 
 func normalizeListKey(key string) string {

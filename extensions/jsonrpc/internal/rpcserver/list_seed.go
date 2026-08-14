@@ -92,6 +92,8 @@ var appTokenSeedLists = []seedListSpec{
 	},
 }
 
+var defaultHomepageIncludeTags = []string{"usdt", "usdc", "usdg", "usds"}
+
 func (s *ManagedListService) seedFromAppTokenList(db *sql.DB) error {
 	if strings.TrimSpace(s.tokenListSeedPath) == "" {
 		return nil
@@ -180,6 +182,41 @@ func nextSeedRank(db *sql.DB, listKey string) (int, error) {
 		where l.key = ?
 	`, normalizeListKey(listKey)).Scan(&rank)
 	return rank, err
+}
+
+func seedHomepageIncludes(db *sql.DB) error {
+	var homepageID int64
+	if err := db.QueryRow(`select id from lists where key = 'homepage'`).Scan(&homepageID); errors.Is(err, sql.ErrNoRows) {
+		return nil
+	} else if err != nil {
+		return err
+	}
+	now := time.Now().UTC().Format(time.RFC3339)
+	for _, tag := range defaultHomepageIncludeTags {
+		var sourceID int64
+		if err := db.QueryRow(`select id from lists where key = ?`, tag).Scan(&sourceID); errors.Is(err, sql.ErrNoRows) {
+			continue
+		} else if err != nil {
+			return err
+		}
+		var rank int
+		if err := db.QueryRow(`
+			select coalesce(min(li.rank), 0)
+			from list_items li
+			where li.list_id = ? and li.slot = ?
+		`, homepageID, tag).Scan(&rank); err != nil {
+			return err
+		}
+		_, err := db.Exec(`
+			insert into list_includes(list_id, source_list_id, rank, enabled, created_at, updated_at)
+			values(?, ?, ?, 1, ?, ?)
+			on conflict(list_id, source_list_id) do nothing
+		`, homepageID, sourceID, rank, now, now)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
 }
 
 func (s *ManagedListService) seedFromHomepage(db *sql.DB) error {

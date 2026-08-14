@@ -48,6 +48,75 @@ func (s *Server) listAPIHandler() http.Handler {
 			return
 		}
 
+		if parts[1] == "exchanges" || parts[1] == "wallets" {
+			if normalizeListKey(listKey) != supportListKey {
+				writeJSONError(w, http.StatusNotFound, "not found")
+				return
+			}
+			category := parts[1]
+			if len(parts) == 2 {
+				switch r.Method {
+				case http.MethodGet:
+					s.handleListSupportEntries(w, category)
+				case http.MethodPost:
+					s.handleCreateSupportEntry(w, r, category)
+				default:
+					writeMethodNotAllowed(w, http.MethodGet, http.MethodPost)
+				}
+				return
+			}
+			if len(parts) != 3 {
+				writeJSONError(w, http.StatusNotFound, "not found")
+				return
+			}
+			id := parts[2]
+			switch r.Method {
+			case http.MethodGet:
+				s.handleGetSupportEntry(w, category, id)
+			case http.MethodPut:
+				s.handleReplaceSupportEntry(w, r, category, id)
+			case http.MethodPatch:
+				s.handlePatchSupportEntry(w, r, category, id)
+			case http.MethodDelete:
+				s.handleDeleteSupportEntry(w, category, id)
+			default:
+				writeMethodNotAllowed(w, http.MethodGet, http.MethodPut, http.MethodPatch, http.MethodDelete)
+			}
+			return
+		}
+
+		if parts[1] == "includes" {
+			if len(parts) == 2 {
+				switch r.Method {
+				case http.MethodGet:
+					s.handleListIncludes(w, listKey)
+				case http.MethodPost:
+					s.handleCreateListInclude(w, r, listKey)
+				default:
+					writeMethodNotAllowed(w, http.MethodGet, http.MethodPost)
+				}
+				return
+			}
+			if len(parts) != 3 {
+				writeJSONError(w, http.StatusNotFound, "not found")
+				return
+			}
+			tag := parts[2]
+			switch r.Method {
+			case http.MethodGet:
+				s.handleGetListInclude(w, listKey, tag)
+			case http.MethodPut:
+				s.handleReplaceListInclude(w, r, listKey, tag)
+			case http.MethodPatch:
+				s.handlePatchListInclude(w, r, listKey, tag)
+			case http.MethodDelete:
+				s.handleDeleteListInclude(w, listKey, tag)
+			default:
+				writeMethodNotAllowed(w, http.MethodGet, http.MethodPut, http.MethodPatch, http.MethodDelete)
+			}
+			return
+		}
+
 		if parts[1] != "items" {
 			writeJSONError(w, http.StatusNotFound, "not found")
 			return
@@ -113,6 +182,11 @@ func (s *Server) handleListLists(w http.ResponseWriter) {
 }
 
 func (s *Server) handleGetList(w http.ResponseWriter, key string) {
+	if normalizeListKey(key) == supportListKey {
+		list, err := s.lists.GetSupportDocument()
+		writeJSONResultOrError(w, list, err)
+		return
+	}
 	list, err := s.lists.GetListDocument(key)
 	writeJSONResultOrError(w, list, err)
 }
@@ -185,7 +259,7 @@ func (s *Server) handleCreateList(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	w.Header().Set("Location", "/api/lists/"+created.Key)
-	document, err := s.lists.GetListDocument(created.Key)
+	document, err := s.listDocumentForResponse(created.Key)
 	writeJSONResultOrErrorStatus(w, document, err, http.StatusCreated)
 }
 
@@ -218,7 +292,7 @@ func (s *Server) handleReplaceList(w http.ResponseWriter, r *http.Request, key s
 	if status == http.StatusCreated {
 		w.Header().Set("Location", "/api/lists/"+updated.Key)
 	}
-	document, err := s.lists.GetListDocument(updated.Key)
+	document, err := s.listDocumentForResponse(updated.Key)
 	writeJSONResultOrErrorStatus(w, document, err, status)
 }
 
@@ -247,8 +321,15 @@ func (s *Server) handlePatchList(w http.ResponseWriter, r *http.Request, key str
 		writeJSONResultOrError(w, nil, err)
 		return
 	}
-	document, err := s.lists.GetListDocument(updated.Key)
+	document, err := s.listDocumentForResponse(updated.Key)
 	writeJSONResultOrError(w, document, err)
+}
+
+func (s *Server) listDocumentForResponse(key string) (any, error) {
+	if normalizeListKey(key) == supportListKey {
+		return s.lists.GetSupportDocument()
+	}
+	return s.lists.GetListDocument(key)
 }
 
 func (s *Server) handleDeleteList(w http.ResponseWriter, key string) {
@@ -259,6 +340,269 @@ func (s *Server) handleDeleteList(w http.ResponseWriter, key string) {
 func (s *Server) handleListItems(w http.ResponseWriter, key string) {
 	items, err := s.lists.ListItems(key)
 	writeJSONResultOrError(w, items, err)
+}
+
+type managedListIncludeWriteRequest struct {
+	Tag       *string `json:"tag"`
+	Rank      *int    `json:"rank"`
+	Enabled   *bool   `json:"enabled"`
+	CreatedAt *string `json:"createdAt"`
+	UpdatedAt *string `json:"updatedAt"`
+}
+
+func (s *Server) handleListIncludes(w http.ResponseWriter, key string) {
+	includes, err := s.lists.ListIncludes(key)
+	writeJSONResultOrError(w, includes, err)
+}
+
+func (s *Server) handleCreateListInclude(w http.ResponseWriter, r *http.Request, listKey string) {
+	request := managedListIncludeWriteRequest{}
+	if err := decodeHTTPJSON(r, &request); err != nil {
+		writeJSONError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	if request.Tag == nil || strings.TrimSpace(*request.Tag) == "" {
+		writeJSONError(w, http.StatusBadRequest, "tag is required")
+		return
+	}
+	tag := normalizeListKey(*request.Tag)
+	if _, err := s.lists.GetInclude(listKey, tag); err == nil {
+		writeJSONResultOrErrorStatus(w, nil, conflict("list include already exists"), http.StatusCreated)
+		return
+	} else if !isNotFoundError(err) {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	include := ManagedListInclude{Tag: tag, Enabled: true}
+	applyListIncludeWrite(request, &include)
+	created, err := s.lists.SaveInclude(listKey, include)
+	if err == nil {
+		w.Header().Set("Location", listIncludeLocation(listKey, tag))
+	}
+	writeJSONResultOrErrorStatus(w, created, err, http.StatusCreated)
+}
+
+func (s *Server) handleGetListInclude(w http.ResponseWriter, listKey, tag string) {
+	include, err := s.lists.GetInclude(listKey, tag)
+	writeJSONResultOrError(w, include, err)
+}
+
+func (s *Server) handleReplaceListInclude(w http.ResponseWriter, r *http.Request, listKey, tag string) {
+	request := managedListIncludeWriteRequest{}
+	if err := decodeHTTPJSON(r, &request); err != nil {
+		writeJSONError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	tag = normalizeListKey(tag)
+	if request.Tag != nil && normalizeListKey(*request.Tag) != tag {
+		writeJSONError(w, http.StatusBadRequest, "include tag must match the path tag")
+		return
+	}
+	_, getErr := s.lists.GetInclude(listKey, tag)
+	status := http.StatusOK
+	if isNotFoundError(getErr) {
+		status = http.StatusCreated
+	} else if getErr != nil {
+		writeJSONResultOrError(w, nil, getErr)
+		return
+	}
+	include := ManagedListInclude{Tag: tag, Enabled: true}
+	applyListIncludeWrite(request, &include)
+	include.Tag = tag
+	updated, err := s.lists.SaveInclude(listKey, include)
+	if err == nil && status == http.StatusCreated {
+		w.Header().Set("Location", listIncludeLocation(listKey, tag))
+	}
+	writeJSONResultOrErrorStatus(w, updated, err, status)
+}
+
+func (s *Server) handlePatchListInclude(w http.ResponseWriter, r *http.Request, listKey, tag string) {
+	include, err := s.lists.GetInclude(listKey, tag)
+	if err != nil {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	request := managedListIncludeWriteRequest{}
+	if err := decodeHTTPJSON(r, &request); err != nil {
+		writeJSONError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	if request.Tag != nil {
+		writeJSONError(w, http.StatusBadRequest, "include tag is immutable")
+		return
+	}
+	if request.Rank == nil && request.Enabled == nil {
+		writeJSONError(w, http.StatusBadRequest, "at least one mutable include field is required")
+		return
+	}
+	applyListIncludeWrite(request, include)
+	updated, err := s.lists.SaveInclude(listKey, *include)
+	writeJSONResultOrError(w, updated, err)
+}
+
+func (s *Server) handleDeleteListInclude(w http.ResponseWriter, listKey, tag string) {
+	writeNoContentOrError(w, s.lists.DeleteInclude(listKey, tag))
+}
+
+func applyListIncludeWrite(request managedListIncludeWriteRequest, include *ManagedListInclude) {
+	if request.Tag != nil {
+		include.Tag = normalizeListKey(*request.Tag)
+	}
+	if request.Rank != nil {
+		include.Rank = *request.Rank
+	}
+	if request.Enabled != nil {
+		include.Enabled = *request.Enabled
+	}
+}
+
+func listIncludeLocation(listKey, tag string) string {
+	return "/api/lists/" + normalizeListKey(listKey) + "/includes/" + normalizeListKey(tag)
+}
+
+type managedSupportEntryWriteRequest struct {
+	ID        *string `json:"id"`
+	Name      *string `json:"name"`
+	Type      *string `json:"type"`
+	LogoURI   *string `json:"logoURI"`
+	Rank      *int    `json:"rank"`
+	Enabled   *bool   `json:"enabled"`
+	CreatedAt *string `json:"createdAt"`
+	UpdatedAt *string `json:"updatedAt"`
+}
+
+func (input managedSupportEntryWriteRequest) apply(entry *ManagedSupportEntry) {
+	if input.ID != nil {
+		entry.ID = normalizeSupportEntryID(*input.ID)
+	}
+	if input.Name != nil {
+		entry.Name = strings.TrimSpace(*input.Name)
+	}
+	if input.Type != nil {
+		entry.Type = strings.TrimSpace(*input.Type)
+	}
+	if input.LogoURI != nil {
+		entry.LogoURI = strings.TrimSpace(*input.LogoURI)
+	}
+	if input.Rank != nil {
+		entry.Rank = *input.Rank
+	}
+	if input.Enabled != nil {
+		entry.Enabled = *input.Enabled
+	}
+}
+
+func (input managedSupportEntryWriteRequest) emptyPatch() bool {
+	return input.ID == nil && input.Name == nil && input.Type == nil && input.LogoURI == nil && input.Rank == nil && input.Enabled == nil
+}
+
+func (s *Server) handleListSupportEntries(w http.ResponseWriter, category string) {
+	entries, err := s.lists.ListSupportEntries(category)
+	writeJSONResultOrError(w, entries, err)
+}
+
+func (s *Server) handleCreateSupportEntry(w http.ResponseWriter, r *http.Request, category string) {
+	request := managedSupportEntryWriteRequest{}
+	if err := decodeHTTPJSON(r, &request); err != nil {
+		writeJSONError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	if request.ID == nil || request.Name == nil || request.LogoURI == nil {
+		writeJSONError(w, http.StatusBadRequest, "id, name and logoURI are required")
+		return
+	}
+	if category == "exchanges" && request.Type == nil {
+		writeJSONError(w, http.StatusBadRequest, "exchange type is required")
+		return
+	}
+	entry := ManagedSupportEntry{Enabled: true}
+	request.apply(&entry)
+	if _, err := s.lists.GetSupportEntry(category, entry.ID); err == nil {
+		writeJSONResultOrErrorStatus(w, nil, conflict("support entry already exists"), http.StatusCreated)
+		return
+	} else if !isNotFoundError(err) {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	created, err := s.lists.SaveSupportEntry(category, entry)
+	if err == nil {
+		w.Header().Set("Location", supportEntryLocation(category, created.ID))
+	}
+	writeJSONResultOrErrorStatus(w, created, err, http.StatusCreated)
+}
+
+func (s *Server) handleGetSupportEntry(w http.ResponseWriter, category, id string) {
+	entry, err := s.lists.GetSupportEntry(category, id)
+	writeJSONResultOrError(w, entry, err)
+}
+
+func (s *Server) handleReplaceSupportEntry(w http.ResponseWriter, r *http.Request, category, id string) {
+	request := managedSupportEntryWriteRequest{}
+	if err := decodeHTTPJSON(r, &request); err != nil {
+		writeJSONError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	id = normalizeSupportEntryID(id)
+	if request.ID != nil && normalizeSupportEntryID(*request.ID) != id {
+		writeJSONError(w, http.StatusBadRequest, "support entry id must match the path id")
+		return
+	}
+	if request.Name == nil || request.LogoURI == nil {
+		writeJSONError(w, http.StatusBadRequest, "name and logoURI are required")
+		return
+	}
+	if category == "exchanges" && request.Type == nil {
+		writeJSONError(w, http.StatusBadRequest, "exchange type is required")
+		return
+	}
+	_, getErr := s.lists.GetSupportEntry(category, id)
+	status := http.StatusOK
+	if isNotFoundError(getErr) {
+		status = http.StatusCreated
+	} else if getErr != nil {
+		writeJSONResultOrError(w, nil, getErr)
+		return
+	}
+	entry := ManagedSupportEntry{ID: id, Enabled: true}
+	request.apply(&entry)
+	entry.ID = id
+	updated, err := s.lists.SaveSupportEntry(category, entry)
+	if err == nil && status == http.StatusCreated {
+		w.Header().Set("Location", supportEntryLocation(category, id))
+	}
+	writeJSONResultOrErrorStatus(w, updated, err, status)
+}
+
+func (s *Server) handlePatchSupportEntry(w http.ResponseWriter, r *http.Request, category, id string) {
+	entry, err := s.lists.GetSupportEntry(category, id)
+	if err != nil {
+		writeJSONResultOrError(w, nil, err)
+		return
+	}
+	request := managedSupportEntryWriteRequest{}
+	if err := decodeHTTPJSON(r, &request); err != nil {
+		writeJSONError(w, http.StatusBadRequest, err.Error())
+		return
+	}
+	if request.ID != nil {
+		writeJSONError(w, http.StatusBadRequest, "support entry id is immutable")
+		return
+	}
+	if request.emptyPatch() {
+		writeJSONError(w, http.StatusBadRequest, "at least one mutable support entry field is required")
+		return
+	}
+	request.apply(entry)
+	updated, err := s.lists.SaveSupportEntry(category, *entry)
+	writeJSONResultOrError(w, updated, err)
+}
+
+func (s *Server) handleDeleteSupportEntry(w http.ResponseWriter, category, id string) {
+	writeNoContentOrError(w, s.lists.DeleteSupportEntry(category, id))
+}
+
+func supportEntryLocation(category, id string) string {
+	return "/api/lists/support/" + category + "/" + normalizeSupportEntryID(id)
 }
 
 type managedListItemWriteRequest struct {

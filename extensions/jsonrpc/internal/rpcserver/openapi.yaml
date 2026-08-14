@@ -12,6 +12,7 @@ servers:
 tags:
   - name: Lists
   - name: Items
+  - name: Support
   - name: Pack
   - name: Published Files
 paths:
@@ -47,7 +48,7 @@ paths:
             Location: {schema: {type: string}}
           content:
             application/json:
-              schema: {$ref: '#/components/schemas/ManagedListDocument'}
+              schema: {$ref: '#/components/schemas/ManagedListAggregate'}
         '400': {$ref: '#/components/responses/InvalidRequest'}
         '409': {$ref: '#/components/responses/Conflict'}
         '500': {$ref: '#/components/responses/InternalError'}
@@ -64,7 +65,7 @@ paths:
           description: Complete management document
           content:
             application/json:
-              schema: {$ref: '#/components/schemas/ManagedListDocument'}
+              schema: {$ref: '#/components/schemas/ManagedListAggregate'}
         '404': {$ref: '#/components/responses/NotFound'}
         '500': {$ref: '#/components/responses/InternalError'}
     put:
@@ -82,14 +83,14 @@ paths:
           description: Replaced list aggregate
           content:
             application/json:
-              schema: {$ref: '#/components/schemas/ManagedListDocument'}
+              schema: {$ref: '#/components/schemas/ManagedListAggregate'}
         '201':
           description: Created list aggregate
           headers:
             Location: {schema: {type: string}}
           content:
             application/json:
-              schema: {$ref: '#/components/schemas/ManagedListDocument'}
+              schema: {$ref: '#/components/schemas/ManagedListAggregate'}
         '400': {$ref: '#/components/responses/InvalidRequest'}
         '500': {$ref: '#/components/responses/InternalError'}
     patch:
@@ -108,7 +109,7 @@ paths:
           description: Updated list aggregate
           content:
             application/json:
-              schema: {$ref: '#/components/schemas/ManagedListDocument'}
+              schema: {$ref: '#/components/schemas/ManagedListAggregate'}
         '400': {$ref: '#/components/responses/InvalidRequest'}
         '404': {$ref: '#/components/responses/NotFound'}
         '500': {$ref: '#/components/responses/InternalError'}
@@ -240,6 +241,231 @@ paths:
         '204': {description: Deleted}
         '404': {$ref: '#/components/responses/NotFound'}
         '500': {$ref: '#/components/responses/InternalError'}
+  /api/lists/{listKey}/includes:
+    parameters:
+      - $ref: '#/components/parameters/ListKey'
+    get:
+      tags: [Lists]
+      operationId: listManagedListIncludes
+      summary: List source lists expanded into a target list
+      security: [{basicAuth: []}]
+      responses:
+        '200':
+          description: Ordered list includes
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/ManagedListInclude'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    post:
+      tags: [Lists]
+      operationId: createManagedListInclude
+      summary: Include another managed list by tag
+      description: The tag is the source list key and becomes the slot on every expanded packed item.
+      security: [{basicAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ListIncludeCreate'}
+      responses:
+        '201':
+          description: Created include
+          headers:
+            Location: {schema: {type: string}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListInclude'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/lists/support/{supportCategory}:
+    parameters:
+      - $ref: '#/components/parameters/SupportCategory'
+    get:
+      tags: [Support]
+      operationId: listSupportEntries
+      summary: List managed exchanges or wallets
+      security: [{basicAuth: []}]
+      responses:
+        '200':
+          description: Ordered support entries, including disabled entries
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {$ref: '#/components/schemas/ManagedSupportEntry'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    post:
+      tags: [Support]
+      operationId: createSupportEntry
+      summary: Add an exchange or wallet
+      security: [{basicAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/SupportEntryCreate'}
+      responses:
+        '201':
+          description: Created support entry
+          headers:
+            Location: {schema: {type: string}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedSupportEntry'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/lists/support/{supportCategory}/{supportEntryId}:
+    parameters:
+      - $ref: '#/components/parameters/SupportCategory'
+      - $ref: '#/components/parameters/SupportEntryId'
+    get:
+      tags: [Support]
+      operationId: getSupportEntry
+      summary: Get one managed exchange or wallet
+      security: [{basicAuth: []}]
+      responses:
+        '200':
+          description: Support entry
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedSupportEntry'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    put:
+      tags: [Support]
+      operationId: replaceSupportEntry
+      summary: Replace a support entry or create it at this id
+      security: [{basicAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/SupportEntryReplace'}
+      responses:
+        '200':
+          description: Replaced support entry
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedSupportEntry'}
+        '201':
+          description: Created support entry
+          headers:
+            Location: {schema: {type: string}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedSupportEntry'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    patch:
+      tags: [Support]
+      operationId: patchSupportEntry
+      summary: Modify individual support-entry fields
+      description: The entry id is immutable. Omitted fields are preserved.
+      security: [{basicAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/SupportEntryPatch'}
+      responses:
+        '200':
+          description: Updated support entry
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedSupportEntry'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    delete:
+      tags: [Support]
+      operationId: deleteSupportEntry
+      summary: Delete an exchange or wallet
+      security: [{basicAuth: []}]
+      responses:
+        '204': {description: Deleted}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+  /api/lists/{listKey}/includes/{tag}:
+    parameters:
+      - $ref: '#/components/parameters/ListKey'
+      - $ref: '#/components/parameters/IncludeTag'
+    get:
+      tags: [Lists]
+      operationId: getManagedListInclude
+      summary: Get one list include
+      security: [{basicAuth: []}]
+      responses:
+        '200':
+          description: List include
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListInclude'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    put:
+      tags: [Lists]
+      operationId: replaceManagedListInclude
+      summary: Replace an include or create it at this tag
+      security: [{basicAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ListIncludeReplace'}
+      responses:
+        '200':
+          description: Replaced include
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListInclude'}
+        '201':
+          description: Created include
+          headers:
+            Location: {schema: {type: string}}
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListInclude'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '409': {$ref: '#/components/responses/Conflict'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    patch:
+      tags: [Lists]
+      operationId: patchManagedListInclude
+      summary: Change include rank or enabled state
+      security: [{basicAuth: []}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ListIncludePatch'}
+      responses:
+        '200':
+          description: Updated include
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ManagedListInclude'}
+        '400': {$ref: '#/components/responses/InvalidRequest'}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
+    delete:
+      tags: [Lists]
+      operationId: deleteManagedListInclude
+      summary: Stop including a source list
+      security: [{basicAuth: []}]
+      responses:
+        '204': {description: Deleted}
+        '404': {$ref: '#/components/responses/NotFound'}
+        '500': {$ref: '#/components/responses/InternalError'}
   /api/pack/{listKey}:
     parameters:
       - $ref: '#/components/parameters/ListKey'
@@ -288,7 +514,10 @@ paths:
           description: Packed list document
           content:
             application/json:
-              schema: {$ref: '#/components/schemas/PackedListDocument'}
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/PackedListDocument'
+                  - $ref: '#/components/schemas/PublishedSupportDocument'
         '404': {$ref: '#/components/responses/NotFound'}
   /files/{outputName}.json.zst:
     parameters:
@@ -363,6 +592,29 @@ components:
       description: Contract address or the literal `native` for a native asset.
       schema: {type: string, minLength: 1}
       example: 0xdAC17F958D2ee523a2206206994597C13D831ec7
+    IncludeTag:
+      name: tag
+      in: path
+      required: true
+      description: Source managed-list key and packed item slot.
+      schema:
+        type: string
+        pattern: '^[a-z0-9][a-z0-9._-]*$'
+      example: usdt
+    SupportCategory:
+      name: supportCategory
+      in: path
+      required: true
+      schema: {type: string, enum: [exchanges, wallets]}
+      example: wallets
+    SupportEntryId:
+      name: supportEntryId
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: '^[a-z0-9][a-z0-9._-]*$'
+      example: metamask
   responses:
     InvalidRequest:
       description: Invalid JSON, unknown field, validation error, or path/body mismatch
@@ -403,11 +655,135 @@ components:
       allOf:
         - $ref: '#/components/schemas/ManagedList'
         - type: object
-          required: [items]
+          required: [includes, items]
           properties:
+            includes:
+              type: array
+              items: {$ref: '#/components/schemas/ManagedListInclude'}
             items:
               type: array
               items: {$ref: '#/components/schemas/ManagedListItem'}
+    ManagedListAggregate:
+      oneOf:
+        - $ref: '#/components/schemas/ManagedListDocument'
+        - $ref: '#/components/schemas/ManagedSupportDocument'
+    ManagedSupportDocument:
+      allOf:
+        - $ref: '#/components/schemas/ManagedList'
+        - type: object
+          required: [schemaVersion, assetBaseURI, exchanges, wallets]
+          properties:
+            schemaVersion: {type: integer, const: 1}
+            assetBaseURI: {type: string, format: uri}
+            exchanges:
+              type: array
+              items: {$ref: '#/components/schemas/ManagedSupportEntry'}
+            wallets:
+              type: array
+              items: {$ref: '#/components/schemas/ManagedSupportEntry'}
+    ManagedSupportEntry:
+      type: object
+      required: [id, name, logoURI, enabled]
+      properties:
+        id: {type: string}
+        name: {type: string}
+        type: {type: string, enum: [cex, dex], description: Required for exchanges and omitted for wallets.}
+        logoURI: {type: string, format: uri}
+        rank: {type: integer, minimum: 0}
+        enabled: {type: boolean}
+        createdAt: {type: string, format: date-time}
+        updatedAt: {type: string, format: date-time}
+    SupportEntryCreate:
+      type: object
+      additionalProperties: false
+      required: [id, name, logoURI]
+      properties:
+        id: {type: string, pattern: '^[a-z0-9][a-z0-9._-]*$'}
+        name: {type: string, minLength: 1}
+        type: {type: string, enum: [cex, dex], description: Also required when supportCategory is exchanges.}
+        logoURI: {type: string, format: uri}
+        rank: {type: integer, minimum: 0}
+        enabled: {type: boolean, default: true}
+        createdAt: {type: string, format: date-time, description: Accepted and ignored on write.}
+        updatedAt: {type: string, format: date-time, description: Accepted and ignored on write.}
+    SupportEntryReplace:
+      type: object
+      additionalProperties: false
+      required: [name, logoURI]
+      properties:
+        id: {type: string, description: If present, must match supportEntryId.}
+        name: {type: string, minLength: 1}
+        type: {type: string, enum: [cex, dex], description: Also required when supportCategory is exchanges.}
+        logoURI: {type: string, format: uri}
+        rank: {type: integer, minimum: 0}
+        enabled: {type: boolean, default: true}
+        createdAt: {type: string, format: date-time, description: Accepted and ignored on write.}
+        updatedAt: {type: string, format: date-time, description: Accepted and ignored on write.}
+    SupportEntryPatch:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties:
+        name: {type: string, minLength: 1}
+        type: {type: string, enum: [cex, dex], description: Valid only for exchanges.}
+        logoURI: {type: string, format: uri}
+        rank: {type: integer, minimum: 0}
+        enabled: {type: boolean}
+    PublishedSupportDocument:
+      type: object
+      required: [schemaVersion, assetBaseURI, exchanges, wallets]
+      properties:
+        schemaVersion: {type: integer, const: 1}
+        assetBaseURI: {type: string, format: uri}
+        exchanges:
+          type: array
+          items: {$ref: '#/components/schemas/PublishedSupportEntry'}
+        wallets:
+          type: array
+          items: {$ref: '#/components/schemas/PublishedSupportEntry'}
+    PublishedSupportEntry:
+      type: object
+      required: [id, name, logoURI]
+      properties:
+        id: {type: string}
+        name: {type: string}
+        type: {type: string, enum: [cex, dex]}
+        logoURI: {type: string, format: uri}
+    ManagedListInclude:
+      type: object
+      required: [tag, enabled]
+      properties:
+        tag: {type: string, description: Source managed-list key and packed item slot.}
+        rank: {type: integer, minimum: 0, description: Group rank applied to expanded items; zero preserves source ranks.}
+        enabled: {type: boolean}
+        createdAt: {type: string, format: date-time}
+        updatedAt: {type: string, format: date-time}
+    ListIncludeCreate:
+      type: object
+      additionalProperties: false
+      required: [tag]
+      properties:
+        tag: {type: string, pattern: '^[a-z0-9][a-z0-9._-]*$'}
+        rank: {type: integer, minimum: 0}
+        enabled: {type: boolean, default: true}
+        createdAt: {type: string, format: date-time, description: Accepted and ignored on write.}
+        updatedAt: {type: string, format: date-time, description: Accepted and ignored on write.}
+    ListIncludeReplace:
+      type: object
+      additionalProperties: false
+      properties:
+        tag: {type: string, description: If present, must match the path tag.}
+        rank: {type: integer, minimum: 0}
+        enabled: {type: boolean, default: true}
+        createdAt: {type: string, format: date-time, description: Accepted and ignored on write.}
+        updatedAt: {type: string, format: date-time, description: Accepted and ignored on write.}
+    ListIncludePatch:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties:
+        rank: {type: integer, minimum: 0}
+        enabled: {type: boolean}
     ListCreate:
       type: object
       additionalProperties: false
@@ -647,7 +1023,7 @@ components:
         zstdSize: {type: integer, format: int64}
         jsonSha256: {type: string}
         zstdSha256: {type: string}
-        tokenCount: {type: integer}
+        tokenCount: {type: integer, description: Number of published entries; for support this is exchanges plus wallets.}
         generatedAt: {type: string, format: date-time}
     PackManifest:
       type: object

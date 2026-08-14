@@ -1793,6 +1793,187 @@ func TestManagedListCRUDAndPack(t *testing.T) {
 	}
 }
 
+func TestManagedSupportListSeedCRUDAndPack(t *testing.T) {
+	root := newFixtureRoot(t)
+	mustWriteJSON(t, filepath.Join(root, "support", "support.json"), PublishedSupportDocument{
+		SchemaVersion: 1,
+		AssetBaseURI:  supportAssetBaseURI,
+		Exchanges: []PublishedSupportEntry{
+			{ID: "uniswap", Name: "Uniswap", Type: "dex", LogoURI: supportAssetBaseURI + "/exchanges/uniswap/logo.svg"},
+		},
+		Wallets: []PublishedSupportEntry{
+			{ID: "metamask", Name: "MetaMask", LogoURI: supportAssetBaseURI + "/wallets/metamask/logo.svg"},
+		},
+	})
+	server := NewServer(Config{
+		Root:                root,
+		ManagedListDBPath:   filepath.Join(root, "managed.sqlite"),
+		ManagedListFilesDir: filepath.Join(root, "files"),
+	})
+	if err := server.lists.SeedDefaultLists(); err != nil {
+		t.Fatalf("seed support list: %v", err)
+	}
+	if err := server.lists.SeedDefaultLists(); err != nil {
+		t.Fatalf("support seed should be idempotent: %v", err)
+	}
+
+	rec := doHTTP(t, server.listAPIHandler(), http.MethodGet, "/api/lists/support", "")
+	var document ManagedSupportDocument
+	if rec.Code != http.StatusOK || json.Unmarshal(rec.Body.Bytes(), &document) != nil {
+		t.Fatalf("get support document status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	if len(document.Exchanges) != 1 || len(document.Wallets) != 3 {
+		t.Fatalf("expected source plus static wallet seeds, got %+v", document)
+	}
+
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodPost, "/api/lists/support/exchanges", `{"id":"curve","name":"Curve","type":"dex","logoURI":"https://cdn.example/curve.svg","rank":2}`)
+	if rec.Code != http.StatusCreated || rec.Header().Get("Location") != "/api/lists/support/exchanges/curve" {
+		t.Fatalf("create exchange status=%d location=%q body=%s", rec.Code, rec.Header().Get("Location"), rec.Body.String())
+	}
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodPatch, "/api/lists/support/exchanges/curve", `{"enabled":false,"name":"Curve Finance"}`)
+	if rec.Code != http.StatusOK || !strings.Contains(rec.Body.String(), `"enabled":false`) {
+		t.Fatalf("patch exchange status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodPut, "/api/lists/support/wallets/rabby", `{"name":"Rabby","logoURI":"https://cdn.example/rabby.svg","rank":4,"enabled":true}`)
+	if rec.Code != http.StatusCreated {
+		t.Fatalf("put wallet status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodDelete, "/api/lists/support/wallets/metamask", "")
+	if rec.Code != http.StatusNoContent {
+		t.Fatalf("delete wallet status=%d body=%s", rec.Code, rec.Body.String())
+	}
+
+	packed, err := server.lists.PackList("support")
+	if err != nil {
+		t.Fatalf("pack support: %v", err)
+	}
+	if packed.TokenCount != 4 {
+		t.Fatalf("expected one enabled exchange and three wallets, got %+v", packed)
+	}
+	var output PublishedSupportDocument
+	if err := readJSONFile(filepath.Join(root, "files", "support.json"), &output); err != nil {
+		t.Fatalf("read packed support: %v", err)
+	}
+	if len(output.Exchanges) != 1 || output.Exchanges[0].ID != "uniswap" || len(output.Wallets) != 3 {
+		t.Fatalf("packed support should omit disabled/deleted entries: %+v", output)
+	}
+	for _, entry := range append(output.Exchanges, output.Wallets...) {
+		if entry.ID == "curve" || entry.ID == "metamask" {
+			t.Fatalf("disabled/deleted entry leaked into packed support: %+v", output)
+		}
+	}
+}
+
+func TestManagedListIncludesCRUDAndExpandedPack(t *testing.T) {
+	root := newFixtureRoot(t)
+	server := NewServer(Config{
+		Root:                root,
+		ManagedListDBPath:   filepath.Join(root, "managed.sqlite"),
+		ManagedListFilesDir: filepath.Join(root, "files"),
+	})
+	for _, list := range []ManagedList{
+		{Key: "homepage", Name: "Homepage", Enabled: true},
+		{Key: "usdt", Name: "USDT", DisplayName: "Tether USD", DisplaySymbol: "USDT", LogoURI: "https://cdn.example/usdt.svg", Enabled: true},
+		{Key: "collection", Name: "Collection", Enabled: true},
+	} {
+		if _, err := server.lists.UpsertList(list); err != nil {
+			t.Fatalf("create %s: %v", list.Key, err)
+		}
+	}
+	sourceItems := []ManagedListItem{
+		{Token: ManagedToken{Kind: "token", Chain: "ethereum", Address: "0x111", Name: "Ethereum Tether", Symbol: "USDT", Decimals: 6}, Slot: "usdt", Rank: 1, Enabled: true, Display: true},
+		{Token: ManagedToken{Kind: "token", Chain: "tron", Address: "T111", Name: "Tron Tether", Symbol: "USDT", Decimals: 6}, Slot: "usdt", Rank: 2, Enabled: true, Display: false},
+	}
+	for _, item := range sourceItems {
+		if _, err := server.lists.SaveItem("usdt", item); err != nil {
+			t.Fatalf("save USDT source item: %v", err)
+		}
+	}
+	if _, err := server.lists.SaveItem("homepage", ManagedListItem{
+		Token: ManagedToken{Kind: "token", Chain: "ethereum", Address: "0x111", Name: "Old homepage USDT", Symbol: "USDT", Decimals: 6},
+		Slot:  "usdt", Rank: 5, Enabled: true, Display: true,
+	}); err != nil {
+		t.Fatalf("save duplicate homepage item: %v", err)
+	}
+	if _, err := server.lists.SaveItem("homepage", ManagedListItem{
+		Token: ManagedToken{Kind: "native", Chain: "solana", Address: "", Name: "Solana", Symbol: "SOL", Decimals: 9},
+		Slot:  "native", Rank: 1, Enabled: true, Display: true,
+	}); err != nil {
+		t.Fatalf("save native homepage item: %v", err)
+	}
+
+	rec := doHTTP(t, server.listAPIHandler(), http.MethodPost, "/api/lists/homepage/includes", `{"tag":"usdt","rank":10,"enabled":true}`)
+	if rec.Code != http.StatusCreated || rec.Header().Get("Location") != "/api/lists/homepage/includes/usdt" {
+		t.Fatalf("create include status=%d location=%q body=%s", rec.Code, rec.Header().Get("Location"), rec.Body.String())
+	}
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodPost, "/api/lists/homepage/includes", `{"tag":"usdt"}`)
+	if rec.Code != http.StatusConflict {
+		t.Fatalf("duplicate include status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodGet, "/api/lists/homepage", "")
+	var document ManagedListDocument
+	if rec.Code != http.StatusOK || json.Unmarshal(rec.Body.Bytes(), &document) != nil || len(document.Includes) != 1 || document.Includes[0].Tag != "usdt" {
+		t.Fatalf("list document should contain includes: status=%d body=%s", rec.Code, rec.Body.String())
+	}
+
+	packed, err := server.lists.PackList("homepage")
+	if err != nil {
+		t.Fatalf("pack expanded homepage: %v", err)
+	}
+	var output ManagedListOutput
+	if err := readJSONFile(filepath.Join(root, "files", packed.JSONPath), &output); err != nil {
+		t.Fatalf("read expanded homepage: %v", err)
+	}
+	if len(output.Items) != 3 {
+		t.Fatalf("expected native plus two deduplicated USDT items, got %+v", output.Items)
+	}
+	var foundEthereum, foundTron bool
+	for _, item := range output.Items {
+		if item.Chain == "ethereum" && item.Address == "0x111" {
+			foundEthereum = item.Slot == "usdt" && item.Rank == 10 && item.DisplayName == "Tether USD" && item.DisplaySymbol == "USDT" && item.LogoURI == "https://cdn.example/usdt.svg"
+		}
+		if item.Chain == "tron" && item.Address == "T111" {
+			foundTron = item.Slot == "usdt" && item.Rank == 10 && !item.Display
+		}
+	}
+	if !foundEthereum || !foundTron {
+		t.Fatalf("expanded source presentation/display was not preserved: %+v", output.Items)
+	}
+
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodPatch, "/api/lists/homepage/includes/usdt", `{"enabled":false}`)
+	if rec.Code != http.StatusOK {
+		t.Fatalf("disable include status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	packed, err = server.lists.PackList("homepage")
+	if err != nil {
+		t.Fatalf("pack homepage with disabled include: %v", err)
+	}
+	if err := readJSONFile(filepath.Join(root, "files", packed.JSONPath), &output); err != nil || len(output.Items) != 2 {
+		t.Fatalf("disabled include should leave direct homepage items: err=%v output=%+v", err, output)
+	}
+
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodPost, "/api/lists/collection/includes", `{"tag":"homepage","enabled":true}`)
+	if rec.Code != http.StatusCreated {
+		t.Fatalf("create collection include status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodPut, "/api/lists/homepage/includes/collection", `{"tag":"collection","enabled":true}`)
+	if rec.Code != http.StatusConflict {
+		t.Fatalf("cyclic include should conflict: status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodPost, "/api/lists/homepage/includes", `{"tag":"homepage"}`)
+	if rec.Code != http.StatusBadRequest {
+		t.Fatalf("self include should be rejected: status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodDelete, "/api/lists/homepage/includes/usdt", "")
+	if rec.Code != http.StatusNoContent {
+		t.Fatalf("delete include status=%d body=%s", rec.Code, rec.Body.String())
+	}
+	rec = doHTTP(t, server.listAPIHandler(), http.MethodGet, "/api/lists/homepage/includes/usdt", "")
+	if rec.Code != http.StatusNotFound {
+		t.Fatalf("deleted include should be missing: status=%d body=%s", rec.Code, rec.Body.String())
+	}
+}
+
 func TestManagedListRESTAPI(t *testing.T) {
 	root := newFixtureRoot(t)
 	server := NewServer(Config{
@@ -2067,11 +2248,13 @@ func TestManagedListOpenAPIContractIsServed(t *testing.T) {
 		"openapi: 3.1.0",
 		"/api/lists/{listKey}:",
 		"/api/lists/{listKey}/items/{chain}/{address}:",
+		"/api/lists/{listKey}/includes/{tag}:",
 		"/files/{outputName}.json:",
 		"/files/{outputName}.json.zst:",
 		"/files/manifest.json:",
 		"authoritative public URL",
 		"operationId: patchManagedListItem",
+		"operationId: createManagedListInclude",
 		"operationId: downloadPackedListZstd",
 		"additionalProperties: false",
 	} {
@@ -2403,6 +2586,13 @@ func TestManagedListSeedsDefaultMultichainLists(t *testing.T) {
 	}
 	if len(homepage) != 1 || homepage[0].DisplaySymbol != "USDT" || homepage[0].Slot != "usdt" || !homepage[0].Display {
 		t.Fatalf("expected homepage seed item with display symbol, got %+v", homepage)
+	}
+	homepageIncludes, err := server.lists.ListIncludes("homepage")
+	if err != nil {
+		t.Fatalf("list default homepage includes: %v", err)
+	}
+	if len(homepageIncludes) != len(defaultHomepageIncludeTags) {
+		t.Fatalf("expected default homepage family includes %v, got %+v", defaultHomepageIncludeTags, homepageIncludes)
 	}
 	manifest, err := server.PackManagedListsOnce()
 	if err != nil {
