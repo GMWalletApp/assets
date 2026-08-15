@@ -2086,7 +2086,8 @@
       "symbol": "RLUSD",
       "decimals": 18,
       "status": "active",
-      "logoExists": false,
+      "logoURI": "https://coin-images.coingecko.com/coins/images/39651/large/RLUSD_200x200_%281%29.png?1727376633",
+      "logoExists": true,
       "receive_list": true,
       "tags": [
         "stablecoin"
@@ -2117,7 +2118,8 @@
       "symbol": "BNSOL",
       "decimals": 9,
       "status": "active",
-      "logoExists": false,
+      "logoURI": "https://coin-images.coingecko.com/coins/images/40132/large/bnsol.png?1725968367",
+      "logoExists": true,
       "receive_list": true,
       "tags": [
         "staking"
@@ -2144,7 +2146,8 @@
       "symbol": "SPK",
       "decimals": 18,
       "status": "active",
-      "logoExists": false,
+      "logoURI": "https://coin-images.coingecko.com/coins/images/38637/large/Spark-Logomark-RGB.png?1744878896",
+      "logoExists": true,
       "receive_list": true,
       "tags": [
         "defi",
