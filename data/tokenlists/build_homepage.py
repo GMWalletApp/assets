@@ -4,7 +4,7 @@ Output:
   out/homepage.json = {
     "generatedAt": "...",
     "chainOrder": [...],
-    "slotOrder": ["native", "usdt", "usdt0", "usdc", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"],
+    "slotOrder": ["native", "usdt", "usdt0", "usdc", "usde", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"],
     "chains": [...],
     "tokens": [...]
   }
@@ -76,8 +76,8 @@ CHAIN_CONFIG = {
     "tron": {"chainName": "TRON", "nativeSymbol": "TRX", "nativeName": "TRON", "chainId": None},
 }
 
-SLOT_ORDER = ["native", "usdt", "usdt0", "usdc", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"]
-TARGET_SLOTS = ["usdt", "usdt0", "usdc", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"]
+SLOT_ORDER = ["native", "usdt", "usdt0", "usdc", "usde", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"]
+TARGET_SLOTS = ["usdt", "usdt0", "usdc", "usde", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"]
 TOKENLESS_CHAINS = {"bitcoin"}
 STABLECOIN_SLOTS = frozenset(TARGET_SLOTS)
 
@@ -86,6 +86,7 @@ STABLECOIN_SLOTS = frozenset(TARGET_SLOTS)
 # silently expanding homepage support to an unreviewed chain.
 SLOT_CHAIN_ALLOWLISTS = {
     "usdt0": {"arbitrum", "polygon"},
+    "usde": {"ethereum", "smartchain", "arbitrum", "solana"},
     "usdd": {"ethereum", "smartchain", "tron"},
     "usd1": {"ethereum", "smartchain", "solana"},
     "usdg": {"ethereum", "solana"},
@@ -103,6 +104,7 @@ SLOT_META = {
     "usdt": {"displayName": "Tether", "displaySymbol": "USDT"},
     "usdt0": {"displayName": "USDT0", "displaySymbol": "USDT0"},
     "usdc": {"displayName": "USD Coin", "displaySymbol": "USDC"},
+    "usde": {"displayName": "Ethena USDe", "displaySymbol": "USDe"},
     "usds": {"displayName": "USDS", "displaySymbol": "USDS"},
     "usdd": {"displayName": "Decentralized USD", "displaySymbol": "USDD"},
     "usd1": {"displayName": "World Liberty Financial USD", "displaySymbol": "USD1"},
@@ -158,6 +160,10 @@ SLOT_RULES = {
         preferred_symbols=("USDC",),
         fallback_symbols=("USDC.E",),
         preferred_name_terms=("usd coin", "usdc"),
+    ),
+    "usde": SlotRule(
+        preferred_symbols=("USDE",),
+        preferred_name_terms=("ethena", "usde"),
     ),
     "usds": SlotRule(
         preferred_symbols=("USDS",),

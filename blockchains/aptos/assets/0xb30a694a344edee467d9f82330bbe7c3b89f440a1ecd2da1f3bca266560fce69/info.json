@@ -1,0 +1,29 @@
+{
+    "name": "USDe",
+    "type": "APTOSFA",
+    "symbol": "USDe",
+    "decimals": 6,
+    "website": "https://ethena.fi/",
+    "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+    "explorer": "https://explorer.aptoslabs.com/fungible_asset/0xb30a694a344edee467d9f82330bbe7c3b89f440a1ecd2da1f3bca266560fce69?network=mainnet",
+    "status": "active",
+    "id": "0xb30a694a344edee467d9f82330bbe7c3b89f440a1ecd2da1f3bca266560fce69",
+    "links": [
+        {
+            "name": "x",
+            "url": "https://x.com/ethena_labs"
+        },
+        {
+            "name": "coinmarketcap",
+            "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+        },
+        {
+            "name": "coingecko",
+            "url": "https://coingecko.com/en/coins/ethena-usde"
+        }
+    ],
+    "tags": [
+        "stablecoin",
+        "defi"
+    ]
+}

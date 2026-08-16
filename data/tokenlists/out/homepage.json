@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T11:46:14Z",
+  "generatedAt": "2026-08-16T17:15:05Z",
   "chainOrder": [
     "ethereum",
     "bsc",
@@ -13,6 +13,7 @@
     "usdt",
     "usdt0",
     "usdc",
+    "usde",
     "usds",
     "usdd",
     "usd1",
@@ -35,6 +36,7 @@
         "native",
         "usdt",
         "usdc",
+        "usde",
         "usds",
         "usdd",
         "usd1",
@@ -45,7 +47,7 @@
         "gyen",
         "jpyc"
       ],
-      "tokenCount": 12
+      "tokenCount": 13
     },
     {
       "key": "bsc",
@@ -58,11 +60,12 @@
         "native",
         "usdt",
         "usdc",
+        "usde",
         "usdd",
         "usd1",
         "euri"
       ],
-      "tokenCount": 6
+      "tokenCount": 7
     },
     {
       "key": "arbitrum",
@@ -75,11 +78,12 @@
         "native",
         "usdt0",
         "usdc",
+        "usde",
         "usds",
         "eure",
         "gyen"
       ],
-      "tokenCount": 6
+      "tokenCount": 7
     },
     {
       "key": "polygon",
@@ -108,12 +112,13 @@
         "native",
         "usdt",
         "usdc",
+        "usde",
         "usd1",
         "usdg",
         "eurc",
         "gyen"
       ],
-      "tokenCount": 7
+      "tokenCount": 8
     },
     {
       "key": "tron",
@@ -191,6 +196,27 @@
       "decimals": 6,
       "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
       "explorer": "https://etherscan.io/token/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "source": "trustwallet-asset"
+    },
+    {
+      "id": "ethereum:usde",
+      "chain": "ethereum",
+      "chainName": "Ethereum",
+      "chainId": 1,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/info/logo.png",
+      "slot": "usde",
+      "kind": "token",
+      "displaySymbol": "USDe",
+      "displayName": "Ethena USDe",
+      "tags": [
+        "stablecoin"
+      ],
+      "symbol": "USDe",
+      "name": "USDe",
+      "address": "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+      "decimals": 18,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x4c9EDD5852cd905f086C759E8383e09bff1E68B3/logo.png",
+      "explorer": "https://etherscan.io/token/0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
       "source": "trustwallet-asset"
     },
     {
@@ -444,6 +470,27 @@
       "source": "trustwallet-asset"
     },
     {
+      "id": "bsc:usde",
+      "chain": "bsc",
+      "chainName": "BNB Smart Chain",
+      "chainId": 56,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/smartchain/info/logo.png",
+      "slot": "usde",
+      "kind": "token",
+      "displaySymbol": "USDe",
+      "displayName": "Ethena USDe",
+      "tags": [
+        "stablecoin"
+      ],
+      "symbol": "USDe",
+      "name": "USDe",
+      "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+      "decimals": 18,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/smartchain/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+      "explorer": "https://bscscan.com/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+      "source": "trustwallet-asset"
+    },
+    {
       "id": "bsc:usdd",
       "chain": "bsc",
       "chainName": "BNB Smart Chain",
@@ -565,6 +612,27 @@
       "decimals": 6,
       "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/arbitrum/assets/0xaf88d065e77c8cC2239327C5EDb3A432268e5831/logo.png",
       "explorer": "https://arbiscan.io/token/0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+      "source": "trustwallet-asset"
+    },
+    {
+      "id": "arbitrum:usde",
+      "chain": "arbitrum",
+      "chainName": "Arbitrum",
+      "chainId": 42161,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/arbitrum/info/logo.png",
+      "slot": "usde",
+      "kind": "token",
+      "displaySymbol": "USDe",
+      "displayName": "Ethena USDe",
+      "tags": [
+        "stablecoin"
+      ],
+      "symbol": "USDe",
+      "name": "USDe",
+      "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+      "decimals": 18,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/arbitrum/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+      "explorer": "https://arbiscan.io/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
       "source": "trustwallet-asset"
     },
     {
@@ -792,6 +860,27 @@
       "decimals": 6,
       "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/solana/assets/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v/logo.png",
       "explorer": "https://solscan.io/token/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "source": "trustwallet-asset"
+    },
+    {
+      "id": "solana:usde",
+      "chain": "solana",
+      "chainName": "Solana",
+      "chainId": null,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/solana/info/logo.png",
+      "slot": "usde",
+      "kind": "token",
+      "displaySymbol": "USDe",
+      "displayName": "Ethena USDe",
+      "tags": [
+        "stablecoin"
+      ],
+      "symbol": "USDe",
+      "name": "USDe",
+      "address": "DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT",
+      "decimals": 6,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/solana/assets/DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT/logo.png",
+      "explorer": "https://solscan.io/token/DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT",
       "source": "trustwallet-asset"
     },
     {

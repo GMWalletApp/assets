@@ -2334,7 +2334,7 @@
           "status": "active",
           "website": "https://centre.io/usdc",
           "description": "USDC is a fully collateralized US dollar stablecoin, an Ethereum powered coin and is the brainchild of CENTRE, an open source project bootstrapped by contributions from Circle and Coinbase.",
-          "explorer": "https://explorer.injective.network/asset/?tokenType=tokenFactory\u0026denom=factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1q6zlut7gtkzknkk773jecujwsdkgq882akqksk",
+          "explorer": "https://explorer.injective.network/asset/?tokenType=tokenFactory&denom=factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1q6zlut7gtkzknkk773jecujwsdkgq882akqksk",
           "tags": [
             "defi",
             "stablecoin"
@@ -4788,6 +4788,501 @@
           ],
           "logoURI": "https://assets-cdn.trustwallet.com/blockchains/plasma/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
           "logoExists": true
+        },
+        {
+          "chain": "solana",
+          "address": "DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT",
+          "assetId": "c501_tDEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "SPL",
+          "decimals": 6,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://solscan.io/token/DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/solana/assets/DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "manta",
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "assetId": "c169_t0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "MANTA",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://manta.socialscan.io/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/manta/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "arbitrum",
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "assetId": "c10042221_t0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "ARBITRUM",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://arbiscan.io/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/arbitrum/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "metis",
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "assetId": "c10001088_t0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "METIS",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://andromeda-explorer.metis.io/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/metis/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "base",
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "assetId": "c8453_t0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "BASE",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://basescan.org/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/base/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "zksync",
+          "address": "0x39Fe7a0DACcE31Bd90418e3e659fb0b5f0B3Db0d",
+          "assetId": "c10000324_t0x39Fe7a0DACcE31Bd90418e3e659fb0b5f0B3Db0d",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "ZKSYNC",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://explorer.zksync.io/address/0x39Fe7a0DACcE31Bd90418e3e659fb0b5f0B3Db0d",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/zksync/assets/0x39Fe7a0DACcE31Bd90418e3e659fb0b5f0B3Db0d/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "kava",
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "assetId": "c459_t0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "KAVA",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://kavascan.com/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/kava/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "smartchain",
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "assetId": "c20000714_t0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "BEP20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://bscscan.com/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "mantle",
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "assetId": "c5000_t0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "MANTLE",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://mantlescan.xyz/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/mantle/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "blast",
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "assetId": "c81457_t0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "BLAST",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://blastscan.io/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/blast/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "optimism",
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "assetId": "c10000070_t0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "OPTIMISM",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://optimistic.etherscan.io/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/optimism/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "aptos",
+          "address": "0xb30a694a344edee467d9f82330bbe7c3b89f440a1ecd2da1f3bca266560fce69",
+          "assetId": "c637_t0xb30a694a344edee467d9f82330bbe7c3b89f440a1ecd2da1f3bca266560fce69",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "APTOSFA",
+          "decimals": 6,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://explorer.aptoslabs.com/account/0xb30a694a344edee467d9f82330bbe7c3b89f440a1ecd2da1f3bca266560fce69",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/aptos/assets/0xb30a694a344edee467d9f82330bbe7c3b89f440a1ecd2da1f3bca266560fce69/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "scroll",
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "assetId": "c534352_t0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "SCROLL",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://scrollscan.com/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/scroll/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "linea",
+          "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "assetId": "c59144_t0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "LINEA",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://lineascan.build/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/linea/assets/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "ton",
+          "address": "EQAIb6KmdfdDR7CN1GBqVJuP25iCnLKCvBlJ07Evuu2dzP5f",
+          "assetId": "c607_tEQAIb6KmdfdDR7CN1GBqVJuP25iCnLKCvBlJ07Evuu2dzP5f",
+          "name": "USDe",
+          "symbol": "USDe",
+          "type": "JETTON",
+          "decimals": 6,
+          "status": "active",
+          "website": "https://ethena.fi/",
+          "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+          "explorer": "https://tonscan.org/address/EQAIb6KmdfdDR7CN1GBqVJuP25iCnLKCvBlJ07Evuu2dzP5f",
+          "tags": [
+            "stablecoin",
+            "defi"
+          ],
+          "links": [
+            {
+              "name": "x",
+              "url": "https://x.com/ethena_labs"
+            },
+            {
+              "name": "coinmarketcap",
+              "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+            },
+            {
+              "name": "coingecko",
+              "url": "https://coingecko.com/en/coins/ethena-usde"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ton/assets/EQAIb6KmdfdDR7CN1GBqVJuP25iCnLKCvBlJ07Evuu2dzP5f/logo.png",
+          "logoExists": true
         }
       ]
     },
@@ -6202,7 +6697,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://www.okx.com/okc",
-          "description": "OKC is a secure \u0026 programmable smart contracts platform for next-generation decentralized applications, backed by OKX, one of the largest crypto exchanges.",
+          "description": "OKC is a secure & programmable smart contracts platform for next-generation decentralized applications, backed by OKX, one of the largest crypto exchanges.",
           "explorer": "https://www.oklink.com/en/okc/",
           "research": "https://okc-docs.readthedocs.io/en/latest",
           "links": [
@@ -6638,7 +7133,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://aave.com/",
-          "description": "The Avalanche Bridge Wrapped Aave Token. Aave is an Open Source and Non-Custodial protocol to earn interest on deposits \u0026 borrow assets. It also features access to highly innovative flash loans, which let developers borrow instantly and easily; no collateral needed.",
+          "description": "The Avalanche Bridge Wrapped Aave Token. Aave is an Open Source and Non-Custodial protocol to earn interest on deposits & borrow assets. It also features access to highly innovative flash loans, which let developers borrow instantly and easily; no collateral needed.",
           "explorer": "https://snowtrace.io/token/0x63a72806098Bd3D9520cC43356dD78afe5D386D9",
           "tags": [
             "defi"
@@ -6778,7 +7273,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://www.htokens.finance/zh-cn/",
-          "description": "Aave is an Open Source and Non-Custodial protocol to earn interest on deposits \u0026 borrow assets. It also features access to highly innovative flash loans, which let developers borrow instantly and easily; no collateral needed. With 16 different assets, 5 of which are stablecoins.",
+          "description": "Aave is an Open Source and Non-Custodial protocol to earn interest on deposits & borrow assets. It also features access to highly innovative flash loans, which let developers borrow instantly and easily; no collateral needed. With 16 different assets, 5 of which are stablecoins.",
           "explorer": "https://hecoinfo.com/token/0x202b4936fe1a82a4965220860ae46d7d3939bb25",
           "tags": [
             "defi",
@@ -6911,7 +7406,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://aave.com/",
-          "description": "Aave is an Open Source and Non-Custodial protocol to earn interest on deposits \u0026 borrow assets. It also features access to highly innovative flash loans, which let developers borrow instantly and easily; no collateral needed.",
+          "description": "Aave is an Open Source and Non-Custodial protocol to earn interest on deposits & borrow assets. It also features access to highly innovative flash loans, which let developers borrow instantly and easily; no collateral needed.",
           "explorer": "https://snowscan.xyz/token/0x8cE2Dee54bB9921a2AE0A63dBb2DF8eD88B91dD9",
           "tags": [
             "defi",
@@ -7424,7 +7919,7 @@
           "links": [
             {
               "name": "x",
-              "url": "https://x.com/morpholabs?s=11\u0026t=ZGzrL8B9N7GpbA3YLFvU9A"
+              "url": "https://x.com/morpholabs?s=11&t=ZGzrL8B9N7GpbA3YLFvU9A"
             },
             {
               "name": "coinmarketcap",
@@ -7718,6 +8213,38 @@
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": [
         {
+          "chain": "ethereum",
+          "address": "0xcE24439F2D9C6a2289F741120FE202248B666666",
+          "assetId": "c60_t0xcE24439F2D9C6a2289F741120FE202248B666666",
+          "name": "United Stables",
+          "symbol": "U",
+          "type": "ERC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://u.tech/",
+          "description": "United Stables develops transparent, secure, and programmable stablecoin infrastructure for global markets. $U is a fully backed, operational-grade stablecoin designed for institutional trading, DeFi liquidity, treasury operations, and cross-border settlement. It’s the first stablecoin to aggregate liquidity, fully backed 1:1 by cash and audited stablecoins.",
+          "explorer": "https://etherscan.io/token/0xcE24439F2D9C6a2289F741120FE202248B666666",
+          "tags": [
+            "stablecoin"
+          ],
+          "links": [
+            {
+              "name": "telegram_news",
+              "url": "https://t.me/Ustables"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/UTechStables"
+            },
+            {
+              "name": "medium",
+              "url": "https://medium.com/@Ustables"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xcE24439F2D9C6a2289F741120FE202248B666666/logo.png",
+          "logoExists": true
+        },
+        {
           "chain": "smartchain",
           "address": "0xcE24439F2D9C6a2289F741120FE202248B666666",
           "assetId": "c20000714_t0xcE24439F2D9C6a2289F741120FE202248B666666",
@@ -7747,6 +8274,38 @@
             }
           ],
           "logoURI": "https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0xcE24439F2D9C6a2289F741120FE202248B666666/logo.png",
+          "logoExists": true
+        },
+        {
+          "chain": "tron",
+          "address": "TFNirp6PbqYE1ZTtWuCMUKJWLNZkoCoeFJ",
+          "assetId": "c195_tTFNirp6PbqYE1ZTtWuCMUKJWLNZkoCoeFJ",
+          "name": "United Stables",
+          "symbol": "U",
+          "type": "TRC20",
+          "decimals": 18,
+          "status": "active",
+          "website": "https://u.tech/",
+          "description": "United Stables develops transparent, secure, and programmable stablecoin infrastructure for global markets. $U is a fully backed, operational-grade stablecoin designed for institutional trading, DeFi liquidity, treasury operations, and cross-border settlement. It’s the first stablecoin to aggregate liquidity, fully backed 1:1 by cash and audited stablecoins.",
+          "explorer": "https://tronscan.org/#/token20/TFNirp6PbqYE1ZTtWuCMUKJWLNZkoCoeFJ",
+          "tags": [
+            "stablecoin"
+          ],
+          "links": [
+            {
+              "name": "telegram_news",
+              "url": "https://t.me/Ustables"
+            },
+            {
+              "name": "x",
+              "url": "https://x.com/UTechStables"
+            },
+            {
+              "name": "medium",
+              "url": "https://medium.com/@Ustables"
+            }
+          ],
+          "logoURI": "https://assets-cdn.trustwallet.com/blockchains/tron/assets/TFNirp6PbqYE1ZTtWuCMUKJWLNZkoCoeFJ/logo.png",
           "logoExists": true
         }
       ]
@@ -8608,7 +9167,7 @@
           "decimals": 6,
           "status": "active",
           "website": "https://cosmos.network/",
-          "description": "Cosmos is a secure \u0026 scalable blockchain ecosystem where thousands of dApps interoperate to create the foundation for a new token economy.",
+          "description": "Cosmos is a secure & scalable blockchain ecosystem where thousands of dApps interoperate to create the foundation for a new token economy.",
           "explorer": "https://www.mintscan.io/",
           "research": "https://research.binance.com/en/projects/cosmos-network",
           "tags": [
@@ -11616,7 +12175,7 @@
       "marketCapRank": 135,
       "marketCap": 264540958,
       "totalVolume": 6830005,
-      "currentPrice": 2.67944e-7,
+      "currentPrice": 2.67944E-7,
       "lastUpdated": "2026-07-28T10:43:12.208Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": [
@@ -11730,7 +12289,7 @@
       "marketCapRank": 136,
       "marketCap": 264186722,
       "totalVolume": 5330981,
-      "currentPrice": 2.66802e-7,
+      "currentPrice": 2.66802E-7,
       "lastUpdated": "2026-07-28T10:43:14.278Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": [
@@ -12941,7 +13500,7 @@
       "marketCapRank": 161,
       "marketCap": 201306986,
       "totalVolume": 13989496,
-      "currentPrice": 9.58609e-7,
+      "currentPrice": 9.58609E-7,
       "lastUpdated": "2026-07-28T10:43:17.462Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": [
@@ -13384,7 +13943,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://ens.domains",
-          "description": "Decentralised naming for wallets, websites, \u0026 more.",
+          "description": "Decentralised naming for wallets, websites, & more.",
           "explorer": "https://etherscan.io/token/0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
           "links": [
             {
@@ -14969,7 +15528,7 @@
           "status": "active",
           "website": "https://chiliz.com",
           "description": "Chiliz, powering Socios.com, aims to give sports and esports fans the ability to crowd-manage their favorite teams, games, leagues, and events.",
-          "explorer": "https://explorer.injective.network/asset/?tokenType=tokenFactory\u0026denom=factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1q6kpxy6ar5lkxqudjvryarrrttmakwsvzkvcyh",
+          "explorer": "https://explorer.injective.network/asset/?tokenType=tokenFactory&denom=factory/inj14ejqjyq8um4p3xfqj74yld5waqljf88f9eneuk/inj1q6kpxy6ar5lkxqudjvryarrrttmakwsvzkvcyh",
           "tags": [
             "nft"
           ],
@@ -17002,7 +17561,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://wemix.com",
-          "description": "WEMIX3.0 mainnet is an “experience-based, platform-driven \u0026 service-oriented decentralized blockchain protocol” which powers a “mega-ecosystem” of web 3.0 platforms.",
+          "description": "WEMIX3.0 mainnet is an “experience-based, platform-driven & service-oriented decentralized blockchain protocol” which powers a “mega-ecosystem” of web 3.0 platforms.",
           "explorer": "https://wemixscan.com",
           "links": [
             {
@@ -17278,7 +17837,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://wemix.com",
-          "description": "WEMIX3.0 mainnet is an “experience-based, platform-driven \u0026 service-oriented decentralized blockchain protocol” which powers a “mega-ecosystem” of web 3.0 platforms.",
+          "description": "WEMIX3.0 mainnet is an “experience-based, platform-driven & service-oriented decentralized blockchain protocol” which powers a “mega-ecosystem” of web 3.0 platforms.",
           "explorer": "https://wemixscan.com",
           "links": [
             {
@@ -17794,7 +18353,7 @@
       "marketCapRank": 264,
       "marketCap": 97320102,
       "totalVolume": 992319,
-      "currentPrice": 4.78031e-7,
+      "currentPrice": 4.78031E-7,
       "lastUpdated": "2026-07-28T10:41:20.000Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": [
@@ -18965,7 +19524,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://www.researchhub.com/",
-          "description": "The project is aimed towards creating a community of open science, including discussions about papers \u0026 funding. Scientists post papers in a Reddit-like manner and can receive funding from any source. Users are rewarded with RSC upon contributing.",
+          "description": "The project is aimed towards creating a community of open science, including discussions about papers & funding. Scientists post papers in a Reddit-like manner and can receive funding from any source. Users are rewarded with RSC upon contributing.",
           "explorer": "https://basescan.org/token/0xfbb75a59193a3525a8825bebe7d4b56899e2f7e1",
           "links": [
             {
@@ -18986,7 +19545,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://www.researchhub.com/",
-          "description": "The project is aimed towards creating a community of open science, including discussions about papers \u0026 funding. Scientists post papers in a Reddit-like manner and can receive funding from any source. Users are rewarded with RSC upon contributing.",
+          "description": "The project is aimed towards creating a community of open science, including discussions about papers & funding. Scientists post papers in a Reddit-like manner and can receive funding from any source. Users are rewarded with RSC upon contributing.",
           "explorer": "https://etherscan.io/token/0xd101dcc414f310268c37eeb4cd376ccfa507f571",
           "links": [
             {
@@ -19296,7 +19855,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://cow.fi",
-          "description": "COW token allows its holders the right to govern and curate the infrastructure of the CoW Protocol ecosystem through the CowDAO. Additionally, COW token holders receive fee discounts when trading on CowSwap \u0026 some other perks.",
+          "description": "COW token allows its holders the right to govern and curate the infrastructure of the CoW Protocol ecosystem through the CowDAO. Additionally, COW token holders receive fee discounts when trading on CowSwap & some other perks.",
           "explorer": "https://arbiscan.io/token/0xcb8b5CD20BdCaea9a010aC1F8d835824F5C87A04",
           "tags": [
             "defi"
@@ -19356,7 +19915,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://cow.fi",
-          "description": "COW token allows its holders the right to govern and curate the infrastructure of the CoW Protocol ecosystem through the CowDAO. Additionally, COW token holders receive fee discounts when trading on CowSwap \u0026 some other perks.",
+          "description": "COW token allows its holders the right to govern and curate the infrastructure of the CoW Protocol ecosystem through the CowDAO. Additionally, COW token holders receive fee discounts when trading on CowSwap & some other perks.",
           "explorer": "https://etherscan.io/token/0xDEf1CA1fb7FBcDC777520aa7f396b4E015F497aB",
           "tags": [
             "defi"
@@ -19416,7 +19975,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://cow.fi",
-          "description": "COW token allows its holders the right to govern and curate the infrastructure of the CoW Protocol ecosystem through the CowDAO. Additionally, COW token holders receive fee discounts when trading on CowSwap \u0026 some other perks.",
+          "description": "COW token allows its holders the right to govern and curate the infrastructure of the CoW Protocol ecosystem through the CowDAO. Additionally, COW token holders receive fee discounts when trading on CowSwap & some other perks.",
           "explorer": "https://gnosisscan.io/token/0x177127622c4A00F3d409B75571e12cB3c8973d3c",
           "tags": [
             "defi"
@@ -20904,7 +21463,7 @@
       "source": "coingecko",
       "coingeckoId": "ishares-core-s-p-500-etf-ondo-tokenized-etf",
       "symbol": "IVVON",
-      "name": "iShares Core S\u0026P 500 ETF (Ondo Tokenized ETF)",
+      "name": "iShares Core S&P 500 ETF (Ondo Tokenized ETF)",
       "marketCapRank": 340,
       "marketCap": 66871703,
       "totalVolume": 394596,
@@ -20916,13 +21475,13 @@
           "chain": "ethereum",
           "address": "0x62cA254a363dc3c748e7E955c20447aB5bF06fF7",
           "assetId": "c60_t0x62cA254a363dc3c748e7E955c20447aB5bF06fF7",
-          "name": "iShares Core S\u0026P 500 ETF (Ondo Tokenized)",
+          "name": "iShares Core S&P 500 ETF (Ondo Tokenized)",
           "symbol": "IVVon",
           "type": "ERC20",
           "decimals": 18,
           "status": "active",
           "website": "https://ondo.finance/",
-          "description": "IVVon is the Ondo Tokenized version of the iShares Core S\u0026P 500 ETF, giving tokenholders economic exposure similar to holding IVV and reinvesting any dividends. Ondo tokenized stocks enable non-US retail and institutional users around the world to instantly mint and redeem tokenized U.S. stocks and ETFs, 24 hours a day, five days a week with full access to traditional exchange liquidity. Additional restrictions apply. Learn more at ondo.finance/global-markets.",
+          "description": "IVVon is the Ondo Tokenized version of the iShares Core S&P 500 ETF, giving tokenholders economic exposure similar to holding IVV and reinvesting any dividends. Ondo tokenized stocks enable non-US retail and institutional users around the world to instantly mint and redeem tokenized U.S. stocks and ETFs, 24 hours a day, five days a week with full access to traditional exchange liquidity. Additional restrictions apply. Learn more at ondo.finance/global-markets.",
           "explorer": "https://etherscan.io/token/0x62cA254a363dc3c748e7E955c20447aB5bF06fF7",
           "tags": [
             "RWA"
@@ -20944,13 +21503,13 @@
           "chain": "smartchain",
           "address": "0x1104EB7e85E25eB45F88e638b0C27A06C1A91CB2",
           "assetId": "c20000714_t0x1104EB7e85E25eB45F88e638b0C27A06C1A91CB2",
-          "name": "iShares Core S\u0026P 500 ETF (Ondo Tokenized)",
+          "name": "iShares Core S&P 500 ETF (Ondo Tokenized)",
           "symbol": "IVVon",
           "type": "BEP20",
           "decimals": 18,
           "status": "active",
           "website": "https://ondo.finance/",
-          "description": "IVVon is the Ondo Tokenized version of the iShares Core S\u0026P 500 ETF, giving tokenholders economic exposure similar to holding IVV and reinvesting any dividends. Ondo tokenized stocks enable non-US retail and institutional users around the world to instantly mint and redeem tokenized U.S. stocks and ETFs, 24 hours a day, five days a week with full access to traditional exchange liquidity. Additional restrictions apply. Learn more at ondo.finance/global-markets.",
+          "description": "IVVon is the Ondo Tokenized version of the iShares Core S&P 500 ETF, giving tokenholders economic exposure similar to holding IVV and reinvesting any dividends. Ondo tokenized stocks enable non-US retail and institutional users around the world to instantly mint and redeem tokenized U.S. stocks and ETFs, 24 hours a day, five days a week with full access to traditional exchange liquidity. Additional restrictions apply. Learn more at ondo.finance/global-markets.",
           "explorer": "https://bscscan.com/address/0x1104eb7e85e25eb45f88e638b0c27a06c1a91cb2",
           "tags": [
             "RWA"
@@ -21172,7 +21731,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://safe.global/",
-          "description": "Safe is the ownership layer of web3 securing \u003e$100B+. It includes Safe{Core} a full stack of account abstraction infrastructure and the industry-standard multi-sig, Safe{Wallet}. The project is focused on making every Ethereum account, a smart account and enabling new use cases like AI, Staking, Gaming, SocialFi, DeFi, and Payments to flourish with gasless transaction, easy face-ID like logins, onramps, recovery and more.",
+          "description": "Safe is the ownership layer of web3 securing >$100B+. It includes Safe{Core} a full stack of account abstraction infrastructure and the industry-standard multi-sig, Safe{Wallet}. The project is focused on making every Ethereum account, a smart account and enabling new use cases like AI, Staking, Gaming, SocialFi, DeFi, and Payments to flourish with gasless transaction, easy face-ID like logins, onramps, recovery and more.",
           "explorer": "https://etherscan.io/token/0x5aFE3855358E112B5647B952709E6165e1c1eEEe",
           "tags": [
             "staking"
@@ -21471,7 +22030,7 @@
       "marketCapRank": 363,
       "marketCap": 60890547,
       "totalVolume": 1948051,
-      "currentPrice": 4.34334e-7,
+      "currentPrice": 4.34334E-7,
       "lastUpdated": "2026-07-28T10:41:20.000Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": []
@@ -22542,7 +23101,7 @@
       "marketCapRank": 390,
       "marketCap": 53979990,
       "totalVolume": 3227291,
-      "currentPrice": 2.94128e-10,
+      "currentPrice": 2.94128E-10,
       "lastUpdated": "2026-07-28T10:41:20.000Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": [
@@ -23194,7 +23753,7 @@
       "marketCapRank": 412,
       "marketCap": 50914395,
       "totalVolume": 2147028,
-      "currentPrice": 1.20981e-7,
+      "currentPrice": 1.20981E-7,
       "lastUpdated": "2026-07-28T10:41:20.000Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": []
@@ -23352,7 +23911,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://request.network/",
-          "description": "Request Network is the protocol for payment requests. They are immutably recorded processed without an intermediary. Companies, DAOs \u0026 individuals pay \u0026 get paid in cryptos of payment networks incl. Ethereum, BSC, \u0026 Fantom.",
+          "description": "Request Network is the protocol for payment requests. They are immutably recorded processed without an intermediary. Companies, DAOs & individuals pay & get paid in cryptos of payment networks incl. Ethereum, BSC, & Fantom.",
           "explorer": "https://polygonscan.com/token/0xb25e20de2f2ebb4cffd4d16a55c7b395e8a94762",
           "tags": [
             "defi"
@@ -26035,7 +26594,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://www.bedrockdao.com/",
-          "description": "Introducing the Bedrock DAO, made for you, governed by you, and rewards go to you. Made up of the $BR \u0026 $veBR tokens, you can join the DAO now and earn",
+          "description": "Introducing the Bedrock DAO, made for you, governed by you, and rewards go to you. Made up of the $BR & $veBR tokens, you can join the DAO now and earn",
           "explorer": "https://bscscan.com/token/0xff7d6a96ae471bbcd7713af9cb1feeb16cf56b41",
           "links": [
             {
@@ -26071,7 +26630,7 @@
       "source": "coingecko",
       "coingeckoId": "spdr-s-p-500-etf-ondo-tokenized-etf",
       "symbol": "SPYON",
-      "name": "SPDR S\u0026P 500 ETF (Ondo Tokenized ETF)",
+      "name": "SPDR S&P 500 ETF (Ondo Tokenized ETF)",
       "marketCapRank": 462,
       "marketCap": 42332931,
       "totalVolume": 824844,
@@ -26083,13 +26642,13 @@
           "chain": "ethereum",
           "address": "0xFeDC5f4a6c38211c1338aa411018DFAf26612c08",
           "assetId": "c60_t0xFeDC5f4a6c38211c1338aa411018DFAf26612c08",
-          "name": "SPDR S\u0026P 500 ETF (Ondo Tokenized)",
+          "name": "SPDR S&P 500 ETF (Ondo Tokenized)",
           "symbol": "SPYon",
           "type": "ERC20",
           "decimals": 18,
           "status": "active",
           "website": "https://ondo.finance/",
-          "description": "SPYon is the Ondo Tokenized version of the SPDR S\u0026P 500 ETF, giving tokenholders economic exposure similar to holding SPY and reinvesting any dividends. Ondo tokenized stocks enable non-US retail and institutional users around the world to instantly mint and redeem tokenized U.S. stocks and ETFs, 24 hours a day, five days a week with full access to traditional exchange liquidity. Additional restrictions apply. Learn more at ondo.finance/global-markets.",
+          "description": "SPYon is the Ondo Tokenized version of the SPDR S&P 500 ETF, giving tokenholders economic exposure similar to holding SPY and reinvesting any dividends. Ondo tokenized stocks enable non-US retail and institutional users around the world to instantly mint and redeem tokenized U.S. stocks and ETFs, 24 hours a day, five days a week with full access to traditional exchange liquidity. Additional restrictions apply. Learn more at ondo.finance/global-markets.",
           "explorer": "https://etherscan.io/token/0xFeDC5f4a6c38211c1338aa411018DFAf26612c08",
           "tags": [
             "RWA"
@@ -26111,13 +26670,13 @@
           "chain": "smartchain",
           "address": "0x6a708EAD771238919D85930b5a0f10454E1C331a",
           "assetId": "c20000714_t0x6a708EAD771238919D85930b5a0f10454E1C331a",
-          "name": "SPDR S\u0026P 500 ETF (Ondo Tokenized)",
+          "name": "SPDR S&P 500 ETF (Ondo Tokenized)",
           "symbol": "SPYon",
           "type": "BEP20",
           "decimals": 18,
           "status": "active",
           "website": "https://ondo.finance/",
-          "description": "SPYon is the Ondo Tokenized version of the SPDR S\u0026P 500 ETF, giving tokenholders economic exposure similar to holding SPY and reinvesting any dividends. Ondo tokenized stocks enable non-US retail and institutional users around the world to instantly mint and redeem tokenized U.S. stocks and ETFs, 24 hours a day, five days a week with full access to traditional exchange liquidity. Additional restrictions apply. Learn more at ondo.finance/global-markets.",
+          "description": "SPYon is the Ondo Tokenized version of the SPDR S&P 500 ETF, giving tokenholders economic exposure similar to holding SPY and reinvesting any dividends. Ondo tokenized stocks enable non-US retail and institutional users around the world to instantly mint and redeem tokenized U.S. stocks and ETFs, 24 hours a day, five days a week with full access to traditional exchange liquidity. Additional restrictions apply. Learn more at ondo.finance/global-markets.",
           "explorer": "https://bscscan.com/address/0x6a708ead771238919d85930b5a0f10454e1c331a",
           "tags": [
             "RWA"
@@ -26329,7 +26888,7 @@
       "marketCapRank": 466,
       "marketCap": 41842255,
       "totalVolume": 39969,
-      "currentPrice": 9.58417e-7,
+      "currentPrice": 9.58417E-7,
       "lastUpdated": "2026-07-28T10:41:20.000Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": [
@@ -27234,7 +27793,7 @@
       "marketCapRank": 497,
       "marketCap": 39676636,
       "totalVolume": 8616298,
-      "currentPrice": 1.0159e-7,
+      "currentPrice": 1.0159E-7,
       "lastUpdated": "2026-07-28T10:41:20.000Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": [
@@ -27312,7 +27871,7 @@
           "decimals": 0,
           "status": "active",
           "website": "https://ont.io",
-          "description": "Ontology is a new high-performance public blockchain project \u0026 a distributed trust collaboration platform that include a series of complete distributed ledgers and smart contract systems.",
+          "description": "Ontology is a new high-performance public blockchain project & a distributed trust collaboration platform that include a series of complete distributed ledgers and smart contract systems.",
           "explorer": "https://explorer.ont.io",
           "research": "https://research.binance.com/en/projects/ontology",
           "links": [
@@ -27375,7 +27934,7 @@
       "marketCapRank": 500,
       "marketCap": 39347610,
       "totalVolume": 378961,
-      "currentPrice": 1.01254e-7,
+      "currentPrice": 1.01254E-7,
       "lastUpdated": "2026-07-28T10:41:20.000Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": []
@@ -28522,7 +29081,7 @@
       "marketCapRank": 530,
       "marketCap": 37172720,
       "totalVolume": 17638.89,
-      "currentPrice": 6.19545e-7,
+      "currentPrice": 6.19545E-7,
       "lastUpdated": "2026-07-28T10:41:20.000Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": []
@@ -28933,7 +29492,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://prom.io",
-          "description": "Prom is a gaming NFT marketplace \u0026 rental. Completely decentralized, confidential, and safe, it meets the needs of players, metaverse-enthusiasts, NFT owners, guilds, and games.",
+          "description": "Prom is a gaming NFT marketplace & rental. Completely decentralized, confidential, and safe, it meets the needs of players, metaverse-enthusiasts, NFT owners, guilds, and games.",
           "explorer": "https://etherscan.io/token/0xfc82bb4ba86045Af6F327323a46E80412b91b27d",
           "tags": [
             "gamefi",
@@ -28991,7 +29550,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://prom.io",
-          "description": "Prom is a gaming NFT marketplace \u0026 rental. Completely decentralized, confidential, and safe, it meets the needs of players, metaverse-enthusiasts, NFT owners, guilds, and games.",
+          "description": "Prom is a gaming NFT marketplace & rental. Completely decentralized, confidential, and safe, it meets the needs of players, metaverse-enthusiasts, NFT owners, guilds, and games.",
           "explorer": "https://bscscan.com/token/0xaF53d56ff99f1322515E54FdDE93FF8b3b7DAFd5",
           "tags": [
             "gamefi",
@@ -30135,7 +30694,7 @@
           "status": "active",
           "website": "https://folks.finance",
           "description": "Folks Finance is a crosschain decentralized finance (DeFi) protocol that enables users to supply, borrow, and manage digital assets across multiple blockchains from a single platform.",
-          "explorer": "https://snowtrace.io/token/0xFF7F8F301F7A706E3CfD3D2275f5dc0b9EE8009B?type=erc20\u0026chainid=43114",
+          "explorer": "https://snowtrace.io/token/0xFF7F8F301F7A706E3CfD3D2275f5dc0b9EE8009B?type=erc20&chainid=43114",
           "tags": [
             "defi"
           ],
@@ -30789,7 +31348,7 @@
       "marketCapRank": 588,
       "marketCap": 32476008,
       "totalVolume": 3.25,
-      "currentPrice": 7.7197e-8,
+      "currentPrice": 7.7197E-8,
       "lastUpdated": "2026-07-28T08:18:10.000Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": []
@@ -31781,7 +32340,7 @@
       "marketCapRank": 616,
       "marketCap": 30806931,
       "totalVolume": 4354740,
-      "currentPrice": 3.0805e-8,
+      "currentPrice": 3.0805E-8,
       "lastUpdated": "2026-07-28T10:41:20.000Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": [
@@ -31965,7 +32524,7 @@
       "source": "coingecko",
       "coingeckoId": "hims-hers-health-ondo-tokenized-stock",
       "symbol": "HIMSON",
-      "name": "Hims \u0026 Hers Health (Ondo Tokenized Stock)",
+      "name": "Hims & Hers Health (Ondo Tokenized Stock)",
       "marketCapRank": 623,
       "marketCap": 30557158,
       "totalVolume": 790434,
@@ -31977,13 +32536,13 @@
           "chain": "ethereum",
           "address": "0xCa468554e5C0423Ee858fe3942c9568C51FcAa79",
           "assetId": "c60_t0xCa468554e5C0423Ee858fe3942c9568C51FcAa79",
-          "name": "Hims \u0026 Hers Health (Ondo Tokenized)",
+          "name": "Hims & Hers Health (Ondo Tokenized)",
           "symbol": "HIMSon",
           "type": "ERC20",
           "decimals": 18,
           "status": "active",
           "website": "https://ondo.finance/",
-          "description": "HIMSon is the Ondo Tokenized version of Hims \u0026 Hers Health, giving tokenholders economic exposure similar to holding HIMS and reinvesting any dividends. Ondo tokenized stocks enable non-US retail and institutional users around the world to instantly mint and redeem tokenized U.S. stocks and ETFs, 24 hours a day, five days a week with full access to traditional exchange liquidity. Additional restrictions apply. Learn more at ondo.finance/global-markets.",
+          "description": "HIMSon is the Ondo Tokenized version of Hims & Hers Health, giving tokenholders economic exposure similar to holding HIMS and reinvesting any dividends. Ondo tokenized stocks enable non-US retail and institutional users around the world to instantly mint and redeem tokenized U.S. stocks and ETFs, 24 hours a day, five days a week with full access to traditional exchange liquidity. Additional restrictions apply. Learn more at ondo.finance/global-markets.",
           "explorer": "https://etherscan.io/token/0xCa468554e5C0423Ee858fe3942c9568C51FcAa79",
           "tags": [
             "RWA"
@@ -32005,13 +32564,13 @@
           "chain": "smartchain",
           "address": "0x4693f6F5EF257381a28afd0673e64d8b32d5C6aD",
           "assetId": "c20000714_t0x4693f6F5EF257381a28afd0673e64d8b32d5C6aD",
-          "name": "Hims \u0026 Hers Health (Ondo Tokenized)",
+          "name": "Hims & Hers Health (Ondo Tokenized)",
           "symbol": "HIMSon",
           "type": "BEP20",
           "decimals": 18,
           "status": "active",
           "website": "https://ondo.finance/",
-          "description": "HIMSon is the Ondo Tokenized version of Hims \u0026 Hers Health, giving tokenholders economic exposure similar to holding HIMS and reinvesting any dividends. Ondo tokenized stocks enable non-US retail and institutional users around the world to instantly mint and redeem tokenized U.S. stocks and ETFs, 24 hours a day, five days a week with full access to traditional exchange liquidity. Additional restrictions apply. Learn more at ondo.finance/global-markets.",
+          "description": "HIMSon is the Ondo Tokenized version of Hims & Hers Health, giving tokenholders economic exposure similar to holding HIMS and reinvesting any dividends. Ondo tokenized stocks enable non-US retail and institutional users around the world to instantly mint and redeem tokenized U.S. stocks and ETFs, 24 hours a day, five days a week with full access to traditional exchange liquidity. Additional restrictions apply. Learn more at ondo.finance/global-markets.",
           "explorer": "https://bscscan.com/address/0x4693f6f5ef257381a28afd0673e64d8b32d5c6ad",
           "tags": [
             "RWA"
@@ -32421,7 +32980,7 @@
       "source": "coingecko",
       "coingeckoId": "backed-cspx-core-s-p-500",
       "symbol": "BCSPX",
-      "name": "Backed CSPX Core S\u0026P 500",
+      "name": "Backed CSPX Core S&P 500",
       "marketCapRank": 636,
       "marketCap": 29423894,
       "currentPrice": 798.07,
@@ -33118,7 +33677,7 @@
       "marketCapRank": 658,
       "marketCap": 27928130,
       "totalVolume": 290975,
-      "currentPrice": 5.1899e-8,
+      "currentPrice": 5.1899E-8,
       "lastUpdated": "2026-07-28T10:41:20.000Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": [
@@ -36949,7 +37508,7 @@
       "marketCapRank": 798,
       "marketCap": 19341030,
       "totalVolume": 1369796,
-      "currentPrice": 9.207e-9,
+      "currentPrice": 9.207E-9,
       "lastUpdated": "2026-07-28T10:44:14.642Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": []
@@ -37222,7 +37781,7 @@
       "marketCapRank": 808,
       "marketCap": 19086612,
       "totalVolume": 1302670,
-      "currentPrice": 6.2392e-8,
+      "currentPrice": 6.2392E-8,
       "lastUpdated": "2026-07-28T10:44:16.853Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": []
@@ -37517,7 +38076,7 @@
       "marketCapRank": 825,
       "marketCap": 18763425,
       "totalVolume": 195317,
-      "currentPrice": 2.9472e-8,
+      "currentPrice": 2.9472E-8,
       "lastUpdated": "2026-07-28T10:44:18.502Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": [
@@ -37833,7 +38392,7 @@
       "marketCapRank": 832,
       "marketCap": 18553386,
       "totalVolume": 28909,
-      "currentPrice": 3.7348e-8,
+      "currentPrice": 3.7348E-8,
       "lastUpdated": "2026-07-28T10:44:11.123Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": [
@@ -37891,7 +38450,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://www.researchhub.com/",
-          "description": "The project is aimed towards creating a community of open science, including discussions about papers \u0026 funding. Scientists post papers in a Reddit-like manner and can receive funding from any source. Users are rewarded with RSC upon contributing.",
+          "description": "The project is aimed towards creating a community of open science, including discussions about papers & funding. Scientists post papers in a Reddit-like manner and can receive funding from any source. Users are rewarded with RSC upon contributing.",
           "explorer": "https://basescan.org/token/0xfbb75a59193a3525a8825bebe7d4b56899e2f7e1",
           "links": [
             {
@@ -37912,7 +38471,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://www.researchhub.com/",
-          "description": "The project is aimed towards creating a community of open science, including discussions about papers \u0026 funding. Scientists post papers in a Reddit-like manner and can receive funding from any source. Users are rewarded with RSC upon contributing.",
+          "description": "The project is aimed towards creating a community of open science, including discussions about papers & funding. Scientists post papers in a Reddit-like manner and can receive funding from any source. Users are rewarded with RSC upon contributing.",
           "explorer": "https://etherscan.io/token/0xd101dcc414f310268c37eeb4cd376ccfa507f571",
           "links": [
             {
@@ -38196,7 +38755,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://strikex.com",
-          "description": "StrikeX is the native currency of the blockchain powered eco-system developed \u0026 deployed by the UK Registered Company StrikeX Technologies Ltd. Their flag ship product, TradeStrike, will utilise the power of tokenisation to offer trading in Stocks, Cryptocurrencies, NFT’s \u0026 even Real Estate. Fully compliant, fully collateralised trading, 24/7 – 365 days a year.",
+          "description": "StrikeX is the native currency of the blockchain powered eco-system developed & deployed by the UK Registered Company StrikeX Technologies Ltd. Their flag ship product, TradeStrike, will utilise the power of tokenisation to offer trading in Stocks, Cryptocurrencies, NFT’s & even Real Estate. Fully compliant, fully collateralised trading, 24/7 – 365 days a year.",
           "explorer": "https://bscscan.com/token/0xd6fDDe76B8C1C45B33790cc8751D5b88984c44ec",
           "tags": [
             "staking"
@@ -39350,7 +39909,7 @@
       "marketCapRank": 868,
       "marketCap": 17348175,
       "totalVolume": 5561.99,
-      "currentPrice": 8.261e-8,
+      "currentPrice": 8.261E-8,
       "lastUpdated": "2026-07-28T10:44:17.337Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": []
@@ -41054,7 +41613,7 @@
           "decimals": 18,
           "status": "active",
           "website": "https://bananagun.io/",
-          "description": "Banana Gun is a Telegram DEX Trading Bot, featuring: Auto Sniper, MEV-resistant swaps, Anti Rug \u0026 Re-org Protection.",
+          "description": "Banana Gun is a Telegram DEX Trading Bot, featuring: Auto Sniper, MEV-resistant swaps, Anti Rug & Re-org Protection.",
           "explorer": "https://etherscan.io/token/0x38e68a37e401f7271568cecaac63c6b1e19130b4",
           "links": [
             {
@@ -41652,7 +42211,7 @@
       "marketCapRank": 942,
       "marketCap": 14847090,
       "totalVolume": 46935,
-      "currentPrice": 1.48471e-7,
+      "currentPrice": 1.48471E-7,
       "lastUpdated": "2026-07-28T10:44:15.293Z",
       "updatedAt": "2026-07-28T10:44:49Z",
       "assets": []
@@ -42120,7 +42679,7 @@
           "links": [
             {
               "name": "x",
-              "url": "https://x.com/poktnetwork?s=11\u0026t=ZGzrL8B9N7GpbA3YLFvU9A"
+              "url": "https://x.com/poktnetwork?s=11&t=ZGzrL8B9N7GpbA3YLFvU9A"
             },
             {
               "name": "coinmarketcap",

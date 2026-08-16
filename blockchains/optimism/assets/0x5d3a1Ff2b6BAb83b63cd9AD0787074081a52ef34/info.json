@@ -1,0 +1,29 @@
+{
+    "name": "USDe",
+    "type": "OPTIMISM",
+    "symbol": "USDe",
+    "decimals": 18,
+    "website": "https://ethena.fi/",
+    "description": "Ethena is a synthetic dollar protocol built on Ethereum that provides a crypto-native solution for money not reliant on traditional banking system infrastructure, alongside a globally accessible dollar-denominated savings instrument.",
+    "explorer": "https://optimistic.etherscan.io/token/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "status": "active",
+    "id": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+    "links": [
+        {
+            "name": "x",
+            "url": "https://x.com/ethena_labs"
+        },
+        {
+            "name": "coinmarketcap",
+            "url": "https://coinmarketcap.com/currencies/ethena-usde/"
+        },
+        {
+            "name": "coingecko",
+            "url": "https://coingecko.com/en/coins/ethena-usde"
+        }
+    ],
+    "tags": [
+        "stablecoin",
+        "defi"
+    ]
+}

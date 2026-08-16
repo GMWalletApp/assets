@@ -1,6 +1,16 @@
 {
   "assetOverrides": [
     {
+      "chain": "aptos",
+      "address": "0xb30a694a344edee467d9f82330bbe7c3b89f440a1ecd2da1f3bca266560fce69",
+      "coingeckoId": "ethena-usde",
+      "addTags": [
+        "stablecoin",
+        "defi"
+      ],
+      "note": "Official Ethena USDe deployment on Aptos; CoinGecko currently reports the ENA address for this market platform."
+    },
+    {
       "chain": "smartchain",
       "address": "0x55d398326f99059fF775485246999027B3197955",
       "coingeckoId": "tether",
