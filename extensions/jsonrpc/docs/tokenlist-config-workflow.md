@@ -107,8 +107,14 @@ hot_reset_current
 - `coingeckoId`
 - `displayName`
 - `displaySymbol`
+- `receive_list`
 - `addTags`
 - `note`
+
+`receive_list` is deployment-specific. For a multi-chain asset family that
+should be receivable on every supported chain, add an explicit override for
+each verified active chain/address pair; do not expand by symbol alone because
+the repository can contain unrelated or legacy contracts with the same symbol.
 
 单对象示例：
 
