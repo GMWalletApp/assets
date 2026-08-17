@@ -1032,13 +1032,19 @@ func TestTokenListSyncAppliesManualOverridesAndHotList(t *testing.T) {
 		}},
 	})
 	mustWriteJSON(t, manualPath, TokenListManualOverrides{
-		AssetOverrides: []TokenListAssetOverride{{
-			Chain:       "smartchain",
-			Address:     testUSDTAddress,
-			DisplayName: "Manual Override Name",
-			AddTags:     []string{"manual-tag"},
-			ReceiveList: boolPtr(true),
-		}},
+		AssetOverrides: []TokenListAssetOverride{
+			{
+				Chain:       "smartchain",
+				Address:     testUSDTAddress,
+				DisplayName: "Manual Override Name",
+				AddTags:     []string{"manual-tag"},
+				ReceiveList: boolPtr(true),
+			},
+			{
+				Chain:       "smartchain",
+				ReceiveList: boolPtr(true),
+			},
+		},
 	})
 	mustWriteJSON(t, hotDefaultsPath, TokenListHotList{
 		Tokens: []TokenListHotEntry{
@@ -1097,18 +1103,18 @@ func TestTokenListSyncAppliesManualOverridesAndHotList(t *testing.T) {
 		t.Fatalf("expected manual override precedence plus hot bool, got %+v", usdt)
 	}
 	native := findAppToken(tokenList.Tokens, "smartchain", "")
-	if native == nil || !native.Hot || hasTag(native.Tags, "hot") {
-		t.Fatalf("expected native asset to accept empty-address hot entry, got %+v", native)
+	if native == nil || !native.Hot || !native.ReceiveList || hasTag(native.Tags, "hot") {
+		t.Fatalf("expected native asset to accept empty-address hot and receive override, got %+v", native)
 	}
 
 	var report TokenListReport
 	if err := readJSONFile(filepath.Join(root, "data", "tokenlist-report.json"), &report); err != nil {
 		t.Fatalf("read tokenlist report: %v", err)
 	}
-	if report.Rules.ConfiguredAssetOverrides != 1 {
+	if report.Rules.ConfiguredAssetOverrides != 2 {
 		t.Fatalf("expected merged asset override count, got %+v", report.Rules)
 	}
-	if report.Rules.BaseAssetOverrides != 1 || report.Rules.ManualAssetOverrides != 1 {
+	if report.Rules.BaseAssetOverrides != 1 || report.Rules.ManualAssetOverrides != 2 {
 		t.Fatalf("expected split override stats, got %+v", report.Rules)
 	}
 	if report.Hot.DefaultEntries != 1 || report.Hot.CurrentEntries != 1 {
@@ -1119,6 +1125,9 @@ func TestTokenListSyncAppliesManualOverridesAndHotList(t *testing.T) {
 	}
 	if len(report.Issues.MissingHotAssets) != 0 {
 		t.Fatalf("unexpected missing hot assets: %+v", report.Issues.MissingHotAssets)
+	}
+	if len(report.Issues.RuleIssues) != 0 {
+		t.Fatalf("unexpected native asset override issue: %+v", report.Issues.RuleIssues)
 	}
 }
 

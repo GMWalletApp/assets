@@ -1,11 +1,36 @@
 {
   "assetOverrides": [
     {
+      "chain": "acalaevm",
+      "address": "0x07DF96D1341A7d16Ba1AD431E2c847d978BC2bCe",
+      "receive_list": true
+    },
+    {
+      "chain": "algorand",
+      "address": "312769",
+      "receive_list": true
+    },
+    {
+      "chain": "algorand",
+      "address": "31566704",
+      "receive_list": true
+    },
+    {
       "chain": "aptos",
       "address": "0x05fabd1b12e39967a3c24e91b7b8f67719a6dacee74f3c8b9fb7d93e855437d2",
       "addTags": [
         "stablecoin"
       ],
+      "receive_list": true
+    },
+    {
+      "chain": "aptos",
+      "address": "0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b",
+      "receive_list": true
+    },
+    {
+      "chain": "aptos",
+      "address": "0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea::coin::T",
       "receive_list": true
     },
     {
@@ -16,9 +41,17 @@
     {
       "chain": "aptos",
       "address": "0xb30a694a344edee467d9f82330bbe7c3b89f440a1ecd2da1f3bca266560fce69",
+      "coingeckoId": "ethena-usde",
       "addTags": [
+        "defi",
         "stablecoin"
       ],
+      "receive_list": true,
+      "note": "Official Ethena USDe deployment on Aptos; CoinGecko currently reports the ENA address for this market platform."
+    },
+    {
+      "chain": "aptos",
+      "address": "0xbae207659db88bea0cbead6da0ed00aac12edcdda169e591cd41c94180b46f3b",
       "receive_list": true
     },
     {
@@ -62,6 +95,11 @@
     },
     {
       "chain": "arbitrum",
+      "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "receive_list": true
+    },
+    {
+      "chain": "arbitrum",
       "address": "0xba5DdD1f9d7F570dc94a51479a000E3BCE967196",
       "receive_list": true
     },
@@ -73,6 +111,15 @@
     {
       "chain": "arbitrum",
       "address": "0xFa7F8980b0f1E64A2062791cc3b0871572f1F7f0",
+      "receive_list": true
+    },
+    {
+      "chain": "arbitrum",
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "receive_list": true
+    },
+    {
+      "chain": "aurora",
       "receive_list": true
     },
     {
@@ -107,10 +154,24 @@
     },
     {
       "chain": "avalanchec",
+      "address": "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
+      "receive_list": true
+    },
+    {
+      "chain": "avalanchec",
+      "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+      "receive_list": true
+    },
+    {
+      "chain": "avalanchec",
       "address": "0xcf799767d366d789e8B446981C2D578E241fa25c",
       "addTags": [
         "stablecoin"
       ],
+      "receive_list": true
+    },
+    {
+      "chain": "base",
       "receive_list": true
     },
     {
@@ -131,7 +192,21 @@
     },
     {
       "chain": "base",
+      "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "receive_list": true
+    },
+    {
+      "chain": "base",
       "address": "0x8Ee73c484A26e0A5df2Ee2a4960B789967dd0415",
+      "receive_list": true
+    },
+    {
+      "chain": "base",
+      "address": "0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2",
+      "receive_list": true
+    },
+    {
+      "chain": "blast",
       "receive_list": true
     },
     {
@@ -151,6 +226,36 @@
       "receive_list": true
     },
     {
+      "chain": "cardano",
+      "address": "asset1fc7e54kds62yggplh0vs65vcgrmn5n577per23",
+      "receive_list": true
+    },
+    {
+      "chain": "cardano",
+      "address": "asset1l58ned7zvj57pxyp94kkqqyxvjelvtpcjjh743",
+      "receive_list": true
+    },
+    {
+      "chain": "celo",
+      "address": "0x48065fbBE25f71C9282ddf5e1cD6D6A887483D5e",
+      "receive_list": true
+    },
+    {
+      "chain": "celo",
+      "address": "0xcebA9300f2b948710d2653dD7B07f33A8B32118C",
+      "receive_list": true
+    },
+    {
+      "chain": "cfxevm",
+      "address": "0xfe97E85d13ABD9c1c33384E796F10B73905637cE",
+      "receive_list": true
+    },
+    {
+      "chain": "cryptoorg",
+      "address": "0x66e428c3f67a68878562e79A0234c1F83c208770",
+      "receive_list": true
+    },
+    {
       "chain": "cryptoorg",
       "address": "0xBc6f24649CCd67eC42342AccdCECCB2eFA27c9d9",
       "receive_list": true
@@ -158,6 +263,20 @@
     {
       "chain": "cryptoorg",
       "address": "0xbED48612BC69fA1CaB67052b42a95FB30C1bcFee",
+      "receive_list": true
+    },
+    {
+      "chain": "elrond",
+      "address": "USDC-c76f1f",
+      "receive_list": true
+    },
+    {
+      "chain": "elrond",
+      "address": "USDT-f8c08c",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
       "receive_list": true
     },
     {
@@ -273,6 +392,11 @@
     },
     {
       "chain": "ethereum",
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
       "address": "0xa2E3356610840701BDf5611a53974510Ae27E2e1",
       "addTags": [
         "wrapped",
@@ -325,6 +449,11 @@
     },
     {
       "chain": "ethereum",
+      "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "receive_list": true
+    },
+    {
+      "chain": "ethereum",
       "address": "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
       "receive_list": true
     },
@@ -334,6 +463,11 @@
       "addTags": [
         "staking"
       ],
+      "receive_list": true
+    },
+    {
+      "chain": "fantom",
+      "address": "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75",
       "receive_list": true
     },
     {
@@ -349,6 +483,10 @@
     {
       "chain": "fantom",
       "address": "0xE6c259bc0FCE25b71fE95A00361D3878E16232C3",
+      "receive_list": true
+    },
+    {
+      "chain": "greenfield",
       "receive_list": true
     },
     {
@@ -380,13 +518,47 @@
       "receive_list": true
     },
     {
+      "chain": "kava",
+      "address": "usdt",
+      "receive_list": true
+    },
+    {
+      "chain": "kavaevm",
+      "address": "0x919C1c267BC06a7039e03fcc2eF738525769109c",
+      "receive_list": true
+    },
+    {
+      "chain": "kcc",
+      "address": "0x0039f574eE5cC39bdD162E9A88e3EB1f111bAF48",
+      "receive_list": true
+    },
+    {
       "chain": "kcc",
       "address": "0x73b6086955c820370A18002F60E9b51FB67d7e1A",
       "receive_list": true
     },
     {
       "chain": "kcc",
+      "address": "0x980a5AfEf3D17aD98635F6C5aebCBAedEd3c3430",
+      "receive_list": true
+    },
+    {
+      "chain": "kcc",
       "address": "0xE76e97C157658004eE22e01C03a5e21A4655A2Fd",
+      "receive_list": true
+    },
+    {
+      "chain": "klaytn",
+      "address": "0x6270B58BE569a7c0b8f47594F191631Ae5b2C86C",
+      "receive_list": true
+    },
+    {
+      "chain": "linea",
+      "receive_list": true
+    },
+    {
+      "chain": "linea",
+      "address": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
       "receive_list": true
     },
     {
@@ -404,6 +576,10 @@
     },
     {
       "chain": "manta",
+      "receive_list": true
+    },
+    {
+      "chain": "manta",
       "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
       "addTags": [
         "stablecoin"
@@ -412,10 +588,19 @@
     },
     {
       "chain": "mantle",
+      "address": "0x201EBa5CC46D216Ce6DC03F6a759e8E766e956aE",
+      "receive_list": true
+    },
+    {
+      "chain": "mantle",
       "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
       "addTags": [
         "stablecoin"
       ],
+      "receive_list": true
+    },
+    {
+      "chain": "megaeth",
       "receive_list": true
     },
     {
@@ -451,13 +636,56 @@
       "receive_list": true
     },
     {
+      "chain": "monad",
+      "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+      "receive_list": true
+    },
+    {
+      "chain": "moonriver",
+      "address": "0xB44a9B6905aF7c801311e8F4E76932ee959c663C",
+      "receive_list": true
+    },
+    {
+      "chain": "moonriver",
+      "address": "0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D",
+      "receive_list": true
+    },
+    {
       "chain": "nativeinjective",
       "address": "inj1d5vz0uzwlpfvgwrwulxg6syy82axa58y4fuszd",
       "receive_list": true
     },
     {
+      "chain": "noble",
+      "receive_list": true
+    },
+    {
       "chain": "oasis",
       "address": "0xd43ce0aa2a29DCb75bDb83085703dc589DE6C7eb",
+      "receive_list": true
+    },
+    {
+      "chain": "okc",
+      "address": "0x382bB369d343125BfB2117af9c149795C6C65C50",
+      "receive_list": true
+    },
+    {
+      "chain": "okc",
+      "address": "0xc946DAf81b08146B1C7A8Da2A851Ddf2B3EAaf85",
+      "receive_list": true
+    },
+    {
+      "chain": "opbnb",
+      "receive_list": true
+    },
+    {
+      "chain": "opbnb",
+      "address": "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3",
+      "receive_list": true
+    },
+    {
+      "chain": "optimism",
+      "address": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
       "receive_list": true
     },
     {
@@ -483,7 +711,16 @@
     },
     {
       "chain": "optimism",
+      "address": "0x94b008aA00579c1307B0EF2c499aD98a8ce58e58",
+      "receive_list": true
+    },
+    {
+      "chain": "optimism",
       "address": "0xdC6fF44d5d932Cbd77B52E5612Ba0529DC6226F1",
+      "receive_list": true
+    },
+    {
+      "chain": "optimismgoerli",
       "receive_list": true
     },
     {
@@ -501,10 +738,13 @@
     {
       "chain": "plasma",
       "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
+      "coingeckoId": "ethena-usde",
       "addTags": [
+        "defi",
         "stablecoin"
       ],
-      "receive_list": true
+      "receive_list": true,
+      "note": "Matches CoinGecko ethena-usde platform plasma."
     },
     {
       "chain": "plasma",
@@ -529,6 +769,11 @@
     },
     {
       "chain": "polygon",
+      "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+      "receive_list": true
+    },
+    {
+      "chain": "polygon",
       "address": "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
       "receive_list": true
     },
@@ -549,7 +794,22 @@
     },
     {
       "chain": "polygon",
+      "address": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+      "receive_list": true
+    },
+    {
+      "chain": "polygon",
       "address": "0xD6DF932A45C0f255f85145f286eA0b292B21C90B",
+      "receive_list": true
+    },
+    {
+      "chain": "polygonzkevm",
+      "address": "0x1E4a5963aBFD975d8c9021ce480b42188849D41d",
+      "receive_list": true
+    },
+    {
+      "chain": "polygonzkevm",
+      "address": "0xA8CE8aee21bC2A48a5EF670afCc9274C7bbbC035",
       "receive_list": true
     },
     {
@@ -558,6 +818,20 @@
       "addTags": [
         "stablecoin"
       ],
+      "receive_list": true
+    },
+    {
+      "chain": "ronin",
+      "address": "0x0B7007c13325C48911F73A2daD5FA5dCBf808aDc",
+      "receive_list": true
+    },
+    {
+      "chain": "scroll",
+      "receive_list": true
+    },
+    {
+      "chain": "scroll",
+      "address": "0x06eFdBFf2a14a7c8E15944D1F4A48F9F95F663A4",
       "receive_list": true
     },
     {
@@ -593,12 +867,25 @@
     },
     {
       "chain": "scroll",
+      "address": "0xf55BEC9cafDbE8730f096Aa55dad6D22d44099Df",
+      "receive_list": true
+    },
+    {
+      "chain": "scroll",
       "address": "0xf610A9dfB7C89644979b4A0f27063E9e7d7Cda32",
       "displayName": "Wrapped stETH",
       "addTags": [
         "staking",
         "wrapped"
       ]
+    },
+    {
+      "chain": "sepolia",
+      "receive_list": true
+    },
+    {
+      "chain": "smartchain",
+      "receive_list": true
     },
     {
       "chain": "smartchain",
@@ -620,10 +907,27 @@
     },
     {
       "chain": "smartchain",
+      "address": "0x55d398326f99059fF775485246999027B3197955",
+      "coingeckoId": "tether",
+      "displayName": "Binance-Peg Tether USD",
+      "addTags": [
+        "binance-peg",
+        "stablecoin"
+      ],
+      "receive_list": true,
+      "note": "BSC pegged USDT; market identity is tether, not an official support assertion."
+    },
+    {
+      "chain": "smartchain",
       "address": "0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34",
       "addTags": [
         "stablecoin"
       ],
+      "receive_list": true
+    },
+    {
+      "chain": "smartchain",
+      "address": "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
       "receive_list": true
     },
     {
@@ -749,6 +1053,16 @@
     },
     {
       "chain": "solana",
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "receive_list": true
+    },
+    {
+      "chain": "solana",
+      "address": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+      "receive_list": true
+    },
+    {
+      "chain": "solana",
       "address": "HZRCwxP2Vq9PCpPXooayhJ2bxTpo5xfpQrwB1svh332p",
       "receive_list": true
     },
@@ -785,7 +1099,27 @@
     },
     {
       "chain": "sonic",
+      "address": "0x6047828dc181963ba44974801FF68e538dA5eaF9",
+      "receive_list": true
+    },
+    {
+      "chain": "sonic",
       "address": "0xf1eF7d2D4C0c881cd634481e0586ed5d2871A74B",
+      "receive_list": true
+    },
+    {
+      "chain": "stellar",
+      "address": "USDC-GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN",
+      "receive_list": true
+    },
+    {
+      "chain": "sui",
+      "address": "0x375f70cf2ae4c00bf37117d0c85a2c71545e6ee05c4a5c7d282cd66a4504b068::usdt::USDT",
+      "receive_list": true
+    },
+    {
+      "chain": "sui",
+      "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
       "receive_list": true
     },
     {
@@ -822,6 +1156,20 @@
       "receive_list": true
     },
     {
+      "chain": "ton",
+      "address": "EQCxE6mUtQJKFnGfaROTKOt1lZbDiiX1kCixRv7Nw2Id_sDs",
+      "receive_list": true
+    },
+    {
+      "chain": "tron",
+      "receive_list": true
+    },
+    {
+      "chain": "tron",
+      "address": "TEkxiTehnzSmSe2XqrBj4w32RUN966rdz8",
+      "receive_list": true
+    },
+    {
       "chain": "tron",
       "address": "TFNirp6PbqYE1ZTtWuCMUKJWLNZkoCoeFJ",
       "addTags": [
@@ -839,6 +1187,11 @@
     },
     {
       "chain": "tron",
+      "address": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+      "receive_list": true
+    },
+    {
+      "chain": "tron",
       "address": "TXDk8mbtRbXeYuMNS83CfKPaYYT8XWv9Hz",
       "addTags": [
         "stablecoin"
@@ -852,10 +1205,34 @@
     },
     {
       "chain": "zklink",
+      "address": "0x1a1A3b2ff016332e866787B311fcB63928464509",
+      "receive_list": true
+    },
+    {
+      "chain": "zklink",
+      "address": "0x2F8A25ac62179B31D62D7F80884AE57464699059",
+      "receive_list": true
+    },
+    {
+      "chain": "zklink",
       "address": "0xDa4AaEd3A53962c83B35697Cd138cc6df43aF71f",
       "addTags": [
         "wrapped"
       ],
+      "receive_list": true
+    },
+    {
+      "chain": "zksync",
+      "receive_list": true
+    },
+    {
+      "chain": "zksync",
+      "address": "0x1d17CBcF0D6D143135aE902365D2E5e2A16538D4",
+      "receive_list": true
+    },
+    {
+      "chain": "zksync",
+      "address": "0x3355df6D4c9C3035724Fd0e3914dE96A5a83aaf4",
       "receive_list": true
     },
     {

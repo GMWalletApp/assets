@@ -717,10 +717,10 @@ func reportTokenListRuleIssues(index *AssetIndex, coingecko *coinGeckoDataset, c
 	}
 
 	for _, override := range config.AssetOverrides {
-		if override.Chain == "" || override.Address == "" {
+		if override.Chain == "" {
 			report.Issues.RuleIssues = append(report.Issues.RuleIssues, ReportRuleIssue{
 				Rule:        "assetOverrides",
-				Reason:      "chain and address are required",
+				Reason:      "chain is required",
 				Chain:       override.Chain,
 				Address:     override.Address,
 				CoinGeckoID: override.CoinGeckoID,
