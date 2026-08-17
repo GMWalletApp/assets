@@ -307,6 +307,7 @@ https://raw.githubusercontent.com/<owner>/<repo>/<branch>/extensions/jsonrpc/dat
 - CoinGecko `market` and `rank`
 - DefiLlama-derived `stablecoin` tag
 - top-level `hot: true|false` from hot config
+- top-level derived `is_top: true|false`; all native gas assets and tokens whose symbol is `USDT`/`USDC` (case-insensitive) are `true`, and every other token is `false`
 - base/manual override display and market binding
 - manual tokens appended from Action-managed final-token entries
 

@@ -1099,11 +1099,11 @@ func TestTokenListSyncAppliesManualOverridesAndHotList(t *testing.T) {
 		t.Fatalf("read tokenlist: %v", err)
 	}
 	usdt := findAppToken(tokenList.Tokens, "smartchain", testUSDTAddress)
-	if usdt == nil || usdt.Name != "Manual Override Name" || !hasTag(usdt.Tags, "manual-tag") || hasTag(usdt.Tags, "base-tag") || hasTag(usdt.Tags, "hot") || !usdt.Hot || !usdt.ReceiveList {
+	if usdt == nil || usdt.Name != "Manual Override Name" || !hasTag(usdt.Tags, "manual-tag") || hasTag(usdt.Tags, "base-tag") || hasTag(usdt.Tags, "hot") || !usdt.Hot || !usdt.IsTop || !usdt.ReceiveList {
 		t.Fatalf("expected manual override precedence plus hot bool, got %+v", usdt)
 	}
 	native := findAppToken(tokenList.Tokens, "smartchain", "")
-	if native == nil || !native.Hot || !native.ReceiveList || hasTag(native.Tags, "hot") {
+	if native == nil || !native.Hot || !native.IsTop || !native.ReceiveList || hasTag(native.Tags, "hot") {
 		t.Fatalf("expected native asset to accept empty-address hot and receive override, got %+v", native)
 	}
 
@@ -1332,7 +1332,7 @@ func TestTokenListSyncReportsMissingHotAssets(t *testing.T) {
 	}
 }
 
-func TestAppTokenJSONAlwaysIncludesHotField(t *testing.T) {
+func TestAppTokenJSONAlwaysIncludesBooleanDisplayFields(t *testing.T) {
 	data, err := json.Marshal(AppToken{
 		Kind:    "token",
 		Chain:   "smartchain",
@@ -1356,6 +1356,34 @@ func TestAppTokenJSONAlwaysIncludesHotField(t *testing.T) {
 	hot, ok := value.(bool)
 	if !ok || hot {
 		t.Fatalf("expected hot=false, payload=%s", string(data))
+	}
+	isTopValue, ok := payload["is_top"]
+	if !ok {
+		t.Fatalf("expected is_top field to be present, payload=%s", string(data))
+	}
+	isTop, ok := isTopValue.(bool)
+	if !ok || isTop {
+		t.Fatalf("expected is_top=false, payload=%s", string(data))
+	}
+}
+
+func TestTokenListIsTop(t *testing.T) {
+	tests := []struct {
+		name  string
+		token AppToken
+		want  bool
+	}{
+		{name: "native gas asset", token: AppToken{Kind: "native", Symbol: "POL"}, want: true},
+		{name: "usdt token", token: AppToken{Kind: "token", Symbol: "USDt"}, want: true},
+		{name: "usdc token", token: AppToken{Kind: "token", Symbol: "USDC"}, want: true},
+		{name: "other token", token: AppToken{Kind: "token", Symbol: "DAI"}, want: false},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := tokenListIsTop(tt.token); got != tt.want {
+				t.Fatalf("tokenListIsTop(%+v)=%v want %v", tt.token, got, tt.want)
+			}
+		})
 	}
 }
 

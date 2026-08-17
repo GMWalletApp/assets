@@ -297,6 +297,7 @@ func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDatase
 			token.Rank = market.MarketCapRank
 		}
 		applyTokenListRules(&token, config, report)
+		token.IsTop = tokenListIsTop(token)
 		if _, ok := stablecoinAssetKeys[key]; ok {
 			token.Tags = appendUniqueStrings(token.Tags, "stablecoin")
 		}
@@ -344,6 +345,7 @@ func (s *Syncer) buildAppTokenList(index *AssetIndex, coingecko *coinGeckoDatase
 
 	for _, token := range manualTokens {
 		normalizeTokenListManualToken(&token)
+		token.IsTop = tokenListIsTop(token)
 		if config.isExcludedChain(token.Chain) {
 			report.Local.Filtered++
 			report.Rules.ExcludedChainHits++
@@ -590,6 +592,18 @@ func matchAssetOverrideMarket(index *AssetIndex, config *ResolvedTokenListConfig
 	}
 	sortAssetDetails(matches)
 	return matches
+}
+
+func tokenListIsTop(token AppToken) bool {
+	if strings.EqualFold(strings.TrimSpace(token.Kind), "native") {
+		return true
+	}
+	switch strings.ToUpper(strings.TrimSpace(token.Symbol)) {
+	case "USDT", "USDC":
+		return true
+	default:
+		return false
+	}
 }
 
 func applyTokenListRules(token *AppToken, config *ResolvedTokenListConfig, report *TokenListReport) {

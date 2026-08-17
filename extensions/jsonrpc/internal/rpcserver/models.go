@@ -125,6 +125,7 @@ type AppToken struct {
 	Kind        string          `json:"kind"`
 	Chain       string          `json:"chain"`
 	Hot         bool            `json:"hot"`
+	IsTop       bool            `json:"is_top"`
 	Address     string          `json:"address"`
 	AssetID     string          `json:"assetId"`
 	Type        string          `json:"type,omitempty"`
