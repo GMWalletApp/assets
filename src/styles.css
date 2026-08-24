@@ -88,7 +88,7 @@
   }
 
   body {
-    @apply min-w-80 bg-background font-sans text-foreground antialiased;
+    @apply bg-background font-sans text-foreground antialiased;
     margin: 0;
     text-rendering: optimizeLegibility;
   }

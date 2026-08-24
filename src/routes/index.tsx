@@ -105,21 +105,23 @@ function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <AppHeader activePage="icons" />
-      <main className="mx-auto w-full max-w-[1536px] flex-1 px-4 py-8 sm:px-6 lg:px-8">
-        <section className="mb-7 grid gap-5 pb-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+      <main className="mx-auto w-full max-w-[1536px] flex-1 px-3 py-5 sm:px-6 sm:py-8 lg:px-8">
+        <section className="mb-4 grid gap-4 pb-2 sm:mb-7 sm:gap-5 sm:pb-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="max-w-3xl">
-            <Badge className="mb-3" variant="outline">
+            <Badge className="mb-2.5" variant="outline">
               Asset registry
             </Badge>
-            <h1 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h1 className="text-balance text-2xl font-semibold tracking-tight sm:text-4xl">
               加密资产图标，一处查找
             </h1>
             <p className="mt-3 max-w-2xl text-pretty text-sm leading-6 text-muted-foreground sm:text-base">
               浏览网络、Token、交易平台、钱包与 DApp。预览统一由 CryptoIdentity 解析并支持网络角标。
             </p>
           </div>
-          <div className="flex items-center gap-3 rounded-xl border bg-card px-4 py-3 text-sm shadow-xs">
-            <Database className="size-4 text-primary" />
+          <div className="flex items-center gap-2.5 px-0 py-0 text-sm sm:gap-3 sm:rounded-xl sm:border sm:bg-card sm:px-4 sm:py-3 sm:shadow-xs">
+            <div className="flex size-8 items-center justify-center rounded-lg bg-muted sm:size-auto sm:bg-transparent">
+              <Database className="size-4 text-primary" />
+            </div>
             <div>
               <div className="font-medium tabular-nums">
                 {data ? entries.length.toLocaleString() : "—"} 项资产
@@ -129,8 +131,8 @@ function Home() {
           </div>
         </section>
 
-        <div className="sticky top-16 z-30 -mx-4 mb-6 bg-background/95 px-4 py-4 backdrop-blur-xl sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-          <div className="mx-auto flex max-w-[1472px] flex-col gap-3 lg:flex-row lg:items-center">
+        <div className="sticky top-16 z-30 -mx-3 mb-4 bg-background/95 px-3 py-3 backdrop-blur-xl sm:-mx-6 sm:mb-6 sm:px-6 sm:py-4 lg:-mx-8 lg:px-8">
+          <div className="mx-auto flex max-w-[1472px] flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-3">
             <Tabs
               className="min-w-0"
               value={filter}
@@ -139,9 +141,13 @@ function Home() {
                 setVisibleCount(INITIAL_VISIBLE_COUNT);
               }}
             >
-              <TabsList className="h-auto w-fit max-w-full flex-wrap justify-start">
+              <TabsList className="grid h-auto w-full grid-cols-3 justify-start lg:inline-flex lg:w-fit lg:max-w-full lg:flex-wrap">
                 {FILTERS.map((item) => (
-                  <TabsTrigger key={item.value} className="px-3" value={item.value}>
+                  <TabsTrigger
+                    key={item.value}
+                    className="h-10 px-2 lg:h-auto lg:px-3"
+                    value={item.value}
+                  >
                     {item.label}
                     <span className="font-mono text-[10px] text-muted-foreground">
                       {counts[item.value]}
@@ -150,7 +156,7 @@ function Home() {
                 ))}
               </TabsList>
             </Tabs>
-            <div className="relative min-w-56 flex-1">
+            <div className="relative min-w-0 flex-1 lg:min-w-56">
               <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
               <Input
                 aria-label="搜索资产"
@@ -196,7 +202,7 @@ function Home() {
         ) : null}
         {data && filtered.length > 0 ? (
           <>
-            <div className="grid grid-cols-[repeat(auto-fill,minmax(136px,1fr))] gap-3">
+            <div className="grid grid-cols-[repeat(auto-fill,minmax(136px,1fr))] gap-2.5 sm:gap-3">
               {filtered.slice(0, visibleCount).map((asset) => (
                 <AssetCard
                   key={assetKey(asset)}
@@ -230,15 +236,15 @@ function AssetSkeletons() {
   return (
     <div
       aria-label="正在加载资产"
-      className="grid grid-cols-[repeat(auto-fill,minmax(136px,1fr))] gap-3"
+      className="grid grid-cols-[repeat(auto-fill,minmax(136px,1fr))] gap-2.5 sm:gap-3"
       role="status"
     >
       {SKELETON_KEYS.map((key) => (
         <div
-          className="flex min-h-40 flex-col items-center rounded-xl border border-border bg-card p-4"
+          className="flex min-h-36 flex-col items-center rounded-xl border border-border bg-card p-3 sm:min-h-40 sm:p-4"
           key={key}
         >
-          <Skeleton className="size-14 rounded-full" />
+          <Skeleton className="size-12 rounded-full sm:size-14" />
           <Skeleton className="mt-3 h-4 w-16" />
           <Skeleton className="mt-2 h-3 w-24" />
           <Skeleton className="mt-auto h-5 w-14" />

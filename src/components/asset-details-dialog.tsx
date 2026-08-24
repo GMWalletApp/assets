@@ -35,18 +35,18 @@ export function AssetDetailsDialog({
   const rows = assetRows(asset);
   return (
     <Dialog open onOpenChange={onOpenChange}>
-      <DialogContent className="gap-0 overflow-hidden p-0 sm:max-w-2xl">
-        <DialogHeader className="flex-row items-center gap-4 border-b p-5 text-left">
-          <AssetIdentity aria-hidden="true" asset={asset} className="size-14" />
+      <DialogContent className="inset-x-0 top-auto bottom-0 max-h-[85dvh] max-w-none translate-x-0 translate-y-0 gap-0 overflow-hidden rounded-b-none rounded-t-2xl p-0 sm:top-[50%] sm:left-[50%] sm:bottom-auto sm:max-h-none sm:max-w-2xl sm:translate-x-[-50%] sm:translate-y-[-50%] sm:rounded-lg">
+        <DialogHeader className="flex-row items-center gap-3 border-b p-4 pr-12 text-left sm:gap-4 sm:p-5 sm:pr-12">
+          <AssetIdentity aria-hidden="true" asset={asset} className="size-12 sm:size-14" />
           <div className="min-w-0">
-            <DialogTitle className="truncate text-xl">{assetName(asset)}</DialogTitle>
+            <DialogTitle className="truncate text-lg sm:text-xl">{assetName(asset)}</DialogTitle>
             <DialogDescription className="mt-1 truncate">
               {assetSymbol(asset)} · {assetSecondary(asset)}
             </DialogDescription>
           </div>
         </DialogHeader>
-        <ScrollArea className="max-h-[65vh]">
-          <div className="space-y-5 p-5">
+        <ScrollArea className="max-h-[68dvh] sm:max-h-[65vh]">
+          <div className="space-y-4 p-4 sm:space-y-5 sm:p-5">
             <div className="flex flex-wrap gap-2">
               <Badge>{assetBadge(asset)}</Badge>
               {"token" in asset ? <Badge variant="outline">{asset.token.status}</Badge> : null}
@@ -96,8 +96,10 @@ function DetailRow({ href, label, value }: Detail) {
   const { copied, copy } = useCopyFeedback(value);
 
   return (
-    <div className="grid gap-2 rounded-lg bg-muted/70 p-3 md:grid-cols-[7rem_minmax(0,1fr)_auto] md:items-start">
-      <span className="text-xs font-semibold text-muted-foreground">{label}</span>
+    <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-2 rounded-lg bg-muted/70 p-3 md:grid-cols-[7rem_minmax(0,1fr)_auto] md:items-start">
+      <span className="col-span-2 text-xs font-semibold text-muted-foreground md:col-span-1">
+        {label}
+      </span>
       {href ? (
         <a
           className="flex min-w-0 items-start gap-1 break-all font-mono text-xs text-primary hover:underline"

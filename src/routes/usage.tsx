@@ -18,19 +18,19 @@ function UsagePage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <AppHeader activePage="usage" />
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6 lg:px-8">
-        <section className="mb-8 max-w-3xl">
+      <main className="mx-auto w-full max-w-5xl flex-1 px-3 py-5 sm:px-6 sm:py-8 lg:px-8">
+        <section className="mb-6 max-w-3xl sm:mb-8">
           <Badge className="mb-3" variant="outline">
             shadcn registry
           </Badge>
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">安装 CryptoIdentity</h1>
-          <p className="mt-3 text-pretty leading-7 text-muted-foreground">
+          <h1 className="text-2xl font-semibold tracking-tight sm:text-4xl">安装 CryptoIdentity</h1>
+          <p className="mt-3 text-pretty text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
             一条命令安装完整文件夹。组件统一处理网络、Token、交易平台、钱包和 DApp
             图标，并支持角标、加载骨架与自适应背景色。
           </p>
         </section>
 
-        <div className="grid gap-5">
+        <div className="grid min-w-0 gap-4 sm:gap-5">
           <Card>
             <CardHeader>
               <CardTitle>任意技术栈</CardTitle>
@@ -114,11 +114,17 @@ function UsagePage() {
               <CardDescription>传入 icon 描述即可；Token 可追加网络角标。</CardDescription>
             </CardHeader>
             <CardContent>
-              <Tabs defaultValue="token">
-                <TabsList>
-                  <TabsTrigger value="token">Token</TabsTrigger>
-                  <TabsTrigger value="network">网络</TabsTrigger>
-                  <TabsTrigger value="provider">平台与 DApp</TabsTrigger>
+              <Tabs className="min-w-0" defaultValue="token">
+                <TabsList className="h-auto w-full">
+                  <TabsTrigger className="min-h-9 text-xs sm:text-sm" value="token">
+                    Token
+                  </TabsTrigger>
+                  <TabsTrigger className="min-h-9 text-xs sm:text-sm" value="network">
+                    网络
+                  </TabsTrigger>
+                  <TabsTrigger className="min-h-9 text-xs sm:text-sm" value="provider">
+                    平台与 DApp
+                  </TabsTrigger>
                 </TabsList>
                 <TabsContent value="token">
                   <CodeBlock>{`<CryptoIdentity
@@ -173,7 +179,7 @@ function UsagePage() {
 function CopyBlock({ value }: { value: string }) {
   const { copied, copy } = useCopyFeedback(value);
   return (
-    <div className="flex items-center gap-2 rounded-lg bg-muted/50 p-2 pl-3">
+    <div className="flex max-w-full min-w-0 items-center gap-2 overflow-hidden rounded-lg bg-muted/50 p-2 pl-3">
       <Terminal className="size-4 shrink-0 text-muted-foreground" />
       <code className="min-w-0 flex-1 overflow-x-auto whitespace-nowrap font-mono text-xs">
         {value}
@@ -187,7 +193,7 @@ function CopyBlock({ value }: { value: string }) {
 
 function CodeBlock({ children }: { children: ReactNode }) {
   return (
-    <pre className="overflow-x-auto rounded-lg bg-foreground p-4 text-xs leading-6 text-background">
+    <pre className="max-w-full overflow-x-auto rounded-lg bg-foreground p-3 text-xs leading-6 text-background sm:p-4">
       <code>{children}</code>
     </pre>
   );

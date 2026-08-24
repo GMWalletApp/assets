@@ -49,7 +49,7 @@ export function AppHeader({ activePage }: { activePage: PageKey }) {
 
   return (
     <header className="sticky top-0 z-40 border-b bg-background/92 backdrop-blur-xl supports-[backdrop-filter]:bg-background/80">
-      <div className="mx-auto flex min-h-16 max-w-[1536px] items-center gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex min-h-16 max-w-[1536px] items-center gap-1 px-3 sm:gap-4 sm:px-6 lg:px-8">
         <Link className="flex shrink-0 items-center gap-2.5" to="/">
           <img
             alt="GMWallet"
@@ -63,7 +63,7 @@ export function AppHeader({ activePage }: { activePage: PageKey }) {
           <NavLink active={activePage === "icons"} to="/">
             图标
           </NavLink>
-          <NavLink active={activePage === "usage"} to="/usage">
+          <NavLink active={activePage === "usage"} mobileLabel="说明" to="/usage">
             使用说明
           </NavLink>
         </nav>
@@ -116,7 +116,7 @@ export function AppHeader({ activePage }: { activePage: PageKey }) {
 export function AppFooter({ meta }: { meta?: ReactNode }) {
   return (
     <footer className="mt-auto border-t bg-card/50">
-      <div className="mx-auto flex max-w-[1536px] flex-col gap-3 px-4 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-[1536px] flex-col gap-1.5 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:gap-3 sm:px-6 sm:py-6 lg:px-8">
         <span>© 2026 {APP_NAME}</span>
         {meta}
       </div>
@@ -127,21 +127,24 @@ export function AppFooter({ meta }: { meta?: ReactNode }) {
 function NavLink({
   active,
   children,
+  mobileLabel,
   to,
 }: {
   active: boolean;
   children: ReactNode;
+  mobileLabel?: string;
   to: "/" | "/usage";
 }) {
   return (
     <Link
       className={cn(
-        "rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+        "rounded-md px-2 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:px-3",
         active && "bg-muted text-foreground",
       )}
       to={to}
     >
-      {children}
+      {mobileLabel ? <span className="sm:hidden">{mobileLabel}</span> : null}
+      <span className={mobileLabel ? "hidden sm:inline" : undefined}>{children}</span>
     </Link>
   );
 }

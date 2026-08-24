@@ -133,9 +133,9 @@ for addresses, identifiers, URLs, and code. Prefer tabular numerals for counts.
 
 Use a 4px base rhythm and a maximum content width of 1536px. The desktop toolbar stays compact and
 the icon grid uses responsive auto-fill columns with a minimum width of 136px. Below 768px, filters
-wrap into a single-column sheet-like stack, cards retain at least a 44px touch target, and secondary
-metadata may truncate but never overflow. The documentation route uses a narrower 960px reading
-column.
+wrap at their natural height, cards retain at least a 44px touch target, and secondary metadata may
+truncate but never overflow. Asset details use a bottom sheet on small screens. The documentation
+route uses a narrower 960px reading column and all code surfaces must stay within the viewport.
 
 ## Elevation & Depth
 
