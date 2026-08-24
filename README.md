@@ -118,5 +118,5 @@ The preview is a client-rendered Vite SPA configured for Cloudflare Workers Stat
 output is written to `dist`, and unknown routes return `index.html` so `/usage` and future client
 routes can be opened directly.
 
-For Cloudflare Workers Builds, use `bun run build` as the build command and `bun run deploy` as the
-deploy command.
+For Cloudflare Workers Builds, use `bun run build` as the build command and `npx wrangler deploy`
+as the deploy command.

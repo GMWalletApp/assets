@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "deploy": "bun run build && wrangler deploy",
     "preview": "vite preview",
     "dapps:generate": "node scripts/generate-dapps.mjs",
     "check": "biome check .",
