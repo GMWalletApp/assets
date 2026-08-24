@@ -1,0 +1,62 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "gmwallet",
+  "homepage": "https://github.com/GMWalletApp/assets/tree/package",
+  "items": [
+    {
+      "name": "crypto-identity",
+      "type": "registry:block",
+      "title": "Crypto Identity",
+      "description": "A token, network, exchange, wallet, or dapp avatar, label, or badge with mirror fallback and corner icons.",
+      "dependencies": ["class-variance-authority", "fast-average-color", "fzstd"],
+      "registryDependencies": ["avatar", "skeleton"],
+      "files": [
+        {
+          "path": "registry/default/crypto-identity/index.tsx",
+          "type": "registry:ui",
+          "target": "@ui/crypto-identity/index.tsx"
+        },
+        {
+          "path": "registry/default/crypto-identity/hooks/use-icon-source.ts",
+          "type": "registry:hook",
+          "target": "@ui/crypto-identity/hooks/use-icon-source.ts"
+        },
+        {
+          "path": "registry/default/crypto-identity/hooks/use-image-background.ts",
+          "type": "registry:hook",
+          "target": "@ui/crypto-identity/hooks/use-image-background.ts"
+        },
+        {
+          "path": "registry/default/crypto-identity/lib/types.ts",
+          "type": "registry:lib",
+          "target": "@ui/crypto-identity/lib/types.ts"
+        },
+        {
+          "path": "registry/default/crypto-identity/lib/index.ts",
+          "type": "registry:lib",
+          "target": "@ui/crypto-identity/lib/index.ts"
+        },
+        {
+          "path": "registry/default/crypto-identity/lib/constants.ts",
+          "type": "registry:lib",
+          "target": "@ui/crypto-identity/lib/constants.ts"
+        },
+        {
+          "path": "registry/default/crypto-identity/lib/normalize.ts",
+          "type": "registry:lib",
+          "target": "@ui/crypto-identity/lib/normalize.ts"
+        },
+        {
+          "path": "registry/default/crypto-identity/lib/catalog.ts",
+          "type": "registry:lib",
+          "target": "@ui/crypto-identity/lib/catalog.ts"
+        },
+        {
+          "path": "registry/default/crypto-identity/lib/resolve-icon-urls.ts",
+          "type": "registry:lib",
+          "target": "@ui/crypto-identity/lib/resolve-icon-urls.ts"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "types": ["node", "react", "react-dom"],
+    "paths": {
+      "@/components/ui/avatar": ["./tests/registry/avatar.tsx"],
+      "@/components/ui/skeleton": ["./tests/registry/skeleton.tsx"],
+      "@/lib/utils": ["./tests/registry/utils.ts"]
+    }
+  },
+  "include": ["registry/default", "tests/registry"]
+}

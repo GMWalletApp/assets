@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - package
+  pull_request:
+    branches:
+      - package
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2.2.0
+        with:
+          bun-version: 1.3.14
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Check formatting and lint
+        run: bun run check
+
+      - name: Typecheck
+        run: bun run typecheck
+
+      - name: Test
+        run: bun run test
+
+      - name: Verify Registry output
+        run: |
+          bun run registry:build
+          git diff --exit-code -- registry
+
+  purge-mirrors:
+    if: github.event_name == 'push'
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Purge Registry mirrors
+        run: curl --fail --silent --show-error "https://purge.jsdelivr.net/gh/GMWalletApp/assets@package/registry/crypto-identity.json"
