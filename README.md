@@ -81,9 +81,9 @@ export function CryptoIdentities() {
 `CryptoIdentity` supports `avatar` (default), `label`, and `badge` variants. Any of the five icon
 types can also be used as a bottom-right `cornerIcon`.
 
-While an icon is loading, its avatar uses a pulse skeleton. Once loaded, its dominant color is
-mixed with the active shadcn background color, so the result adapts automatically to light and dark
-themes.
+While an icon is loading, its avatar uses a pulse skeleton. Once loaded, its dominant color is used
+to derive separate high-contrast surfaces for light and dark themes. Pale icons receive a darker
+light-theme surface, while dark monochrome icons remain legible in both themes.
 
 Use `className` for the root element. Internal styling hooks are available through the
 `crypto-identity-avatar`, `crypto-identity-image`, `crypto-identity-corner`, and
@@ -106,8 +106,12 @@ For a stable snapshot, replace `@package` with a Git commit SHA.
 
 ```bash
 bun install
+bun run dev
 bun run check
 bun run typecheck
 bun run test
+bun run build
 bun run registry:build
 ```
+
+The `package` branch deploys the statically prerendered preview from `dist/client` to GitHub Pages.

@@ -1,5 +1,5 @@
 import { decompress } from "fzstd";
-import { CATALOG_PATHS, CDN_BASE_URLS } from "./constants";
+import { CATALOG_PATHS, orderedCdnBaseUrls } from "./constants";
 import { normalize, normalizeNetworkSlug, normalizeSupportSlug, uniqueUrls } from "./normalize";
 import type { TokenAssetQuery } from "./types";
 
@@ -24,8 +24,11 @@ interface SupportCatalog {
 
 const catalogRequests = new Map<string, Promise<unknown>>();
 
-export async function resolveTokenCatalogUrls(query: TokenAssetQuery): Promise<string[]> {
-  const catalog = await loadCatalog<TokenCatalog>(CATALOG_PATHS.tokens);
+export async function resolveTokenCatalogUrls(
+  query: TokenAssetQuery,
+  preferredBaseUrl?: string,
+): Promise<string[]> {
+  const catalog = await loadCatalog<TokenCatalog>(CATALOG_PATHS.tokens, preferredBaseUrl);
   const network = normalizeNetworkSlug(query.network);
   const address = normalize(query.contractAddress);
   const symbol = normalize(query.name);
@@ -39,37 +42,39 @@ export async function resolveTokenCatalogUrls(query: TokenAssetQuery): Promise<s
   const match = address
     ? tokens.find(matches)
     : (tokens.find((token) => token.kind === "native" && matches(token)) ?? tokens.find(matches));
-  return match?.logoURI ? mirrorLogoUrls(match.logoURI) : [];
+  return match?.logoURI ? mirrorLogoUrls(match.logoURI, preferredBaseUrl) : [];
 }
 
 export async function resolveSupportCatalogUrls(
   type: "exchange" | "wallet",
   name: string,
+  preferredBaseUrl?: string,
 ): Promise<string[]> {
-  const support = await loadCatalog<SupportCatalog>(CATALOG_PATHS.support);
+  const support = await loadCatalog<SupportCatalog>(CATALOG_PATHS.support, preferredBaseUrl);
   const target = normalizeSupportSlug(name);
   const items = type === "exchange" ? support?.exchanges : support?.wallets;
   const match = items?.find((item) => {
     return [item.id, item.name].some((value) => normalizeSupportSlug(value) === target);
   });
-  return match?.logoURI ? mirrorLogoUrls(match.logoURI) : [];
+  return match?.logoURI ? mirrorLogoUrls(match.logoURI, preferredBaseUrl) : [];
 }
 
-async function loadCatalog<T>(path: string): Promise<T | null> {
-  let request = catalogRequests.get(path);
+async function loadCatalog<T>(path: string, preferredBaseUrl?: string): Promise<T | null> {
+  const key = `${preferredBaseUrl ?? "default"}:${path}`;
+  let request = catalogRequests.get(key);
   if (!request) {
-    request = fetchCatalog<T>(path);
-    catalogRequests.set(path, request);
+    request = fetchCatalog<T>(path, preferredBaseUrl);
+    catalogRequests.set(key, request);
   }
   const result = (await request) as T | null;
   if (result === null) {
-    catalogRequests.delete(path);
+    catalogRequests.delete(key);
   }
   return result;
 }
 
-async function fetchCatalog<T>(path: string): Promise<T | null> {
-  for (const baseUrl of CDN_BASE_URLS) {
+async function fetchCatalog<T>(path: string, preferredBaseUrl?: string): Promise<T | null> {
+  for (const baseUrl of orderedCdnBaseUrls(preferredBaseUrl)) {
     try {
       const response = await fetch(`${baseUrl}/${path}`, {
         signal: AbortSignal.timeout(5_000),
@@ -86,7 +91,7 @@ async function fetchCatalog<T>(path: string): Promise<T | null> {
   return null;
 }
 
-function mirrorLogoUrls(logoUrl: string): string[] {
+function mirrorLogoUrls(logoUrl: string, preferredBaseUrl?: string): string[] {
   const urls = [logoUrl];
   try {
     const parsed = new URL(logoUrl);
@@ -100,6 +105,9 @@ function mirrorLogoUrls(logoUrl: string): string[] {
         urls.unshift(
           `https://cdn.jsdmirror.com/gh/${owner}/${repository}@${branch}/${path.join("/")}`,
         );
+        if (preferredBaseUrl && owner === "GMWalletApp" && repository === "assets") {
+          urls.unshift(`${preferredBaseUrl.replace(/\/$/, "")}/${path.join("/")}`);
+        }
       }
     }
   } catch {

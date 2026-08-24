@@ -43,10 +43,10 @@ describe("compressed catalogs", () => {
         exchanges: [],
         wallets: [
           {
-            id: "trust",
-            name: "Trust Wallet",
+            id: "rainbow",
+            name: "Rainbow App",
             logoURI:
-              "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/trust/logo.svg",
+              "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/rainbow/logo.svg",
           },
         ],
       },
@@ -54,10 +54,34 @@ describe("compressed catalogs", () => {
 
     const urls = await resolveIconUrls({
       type: "wallet",
-      name: "Trust Wallet",
+      name: "Rainbow App",
       includeCatalog: true,
     });
     expect(urls[0]).toContain("cdn.jsdmirror.com/gh/GMWalletApp/assets@main");
+  });
+
+  it("keeps the preferred mirror first for catalog-resolved support icons", async () => {
+    mockCatalogFetch({
+      "support/support.json.zst": {
+        exchanges: [],
+        wallets: [
+          {
+            id: "rainbow",
+            name: "Rainbow App",
+            logoURI:
+              "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/rainbow/logo.svg",
+          },
+        ],
+      },
+    });
+
+    const urls = await resolveIconUrls(
+      { type: "wallet", name: "Rainbow App", includeCatalog: true },
+      "https://mirror.example/assets",
+    );
+
+    expect(urls[0]).toBe("https://mirror.example/assets/support/wallets/rainbow-app/logo.svg");
+    expect(urls).toContain("https://mirror.example/assets/support/wallets/rainbow/logo.svg");
   });
 
   it("prefers the native token for a symbol lookup", async () => {

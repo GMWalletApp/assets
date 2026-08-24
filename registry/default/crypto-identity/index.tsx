@@ -12,7 +12,7 @@ import type { CryptoIdentityIcon } from "./lib/types";
 export type { CryptoIdentityIcon } from "./lib/types";
 
 const adaptiveBackground =
-  "[background:var(--crypto-identity-light-surface,color-mix(in_oklab,var(--crypto-identity-color)_14%,var(--background)))] dark:[background:var(--crypto-identity-dark-surface,color-mix(in_oklab,var(--crypto-identity-color)_22%,var(--background)))]";
+  "[background:var(--crypto-identity-light-surface)] dark:[background:var(--crypto-identity-dark-surface)]";
 
 export const cryptoIdentityVariants = cva("inline-flex", {
   variants: {
@@ -47,9 +47,10 @@ export type CryptoIdentityVariant = NonNullable<
 
 export interface CryptoIdentityProps extends ComponentPropsWithRef<"span"> {
   icon: CryptoIdentityIcon;
-  cornerIcon?: CryptoIdentityIcon;
-  fallback?: ReactNode;
-  cornerFallback?: ReactNode;
+  cornerIcon?: CryptoIdentityIcon | undefined;
+  fallback?: ReactNode | undefined;
+  cornerFallback?: ReactNode | undefined;
+  preferredBaseUrl?: string | undefined;
   variant?: CryptoIdentityVariant;
 }
 
@@ -60,12 +61,13 @@ export function CryptoIdentity({
   cornerIcon,
   fallback,
   icon,
+  preferredBaseUrl,
   variant = "avatar",
   ref,
   ...props
 }: CryptoIdentityProps) {
-  const image = useIconSource(icon);
-  const corner = useIconSource(cornerIcon);
+  const image = useIconSource(icon, preferredBaseUrl);
+  const corner = useIconSource(cornerIcon, preferredBaseUrl);
   const imageBackground = useImageBackground(image.src);
   const cornerBackground = useImageBackground(corner.src);
   const imageLoading = image.isResolving || Boolean(image.src && !imageBackground.isLoaded);

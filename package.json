@@ -4,31 +4,54 @@
   "type": "module",
   "packageManager": "bun@1.3.14",
   "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && node scripts/prepare-pages.mjs",
+    "preview": "vite preview",
+    "routes:generate": "tsr generate",
+    "dapps:generate": "node scripts/generate-dapps.mjs",
     "check": "biome check .",
+    "check:write": "biome check --write .",
     "registry:build": "shadcn build registry.json --output registry && node -e \"require('node:fs').unlinkSync('registry/registry.json')\"",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc --noEmit -p tsconfig.registry.json"
+    "typecheck:web": "tsc --noEmit -p tsconfig.json",
+    "typecheck:registry": "tsc --noEmit -p tsconfig.registry.json",
+    "typecheck": "bun run typecheck:web && bun run typecheck:registry",
+    "validate": "bun run check && bun run typecheck && bun run test && bun run build"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.10",
+    "@tailwindcss/vite": "4.3.3",
+    "@tanstack/router-cli": "1.167.33",
     "@testing-library/react": "16.3.2",
     "@types/node": "24.13.3",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
-    "class-variance-authority": "0.7.1",
+    "@vitejs/plugin-react": "6.1.0",
     "esbuild": "0.28.2",
-    "fast-average-color": "9.5.2",
-    "fzstd": "0.1.1",
     "jsdom": "30.0.1",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
     "shadcn": "4.19.0",
+    "tailwindcss": "4.3.3",
     "typescript": "7.0.2",
+    "vite": "8.2.2",
     "vitest": "4.1.11"
   },
   "engines": {
     "bun": ">=1.3.0",
     "node": "^22.22.2 || >=24.15"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "1.170.32",
+    "@tanstack/react-start": "1.168.49",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "fast-average-color": "9.5.2",
+    "fzstd": "0.1.1",
+    "lucide-react": "1.34.0",
+    "radix-ui": "1.6.7",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "tailwind-merge": "3.6.0",
+    "tw-animate-css": "1.4.0"
   }
 }

@@ -1,7 +1,14 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.5.10/schema.json",
   "files": {
-    "includes": ["**", "!!bun.lock", "!!registry/*.json"]
+    "includes": [
+      "**",
+      "!!bun.lock",
+      "!!dist",
+      "!!.output",
+      "!!src/routeTree.gen.ts",
+      "!!registry/*.json"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -14,6 +21,11 @@
       "quoteStyle": "double",
       "semicolons": "always",
       "trailingCommas": "all"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
     }
   },
   "linter": {

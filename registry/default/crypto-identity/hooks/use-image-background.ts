@@ -31,7 +31,7 @@ export function useImageBackground(src?: string) {
         return;
       }
       setLoadedSrc(src);
-      if (!canSample) {
+      if (!canSample || backgroundCache.has(src)) {
         return;
       }
       const result = averageColor.getColor(event.currentTarget, {
@@ -63,22 +63,60 @@ function createBackgroundStyle(
 ): IdentityBackground {
   const chroma = Math.max(red, green, blue) - Math.min(red, green, blue);
   const luminance = red * 0.2126 + green * 0.7152 + blue * 0.0722;
-  const style: IdentityBackground = { "--crypto-identity-color": hex };
+  const color: Rgb = [red, green, blue];
+  const style: IdentityBackground = {
+    "--crypto-identity-color": hex,
+    "--crypto-identity-light-surface": lightSurface(color, chroma, luminance),
+    "--crypto-identity-dark-surface": darkSurface(color, luminance),
+  };
 
   if (chroma <= 28 && luminance <= 72) {
-    style["--crypto-identity-light-surface"] = "#d4d4d8";
     style["--crypto-identity-dark-filter"] = "invert(1)";
-  } else if (chroma <= 28 && luminance >= 188) {
-    style["--crypto-identity-light-surface"] = "#52525b";
-    style["--crypto-identity-dark-surface"] = "#27272a";
   }
 
   return style;
 }
 
+type Rgb = [number, number, number];
+
+function lightSurface(color: Rgb, chroma: number, luminance: number): string {
+  if (chroma <= 28 && luminance <= 72) {
+    return "rgb(241 245 249)";
+  }
+  if (luminance >= 188) {
+    return rgb(scaleToLuminance(color, 104, luminance));
+  }
+  return rgb(mix(color, [255, 255, 255], 0.82));
+}
+
+function darkSurface(color: Rgb, luminance: number): string {
+  if (luminance <= 72) {
+    return "rgb(24 24 27)";
+  }
+  return rgb(mix(color, [9, 11, 17], luminance >= 188 ? 0.78 : 0.72));
+}
+
+function scaleToLuminance(color: Rgb, target: number, luminance: number): Rgb {
+  const factor = target / luminance;
+  return color.map((channel) => channel * factor) as Rgb;
+}
+
+function mix(color: Rgb, surface: Rgb, surfaceRatio: number): Rgb {
+  return color.map(
+    (channel, index) => channel * (1 - surfaceRatio) + (surface[index] ?? 0) * surfaceRatio,
+  ) as Rgb;
+}
+
+function rgb(color: Rgb): string {
+  return `rgb(${color.map((channel) => Math.round(Math.max(0, Math.min(255, channel)))).join(" ")})`;
+}
+
 function cacheBackground(src: string, style: IdentityBackground): void {
   if (!backgroundCache.has(src) && backgroundCache.size >= BACKGROUND_CACHE_LIMIT) {
-    backgroundCache.clear();
+    const oldest = backgroundCache.keys().next().value;
+    if (oldest) {
+      backgroundCache.delete(oldest);
+    }
   }
   backgroundCache.set(src, style);
 }

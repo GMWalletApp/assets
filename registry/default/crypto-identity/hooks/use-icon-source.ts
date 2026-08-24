@@ -2,10 +2,10 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { resolveIconUrls } from "../lib/resolve-icon-urls";
-import type { CryptoIdentityIcon } from "../lib/types";
+import type { AssetQuery, CryptoIdentityIcon } from "../lib/types";
 
-export function useIconSource(icon?: CryptoIdentityIcon) {
-  const key = stableIconKey(icon);
+export function useIconSource(icon?: CryptoIdentityIcon, preferredBaseUrl?: string) {
+  const key = `${stableIconKey(icon)}:${preferredBaseUrl ?? ""}`;
   const activeKeyRef = useRef(key);
   const iconRef = useRef(icon);
   iconRef.current = icon;
@@ -27,19 +27,21 @@ export function useIconSource(icon?: CryptoIdentityIcon) {
       return;
     }
 
-    resolveIconUrls(currentIcon).then((urls) => {
+    resolveSources(currentIcon, preferredBaseUrl).then((urls) => {
       if (cancelled) {
         return;
       }
       setSources(urls);
       if (urls.length === 0 && currentIcon.type === "token") {
         catalogRequestedRef.current = true;
-        resolveIconUrls({ ...currentIcon, includeCatalog: true }).then((catalogUrls) => {
-          if (!cancelled) {
-            setSources(catalogUrls);
-            setIsResolving(false);
-          }
-        });
+        resolveSources({ ...currentIcon, includeCatalog: true }, preferredBaseUrl).then(
+          (catalogUrls) => {
+            if (!cancelled) {
+              setSources(catalogUrls);
+              setIsResolving(false);
+            }
+          },
+        );
         return;
       }
       setIsResolving(false);
@@ -48,7 +50,7 @@ export function useIconSource(icon?: CryptoIdentityIcon) {
     return () => {
       cancelled = true;
     };
-  }, [key]);
+  }, [key, preferredBaseUrl]);
 
   const handleError = useCallback(() => {
     if (index + 1 < sources.length) {
@@ -73,7 +75,7 @@ export function useIconSource(icon?: CryptoIdentityIcon) {
     catalogRequestedRef.current = true;
     setIsResolving(true);
     const requestedKey = key;
-    resolveIconUrls({ ...currentIcon, includeCatalog: true }).then((urls) => {
+    resolveSources({ ...currentIcon, includeCatalog: true }, preferredBaseUrl).then((urls) => {
       if (activeKeyRef.current !== requestedKey) {
         return;
       }
@@ -82,9 +84,13 @@ export function useIconSource(icon?: CryptoIdentityIcon) {
       setIndex(0);
       setIsResolving(false);
     });
-  }, [index, key, sources]);
+  }, [index, key, preferredBaseUrl, sources]);
 
   return { src: sources[index], isResolving, handleError };
+}
+
+function resolveSources(icon: AssetQuery, preferredBaseUrl?: string) {
+  return preferredBaseUrl ? resolveIconUrls(icon, preferredBaseUrl) : resolveIconUrls(icon);
 }
 
 function stableIconKey(icon?: CryptoIdentityIcon): string {

@@ -3,6 +3,7 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "noEmit": true,
+    "skipLibCheck": false,
     "types": ["node", "react", "react-dom"],
     "paths": {
       "@/components/ui/avatar": ["./tests/registry/avatar.tsx"],

@@ -9,6 +9,14 @@ export const CDN_BASE_URLS = [
   `https://raw.githubusercontent.com/${ASSETS_REPOSITORY}/${ASSETS_BRANCH}`,
 ] as const;
 
+export function orderedCdnBaseUrls(preferredBaseUrl?: string): string[] {
+  if (!preferredBaseUrl) {
+    return [...CDN_BASE_URLS];
+  }
+  const normalized = preferredBaseUrl.replace(/\/$/, "");
+  return [normalized, ...CDN_BASE_URLS.filter((url) => url !== normalized)];
+}
+
 export const CATALOG_PATHS = {
   support: "support/support.json.zst",
   tokens: "extensions/jsonrpc/data/tokenlist.json.zst",

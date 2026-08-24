@@ -1,23 +1,22 @@
-name: CI
+name: Deploy Pages
 
 on:
   push:
-    branches:
-      - package
-  pull_request:
     branches:
       - package
   workflow_dispatch:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  group: github-pages
+  cancel-in-progress: false
 
 jobs:
-  validate:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -44,25 +43,35 @@ jobs:
       - name: Test
         run: bun run test
 
-      - name: Verify DApp index
+      - name: Verify generated sources
         run: |
           bun run dapps:generate
           git diff --exit-code -- src/data/dapps.ts
-
-      - name: Build preview
-        run: bun run build
-
-      - name: Verify Registry output
-        run: |
           bun run registry:build
           git diff --exit-code -- registry
 
-  purge-mirrors:
-    if: github.event_name == 'push'
-    needs: validate
+      - name: Build static site
+        run: bun run build
+        env:
+          PAGES_BASE_PATH: /assets/
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist/client
+
+  deploy:
+    needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Purge Registry mirrors
-        run: curl --fail --silent --show-error "https://purge.jsdelivr.net/gh/GMWalletApp/assets@package/registry/crypto-identity.json"
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

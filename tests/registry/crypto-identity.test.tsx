@@ -94,9 +94,33 @@ describe("CryptoIdentity", () => {
     await waitFor(() => expect(container.querySelector("img")).not.toBeNull());
     fireEvent.load(container.querySelector("img") as HTMLImageElement);
 
+    const style = container
+      .querySelector('[data-slot="crypto-identity-image"]')
+      ?.getAttribute("style");
+    expect(style).toContain("--crypto-identity-color: #627eea");
+    expect(style).toContain("--crypto-identity-light-surface: rgb(227 232 251)");
+    expect(style).toContain("--crypto-identity-dark-surface: rgb(34 43 78)");
+  });
+
+  it("darkens pale icons in light mode to preserve contrast", async () => {
+    core.resolveIconUrls.mockResolvedValue(["https://cdn.jsdmirror.com/pale-icon.png"]);
+    vi.spyOn(FastAverageColor.prototype, "getColor").mockReturnValue({
+      hex: "#e8edf5",
+      hexa: "#e8edf5ff",
+      isDark: false,
+      isLight: true,
+      rgb: "rgb(232,237,245)",
+      rgba: "rgba(232,237,245,1)",
+      value: [232, 237, 245, 255],
+    });
+    const { container } = render(<CryptoIdentity icon={{ type: "network", name: "pale" }} />);
+
+    await waitFor(() => expect(container.querySelector("img")).not.toBeNull());
+    fireEvent.load(container.querySelector("img") as HTMLImageElement);
+
     expect(
       container.querySelector('[data-slot="crypto-identity-image"]')?.getAttribute("style"),
-    ).toContain("--crypto-identity-color: #627eea");
+    ).toContain("--crypto-identity-light-surface: rgb(102 104 108)");
   });
 
   it("shows a skeleton until the image loads", async () => {
