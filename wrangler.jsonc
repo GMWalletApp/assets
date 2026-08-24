@@ -1,10 +1,8 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "assets-web",
-  "workers_dev": true,
   "preview_urls": true,
-  "compatibility_date": "2026-08-23",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_date": "2026-08-24",
   "assets": {
     "directory": "./dist",
     "not_found_handling": "single-page-application"

@@ -9,5 +9,9 @@ export default defineConfig({
     alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
     tsconfigPaths: true,
   },
-  plugins: [tanstackRouter({ target: "react" }), tailwindcss(), viteReact()],
+  plugins: [
+    tanstackRouter({ target: "react", autoCodeSplitting: true }),
+    tailwindcss(),
+    viteReact(),
+  ],
 });
