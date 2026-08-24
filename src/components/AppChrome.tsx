@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Monitor, Moon, Star, Sun } from "lucide-react";
 import { type ReactNode, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -49,14 +50,14 @@ export function AppHeader({ activePage }: { activePage: PageKey }) {
   return (
     <header className="sticky top-0 z-40 border-b bg-background/92 backdrop-blur-xl supports-[backdrop-filter]:bg-background/80">
       <div className="mx-auto flex min-h-16 max-w-[1536px] items-center gap-4 px-4 sm:px-6 lg:px-8">
-        <a className="flex shrink-0 items-center gap-2.5" href={import.meta.env.BASE_URL}>
+        <Link className="flex shrink-0 items-center gap-2.5" to="/">
           <img
             alt="GMWallet"
             className="size-8 rounded-lg border bg-card object-cover shadow-xs"
             src={`${import.meta.env.BASE_URL}gmwallet-logo.jpg`}
           />
           <span className="hidden font-semibold tracking-tight sm:inline">{APP_NAME}</span>
-        </a>
+        </Link>
 
         <nav aria-label="主导航" className="flex items-center gap-1">
           <NavLink active={activePage === "icons"} to="/">
@@ -132,17 +133,16 @@ function NavLink({
   children: ReactNode;
   to: "/" | "/usage";
 }) {
-  const href = to === "/" ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}usage`;
   return (
-    <a
+    <Link
       className={cn(
         "rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
         active && "bg-muted text-foreground",
       )}
-      href={href}
+      to={to}
     >
       {children}
-    </a>
+    </Link>
   );
 }
 

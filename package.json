@@ -1,13 +1,13 @@
 {
-  "name": "@gmwalletapp/assets-workspace",
+  "name": "assets-web",
   "private": true,
   "type": "module",
   "packageManager": "bun@1.3.14",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build && node scripts/prepare-pages.mjs",
+    "build": "vite build",
+    "deploy": "wrangler deploy",
     "preview": "vite preview",
-    "routes:generate": "tsr generate",
     "dapps:generate": "node scripts/generate-dapps.mjs",
     "check": "biome check .",
     "check:write": "biome check --write .",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.5.10",
     "@tailwindcss/vite": "4.3.3",
-    "@tanstack/router-cli": "1.167.33",
+    "@tanstack/router-plugin": "1.168.35",
     "@testing-library/react": "16.3.2",
     "@types/node": "24.13.3",
     "@types/react": "19.2.18",
@@ -34,7 +34,8 @@
     "tailwindcss": "4.3.3",
     "typescript": "7.0.2",
     "vite": "8.2.2",
-    "vitest": "4.1.11"
+    "vitest": "4.1.11",
+    "wrangler": "4.125.0"
   },
   "engines": {
     "bun": ">=1.3.0",
@@ -42,7 +43,6 @@
   },
   "dependencies": {
     "@tanstack/react-router": "1.170.32",
-    "@tanstack/react-start": "1.168.49",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "fast-average-color": "9.5.2",
