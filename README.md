@@ -59,10 +59,19 @@ from WalletConnect and Web3icons using stable slugs from
 `support/wallet-source-map.json`; exchanges come from Web3icons. The separate
 `support/dapps.json` catalog is generated directly from the historical root
 `dapps/*.png` files and references those existing images; no duplicate dApp
-assets are created under `support/`. Both catalogs have matching `.zst`
+assets are created under `support/`. All generated catalogs have matching `.zst`
 artifacts. A Web3icons SVG is preferred for wallets, followed by a safe
 WalletConnect SVG and then a normalized WalletConnect PNG. Historical entries
 are preserved when they disappear upstream.
+
+Swap providers and routing tools are synchronized from DefiLlama's public
+protocol API. The generated
+`support/swap-providers.json` uses the same display-entry shape as
+`support.json`, with `id`, `name`, and `logoURI`, plus DefiLlama's `url` value
+passed through without rewriting. All DEX, DEX aggregator, and bridge
+categories are mirrored locally as normalized WebP files. The separate
+`support/swap-provider-aliases.json` adds stable wallet-facing aliases such as
+`jupiter`, `curve`, `cctp`, and `usdt0_legacy`.
 
 The workflow requires the `WALLETCONNECT_PROJECT_ID` repository secret. For a
 Web3icons-only local refresh:
@@ -71,6 +80,14 @@ Web3icons-only local refresh:
 python3 support/sync_support.py \
   --web3icons-source /path/to/web3icons \
   --skip-walletconnect
+```
+
+For a local Swap provider refresh, save the response from
+`https://api.llama.fi/protocols` and run:
+
+```shell
+python3 support/sync_swap_providers.py \
+  --protocols-json /path/to/defillama-protocols.json
 ```
 
 Local-only assets that must not be replaced by an upstream sync are declared in

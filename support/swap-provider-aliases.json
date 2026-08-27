@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "aliases": [
+    {
+      "id": "1inch",
+      "targetId": "1inch-swap",
+      "name": "1inch"
+    },
+    {
+      "id": "jupiter",
+      "targetId": "jupiter-aggregator",
+      "name": "Jupiter"
+    },
+    {
+      "id": "curve",
+      "targetId": "curve-dex",
+      "name": "Curve"
+    },
+    {
+      "id": "cctp",
+      "targetId": "circle-cctp",
+      "name": "CCTP"
+    },
+    {
+      "id": "kyberswap",
+      "targetId": "kyberswap-aggregator",
+      "name": "KyberSwap"
+    },
+    {
+      "id": "lifi",
+      "targetId": "li-fi-dex-aggregator",
+      "name": "LI.FI"
+    },
+    {
+      "id": "pancakeswap",
+      "targetId": "pancakeswap-amm",
+      "name": "PancakeSwap"
+    },
+    {
+      "id": "paraswap",
+      "targetId": "velora",
+      "name": "Velora"
+    },
+    {
+      "id": "stargate",
+      "targetId": "stargate-v2",
+      "name": "Stargate"
+    },
+    {
+      "id": "uniswap",
+      "targetId": "uniswap-v3",
+      "name": "Uniswap"
+    },
+    {
+      "id": "usdt0_legacy",
+      "targetId": "usdt0",
+      "name": "USDT0 Legacy"
+    }
+  ]
+}

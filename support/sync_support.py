@@ -175,6 +175,13 @@ def validate_safe_svg(data: bytes) -> bytes:
             name, value = raw_name.rsplit("}", 1)[-1].lower(), raw_value.strip().lower()
             if name.startswith("on"):
                 raise ValueError(f"SVG contains event handler attribute: {name}")
+            allowed_embedded = (
+                "data:image/png;base64,",
+                "data:image/jpeg;base64,",
+                "data:image/webp;base64,",
+            )
+            if name in {"href", "src"} and value.startswith(allowed_embedded):
+                continue
             forbidden_values = (
                 "http:",
                 "https:",
@@ -185,16 +192,10 @@ def validate_safe_svg(data: bytes) -> bytes:
             )
             if any(marker in value for marker in forbidden_values):
                 raise ValueError("SVG contains an external or executable reference")
-            allowed_embedded = (
-                "#",
-                "data:image/png;base64,",
-                "data:image/jpeg;base64,",
-                "data:image/webp;base64,",
-            )
             if (
                 name in {"href", "src"}
                 and value
-                and not value.startswith(allowed_embedded)
+                and not value.startswith("#")
             ):
                 raise ValueError("SVG contains a non-local resource reference")
             if "url(" in value and "url(#" not in value.replace(" ", ""):

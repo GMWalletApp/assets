@@ -27,15 +27,20 @@ jobs:
           python-version: "3.11"
 
       - name: Install Zstd
-        run: sudo apt-get update && sudo apt-get install -y zstd
+        run: |
+          python -m pip install Pillow==11.3.0
+          sudo apt-get update && sudo apt-get install -y zstd
 
       - name: Validate support catalogs
         run: |
           python support/sync_support.py --validate-output
+          python support/sync_swap_providers.py --validate-output
           zstd --test support/support.json.zst
           zstd --test support/dapps.json.zst
+          zstd --test support/swap-providers.json.zst
           cmp support/support.json <(zstd --decompress --stdout support/support.json.zst)
           cmp support/dapps.json <(zstd --decompress --stdout support/dapps.json.zst)
+          cmp support/swap-providers.json <(zstd --decompress --stdout support/swap-providers.json.zst)
 
       - name: Run check
         run: make check

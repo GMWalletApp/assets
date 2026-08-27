@@ -63,30 +63,44 @@ jobs:
             git -C "$upstream_dir" checkout --detach FETCH_HEAD
           fi
 
+      - name: Fetch DefiLlama protocols
+        run: |
+          curl --fail --location --retry 3 --retry-all-errors \
+            https://api.llama.fi/protocols \
+            --output "$RUNNER_TEMP/defillama-protocols.json"
+          python -m json.tool "$RUNNER_TEMP/defillama-protocols.json" >/dev/null
+
       - name: Sync support logos
         env:
           WALLETCONNECT_PROJECT_ID: ${{ secrets.WALLETCONNECT_PROJECT_ID }}
         run: |
           python support/sync_support.py --web3icons-source "$RUNNER_TEMP/web3icons"
           python support/sync_support.py --validate-output
+          python support/sync_swap_providers.py \
+            --protocols-json "$RUNNER_TEMP/defillama-protocols.json"
+          python support/sync_swap_providers.py --validate-output
 
       - name: Compress and verify support catalog
         run: |
           python -m json.tool support/support.json >/dev/null
           python -m json.tool support/dapps.json >/dev/null
           python -m json.tool support/wallet-source-map.json >/dev/null
+          python -m json.tool support/swap-providers.json >/dev/null
           zstd --ultra -22 --force --keep support/support.json -o support/support.json.zst
           zstd --ultra -22 --force --keep support/dapps.json -o support/dapps.json.zst
+          zstd --ultra -22 --force --keep support/swap-providers.json -o support/swap-providers.json.zst
           zstd --test support/support.json.zst
           zstd --test support/dapps.json.zst
+          zstd --test support/swap-providers.json.zst
           cmp support/support.json <(zstd --decompress --stdout support/support.json.zst)
           cmp support/dapps.json <(zstd --decompress --stdout support/dapps.json.zst)
+          cmp support/swap-providers.json <(zstd --decompress --stdout support/swap-providers.json.zst)
 
       - name: Commit support files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add support/wallets support/exchanges support/support.json support/support.json.zst support/dapps.json support/dapps.json.zst support/wallet-source-map.json
+          git add support/wallets support/exchanges support/swap-providers support/support.json support/support.json.zst support/dapps.json support/dapps.json.zst support/swap-providers.json support/swap-providers.json.zst support/wallet-source-map.json
           if git diff --cached --quiet; then
             echo "No support logo changes to commit."
             exit 0
