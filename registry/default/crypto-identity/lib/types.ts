@@ -10,11 +10,11 @@ export interface TokenAssetQuery {
   includeCatalog?: boolean;
 }
 
-interface SupportAssetQuery<T extends "exchange" | "wallet"> {
+interface CatalogAssetQuery<T extends "exchange" | "swap-provider" | "wallet"> {
   type: T;
-  /** Repository asset key or display name. */
+  /** Catalog asset key or display name. */
   name: string;
-  /** Include display-name matches from the compressed support catalog. */
+  /** Include display-name matches from the corresponding compressed catalog. */
   includeCatalog?: boolean;
 }
 
@@ -34,8 +34,9 @@ interface DirectAssetQuery<T extends "network"> {
 
 export type AssetQuery =
   | TokenAssetQuery
-  | SupportAssetQuery<"exchange">
-  | SupportAssetQuery<"wallet">
+  | CatalogAssetQuery<"exchange">
+  | CatalogAssetQuery<"swap-provider">
+  | CatalogAssetQuery<"wallet">
   | DirectAssetQuery<"network">
   | DappAssetQuery;
 

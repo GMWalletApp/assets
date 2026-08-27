@@ -1,6 +1,7 @@
 import {
   resolveDappCatalogUrls,
   resolveSupportCatalogUrls,
+  resolveSwapProviderCatalogUrls,
   resolveTokenCatalogUrls,
 } from "./catalog";
 import { orderedCdnBaseUrls } from "./constants";
@@ -13,7 +14,7 @@ import {
 } from "./normalize";
 import type { AssetQuery } from "./types";
 
-/** Resolve ordered icon URL candidates for a token, network, exchange, wallet, or dapp. */
+/** Resolve ordered icon URL candidates for a token, network, exchange, wallet, DApp, or swap provider. */
 export async function resolveIconUrls(
   query: AssetQuery,
   preferredBaseUrl?: string,
@@ -51,6 +52,16 @@ export async function resolveIconUrls(
       return uniqueUrls([
         ...directUrls,
         ...(await resolveDappCatalogUrls(query.name, preferredBaseUrl)),
+      ]);
+    }
+    case "swap-provider": {
+      const directUrls = urlsForPath(`support/swap-providers/${name}/logo.webp`, preferredBaseUrl);
+      if (!query.includeCatalog) {
+        return directUrls;
+      }
+      return uniqueUrls([
+        ...directUrls,
+        ...(await resolveSwapProviderCatalogUrls(query.name, preferredBaseUrl)),
       ]);
     }
     case "exchange":

@@ -33,6 +33,7 @@ const FILTERS: ReadonlyArray<{ label: string; value: AssetFilter }> = [
   { label: "交易平台", value: "exchange" },
   { label: "钱包", value: "wallet" },
   { label: "DApp", value: "dapp" },
+  { label: "兑换服务", value: "swap-provider" },
 ];
 
 function Home() {
@@ -75,7 +76,15 @@ function Home() {
           result[entry.category] += 1;
           return result;
         },
-        { all: 0, native: 0, token: 0, exchange: 0, wallet: 0, dapp: 0 },
+        {
+          all: 0,
+          native: 0,
+          token: 0,
+          exchange: 0,
+          wallet: 0,
+          dapp: 0,
+          "swap-provider": 0,
+        },
       ),
     [searchMatches],
   );
@@ -115,7 +124,8 @@ function Home() {
               加密资产图标，一处查找
             </h1>
             <p className="mt-3 max-w-2xl text-pretty text-sm leading-6 text-muted-foreground sm:text-base">
-              浏览网络、Token、交易平台、钱包与 DApp。预览统一由 CryptoIdentity 解析并支持网络角标。
+              浏览网络、Token、交易平台、钱包、DApp 与兑换服务。预览统一由 CryptoIdentity
+              解析并支持网络角标。
             </p>
           </div>
           <div className="flex items-center gap-2.5 px-0 py-0 text-sm sm:gap-3 sm:rounded-xl sm:border sm:bg-card sm:px-4 sm:py-3 sm:shadow-xs">
@@ -126,7 +136,7 @@ function Home() {
               <div className="font-medium tabular-nums">
                 {data ? entries.length.toLocaleString() : "—"} 项资产
               </div>
-              <div className="text-xs text-muted-foreground">五类资产类型</div>
+              <div className="text-xs text-muted-foreground">六类资产类型</div>
             </div>
           </div>
         </section>
@@ -161,7 +171,7 @@ function Home() {
               <Input
                 aria-label="搜索资产"
                 className="pl-9 pr-9"
-                placeholder="搜索名称、符号或网络"
+                placeholder="搜索名称、符号、网络或服务"
                 value={query}
                 onChange={(event) => {
                   setQuery(event.target.value);

@@ -25,8 +25,8 @@ function UsagePage() {
           </Badge>
           <h1 className="text-2xl font-semibold tracking-tight sm:text-4xl">安装 CryptoIdentity</h1>
           <p className="mt-3 text-pretty text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
-            一条命令安装完整文件夹。组件统一处理网络、Token、交易平台、钱包和 DApp
-            图标，并支持角标、加载骨架与自适应背景色。
+            一条命令安装完整文件夹。组件统一处理网络、Token、交易平台、钱包、DApp
+            和兑换服务图标，并支持角标、加载骨架与自适应背景色。
           </p>
         </section>
 
@@ -46,6 +46,7 @@ function UsagePage() {
                   ["交易平台", "support/exchanges/{name}/logo.svg"],
                   ["钱包", "support/wallets/{name}/logo.svg"],
                   ["DApp", "dapps/{name}.png"],
+                  ["兑换服务", "support/swap-providers/{name}/logo.webp"],
                 ].map(([title, path]) => (
                   <div className="rounded-lg bg-muted/35 p-4" key={title}>
                     <div className="text-sm font-medium">{title}</div>
@@ -57,13 +58,15 @@ function UsagePage() {
               </div>
               <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/blockchains/ethereum/info/logo.png" />
               <p className="text-sm leading-6 text-muted-foreground">
-                批量查找时，解压 tokenlist.json.zst、support.json.zst 或
-                dapps.json.zst，并优先使用记录中的 logoURI。切换镜像时只需替换 URL 的 CDN 前缀。
+                批量查找时，解压 tokenlist.json.zst、support.json.zst、dapps.json.zst 或
+                swap-providers.json.zst，并优先使用记录中的 logoURI。切换镜像时只需替换 URL 的 CDN
+                前缀。
               </p>
               <div className="grid gap-3">
                 <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/extensions/jsonrpc/data/tokenlist.json.zst" />
                 <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/support/support.json.zst" />
                 <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/support/dapps.json.zst" />
+                <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/support/swap-providers.json.zst" />
               </div>
             </CardContent>
           </Card>
@@ -146,7 +149,8 @@ function UsagePage() {
                 <TabsContent value="provider">
                   <CodeBlock>{`<CryptoIdentity icon={{ type: "exchange", name: "binance" }} />
 <CryptoIdentity icon={{ type: "wallet", name: "metamask" }} />
-<CryptoIdentity icon={{ type: "dapp", name: "app.uniswap.org" }} />`}</CodeBlock>
+<CryptoIdentity icon={{ type: "dapp", name: "app.uniswap.org" }} />
+<CryptoIdentity icon={{ type: "swap-provider", name: "1inch" }} />`}</CodeBlock>
                 </TabsContent>
               </Tabs>
             </CardContent>
@@ -158,7 +162,10 @@ function UsagePage() {
             </CardHeader>
             <CardContent className="grid gap-3 sm:grid-cols-2">
               {[
-                ["统一 API", "network、token、exchange、wallet、dapp 使用同一组件。"],
+                [
+                  "统一 API",
+                  "network、token、exchange、wallet、dapp、swap-provider 使用同一组件。",
+                ],
                 ["智能背景", "根据图标内容生成背景色，并兼顾明暗主题对比度。"],
                 ["加载反馈", "内置 Skeleton 状态，避免图片加载时布局跳动。"],
                 ["可组合角标", "cornerIcon 可展示 Token 所属网络或其他身份。"],

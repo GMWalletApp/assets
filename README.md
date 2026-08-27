@@ -30,9 +30,10 @@ This command installs the component, its hooks and resolver library as one folde
 
 ## Core resolver
 
-The installed `@/components/ui/crypto-identity/lib` module exposes one resolver for five icon types. Compressed
+The installed `@/components/ui/crypto-identity/lib` module exposes one resolver for six icon types. Compressed
 catalogs are loaded on demand: tokens use the complete token catalog, exchange and wallet names
-use the support catalog, and DApps can fall back to the dedicated DApp catalog by ID or domain.
+use the support catalog, DApps can fall back to the DApp catalog, and swap providers use the
+dedicated provider catalog.
 
 ```ts
 import { resolveIconUrls } from "@/components/ui/crypto-identity/lib";
@@ -47,9 +48,14 @@ const dappUrls = await resolveIconUrls({
   type: "dapp",
   name: "app.uniswap.org",
 });
+
+const providerUrls = await resolveIconUrls({
+  type: "swap-provider",
+  name: "1inch",
+});
 ```
 
-Supported types are `token`, `network`, `exchange`, `wallet`, and `dapp`. Network values use
+Supported types are `token`, `network`, `exchange`, `wallet`, `dapp`, and `swap-provider`. Network values use
 repository directory keys such as `ethereum`, `smartchain`, and `tron`.
 
 ## React component
@@ -78,7 +84,7 @@ export function CryptoIdentities() {
 }
 ```
 
-`CryptoIdentity` supports `avatar` (default), `label`, and `badge` variants. Any of the five icon
+`CryptoIdentity` supports `avatar` (default), `label`, and `badge` variants. Any of the six icon
 types can also be used as a bottom-right `cornerIcon`.
 
 While an icon is loading, its avatar uses a pulse skeleton. Once loaded, its dominant color is used

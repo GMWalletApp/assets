@@ -4,6 +4,7 @@ import {
   normalize,
   normalizeDapp,
   normalizeNetworkSlug,
+  normalizeSlug,
   normalizeSupportSlug,
   uniqueUrls,
 } from "./normalize";
@@ -30,6 +31,10 @@ interface SupportCatalog {
 
 interface DappCatalog {
   dapps?: CatalogAsset[];
+}
+
+interface SwapProviderCatalog {
+  providers?: CatalogAsset[];
 }
 
 const catalogRequests = new Map<string, Promise<unknown>>();
@@ -77,6 +82,21 @@ export async function resolveDappCatalogUrls(
   const target = normalizeDapp(name);
   const match = catalog?.dapps?.find((item) => {
     return [item.id, item.name].some((value) => normalizeDapp(value ?? "") === target);
+  });
+  return match?.logoURI ? mirrorLogoUrls(match.logoURI, preferredBaseUrl) : [];
+}
+
+export async function resolveSwapProviderCatalogUrls(
+  name: string,
+  preferredBaseUrl?: string,
+): Promise<string[]> {
+  const catalog = await loadCatalog<SwapProviderCatalog>(
+    CATALOG_PATHS.swapProviders,
+    preferredBaseUrl,
+  );
+  const target = normalizeSlug(name);
+  const match = catalog?.providers?.find((item) => {
+    return [item.id, item.name].some((value) => normalizeSlug(value) === target);
   });
   return match?.logoURI ? mirrorLogoUrls(match.logoURI, preferredBaseUrl) : [];
 }

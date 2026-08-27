@@ -20,6 +20,7 @@ export function orderedCdnBaseUrls(preferredBaseUrl?: string): string[] {
 export const CATALOG_PATHS = {
   dapps: "support/dapps.json.zst",
   support: "support/support.json.zst",
+  swapProviders: "support/swap-providers.json.zst",
   tokens: "extensions/jsonrpc/data/tokenlist.json.zst",
 } as const;
 

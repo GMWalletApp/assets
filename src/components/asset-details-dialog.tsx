@@ -87,6 +87,7 @@ function assetRows(asset: AssetEntry): Detail[] {
     { label: "id", value: asset.item.id },
     { label: "name", value: asset.item.name },
     { label: "type", value: asset.item.type ?? asset.category },
+    ...(asset.item.url ? [{ label: "website", value: asset.item.url, href: asset.item.url }] : []),
     { label: "logoURI", value: asset.item.logoURI, href: asset.item.logoURI },
     { label: "resolved URL", value: currentLogo ?? "-", href: currentLogo },
   ];

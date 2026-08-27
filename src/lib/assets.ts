@@ -5,7 +5,7 @@ import {
   orderedCdnBaseUrls,
 } from "../../registry/default/crypto-identity/lib/constants";
 
-type AssetCategory = "native" | "token" | "exchange" | "wallet" | "dapp";
+type AssetCategory = "native" | "token" | "exchange" | "wallet" | "dapp" | "swap-provider";
 export type AssetFilter = "all" | AssetCategory;
 
 interface Token {
@@ -28,11 +28,12 @@ interface SupportItem {
   logoURI: string;
   name: string;
   type?: string;
+  url?: string;
 }
 
 export type AssetEntry =
   | { category: "native" | "token"; token: Token }
-  | { category: "exchange" | "wallet" | "dapp"; item: SupportItem };
+  | { category: "exchange" | "wallet" | "dapp" | "swap-provider"; item: SupportItem };
 
 interface TokenList {
   source: string;
@@ -51,9 +52,15 @@ interface DappList {
   schemaVersion: number;
 }
 
+interface SwapProviderList {
+  providers: SupportItem[];
+  schemaVersion: number;
+}
+
 interface AssetData {
   dapps: DappList;
   support: SupportList;
+  swapProviders: SwapProviderList;
   tokens: TokenList;
 }
 
@@ -62,12 +69,13 @@ const DEFAULT_CDN_ORIGIN = new URL(DEFAULT_CDN_BASE_URL).origin;
 const textDecoder = new TextDecoder();
 
 export async function fetchAssetData(signal: AbortSignal): Promise<AssetData> {
-  const [tokens, support, dapps] = await Promise.all([
+  const [tokens, support, dapps, swapProviders] = await Promise.all([
     fetchCompressedJsonFromMirrors<TokenList>(CATALOG_PATHS.tokens, signal),
     fetchCompressedJsonFromMirrors<SupportList>(CATALOG_PATHS.support, signal),
     fetchCompressedJsonFromMirrors<DappList>(CATALOG_PATHS.dapps, signal),
+    fetchCompressedJsonFromMirrors<SwapProviderList>(CATALOG_PATHS.swapProviders, signal),
   ]);
-  return { dapps, support, tokens };
+  return { dapps, support, swapProviders, tokens };
 }
 
 export function createAssetEntries(data: AssetData | null): AssetEntry[] {
@@ -81,6 +89,9 @@ export function createAssetEntries(data: AssetData | null): AssetEntry[] {
     ...data.support.exchanges.map((item): AssetEntry => ({ category: "exchange", item })),
     ...data.support.wallets.map((item): AssetEntry => ({ category: "wallet", item })),
     ...data.dapps.dapps.map((item): AssetEntry => ({ category: "dapp", item })),
+    ...data.swapProviders.providers.map(
+      (item): AssetEntry => ({ category: "swap-provider", item }),
+    ),
   ];
 }
 

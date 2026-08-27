@@ -13,6 +13,7 @@ describe("resolveIconUrls", () => {
     [{ type: "exchange", name: "Binance" }, "/support/exchanges/binance/logo.svg"],
     [{ type: "wallet", name: "MetaMask" }, "/support/wallets/metamask/logo.svg"],
     [{ type: "dapp", name: "app.uniswap.org" }, "/dapps/app.uniswap.org.png"],
+    [{ type: "swap-provider", name: "1inch Swap" }, "/support/swap-providers/1inch-swap/logo.webp"],
   ] as const)("resolves $type icons", async (query, path) => {
     const urls = await resolveIconUrls(query);
     expect(urls).toHaveLength(5);

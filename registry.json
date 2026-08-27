@@ -7,7 +7,7 @@
       "name": "crypto-identity",
       "type": "registry:block",
       "title": "Crypto Identity",
-      "description": "A token, network, exchange, wallet, or dapp avatar, label, or badge with mirror fallback and corner icons.",
+      "description": "A token, network, exchange, wallet, dapp, or swap-provider avatar, label, or badge with mirror fallback and corner icons.",
       "dependencies": ["class-variance-authority", "fast-average-color", "fzstd"],
       "registryDependencies": ["avatar", "skeleton"],
       "files": [

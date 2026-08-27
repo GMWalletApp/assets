@@ -85,6 +85,31 @@ describe("compressed catalogs", () => {
     );
   });
 
+  it("resolves swap provider display names from the provider catalog", async () => {
+    mockCatalogFetch({
+      "support/swap-providers.json.zst": {
+        providers: [
+          {
+            id: "1inch",
+            name: "1inch",
+            logoURI:
+              "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/1inch/logo.webp",
+          },
+        ],
+      },
+    });
+
+    const urls = await resolveIconUrls({
+      type: "swap-provider",
+      name: "1inch",
+      includeCatalog: true,
+    });
+
+    expect(urls).toContain(
+      "https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/support/swap-providers/1inch/logo.webp",
+    );
+  });
+
   it("keeps the preferred mirror first for catalog-resolved support icons", async () => {
     mockCatalogFetch({
       "support/support.json.zst": {
