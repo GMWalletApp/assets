@@ -67,7 +67,7 @@ export function useIconSource(icon?: CryptoIdentityIcon, preferredBaseUrl?: stri
       return;
     }
 
-    if (currentIcon.type === "network" || currentIcon.type === "dapp") {
+    if (currentIcon.type === "network") {
       setIndex(sources.length);
       return;
     }

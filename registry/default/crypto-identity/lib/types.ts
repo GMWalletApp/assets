@@ -18,7 +18,15 @@ interface SupportAssetQuery<T extends "exchange" | "wallet"> {
   includeCatalog?: boolean;
 }
 
-interface DirectAssetQuery<T extends "network" | "dapp"> {
+interface DappAssetQuery {
+  type: "dapp";
+  /** DApp catalog key or domain name, with or without the png extension. */
+  name: string;
+  /** Include ID and display-name matches from the compressed DApp catalog. */
+  includeCatalog?: boolean;
+}
+
+interface DirectAssetQuery<T extends "network"> {
   type: T;
   /** Repository asset key without a file extension. */
   name: string;
@@ -29,7 +37,7 @@ export type AssetQuery =
   | SupportAssetQuery<"exchange">
   | SupportAssetQuery<"wallet">
   | DirectAssetQuery<"network">
-  | DirectAssetQuery<"dapp">;
+  | DappAssetQuery;
 
 export type AssetType = AssetQuery["type"];
 type WithoutCatalog<T> = T extends unknown ? Omit<T, "includeCatalog"> : never;

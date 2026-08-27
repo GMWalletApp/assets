@@ -57,12 +57,13 @@ function UsagePage() {
               </div>
               <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/blockchains/ethereum/info/logo.png" />
               <p className="text-sm leading-6 text-muted-foreground">
-                批量查找时，解压 tokenlist.json.zst 或 support.json.zst，并优先使用记录中的
-                logoURI。切换镜像时只需替换 URL 的 CDN 前缀。
+                批量查找时，解压 tokenlist.json.zst、support.json.zst 或
+                dapps.json.zst，并优先使用记录中的 logoURI。切换镜像时只需替换 URL 的 CDN 前缀。
               </p>
               <div className="grid gap-3">
                 <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/extensions/jsonrpc/data/tokenlist.json.zst" />
                 <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/support/support.json.zst" />
+                <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/support/dapps.json.zst" />
               </div>
             </CardContent>
           </Card>

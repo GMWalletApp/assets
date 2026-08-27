@@ -7,7 +7,6 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "dapps:generate": "node scripts/generate-dapps.mjs",
     "check": "biome check .",
     "check:write": "biome check --write .",
     "registry:build": "shadcn build registry.json --output registry && node -e \"require('node:fs').unlinkSync('registry/registry.json')\"",

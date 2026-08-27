@@ -160,4 +160,25 @@ describe("CryptoIdentity", () => {
       ),
     );
   });
+
+  it("falls back to the DApp catalog after a direct path fails", async () => {
+    core.resolveIconUrls
+      .mockResolvedValueOnce(["direct.png"])
+      .mockResolvedValueOnce(["direct.png", "catalog.png"]);
+    const { container } = render(
+      <CryptoIdentity icon={{ type: "dapp", name: "app-uniswap-org" }} />,
+    );
+
+    await waitFor(() => expect(container.querySelector("img")).not.toBeNull());
+    fireEvent.error(container.querySelector("img") as HTMLImageElement);
+
+    await waitFor(() =>
+      expect(core.resolveIconUrls).toHaveBeenLastCalledWith(
+        expect.objectContaining({ includeCatalog: true }),
+      ),
+    );
+    await waitFor(() =>
+      expect(container.querySelector("img")?.getAttribute("src")).toBe("catalog.png"),
+    );
+  });
 });

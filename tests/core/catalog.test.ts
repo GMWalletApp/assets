@@ -60,6 +60,31 @@ describe("compressed catalogs", () => {
     expect(urls[0]).toContain("cdn.jsdmirror.com/gh/GMWalletApp/assets@main");
   });
 
+  it("resolves DApp catalog IDs to their domain-based logo paths", async () => {
+    mockCatalogFetch({
+      "support/dapps.json.zst": {
+        dapps: [
+          {
+            id: "app-uniswap-org",
+            name: "app.uniswap.org",
+            logoURI:
+              "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.uniswap.org.png",
+          },
+        ],
+      },
+    });
+
+    const urls = await resolveIconUrls({
+      type: "dapp",
+      name: "app-uniswap-org",
+      includeCatalog: true,
+    });
+
+    expect(urls).toContain(
+      "https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/dapps/app.uniswap.org.png",
+    );
+  });
+
   it("keeps the preferred mirror first for catalog-resolved support icons", async () => {
     mockCatalogFetch({
       "support/support.json.zst": {

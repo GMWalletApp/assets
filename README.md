@@ -31,8 +31,8 @@ This command installs the component, its hooks and resolver library as one folde
 ## Core resolver
 
 The installed `@/components/ui/crypto-identity/lib` module exposes one resolver for five icon types. Compressed
-catalogs are loaded on demand: tokens use the complete token catalog, while exchange and wallet
-names use the support catalog.
+catalogs are loaded on demand: tokens use the complete token catalog, exchange and wallet names
+use the support catalog, and DApps can fall back to the dedicated DApp catalog by ID or domain.
 
 ```ts
 import { resolveIconUrls } from "@/components/ui/crypto-identity/lib";

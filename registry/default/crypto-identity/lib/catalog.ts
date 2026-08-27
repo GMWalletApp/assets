@@ -1,6 +1,12 @@
 import { decompress } from "fzstd";
 import { CATALOG_PATHS, orderedCdnBaseUrls } from "./constants";
-import { normalize, normalizeNetworkSlug, normalizeSupportSlug, uniqueUrls } from "./normalize";
+import {
+  normalize,
+  normalizeDapp,
+  normalizeNetworkSlug,
+  normalizeSupportSlug,
+  uniqueUrls,
+} from "./normalize";
 import type { TokenAssetQuery } from "./types";
 
 interface CatalogAsset {
@@ -20,6 +26,10 @@ interface TokenCatalog {
 interface SupportCatalog {
   exchanges?: CatalogAsset[];
   wallets?: CatalogAsset[];
+}
+
+interface DappCatalog {
+  dapps?: CatalogAsset[];
 }
 
 const catalogRequests = new Map<string, Promise<unknown>>();
@@ -55,6 +65,18 @@ export async function resolveSupportCatalogUrls(
   const items = type === "exchange" ? support?.exchanges : support?.wallets;
   const match = items?.find((item) => {
     return [item.id, item.name].some((value) => normalizeSupportSlug(value) === target);
+  });
+  return match?.logoURI ? mirrorLogoUrls(match.logoURI, preferredBaseUrl) : [];
+}
+
+export async function resolveDappCatalogUrls(
+  name: string,
+  preferredBaseUrl?: string,
+): Promise<string[]> {
+  const catalog = await loadCatalog<DappCatalog>(CATALOG_PATHS.dapps, preferredBaseUrl);
+  const target = normalizeDapp(name);
+  const match = catalog?.dapps?.find((item) => {
+    return [item.id, item.name].some((value) => normalizeDapp(value ?? "") === target);
   });
   return match?.logoURI ? mirrorLogoUrls(match.logoURI, preferredBaseUrl) : [];
 }

@@ -1,5 +1,11 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { type AssetEntry, assetKey, assetLogoUrl, fetchAssetData } from "../../src/lib/assets";
+import {
+  type AssetEntry,
+  assetIcon,
+  assetKey,
+  assetLogoUrl,
+  fetchAssetData,
+} from "../../src/lib/assets";
 
 afterEach(() => vi.unstubAllGlobals());
 
@@ -18,6 +24,7 @@ describe("asset helpers", () => {
     expect(assetLogoUrl(dapp)).toBe(
       "https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/dapps/app.uniswap.org.png",
     );
+    expect(assetIcon(dapp)).toEqual({ type: "dapp", name: "app.uniswap.org" });
   });
 
   it("uses token addresses to distinguish otherwise identical assets", () => {
@@ -47,7 +54,9 @@ describe("asset helpers", () => {
       }
       const payload = url.includes("tokenlist")
         ? { source: "test", tokens: [], updatedAt: "2026-08-24T00:00:00Z" }
-        : { exchanges: [], schemaVersion: 1, wallets: [] };
+        : url.includes("dapps")
+          ? { dapps: [], schemaVersion: 1 }
+          : { exchanges: [], schemaVersion: 1, wallets: [] };
       return new Response(JSON.stringify(payload));
     });
     vi.stubGlobal("fetch", fetchMock);
@@ -56,6 +65,7 @@ describe("asset helpers", () => {
     const requestedUrls = fetchMock.mock.calls.map(([input]) => String(input));
 
     expect(data.tokens.source).toBe("test");
+    expect(data.dapps.dapps).toEqual([]);
     expect(requestedUrls.some((url) => url.includes("cdn.jsdelivr.net"))).toBe(true);
     expect(requestedUrls.every((url) => !url.includes("api.github.com"))).toBe(true);
   });

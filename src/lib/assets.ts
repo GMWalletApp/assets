@@ -4,7 +4,6 @@ import {
   CATALOG_PATHS,
   orderedCdnBaseUrls,
 } from "../../registry/default/crypto-identity/lib/constants";
-import { DAPP_FILES } from "../data/dapps";
 
 type AssetCategory = "native" | "token" | "exchange" | "wallet" | "dapp";
 export type AssetFilter = "all" | AssetCategory;
@@ -47,8 +46,13 @@ interface SupportList {
   wallets: SupportItem[];
 }
 
-interface AssetData {
+interface DappList {
   dapps: SupportItem[];
+  schemaVersion: number;
+}
+
+interface AssetData {
+  dapps: DappList;
   support: SupportList;
   tokens: TokenList;
 }
@@ -58,11 +62,12 @@ const DEFAULT_CDN_ORIGIN = new URL(DEFAULT_CDN_BASE_URL).origin;
 const textDecoder = new TextDecoder();
 
 export async function fetchAssetData(signal: AbortSignal): Promise<AssetData> {
-  const [tokens, support] = await Promise.all([
+  const [tokens, support, dapps] = await Promise.all([
     fetchCompressedJsonFromMirrors<TokenList>(CATALOG_PATHS.tokens, signal),
     fetchCompressedJsonFromMirrors<SupportList>(CATALOG_PATHS.support, signal),
+    fetchCompressedJsonFromMirrors<DappList>(CATALOG_PATHS.dapps, signal),
   ]);
-  return { dapps: DAPP_ASSETS, support, tokens };
+  return { dapps, support, tokens };
 }
 
 export function createAssetEntries(data: AssetData | null): AssetEntry[] {
@@ -75,7 +80,7 @@ export function createAssetEntries(data: AssetData | null): AssetEntry[] {
       .map((token): AssetEntry => ({ category: token.kind, token })),
     ...data.support.exchanges.map((item): AssetEntry => ({ category: "exchange", item })),
     ...data.support.wallets.map((item): AssetEntry => ({ category: "wallet", item })),
-    ...data.dapps.map((item): AssetEntry => ({ category: "dapp", item })),
+    ...data.dapps.dapps.map((item): AssetEntry => ({ category: "dapp", item })),
   ];
 }
 
@@ -109,7 +114,10 @@ export function assetBadge(entry: AssetEntry): string {
 
 export function assetIcon(entry: AssetEntry): CryptoIdentityIcon {
   if ("item" in entry) {
-    return { type: entry.category, name: entry.item.id };
+    return {
+      type: entry.category,
+      name: entry.category === "dapp" ? entry.item.name : entry.item.id,
+    };
   }
   if (entry.category === "native") {
     return { type: "network", name: entry.token.chain };
@@ -189,9 +197,3 @@ async function fetchCompressedJsonFromMirrors<T>(path: string, signal: AbortSign
   }
   throw lastError instanceof Error ? lastError : new Error("无法加载资产索引");
 }
-
-const DAPP_ASSETS: SupportItem[] = DAPP_FILES.map((fileName) => ({
-  id: fileName,
-  name: fileName.slice(0, -4),
-  logoURI: `https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/${fileName}`,
-}));

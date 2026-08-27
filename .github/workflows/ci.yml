@@ -44,11 +44,6 @@ jobs:
       - name: Test
         run: bun run test
 
-      - name: Verify DApp index
-        run: |
-          bun run dapps:generate
-          git diff --exit-code -- src/data/dapps.ts
-
       - name: Build preview
         run: bun run build
 

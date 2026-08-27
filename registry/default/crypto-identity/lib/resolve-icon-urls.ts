@@ -1,4 +1,8 @@
-import { resolveSupportCatalogUrls, resolveTokenCatalogUrls } from "./catalog";
+import {
+  resolveDappCatalogUrls,
+  resolveSupportCatalogUrls,
+  resolveTokenCatalogUrls,
+} from "./catalog";
 import { orderedCdnBaseUrls } from "./constants";
 import {
   normalizeDapp,
@@ -39,8 +43,16 @@ export async function resolveIconUrls(
         `blockchains/${normalizeNetworkSlug(name)}/info/logo.png`,
         preferredBaseUrl,
       );
-    case "dapp":
-      return urlsForPath(`dapps/${name}.png`, preferredBaseUrl);
+    case "dapp": {
+      const directUrls = urlsForPath(`dapps/${name}.png`, preferredBaseUrl);
+      if (!query.includeCatalog) {
+        return directUrls;
+      }
+      return uniqueUrls([
+        ...directUrls,
+        ...(await resolveDappCatalogUrls(query.name, preferredBaseUrl)),
+      ]);
+    }
     case "exchange":
     case "wallet": {
       const supportName = normalizeSupportSlug(name);
