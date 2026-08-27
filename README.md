@@ -51,6 +51,31 @@ There are several scripts available for maintainers:
 - `make add-tokenlist asset_id=c60_t0x4Fabb145d64652a948d72533023f6E7A623C7C53` -- Adds a token to tokenlist.json.
 - `make add-tokenlist-extended asset_id=c60_t0x4Fabb145d64652a948d72533023f6E7A623C7C53` -- Adds a token to tokenlist-extended.json.
 
+### Support logo synchronization
+
+Wallet and exchange logos under `support/`, plus the dApp catalog, are
+synchronized daily by `.github/workflows/sync-support.yml`. Wallets are merged
+from WalletConnect and Web3icons using stable slugs from
+`support/wallet-source-map.json`; exchanges come from Web3icons. The separate
+`support/dapps.json` catalog is generated directly from the historical root
+`dapps/*.png` files and references those existing images; no duplicate dApp
+assets are created under `support/`. Both catalogs have matching `.zst`
+artifacts. A Web3icons SVG is preferred for wallets, followed by a safe
+WalletConnect SVG and then a normalized WalletConnect PNG. Historical entries
+are preserved when they disappear upstream.
+
+The workflow requires the `WALLETCONNECT_PROJECT_ID` repository secret. For a
+Web3icons-only local refresh:
+
+```shell
+python3 support/sync_support.py \
+  --web3icons-source /path/to/web3icons \
+  --skip-walletconnect
+```
+
+Local-only assets that must not be replaced by an upstream sync are declared in
+`support/support-overrides.json`.
+
 ## On Checks
 
 This repo contains a set of scripts for verification of all the information. Implemented as Golang scripts, available through `make check`, and executed in CI build; checks the whole repo.

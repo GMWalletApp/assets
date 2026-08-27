@@ -1,10 +1,12 @@
 name: Sync Support Logos
 
 on:
+  schedule:
+    - cron: "0 2 * * *"
   workflow_dispatch:
     inputs:
-      source_ref:
-        description: "GMWalletApp/crypto-icons branch, tag, or commit to sync"
+      web3icons_ref:
+        description: "0xa3k5/web3icons branch, tag, or commit to sync"
         required: false
         default: "main"
         type: string
@@ -19,47 +21,75 @@ concurrency:
 jobs:
   sync-support:
     runs-on: ubuntu-latest
-    if: github.actor != 'github-actions[bot]'
 
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          ref: main
 
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
-      - name: Checkout crypto-icons source
+      - name: Install dependencies
+        run: |
+          python -m pip install Pillow==11.3.0
+          sudo apt-get update
+          sudo apt-get install -y zstd
+
+      - name: Require WalletConnect Project ID
         env:
-          SOURCE_REF: ${{ github.event.inputs.source_ref || 'main' }}
-          UPSTREAM_URL: https://github.com/GMWalletApp/crypto-icons.git
+          WALLETCONNECT_PROJECT_ID: ${{ secrets.WALLETCONNECT_PROJECT_ID }}
+        run: |
+          if [ -z "$WALLETCONNECT_PROJECT_ID" ]; then
+            echo "::error::WALLETCONNECT_PROJECT_ID repository secret is required"
+            exit 1
+          fi
+
+      - name: Checkout Web3icons source
+        env:
+          SOURCE_REF: ${{ github.event.inputs.web3icons_ref || 'main' }}
+          UPSTREAM_URL: https://github.com/0xa3k5/web3icons.git
         run: |
           set -euo pipefail
-          UPSTREAM_DIR="$RUNNER_TEMP/crypto-icons"
-          rm -rf "$UPSTREAM_DIR"
-          if git clone --depth 1 --branch "$SOURCE_REF" "$UPSTREAM_URL" "$UPSTREAM_DIR"; then
-            exit 0
+          upstream_dir="$RUNNER_TEMP/web3icons"
+          rm -rf "$upstream_dir"
+          git clone --depth 1 --filter=blob:none --sparse "$UPSTREAM_URL" "$upstream_dir"
+          git -C "$upstream_dir" sparse-checkout set raw-svgs packages/common/src/metadata
+          if [ "$SOURCE_REF" != "main" ]; then
+            git -C "$upstream_dir" fetch --depth 1 origin "$SOURCE_REF"
+            git -C "$upstream_dir" checkout --detach FETCH_HEAD
           fi
-          rm -rf "$UPSTREAM_DIR"
-          git clone --depth 1 "$UPSTREAM_URL" "$UPSTREAM_DIR"
-          git -C "$UPSTREAM_DIR" fetch --depth 1 origin "$SOURCE_REF" || true
-          git -C "$UPSTREAM_DIR" checkout "$SOURCE_REF"
 
       - name: Sync support logos
+        env:
+          WALLETCONNECT_PROJECT_ID: ${{ secrets.WALLETCONNECT_PROJECT_ID }}
         run: |
-          python3 support/sync_support.py --source "$RUNNER_TEMP/crypto-icons"
-          python3 -m json.tool support/support.json >/dev/null
-          python3 support/sync_support.py --validate-output
+          python support/sync_support.py --web3icons-source "$RUNNER_TEMP/web3icons"
+          python support/sync_support.py --validate-output
+
+      - name: Compress and verify support catalog
+        run: |
+          python -m json.tool support/support.json >/dev/null
+          python -m json.tool support/dapps.json >/dev/null
+          python -m json.tool support/wallet-source-map.json >/dev/null
+          zstd --ultra -22 --force --keep support/support.json -o support/support.json.zst
+          zstd --ultra -22 --force --keep support/dapps.json -o support/dapps.json.zst
+          zstd --test support/support.json.zst
+          zstd --test support/dapps.json.zst
+          cmp support/support.json <(zstd --decompress --stdout support/support.json.zst)
+          cmp support/dapps.json <(zstd --decompress --stdout support/dapps.json.zst)
 
       - name: Commit support files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add support/
+          git add support/wallets support/exchanges support/support.json support/support.json.zst support/dapps.json support/dapps.json.zst support/wallet-source-map.json
           if git diff --cached --quiet; then
             echo "No support logo changes to commit."
             exit 0
           fi
           git commit -m "chore: sync support logos"
-          git push
+          git push origin HEAD:main

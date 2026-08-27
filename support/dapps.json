@@ -1,0 +1,2396 @@
+{
+  "schemaVersion": 1,
+  "assetBaseURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps",
+  "dapps": [
+    {
+      "id": "0x-org",
+      "name": "0x.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/0x.org.png"
+    },
+    {
+      "id": "aave-com",
+      "name": "aave.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/aave.com.png"
+    },
+    {
+      "id": "aavegotchi-com",
+      "name": "aavegotchi.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/aavegotchi.com.png"
+    },
+    {
+      "id": "account-orchid-com",
+      "name": "account.orchid.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/account.orchid.com.png"
+    },
+    {
+      "id": "across-to",
+      "name": "across.to",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/across.to.png"
+    },
+    {
+      "id": "acryptos-com",
+      "name": "acryptos.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/acryptos.com.png"
+    },
+    {
+      "id": "adsbywifi-com",
+      "name": "adsbywifi.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/adsbywifi.com.png"
+    },
+    {
+      "id": "aerodrome-finance",
+      "name": "aerodrome.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/aerodrome.finance.png"
+    },
+    {
+      "id": "aftermath-finance",
+      "name": "aftermath.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/aftermath.finance.png"
+    },
+    {
+      "id": "aircash-finance",
+      "name": "aircash.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/aircash.finance.png"
+    },
+    {
+      "id": "alienworlds-io",
+      "name": "alienworlds.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/alienworlds.io.png"
+    },
+    {
+      "id": "allbridge-io",
+      "name": "allbridge.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/allbridge.io.png"
+    },
+    {
+      "id": "angelbattles-com",
+      "name": "angelbattles.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/angelbattles.com.png"
+    },
+    {
+      "id": "angle-money",
+      "name": "angle.money",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/angle.money.png"
+    },
+    {
+      "id": "apenowpaylater-com",
+      "name": "apenowpaylater.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/apenowpaylater.com.png"
+    },
+    {
+      "id": "apeswap-finance",
+      "name": "apeswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/apeswap.finance.png"
+    },
+    {
+      "id": "apollox-finance",
+      "name": "apollox.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/apollox.finance.png"
+    },
+    {
+      "id": "app-1inch-io",
+      "name": "app.1inch.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.1inch.io.png"
+    },
+    {
+      "id": "app-aave-com",
+      "name": "app.aave.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.aave.com.png"
+    },
+    {
+      "id": "app-airnfts-com",
+      "name": "app.airnfts.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.airnfts.com.png"
+    },
+    {
+      "id": "app-apeswap-finance",
+      "name": "app.apeswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.apeswap.finance.png"
+    },
+    {
+      "id": "app-beefy-finance",
+      "name": "app.beefy.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.beefy.finance.png"
+    },
+    {
+      "id": "app-clashofcoins",
+      "name": "app.clashofcoins",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.clashofcoins.png"
+    },
+    {
+      "id": "app-cream-finance",
+      "name": "app.cream.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.cream.finance.png"
+    },
+    {
+      "id": "app-cryptoder-by",
+      "name": "app.cryptoder.by",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.cryptoder.by.png"
+    },
+    {
+      "id": "app-cryptoxmas-xyz",
+      "name": "app.cryptoxmas.xyz",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.cryptoxmas.xyz.png"
+    },
+    {
+      "id": "app-cyberconnect",
+      "name": "app.cyberconnect",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.cyberconnect.png"
+    },
+    {
+      "id": "app-deepspace-game",
+      "name": "app.deepspace.game",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.deepspace.game.png"
+    },
+    {
+      "id": "app-defimoneymarket-com",
+      "name": "app.defimoneymarket.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.defimoneymarket.com.png"
+    },
+    {
+      "id": "app-defipie-com",
+      "name": "app.defipie.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.defipie.com.png"
+    },
+    {
+      "id": "app-dhedge-org",
+      "name": "app.dhedge.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.dhedge.org.png"
+    },
+    {
+      "id": "app-dify-finance",
+      "name": "app.dify.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.dify.finance.png"
+    },
+    {
+      "id": "app-dmail",
+      "name": "app.dmail",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.dmail.png"
+    },
+    {
+      "id": "app-dodoex-io",
+      "name": "app.dodoex.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.dodoex.io.png"
+    },
+    {
+      "id": "app-ens-domains",
+      "name": "app.ens.domains",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.ens.domains.png"
+    },
+    {
+      "id": "app-ercdex-com",
+      "name": "app.ercdex.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.ercdex.com.png"
+    },
+    {
+      "id": "app-everrise-com",
+      "name": "app.everrise.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.everrise.com.png"
+    },
+    {
+      "id": "app-frax-finance",
+      "name": "app.frax.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.frax.finance.png"
+    },
+    {
+      "id": "app-galxe-com",
+      "name": "app.galxe.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.galxe.com.png"
+    },
+    {
+      "id": "app-harvest-finance",
+      "name": "app.harvest.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.harvest.finance.png"
+    },
+    {
+      "id": "app-jetton",
+      "name": "app.jetton",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.jetton.png"
+    },
+    {
+      "id": "app-kinza-finance",
+      "name": "app.kinza.finance:",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.kinza.finance%3A.png"
+    },
+    {
+      "id": "app-layer3-xyz",
+      "name": "app.layer3.xyz",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.layer3.xyz.png"
+    },
+    {
+      "id": "app-machines-cash",
+      "name": "app.machines.cash",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.machines.cash.png"
+    },
+    {
+      "id": "app-mail3-me",
+      "name": "app.mail3.me",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.mail3.me.png"
+    },
+    {
+      "id": "app-marginfi-com",
+      "name": "app.marginfi.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.marginfi.com.png"
+    },
+    {
+      "id": "app-marsecosystem-com",
+      "name": "app.marsecosystem.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.marsecosystem.com.png"
+    },
+    {
+      "id": "app-mcdex-io",
+      "name": "app.mcdex.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.mcdex.io.png"
+    },
+    {
+      "id": "app-mocaid",
+      "name": "app.mocaid",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.mocaid.png"
+    },
+    {
+      "id": "app-morpho-org",
+      "name": "app.morpho.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.morpho.org.png"
+    },
+    {
+      "id": "app-neutron",
+      "name": "app.neutron",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.neutron.png"
+    },
+    {
+      "id": "app-nuo-network",
+      "name": "app.nuo.network",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.nuo.network.png"
+    },
+    {
+      "id": "app-paraswap-io",
+      "name": "app.paraswap.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.paraswap.io.png"
+    },
+    {
+      "id": "app-polygon-zkevm",
+      "name": "app.polygon.zkevm",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.polygon.zkevm.png"
+    },
+    {
+      "id": "app-pooltogether-com",
+      "name": "app.pooltogether.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.pooltogether.com.png"
+    },
+    {
+      "id": "app-pooltogether-us",
+      "name": "app.pooltogether.us",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.pooltogether.us.png"
+    },
+    {
+      "id": "app-pstake-finance",
+      "name": "app.pstake.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.pstake.finance.png"
+    },
+    {
+      "id": "app-questn-com",
+      "name": "app.questn.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.questn.com.png"
+    },
+    {
+      "id": "app-raise-it",
+      "name": "app.raise.it",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.raise.it.png"
+    },
+    {
+      "id": "app-refinable-com",
+      "name": "app.refinable.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.refinable.com.png"
+    },
+    {
+      "id": "app-sablier-finance",
+      "name": "app.sablier.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.sablier.finance.png"
+    },
+    {
+      "id": "app-satori-finance",
+      "name": "app.satori.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.satori.finance.png"
+    },
+    {
+      "id": "app-shibance-com",
+      "name": "app.shibance.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.shibance.com.png"
+    },
+    {
+      "id": "app-sil-finance",
+      "name": "app.sil.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.sil.finance.png"
+    },
+    {
+      "id": "app-spaceid",
+      "name": "app.spaceid",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.spaceid.png"
+    },
+    {
+      "id": "app-stakepark-xyz",
+      "name": "app.stakepark.xyz",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.stakepark.xyz.png"
+    },
+    {
+      "id": "app-sushi-com",
+      "name": "app.sushi.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.sushi.com.png"
+    },
+    {
+      "id": "app-swaptuna-com",
+      "name": "app.swaptuna.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.swaptuna.com.png"
+    },
+    {
+      "id": "app-swipe-org",
+      "name": "app.swipe.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.swipe.org.png"
+    },
+    {
+      "id": "app-timvi-com",
+      "name": "app.timvi.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.timvi.com.png"
+    },
+    {
+      "id": "app-totle-com",
+      "name": "app.totle.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.totle.com.png"
+    },
+    {
+      "id": "app-udex-one",
+      "name": "app.udex.one",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.udex.one.png"
+    },
+    {
+      "id": "app-uniswap-org",
+      "name": "app.uniswap.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.uniswap.org.png"
+    },
+    {
+      "id": "app-unrekt-net",
+      "name": "app.unrekt.net",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.unrekt.net.png"
+    },
+    {
+      "id": "app-veil-co",
+      "name": "app.veil.co",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.veil.co.png"
+    },
+    {
+      "id": "app-venus-io",
+      "name": "app.venus.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.venus.io.png"
+    },
+    {
+      "id": "app-warriders-com",
+      "name": "app.warriders.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.warriders.com.png"
+    },
+    {
+      "id": "app-whales-market",
+      "name": "app.whales.market",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.whales.market.png"
+    },
+    {
+      "id": "app-zerion-io",
+      "name": "app.zerion.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.zerion.io.png"
+    },
+    {
+      "id": "app-zksync-era",
+      "name": "app.zksync.era",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/app.zksync.era.png"
+    },
+    {
+      "id": "aptos-pancakeswap-finance",
+      "name": "aptos.pancakeswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/aptos.pancakeswap.finance.png"
+    },
+    {
+      "id": "arb-giveaway",
+      "name": "arb_giveaway",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/arb_giveaway.png"
+    },
+    {
+      "id": "aura-finance",
+      "name": "aura.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/aura.finance.png"
+    },
+    {
+      "id": "autofarm-network",
+      "name": "autofarm.network",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/autofarm.network.png"
+    },
+    {
+      "id": "ave-ai",
+      "name": "ave.ai",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/ave.ai.png"
+    },
+    {
+      "id": "avnrichdefi-com",
+      "name": "avnrichdefi.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/avnrichdefi.com.png"
+    },
+    {
+      "id": "avnswap-com",
+      "name": "avnswap.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/avnswap.com.png"
+    },
+    {
+      "id": "axelar-network",
+      "name": "axelar.network",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/axelar.network.png"
+    },
+    {
+      "id": "axieinfinity-com",
+      "name": "axieinfinity.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/axieinfinity.com.png"
+    },
+    {
+      "id": "babaoshu-cn",
+      "name": "babaoshu.cn",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/babaoshu.cn.png"
+    },
+    {
+      "id": "babyswap-finance",
+      "name": "babyswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/babyswap.finance.png"
+    },
+    {
+      "id": "bakeryswap-org",
+      "name": "bakeryswap.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bakeryswap.org.png"
+    },
+    {
+      "id": "balancer-exchange",
+      "name": "balancer.exchange",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/balancer.exchange.png"
+    },
+    {
+      "id": "balancer-finance",
+      "name": "balancer.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/balancer.finance.png"
+    },
+    {
+      "id": "bananagun-io",
+      "name": "bananagun.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bananagun.io.png"
+    },
+    {
+      "id": "bancor-network",
+      "name": "bancor.network",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bancor.network.png"
+    },
+    {
+      "id": "bank-spankchain-com",
+      "name": "bank.spankchain.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bank.spankchain.com.png"
+    },
+    {
+      "id": "barn-beefy-finance",
+      "name": "barn.beefy.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/barn.beefy.finance.png"
+    },
+    {
+      "id": "beta-adex-network",
+      "name": "beta.adex.network",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/beta.adex.network.png"
+    },
+    {
+      "id": "beta-bounty0x-io",
+      "name": "beta.bounty0x.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/beta.bounty0x.io.png"
+    },
+    {
+      "id": "beta-cent-co",
+      "name": "beta.cent.co",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/beta.cent.co.png"
+    },
+    {
+      "id": "beta-dharma-io",
+      "name": "beta.dharma.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/beta.dharma.io.png"
+    },
+    {
+      "id": "betoken-fund",
+      "name": "betoken.fund",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/betoken.fund.png"
+    },
+    {
+      "id": "biswap-org",
+      "name": "biswap.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/biswap.org.png"
+    },
+    {
+      "id": "bitpaid-org",
+      "name": "bitpaid.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bitpaid.org.png"
+    },
+    {
+      "id": "blizzard-money",
+      "name": "blizzard.money",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/blizzard.money.png"
+    },
+    {
+      "id": "blockchaincuties-co",
+      "name": "blockchaincuties.co",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/blockchaincuties.co.png"
+    },
+    {
+      "id": "blur-io",
+      "name": "blur.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/blur.io.png"
+    },
+    {
+      "id": "bnbchain-org",
+      "name": "bnbchain.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bnbchain.org.png"
+    },
+    {
+      "id": "bns-finance",
+      "name": "bns.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bns.finance.png"
+    },
+    {
+      "id": "bounty0x-io",
+      "name": "bounty0x.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bounty0x.io.png"
+    },
+    {
+      "id": "brain-warp-win4-fun",
+      "name": "brain-warp.win4.fun",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/brain-warp.win4.fun.png"
+    },
+    {
+      "id": "bravefrontierheroes-com",
+      "name": "bravefrontierheroes.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bravefrontierheroes.com.png"
+    },
+    {
+      "id": "bridge-poa-net",
+      "name": "bridge.poa.net",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bridge.poa.net.png"
+    },
+    {
+      "id": "bsc-dego-finance",
+      "name": "bsc.dego.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bsc.dego.finance.png"
+    },
+    {
+      "id": "bsc-farm",
+      "name": "bsc.farm",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bsc.farm.png"
+    },
+    {
+      "id": "bscproject-org",
+      "name": "bscproject.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bscproject.org.png"
+    },
+    {
+      "id": "bscscan-com",
+      "name": "bscscan.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bscscan.com.png"
+    },
+    {
+      "id": "bscswap-com",
+      "name": "bscswap.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/bscswap.com.png"
+    },
+    {
+      "id": "btu-car-rental-com",
+      "name": "btu-car-rental.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/btu-car-rental.com.png"
+    },
+    {
+      "id": "cafeswap-finance",
+      "name": "cafeswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cafeswap.finance.png"
+    },
+    {
+      "id": "camelot-exchange",
+      "name": "camelot.exchange",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/camelot.exchange.png"
+    },
+    {
+      "id": "canwork-io",
+      "name": "canwork.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/canwork.io.png"
+    },
+    {
+      "id": "cbridge-celer-network",
+      "name": "cbridge.celer.network",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cbridge.celer.network.png"
+    },
+    {
+      "id": "cdp-makerdao",
+      "name": "cdp.makerdao",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cdp.makerdao.png"
+    },
+    {
+      "id": "cdpsaver-com",
+      "name": "cdpsaver.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cdpsaver.com.png"
+    },
+    {
+      "id": "cgm-discover",
+      "name": "cgm.discover",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cgm.discover.png"
+    },
+    {
+      "id": "chainlist-org",
+      "name": "chainlist.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/chainlist.org.png"
+    },
+    {
+      "id": "chainmonsters-io",
+      "name": "chainmonsters.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/chainmonsters.io.png"
+    },
+    {
+      "id": "chat-b-ai",
+      "name": "chat.b.ai",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/chat.b.ai.png"
+    },
+    {
+      "id": "cheeseswap-app",
+      "name": "cheeseswap.app",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cheeseswap.app.png"
+    },
+    {
+      "id": "chesstoshi-com",
+      "name": "chesstoshi.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/chesstoshi.com.png"
+    },
+    {
+      "id": "chibifighters-io",
+      "name": "chibifighters.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/chibifighters.io.png"
+    },
+    {
+      "id": "coinpanda-io",
+      "name": "coinpanda.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/coinpanda.io.png"
+    },
+    {
+      "id": "cointracker-io",
+      "name": "cointracker.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cointracker.io.png"
+    },
+    {
+      "id": "cold-staking-callisto-network",
+      "name": "cold-staking.callisto.network",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cold-staking.callisto.network.png"
+    },
+    {
+      "id": "color-craze-win4-fun",
+      "name": "color-craze.win4.fun",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/color-craze.win4.fun.png"
+    },
+    {
+      "id": "commerce-bidali-com",
+      "name": "commerce.bidali.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/commerce.bidali.com.png"
+    },
+    {
+      "id": "compound-finance",
+      "name": "compound.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/compound.finance.png"
+    },
+    {
+      "id": "comproi-com",
+      "name": "comproi.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/comproi.com.png"
+    },
+    {
+      "id": "cow-fi",
+      "name": "cow.fi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cow.fi.png"
+    },
+    {
+      "id": "cryptantcrab-io",
+      "name": "cryptantcrab.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptantcrab.io.png"
+    },
+    {
+      "id": "cryptobots-me",
+      "name": "cryptobots.me",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptobots.me.png"
+    },
+    {
+      "id": "cryptochrome-org",
+      "name": "cryptochrome.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptochrome.org.png"
+    },
+    {
+      "id": "cryptocities-net",
+      "name": "cryptocities.net",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptocities.net.png"
+    },
+    {
+      "id": "cryptocrystal-io",
+      "name": "cryptocrystal.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptocrystal.io.png"
+    },
+    {
+      "id": "cryptoder-by",
+      "name": "cryptoder.by",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptoder.by.png"
+    },
+    {
+      "id": "cryptodozer-io",
+      "name": "cryptodozer.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptodozer.io.png"
+    },
+    {
+      "id": "cryptofighters-io",
+      "name": "cryptofighters.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptofighters.io.png"
+    },
+    {
+      "id": "cryptogoods-co",
+      "name": "cryptogoods.co",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptogoods.co.png"
+    },
+    {
+      "id": "cryptogs-io",
+      "name": "cryptogs.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptogs.io.png"
+    },
+    {
+      "id": "cryptomines-pro",
+      "name": "cryptomines.pro",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptomines.pro.png"
+    },
+    {
+      "id": "cryptopurr-co",
+      "name": "cryptopurr.co",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptopurr.co.png"
+    },
+    {
+      "id": "cryptoracingleague-io",
+      "name": "cryptoracingleague.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptoracingleague.io.png"
+    },
+    {
+      "id": "cryptosketches-com",
+      "name": "cryptosketches.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptosketches.com.png"
+    },
+    {
+      "id": "cryptostrikers-com",
+      "name": "cryptostrikers.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptostrikers.com.png"
+    },
+    {
+      "id": "cryptotitties-fun",
+      "name": "cryptotitties.fun",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/cryptotitties.fun.png"
+    },
+    {
+      "id": "csc-game-com",
+      "name": "csc-game.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/csc-game.com.png"
+    },
+    {
+      "id": "curve-fi",
+      "name": "curve.fi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/curve.fi.png"
+    },
+    {
+      "id": "dapp-dragonereum-io",
+      "name": "dapp.dragonereum.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dapp.dragonereum.io.png"
+    },
+    {
+      "id": "dapp-originprotocol-com",
+      "name": "dapp.originprotocol.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dapp.originprotocol.com.png"
+    },
+    {
+      "id": "dapp-spartanprotocol-org",
+      "name": "dapp.spartanprotocol.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dapp.spartanprotocol.org.png"
+    },
+    {
+      "id": "dappbay-bnbchain-org",
+      "name": "dappbay.bnbchain.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dappbay.bnbchain.org.png"
+    },
+    {
+      "id": "dapps-trustwallet-com",
+      "name": "dapps.trustwallet.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dapps.trustwallet.com.png"
+    },
+    {
+      "id": "dapps-www-pinksale-finance",
+      "name": "dapps-www.pinksale.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dapps-www.pinksale.finance.png"
+    },
+    {
+      "id": "ddex-io",
+      "name": "ddex.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/ddex.io.png"
+    },
+    {
+      "id": "debank-com",
+      "name": "debank.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/debank.com.png"
+    },
+    {
+      "id": "debridge-finance",
+      "name": "debridge.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/debridge.finance.png"
+    },
+    {
+      "id": "defi-timvi-com",
+      "name": "defi.timvi.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/defi.timvi.com.png"
+    },
+    {
+      "id": "defisaver-com",
+      "name": "defisaver.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/defisaver.com.png"
+    },
+    {
+      "id": "deversifi-com",
+      "name": "deversifi.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/deversifi.com.png"
+    },
+    {
+      "id": "dex-ag",
+      "name": "dex.ag",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dex.ag.png"
+    },
+    {
+      "id": "dex-blue",
+      "name": "dex.blue",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dex.blue.png"
+    },
+    {
+      "id": "dex-leonicornswap-com",
+      "name": "dex.leonicornswap.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dex.leonicornswap.com.png"
+    },
+    {
+      "id": "dex-verisafe-io",
+      "name": "dex.verisafe.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dex.verisafe.io.png"
+    },
+    {
+      "id": "dflow-net",
+      "name": "dflow.net",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dflow.net.png"
+    },
+    {
+      "id": "dice2-win",
+      "name": "dice2.win",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dice2.win.png"
+    },
+    {
+      "id": "discover-12days-1",
+      "name": "discover_12days_1",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_12days_1.png"
+    },
+    {
+      "id": "discover-12days-4ever",
+      "name": "discover_12days_4ever",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_12days_4ever.png"
+    },
+    {
+      "id": "discover-12days-bump",
+      "name": "discover_12days_bump",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_12days_bump.png"
+    },
+    {
+      "id": "discover-12days-freename",
+      "name": "discover_12days_freename",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_12days_freename.png"
+    },
+    {
+      "id": "discover-12days-heat",
+      "name": "discover_12days_heat",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_12days_heat.png"
+    },
+    {
+      "id": "discover-12days-lime",
+      "name": "discover_12days_lime",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_12days_lime.png"
+    },
+    {
+      "id": "discover-12days-quack",
+      "name": "discover_12days_quack",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_12days_quack.png"
+    },
+    {
+      "id": "discover-12days-quack-1",
+      "name": "discover_12days_quack_1",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_12days_quack_1.png"
+    },
+    {
+      "id": "discover-12days-wagmi",
+      "name": "discover_12days_wagmi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_12days_wagmi.png"
+    },
+    {
+      "id": "discover-12days-wcoin",
+      "name": "discover_12days_wcoin",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_12days_wcoin.png"
+    },
+    {
+      "id": "discover-arena-games",
+      "name": "discover_arena_games",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_arena_games.png"
+    },
+    {
+      "id": "discover-arena-games-updated",
+      "name": "discover_arena_games_updated",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_arena_games_updated.png"
+    },
+    {
+      "id": "discover-bnbmemes",
+      "name": "discover_bnbmemes",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_bnbmemes.png"
+    },
+    {
+      "id": "discover-bnbmemeswap",
+      "name": "discover_bnbmemeswap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_bnbmemeswap.png"
+    },
+    {
+      "id": "discover-chaingpt-wd",
+      "name": "discover_chaingpt_wd",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_chaingpt_wd.png"
+    },
+    {
+      "id": "discover-jettonfeatured",
+      "name": "discover_jettonfeatured",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_jettonfeatured.png"
+    },
+    {
+      "id": "discover-limewire-updated",
+      "name": "discover_limewire_updated",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_limewire_updated.png"
+    },
+    {
+      "id": "discover-qubetics-wd",
+      "name": "discover_qubetics_wd",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_qubetics_wd.png"
+    },
+    {
+      "id": "discover-trumpswaps",
+      "name": "discover_trumpswaps",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_trumpswaps.png"
+    },
+    {
+      "id": "discover-trust-talks-1",
+      "name": "discover_trust_talks_1",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_trust_talks_1.png"
+    },
+    {
+      "id": "discover-web3digest-feb",
+      "name": "discover_web3digest_feb",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_web3digest_feb.png"
+    },
+    {
+      "id": "discover-wod",
+      "name": "discover_wod",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/discover_wod.png"
+    },
+    {
+      "id": "doperaider-com",
+      "name": "doperaider.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/doperaider.com.png"
+    },
+    {
+      "id": "dozerbird-io",
+      "name": "dozerbird.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dozerbird.io.png"
+    },
+    {
+      "id": "dx-app",
+      "name": "dx.app",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dx.app.png"
+    },
+    {
+      "id": "dydx-exchange",
+      "name": "dydx.exchange",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/dydx.exchange.png"
+    },
+    {
+      "id": "easytrade-io",
+      "name": "easytrade.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/easytrade.io.png"
+    },
+    {
+      "id": "egyptoken-com",
+      "name": "egyptoken.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/egyptoken.com.png"
+    },
+    {
+      "id": "element-market",
+      "name": "element.market",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/element.market.png"
+    },
+    {
+      "id": "emoon-io",
+      "name": "emoon.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/emoon.io.png"
+    },
+    {
+      "id": "ens-domains",
+      "name": "ens.domains",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/ens.domains.png"
+    },
+    {
+      "id": "erc20faucet-com",
+      "name": "erc20faucet.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/erc20faucet.com.png"
+    },
+    {
+      "id": "esports-win4-fun",
+      "name": "esports.win4.fun",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/esports.win4.fun.png"
+    },
+    {
+      "id": "eth2-io",
+      "name": "eth2.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/eth2.io.png"
+    },
+    {
+      "id": "eth2dai-com",
+      "name": "eth2dai.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/eth2dai.com.png"
+    },
+    {
+      "id": "ether-online",
+      "name": "ether.online",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/ether.online.png"
+    },
+    {
+      "id": "ether-quest-com",
+      "name": "ether-quest.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/ether-quest.com.png"
+    },
+    {
+      "id": "etherbots-io",
+      "name": "etherbots.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/etherbots.io.png"
+    },
+    {
+      "id": "ethercraft-io",
+      "name": "ethercraft.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/ethercraft.io.png"
+    },
+    {
+      "id": "etheremon-com",
+      "name": "etheremon.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/etheremon.com.png"
+    },
+    {
+      "id": "ethernauts-co",
+      "name": "ethernauts.co",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/ethernauts.co.png"
+    },
+    {
+      "id": "etherscan-io",
+      "name": "etherscan.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/etherscan.io.png"
+    },
+    {
+      "id": "ethlend-io",
+      "name": "ethlend.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/ethlend.io.png"
+    },
+    {
+      "id": "everdragons-com",
+      "name": "everdragons.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/everdragons.com.png"
+    },
+    {
+      "id": "everrise-com",
+      "name": "everrise.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/everrise.com.png"
+    },
+    {
+      "id": "exchange-cafeswap-finance",
+      "name": "exchange.cafeswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/exchange.cafeswap.finance.png"
+    },
+    {
+      "id": "exchange-pancakeswap-finance",
+      "name": "exchange.pancakeswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/exchange.pancakeswap.finance.png"
+    },
+    {
+      "id": "exchange-robustswap-com",
+      "name": "exchange.robustswap.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/exchange.robustswap.com.png"
+    },
+    {
+      "id": "exchange-shibance-com",
+      "name": "exchange.shibance.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/exchange.shibance.com.png"
+    },
+    {
+      "id": "exnce-com",
+      "name": "exnce.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/exnce.com.png"
+    },
+    {
+      "id": "expotrading-com",
+      "name": "expotrading.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/expotrading.com.png"
+    },
+    {
+      "id": "fanbits-com",
+      "name": "fanbits.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/fanbits.com.png"
+    },
+    {
+      "id": "farm-hyperjump-fi",
+      "name": "farm.hyperjump.fi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/farm.hyperjump.fi.png"
+    },
+    {
+      "id": "featured-market",
+      "name": "featured.market",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/featured.market.png"
+    },
+    {
+      "id": "filmvault-io",
+      "name": "filmvault.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/filmvault.io.png"
+    },
+    {
+      "id": "findtherabbit-me",
+      "name": "findtherabbit.me",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/findtherabbit.me.png"
+    },
+    {
+      "id": "fishbank-io",
+      "name": "fishbank.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/fishbank.io.png"
+    },
+    {
+      "id": "flap-sh",
+      "name": "flap.sh",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/flap.sh.png"
+    },
+    {
+      "id": "fluid-instadapp-io",
+      "name": "fluid.instadapp.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/fluid.instadapp.io.png"
+    },
+    {
+      "id": "foam-tools",
+      "name": "foam.tools",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/foam.tools.png"
+    },
+    {
+      "id": "football-fever",
+      "name": "football-fever",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/football-fever.png"
+    },
+    {
+      "id": "for-tube",
+      "name": "for.tube",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/for.tube.png"
+    },
+    {
+      "id": "four-meme",
+      "name": "four.meme",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/four.meme.png"
+    },
+    {
+      "id": "four-meme-ai",
+      "name": "four.meme.ai",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/four.meme.ai.png"
+    },
+    {
+      "id": "fractional-art",
+      "name": "fractional.art",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/fractional.art.png"
+    },
+    {
+      "id": "freighttrust-com",
+      "name": "freighttrust.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/freighttrust.com.png"
+    },
+    {
+      "id": "frens-community",
+      "name": "frens.community",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/frens.community.png"
+    },
+    {
+      "id": "frens-link",
+      "name": "frens.link",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/frens.link.png"
+    },
+    {
+      "id": "fry-world",
+      "name": "fry.world",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/fry.world.png"
+    },
+    {
+      "id": "fundrequest-io",
+      "name": "fundrequest.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/fundrequest.io.png"
+    },
+    {
+      "id": "gains-trade",
+      "name": "gains.trade",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/gains.trade.png"
+    },
+    {
+      "id": "galler-io",
+      "name": "galler.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/galler.io.png"
+    },
+    {
+      "id": "game-lordless-io",
+      "name": "game.lordless.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/game.lordless.io.png"
+    },
+    {
+      "id": "gmgn-ai",
+      "name": "gmgn.ai",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/gmgn.ai.png"
+    },
+    {
+      "id": "gmt-io",
+      "name": "gmt.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/gmt.io.png"
+    },
+    {
+      "id": "gmx-io",
+      "name": "gmx.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/gmx.io.png"
+    },
+    {
+      "id": "gomble-io",
+      "name": "gomble.io:",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/gomble.io%3A.png"
+    },
+    {
+      "id": "governance-trustwallet-com",
+      "name": "governance.trustwallet.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/governance.trustwallet.com.png"
+    },
+    {
+      "id": "hex-win",
+      "name": "hex.win",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/hex.win.png"
+    },
+    {
+      "id": "hodltoken-net",
+      "name": "hodltoken.net",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/hodltoken.net.png"
+    },
+    {
+      "id": "hodlx-exchange",
+      "name": "hodlx.exchange",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/hodlx.exchange.png"
+    },
+    {
+      "id": "hooked-io",
+      "name": "hooked.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/hooked.io.png"
+    },
+    {
+      "id": "hotcross-com",
+      "name": "hotcross.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/hotcross.com.png"
+    },
+    {
+      "id": "idex-market",
+      "name": "idex.market",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/idex.market.png"
+    },
+    {
+      "id": "idle-finance",
+      "name": "idle.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/idle.finance.png"
+    },
+    {
+      "id": "incscan-io",
+      "name": "incscan.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/incscan.io.png"
+    },
+    {
+      "id": "inddex-io",
+      "name": "inddex.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/inddex.io.png"
+    },
+    {
+      "id": "indorse-io",
+      "name": "indorse.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/indorse.io.png"
+    },
+    {
+      "id": "info-apeswap-finance",
+      "name": "info.apeswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/info.apeswap.finance.png"
+    },
+    {
+      "id": "info-hyperjump-fi",
+      "name": "info.hyperjump.fi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/info.hyperjump.fi.png"
+    },
+    {
+      "id": "info-narwhalswap-org",
+      "name": "info.narwhalswap.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/info.narwhalswap.org.png"
+    },
+    {
+      "id": "info-uniswap-org",
+      "name": "info.uniswap.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/info.uniswap.org.png"
+    },
+    {
+      "id": "instadapp-io",
+      "name": "instadapp.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/instadapp.io.png"
+    },
+    {
+      "id": "instant-airswap-io",
+      "name": "instant.airswap.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/instant.airswap.io.png"
+    },
+    {
+      "id": "insurace",
+      "name": "insurace",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/insurace.png"
+    },
+    {
+      "id": "iskra-world",
+      "name": "iskra.world",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/iskra.world.png"
+    },
+    {
+      "id": "johnorionyoung-com",
+      "name": "johnorionyoung.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/johnorionyoung.com.png"
+    },
+    {
+      "id": "julswap-com",
+      "name": "julswap.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/julswap.com.png"
+    },
+    {
+      "id": "jup-ag",
+      "name": "jup.ag",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/jup.ag.png"
+    },
+    {
+      "id": "kalshi-com",
+      "name": "kalshi.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/kalshi.com.png"
+    },
+    {
+      "id": "kamino-finance",
+      "name": "kamino.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/kamino.finance.png"
+    },
+    {
+      "id": "kebabfinance-com",
+      "name": "kebabfinance.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/kebabfinance.com.png"
+    },
+    {
+      "id": "knownorigin-io",
+      "name": "knownorigin.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/knownorigin.io.png"
+    },
+    {
+      "id": "koinly-io",
+      "name": "koinly.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/koinly.io.png"
+    },
+    {
+      "id": "kyber-network",
+      "name": "kyber.network",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/kyber.network.png"
+    },
+    {
+      "id": "kyber-org",
+      "name": "kyber.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/kyber.org.png"
+    },
+    {
+      "id": "kyberswap-com",
+      "name": "kyberswap.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/kyberswap.com.png"
+    },
+    {
+      "id": "launchpool-rocket",
+      "name": "launchpool_rocket",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/launchpool_rocket.png"
+    },
+    {
+      "id": "lens-xyx",
+      "name": "lens.xyx",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/lens.xyx.png"
+    },
+    {
+      "id": "lido-fi",
+      "name": "lido.fi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/lido.fi.png"
+    },
+    {
+      "id": "liquidmesh-io",
+      "name": "liquidmesh.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/liquidmesh.io.png"
+    },
+    {
+      "id": "lista-org",
+      "name": "lista.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/lista.org.png"
+    },
+    {
+      "id": "localethereum-com",
+      "name": "localethereum.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/localethereum.com.png"
+    },
+    {
+      "id": "lol-hunt-town",
+      "name": "lol.hunt.town",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/lol.hunt.town.png"
+    },
+    {
+      "id": "looksrare-org",
+      "name": "looksrare.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/looksrare.org.png"
+    },
+    {
+      "id": "m-dex-top",
+      "name": "m.dex.top",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/m.dex.top.png"
+    },
+    {
+      "id": "magiceden-io",
+      "name": "magiceden.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/magiceden.io.png"
+    },
+    {
+      "id": "makerdao-com",
+      "name": "makerdao.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/makerdao.com.png"
+    },
+    {
+      "id": "marinade-finance-app",
+      "name": "marinade.finance.app",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/marinade.finance.app.png"
+    },
+    {
+      "id": "market-decentraland-org",
+      "name": "market.decentraland.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/market.decentraland.org.png"
+    },
+    {
+      "id": "marketplace-axieinfinity-com",
+      "name": "marketplace.axieinfinity.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/marketplace.axieinfinity.com.png"
+    },
+    {
+      "id": "marketplace-e11-io",
+      "name": "marketplace.e11.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/marketplace.e11.io.png"
+    },
+    {
+      "id": "marketplace-thetanarena-com",
+      "name": "marketplace.thetanarena.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/marketplace.thetanarena.com.png"
+    },
+    {
+      "id": "master-tomochain-com",
+      "name": "master.tomochain.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/master.tomochain.com.png"
+    },
+    {
+      "id": "math-race-win4-fun",
+      "name": "math-race.win4.fun",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/math-race.win4.fun.png"
+    },
+    {
+      "id": "maxbet-pigfarm-io",
+      "name": "maxbet.pigfarm.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/maxbet.pigfarm.io.png"
+    },
+    {
+      "id": "mclaren",
+      "name": "mclaren",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/mclaren.png"
+    },
+    {
+      "id": "megacryptopolis-com",
+      "name": "megacryptopolis.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/megacryptopolis.com.png"
+    },
+    {
+      "id": "member-iotex-io",
+      "name": "member.iotex.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/member.iotex.io.png"
+    },
+    {
+      "id": "membrana-io",
+      "name": "membrana.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/membrana.io.png"
+    },
+    {
+      "id": "meme-market",
+      "name": "meme.market",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/meme.market.png"
+    },
+    {
+      "id": "merlinswap-org",
+      "name": "merlinswap.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/merlinswap.org.png"
+    },
+    {
+      "id": "mobox-io",
+      "name": "mobox.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/mobox.io.png"
+    },
+    {
+      "id": "mooniswap-exchange",
+      "name": "mooniswap.exchange",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/mooniswap.exchange.png"
+    },
+    {
+      "id": "multisender-app",
+      "name": "multisender.app",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/multisender.app.png"
+    },
+    {
+      "id": "multitoken-io",
+      "name": "multitoken.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/multitoken.io.png"
+    },
+    {
+      "id": "mycryptoheroes-net",
+      "name": "mycryptoheroes.net",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/mycryptoheroes.net.png"
+    },
+    {
+      "id": "myriad-markets",
+      "name": "myriad.markets",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/myriad.markets.png"
+    },
+    {
+      "id": "myshell-ai",
+      "name": "myshell.ai",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/myshell.ai.png"
+    },
+    {
+      "id": "mythereum-io",
+      "name": "mythereum.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/mythereum.io.png"
+    },
+    {
+      "id": "namebazaar-io",
+      "name": "namebazaar.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/namebazaar.io.png"
+    },
+    {
+      "id": "nami-trade",
+      "name": "nami.trade",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/nami.trade.png"
+    },
+    {
+      "id": "narwhalswap-org",
+      "name": "narwhalswap.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/narwhalswap.org.png"
+    },
+    {
+      "id": "native-org",
+      "name": "native.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/native.org.png"
+    },
+    {
+      "id": "nestdapp-io",
+      "name": "nestdapp.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/nestdapp.io.png"
+    },
+    {
+      "id": "newlittlerabbit-net",
+      "name": "newlittlerabbit.net",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/newlittlerabbit.net.png"
+    },
+    {
+      "id": "nft-wazirx-org",
+      "name": "nft.wazirx.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/nft.wazirx.org.png"
+    },
+    {
+      "id": "nftb-io",
+      "name": "nftb.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/nftb.io.png"
+    },
+    {
+      "id": "nftoaster-com",
+      "name": "nftoaster.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/nftoaster.com.png"
+    },
+    {
+      "id": "nifty-gallery",
+      "name": "nifty.gallery",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/nifty.gallery.png"
+    },
+    {
+      "id": "nuo-network",
+      "name": "nuo.network",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/nuo.network.png"
+    },
+    {
+      "id": "oasis-app",
+      "name": "oasis.app",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/oasis.app.png"
+    },
+    {
+      "id": "onhexel-com",
+      "name": "onhexel.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/onhexel.com.png"
+    },
+    {
+      "id": "openocean-finance",
+      "name": "openocean.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/openocean.finance.png"
+    },
+    {
+      "id": "opensea-io",
+      "name": "opensea.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/opensea.io.png"
+    },
+    {
+      "id": "orchid-com",
+      "name": "orchid.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/orchid.com.png"
+    },
+    {
+      "id": "p3c-io",
+      "name": "p3c.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/p3c.io.png"
+    },
+    {
+      "id": "pacoca-io",
+      "name": "pacoca.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/pacoca.io.png"
+    },
+    {
+      "id": "pancakeswap-finance",
+      "name": "pancakeswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/pancakeswap.finance.png"
+    },
+    {
+      "id": "pantheon-exchange",
+      "name": "pantheon.exchange",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/pantheon.exchange.png"
+    },
+    {
+      "id": "pay-sablier-finance",
+      "name": "pay.sablier.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/pay.sablier.finance.png"
+    },
+    {
+      "id": "peepeth-com",
+      "name": "peepeth.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/peepeth.com.png"
+    },
+    {
+      "id": "pendle-finance",
+      "name": "pendle.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/pendle.finance.png"
+    },
+    {
+      "id": "phi",
+      "name": "phi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/phi.png"
+    },
+    {
+      "id": "philand-xyz",
+      "name": "philand.xyz",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/philand.xyz.png"
+    },
+    {
+      "id": "phoswap-io",
+      "name": "phoswap.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/phoswap.io.png"
+    },
+    {
+      "id": "pizzafinance-app",
+      "name": "pizzafinance.app",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/pizzafinance.app.png"
+    },
+    {
+      "id": "platform-trustwallet-com",
+      "name": "platform.trustwallet.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/platform.trustwallet.com.png"
+    },
+    {
+      "id": "play-carv-io",
+      "name": "play.carv.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/play.carv.io.png"
+    },
+    {
+      "id": "play-moonpot-com",
+      "name": "play.moonpot.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/play.moonpot.com.png"
+    },
+    {
+      "id": "plex-dharma-io",
+      "name": "plex.dharma.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/plex.dharma.io.png"
+    },
+    {
+      "id": "polygon-info-apeswap-finance",
+      "name": "polygon.info.apeswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/polygon.info.apeswap.finance.png"
+    },
+    {
+      "id": "polymarket-com",
+      "name": "polymarket.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/polymarket.com.png"
+    },
+    {
+      "id": "poocoin-app",
+      "name": "poocoin.app",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/poocoin.app.png"
+    },
+    {
+      "id": "pools-fyi",
+      "name": "pools.fyi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/pools.fyi.png"
+    },
+    {
+      "id": "pooltogether-com",
+      "name": "pooltogether.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/pooltogether.com.png"
+    },
+    {
+      "id": "pooltogether-us",
+      "name": "pooltogether.us",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/pooltogether.us.png"
+    },
+    {
+      "id": "poolx-launchzone-org",
+      "name": "poolx.launchzone.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/poolx.launchzone.org.png"
+    },
+    {
+      "id": "portfolio-defiprime-com",
+      "name": "portfolio.defiprime.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/portfolio.defiprime.com.png"
+    },
+    {
+      "id": "powerpool-finance",
+      "name": "powerpool.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/powerpool.finance.png"
+    },
+    {
+      "id": "prdt-finance",
+      "name": "prdt.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/prdt.finance.png"
+    },
+    {
+      "id": "predict-fun",
+      "name": "predict.fun",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/predict.fun.png"
+    },
+    {
+      "id": "pump-fun",
+      "name": "pump.fun",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/pump.fun.png"
+    },
+    {
+      "id": "quickswap-exchange",
+      "name": "quickswap.exchange",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/quickswap.exchange.png"
+    },
+    {
+      "id": "rango",
+      "name": "rango",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/rango.png"
+    },
+    {
+      "id": "rarebits-io",
+      "name": "rarebits.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/rarebits.io.png"
+    },
+    {
+      "id": "rarible-com",
+      "name": "rarible.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/rarible.com.png"
+    },
+    {
+      "id": "rats",
+      "name": "rats",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/rats.png"
+    },
+    {
+      "id": "raydium-io",
+      "name": "raydium.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/raydium.io.png"
+    },
+    {
+      "id": "relay-radar-tech",
+      "name": "relay.radar.tech",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/relay.radar.tech.png"
+    },
+    {
+      "id": "review-hunt-town",
+      "name": "review.hunt.town",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/review.hunt.town.png"
+    },
+    {
+      "id": "robustswap-com",
+      "name": "robustswap.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/robustswap.com.png"
+    },
+    {
+      "id": "rocketpool-net",
+      "name": "rocketpool.net",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/rocketpool.net.png"
+    },
+    {
+      "id": "saturn-network",
+      "name": "saturn.network",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/saturn.network.png"
+    },
+    {
+      "id": "shiftly-finance",
+      "name": "shiftly.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/shiftly.finance.png"
+    },
+    {
+      "id": "sky-money",
+      "name": "sky.money",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/sky.money.png"
+    },
+    {
+      "id": "slots-spin4-fun",
+      "name": "slots.spin4.fun",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/slots.spin4.fun.png"
+    },
+    {
+      "id": "smartdrops-io",
+      "name": "smartdrops.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/smartdrops.io.png"
+    },
+    {
+      "id": "smartz-io",
+      "name": "smartz.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/smartz.io.png"
+    },
+    {
+      "id": "snark-art",
+      "name": "snark.art",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/snark.art.png"
+    },
+    {
+      "id": "solend-fi",
+      "name": "solend.fi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/solend.fi.png"
+    },
+    {
+      "id": "sorare-com",
+      "name": "sorare.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/sorare.com.png"
+    },
+    {
+      "id": "space-race-win4-fun",
+      "name": "space-race.win4.fun",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/space-race.win4.fun.png"
+    },
+    {
+      "id": "space-tetris-win4-fun",
+      "name": "space-tetris.win4.fun",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/space-tetris.win4.fun.png"
+    },
+    {
+      "id": "spartanswap-org",
+      "name": "spartanswap.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/spartanswap.org.png"
+    },
+    {
+      "id": "spiderdex-com",
+      "name": "spiderdex.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/spiderdex.com.png"
+    },
+    {
+      "id": "squidrouter-com",
+      "name": "squidrouter.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/squidrouter.com.png"
+    },
+    {
+      "id": "staking-thundercore-com",
+      "name": "staking.thundercore.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/staking.thundercore.com.png"
+    },
+    {
+      "id": "stargate-finance",
+      "name": "stargate.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/stargate.finance.png"
+    },
+    {
+      "id": "steemhunt-com",
+      "name": "steemhunt.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/steemhunt.com.png"
+    },
+    {
+      "id": "steemit-com",
+      "name": "steemit.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/steemit.com.png"
+    },
+    {
+      "id": "store-touristoken-com",
+      "name": "store.touristoken.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/store.touristoken.com.png"
+    },
+    {
+      "id": "streetswap-vip",
+      "name": "streetswap.vip",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/streetswap.vip.png"
+    },
+    {
+      "id": "summer-fi",
+      "name": "summer.fi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/summer.fi.png"
+    },
+    {
+      "id": "sundog",
+      "name": "sundog",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/sundog.png"
+    },
+    {
+      "id": "sunpump-meme",
+      "name": "sunpump.meme",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/sunpump.meme.png"
+    },
+    {
+      "id": "surnft-com",
+      "name": "surnft.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/surnft.com.png"
+    },
+    {
+      "id": "sushiswapclassic-org",
+      "name": "sushiswapclassic.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/sushiswapclassic.org.png"
+    },
+    {
+      "id": "swap-cow-fi",
+      "name": "swap.cow.fi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/swap.cow.fi.png"
+    },
+    {
+      "id": "swap-hyperjump-fi",
+      "name": "swap.hyperjump.fi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/swap.hyperjump.fi.png"
+    },
+    {
+      "id": "swapkit-dev",
+      "name": "swapkit.dev",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/swapkit.dev.png"
+    },
+    {
+      "id": "swapliquidity-org",
+      "name": "swapliquidity.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/swapliquidity.org.png"
+    },
+    {
+      "id": "swaps-xyz",
+      "name": "swaps.xyz",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/swaps.xyz.png"
+    },
+    {
+      "id": "swaptoken-app",
+      "name": "swaptoken.app",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/swaptoken.app.png"
+    },
+    {
+      "id": "swaptuna-com",
+      "name": "swaptuna.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/swaptuna.com.png"
+    },
+    {
+      "id": "swapx-launchzone-org",
+      "name": "swapx.launchzone.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/swapx.launchzone.org.png"
+    },
+    {
+      "id": "swft",
+      "name": "swft",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/swft.png"
+    },
+    {
+      "id": "switcheo-exchange",
+      "name": "switcheo.exchange",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/switcheo.exchange.png"
+    },
+    {
+      "id": "t-me-solana-unibot",
+      "name": "t.me:solana_unibot",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/t.me%3Asolana_unibot.png"
+    },
+    {
+      "id": "tesa",
+      "name": "tesa",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tesa.png"
+    },
+    {
+      "id": "thorchain-org",
+      "name": "thorchain.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/thorchain.org.png"
+    },
+    {
+      "id": "token-hunt-town",
+      "name": "token.hunt.town",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/token.hunt.town.png"
+    },
+    {
+      "id": "token-store",
+      "name": "token.store",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/token.store.png"
+    },
+    {
+      "id": "tokenfactory-surge-sh",
+      "name": "tokenfactory.surge.sh",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tokenfactory.surge.sh.png"
+    },
+    {
+      "id": "tokenlon-im",
+      "name": "tokenlon.im",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tokenlon.im.png"
+    },
+    {
+      "id": "tokensets-com",
+      "name": "tokensets.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tokensets.com.png"
+    },
+    {
+      "id": "tokentool-bitbond-com",
+      "name": "tokentool.bitbond.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tokentool.bitbond.com.png"
+    },
+    {
+      "id": "tomoswap-com",
+      "name": "tomoswap.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tomoswap.com.png"
+    },
+    {
+      "id": "tools-crypton-xyz",
+      "name": "tools.crypton.xyz",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tools.crypton.xyz.png"
+    },
+    {
+      "id": "tornado-cash",
+      "name": "tornado.cash",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tornado.cash.png"
+    },
+    {
+      "id": "traderjoexyz-com",
+      "name": "traderjoexyz.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/traderjoexyz.com.png"
+    },
+    {
+      "id": "tranchess-com",
+      "name": "tranchess.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tranchess.com.png"
+    },
+    {
+      "id": "traphouse-vip",
+      "name": "traphouse.vip",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/traphouse.vip.png"
+    },
+    {
+      "id": "trust-logo",
+      "name": "trust.logo",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/trust.logo.png"
+    },
+    {
+      "id": "ttroll-ttmobileapps-com",
+      "name": "ttroll.ttmobileapps.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/ttroll.ttmobileapps.com.png"
+    },
+    {
+      "id": "tw-dicsover-jetton-promo",
+      "name": "tw.dicsover.jetton_promo",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tw.dicsover.jetton_promo.png"
+    },
+    {
+      "id": "tw-discover-meetup",
+      "name": "tw.discover.meetup",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tw.discover.meetup.png"
+    },
+    {
+      "id": "tw-swift-feedback-logo",
+      "name": "tw.swift.feedback_logo",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tw.swift.feedback_logo.png"
+    },
+    {
+      "id": "tw-swift-gas-logo",
+      "name": "tw.swift.gas_logo",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tw.swift.gas_logo.png"
+    },
+    {
+      "id": "tw-swift-passkey-logo",
+      "name": "tw.swift.passkey_logo",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tw.swift.passkey_logo.png"
+    },
+    {
+      "id": "tw-swift-security-logo",
+      "name": "tw.swift.security_logo",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tw.swift.security_logo.png"
+    },
+    {
+      "id": "tw-swift-starte-guide-logo",
+      "name": "tw.swift.starte_guide_logo",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/tw.swift.starte_guide_logo.png"
+    },
+    {
+      "id": "uniswap-exchange",
+      "name": "uniswap.exchange",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/uniswap.exchange.png"
+    },
+    {
+      "id": "uniswap-io",
+      "name": "uniswap.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/uniswap.io.png"
+    },
+    {
+      "id": "v1exchange-pancakeswap-finance",
+      "name": "v1exchange.pancakeswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/v1exchange.pancakeswap.finance.png"
+    },
+    {
+      "id": "v3app-everrise-com",
+      "name": "v3app.everrise.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/v3app.everrise.com.png"
+    },
+    {
+      "id": "veno-finance",
+      "name": "veno.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/veno.finance.png"
+    },
+    {
+      "id": "viewer-tokenscript-org",
+      "name": "viewer.tokenscript.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/viewer.tokenscript.org.png"
+    },
+    {
+      "id": "voting-cafeswap-finance",
+      "name": "voting.cafeswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/voting.cafeswap.finance.png"
+    },
+    {
+      "id": "wallet-mocotoken-io",
+      "name": "wallet.mocotoken.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/wallet.mocotoken.io.png"
+    },
+    {
+      "id": "wardenswap-finance",
+      "name": "wardenswap.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/wardenswap.finance.png"
+    },
+    {
+      "id": "warpcast-com",
+      "name": "warpcast.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/warpcast.com.png"
+    },
+    {
+      "id": "wolfible-com",
+      "name": "wolfible.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/wolfible.com.png"
+    },
+    {
+      "id": "word-race-win4-fun",
+      "name": "word-race.win4.fun",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/word-race.win4.fun.png"
+    },
+    {
+      "id": "www-aialaya-io",
+      "name": "www.aialaya.io:",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.aialaya.io%3A.png"
+    },
+    {
+      "id": "www-alpacafinance-org",
+      "name": "www.alpacafinance.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.alpacafinance.org.png"
+    },
+    {
+      "id": "www-avalonfinance-xyz",
+      "name": "www.avalonfinance.xyz",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.avalonfinance.xyz.png"
+    },
+    {
+      "id": "www-bakeryswap-org",
+      "name": "www.bakeryswap.org",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.bakeryswap.org.png"
+    },
+    {
+      "id": "www-binance-com",
+      "name": "www.binance.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.binance.com.png"
+    },
+    {
+      "id": "www-bonkbot-io",
+      "name": "www.bonkbot.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.bonkbot.io.png"
+    },
+    {
+      "id": "www-circle-com",
+      "name": "www.circle.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.circle.com.png"
+    },
+    {
+      "id": "www-comproi-com",
+      "name": "www.comproi.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.comproi.com.png"
+    },
+    {
+      "id": "www-convexfinance-com",
+      "name": "www.convexfinance.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.convexfinance.com.png"
+    },
+    {
+      "id": "www-crypt-oink-io",
+      "name": "www.crypt-oink.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.crypt-oink.io.png"
+    },
+    {
+      "id": "www-eigenlayer-xyz-png",
+      "name": "www.eigenlayer.xyz:.png",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.eigenlayer.xyz%3A.png.png"
+    },
+    {
+      "id": "www-friend-tech",
+      "name": "www.friend.tech",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.friend.tech.png"
+    },
+    {
+      "id": "www-galler-io",
+      "name": "www.galler.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.galler.io.png"
+    },
+    {
+      "id": "www-google-com",
+      "name": "www.google.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.google.com.png"
+    },
+    {
+      "id": "www-helmet-insure",
+      "name": "www.helmet.insure",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.helmet.insure.png"
+    },
+    {
+      "id": "www-holoworldai-com",
+      "name": "www.holoworldai.com:",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.holoworldai.com%3A.png"
+    },
+    {
+      "id": "www-jito-network",
+      "name": "www.jito.network",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.jito.network.png"
+    },
+    {
+      "id": "www-kiloex-io",
+      "name": "www.kiloex.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.kiloex.io.png"
+    },
+    {
+      "id": "www-maestrobots-com",
+      "name": "www.maestrobots.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.maestrobots.com.png"
+    },
+    {
+      "id": "www-nightcrows-com",
+      "name": "www.nightcrows.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.nightcrows.com.png"
+    },
+    {
+      "id": "www-orca-so",
+      "name": "www.orca.so",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.orca.so.png"
+    },
+    {
+      "id": "www-pixels-xyz",
+      "name": "www.pixels.xyz",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.pixels.xyz.png"
+    },
+    {
+      "id": "www-playbux-co",
+      "name": "www.playbux.co",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.playbux.co.png"
+    },
+    {
+      "id": "www-renzoprotocol-com",
+      "name": "www.renzoprotocol.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.renzoprotocol.com.png"
+    },
+    {
+      "id": "www-silentswap-com",
+      "name": "www.silentswap.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.silentswap.com.png"
+    },
+    {
+      "id": "www-solchat-app",
+      "name": "www.solchat.app",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.solchat.app.png"
+    },
+    {
+      "id": "www-spark-fi",
+      "name": "www.spark.fi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.spark.fi.png"
+    },
+    {
+      "id": "www-staderlabs-com",
+      "name": "www.staderlabs.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.staderlabs.com.png"
+    },
+    {
+      "id": "www-synapseprotocol-com",
+      "name": "www.synapseprotocol.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.synapseprotocol.com.png"
+    },
+    {
+      "id": "www-worldofdypians-com",
+      "name": "www.worldofdypians.com",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/www.worldofdypians.com.png"
+    },
+    {
+      "id": "xank-io",
+      "name": "xank.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/xank.io.png"
+    },
+    {
+      "id": "yearn-finance",
+      "name": "yearn.finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/yearn.finance.png"
+    },
+    {
+      "id": "yieldwatch-net",
+      "name": "yieldwatch.net",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/yieldwatch.net.png"
+    },
+    {
+      "id": "yticons-co",
+      "name": "yticons.co",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/yticons.co.png"
+    },
+    {
+      "id": "zed-run",
+      "name": "zed.run",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/zed.run.png"
+    },
+    {
+      "id": "zerion-io",
+      "name": "zerion.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/zerion.io.png"
+    },
+    {
+      "id": "zerolend-xyz",
+      "name": "zerolend.xyz",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/dapps/zerolend.xyz.png"
+    }
+  ]
+}

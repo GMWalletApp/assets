@@ -18,7 +18,9 @@ validators_settings:
     allowed_files:
       - ".github"
       - "blockchains"
+      - "data"
       - "dapps"
+      - "extensions"
       - "media"
       - "node_modules"
       - "script-old"
@@ -41,6 +43,7 @@ validators_settings:
       - ".golangci.yml"
       - "Makefile"
       - "bin"
+      - "support"
     skip_files:
       - "node_modules"
     skip_dirs:

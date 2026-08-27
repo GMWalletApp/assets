@@ -1,0 +1,28 @@
+{
+  "wallets": [
+    {
+      "id": "okpay",
+      "name": "OKPay",
+      "logoPath": "wallets/okpay/logo.svg"
+    },
+    {
+      "id": "tronlink",
+      "name": "TronLink",
+      "logoPath": "wallets/tronlink/logo.svg"
+    }
+  ],
+  "exchanges": [
+    {
+      "id": "bitfinex",
+      "name": "Bitfinex",
+      "type": "cex",
+      "logoPath": "exchanges/bitfinex/logo.svg"
+    },
+    {
+      "id": "exodus",
+      "name": "Exodus",
+      "type": "cex",
+      "logoPath": "exchanges/exodus/logo.svg"
+    }
+  ]
+}

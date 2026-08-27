@@ -3,10 +3,10 @@ name: Check
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 jobs:
@@ -20,6 +20,22 @@ jobs:
 
       - name: Check out code
         uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install Zstd
+        run: sudo apt-get update && sudo apt-get install -y zstd
+
+      - name: Validate support catalogs
+        run: |
+          python support/sync_support.py --validate-output
+          zstd --test support/support.json.zst
+          zstd --test support/dapps.json.zst
+          cmp support/support.json <(zstd --decompress --stdout support/support.json.zst)
+          cmp support/dapps.json <(zstd --decompress --stdout support/dapps.json.zst)
 
       - name: Run check
         run: make check

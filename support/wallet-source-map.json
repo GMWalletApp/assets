@@ -1,0 +1,2014 @@
+{
+  "schemaVersion": 1,
+  "wallets": {
+    "1inch-wallet": {
+      "walletConnectId": "c286eebc742a537cd1d6818363e9dc53b21759a1e8e5d9b263d0c03ec7703576"
+    },
+    "37x": {
+      "walletConnectId": "0a418f1b991744b9e77ed957b8f809e11d19201d49a2a476816c13a22420ec4c"
+    },
+    "3s-wallet": {
+      "walletConnectId": "6d1d5b892e02d4c992ae67f18f522398481360c64269f5cdf5e4b80435b20e3d"
+    },
+    "88wallet": {
+      "walletConnectId": "ffd38ccd0e31fcdeb222359b0261a0c922c3a7d8ad00531f50f3ad8b93e46e15"
+    },
+    "a4-wallet": {
+      "walletConnectId": "63076bf87200069fa799f5c75c578ff963e0a6c23489b65cc8721d3cbc7ad5e2"
+    },
+    "ab-pay": {
+      "walletConnectId": "c36b25db7e48aa7ca19acbae35f79d6486b694f4d12def467592daa78c4cd5b7"
+    },
+    "abc-wallet": {
+      "walletConnectId": "b956da9052132e3dabdcd78feb596d5194c99b7345d8c4bd7a47cabdcb69a25f"
+    },
+    "abra-wallet": {
+      "walletConnectId": "c8c8f44329b9b826ded9a2ac330745f584a61aed6b1d0ed2a093b64bca7fc3bb"
+    },
+    "absolute-wallet": {
+      "walletConnectId": "bfa6967fd05add7bb2b19a442ac37cedb6a6b854483729194f5d7185272c5594"
+    },
+    "abstract": {
+      "walletConnectId": "26d3d9e7224a1eb49089aa5f03fb9f3b883e04050404594d980d4e1e74e1dbea"
+    },
+    "adf-wallet": {
+      "walletConnectId": "4f854044eea00196b92017037b384bf16118c6606b3a90c60e998af1fb2c01b0"
+    },
+    "airgap-wallet": {
+      "walletConnectId": "a0718f5fb1493e4aaac72cff62d162cb85db40ed68fd8700298f36f1d5c4b73d"
+    },
+    "aktionariat-wallet": {
+      "walletConnectId": "6b16d70ace02b208c67e06ad00ed8110f46e91cc075e0fd98c68b825587d4076"
+    },
+    "alephium-wallet": {
+      "walletConnectId": "4b3713c23d5b38f8ae42e0682e81b1286828b0b48ad2e983ba5b928b47f937f4"
+    },
+    "alfa1": {
+      "web3iconsId": "alfa1"
+    },
+    "alicebob-wallet": {
+      "walletConnectId": "d50cc807305f886f712206c9a8a7e47a776a266a7367bc080fe8ce939fcfa2b8"
+    },
+    "alpha-wallet": {
+      "web3iconsId": "alpha-wallet",
+      "walletConnectId": "138f51c8d00ac7b9ac9d8dc75344d096a7dfe370a568aa167eabc0a21830ed98"
+    },
+    "altme": {
+      "walletConnectId": "94135dbd7aaca4908de49c44e49b8920a79c90164a7ce5803ddb33054c7edc57"
+    },
+    "amazewallet": {
+      "walletConnectId": "5d12c54d33abc6af163bc0344eed8df90765281c4973ada8863ed9ae12aa137f"
+    },
+    "ambire": {
+      "web3iconsId": "ambire"
+    },
+    "ammer-wallet": {
+      "walletConnectId": "541517cf964687d18414ff05d2623b9c0a122a7a06ac5a5702fd92c4f2b87b1c"
+    },
+    "anchorage-digital": {
+      "walletConnectId": "82e648053152b18d863d85a467c0ba20bde86e892eb6189e47e260bb78c1e653"
+    },
+    "ancrypto-wallet": {
+      "walletConnectId": "c29c9237e92bc18e141e52aba3aa6d04b1afbe9952a0ab2f96dbd8653645c1df"
+    },
+    "anybit": {
+      "walletConnectId": "fd69c39a6ef4fbc717171573441c3b70fbedf73b6f6bc9aa79aa4d94d44a221f"
+    },
+    "ape-wallet": {
+      "walletConnectId": "63f5b2024d710b30f7cec57fb8312f4261a67074dc5043c50f2d59f4d982141a"
+    },
+    "apollox": {
+      "walletConnectId": "21b071705a9b9de1646e6a3a0e894d807d0fa4a208e88fc003ee056021f208e1"
+    },
+    "arca-wallet": {
+      "walletConnectId": "6b770c4a0f80472198b577981710f29e5a2d52d6f64af616b49aeea8e1b7cabf"
+    },
+    "arculus-wallet": {
+      "walletConnectId": "0e4915107da5b3408b38e248f7a710f4529d54cd30e9d12ff0eb886d45c18e92"
+    },
+    "argent": {
+      "web3iconsId": "argent"
+    },
+    "argent-bc949c5d": {
+      "walletConnectId": "bc949c5d968ae81310268bf9193f9c9fb7bb4e1283e1284af8f2bd4992535fd6"
+    },
+    "arianee-wallet": {
+      "walletConnectId": "c6f3d04a4e1a51e7d2045f347a5ebdab30fc600950a740fca21f0c92e230ee05"
+    },
+    "arianee-wallet-dbb64ad8": {
+      "walletConnectId": "dbb64ad8f55b4ed333d909a6d53670cf97d136c22eb1dca800c539ecea165a53"
+    },
+    "asigna": {
+      "walletConnectId": "4fb3b9f8b8becc061955b6ccb24f09edb994ab649a43c04f5e5de51d4c16980c"
+    },
+    "assetguard": {
+      "walletConnectId": "366723874f620ef75a1eae9beedb9bf11ee85b2aaf928d53a42d83b52026bf35"
+    },
+    "assure": {
+      "walletConnectId": "792fbacfe787d67595dd4eb38ac308e14b3bbc810393db56f477a92e5ac8764b"
+    },
+    "at-wallet": {
+      "walletConnectId": "aa01d13483db4c065b7a619b813f9eae1cb60c19bf0fc0ed3c36444a07257bd0"
+    },
+    "atom-wallets": {
+      "walletConnectId": "f8ab37d6a2194f367aff64b5363cf5cd1ec9422237d662597fdfb488aad1089a"
+    },
+    "atomic": {
+      "web3iconsId": "atomic"
+    },
+    "atomic-wallet": {
+      "walletConnectId": "380efff687c7d2222d62378c588d45d2e0ff40a0fc4d8f778c4d6fbe58cec5ed"
+    },
+    "aton": {
+      "walletConnectId": "631c29ea78dabcfd0addef077c496b18689c7c8ac8a6643e3bef93555a8555f9"
+    },
+    "auraspay": {
+      "walletConnectId": "32f356ddf5d2e2f52513cfb84fc78a954e7f130eb53cc1405b9da84bce4c4b51"
+    },
+    "aurora-pass": {
+      "walletConnectId": "76260019aec5a3c44dd2421bf78e80f71a6c090d932c413a287193ed79450694"
+    },
+    "avacus": {
+      "walletConnectId": "94f785c0c8fb8c4f38cd9cd704416430bcaa2137f27e1468782d624bcd155a43"
+    },
+    "azcoiner": {
+      "walletConnectId": "60ce5c2246a0808b32dd4eab598435e1c5bd122cc3e9fab7b0542871ac2a35c7"
+    },
+    "backpack": {
+      "web3iconsId": "backpack",
+      "walletConnectId": "2bd8c14e035c2d48f184aaa168559e86b0e3433228d3c4075900a221785019b0"
+    },
+    "ballet-crypto": {
+      "walletConnectId": "584538f059b079deecc80dface062cf40c33afd45dca02c7edca134a8225556d"
+    },
+    "ballet-crypto-6bd4cf3f": {
+      "walletConnectId": "6bd4cf3fa61dafe9088f9e93e5d1178c7e792fe349489d9a8141cf4354359712"
+    },
+    "banksocial": {
+      "walletConnectId": "0d0972488cb7fc332af5ac3be6b679a1699518ab4d0048d74cb9b4268ec0263a"
+    },
+    "base-formerly-coinbase-wallet": {
+      "walletConnectId": "fd20dc426fb37566d803205b19bbc1d4096b248ac04548e3cfb6b3a38bd033aa"
+    },
+    "bc-vault": {
+      "walletConnectId": "4b2604c8e0f5022d0fbfbc67685dd5e87426bbfe514eebcce6c5f3638f2e1d81"
+    },
+    "bcertin-wallet": {
+      "walletConnectId": "08739356e3fc0efd9498696b7831e8b42b0ad7390af663cd3ba3c30866195b34"
+    },
+    "beeswarm-wallet": {
+      "walletConnectId": "affe4c398336e3beed116368a59b148f3a0a364fdc2e3360b5d946e1394fd622"
+    },
+    "beewallet": {
+      "walletConnectId": "e1882224c4c09a84575c533867d434267c46384f5a365b889605d28b061747c4"
+    },
+    "berasig": {
+      "walletConnectId": "01b3720ae82d5aed3de295e3b7b226a75f8c22bdf823c47f57981bb791dd5850"
+    },
+    "berasig-6bcc24f8": {
+      "walletConnectId": "6bcc24f8df8da9989d3071732e79ced3ef75d405d4aab2af8f198105e03aace1"
+    },
+    "best-wallet": {
+      "walletConnectId": "fe68cea63541aa53ce020de7398968566dfe8f3725663a564cac89490247ed49"
+    },
+    "bexo": {
+      "walletConnectId": "f6488493aa7713ec6f915ebe80070d7a4dd17da9d162d72f53117cc4f230bd75"
+    },
+    "bharatbox-app": {
+      "walletConnectId": "4eca426b5c9debee28d1954b646c1a2bc79582c3c2b7e6da79ebc4ad460d8b75"
+    },
+    "bifrost-wallet": {
+      "walletConnectId": "37a686ab6223cd42e2886ed6e5477fce100a4fb565dcd57ed4f81f7c12e93053"
+    },
+    "billion": {
+      "walletConnectId": "34af9f895e03259fb008e8ff4ea5ca5d75fcfcb606ec563c332004f39ab47803"
+    },
+    "bim-wallet": {
+      "walletConnectId": "e870e3dc750305af6a6bd7139538a85362963a8e21b6c6e0f9e27d80b92801c9"
+    },
+    "binance-us-wallet": {
+      "walletConnectId": "339bf62ce7500206b17f7b9d370dd7fabf0efe62518f29b656415528d8b1f763"
+    },
+    "binance-wallet": {
+      "walletConnectId": "8a0ee50d1f22f6651afcae7eb4253e52a3310b90af5daef78a8c4929a9bb99d4"
+    },
+    "binance-wallet-bitcoin": {
+      "walletConnectId": "2fafea35bb471d22889ccb49c08d99dd0a18a37982602c33f696a5723934ba25"
+    },
+    "binox-wallet": {
+      "walletConnectId": "21cb3fe9675909aede5dbf4c27f654c0c66d8fb1272f497adb0f12ed01b0a599"
+    },
+    "bitbox": {
+      "web3iconsId": "bitbox",
+      "walletConnectId": "f1f4ce9c495cb3db6862230ad961edca8563bf85c245bd774d4d78b7de884641"
+    },
+    "bitcoin-com-wallet": {
+      "walletConnectId": "107bb20463699c4e614d3a2fb7b961e66f48774cb8f6d6c1aee789853280972c"
+    },
+    "bitdog-wallet": {
+      "walletConnectId": "b7e38da65a3a7c01c9f18c896407f9d8ee0252ab65b26a564405d846b8b8b15d"
+    },
+    "bitget-wallet": {
+      "walletConnectId": "38f5d18bd8522c244bdd70cb4a68e0e718865155811c043f052fb9f1c51de662"
+    },
+    "bitget-wallet-lite": {
+      "walletConnectId": "21c3a371f72f0057186082edb2ddd43566f7e908508ac3e85373c6d1966ed614"
+    },
+    "bitizen": {
+      "walletConnectId": "41f20106359ff63cf732adf1f7dc1a157176c9b02fd266b50da6dcc1e9b86071"
+    },
+    "bitnovo-wallet": {
+      "walletConnectId": "ee789e749e9af71b1a57a78d9066085d1da1eedbcfd221100963f10cc8452cd6"
+    },
+    "bitpay-wallet": {
+      "walletConnectId": "b4678fefcc469583ed4ef58a5bd90ce86208b82803f3c45f2de3e0973d268835"
+    },
+    "bitpie": {
+      "walletConnectId": "1531a2c7dd4506df2ec8660da31c7d4a5f3c9ebbc121c7996c688e12a097f26b"
+    },
+    "bitski": {
+      "walletConnectId": "3b9f67c2c0887f71e4f9ba1bd2bf5b4eb6cda94419abd3f0c5c12931a60928b0"
+    },
+    "bitso-web3-wallet": {
+      "walletConnectId": "372945354184bfbf3eb51e38d8fafde15a4bc11b88904334e7bad7c8229e6bb1"
+    },
+    "bitverse": {
+      "walletConnectId": "e6db14424618cf309697eb50dc330ec18b0ad63395f5ac4669233716df5c18be"
+    },
+    "bitwinex": {
+      "walletConnectId": "9f14837e4392582c3974613ed8e1acc7ed84b2ae3910ad27cb9542a3758df800"
+    },
+    "blackfort-wallet": {
+      "walletConnectId": "19c54e02e79e8628512fae334d6dbbac7e2e8b53848a68a06191f3769ede92ff"
+    },
+    "blade-wallet": {
+      "walletConnectId": "a9104b630bac1929ad9ac2a73a17ed4beead1889341f307bff502f89b46c8501"
+    },
+    "blanq": {
+      "walletConnectId": "c3d4800aeb5eb7b00dd5e97247993461df84e6630cc3a89bdf2ca522f0ec07d1"
+    },
+    "blazpay": {
+      "walletConnectId": "d609b0824ea9a456a469c86cc2daffe422681e6b6046a2cc65405067b7a4e221"
+    },
+    "blockaura": {
+      "walletConnectId": "6342f00659512c995c5b271236fbe8e8c86951bd94f533fa0237d2a3e606c4da"
+    },
+    "blockchain-com": {
+      "walletConnectId": "84b43e8ddfcd18e5fcb5d21e7277733f9cccef76f7d92c836d0e481db0c70c04"
+    },
+    "blockwallet": {
+      "walletConnectId": "1aa28414c95f5024133faf5766d376bb9c853c280d158cd3e22dc2b7b0a95a2d"
+    },
+    "blocto": {
+      "walletConnectId": "14e7176536cb3706e221daaa3cfd7b88b7da8c7dfb64d1d241044164802c6bdd"
+    },
+    "blofin-wallet": {
+      "walletConnectId": "9207486640ccbe5641b581b9c63d14f9dfdc446b6039a8d22935adb364d6d0a7"
+    },
+    "bloom": {
+      "walletConnectId": "12ffbeb52b37f08bd8224a50e1cd2173286bf432832579861a5480bd662e349d"
+    },
+    "blue": {
+      "web3iconsId": "blue"
+    },
+    "bonuz-social-wallet": {
+      "walletConnectId": "2c5b687e9f6ce2b5d53541ffdf6aa23d7f645c57dc553dbabd465471c1347689"
+    },
+    "brave-wallet": {
+      "walletConnectId": "163d2cf19babf05eb8962e9748f9ebe613ed52ebf9c8107c9a0f104bfcf161b3"
+    },
+    "bridge-wallet": {
+      "walletConnectId": "2b858484a62504879b7a760a0e62136616b9fdeb53b72f0ba1ab9ded3ffd78c5"
+    },
+    "brise-wallet": {
+      "walletConnectId": "f2dcbeb246b4e4d37d748a7b2be54bbd93bdbe3e351d0badc1cbd3ea262d8466"
+    },
+    "broearn-wallet": {
+      "walletConnectId": "8ff6eccefefa7506339201bc33346f92a43118d6ff7d6e71d499d8187a1c56a2"
+    },
+    "bron": {
+      "walletConnectId": "d757db40fd0987092673c8c4f33398ac48bb52aa12abb027a652fb4c50b2dce0"
+    },
+    "bsc-wallet": {
+      "walletConnectId": "53a2e01781ee6c0d841e6c844f2733899b8f4082a1452986d87a550800aa13ca"
+    },
+    "burrito": {
+      "walletConnectId": "8821748c25de9dbc4f72a691b25a6ddad9d7df12fa23333fd9c8b5fdc14cc819"
+    },
+    "buzzup": {
+      "walletConnectId": "4972842b1c1a3552831f7c29ec53229d1ce00b4d43988a262c59d26dae0627d7"
+    },
+    "bybit-wallet": {
+      "walletConnectId": "15c8b91ade1a4e58f3ce4e7a0dd7f42b47db0c8df7e0d84f63eb39bcb96c4e0f"
+    },
+    "bytebank": {
+      "walletConnectId": "7468ebbf5e14bd146c4fa12a08fb1a0d8d9af3b66409a5b682b64cffc4f21919"
+    },
+    "caesium": {
+      "walletConnectId": "9aa288a4c66884bec28af54056921660ebde9debd848ef03902363ed534c96d4"
+    },
+    "cake-wallet": {
+      "walletConnectId": "32caff85195f843b19e79669e63bf3f4ad97b23b3a48b65b3781c0d193a3fcae"
+    },
+    "campux-digital": {
+      "walletConnectId": "deb700f0ebe34fd6c25a937629949b3c4c6c9dafdf87056190e985f189b691d2"
+    },
+    "canton-wallet-by-send": {
+      "walletConnectId": "5a13f02db8d92cbd61e1aae1846cfa7f9b64ebeb9234f038d28bda47a781d497"
+    },
+    "card-wallet": {
+      "walletConnectId": "11c5487e4d8dd8bf32d4c92222363df8296a27307b2531be1e25770365392ecb"
+    },
+    "catecoin-wallet": {
+      "walletConnectId": "0e9aa50bb3211c93ab48626d53dd631518e33b1eb6cf88638a83e2a0a377e3d0"
+    },
+    "certhis": {
+      "walletConnectId": "c733d32f3b974c4a96e0cd5a3b6f7e186e2f6379182ac6640fdbab4f9ef489b0"
+    },
+    "cfcx": {
+      "walletConnectId": "39f230db1d706c54b139aa79cdf1e7f1b0dee05d61ecc7a1b4f8d86c1a10354c"
+    },
+    "chain": {
+      "walletConnectId": "70d09ca3f616bcb1488542830055ec82d270ce17986a97b1f72f15a6af9f0b3f"
+    },
+    "ciphertrade": {
+      "walletConnectId": "e86b5fc56c3661726248a7a3f99fae68dca0cc7fa503e2ce96c1873973fea3f5"
+    },
+    "clave": {
+      "web3iconsId": "clave",
+      "walletConnectId": "8ece0bce3a95db74077d7861f7767770af5e5746c3af011e4eec7e3d2efe2be4"
+    },
+    "clear-wallet": {
+      "walletConnectId": "744561787f6414cb71b9704ed4715f9e0607f274b722640d3a9ecc836cb2eb37"
+    },
+    "clot": {
+      "walletConnectId": "8a0153a6a099bb8dbacd0300327cd2e6c89502c4bb76ccba2eb568dd56c155a6"
+    },
+    "cobalt-wallet": {
+      "walletConnectId": "ff97af0ad5fca162553ebbd76f2564b7f7b04569c131e972b75bbff2dc13c1a9"
+    },
+    "coca-wallet": {
+      "walletConnectId": "34fca0f0eaa51af856cc7f205bacc36ede45545fa987fd81274e53db7718a183"
+    },
+    "cogni": {
+      "walletConnectId": "8bee2c65ad37240fab769ff3c9f56f94914e53c8d99087e1a805cc5ef39a44f3"
+    },
+    "coin-wallet": {
+      "walletConnectId": "f384f4e9274c6e15ee1fd6f96a00ae22bb7de0053df8fbd3fcf0457de480be96"
+    },
+    "coin98": {
+      "web3iconsId": "coin98"
+    },
+    "coin98-super-wallet": {
+      "walletConnectId": "2a3c89040ac3b723a1972a33a125b1db11e258a6975d3a61252cd64e6ea5ea01"
+    },
+    "coinbase": {
+      "web3iconsId": "coinbase",
+      "walletConnectId": "d0ca99ff52b99abc48743dad0f7fc891e041be73574f7fac4afe5d4bb83845c8"
+    },
+    "coincircle": {
+      "walletConnectId": "36d8d9c0c7fe2957149ce8e878f3a01a8611521983362d9b651fb6e508325583"
+    },
+    "coinex-wallet": {
+      "walletConnectId": "4a4d5b02a47ef7f7162da22983431ee1cf8392a8d4929ed8c69d2759b24e17f0"
+    },
+    "coingrig": {
+      "walletConnectId": "5859076ade608fbc4e9d3fe2f95e8527de80f8451ecbb1dced54ca84deae0dd6"
+    },
+    "coinomi": {
+      "walletConnectId": "15d7610042217f691385d20e640869dc7273e991b04e8f476417cdc5ec856955"
+    },
+    "coinstats": {
+      "walletConnectId": "bcaec16e531fb5f6dc690d7b70d570421e0209af9a0fe77c6419d516fe0098c2"
+    },
+    "coinwallet": {
+      "walletConnectId": "2ba89f94faff121a7c1091c3cea124167dc4291ebe87123620c66e0f120197cc"
+    },
+    "cold-wallet": {
+      "walletConnectId": "dd15a3530dc4de4c50ebb22010824c41337403efec713f1187695c72934fb94c"
+    },
+    "compass-wallet": {
+      "walletConnectId": "123e6d19e6c0f575b148c469eb191f8b92618c13c94c4758aee35e042e37fa21"
+    },
+    "concordium": {
+      "walletConnectId": "7dcb0e5eb1b4fc6e2e0b143201c489ea6c618259f49527527d4a349d1a95ba7b"
+    },
+    "coolwallet": {
+      "walletConnectId": "1f69170bf7a9bdcf89403ec012659b7124e158f925cdd4a2be49274c24cf5e5d"
+    },
+    "core": {
+      "walletConnectId": "f323633c1f67055a45aac84e321af6ffe46322da677ffdd32f9bc1e33bafe29c"
+    },
+    "cornwallet": {
+      "walletConnectId": "62bc9f93a77fbf6e807ea2a3a4aab0ca2e942f7e5bf28d10dbb158b2f203805e"
+    },
+    "cosine-wallet": {
+      "walletConnectId": "55f4872b498731cab13f104e8aa0ff987060b1eb7859521afd6627ae87b88491"
+    },
+    "cosmostation": {
+      "walletConnectId": "feb6ff1fb426db18110f5a80c7adbde846d0a7e96b2bc53af4b73aaf32552bea"
+    },
+    "credit-wallet": {
+      "walletConnectId": "ce02f1ae74686234eabfa7d31876c442779b730dfe7924a3ca0e6559a7afa30f"
+    },
+    "crossmint": {
+      "walletConnectId": "87eecbca66faef32f044fc7c66090fc668efb02e2d17dda7bf095d51dff76659"
+    },
+    "cryptic": {
+      "walletConnectId": "594898896007b2e49d4064043871093620867d18cae558ce9782ad1303f371e6"
+    },
+    "cryptnox-bridge": {
+      "walletConnectId": "b7602b27efd93fafecb53a806cd74d65fdfb8548b76d028339569a37aee012c0"
+    },
+    "cryptnox-wallet": {
+      "walletConnectId": "bae2ab14ef450f307f24a395a3c2766a2ef8a9c0e61856985d23f6445e8db03f"
+    },
+    "crypto-com-onchain": {
+      "walletConnectId": "f2436c67184f158d1beda5df53298ee84abfc367581e4505134b5bcf5f46697d"
+    },
+    "cryptokara": {
+      "walletConnectId": "45aa096282002911a77c9e1dba16dade905960e6386e681c2f8d7966f4e475b1"
+    },
+    "cvl-wallet": {
+      "walletConnectId": "835dc63f69f65113220e700112363fef2a5f1d72d6c0eef4f2c7dc66bf64b955"
+    },
+    "cyberwallet": {
+      "walletConnectId": "ce216ac7310971159adda1ac271fc6e6590d2c02da43b894ac11919084196e40"
+    },
+    "cyper": {
+      "walletConnectId": "71719738d0ed2eaba05884b7acb3582f99f224cef9385e4dd5bab1fcd1229cea"
+    },
+    "cypher-wallet": {
+      "walletConnectId": "44ca80bba6838e116e8d0a2c1a1f37041ea322379cc65a71479b6a240b6fcab2"
+    },
+    "cypherock": {
+      "web3iconsId": "cypherock"
+    },
+    "cypherock-cysync": {
+      "walletConnectId": "058e750fda11f3a5a46b3ae90cd413fc2a4e5b8679a3c01e9a640fcc756a0167"
+    },
+    "d-cent-wallet": {
+      "walletConnectId": "a1f506a38f39b672b369bd13b68abbbd81f83a0489e6625f2bf12aa0389c22ae"
+    },
+    "daffione": {
+      "walletConnectId": "078d94b4c8706e12fe379e85242ce963380acfd678518e2d8ea73ee532d9bacc"
+    },
+    "daily-wallet": {
+      "walletConnectId": "bf842c1e1e729282583c4c53d5cd6bb01d7685ae8361fa20bdfa9a843ad2e46f"
+    },
+    "daimo": {
+      "web3iconsId": "daimo"
+    },
+    "darts-wallet": {
+      "walletConnectId": "a1e14da3dc168e3c5632e7c4ff82ca1e1c941674e6a295a55849d8da14a304e2"
+    },
+    "dawn-wallet": {
+      "walletConnectId": "647ced4fad747a3a613abfe160fed7deb4e85d8623ac9329e94b24dd0d86bf00"
+    },
+    "debox-wallet": {
+      "walletConnectId": "9a8f7601d24db36d0cc82df4b7adc11eb80451b2f651bf203b4e2f8696f16586"
+    },
+    "defiant": {
+      "walletConnectId": "1986e7c874bb906f057d5d64a4806c004e021689536e5228c74d64a6058e8bac"
+    },
+    "deficloud": {
+      "walletConnectId": "de0876834d89cfbc7d50c9082727480c784c33ec559349b0541c452cd9e10ed0"
+    },
+    "dexari": {
+      "walletConnectId": "063c520962a445617ad3fc9ccb9744c81104dd11e34e3d61c6a6a42cc0a6beb3"
+    },
+    "dextrade": {
+      "walletConnectId": "984e44f2d80a93c0febf58d9ca396b5817151fc075f09333a3d387c981f75f2c"
+    },
+    "dfinn-wallet": {
+      "walletConnectId": "7e6f68b033a19fd6c2999598f9791e24014f9870c626901d254da50660fda578"
+    },
+    "dfns": {
+      "walletConnectId": "c2abb16cfd3701f087433a81a0628499e19150b5498664aa73b06df2899d9d20"
+    },
+    "dgg-wallet": {
+      "walletConnectId": "221eb19f9cfdf577c2f75190fc4fa24523624f604904ced78089bc82ebdb983e"
+    },
+    "diam-wallet": {
+      "walletConnectId": "78a926e8758e4464162818353637b11fead41489598dd7f47e4b247eaf8008c3"
+    },
+    "didwallet": {
+      "walletConnectId": "a93e0fd6a25178b2fa80eb882150f6b8da53c1e9f3e6d0d92019076671bb07f0"
+    },
+    "digital-shield": {
+      "walletConnectId": "6ccad459120e00737c6001a576e62867ea68b74388278de2c62deddc86f356f6"
+    },
+    "dlicom": {
+      "walletConnectId": "71ba37d08c477ba46d681022a574544b742f66fbe51383b422a916456960c123"
+    },
+    "dmtoken": {
+      "walletConnectId": "01d3eae656238d3b3354a995228f8461446e0d701eb15fd71feb34afd98c3b10"
+    },
+    "dohrnii-wallet": {
+      "walletConnectId": "e2c884737858154c28ff2c543f96331f8987f58734a9c9eaff6d2daef8cd2917"
+    },
+    "dokwallet": {
+      "walletConnectId": "a77eaf6509774b780b22f678fa15168c4e12f71f7eb3102edf85112a222bb503"
+    },
+    "dollet": {
+      "walletConnectId": "2a40b26b3a69de566720e8e5134aaa8cf767b14d66fa8e27faca971984a6a545"
+    },
+    "domawallet": {
+      "walletConnectId": "a2f18257975707ca7dd59322fdcc3ea0282badec2363e0a1db6901e3262856fa"
+    },
+    "dosi-vault": {
+      "walletConnectId": "394046500fb52c9e57e0091ef30305d513bcae143132a49c1f2a69b594126001"
+    },
+    "dropmate": {
+      "walletConnectId": "c7a7721cf4b6deb311e9b2e4bc2ebf07ef05d818149fd373bfb785fa47088823"
+    },
+    "dropp": {
+      "walletConnectId": "303766b6cc6768b384c84d63a02c5f302e1faa1c8d26a624623060316fc1f68c"
+    },
+    "dropp-d944b6d9": {
+      "walletConnectId": "d944b6d967e089c6642410e09dccc0e8ca3e2fa521ccae29e61d47cd3d7b9777"
+    },
+    "ds-security-sa": {
+      "walletConnectId": "c299d20788465854615bc197864027625c71f8f4735fdb3e210636d1bd1e1935"
+    },
+    "dttd": {
+      "walletConnectId": "c4a289db34ed1b8e29d7e87a2e97c236bb82d72d60c8d73e27e02769facabd4a"
+    },
+    "dynamic": {
+      "walletConnectId": "c934a849294b527a83d726ab792f1299630242256c338fc2ce666e12ae18d82e"
+    },
+    "earth-wallet": {
+      "walletConnectId": "53dd23581ff2ac3473a517c2995ad41cb214e105ebc99a122bda032051bb54c6"
+    },
+    "echooo-wallet": {
+      "walletConnectId": "5fb52d5d1316eb09e2a3f7e6e3620e5e78450f3107684166ef7ee36459ebc09c"
+    },
+    "ecoin-wallet": {
+      "walletConnectId": "297bf3864322ce81262df9a40b9a0fdcb504e737ad900bfe8ef47710729456ce"
+    },
+    "edge": {
+      "walletConnectId": "7faed13451e675679e2af297c492914ee4fda540fc82d2993a91e1d73c64d96b"
+    },
+    "edge-wallet": {
+      "walletConnectId": "0c5bba82e70a2b62405871af809020a077d110d765c0798eb660ad5d3131b328"
+    },
+    "elastos-essentials": {
+      "walletConnectId": "035ded0f263e4a64bf2c84db06b73e6b4c5115929ea407cc2a3127ee6f392e0e"
+    },
+    "ellipal": {
+      "walletConnectId": "fe9127f49fd95e20e6d877d0e224da6a75062f52d8fb9784856a5cb7ef39e9d2"
+    },
+    "enjin-wallet": {
+      "walletConnectId": "bdc9433ffdaee55d31737d83b931caa1f17e30666f5b8e03eea794bac960eb4a"
+    },
+    "enkrypt": {
+      "web3iconsId": "enkrypt",
+      "walletConnectId": "fb6ed96272ec885008e896c6146002048d8dc88c0b7e0e6fa42bcadf052a1569"
+    },
+    "enno-wallet": {
+      "walletConnectId": "add46dfc2dc09c855fc8c14d950353528e184a8f4346886129c990074450ae9c"
+    },
+    "essentials": {
+      "walletConnectId": "022e8ff84519e427bff394b3a58308bc9838196a8efb45158da0ab7c3228abfb"
+    },
+    "eth-q1": {
+      "walletConnectId": "21662ea26f2284c26ac44bfbb176340b477a3b4039d5a3793e86ba8177514901"
+    },
+    "ethermail": {
+      "walletConnectId": "9ec7dc26973b1a7bd708aaae749002fe3bc509254472939a8d8d2ae1f2d483b2"
+    },
+    "ethos-self-custody-vault": {
+      "walletConnectId": "50cca6f943812d2852752b7e021f251d50d410878b54c18a81ad71bcaa439035"
+    },
+    "everspace": {
+      "walletConnectId": "438b07441c5273c60e415efd227862d9b1344ef378d9ee7d1b3bfa8b33384eff"
+    },
+    "exodus": {
+      "web3iconsId": "exodus",
+      "walletConnectId": "e9ff15be73584489ca4a66f64d32c4537711797e30b6660dbcb71ea72a42b1f4"
+    },
+    "facewallet": {
+      "walletConnectId": "b6d18ff342920bb492f810bb070a064d6031ec2c3d6fffecb6ca233c8a591e00"
+    },
+    "family": {
+      "walletConnectId": "445ced0f482742632dfa6684f802eb1a2bb3cb97531bd06e02fb297c6ad21de1"
+    },
+    "filwallet": {
+      "walletConnectId": "f2dca938b70ea7965ffbc3ef49f3e21701d1fc4f1c543d4b05801c126416466b"
+    },
+    "finoaconnect": {
+      "walletConnectId": "216a8a921c2ed28808a5e3be6704fa106154957911d8bf3ae1e08be1488fc2b6"
+    },
+    "fintoken": {
+      "walletConnectId": "79a37a33816cfba8b2ab936c440a69efdd555414e3eed7f43a2f12dab5e8807b"
+    },
+    "fireblocks": {
+      "walletConnectId": "5864e2ced7c293ed18ac35e0db085c09ed567d67346ccb6f58a0327a75137489"
+    },
+    "fizen-wallet": {
+      "walletConnectId": "17a4ec96ceb34ade8e5215220df2051614aeebb832cc80ef19ddd7f33d5ba862"
+    },
+    "flash-wallet": {
+      "walletConnectId": "c18e114130f221c8960e75bfa4b86478e70e27465e2d6b22ac8945c08a031a7e"
+    },
+    "flooz": {
+      "walletConnectId": "184f15ea2cd5f65e25ed72efdd2ed1979179eddf0c0741ab0dd23c1eb7e0eee5"
+    },
+    "flow-wallet": {
+      "walletConnectId": "e6a8cb6abe47f88d7511b0698829eab01d76e78bad82b8ccca66004055055d89"
+    },
+    "flutter-sample-wallet": {
+      "walletConnectId": "c16e0e172fe80ebdc26bcdc9d24d962b7a9474b6db8ce9e6b2022e86195728cd"
+    },
+    "fncy-mobile-wallet": {
+      "walletConnectId": "105bc5cd0cf9126c1050e6f88fbdcc3e6b47bbfe4ff08b79ed189198374008c9"
+    },
+    "foxwallet": {
+      "walletConnectId": "c7708575a2c3c9e6a8ab493d56cdcc56748f03956051d021b8cd8d697d9a3fd2"
+    },
+    "frame": {
+      "walletConnectId": "a9751f17a3292f2d1493927f0555603d69e9a3fcbcdf5626f01b49afa21ced91"
+    },
+    "freedom-world": {
+      "walletConnectId": "78b7da9fe3b824e2aece877dcd3a3cd0a7f797ce00ce2c6289a8ac0e7309b32e"
+    },
+    "freehold-wallet": {
+      "walletConnectId": "6bb31b6f40516f9f638741ee0237f009ebb464f79e00ac24972f7c487591ae3a"
+    },
+    "freighter": {
+      "walletConnectId": "997a355c8f682468706a76cff1b004a7115f505fb962dac54b6e9b442dd1c380"
+    },
+    "frontier": {
+      "walletConnectId": "85db431492aa2e8672e93f4ea7acf10c88b97b867b0d373107af63dc4880f041"
+    },
+    "frostfire": {
+      "walletConnectId": "b56e7a5fe4500d5765726912b6863a92ffc6aee88a7d3a94905e93e1b3e01c2e"
+    },
+    "fxwallet": {
+      "walletConnectId": "30eb3e6d71fd0727d154e451748815e04a99c06972a84b10dfe7ae1b923c0c92"
+    },
+    "gamestop-wallet": {
+      "walletConnectId": "d99d67379a0af80a39ef8fa79ad477debfe5abb71bd7cf92d12f30d6ffa69506"
+    },
+    "gamic": {
+      "walletConnectId": "b1998499e7502d1d10eddb209edc25b1a7aa7977d6ce6664b066474d66f43bdf"
+    },
+    "gatewallet": {
+      "walletConnectId": "aba1f652e61fd536e8a7a5cd5e0319c9047c435ef8f7e907717361ff33bb3588"
+    },
+    "gaya-wallet": {
+      "walletConnectId": "2c69b45f625add0acd3354df4ab757067143b7f54b937311966f55be60a89c41"
+    },
+    "gem-wallet": {
+      "walletConnectId": "dcb5cd7bb4a8849288f8b43dea7bf20d7b7e2b096b630964f9ca5bf808531edd"
+    },
+    "gemini": {
+      "walletConnectId": "e3f3db6814131b8b0b12621d134cd327e5ad51f8ecde65565374aae4617a20fd"
+    },
+    "gems-pocket": {
+      "walletConnectId": "7de190d03faf1f15027a834801f045bc66640045b0d5a0daa4686d7fa89fab74"
+    },
+    "ggp-wallet": {
+      "walletConnectId": "cb47371469a5958b1b0a4ffc80e9ecc9b3ee5d4ff15cac193699626a2a85271f"
+    },
+    "girin-wallet": {
+      "walletConnectId": "994824d1e0b935f48ec3570c9d51fe5af9bbd9246b6f57210906f8b853ad2196"
+    },
+    "gk8": {
+      "walletConnectId": "a5f729636bd307a509e8814d8553d224550e4c35fee2b4e2f71bb1ade63ee4a9"
+    },
+    "glow": {
+      "web3iconsId": "glow"
+    },
+    "gm2-social": {
+      "walletConnectId": "aad1cc72005d28969c5c5f92d7ed93e43ab02671c601576eebff361b29770278"
+    },
+    "goldaxis": {
+      "walletConnectId": "6e688d84a60a65115eb07fda37fd36a3e727af8ac03fe6e878f401b425aa5787"
+    },
+    "goldbit": {
+      "walletConnectId": "746fa59e214ba46cfa688e9540a6b3450b514e89f39bd9c5a00b5a7fdaba8351"
+    },
+    "gooddollar": {
+      "walletConnectId": "689e621a3585ca018fd44ff404bc89079a0e55e9c632574e8bf8d2b1c7918911"
+    },
+    "greenhood-wallet": {
+      "walletConnectId": "3e86467846ea19970efad254ab3fc3cb8fd57e1f38759ed736f1cbea9314a878"
+    },
+    "gridlock-wallet": {
+      "walletConnectId": "8631ca765defdf51cd72444ec0284b866c835a947ed082d41c0c756a3b2eb1c2"
+    },
+    "grrnpay": {
+      "walletConnectId": "bccfdfe020b6df7bf7bdec60297be63b8ca4ab6468bd0e0fd95a472da076baa3"
+    },
+    "gryfyn": {
+      "walletConnectId": "abe0fdeae7b922a07bd0ced268cae04c1195ca1a50a478ca82b6b34a74b83700"
+    },
+    "guarda": {
+      "walletConnectId": "1ec1af0145af99c2aac79ea44c576fea1e4989040022306085fd6d0d11a98b2e"
+    },
+    "guardiian-wallet": {
+      "walletConnectId": "b123d9d4aa6b384aed6c45e7738861a28a2eabdf4adb72ad1e408d8578bc9b81"
+    },
+    "haha": {
+      "walletConnectId": "719bd888109f5e8dd23419b20e749900ce4d2fc6858cf588395f19c82fd036b3"
+    },
+    "hai-by-hacken": {
+      "walletConnectId": "95b58bd89109b2bd9989c9956a8e3f5822003126bae800d9f77455c4009db5ba"
+    },
+    "halo-wallet": {
+      "walletConnectId": "24fd8104e07aa1802aef51426222f23868013b83655fb6686c8478744dd2fda1"
+    },
+    "haqq-wallet": {
+      "walletConnectId": "47c5a25372f22ccf2df09a8431ccd00c02df19f4b73fa0e7c04c1573b90aec7a"
+    },
+    "harti-wallet": {
+      "walletConnectId": "bd44a349197c9d22659b98f0db579589f1e99f0ef51ccc06ffab2544b86e68e7"
+    },
+    "hashpack": {
+      "walletConnectId": "a29498d225fa4b13468ff4d6cf4ae0ea4adcbd95f07ce8a843a1dee10b632f3f"
+    },
+    "hashport-wallet": {
+      "walletConnectId": "38633830ef578a1249c345848a8d6487551a346b923d21ce197ea57f423f3113"
+    },
+    "hashwallet": {
+      "walletConnectId": "e7b5947f9960c3026e42ebc575027ba7d78ded8140093e800ce91c7f9d3b3111"
+    },
+    "haust-wallet": {
+      "walletConnectId": "e950a56062c9daa38ef430812eb79621e68521879eae05cac4a9862b0592a2ca"
+    },
+    "haven-wallet": {
+      "walletConnectId": "86b9fa7c8101bf4c9a7968b0c56df37a64a2b6fb39e902173dce5db2e34fa9fd"
+    },
+    "hb-wallet": {
+      "walletConnectId": "2125ab6a3e8be0d73e6d48f9db39c34925a790a631b4b67b84502d823aa47ad3"
+    },
+    "helix-id": {
+      "walletConnectId": "48e53d96460308a1734614b5d4fdf7ea169e6f998e01eb7b4e18014f57904d67"
+    },
+    "hello": {
+      "walletConnectId": "22086a7044492919c850e06c38b7940dca5a17c83a69d2d61581d72a1526c373"
+    },
+    "here-wallet": {
+      "walletConnectId": "b1b0a0916c431f46a062ee2a757d93454c82ff1f22e00bf83ba1a9abd09570ab"
+    },
+    "hero-wallet": {
+      "walletConnectId": "a1f3f8956346e2ba29e25bc5252c6dc0b2afa9ee17aa13ecd026abafedaf8696"
+    },
+    "hex-trust": {
+      "walletConnectId": "16181134503608bc683a3f071b99ebc2581f134dafb350756b86fc984726dd94"
+    },
+    "hinkal-wallet": {
+      "walletConnectId": "881243c1854f238e1845820709d35dfe4316c6ea8415aa37d2e72de179fe66dc"
+    },
+    "hippo-wallet": {
+      "walletConnectId": "664b505fea4c2117b8a55c054ef209664e0a68ddaafd7534df739f97a293fa1d"
+    },
+    "holdstation-wallet": {
+      "walletConnectId": "b83a346877b71c02b8531f53485ce12bc00033eabcc1213ca3329cbc744813a5"
+    },
+    "hootark": {
+      "walletConnectId": "2225e93edb4eda791e19e26817b94976607132bdb248684a39a5fc5ac9103782"
+    },
+    "hot-wallet": {
+      "walletConnectId": "aee5083aac025c4c3f1c9afc31ea89dbddca0b1c248195bef469fc4886ae3ab2"
+    },
+    "hub-alpha": {
+      "walletConnectId": "f46e501b27c6a01020431e362b74b47ce3cfa633cdcbf3608491bb01cab90867"
+    },
+    "hyperpay": {
+      "walletConnectId": "a94328bcaff3ed69de88cb6347b6933370d16455af591e4a46e7e0d7c2a485c8"
+    },
+    "iapp": {
+      "walletConnectId": "d6071018d2199b47d48c9590423f17afe222c35a12727db3f64ca2962a5e5709"
+    },
+    "ibvm-wallet": {
+      "walletConnectId": "fea98faf8b5ae216c1091bb33dfc41ee27278059b871bf1d5b1b7af3744eca72"
+    },
+    "icewal": {
+      "walletConnectId": "e3c0732167495b407aeaab7cd968cac73db3351421242c9eae717f4032dba411"
+    },
+    "id-pocket": {
+      "walletConnectId": "6289878a2ef8c49944cf428184bba626b161b0974f0b4f8b31a15e0317d8861c"
+    },
+    "iluminaryai-wallet": {
+      "walletConnectId": "24475df43f0272e91e800eca2698f62db94c3a973e7cda4abfd546d995013b77"
+    },
+    "ime": {
+      "walletConnectId": "2aca85b74f2fc6af554036e22e4f7f2eeada83023388087aee4488f5d9697973"
+    },
+    "ime-messenger-crypto-wallet": {
+      "walletConnectId": "0affd4bdebe5b35806bf52bbf6130de91208d4d3593e4b221b7813441141df13"
+    },
+    "imota": {
+      "walletConnectId": "b6329af78b11719de52ca0426fb50d64b9b965335fc53dafed994ec22680614e"
+    },
+    "impact-wallet": {
+      "walletConnectId": "816d067b6e3387965911bab9666725e2e53d3bfcd3dade708b74917a6d5c8432"
+    },
+    "imtoken": {
+      "web3iconsId": "imtoken",
+      "walletConnectId": "ef333840daf915aafdc4a004525502d6d49d77bd9c65e0642dbaefb3c2893bef"
+    },
+    "indigg": {
+      "walletConnectId": "c615c62d619fd52fa1cdf0187229a627f78fa924c90f04391af8960c000b59c5"
+    },
+    "internet-money": {
+      "walletConnectId": "dd43441a6368ec9046540c46c5fdc58f79926d17ce61a176444568ca7c970dcd"
+    },
+    "iopay": {
+      "walletConnectId": "1a5f2435e8e31c4034f1d142e85d9f7d3be2a09ddf710e5ef1ad4e36c719d3c0"
+    },
+    "ipmb-wallet": {
+      "walletConnectId": "7617c61e2d7c85b03d41ceaaf568d49e2ab270f8f6f1b25ddb4af292026fa8f5"
+    },
+    "ironwallet": {
+      "walletConnectId": "376cc8495e1b9387084dce611446bc6086780b39b338934ae057ed11c5739735"
+    },
+    "iskra-wallet": {
+      "walletConnectId": "7b3211c08255a17230494a384a1381bb12a284af4bf03945877fec5b7fc24410"
+    },
+    "islamiwallet": {
+      "walletConnectId": "226d8a12a2e6e5c4185fa9c24313824bfb144c2a180325bddbd121844f497afa"
+    },
+    "itlx-wallet": {
+      "walletConnectId": "953f348baef1a985ba440822202fee7485e7ae0cae3b29a04f17a712c1a9490a"
+    },
+    "itoken-wallet": {
+      "walletConnectId": "797c615e2c556b610c048eb35535f212c0dd58de5d03e763120e90a7d1350a77"
+    },
+    "jade-wallet": {
+      "walletConnectId": "13e0cd9c08c3b5788030abce5337e2acaaba259bc93f279332202d4078be8f58"
+    },
+    "jambo": {
+      "walletConnectId": "ca3f372788f7eaceda2429be20dd4f9c8c148f0d103bb7ba8576f8138104f18c"
+    },
+    "joey-wallet": {
+      "walletConnectId": "d9f5432e932c6fad8e19a0cea9d4a3372a84aed16e98a52e6655dd2821a63404"
+    },
+    "join-mobile-app": {
+      "walletConnectId": "c8e9e7218b7d25b8621c125bd82dc22e9fdac16bef217a281c66fb6a53b0da85"
+    },
+    "joyid-passkey": {
+      "walletConnectId": "75aa577b08b3dc3a1777c9c74cbbb79b5bfd73caaff222a28a53ce4e76cbb41c"
+    },
+    "jupiter": {
+      "walletConnectId": "0ef262ca2a56b88d179c93a21383fee4e135bd7bc6680e5c2356ff8e38301037"
+    },
+    "kabila": {
+      "walletConnectId": "c40c24b39500901a330a025938552d70def4890fffe9bd315046bd33a2ece24d"
+    },
+    "kaia-wallet": {
+      "walletConnectId": "3838fdc6c3964023f49d6790af4bd0870f8c07c6d3aa8ce1e01f2732374da486"
+    },
+    "kamiyagura": {
+      "walletConnectId": "97d2ccab1d55b1c2bcd70aa20c8ccb0d6450ff577178227fc640c8f7319cd437"
+    },
+    "katz-wallet": {
+      "walletConnectId": "7553ff153394877c5a2c85c8c29d4974203b1d1017ccab6362f42b203dbdfc01"
+    },
+    "kaxaa-wallet": {
+      "walletConnectId": "56d1854ddbc8d9ecdf5d7e2f19228314f475ee110c38fbfe3fa0b72baa41ca14"
+    },
+    "kayros": {
+      "walletConnectId": "ce3e70881c4605a03fb86554509735d45eca98c68bd6d72e86073e962dc6e8cb"
+    },
+    "keeper": {
+      "walletConnectId": "c3309233b29cc49323e2622383539b85dc62db2785874010e13d945d66eab880"
+    },
+    "keepkey-desktop": {
+      "walletConnectId": "fdcaaa47c154988ff2ce28d39248eb10366ec60c7de725f73b0d33b5bb9b9a64"
+    },
+    "kelp": {
+      "walletConnectId": "6b2e623f231f3794db2fcb7cfff2d1cc1d902bff70d946980d62956cd880cacc"
+    },
+    "keplr": {
+      "web3iconsId": "keplr",
+      "walletConnectId": "6adb6082c909901b9e7189af3a4a0223102cd6f8d5c39e39f3d49acb92b578bb"
+    },
+    "key3": {
+      "walletConnectId": "66b20f508f561b7c54602f221b1f9d8d43bd1df5cb5d6ee60b2808ddce9e196b"
+    },
+    "keychain": {
+      "walletConnectId": "b508bac65989c98cd5ca664738ebd50b4fdaa06420f2c0c3b049a01a0856bd79"
+    },
+    "keyring-pro": {
+      "walletConnectId": "47bb07617af518642f3413a201ec5859faa63acb1dd175ca95085d35d38afb83"
+    },
+    "kgen-wallet": {
+      "walletConnectId": "d5fa5b2ef55ee183de99b34b790c2b4966e641b2a32427ab3321c89fb1fae1ad"
+    },
+    "kigo": {
+      "walletConnectId": "43c76a3d2a84cb7a10f6329a34261eb6794ac830e74bc8136b42ee05ee54efb1"
+    },
+    "kiml-wallet": {
+      "walletConnectId": "1c014fb8651d0ea111cec6c02546db5079e1512c47a827c64e6319025156664f"
+    },
+    "klever-wallet": {
+      "walletConnectId": "fbea6f68df4e6ce163c144df86da89f24cb244f19b53903e26aea9ab7de6393c"
+    },
+    "klip": {
+      "walletConnectId": "3c2c985c0adff6f46a0d0e466b3924ed8a059043882cd1944ad7f2adf697ed54"
+    },
+    "koala-wallet": {
+      "walletConnectId": "e401b54ca287ce5c4c4579a91220e79816cff07cdf18b388fde84449c3be8a51"
+    },
+    "komet": {
+      "walletConnectId": "1a090919fa32185977f65bcab3435d250fa7e7e47c8410e31136f3f297517e27"
+    },
+    "konio": {
+      "walletConnectId": "de9e8421961e35c5e35cb63e3cd7be9af328a62c7b5a11f95ca116bf128a7424"
+    },
+    "kotai-wallet": {
+      "walletConnectId": "7ef48bf6722bd9694ab35f1fa9f8239ef1d44dc721c6950b9afe2468a77aad5a"
+    },
+    "kotlin-sample-wallet": {
+      "walletConnectId": "7f3449afd0516845236c4f15f73cf3e106cb5706a349a8d6d7e1490b9c2cb0da"
+    },
+    "kraken": {
+      "web3iconsId": "kraken",
+      "walletConnectId": "18450873727504ae9315a084fa7624b5297d2fe5880f0982979c17345a138277"
+    },
+    "kresus-superapp": {
+      "walletConnectId": "56bec983b47c8b6eb774890c1c8ae9d95334e10bdb126ab6c11dfaf56fb2b31c"
+    },
+    "kriptok": {
+      "walletConnectId": "488797489e6207d284a796381596453da60399d2d2ef8a88c6126ff4aaf9491c"
+    },
+    "kriptomat": {
+      "walletConnectId": "01925725cdc7a5008824c8f19eff85769903fbcc53c62639feb0d4f8d3a6cf52"
+    },
+    "kriptonio": {
+      "walletConnectId": "50df7da345f84e5a79aaf617df5167335a4b6751626df2e8a38f07029b3dde7b"
+    },
+    "kryptogo-wallet": {
+      "walletConnectId": "19418ecfd44963883e4d6abca1adeb2036f3b5ffb9bee0ec61f267a9641f878b"
+    },
+    "krystal": {
+      "walletConnectId": "92dec31cb291452a58043db64f26b20c886607661fd82e921be6362d5fee7f49"
+    },
+    "ktc": {
+      "walletConnectId": "5fb20bc4cf7c8662f023f465b9ee65fd6a3b266fa5f37c6799745f0a9a2de33b"
+    },
+    "kucoin-web3-wallet": {
+      "walletConnectId": "67f1ec404dbf3bddc509b5fcf615850e05b28c287ccd7167b4fe81b4293ac9df"
+    },
+    "kukai": {
+      "web3iconsId": "kukai"
+    },
+    "leap": {
+      "walletConnectId": "3ed8cc046c6211a798dc5ec70f1302b43e07db9639fd287de44a9aa115a21ed6"
+    },
+    "leather": {
+      "walletConnectId": "483afe1df1df63daf313109971ff3ef8356ddf1cc4e45877d205eee0b7893a13"
+    },
+    "ledger": {
+      "web3iconsId": "ledger"
+    },
+    "ledger-wallet": {
+      "walletConnectId": "19177a98252e07ddfc9af2083ba8e07ef627cb6103467ffebb3f8f4205fd7927"
+    },
+    "legacy-wallet": {
+      "walletConnectId": "8141668a92aad85f9f9f4b00e59914061df0f189b5b11fb35a15dc2708bb4596"
+    },
+    "legionnetwork": {
+      "walletConnectId": "080f1b10c1a55922037a4bda62f42c7ff2b5384bc9b5d6ebf0c7cd93e70489a2"
+    },
+    "lf-wallet-app": {
+      "walletConnectId": "d496d30a1213ee22d7b7b93c1f0ed3d96c9dc5800634b6e319efe7b70b65d694"
+    },
+    "libera": {
+      "walletConnectId": "b7cd38c9393f14b8031bc10bc0613895d0d092c33d836547faf8a9b782f6cbcc"
+    },
+    "lichtbit": {
+      "walletConnectId": "f37a272090b3b7620c8be1d2ed40cf435055789fc16ab2b710ecec124b62b634"
+    },
+    "lif3-wallet": {
+      "walletConnectId": "dc8ac638c6fd002950f9404dbb0639ae25bab667bf1a60a419bf8f44a89ed3a7"
+    },
+    "life-defi": {
+      "walletConnectId": "063ab1cdc9123ed56b7e73cbee664d24ecb7fc710ad1e0bded6cc2db0d562055"
+    },
+    "likerland-app": {
+      "walletConnectId": "a309c4e5e51f106e739b70ca64c9c8a78a59e51a35fb0df3711eeb1a4d642b3a"
+    },
+    "linen": {
+      "walletConnectId": "dd8ee41915d967e547c80266e883d77ee808427405f4e8026a85ac1308104221"
+    },
+    "lit": {
+      "web3iconsId": "lit"
+    },
+    "lobstr-wallet": {
+      "walletConnectId": "76a3d548a08cf402f5c7d021f24fd2881d767084b387a5325df88bc3d4b6f21b"
+    },
+    "localtrade-wallet": {
+      "walletConnectId": "a3e4e54d0266116e3b51cdb89630dacb1b45c5a40d3ae7c98ca329489bf2e15a"
+    },
+    "locker-protocol-wallet": {
+      "walletConnectId": "867c5f89b8d93c207e68631487fd537cd37c234d08dd81c4dbd911167610937c"
+    },
+    "locker-token": {
+      "walletConnectId": "6c90dec3879127b46e162146e88cc272a79654648392d6de0feaa4b5127f38eb"
+    },
+    "lode-wallet": {
+      "walletConnectId": "848a1500e563b3a6151bbd2643fefc8e04ac088312f7f812c75d67b0badbf55f"
+    },
+    "loopring": {
+      "walletConnectId": "3968c3f5e1aa69375e71bfc3da08a1d24791ac0b3d1c3b1c7e3a2676d175c856"
+    },
+    "lumina-wallet": {
+      "walletConnectId": "4c33e497bf4017e7df2db570282d27e6e866006d3e0fae5e283c73c10a96df46"
+    },
+    "lunascape-browser": {
+      "walletConnectId": "cb1864a17d4dd1742fb97e95c738543b95f908cea806ff8f090641b6cdebc627"
+    },
+    "lxxdaowallet": {
+      "walletConnectId": "51a21ac39435d61d28bdc1261862bac41a918f9a06269d68749d10f6def2b604"
+    },
+    "m-wallet": {
+      "walletConnectId": "b2c15b288b3c376042be2ea22e2afbfcc3dff1d0644bedeeea3533c2ef170a8c"
+    },
+    "m1nty": {
+      "walletConnectId": "f71e9b2c658264f7c6dfe938bbf9d2a025acc7ba4245eea2356e2995b1fd24d3"
+    },
+    "magic-eden": {
+      "walletConnectId": "8b830a2b724a9c3fbab63af6f55ed29c9dfa8a55e732dc88c80a196a2ba136c6"
+    },
+    "mathwallet": {
+      "walletConnectId": "7674bb4e353bf52886768a3ddc2a4562ce2f4191c80831291218ebd90f5f5e26"
+    },
+    "maxwallet": {
+      "walletConnectId": "0db9b539a5e519dab9097250f5abb6f0b2a11c2e17dee313b650401e089945b8"
+    },
+    "mdao-wallet": {
+      "walletConnectId": "540148afe64558bb238cab6c43bd963055ed9248c094eaebff94d7bbb59f9aba"
+    },
+    "me-wallet": {
+      "walletConnectId": "7e6bb17d0f776c0449f5e79f8df3b34e7be388c9c527befc4ba92ef8cbe55c44"
+    },
+    "meco-wallet": {
+      "walletConnectId": "9f6fbf4b0a22ef57cf40acf45bc75b83b9b1bd802c8fe2fbc6a380259a05e8f7"
+    },
+    "meetwith": {
+      "walletConnectId": "1f54915538945e7a29dfc270b6fb10eb5567423936d7989d346e399690fd15c5"
+    },
+    "metamask": {
+      "web3iconsId": "metamask",
+      "walletConnectId": "c57ca95b47569778a828d19178114f4db188b89b763c899ba0be274e97267d96"
+    },
+    "metawallet": {
+      "walletConnectId": "6544c9ff3ea25bc10a86b6e213c0f0407b04fb335490d7d56f4550c2c6be0502"
+    },
+    "meter-wallet": {
+      "walletConnectId": "7215d406ebbd8e129f6092ee3c6c86c08d444e431bf35414613f6fbb686ab2c9"
+    },
+    "mew-wallet": {
+      "walletConnectId": "f5b4eeb6015d66be3f5940a895cbaa49ef3439e518cd771270e6b553b48f31d2"
+    },
+    "mg": {
+      "walletConnectId": "e90b3efa35dce75097b85d897d4bb80342b74cf820906b6edbf59c934d319ccf"
+    },
+    "micet": {
+      "walletConnectId": "dd06e3e3f42cf1a2a453a7ef8def008568989f550eacecd91bac97e4c8443f05"
+    },
+    "midoin": {
+      "walletConnectId": "73232eaed7a1e4876f3efb13c3d526dfe4e293a152e1380095a62eb4c5814a87"
+    },
+    "minerva-wallet": {
+      "walletConnectId": "49bb9d698dbdf2c3d4627d66f99dd9fe90bba1eec84b143f56c64a51473c60bd"
+    },
+    "mirai-app": {
+      "walletConnectId": "66a1b8d00aa8da714ae07a123a565f6226c44156a54ed04ffc6ee5ffe1f56e64"
+    },
+    "mixin": {
+      "walletConnectId": "9be416fd7b5a20dfe115930b759e9a69a5dd6299b42f3eab0f3f70ee6ac5331f"
+    },
+    "modular-wallet-prod": {
+      "walletConnectId": "c5bba8af012b2139c406cc667a7b67a1503d984aeb0cdd2ef02e667c4abba6fe"
+    },
+    "mon-id": {
+      "walletConnectId": "7b42b3dab18ddafb82cf4f2284220b13612785d72370d13be54ed1f405bfc432"
+    },
+    "monarch-wallet": {
+      "walletConnectId": "a18aeec9fab0c08ca41e7bdaae06cac5700bb628ec75c6381bacd9b2df574895"
+    },
+    "mone-superapp": {
+      "walletConnectId": "482b0925a9355574e46629ac396ed48232746bd32f72a7b813767a3fa876ad93"
+    },
+    "moneda": {
+      "walletConnectId": "98bbfb16d111ee3d39eb9311c95c1dd9dd097c47c4dc6665192ed293f36a7c1c"
+    },
+    "moonstake": {
+      "walletConnectId": "f5971a12f71b352c3abb3c9fc29818f1044a87d791ce28db6e5ab1962bfff717"
+    },
+    "mpcvault-team-crypto-wallet": {
+      "walletConnectId": "d69877e50c4aa2360d723065716609f1e2698e45fc210438da8c325b65922735"
+    },
+    "mpcwallet": {
+      "walletConnectId": "51a26fedf6e6c8c48187c66a66297647b046dbf03b2a08d8150f8acb31498488"
+    },
+    "multis": {
+      "web3iconsId": "multis"
+    },
+    "multix": {
+      "walletConnectId": "427efc9169b13a348d98d34e40303546a3e7352d725c06b9356882a26773b1a3"
+    },
+    "my-cloud-wallet": {
+      "walletConnectId": "96dec48797b543cc455efc53f1f6548d1af490534892b7a639748948fc738e6a"
+    },
+    "my-ether-wallet": {
+      "web3iconsId": "my-ether-wallet"
+    },
+    "my-wallet": {
+      "walletConnectId": "26a582067b4f960e9104768704ec6fa642970450acefa04c782dbbccc575b3b8"
+    },
+    "mynawallet": {
+      "walletConnectId": "e3d6117850435b1359b81d7cef869f6851c00ad2125cadb04f4e003be8074af6"
+    },
+    "mywallid": {
+      "walletConnectId": "23d57b0a48df6cec411e609ddedaa290dae4a844ea90909ddd33aca794574603"
+    },
+    "n3mus": {
+      "walletConnectId": "519cf00a0517cc299a898d38f440197d171f6b438aa8e6d59fa73696dbe7817d"
+    },
+    "naba-wallet": {
+      "walletConnectId": "21d3367467a14db344f8f614e7328ce240c8903f84410f626cc3c54ec9101a3a"
+    },
+    "nabox": {
+      "walletConnectId": "a76633b85db65d78992ff51c18492a72f442aa5ea2bf7bdf49d991a94107734d"
+    },
+    "nabox-c679c2a1": {
+      "walletConnectId": "c679c2a1267c8cfb51d5d28a1a21f3eca5e8d7556332b9b9eb400c1f371844c9"
+    },
+    "nash": {
+      "walletConnectId": "7be8d8b5e39bbcee13867c50e47387cd752c12e03b3e6fdf2e0638c7b4e3b69f"
+    },
+    "neftiwallet": {
+      "walletConnectId": "91628e2ae2228af2145bfac21093ad7be682810ec16af540a9e017ad6b933a81"
+    },
+    "neon-wallet": {
+      "walletConnectId": "f039a4bdf6d5a54065b6cc4b134e32d23bed5d391ad97f25aab5627de26a0784"
+    },
+    "nest-wallet": {
+      "walletConnectId": "df1d89401c7320e6d62fa5bc4a516e8df21b604b10a7eedefbee9ada66b20c5d"
+    },
+    "new-goodwallet": {
+      "walletConnectId": "132fe7fba900c4772d39c15f02ec134461fa5d680be76b1767c2d0a15055b7a1"
+    },
+    "newmoney-ai": {
+      "walletConnectId": "49c61c13758b7a9f69018f06de961110a29cb0f0be4cb9cbbd4eb3a2bee3b857"
+    },
+    "newwallet": {
+      "walletConnectId": "e7f454284c99350361bfd5a1f433a999e1e841f0990f0207d48e1795722fa7a7"
+    },
+    "nfid-wallet": {
+      "walletConnectId": "cc117f2a60ac9d880bb45ad9c1ca01d9f35d81cf8c489ecd0e789f153754064e"
+    },
+    "nicegram-wallet": {
+      "walletConnectId": "e41335615dc17532477792bb63034f69d430d73dc39ff8da622d17f3bad0b96a"
+    },
+    "nightly": {
+      "walletConnectId": "9a4cddbdbc19005be790f37cc9176dd24eae51aa2a49fa3edeb3b6a8b089b7be"
+    },
+    "nixwallet": {
+      "walletConnectId": "eba8c66879df1b0654c8e515100ec7127a2d299453e329f3a5c47eacb2fa78c1"
+    },
+    "nodevault": {
+      "walletConnectId": "25f2e87390f32e4a132c27cbbbca95bc0434f5cba32db613defff0ea2bbf6cd3"
+    },
+    "nodle": {
+      "walletConnectId": "4a4de89b894737cd99fe857c3253da54773c093b67381a5cd63723543e888a54"
+    },
+    "nof": {
+      "walletConnectId": "f26de15901fa07f464e3be824e36e63bdc587d34f04654ad6cd3f0a018889fca"
+    },
+    "nonbank": {
+      "walletConnectId": "dbe30fc296ccd75fbf5bc7157fcfe23d839c0cea83c4883ab9601677e0a9a738"
+    },
+    "noone-wallet": {
+      "walletConnectId": "eae2c4b9da3b33b72b20d929a6342830bf54b541665e54c3a46024118e9e0e81"
+    },
+    "nova": {
+      "walletConnectId": "fdfbbd04bb3871bd7853f343081275edab999e5573c63c2c64c0caf73df51d1f"
+    },
+    "nova-spektr": {
+      "walletConnectId": "bb9d9ff64c877aedc2ec5f596e2c4806aa5b26bafa04e835624e1f8e2b87176b"
+    },
+    "nova-wallet": {
+      "walletConnectId": "43fd1a0aeb90df53ade012cca36692a46d265f0b99b7561e645af42d752edb92"
+    },
+    "now-wallet": {
+      "walletConnectId": "c482dfe368d4f004479977fd88e80dc9e81107f3245d706811581a6dfe69c534"
+    },
+    "nufi": {
+      "walletConnectId": "33c036d8075d28c9f3619d4d43075676a6d294047e3658fb103e5b3424337551"
+    },
+    "nufinetes": {
+      "walletConnectId": "dccbd717df77b395445cc6080e01fffada9d8b92dacfda312a26c70c2e9af673"
+    },
+    "nulltrace": {
+      "walletConnectId": "5449332f14199cc03249e27283dce7707d4342a092df96822f451670a09510a8"
+    },
+    "numio": {
+      "walletConnectId": "3c5602ac8e040c6dfe26aad1b183a848f86486094d18c8a5e19993d9c87ca52f"
+    },
+    "numo-wallet": {
+      "walletConnectId": "e1684aeadc8aed904612091e36a948369b1ba8eddb1b1f0fbbddbe3a72a5b87f"
+    },
+    "nvxo-wallet": {
+      "walletConnectId": "531df9c5bd5343e0c3d9383a25301572699a8ad0ccfc55984b379f400a7a052e"
+    },
+    "oasys-passport": {
+      "walletConnectId": "37aacf1e6bf6793c892e42c3f7623a61d9ffcb4337010804cc3193c4d596cf5c"
+    },
+    "oblio-wallet": {
+      "walletConnectId": "02957f0659df422d5b8fa31a054a15140479cebdd715dfa1ba875a93a4236b05"
+    },
+    "obvious": {
+      "web3iconsId": "obvious"
+    },
+    "obvious-031f0187": {
+      "walletConnectId": "031f0187049b7f96c6f039d1c9c8138ff7a17fd75d38b34350c7182232cc29aa"
+    },
+    "oisy": {
+      "walletConnectId": "59968c4e5ef18efe3a287cb1206c41fd46d69589def8fd5c4990be92401fabcb"
+    },
+    "okpay": {},
+    "okse-wallet": {
+      "walletConnectId": "4f5de5333fed2ccf47c690579aba3b9128aea78175339ff51ef61704bde7502a"
+    },
+    "okto": {
+      "walletConnectId": "550b59942eb58a7226381bf7935f22d311e56ee29c3530e44d96b1de0550a35a"
+    },
+    "okx": {
+      "web3iconsId": "okx",
+      "walletConnectId": "5d9f1395b3a8e848684848dc4147cbd05c8d54bb737eac78fe103901fe6b01a1"
+    },
+    "okx-wallet": {
+      "walletConnectId": "971e689d0a5be527bac79629b4ee9b925e82208e5168b733496a09c0faed0709"
+    },
+    "omni": {
+      "walletConnectId": "afbd95522f4041c71dd4f1a065f971fd32372865b416f95a0b1db759ae33f2a7"
+    },
+    "onekey": {
+      "walletConnectId": "1aedbcfc1f31aade56ca34c38b0a1607b41cccfa3de93c946ef3b4ba2dfab11c"
+    },
+    "onewallet": {
+      "walletConnectId": "a426707faffe9032ac1d037be88f5419a29547736a86bf2c8f252751938219f8"
+    },
+    "onlybulls-wallet": {
+      "walletConnectId": "22eafea695da55c0a8c3a37c5dd6ecd7ee45927a859b9536ae068e5dba4eeed2"
+    },
+    "onto": {
+      "walletConnectId": "0f5eca2c7f2c9d11c992fdc707575c484ffb751e58e43eaeeea24510bfe8b8dd"
+    },
+    "onyx-wallet": {
+      "walletConnectId": "e6005646c187fc5e5141247933253346168242dd5ed8f46480f3b5f73a4d1ac9"
+    },
+    "open-wallet": {
+      "walletConnectId": "2f0e39323be165a0972147140c7b822be17e5eb464a5e8558ac0e0ab01c48944"
+    },
+    "openloop-connect": {
+      "walletConnectId": "25626b660052d4fe15926a48bf3e0ae9ade5b8b6dacdd3d072795c662dbdb3ee"
+    },
+    "opera-crypto-browser": {
+      "walletConnectId": "c87c562ce7f3a3ff9f4eed5f5a0edbcbd812db5aed4d14c7e6c044d8b6795d84"
+    },
+    "opto-wallet": {
+      "walletConnectId": "9504a1c1a86cc0702b2d3e47049e1389b373fb2ff22de3208c748d62912433a4"
+    },
+    "opz-wallet": {
+      "walletConnectId": "0e3c4838e5a7c44b6b16299b7dbc7a2bc147ad9c056588d6190e11ec5804fba9"
+    },
+    "orion": {
+      "walletConnectId": "56919a2ce95dfb8db63744da593c3bd70ffe14d2ec901d7a7ab58f2a319f157b"
+    },
+    "outlaw-wallet": {
+      "walletConnectId": "022076fddebdd81c287239a7397ef625ef432db168b884f1b8ed8e148ce23a84"
+    },
+    "overflex": {
+      "walletConnectId": "4aea33b6f8fd1d4b5be08cdd54356274ea3185868ace51728af7ba8891211a82"
+    },
+    "owallet": {
+      "walletConnectId": "5a2b2db3d2ed90458a41d2a0c5e4bd28ec67b6fa272b0e201cc8508dc3d4be87"
+    },
+    "ownbit": {
+      "walletConnectId": "dcdcfb02dd871af8633875431eb42f095370b104304c35fe2ac77f8ae2045dad"
+    },
+    "oxalus-wallet": {
+      "walletConnectId": "159b0423ce9075d5662f588f805931d989627affab3e63e4dd7ebc62b9c6738c"
+    },
+    "oxpay": {
+      "walletConnectId": "62c919a311e06050620349bf1e0442ba4b5473c4fc47733c53d21a64ace9f07a"
+    },
+    "ozonewallet": {
+      "walletConnectId": "4174944732b68fe84b79b98bc0d75c3f0dce4e6e6e9834439fbc1e51fa6eebf3"
+    },
+    "pali-wallet": {
+      "walletConnectId": "981ee0b205893921cdb52c94070acedd39283e911de238c478652dedf0e1d76d"
+    },
+    "panaroma-wallet": {
+      "walletConnectId": "259d07628a06aee49007266630381867688fbe96c331adc1b285aa7995380815"
+    },
+    "pandoshi-wallet": {
+      "walletConnectId": "fa737fa41e6e5ad02c536bd21afea4e21c061885a039e17237e08802ca5bf0bf"
+    },
+    "para": {
+      "walletConnectId": "82061ee410cab0e705cf38830db84ba965effc51a1e1bf43da6d39ff70ae94fb"
+    },
+    "paraswap-wallet": {
+      "walletConnectId": "ca1d3f91b9233ff1f3a64fbaf2bd4a718e9ea0489ec71938d9da030a9f98ef8f"
+    },
+    "paribu-self": {
+      "walletConnectId": "34cc55786257a50b0d0446e197cfd0935216192616787022c6b2819d2874d34a"
+    },
+    "pass-app": {
+      "walletConnectId": "a562f133f272c97dd0eb1cbe4629a2ded5fd6e4854a2a3acd44ddb61907ca781"
+    },
+    "passpay-wallet": {
+      "walletConnectId": "0769b03b40fa93ff2cca28cf68582b3554cf10e3f4608e6c81b3089b2a3fcf01"
+    },
+    "paybolt": {
+      "walletConnectId": "5dc61e9d57489bccc11306365361614dac3de1d8eab2a9a7877a95970f68712f"
+    },
+    "payperless": {
+      "walletConnectId": "d6fbaf5c2026e050920ed6e6ffbf96c8a6145b93a8b79d102def9653bedc9821"
+    },
+    "peakdefi": {
+      "walletConnectId": "00ee7b0d5c47fa12142b37c1cf3a6a847fdd277c23d2f40fea45c1d5166e0084"
+    },
+    "pecunity-wallet": {
+      "web3iconsId": "pecunity-wallet"
+    },
+    "phantom": {
+      "web3iconsId": "phantom",
+      "walletConnectId": "a797aa35c0fadbfc1a53e7f675162ed5226968b44a19ee3d24385c64d1d3c393"
+    },
+    "pier": {
+      "walletConnectId": "fa82693d6253e73be14a572f4d0d66bee9e9d3f6bceaa49104987b4ba66ee398"
+    },
+    "pillar": {
+      "web3iconsId": "pillar",
+      "walletConnectId": "f3379d4ac112b75ce80222d6e0d18f36667c87086fa65b6d10f118815d224940"
+    },
+    "pintu": {
+      "walletConnectId": "bb71b54ced62aa11f76e4f3edacb37a41300807506db840b98b740379f99cc71"
+    },
+    "pionewallet": {
+      "walletConnectId": "e5276850a2559a0fd4eb37207e3c9325cfb20b84ebb28a2d6ad5ade43a2a77bd"
+    },
+    "pitaka": {
+      "walletConnectId": "14e5d957c6eb62d3ee8fc6239703ac2d537d7e3552154836ca0beef775f630bc"
+    },
+    "plasma-wallet": {
+      "walletConnectId": "cbe13eb482c76f1fa401ff4c84d9acd0b8bc9af311ca0620a0b192fb28359b4e"
+    },
+    "plena-app": {
+      "walletConnectId": "9654c004e02e492c30904a820154e239886edbf4d66bc5d372060809ef4c9111"
+    },
+    "pltwallet": {
+      "walletConnectId": "576c90ceaea34f29ff0104837cf2b2e23d201be43be1433feeb18d375430e1fd"
+    },
+    "plug": {
+      "walletConnectId": "ff8c6f405f14cbb21fa9b0ab5338159b85822f7cab7f1040d4c4e26bf63ff233"
+    },
+    "plumaa-id": {
+      "walletConnectId": "2937e3dd80ce9942cdb65a70bcc9c03489404d1bd822b9d9c2950681898b5f10"
+    },
+    "plutope": {
+      "walletConnectId": "91b9a02134bc834b96ebfa333a0bf27ac6372ac56682b5e77bf8577abe0eea78"
+    },
+    "pockie": {
+      "walletConnectId": "016f8161cd78dd01003cf466292b9690c0fd251f2d69415a3cc96659d975e398"
+    },
+    "portal": {
+      "web3iconsId": "portal"
+    },
+    "portawallet": {
+      "walletConnectId": "f957ccc70ab232638964242c24cc6286ef75aa7fd0d4d348f46213d2fea0b88c"
+    },
+    "prettygood-keyboard": {
+      "walletConnectId": "26f021a08d4271860423d778a9b82e39f4ff52acc7c3f6d92a504eba11e3b893"
+    },
+    "pundi-wallet": {
+      "walletConnectId": "2ebc33a02906094b8ea5d21a7c6e1673ecdefb33dca723897d13c7de3446d354"
+    },
+    "purewallet": {
+      "walletConnectId": "f92b6491e9cccaec7dca667d61c012816629e7e759392c55d3f523a90ec1a584"
+    },
+    "purewallet-app": {
+      "walletConnectId": "1aecb6762373f96100f941347bd554d6bdbf6c30a1368c47bf391432021d6ce9"
+    },
+    "puzzle-wallet": {
+      "walletConnectId": "7ee7b95f4ae8b3e08aab5158be7fe8e71f79bcd3717594254b34fa1f3cd4611a"
+    },
+    "pwc-super-app": {
+      "walletConnectId": "4be461920c1fd1762d71c00cdf554ce5693437e123c4a966faf7e1056d2c6f17"
+    },
+    "qie-wallet": {
+      "walletConnectId": "7eb95f5e01a3c45f7f0111f736d73e5c88aa5f268256c6a38b7f631216f620fb"
+    },
+    "qoin-wallet": {
+      "walletConnectId": "6148e2d844e21c546354d04255e9c2bb7f87aaccf3113709f09212c5f3277a9b"
+    },
+    "qubeticswallet": {
+      "walletConnectId": "80afbf1e261cc241e8227127592879c6ebd753c7c7a0a714c75923fa76730e0c"
+    },
+    "qubic-wallet": {
+      "walletConnectId": "9034d54985807aaf3d7780f50f155f954daa468fb58d7b14b216fc79d68bbd14"
+    },
+    "r0ar-mobile-wallet": {
+      "walletConnectId": "090447a8ce11f1f55f3016fe933044b6e06cb21fbf57d902e7ccc207892b86c6"
+    },
+    "rabby": {
+      "web3iconsId": "rabby",
+      "walletConnectId": "18388be9ac2d02726dbac9777c96efaac06d744b2f6d580fccdd4127a6d01fd1"
+    },
+    "rainbow": {
+      "web3iconsId": "rainbow",
+      "walletConnectId": "1ae92b26df02f0abca6304df07debccd18262fdf5fe82daa81593582dac9a369"
+    },
+    "react-native-sample-wallet": {
+      "walletConnectId": "6880782cf8ff712bf8772b585960346290fd2499c1f1c51df9fe713d9d2e9384"
+    },
+    "react-wallet": {
+      "walletConnectId": "b377ed60cd1f72a9c84ba0095cb28eea166389787c6763e590d4a1a651a315a7"
+    },
+    "ready": {
+      "walletConnectId": "71aca34c569bda617eea36c774d941e57b3656060bca575fe898d2f8029553ea"
+    },
+    "realt-wallet": {
+      "walletConnectId": "23db748bbf7ba1e737921bee04f54d53356e95533e0ed66c39113324873294e7"
+    },
+    "renegade": {
+      "walletConnectId": "2bc58b1c76e6572fa6cd68c3a448128ce90f7442d563f02e9f9db3b58d01d810"
+    },
+    "reown-wallet-beta": {
+      "walletConnectId": "53332571a2e1b748add766da51b90dc9d1e9d65d2c301969add5ba3939339513"
+    },
+    "reunit": {
+      "walletConnectId": "84ec277981a993e80d4c02960e3ba8e89027b6848ec304dc7de48651e4bd353a"
+    },
+    "revelator-wallet": {
+      "walletConnectId": "bec3c4be910f31b01e051525996b8dca85a60a616dba2a756728d5ddeecd6136"
+    },
+    "rewardy-wallet": {
+      "walletConnectId": "10a885156cc07e3a8e424c9dea9eafdb62b5640b77cbf9d2e07295dbd3a334c8"
+    },
+    "rezor": {
+      "walletConnectId": "b248559bff6b18d0d776a23698990641f8d7704c35faa7de60865cc8429818b9"
+    },
+    "ricewallet": {
+      "walletConnectId": "c40b9bcef32fa6ce4e0df98be1420628bbc4957646f742380fe618fcb4ab74f1"
+    },
+    "ripio-portal": {
+      "walletConnectId": "1896aa67ce33d5bde764369c7541a75074baa1b8da97e703c9ee3a4b61e56e65"
+    },
+    "roam": {
+      "walletConnectId": "9051a97842275b8157ed5df27b77096def499f002a2f227ef6df0c6c6a0e69fb"
+    },
+    "robeon": {
+      "walletConnectId": "db79e9fd1b5cc616915e359c1e84a4f31f4521ba2825926879cc685347baf74b"
+    },
+    "robinhood-wallet": {
+      "walletConnectId": "8837dd9413b1d9b585ee937d27a816590248386d9dbf59f5cd3422dbbb65683e"
+    },
+    "ronin": {
+      "web3iconsId": "ronin"
+    },
+    "ronin-wallet": {
+      "walletConnectId": "541d5dcd4ede02f3afaf75bf8e3e4c4f1fb09edb5fa6c4377ebf31c2785d9adf"
+    },
+    "sa-assistant": {
+      "walletConnectId": "fa6a09c7efd73c6fe3bc5a68969d0def71b5d760b99a16985e3e8e79d84b0156"
+    },
+    "saakuru-all-in-one-crypto-app": {
+      "walletConnectId": "394631c96f2c3201ffd5b3f3f249028163a893ae2ff9076882350e70f3450cb0"
+    },
+    "sabay-wallet-app": {
+      "walletConnectId": "6577b7c91453a7047f1c31c5897bd59087a8cca35181e069656079255542abb4"
+    },
+    "safe": {
+      "web3iconsId": "safe",
+      "walletConnectId": "32e6edcfbd770996fed2f4088b76a5c0151903d4ab9771feb92e5cf75080b131"
+    },
+    "safe-225affb1": {
+      "walletConnectId": "225affb176778569276e484e1b92637ad061b01e13a048b35a9d280c3b58970f"
+    },
+    "safe-app-syscoin": {
+      "walletConnectId": "3cf9e635075cdc1587c444bc6e01a6026c7fd1d518a96a7ac0aa23b905a7c53e"
+    },
+    "safematrix": {
+      "walletConnectId": "fe2535202d208d96607955fe18e98d4564838200c3498c8cd1736b46291355f2"
+    },
+    "safemoon": {
+      "walletConnectId": "a0e04f1086aac204d4ebdd5f985c12ed226cd0006323fd8143715f9324da58d1"
+    },
+    "safepal": {
+      "walletConnectId": "0b415a746fb9ee99cce155c2ceca0c6f6061b1dbca2d722b3ba16381d0562150"
+    },
+    "sahal-wallet": {
+      "walletConnectId": "5265dcf66be0553328dbc727414ab329e22f9a480e593bd2e927b279e4ab244d"
+    },
+    "saify": {
+      "walletConnectId": "a0c4b25a00028162432d173d110dbd8ee086a01c3a00f94d97f70b779d25c794"
+    },
+    "sanctum-wallet": {
+      "walletConnectId": "e0df0b15abd2130ee7c1ef63cc5c5bb8d7ac554df7e96bdd6c8e25c039f3191c"
+    },
+    "satu-wallet": {
+      "walletConnectId": "bd8a799aed39b284cf4a2c1a765a3d047a2cd709e06db21baa369ac5c1ffe774"
+    },
+    "saucerswap-wallet": {
+      "walletConnectId": "aae40a00c97aedbfdff4a5798e7a871b916d687e790ff3cf12e9267e6baacc79"
+    },
+    "scopuly": {
+      "walletConnectId": "9c78aee7d8a771255942334d06d2cbab89e2178ee49fee4ea3b6c78032fcac76"
+    },
+    "scramberrywallet": {
+      "walletConnectId": "b48cefc7ff96f9bf4e6db66fd93d277d4ee6f4199d7f996c25a56b0b0bb2c352"
+    },
+    "scramble": {
+      "walletConnectId": "5ff1c0982092f5b41df67c6ad636feddfc3e9d8c771777ddc26e5335fc91ab2f"
+    },
+    "secux": {
+      "walletConnectId": "6464873279d46030c0b6b005b33da6be5ed57a752be3ef1f857dc10eaf8028aa"
+    },
+    "sender": {
+      "web3iconsId": "sender",
+      "walletConnectId": "765d15cde3a02e088fbc712cabd527ec7d8efc32c5177fd47337760b1a5e7ec7"
+    },
+    "sentry": {
+      "walletConnectId": "115fe6e706e14735934eba7afce46f0a77e64988c3ded093033402ef4ce0a162"
+    },
+    "sequence": {
+      "web3iconsId": "sequence"
+    },
+    "sequence-wallet": {
+      "walletConnectId": "1f711d32b1df0f84741fafa2ad1d81599b01297cc7d22d153272cb3ef4232f19"
+    },
+    "shapeshift": {
+      "walletConnectId": "4457c130df49fb3cb1f8b99574b97b35208bd3d0d13b8d25d2b5884ed2cad13a"
+    },
+    "shefi": {
+      "walletConnectId": "2b9085b314023231adf4ba051274a20b9a4b5f64fd85251a7a329e386da1811b"
+    },
+    "shido-app": {
+      "walletConnectId": "582506d3ac795e1d72b1674e0ee54b45431ad6fac9b51c0c8c4c1893d923c5f0"
+    },
+    "shimmersea": {
+      "walletConnectId": "6f43d35d53ae12c86681df65342315b643026e2085e41bf8b8cc67287150c375"
+    },
+    "shinobi-wallet": {
+      "walletConnectId": "51d2c02e306827d2d0f0dadaa00f22575c623aa19c403f09f4b9c42c67098bb1"
+    },
+    "sinohope": {
+      "walletConnectId": "cb9d66ecab6a3a98bff2de2653e4e1ce44e84130a7ab323a2892a5c456956ffe"
+    },
+    "sinum": {
+      "walletConnectId": "2564a702f3b709b000a7747ccfc6f6dcc58b638c57f29791cd01514fe91cc5f8"
+    },
+    "sirius-mx": {
+      "walletConnectId": "edfc9f7ad62c49cb0d98f3852fb2c5e8af83bd8292fc7c0ad1369141fe19c87f"
+    },
+    "sistemas": {
+      "walletConnectId": "0e36dd863f7cb70a0d8dd507e2b32495b01771abbf5c73817401d958d9938ca7"
+    },
+    "slavi-wallet": {
+      "walletConnectId": "b823fb0d7228ef8e3c0bc9607df9ed79dae2ab3a2811d33f22ade4f573c18232"
+    },
+    "smart-baby": {
+      "walletConnectId": "d11e890cc208235fd14e5234b4fc180eb36ade32808c980ee85cc57fe4a08ebb"
+    },
+    "smartrush": {
+      "walletConnectId": "bd25c370dbc2e62b0580bb1eea9df6a812a66d6fff7045107173a6ac5e7c6f57"
+    },
+    "snowball": {
+      "walletConnectId": "51334e444ea1ba3d23c96063b8600c94af89233bd3f8f3685123c46e0348766c"
+    },
+    "soc-wallet": {
+      "walletConnectId": "28b60a29a8ffd15f52a33cc0d0ee4f8b1cd234b68f554195a823bf16a40cab29"
+    },
+    "socios-com-wallet-tokens": {
+      "walletConnectId": "56843177b5e89d4bcb19a27dab7c49e0f33d8d3a6c8c4c7e5274f605e92befd6"
+    },
+    "solflare": {
+      "web3iconsId": "solflare",
+      "walletConnectId": "1ca0bdd4747578705b1939af023d120677c64fe6ca76add81fda36e350605e79"
+    },
+    "solutions-team-test": {
+      "walletConnectId": "d046ce8e9d2d96e3a0f02d0f74e51116b1884cc4e85ca24a83506cd49fa28d29"
+    },
+    "soul": {
+      "web3iconsId": "soul"
+    },
+    "soulswap": {
+      "walletConnectId": "6d47c10f046c322b4882dbb6a4d8c8e5e439019402ff872412d3b79bd3a859f4"
+    },
+    "spot-on-chain-app": {
+      "walletConnectId": "1897fdb811ff53a69f9217a98696798b0227c7d77fddf103e8295be551a1e3b6"
+    },
+    "squads": {
+      "web3iconsId": "squads"
+    },
+    "squirrel-wallet": {
+      "walletConnectId": "716187d401fb156b08b222b3a624902cf06e3ab5d4dc7d7dfcc37572359e6d9d"
+    },
+    "ssp": {
+      "walletConnectId": "e68038c32de4ff04d7cb1747e1d83aab5d59892bba23e1e47d01ca3ee7b505b4"
+    },
+    "stablez": {
+      "walletConnectId": "855481a23310c2bccf2a6134367449d61bd2f1c8793f929516c4f68a6aaace7a"
+    },
+    "staticbit": {
+      "walletConnectId": "c2c561ba71ea16a3b9c9003a77d2fad3dc4f597750f0acd385d3e12ddfe55793"
+    },
+    "status-legacy": {
+      "walletConnectId": "af9a6dfff9e63977bbde28fb23518834f08b696fe8bff6dd6827acad1814c6be"
+    },
+    "stickey-wallet": {
+      "walletConnectId": "71a83ffbaa7fa38419e8f548a6499c78c8d429163631cf483483fc7efc6b7aae"
+    },
+    "streakk-wallet": {
+      "walletConnectId": "5a2b2b6e41df46ea80709c11b4f902d31271f01f660f1c892102107fbc2bf88c"
+    },
+    "strikex-wallet": {
+      "walletConnectId": "36dbd7f82df78f406723eb71599640fbbf703b2583682ba1e419a9098a2d4945"
+    },
+    "subwallet": {
+      "walletConnectId": "9ce87712b99b3eb57396cc8621db8900ac983c712236f48fb70ad28760be3f6a"
+    },
+    "suku-wallet": {
+      "walletConnectId": "b563f5fb9214c9bf33baef0e14e4bf5a479905182e46782023b1ea827f263a60"
+    },
+    "super-wallet": {
+      "walletConnectId": "61bd98425081b7300601f447a10cb80eef691c2c4ba28b5909fc4425011ec402"
+    },
+    "superhero-wallet": {
+      "walletConnectId": "d15c9975084e5bc349d63aa83be8d9a053941483aa2c3934d00d4c4d73d45667"
+    },
+    "superwallet": {
+      "walletConnectId": "37ef631ba83835cae97dbbfe270ff828cdf4c9326e998927bcb03f262f98f144"
+    },
+    "sweat-wallet": {
+      "walletConnectId": "dab33dac227aad5740856cb0a2d84dd27fcf311ca0b3fd7612fec041fbbb4d43"
+    },
+    "swift-sample-wallet": {
+      "walletConnectId": "dfa04e5a17584aa9b3a9637f10ce2e95fcd6343fb81e8c634922b21a28cc66a8"
+    },
+    "swiftex-wallet": {
+      "walletConnectId": "a4604022bf9199ca6d762c5663d8a6186a9ca4b607b9dcb29bcb81054d6f1091"
+    },
+    "swop": {
+      "walletConnectId": "8d14be896cc1660c604525abaa9911630da87127cbb70f712432fcf2e056b4d8"
+    },
+    "t-wallet": {
+      "walletConnectId": "c3b76dabb8b8161b2848a4c313b559a2cd719b43732c3e0da00f345e571241e5"
+    },
+    "taho": {
+      "walletConnectId": "cf14642fb8736a99b733ada71863241c823743b16e2a822b3dba24e2fa25014d"
+    },
+    "talisman": {
+      "walletConnectId": "93244de23ba91e52e0d2a92ac1370b0ef0ab32120eb8e83c4bd014f3d5d6b709"
+    },
+    "talisman-wallet": {
+      "walletConnectId": "e0c2e199712878ed272e2c170b585baa0ff0eb50b07521ca586ebf7aeeffc598"
+    },
+    "talken-wallet": {
+      "walletConnectId": "ede21300a22965815031c9bf07d72f05f3d4bf26ad00e5fc4f348a1ee4c838b8"
+    },
+    "tangem-wallet": {
+      "walletConnectId": "21030f20fba1a77115858ee3a8bc5841c739ab4537441316e2f4b1d0a8d218af"
+    },
+    "tap-wallet": {
+      "walletConnectId": "a92d512c649e87a5acba5885ac03f62662cff1f647c20a63833eb45a71a6f877"
+    },
+    "tastycrypto": {
+      "walletConnectId": "e9a73053c7d8cf7f8eb732e3da6a8dfd3cc211ea4dc00e0274b9dec6e3316605"
+    },
+    "tellaw-wallet": {
+      "walletConnectId": "ad29e6ba814865dc84111a311f0d64692a6f3fdc220aa1c151034b1e948fe2ef"
+    },
+    "temple": {
+      "web3iconsId": "temple"
+    },
+    "the-pulse-wallet": {
+      "walletConnectId": "a2eb8a1c403a4440b2f578e9deb185b8e22cf4ec2a2a58441032b84b13aaab87"
+    },
+    "the-real-u": {
+      "walletConnectId": "96facca2309d99f848aaa8d90206c8f06ef06511d97c494b27eb9cfa957153ef"
+    },
+    "theta-wallet": {
+      "walletConnectId": "43832260665ea0d076f9af1ee157d580bb0eb44ca0415117fef65666460a2652"
+    },
+    "thirdweb": {
+      "walletConnectId": "a5b3b5055ba7333811fcb80222a421bb6ac541b3eccf99edb6d0e5040bb008e7"
+    },
+    "tholos": {
+      "walletConnectId": "21af5c7a9c01793077b61aecbb4bb5648e9be62a6a0a42c5f4d2ff05d4e00d5c"
+    },
+    "thorwallet": {
+      "walletConnectId": "19fcea5bdddbf5abbb9ecdcb53acf6fb17da23ab0984ee1dbe487688d8d4ffe7"
+    },
+    "tidus-wallet": {
+      "walletConnectId": "ca331388cfe708d3c0fb094f4b08fb3c7ebd7778d3dfdcecb728990e178a3d81"
+    },
+    "timeless-x": {
+      "walletConnectId": "344d0e58b139eb1b6da0c29ea71d52a8eace8b57897c6098cb9b46012665c193"
+    },
+    "tk-finance": {
+      "walletConnectId": "e3787ea98d014ca77e2c3794db97c02ef8bcb39347705f5e79502a55434a1ecf"
+    },
+    "tobi": {
+      "walletConnectId": "fa977f7d37f533bd283e44268d020c6852433f091f5373dd33ae7dc0d4522e9a"
+    },
+    "tofee-wallet-official": {
+      "walletConnectId": "07ec86ddaacafca12de3be87d07ffd13c2d67586bdb9aa00911a103306e8cb4d"
+    },
+    "token-pocket": {
+      "web3iconsId": "token-pocket",
+      "walletConnectId": "20459438007b75f4f4acb98bf29aa3b800550309646d375da5fd4aac6c2a2c66"
+    },
+    "tokenb": {
+      "walletConnectId": "d64f041c77e248e6c24b791616f9bcd652fd2183dd590a1156e13ebfa0d15f74"
+    },
+    "tokoin-my-t-wallet": {
+      "walletConnectId": "dacf9f750e579e7aa93a752117fb3870a5bfc2e967441b477cef5e6f1458e33d"
+    },
+    "tomi-wallet": {
+      "walletConnectId": "e053718e3e968b085a0ae5d11ce1c3d74ba6918c27319c70fc358a48138a5cc4"
+    },
+    "tomo-wallet": {
+      "walletConnectId": "5e4a8cc31d062b78a7ad9e017135574809b01c4dbbf30e4dbb467ddd43025618"
+    },
+    "topnod": {
+      "walletConnectId": "2889263504a6ad34db5633f47cced37611f35178c159604873a95f00cecab3a4"
+    },
+    "torus": {
+      "walletConnectId": "3fecad5e2f0a30aba97edea69ebf015884a9b8a9aec93e66d4b4b695fee1f010"
+    },
+    "transi": {
+      "walletConnectId": "02d7e6551ab805d301bde5c9d8cd51d791a73effab6a8b2460e4d9e9e81fdee9"
+    },
+    "treasure": {
+      "walletConnectId": "8c833aef87349fe7c187318e60db600a1f81035fdda18372ebda1f039ea02733"
+    },
+    "trezor": {
+      "web3iconsId": "trezor"
+    },
+    "trezor-suite": {
+      "walletConnectId": "6b0182d679b72eb2733dec38d9dee70551cc16a6ce5e7a7f4155ffb6f493c521"
+    },
+    "tronlink": {},
+    "trust": {
+      "web3iconsId": "trust",
+      "walletConnectId": "4622a2b2d6af1c9844944291e5e7351a6aa24cd7b23099efac1b2fd875da31a0"
+    },
+    "trust-asset-wallet": {
+      "walletConnectId": "73e8db145c6b2a2a11444e835a4144416c0361342dec4c7c1bc17f85223aec93"
+    },
+    "trustee-wallet": {
+      "walletConnectId": "63488e0e0679da829dd964a670f2d0bf8643f52aa2d5a8a8539c3a4fcad6a78a"
+    },
+    "trustkeys-web3-socialfi": {
+      "walletConnectId": "38692c32358198bc36b2775615ae615ad0f40404452993de2384ef64b2c5ca61"
+    },
+    "ttchain-wallet": {
+      "walletConnectId": "334493e74c93d58950032b568da450a60a457b3b2e2d86ead6642c955927484b"
+    },
+    "tucop-wallet": {
+      "walletConnectId": "12f913ed1cba36d11c175ffaea4157864f3363a690ecf3cc24e9683ef9ce2915"
+    },
+    "tychi-wallet": {
+      "walletConnectId": "9d53d12a6d7e1d80d3cea3d7d29d9549c0c0c7af1bdae5e44db87cc9edad7ebf"
+    },
+    "u-wallet": {
+      "walletConnectId": "053ac0ac602e0969736941cf5aa07a3af57396d4601cb521a173a626e1015fb1"
+    },
+    "u2u-wallet": {
+      "walletConnectId": "9e14926bb64fa2ff359c3acbd75bb675b09efa6f72aed049616a053827140025"
+    },
+    "ukey-wallet": {
+      "walletConnectId": "ec1fddec78ac2ae4d3c2e1215740399885381819c91a4254006177df0e86688d"
+    },
+    "ukiss-hub": {
+      "walletConnectId": "bfad79e3d89bfb915b1e230000179a8ffc8e04f3f78a396d2e4f3e1a51223529"
+    },
+    "ultimate": {
+      "walletConnectId": "09d3f710148d94993ca9f3ed095594d7cc90ba46137dd803a8904b6dbb4bd89c"
+    },
+    "una-wallet": {
+      "walletConnectId": "8eefa62c2f86b4c73bd68cf5cb178e09d15cbf21399ac5aea234d2b616e9ae9d"
+    },
+    "uniblow": {
+      "walletConnectId": "3a9973b9ee638a3aac3e1d001cabe425bf307602a61faee67942fda314736610"
+    },
+    "unido": {
+      "walletConnectId": "1796b3d91d6dcaa47a23f7eeb751b89e95d9ced769ade41caa18a8e9759b673c"
+    },
+    "unipass": {
+      "web3iconsId": "unipass"
+    },
+    "unipass-wallet": {
+      "walletConnectId": "80c7742837ad9455049270303bccd55bae39a9e639b70d931191269d3a76320a"
+    },
+    "uniswap-wallet": {
+      "walletConnectId": "c03dfee351b6fcc421b4494ea33b9d4b92a984f87aa76d1663bb28705e95034a"
+    },
+    "unity-wallet": {
+      "walletConnectId": "cb7d4e00e9c6ba5ca1ef3b3464ce1ccf0468f7526fbda116106302525f929807"
+    },
+    "universalprofiles": {
+      "walletConnectId": "abcfa7caec0d196ce9a99b48ee6d562884f7e38252fe7520c1fc9f53bf0e2fbc"
+    },
+    "unstoppable-domains": {
+      "walletConnectId": "8308656f4548bb81b3508afe355cfbb7f0cb6253d1cc7f998080601f838ecee3"
+    },
+    "unstoppable-wallet": {
+      "walletConnectId": "b3adea6c0b9172c4a49da31d264a7c4aacd70ea04f6af8e8977ecb974298b13c"
+    },
+    "up-io": {
+      "walletConnectId": "d9a4512e145f350693f9beea76326ca17a9af19857af17b3ccfd47f4ecc8bb65"
+    },
+    "upbond-wallet": {
+      "walletConnectId": "65fb5ef9b1fd74d001027a10ede38de96a1704a0ec82994bb47f995d10d6df85"
+    },
+    "uptn": {
+      "walletConnectId": "ca57b69f837149751431765b8cd4ed94ec8f3730b802035764ecf3505b597409"
+    },
+    "utila": {
+      "walletConnectId": "353b9c57ec9fff4971243cde72a38ad4fbbc3565bdc95a54f6a38c43e5480d32"
+    },
+    "utorg": {
+      "walletConnectId": "6af02afbc4ac21d339fb4290d048d48f9f73c3b1a307a994f0474329948c0e5a"
+    },
+    "uvtoken": {
+      "walletConnectId": "f94a60403cdffa9a521dd12f9ec1004a887755c62ecf7bb4e9b8ee6806c26b58"
+    },
+    "uxlink": {
+      "walletConnectId": "5eac22ff46c34944f245146ad45f62923360290d90bb292a4f019668d74f7792"
+    },
+    "uxuy-wallet": {
+      "walletConnectId": "fd3a59ae11f279a8cce8ec9b8b9a4eb3a7d8183ae11e1bf1df08d7bffaa52102"
+    },
+    "valora": {
+      "walletConnectId": "d01c7758d741b363e637a817a09bcf579feae4db9f5bb16f599fdd1f66e2f974"
+    },
+    "velgazm": {
+      "walletConnectId": "26237272f132a7bea0380cc54b25967e84ffa8d78b9d5d68fe65d08f6dece444"
+    },
+    "venly": {
+      "web3iconsId": "venly",
+      "walletConnectId": "a21d06c656c8b1de253686e06fc2f1b3d4aa39c46df2bfda8a6cc524ef32c20c"
+    },
+    "verified-wallet": {
+      "walletConnectId": "05499513435f7dcb97bfd4b84dcd397c2f35ed30f6aeaac3a1a89737c917e379"
+    },
+    "verso": {
+      "walletConnectId": "0563e0724f434298dda37acaa704857ab293b48f1b39b765569a0072de43c0cf"
+    },
+    "veworld-mobile": {
+      "walletConnectId": "f714fdf911e330128463abe9684b8c02f492826db185afecef1e9070410efeec"
+    },
+    "vgx-wallet": {
+      "walletConnectId": "c5e9f8fa3db105e4cdf47523e01651c3ec4355efe800579e2457c595b86ec179"
+    },
+    "vive-wallet": {
+      "walletConnectId": "f6beeb5941e6853084ca2177339120e1c55a28a19ec4e504553cf402ed65c815"
+    },
+    "vkx-wallet": {
+      "walletConnectId": "918b02c222329263fcf7cd555f4a511b55f4211ede0c3aa6b481fc790da0cd2f"
+    },
+    "volsungar": {
+      "walletConnectId": "bc661d7eabed5234520e4c26f9cc03377898f5add94b8d66f9fc3d795dd16fac"
+    },
+    "volt-defi": {
+      "walletConnectId": "d9c7ec94218de654cabce846bb26e6ca0ed8495b4cea9d39def83ba377caab20"
+    },
+    "volt-wallet": {
+      "walletConnectId": "7475258cb07b3e5fbab715aab27f383fc177154f4f0461790c57d97077a47547"
+    },
+    "w3-wallet": {
+      "walletConnectId": "565c5bf4c46b4e1945867d8df722473ee8adc812c10d39da50c2fca4afd18726"
+    },
+    "waap": {
+      "walletConnectId": "fabfcc9d5cb07af83eec986be9a4f8dd1345079708d24bd529f4f861feb2de04"
+    },
+    "wali-wallet": {
+      "walletConnectId": "fd17a3e21cd546a9e3d3f1ec9ff7ce7760978c2579b8d0bb6144c50bca16b86c"
+    },
+    "wallacy": {
+      "walletConnectId": "2c724cd7e745016e6e4acccebdcc49464e13ec17ee23141c4fb2fe8004be2504"
+    },
+    "wallet-3": {
+      "web3iconsId": "wallet-3",
+      "walletConnectId": "34c19e0afafeb86ffa75df1c04445b8840450217e79d30abc6def9aa537fb7d6"
+    },
+    "wallet-connect": {
+      "web3iconsId": "wallet-connect"
+    },
+    "wallet-today": {
+      "walletConnectId": "4e31b586738468554eefc1df9ec954ac81398b7660ded4e32750299ba7ea52df"
+    },
+    "wallet-v": {
+      "walletConnectId": "cce5ade88eff235ffae06f65c16f371ef8fa885cea6e01070e9e4878edcb05e7"
+    },
+    "walletverse": {
+      "walletConnectId": "fb89797a75f4547b3c90c1eeb378d0df0423ea75606bb0193c4d873ef2e2150b"
+    },
+    "walllet-com": {
+      "walletConnectId": "e4a1c7bbe47145640f527c91d25e5d8a4d3db0979668f2d3a95268cfb209f248"
+    },
+    "webauth": {
+      "walletConnectId": "c34de246586459b8a33e82efe825fec5f75ac6cee50098e76abfd8161de827f2"
+    },
+    "wemix-play": {
+      "walletConnectId": "4eb754ffaf9e177eef0ef26f82b7c2fdf8d7178c52682704bf3e7830071d3427"
+    },
+    "wemixwallet": {
+      "walletConnectId": "fa9c3adc4f0bbe263db1565d200f776e5da900ead0f1914e0ecbf8b313d268e9"
+    },
+    "whitewallet": {
+      "walletConnectId": "8b68d7428a3a80a7390a21c1a0019348d58b3d29bd4efbd9da3cb9f231251933"
+    },
+    "wigwam": {
+      "walletConnectId": "0cb0c532b518aa842786d5167e13df22046bc9301b6677808d7134c3d7366a9d"
+    },
+    "wok-wallet": {
+      "walletConnectId": "bcd6b23290587a75bccb08d4ddd0718ac1c9305baa509b35049d9106eb4a7b11"
+    },
+    "wombat": {
+      "walletConnectId": "cb604c517064f096976972384dc89948a5c850bca9b04866a443e10171d5965d"
+    },
+    "wow-earn": {
+      "walletConnectId": "b06656d0b04f34279945f36452bc4089e8b62a44e1d58f9e98807525ac37af06"
+    },
+    "xcapit": {
+      "walletConnectId": "24fa79ebaafca330af474d828d3d1d4b20b4d7f93f7d2fd4986ddafee5e51b14"
+    },
+    "xdefi": {
+      "web3iconsId": "xdefi"
+    },
+    "xellar": {
+      "walletConnectId": "7819f9cd07e8d7101a483087869f1e57b7d448f3ec5f4ef3eda63c19b926dc17"
+    },
+    "xenea-wallet": {
+      "walletConnectId": "48e11e0de0448147be34e0cccdeb84e90e7355e7f01f6f2bc5a31ad73a184985"
+    },
+    "xfun-wallet": {
+      "walletConnectId": "c39d8ee468e50474fdf3a0bd6b981be404d4671e2702a3d633aae95bcbaa032a"
+    },
+    "xova": {
+      "walletConnectId": "1cf4c1fcf6bea70a78e28518698b8a10636c0305dd0d24463021d85e71f21841"
+    },
+    "xportal": {
+      "walletConnectId": "4119a5b3e5ebc809b6a3680a280ae517b92fead02e4c07b7cec0d3385c87aee2"
+    },
+    "xucre": {
+      "walletConnectId": "3e2f036d9c513d07af5468ad7672e42a27432a54eb1242e498d1a1be1f488c4d"
+    },
+    "xverse-wallet": {
+      "walletConnectId": "2a87d74ae02e10bdd1f51f7ce6c4e1cc53cd5f2c0b6b5ad0d7b3007d2b13de7b"
+    },
+    "yo-wallet": {
+      "walletConnectId": "6db5c2cd78ea5a09e820b7543dacc90bf3b1727e5bbaddff544b301de1f74f39"
+    },
+    "youba": {
+      "walletConnectId": "682095eadf8c068064ffc2777e7e9d936469debda32c997b301b79f9cd87cd54"
+    },
+    "yowallet": {
+      "walletConnectId": "f9b40e3615afddce7aea739d37d543b922e5f70a4f30b886b6b59062c43b2437"
+    },
+    "yuse-wallet": {
+      "walletConnectId": "4b0ef81be0008b86e873d57554e533a7b93b99dd6e9376ae4cbb4fea29b64269"
+    },
+    "zeal": {
+      "walletConnectId": "e6d7b916732325821a4016c374dec9e2d58becdac154ce3ea20db1fd9fe1d57e"
+    },
+    "zelcore": {
+      "walletConnectId": "d166c283d59164538cdc50e414546a7433d5f62b9410c9aa563e4e2ec496a106"
+    },
+    "zelus": {
+      "walletConnectId": "00e39f835988d1bb783b2a0748e18bc6278dec03492d00b0e102a466cd8b3d77"
+    },
+    "zelus-wallet": {
+      "walletConnectId": "32074fa3b78ad30b7847e28ce1ffd6aecbd36415156cfe9f5fe5aa15f31c596e"
+    },
+    "zengo": {
+      "web3iconsId": "zengo"
+    },
+    "zengo-wallet": {
+      "walletConnectId": "9414d5a85c8f4eabc1b5b15ebe0cd399e1a2a9d35643ab0ad22a6e4a32f596f0"
+    },
+    "zerion": {
+      "web3iconsId": "zerion",
+      "walletConnectId": "ecc4036f814562b41a5268adc86270fba1365471402006302e70169465b7ac18"
+    },
+    "zkx-wallet": {
+      "walletConnectId": "2905006198f0f38def00103384983a5fc6c17fa61949c1341515d2e3d8ea14e5"
+    },
+    "zypto": {
+      "walletConnectId": "482779b01ffd93b70c1f62e7905658ca1a6b02799f498b07cce423f7841aed75"
+    }
+  }
+}
