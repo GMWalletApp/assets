@@ -2733,6 +2733,12 @@
       "url": "https://citrea.xyz/bridge"
     },
     {
+      "id": "cl8y-dex",
+      "name": "CL8Y DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cl8y-dex/logo.webp",
+      "url": "https://dex.cl8y.com"
+    },
+    {
       "id": "claimswap-v1",
       "name": "ClaimSwap V1",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/claimswap-v1/logo.webp",
@@ -6013,6 +6019,12 @@
       "name": "HyperFlow",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hyperflow/logo.webp",
       "url": "https://hyperflow.fun/"
+    },
+    {
+      "id": "hyperfx",
+      "name": "HyperFX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hyperfx/logo.webp",
+      "url": ""
     },
     {
       "id": "hyperindex",
