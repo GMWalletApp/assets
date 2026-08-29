@@ -2349,6 +2349,12 @@
       "url": "https://canonic.trade"
     },
     {
+      "id": "cantex",
+      "name": "Cantex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cantex/logo.webp",
+      "url": ""
+    },
+    {
       "id": "canto",
       "name": "Canto",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/canto/logo.webp",
@@ -6127,6 +6133,18 @@
       "name": "IBC",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ibc/logo.webp",
       "url": "https://www.ibcprotocol.dev"
+    },
+    {
+      "id": "icarus-cl",
+      "name": "Icarus CL",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/icarus-cl/logo.webp",
+      "url": "https://icarus.finance"
+    },
+    {
+      "id": "icarus-v2",
+      "name": "Icarus V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/icarus-v2/logo.webp",
+      "url": "https://icarus.finance"
     },
     {
       "id": "icdex",
@@ -13429,6 +13447,12 @@
       "name": "Telos Swap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/telos-swap/logo.webp",
       "url": "https://www.tswaps.com"
+    },
+    {
+      "id": "tempest",
+      "name": "Tempest",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tempest/logo.webp",
+      "url": ""
     },
     {
       "id": "temple",
