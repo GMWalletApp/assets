@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "main": "Main navigation",
+    "icons": "Icons",
+    "usage": "Usage",
+    "usageMobile": "Docs"
+  },
+  "theme": {
+    "label": "Theme",
+    "system": "System theme",
+    "light": "Light theme",
+    "dark": "Dark theme"
+  },
+  "actions": {
+    "switchLanguage": "Switch to Chinese",
+    "github": "Open GitHub repository",
+    "view": "View",
+    "clearSearch": "Clear search",
+    "copy": "Copy {{label}}",
+    "copyLinkOrCommand": "Copy link or command"
+  },
+  "home": {
+    "badge": "Asset registry",
+    "title": "Every crypto asset icon, in one place",
+    "description": "Browse networks, tokens, exchanges, wallets, DApps, and swap providers. Every preview is resolved by CryptoIdentity with optional network badges.",
+    "assets": "assets",
+    "categories": "Six asset categories",
+    "searchLabel": "Search assets",
+    "searchPlaceholder": "Search by name, symbol, network, or provider",
+    "loadErrorTitle": "Unable to load the asset catalog",
+    "loadErrorDescription": "Refresh the page and try again.",
+    "empty": "No assets match the current filters.",
+    "loadingMore": "Loading more assets",
+    "remaining": "remaining",
+    "updated": "Catalog updated",
+    "loading": "Loading assets",
+    "filters": {
+      "all": "All",
+      "native": "Networks",
+      "token": "Tokens",
+      "exchange": "Exchanges",
+      "wallet": "Wallets",
+      "dapp": "DApps",
+      "swap-provider": "Swap providers"
+    }
+  },
+  "assetBadges": {
+    "network": "network",
+    "token": "token",
+    "exchange": "exchange",
+    "wallet": "wallet",
+    "dapp": "DApp",
+    "swap-provider": "swap provider"
+  },
+  "usage": {
+    "badge": "shadcn registry",
+    "title": "Install CryptoIdentity",
+    "description": "Install the complete folder with one command. The component handles networks, tokens, exchanges, wallets, DApps, and swap-provider icons with badges, loading skeletons, and adaptive backgrounds.",
+    "anyStackTitle": "Any technology stack",
+    "anyStackDescription": "Native Web, Vue, Svelte, mobile, and server applications can read logoURI from the compressed catalogs without installing the component.",
+    "directTab": "Direct access",
+    "catalogTab": "Catalog lookup",
+    "extensionTitle": "Use the catalog file extension",
+    "extensionDescription": "Wallet and exchange logos may be PNG or SVG. Obtain the complete logoURI before loading it directly or converting its CDN.",
+    "directLinks": "Copyable jsDelivr URLs",
+    "catalogDescription": "Download and decompress the relevant catalog, match by chain, address, ID, or name, and use logoURI. The component normalizes supported sources to jsDelivr while retaining mirror fallbacks.",
+    "directInstallTitle": "Direct install",
+    "directInstallDescription": "Install without configuring registries. The default endpoint is cdn.jsdmirror.com.",
+    "namedRegistryTitle": "Named Registry",
+    "namedRegistryDescription": "When @gmwallet is configured, the install command is shorter.",
+    "componentTitle": "One component for every identity",
+    "componentDescription": "Pass an icon descriptor; tokens can include a network corner badge.",
+    "networkTab": "Network",
+    "providersTab": "Platforms & DApps",
+    "featuresTitle": "Component capabilities",
+    "resources": {
+      "network": "Network",
+      "token": "Token",
+      "exchange": "Exchange",
+      "wallet": "Wallet",
+      "dapp": "DApp",
+      "swapProvider": "Swap provider"
+    },
+    "features": {
+      "apiTitle": "Unified API",
+      "apiDescription": "network, token, exchange, wallet, dapp, and swap-provider use the same component.",
+      "backgroundTitle": "Adaptive background",
+      "backgroundDescription": "Derives a readable surface from each icon in light and dark themes.",
+      "loadingTitle": "Loading feedback",
+      "loadingDescription": "Built-in skeletons prevent layout shifts while images load.",
+      "badgeTitle": "Composable badges",
+      "badgeDescription": "cornerIcon can show a token network or another identity."
+    }
+  }
+}

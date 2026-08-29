@@ -109,7 +109,8 @@ The preview is a precision asset atlas for developers and wallet operators. It c
 technical surface with a dense but scannable icon grid. Metallic black and silver come from the
 GMWallet mark; electric blue is reserved for focus, selection, links, and actionable status. Light
 and dark themes are first-class and preserve the same hierarchy rather than mechanically inverting
-colors. The component contract follows shadcn UI. Surface hierarchy is adapted from the catalog's
+colors. English and Simplified Chinese are first-class locales; a saved choice overrides browser
+language detection. The component contract follows shadcn UI. Surface hierarchy is adapted from the catalog's
 Vercel reference and crypto-asset density from its Coinbase reference; these are reverse-engineered
 references, not official brand specifications.
 
@@ -155,7 +156,10 @@ Use shadcn UI primitives for buttons, inputs, selects, tabs, badges, alerts, dia
 skeletons. `CryptoIdentity` is the only crypto icon renderer and owns loading, mirror fallback,
 dominant-color background, dark-mode adaptation, and corner badges. Asset cards expose a clear
 hover and keyboard-focus state. Loading uses localized skeletons or a compact spinner; empty and
-error states must explain the next action. Dialogs close with Escape and restore focus.
+error states must explain the next action. Header theme, language, and GitHub controls use matching
+36px buttons with 18px icons and the same visual hierarchy. Theme and language icon changes use a
+snappy Morphicons transition that honors the user's reduced-motion preference. Dialogs close with
+Escape and restore focus.
 
 Motion is limited to 150–200ms color, shadow, and transform transitions. Respect
 `prefers-reduced-motion` by removing lifts, pulses, and nonessential transitions.
@@ -165,6 +169,7 @@ Motion is limited to 150–200ms color, shadow, and transform transitions. Respe
 - Keep filters and counts visible without dominating the asset grid.
 - Use semantic theme tokens instead of hard-coded zinc or slate values.
 - Preserve equal information density and contrast in light and dark themes.
+- Keep English and Simplified Chinese keys structurally aligned; do not mix localized UI with hard-coded copy.
 - Use `CryptoIdentity` everywhere a crypto-related image appears.
 - Show long addresses and URLs in a monospaced, copyable detail row.
 - Refer to alternate CDN endpoints simply as mirrors, without geographic labels.

@@ -8,7 +8,21 @@ describe("resolveIconUrls", () => {
     vi.unstubAllGlobals();
   });
 
-  it("returns an empty list for blank names", async () => {
-    await expect(resolveIconUrls({ type: "wallet", name: "  " })).resolves.toEqual([]);
+  it.each(["wallet", "token"] as const)(
+    "returns an empty list for blank %s names",
+    async (type) => {
+      const query =
+        type === "token"
+          ? ({ type, name: "  ", network: "ethereum" } as const)
+          : ({ type, name: "  " } as const);
+
+      await expect(resolveIconUrls(query)).resolves.toEqual([]);
+    },
+  );
+
+  it("returns an empty list for a blank token network", async () => {
+    await expect(resolveIconUrls({ type: "token", name: "USDT", network: "  " })).resolves.toEqual(
+      [],
+    );
   });
 });

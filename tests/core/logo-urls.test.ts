@@ -5,7 +5,7 @@ import {
 } from "../../registry/default/crypto-identity/lib/logo-urls";
 
 describe("resolveLogoUrls", () => {
-  it("uses all repository mirrors in order and preserves the catalog URL", () => {
+  it("uses all configured repository mirrors in order", () => {
     const original =
       "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/rainbow/logo.png";
 
@@ -18,14 +18,28 @@ describe("resolveLogoUrls", () => {
     expect(urls.at(-1)).toBe(original);
   });
 
-  it("rewrites Trust Wallet and jsDelivr URLs through jsdmirror", () => {
-    expect(
-      resolveLogoUrls("https://assets-cdn.trustwallet.com/blockchains/ethereum/info/logo.png")[0],
-    ).toBe(
-      "https://cdn.jsdmirror.com/gh/trustwallet/assets@master/blockchains/ethereum/info/logo.png",
+  it("maps Trust Wallet paths to the configured assets repository", () => {
+    const source = "https://assets-cdn.trustwallet.com/blockchains/ethereum/info/logo.png";
+    const urls = resolveLogoUrls(source);
+
+    expect(urls[0]).toBe(
+      "https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/blockchains/ethereum/info/logo.png",
     );
+    expect(urls).not.toContain(source);
+  });
+
+  it("maps generated Trust Wallet paths to the configured assets repository", () => {
+    const replaced =
+      "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/base/assets/0x1/logo.png";
+    const urls = resolveLogoUrls(replaced, "https://mirror.example/assets/");
+
+    expect(urls[0]).toBe("https://mirror.example/assets/blockchains/base/assets/0x1/logo.png");
+    expect(urls).not.toContain(replaced);
+  });
+
+  it("maps other supported repository URLs to the configured assets repository", () => {
     expect(resolveLogoUrls("https://cdn.jsdelivr.net/gh/example/assets@main/logo.svg")[0]).toBe(
-      "https://cdn.jsdmirror.com/gh/example/assets@main/logo.svg",
+      "https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/logo.svg",
     );
   });
 
@@ -38,7 +52,7 @@ describe("resolveLogoUrls", () => {
     expect(
       canonicalLogoUrl("https://assets-cdn.trustwallet.com/blockchains/ethereum/info/logo.png"),
     ).toBe(
-      "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/info/logo.png",
+      "https://cdn.jsdelivr.net/gh/GMWalletApp/assets@main/blockchains/ethereum/info/logo.png",
     );
   });
 

@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
 import { AssetIdentity } from "@/components/asset-identity";
 import { Badge } from "@/components/ui/badge";
 import { type AssetEntry, assetBadge, assetName, assetSecondary, assetSymbol } from "@/lib/assets";
 
 export function AssetCard({ asset, onSelect }: { asset: AssetEntry; onSelect: () => void }) {
+  const { t } = useTranslation();
+  const badge = assetBadge(asset);
   return (
     <button
-      aria-label={`查看 ${assetName(asset)}`}
+      aria-label={`${t("actions.view")} ${assetName(asset)}`}
       className="flex min-h-36 w-full flex-col items-center rounded-xl border border-border bg-card p-3 text-center shadow-xs transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-16px_color-mix(in_oklab,var(--primary)_38%,transparent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:min-h-40 sm:p-4"
       type="button"
       onClick={onSelect}
@@ -16,7 +19,9 @@ export function AssetCard({ asset, onSelect }: { asset: AssetEntry; onSelect: ()
         {assetName(asset)}
       </span>
       <Badge className="mt-auto max-w-full font-mono text-[10px]" variant="secondary">
-        <span className="truncate">{assetSecondary(asset) || assetBadge(asset)}</span>
+        <span className="truncate">
+          {assetSecondary(asset) || t(`assetBadges.${badge}`, { defaultValue: badge })}
+        </span>
       </Badge>
     </button>
   );

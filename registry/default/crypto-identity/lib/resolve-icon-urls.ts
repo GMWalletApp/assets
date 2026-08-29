@@ -5,7 +5,7 @@ import {
   resolveSwapProviderCatalogUrls,
   resolveTokenCatalogUrls,
 } from "./catalog";
-import { normalizeDapp, normalizeSlug } from "./normalize";
+import { normalizeAssetName, normalizeNetworkSlug } from "./normalize";
 import type { AssetQuery } from "./types";
 
 /** Resolve ordered icon URL candidates for a token, network, exchange, wallet, DApp, or swap provider. */
@@ -13,13 +13,14 @@ export async function resolveIconUrls(
   query: AssetQuery,
   preferredBaseUrl?: string,
 ): Promise<string[]> {
-  if (query.type === "token") {
-    return resolveTokenCatalogUrls(query, preferredBaseUrl);
-  }
-
-  const name = query.type === "dapp" ? normalizeDapp(query.name) : normalizeSlug(query.name);
-  if (!name) {
+  if (!normalizeAssetName(query.type, query.name)) {
     return [];
+  }
+  if (query.type === "token") {
+    if (!normalizeNetworkSlug(query.network)) {
+      return [];
+    }
+    return resolveTokenCatalogUrls(query, preferredBaseUrl);
   }
 
   switch (query.type) {

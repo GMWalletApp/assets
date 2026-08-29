@@ -12,12 +12,21 @@ import type { TokenAssetQuery } from "./types";
 
 interface CatalogAsset {
   address?: string | null;
+  assetId?: string;
   chain?: string;
   id?: string;
   kind?: "native" | "token";
   logoURI?: string;
   name?: string;
   symbol?: string;
+}
+
+type CatalogNameField = "address" | "assetId" | "name" | "symbol";
+
+interface TokenCatalogIndex {
+  byAddress: Map<string, CatalogAsset>;
+  byName: Map<string, CatalogAsset>;
+  nativeByName: Map<string, CatalogAsset>;
 }
 
 interface TokenCatalog {
@@ -38,7 +47,10 @@ interface SwapProviderCatalog {
 }
 
 const catalogRequests = new Map<string, Promise<unknown>>();
+const namedAssetIndexes = new WeakMap<CatalogAsset[], Map<string, CatalogAsset>>();
+const tokenCatalogIndexes = new WeakMap<CatalogAsset[], TokenCatalogIndex>();
 const textDecoder = new TextDecoder();
+const TOKEN_NAME_FIELDS = ["assetId", "address", "name", "symbol"] as const;
 
 export async function resolveTokenCatalogUrls(
   query: TokenAssetQuery,
@@ -47,17 +59,13 @@ export async function resolveTokenCatalogUrls(
   const catalog = await loadCatalog<TokenCatalog>(CATALOG_PATHS.tokens, preferredBaseUrl);
   const network = normalizeNetworkSlug(query.network);
   const address = normalize(query.contractAddress);
-  const symbol = normalize(query.name);
+  const name = normalize(query.name);
   const tokens = catalog?.tokens ?? [];
-  const matches = (token: CatalogAsset) => {
-    if (!token.logoURI || normalizeNetworkSlug(token.chain) !== network) {
-      return false;
-    }
-    return address ? normalize(token.address) === address : normalize(token.symbol) === symbol;
-  };
+  const index = getTokenCatalogIndex(tokens);
+  const key = tokenLookupKey(network, address || name);
   const match = address
-    ? tokens.find(matches)
-    : (tokens.find((token) => token.kind === "native" && matches(token)) ?? tokens.find(matches));
+    ? index.byAddress.get(key)
+    : (index.nativeByName.get(key) ?? index.byName.get(key));
   return resolveCatalogAssetLogoUrls(match, preferredBaseUrl);
 }
 
@@ -67,9 +75,13 @@ export async function resolveNetworkCatalogUrls(
 ): Promise<string[]> {
   const catalog = await loadCatalog<TokenCatalog>(CATALOG_PATHS.tokens, preferredBaseUrl);
   const network = normalizeNetworkSlug(name);
+  const identity = normalize(name);
   const match = catalog?.tokens?.find(
     (token) =>
-      token.logoURI && token.kind === "native" && normalizeNetworkSlug(token.chain) === network,
+      token.logoURI &&
+      token.kind === "native" &&
+      (normalizeNetworkSlug(token.chain) === network ||
+        matchesNormalizedName(token, identity, ["assetId", "name", "symbol"])),
   );
   return resolveCatalogAssetLogoUrls(match, preferredBaseUrl);
 }
@@ -112,9 +124,65 @@ function findNamedCatalogAsset(
   normalizeName: (value?: string | null) => string,
 ): CatalogAsset | undefined {
   const target = normalizeName(name);
-  return assets?.find(
-    (asset) => normalizeName(asset.id) === target || normalizeName(asset.name) === target,
-  );
+  if (!assets) {
+    return undefined;
+  }
+  let index = namedAssetIndexes.get(assets);
+  if (!index) {
+    index = new Map();
+    for (const asset of assets) {
+      addFirst(index, normalizeName(asset.id), asset);
+      addFirst(index, normalizeName(asset.name), asset);
+    }
+    namedAssetIndexes.set(assets, index);
+  }
+  return index.get(target);
+}
+
+function matchesNormalizedName(
+  asset: CatalogAsset,
+  target: string,
+  fields: readonly CatalogNameField[],
+): boolean {
+  return fields.some((field) => normalize(asset[field]) === target);
+}
+
+function getTokenCatalogIndex(tokens: CatalogAsset[]): TokenCatalogIndex {
+  const cached = tokenCatalogIndexes.get(tokens);
+  if (cached) {
+    return cached;
+  }
+  const index: TokenCatalogIndex = {
+    byAddress: new Map(),
+    byName: new Map(),
+    nativeByName: new Map(),
+  };
+  for (const token of tokens) {
+    if (!token.logoURI) {
+      continue;
+    }
+    const network = normalizeNetworkSlug(token.chain);
+    addFirst(index.byAddress, tokenLookupKey(network, normalize(token.address)), token);
+    for (const field of TOKEN_NAME_FIELDS) {
+      const key = tokenLookupKey(network, normalize(token[field]));
+      addFirst(index.byName, key, token);
+      if (token.kind === "native") {
+        addFirst(index.nativeByName, key, token);
+      }
+    }
+  }
+  tokenCatalogIndexes.set(tokens, index);
+  return index;
+}
+
+function tokenLookupKey(network: string, name: string): string {
+  return network && name ? `${network}\u0000${name}` : "";
+}
+
+function addFirst(index: Map<string, CatalogAsset>, key: string, asset: CatalogAsset): void {
+  if (key && !index.has(key)) {
+    index.set(key, asset);
+  }
 }
 
 function resolveCatalogAssetLogoUrls(

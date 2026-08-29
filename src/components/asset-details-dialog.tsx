@@ -1,4 +1,5 @@
 import { Check, Copy, ExternalLink } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { AssetIdentity } from "@/components/asset-identity";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -29,6 +30,7 @@ export function AssetDetailsDialog({
   asset: AssetEntry | null;
   onOpenChange: (open: boolean) => void;
 }) {
+  const { t } = useTranslation();
   if (!asset) {
     return null;
   }
@@ -36,7 +38,7 @@ export function AssetDetailsDialog({
   const rows = assetRows(asset);
   return (
     <Dialog open onOpenChange={onOpenChange}>
-      <DialogContent className="inset-x-0 top-auto bottom-0 max-h-[85dvh] max-w-none translate-x-0 translate-y-0 gap-0 overflow-hidden rounded-b-none rounded-t-2xl p-0 sm:top-[50%] sm:left-[50%] sm:bottom-auto sm:max-h-none sm:max-w-2xl sm:translate-x-[-50%] sm:translate-y-[-50%] sm:rounded-lg">
+      <DialogContent className="inset-x-0 top-auto bottom-0 max-h-[85dvh] max-w-none gap-0 overflow-hidden rounded-b-none rounded-t-2xl p-0 translate-0 sm:top-[50%] sm:left-[50%] sm:bottom-auto sm:max-h-none sm:max-w-2xl sm:rounded-lg sm:translate-[-50%]">
         <DialogHeader className="flex-row items-center gap-3 border-b p-4 pr-12 text-left sm:gap-4 sm:p-5 sm:pr-12">
           <AssetIdentity aria-hidden="true" asset={asset} className="size-12 sm:size-14" />
           <div className="min-w-0">
@@ -49,7 +51,9 @@ export function AssetDetailsDialog({
         <ScrollArea className="max-h-[68dvh] sm:max-h-[65vh]">
           <div className="space-y-4 p-4 sm:space-y-5 sm:p-5">
             <div className="flex flex-wrap gap-2">
-              <Badge>{assetBadge(asset)}</Badge>
+              <Badge>
+                {t(`assetBadges.${assetBadge(asset)}`, { defaultValue: assetBadge(asset) })}
+              </Badge>
               {"token" in asset ? <Badge variant="outline">{asset.token.status}</Badge> : null}
               {"token" in asset && asset.token.hot ? <Badge variant="secondary">hot</Badge> : null}
             </div>
@@ -98,6 +102,7 @@ function assetRows(asset: AssetEntry): Detail[] {
 }
 
 function DetailRow({ href, label, value }: Detail) {
+  const { t } = useTranslation();
   const { copied, copy } = useCopyFeedback(value);
 
   return (
@@ -118,7 +123,12 @@ function DetailRow({ href, label, value }: Detail) {
       ) : (
         <span className="min-w-0 break-all font-mono text-xs">{value}</span>
       )}
-      <Button aria-label={`复制 ${label}`} size="icon-xs" variant="ghost" onClick={copy}>
+      <Button
+        aria-label={t("actions.copy", { label })}
+        size="icon-xs"
+        variant="ghost"
+        onClick={copy}
+      >
         {copied ? <Check /> : <Copy />}
       </Button>
     </div>

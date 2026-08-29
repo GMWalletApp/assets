@@ -1,10 +1,10 @@
 export interface TokenAssetQuery {
   type: "token";
-  /** Token symbol or canonical asset name. */
+  /** Token symbol or asset name. Matching is case-insensitive. */
   name: string;
-  /** Canonical repository network key, such as `ethereum`, `smartchain`, or `tron`. */
+  /** Network name or common alias. Casing and separators are normalized internally. */
   network: string;
-  /** Chain-specific token contract address. */
+  /** Chain-specific token contract address. Matching is case-insensitive where applicable. */
   contractAddress?: string | null;
   /** @deprecated Assets are always resolved from the compressed catalog. */
   includeCatalog?: boolean;
@@ -12,7 +12,7 @@ export interface TokenAssetQuery {
 
 interface CatalogAssetQuery<T extends "exchange" | "swap-provider" | "wallet"> {
   type: T;
-  /** Catalog asset key or display name. */
+  /** Catalog ID or display name. Casing and separators are normalized internally. */
   name: string;
   /** @deprecated Assets are always resolved from the compressed catalog. */
   includeCatalog?: boolean;
@@ -20,7 +20,7 @@ interface CatalogAssetQuery<T extends "exchange" | "swap-provider" | "wallet"> {
 
 interface DappAssetQuery {
   type: "dapp";
-  /** DApp catalog key or domain name, with or without the png extension. */
+  /** DApp ID or domain, with or without dots, separators, casing, or the PNG suffix. */
   name: string;
   /** @deprecated Assets are always resolved from the compressed catalog. */
   includeCatalog?: boolean;
@@ -28,7 +28,7 @@ interface DappAssetQuery {
 
 interface NetworkAssetQuery {
   type: "network";
-  /** Repository asset key without a file extension. */
+  /** Network name or common alias. Casing and separators are normalized internally. */
   name: string;
 }
 

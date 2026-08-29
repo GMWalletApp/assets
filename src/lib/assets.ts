@@ -164,11 +164,11 @@ export function identityBaseUrl(): string {
   return DEFAULT_CDN_BASE_URL;
 }
 
-export function formatDate(value?: string): string {
+export function formatDate(value?: string, locale = "en-US"): string {
   if (!value) {
     return "-";
   }
-  return new Intl.DateTimeFormat("zh-CN", {
+  return new Intl.DateTimeFormat(locale, {
     dateStyle: "medium",
     timeStyle: "short",
   }).format(new Date(value));
@@ -198,5 +198,5 @@ async function fetchCompressedJsonFromMirrors<T>(path: string, signal: AbortSign
       lastError = error;
     }
   }
-  throw lastError instanceof Error ? lastError : new Error("无法加载资产索引");
+  throw lastError instanceof Error ? lastError : new Error("Asset catalog unavailable");
 }

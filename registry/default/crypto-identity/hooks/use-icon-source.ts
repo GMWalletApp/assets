@@ -1,36 +1,35 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { normalize, normalizeAssetName, normalizeNetworkSlug } from "../lib/normalize";
 import { resolveIconUrls } from "../lib/resolve-icon-urls";
-import type { AssetQuery, CryptoIdentityIcon } from "../lib/types";
+import type { CryptoIdentityIcon } from "../lib/types";
 
 export function useIconSource(icon?: CryptoIdentityIcon, preferredBaseUrl?: string) {
   const key = `${stableIconKey(icon)}:${preferredBaseUrl ?? ""}`;
-  const activeKeyRef = useRef(key);
   const iconRef = useRef(icon);
   iconRef.current = icon;
-  const [sources, setSources] = useState<string[]>([]);
+  const [result, setResult] = useState<{ key: string; sources: string[] }>({
+    key: "",
+    sources: [],
+  });
   const [index, setIndex] = useState(0);
-  const [isResolving, setIsResolving] = useState(Boolean(icon));
+  const sources = result.key === key ? result.sources : [];
 
   useEffect(() => {
     const currentIcon = iconRef.current;
-    activeKeyRef.current = key;
-    setSources([]);
     setIndex(0);
-    setIsResolving(Boolean(currentIcon));
     let cancelled = false;
 
     if (!currentIcon) {
       return;
     }
 
-    resolveSources(currentIcon, preferredBaseUrl).then((urls) => {
-      if (cancelled || activeKeyRef.current !== key) {
+    resolveIconUrls(currentIcon, preferredBaseUrl).then((urls) => {
+      if (cancelled) {
         return;
       }
-      setSources(urls);
-      setIsResolving(false);
+      setResult({ key, sources: urls });
     });
 
     return () => {
@@ -42,11 +41,11 @@ export function useIconSource(icon?: CryptoIdentityIcon, preferredBaseUrl?: stri
     setIndex((value) => Math.min(value + 1, sources.length));
   }, [sources.length]);
 
-  return { src: sources[index], isResolving, handleError };
-}
-
-function resolveSources(icon: AssetQuery, preferredBaseUrl?: string) {
-  return preferredBaseUrl ? resolveIconUrls(icon, preferredBaseUrl) : resolveIconUrls(icon);
+  return {
+    src: sources[index],
+    isResolving: Boolean(icon) && result.key !== key,
+    handleError,
+  };
 }
 
 function stableIconKey(icon?: CryptoIdentityIcon): string {
@@ -55,8 +54,8 @@ function stableIconKey(icon?: CryptoIdentityIcon): string {
   }
   return [
     icon.type,
-    icon.name,
-    icon.type === "token" ? icon.network : "",
-    icon.type === "token" ? (icon.contractAddress ?? "") : "",
+    normalizeAssetName(icon.type, icon.name),
+    icon.type === "token" ? normalizeNetworkSlug(icon.network) : "",
+    icon.type === "token" ? normalize(icon.contractAddress) : "",
   ].join(":");
 }

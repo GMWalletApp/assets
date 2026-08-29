@@ -1,5 +1,7 @@
 # GMWallet Assets Registry
 
+**English** | [简体中文](README.zh-CN.md)
+
 Typed icon resolution and editable React components distributed through a shadcn Registry.
 
 ## Setup
@@ -56,8 +58,16 @@ const providerUrls = await resolveIconUrls({
 });
 ```
 
-Supported types are `token`, `network`, `exchange`, `wallet`, `dapp`, and `swap-provider`. Network values use
-repository directory keys such as `ethereum`, `smartchain`, and `tron`.
+Supported types are `token`, `network`, `exchange`, `wallet`, `dapp`, and `swap-provider`. Network names,
+display names, symbols, repository keys, and common aliases are normalized internally.
+
+Catalog matching is normalized and case-insensitive:
+
+| Asset type | Matching fields |
+| --- | --- |
+| Token | Within the requested network, `contractAddress` takes priority; otherwise `name` can match the catalog asset ID, address, display name, or symbol. Native tokens are preferred for ambiguous symbol matches. |
+| Network | `name` can match the chain key or the native asset's ID, display name, or symbol. |
+| Exchange, wallet, DApp, swap provider | `name` can match the catalog record's ID or display name. |
 
 ## Any technology stack
 
@@ -82,8 +92,8 @@ curl -sL https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/support/support.js
 ```
 
 Treat `logoURI` as the source of truth. Assets may be PNG, SVG, or WebP, so consumers should not
-construct paths or assume an extension. The installed resolver also exports `resolveLogoUrls` to
-convert a catalog URL into ordered CDN candidates while retaining the original URL as the final fallback.
+construct paths or assume an extension. The installed resolver maps its repository-relative path
+to ordered mirrors of `GMWalletApp/assets@main`.
 
 ### Direct image access
 
@@ -114,10 +124,13 @@ https://cdn.jsdelivr.net/gh/GMWalletApp/assets@main/support/swap-providers/1inch
 ```
 
 Use the URL returned by the catalog for the requested asset; the examples above are not path templates.
-`canonicalLogoUrl` normalizes supported catalog sources to `https://cdn.jsdelivr.net`, while
-`resolveLogoUrls` adds the preferred mirrors and retains the original source as the final fallback.
+`canonicalLogoUrl` maps supported catalog paths to the configured jsDelivr repository, while
+`resolveLogoUrls` returns the configured repository mirrors in order.
 
 ## React component
+
+Callers provide semantic `type` and `name` values. The resolver handles casing, common network
+aliases, spaces, underscores, hyphens, DApp domains, and optional `.png` suffixes internally.
 
 ```tsx
 import { CryptoIdentity } from "@/components/ui/crypto-identity";
@@ -173,11 +186,17 @@ For a stable snapshot, replace `@package` with a Git commit SHA.
 bun install
 bun run dev
 bun run check
+bun run tailwind:write
 bun run typecheck
 bun run test
 bun run build
 bun run registry:build
 ```
+
+`bun run check` also checks that static Tailwind classes use the canonical form derived from
+`src/styles.css`. Run `bun run tailwind:write` to apply safe replacements in JSX attributes and
+common helpers such as `cn`, `clsx`, and `cva`. Dynamic template expressions are intentionally
+left unchanged. The CLI uses the Tailwind v4 design-system API pinned by this repository.
 
 The preview is a client-rendered Vite SPA configured for Cloudflare Workers Static Assets. Build
 output is written to `dist`, and unknown routes return `index.html` so `/usage` and future client

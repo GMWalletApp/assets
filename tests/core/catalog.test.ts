@@ -25,15 +25,20 @@ describe("compressed catalogs", () => {
 
     const urls = await resolveIconUrls({
       type: "token",
-      name: "USDT",
-      network: "ethereum",
-      contractAddress: "0x1",
+      name: "usdt",
+      network: "Ethereum_Mainnet",
+      contractAddress: "0X1",
     });
 
-    expect(urls).toEqual([
-      "https://cdn.jsdmirror.com/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x1/logo.png",
-      "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x1/logo.png",
-    ]);
+    expect(urls[0]).toBe(
+      "https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/blockchains/ethereum/assets/0x1/logo.png",
+    );
+    expect(urls).toContain(
+      "https://cdn.jsdelivr.net/gh/GMWalletApp/assets@main/blockchains/ethereum/assets/0x1/logo.png",
+    );
+    expect(urls).not.toContain(
+      "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0x1/logo.png",
+    );
     expect(fetchMock).toHaveBeenCalledOnce();
   });
 
@@ -54,7 +59,7 @@ describe("compressed catalogs", () => {
 
     const urls = await resolveIconUrls({
       type: "wallet",
-      name: "Rainbow App",
+      name: "rAiNbOw_App",
     });
     expect(urls[0]).toBe(
       "https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/support/wallets/rainbow/logo.png",
@@ -101,7 +106,7 @@ describe("compressed catalogs", () => {
 
     const urls = await resolveIconUrls({
       type: "dapp",
-      name: "app-uniswap-org",
+      name: "APP.UNISWAP.ORG.PNG",
     });
 
     expect(urls).toContain(
@@ -186,6 +191,32 @@ describe("compressed catalogs", () => {
     expect(urls).toEqual(["https://example.com/native.png"]);
   });
 
+  it.each([
+    ["asset ID", "ethereum:0x1"],
+    ["address", "0X1"],
+    ["display name", "USD Token"],
+    ["symbol", "usdt"],
+  ])("resolves a token by its %s", async (_label, name) => {
+    mockCatalogFetch({
+      "extensions/jsonrpc/data/tokenlist.json.zst": {
+        tokens: [
+          {
+            assetId: "ethereum:0x1",
+            chain: "ethereum",
+            address: "0x1",
+            name: "USD Token",
+            symbol: "USDT",
+            logoURI: "https://example.com/usdt.png",
+          },
+        ],
+      },
+    });
+
+    await expect(
+      resolveIconUrls({ type: "token", name, network: "Ethereum Mainnet" }),
+    ).resolves.toEqual(["https://example.com/usdt.png"]);
+  });
+
   it("resolves network icons from native token catalog entries", async () => {
     const fetchMock = mockCatalogFetch({
       "extensions/jsonrpc/data/tokenlist.json.zst": {
@@ -200,10 +231,30 @@ describe("compressed catalogs", () => {
       },
     });
 
-    const urls = await resolveIconUrls({ type: "network", name: "ethereum" });
+    const urls = await resolveIconUrls({ type: "network", name: "Ethereum Mainnet" });
 
     expect(urls).toEqual(["https://example.com/ethereum.png"]);
     expect(fetchMock).toHaveBeenCalledOnce();
+  });
+
+  it.each(["Ethereum", "eTh"])("resolves a network by the native asset name %s", async (name) => {
+    mockCatalogFetch({
+      "extensions/jsonrpc/data/tokenlist.json.zst": {
+        tokens: [
+          {
+            chain: "ethereum",
+            kind: "native",
+            name: "Ethereum",
+            symbol: "ETH",
+            logoURI: "https://example.com/ethereum.png",
+          },
+        ],
+      },
+    });
+
+    await expect(resolveIconUrls({ type: "network", name })).resolves.toEqual([
+      "https://example.com/ethereum.png",
+    ]);
   });
 
   it("deduplicates concurrent catalog requests", async () => {

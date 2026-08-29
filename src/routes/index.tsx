@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AlertCircle, Database, Search, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { AppFooter, AppHeader } from "@/components/AppChrome";
 import { AssetCard } from "@/components/asset-card";
 import { AssetDetailsDialog } from "@/components/asset-details-dialog";
@@ -26,17 +27,19 @@ export const Route = createFileRoute("/")({ component: Home });
 
 const INITIAL_VISIBLE_COUNT = 96;
 const SKELETON_KEYS = Array.from({ length: 24 }, (_, index) => `asset-skeleton-${index + 1}`);
-const FILTERS: ReadonlyArray<{ label: string; value: AssetFilter }> = [
-  { label: "全部", value: "all" },
-  { label: "网络", value: "native" },
-  { label: "Token", value: "token" },
-  { label: "交易平台", value: "exchange" },
-  { label: "钱包", value: "wallet" },
-  { label: "DApp", value: "dapp" },
-  { label: "兑换服务", value: "swap-provider" },
+const FILTER_VALUES: AssetFilter[] = [
+  "all",
+  "native",
+  "token",
+  "exchange",
+  "wallet",
+  "dapp",
+  "swap-provider",
 ];
 
 function Home() {
+  const { i18n, t } = useTranslation();
+  const locale = i18n.resolvedLanguage === "zh-CN" ? "zh-CN" : "en-US";
   const [filter, setFilter] = useState<AssetFilter>("all");
   const [query, setQuery] = useState("");
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
@@ -51,7 +54,7 @@ function Home() {
       .then(setData)
       .catch((cause: unknown) => {
         if (!controller.signal.aborted) {
-          setError(cause instanceof Error ? cause.message : "无法加载资产索引");
+          setError(cause instanceof Error ? cause.message : "Asset catalog unavailable");
         }
       });
     return () => controller.abort();
@@ -114,18 +117,17 @@ function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <AppHeader activePage="icons" />
-      <main className="mx-auto w-full max-w-[1536px] flex-1 px-3 py-5 sm:px-6 sm:py-8 lg:px-8">
+      <main className="mx-auto w-full max-w-384 flex-1 px-3 py-5 sm:px-6 sm:py-8 lg:px-8">
         <section className="mb-4 grid gap-4 pb-2 sm:mb-7 sm:gap-5 sm:pb-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="max-w-3xl">
             <Badge className="mb-2.5" variant="outline">
-              Asset registry
+              {t("home.badge")}
             </Badge>
             <h1 className="text-balance text-2xl font-semibold tracking-tight sm:text-4xl">
-              加密资产图标，一处查找
+              {t("home.title")}
             </h1>
-            <p className="mt-3 max-w-2xl text-pretty text-sm leading-6 text-muted-foreground sm:text-base">
-              浏览网络、Token、交易平台、钱包、DApp 与兑换服务。预览统一由 CryptoIdentity
-              解析并支持网络角标。
+            <p className="mt-3 max-w-2xl text-pretty text-muted-foreground text-sm/6 sm:text-base">
+              {t("home.description")}
             </p>
           </div>
           <div className="flex items-center gap-2.5 px-0 py-0 text-sm sm:gap-3 sm:rounded-xl sm:border sm:bg-card sm:px-4 sm:py-3 sm:shadow-xs">
@@ -134,15 +136,15 @@ function Home() {
             </div>
             <div>
               <div className="font-medium tabular-nums">
-                {data ? entries.length.toLocaleString() : "—"} 项资产
+                {data ? entries.length.toLocaleString(locale) : "—"} {t("home.assets")}
               </div>
-              <div className="text-xs text-muted-foreground">六类资产类型</div>
+              <div className="text-xs text-muted-foreground">{t("home.categories")}</div>
             </div>
           </div>
         </section>
 
         <div className="sticky top-16 z-30 -mx-3 mb-4 bg-background/95 px-3 py-3 backdrop-blur-xl sm:-mx-6 sm:mb-6 sm:px-6 sm:py-4 lg:-mx-8 lg:px-8">
-          <div className="mx-auto flex max-w-[1472px] flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-3">
+          <div className="mx-auto flex max-w-368 flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-3">
             <Tabs
               className="min-w-0"
               value={filter}
@@ -152,15 +154,11 @@ function Home() {
               }}
             >
               <TabsList className="grid h-auto w-full grid-cols-3 justify-start lg:inline-flex lg:w-fit lg:max-w-full lg:flex-wrap">
-                {FILTERS.map((item) => (
-                  <TabsTrigger
-                    key={item.value}
-                    className="h-10 px-2 lg:h-auto lg:px-3"
-                    value={item.value}
-                  >
-                    {item.label}
+                {FILTER_VALUES.map((value) => (
+                  <TabsTrigger key={value} className="h-10 px-2 lg:h-auto lg:px-3" value={value}>
+                    {t(`home.filters.${value}`)}
                     <span className="font-mono text-[10px] text-muted-foreground">
-                      {counts[item.value]}
+                      {counts[value]}
                     </span>
                   </TabsTrigger>
                 ))}
@@ -169,9 +167,9 @@ function Home() {
             <div className="relative min-w-0 flex-1 lg:min-w-56">
               <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
               <Input
-                aria-label="搜索资产"
+                aria-label={t("home.searchLabel")}
                 className="pl-9 pr-9"
-                placeholder="搜索名称、符号、网络或服务"
+                placeholder={t("home.searchPlaceholder")}
                 value={query}
                 onChange={(event) => {
                   setQuery(event.target.value);
@@ -180,7 +178,7 @@ function Home() {
               />
               {query ? (
                 <Button
-                  aria-label="清除搜索"
+                  aria-label={t("actions.clearSearch")}
                   className="absolute right-1 top-1/2 -translate-y-1/2"
                   size="icon-sm"
                   variant="ghost"
@@ -199,15 +197,15 @@ function Home() {
         {error ? (
           <Alert variant="destructive">
             <AlertCircle />
-            <AlertTitle>资产索引加载失败</AlertTitle>
-            <AlertDescription>{error}。请刷新页面后重试。</AlertDescription>
+            <AlertTitle>{t("home.loadErrorTitle")}</AlertTitle>
+            <AlertDescription>{t("home.loadErrorDescription")}</AlertDescription>
           </Alert>
         ) : null}
 
         {!data && !error ? <AssetSkeletons /> : null}
         {data && filtered.length === 0 ? (
           <div className="rounded-xl border border-dashed py-20 text-center text-sm text-muted-foreground">
-            没有符合当前条件的资产。
+            {t("home.empty")}
           </div>
         ) : null}
         {data && filtered.length > 0 ? (
@@ -224,7 +222,7 @@ function Home() {
             {hasMore ? (
               <div
                 ref={loadMoreRef}
-                aria-label={`正在加载更多，剩余 ${(filtered.length - visibleCount).toLocaleString()} 项`}
+                aria-label={`${t("home.loadingMore")}, ${(filtered.length - visibleCount).toLocaleString(locale)} ${t("home.remaining")}`}
                 className="mt-6 flex justify-center py-4"
                 role="status"
               >
@@ -235,7 +233,13 @@ function Home() {
         ) : null}
       </main>
       <AppFooter
-        meta={data ? <span>索引更新于 {formatDate(data.tokens.updatedAt)}</span> : undefined}
+        meta={
+          data ? (
+            <span>
+              {t("home.updated")} {formatDate(data.tokens.updatedAt, locale)}
+            </span>
+          ) : undefined
+        }
       />
       <AssetDetailsDialog asset={selected} onOpenChange={(open) => !open && setSelected(null)} />
     </div>
@@ -243,9 +247,10 @@ function Home() {
 }
 
 function AssetSkeletons() {
+  const { t } = useTranslation();
   return (
     <div
-      aria-label="正在加载资产"
+      aria-label={t("home.loading")}
       className="grid grid-cols-[repeat(auto-fill,minmax(136px,1fr))] gap-2.5 sm:gap-3"
       role="status"
     >

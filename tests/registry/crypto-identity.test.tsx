@@ -147,12 +147,15 @@ describe("CryptoIdentity", () => {
     core.resolveIconUrls.mockResolvedValue(["wallet.png"]);
     const { container } = render(<CryptoIdentity icon={{ type: "wallet", name: "metamask" }} />);
     await waitFor(() => expect(core.resolveIconUrls).toHaveBeenCalledOnce());
-    expect(core.resolveIconUrls).toHaveBeenCalledWith({ type: "wallet", name: "metamask" });
+    expect(core.resolveIconUrls).toHaveBeenCalledWith(
+      { type: "wallet", name: "metamask" },
+      undefined,
+    );
     expect(container.querySelector("img")?.getAttribute("src")).toBe("wallet.png");
   });
 
   it("uses catalog-resolved DApp mirrors without re-resolving", async () => {
-    core.resolveIconUrls.mockResolvedValue(["catalog.png", "origin.png"]);
+    core.resolveIconUrls.mockResolvedValue(["primary.png", "mirror.png"]);
     const { container } = render(
       <CryptoIdentity icon={{ type: "dapp", name: "app-uniswap-org" }} />,
     );
@@ -161,6 +164,6 @@ describe("CryptoIdentity", () => {
     fireEvent.error(container.querySelector("img") as HTMLImageElement);
 
     expect(core.resolveIconUrls).toHaveBeenCalledOnce();
-    expect(container.querySelector("img")?.getAttribute("src")).toBe("origin.png");
+    expect(container.querySelector("img")?.getAttribute("src")).toBe("mirror.png");
   });
 });

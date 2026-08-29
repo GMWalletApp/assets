@@ -93,7 +93,7 @@ export function CryptoIdentity({
           {image.src ? (
             <AvatarImage
               alt={variant === "avatar" ? icon.name : ""}
-              className="dark:[filter:var(--crypto-identity-dark-filter,none)]"
+              className="dark:filter-(--crypto-identity-dark-filter,none)"
               crossOrigin={imageBackground.crossOrigin}
               src={image.src}
               onError={image.handleError}
@@ -122,7 +122,7 @@ export function CryptoIdentity({
             {corner.src ? (
               <AvatarImage
                 alt=""
-                className="dark:[filter:var(--crypto-identity-dark-filter,none)]"
+                className="dark:filter-(--crypto-identity-dark-filter,none)"
                 crossOrigin={cornerBackground.crossOrigin}
                 src={corner.src}
                 onError={corner.handleError}
