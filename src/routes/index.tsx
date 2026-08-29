@@ -1,8 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AlertCircle, Database, Search, X } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { AppFooter, AppHeader } from "@/components/AppChrome";
+import {
+  APP_GLASS_SURFACE_CLASS,
+  APP_HEADER_HEIGHT,
+  AppFooter,
+  AppHeader,
+} from "@/components/AppChrome";
 import { AssetCard } from "@/components/asset-card";
 import { AssetDetailsDialog } from "@/components/asset-details-dialog";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -22,6 +27,7 @@ import {
   fetchAssetData,
   formatDate,
 } from "@/lib/assets";
+import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -42,10 +48,16 @@ function Home() {
   const locale = i18n.resolvedLanguage === "zh-CN" ? "zh-CN" : "en-US";
   const [filter, setFilter] = useState<AssetFilter>("all");
   const [query, setQuery] = useState("");
+  const deferredQuery = useDeferredValue(query);
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
   const [data, setData] = useState<Awaited<ReturnType<typeof fetchAssetData>> | null>(null);
   const [selected, setSelected] = useState<AssetEntry | null>(null);
   const [error, setError] = useState<string>();
+  const [isToolbarStuck, setIsToolbarStuck] = useState(false);
+  const [toolbarHeight, setToolbarHeight] = useState(0);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const toolbarSentinelRef = useRef<HTMLDivElement>(null);
+  const toolbarRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const controller = new AbortController();
     setData(null);
@@ -60,9 +72,31 @@ function Home() {
     return () => controller.abort();
   }, []);
 
+  useEffect(() => {
+    const sentinel = toolbarSentinelRef.current;
+    if (!sentinel) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsToolbarStuck(!(entry?.isIntersecting ?? true)),
+      { rootMargin: `-${APP_HEADER_HEIGHT}px 0px 0px 0px`, threshold: 0 },
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const toolbar = toolbarRef.current;
+    if (!toolbar) return;
+    const updateToolbarHeight = () =>
+      setToolbarHeight(Math.ceil(toolbar.getBoundingClientRect().height));
+    updateToolbarHeight();
+    const observer = new ResizeObserver(updateToolbarHeight);
+    observer.observe(toolbar);
+    return () => observer.disconnect();
+  }, []);
+
   const entries = useMemo(() => createAssetEntries(data), [data]);
   const searchMatches = useMemo(() => {
-    const normalizedQuery = query.trim().toLocaleLowerCase();
+    const normalizedQuery = deferredQuery.trim().toLocaleLowerCase();
     if (!normalizedQuery) return entries;
     return entries.filter((entry) =>
       [assetName(entry), assetSymbol(entry), assetSecondary(entry)]
@@ -70,7 +104,7 @@ function Home() {
         .toLocaleLowerCase()
         .includes(normalizedQuery),
     );
-  }, [entries, query]);
+  }, [deferredQuery, entries]);
   const counts = useMemo(
     () =>
       searchMatches.reduce<Record<AssetFilter, number>>(
@@ -100,6 +134,17 @@ function Home() {
   const loadMoreRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const focusSearch = (event: KeyboardEvent) => {
+      if (event.key.toLocaleLowerCase() !== "k" || (!event.metaKey && !event.ctrlKey)) return;
+      event.preventDefault();
+      searchInputRef.current?.focus();
+      searchInputRef.current?.select();
+    };
+    window.addEventListener("keydown", focusSearch);
+    return () => window.removeEventListener("keydown", focusSearch);
+  }, []);
+
+  useEffect(() => {
     const target = loadMoreRef.current;
     if (!target || !hasMore) return;
     const observer = new IntersectionObserver(
@@ -116,7 +161,7 @@ function Home() {
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
-      <AppHeader activePage="icons" />
+      <AppHeader activePage="icons" mergedToolbarHeight={isToolbarStuck ? toolbarHeight : 0} />
       <main className="mx-auto w-full max-w-384 flex-1 px-3 py-5 sm:px-6 sm:py-8 lg:px-8">
         <section className="mb-4 grid gap-4 pb-2 sm:mb-7 sm:gap-5 sm:pb-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="max-w-3xl">
@@ -143,7 +188,14 @@ function Home() {
           </div>
         </section>
 
-        <div className="sticky top-16 z-30 -mx-3 mb-4 bg-background/95 px-3 py-3 backdrop-blur-xl sm:-mx-6 sm:mb-6 sm:px-6 sm:py-4 lg:-mx-8 lg:px-8">
+        <div ref={toolbarSentinelRef} aria-hidden="true" className="h-px" />
+        <div
+          ref={toolbarRef}
+          className={cn(
+            "sticky top-16 z-30 -mx-3 mb-4 px-3 py-3 sm:-mx-6 sm:mb-6 sm:px-6 sm:py-4 lg:-mx-8 lg:px-8",
+            isToolbarStuck ? "bg-transparent" : APP_GLASS_SURFACE_CLASS,
+          )}
+        >
           <div className="mx-auto flex max-w-368 flex-col gap-2.5 lg:flex-row lg:items-center lg:gap-3">
             <Tabs
               className="min-w-0"
@@ -164,11 +216,12 @@ function Home() {
                 ))}
               </TabsList>
             </Tabs>
-            <div className="relative min-w-0 flex-1 lg:min-w-56">
-              <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+            <div className="group relative min-w-0 flex-1 lg:min-w-56">
+              <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground transition-colors group-focus-within:text-primary" />
               <Input
+                ref={searchInputRef}
                 aria-label={t("home.searchLabel")}
-                className="pl-9 pr-9"
+                className="h-10 rounded-lg pl-9 pr-9 sm:pr-16"
                 placeholder={t("home.searchPlaceholder")}
                 value={query}
                 onChange={(event) => {
@@ -189,7 +242,11 @@ function Home() {
                 >
                   <X />
                 </Button>
-              ) : null}
+              ) : (
+                <kbd className="pointer-events-none absolute right-2 top-1/2 hidden -translate-y-1/2 rounded border bg-muted px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground sm:inline">
+                  ⌘ K
+                </kbd>
+              )}
             </div>
           </div>
         </div>

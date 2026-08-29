@@ -12,14 +12,33 @@ type ThemeMode = "system" | "light" | "dark";
 const APP_NAME = "GMWallet Assets";
 const REPOSITORY_URL = "https://github.com/GMWalletApp/assets";
 const THEME_STORAGE_KEY = "gmwallet-assets-theme";
+const HEADER_PIN_THRESHOLD = 160;
+export const APP_HEADER_HEIGHT = 64;
+export const APP_GLASS_SURFACE_CLASS =
+  "bg-background/92 backdrop-blur-xl supports-backdrop-filter:bg-background/80";
 const ENGLISH_LANGUAGE_ICON = "M5 19 10.8 5.5a1.3 1.3 0 0 1 2.4 0L19 19M8 14h8";
 const CHINESE_LANGUAGE_ICON = "M12 3v3M5 8h14M8 11c1.4 4.2 4.4 7.2 9 9M16 11c-1.4 4.2-4.4 7.2-9 9";
 
-export function AppHeader({ activePage }: { activePage: PageKey }) {
+export function AppHeader({
+  activePage,
+  mergedToolbarHeight = 0,
+}: {
+  activePage: PageKey;
+  mergedToolbarHeight?: number;
+}) {
   const { i18n, t } = useTranslation();
   const isChinese = i18n.resolvedLanguage === "zh-CN";
   const [theme, setTheme] = useState<ThemeMode | null>(null);
+  const [isPinned, setIsPinned] = useState(false);
   const activeTheme = theme ?? "system";
+  const mergeWithToolbar = mergedToolbarHeight > 0;
+
+  useEffect(() => {
+    const updatePinnedState = () => setIsPinned(window.scrollY > HEADER_PIN_THRESHOLD);
+    updatePinnedState();
+    window.addEventListener("scroll", updatePinnedState, { passive: true });
+    return () => window.removeEventListener("scroll", updatePinnedState);
+  }, []);
 
   useEffect(() => {
     try {
@@ -54,71 +73,86 @@ export function AppHeader({ activePage }: { activePage: PageKey }) {
   }, [theme]);
 
   return (
-    <header className="sticky top-0 z-40 border-b bg-background/92 backdrop-blur-xl supports-backdrop-filter:bg-background/80">
-      <div className="mx-auto flex min-h-16 max-w-384 items-center gap-1 px-3 sm:gap-4 sm:px-6 lg:px-8">
-        <Link className="flex shrink-0 items-center gap-2.5" to="/">
-          <img
-            alt="GMWallet"
-            className="size-8 rounded-lg border bg-card object-cover shadow-xs"
-            src={`${import.meta.env.BASE_URL}gmwallet-logo.jpg`}
-          />
-          <span className="hidden font-semibold tracking-tight sm:inline">{APP_NAME}</span>
-        </Link>
-
-        <nav aria-label={t("nav.main")} className="flex items-center gap-1">
-          <NavLink active={activePage === "icons"} to="/">
-            {t("nav.icons")}
-          </NavLink>
-          <NavLink active={activePage === "usage"} mobileLabel={t("nav.usageMobile")} to="/usage">
-            {t("nav.usage")}
-          </NavLink>
-        </nav>
-
-        <div className="ml-auto flex items-center gap-1">
-          <Button
-            aria-label={`${t("theme.label")}: ${themeLabel(activeTheme, t)}`}
-            size="icon"
-            title={`${t("theme.label")}: ${themeLabel(activeTheme, t)}`}
-            variant="outline"
-            onClick={() => setTheme(nextTheme(activeTheme))}
-          >
-            <MorphIcon
-              className="size-4.5"
-              data-icon="inline-start"
-              icon={themeIcon(activeTheme)}
-              reducedMotion="user"
-              spring="snappy"
+    <div className="h-16">
+      {mergeWithToolbar ? (
+        <div
+          aria-hidden="true"
+          className={cn("pointer-events-none fixed inset-x-0 top-0 z-20", APP_GLASS_SURFACE_CLASS)}
+          style={{ height: APP_HEADER_HEIGHT + mergedToolbarHeight }}
+        />
+      ) : null}
+      <header
+        className={cn(
+          "z-40",
+          mergeWithToolbar ? "bg-transparent" : APP_GLASS_SURFACE_CLASS,
+          isPinned && "fixed inset-x-0 top-0 animate-in fade-in slide-in-from-top-2 duration-200",
+        )}
+      >
+        <div className="mx-auto flex min-h-16 max-w-384 items-center gap-1 px-3 sm:gap-4 sm:px-6 lg:px-8">
+          <Link className="flex shrink-0 items-center gap-2.5" to="/">
+            <img
+              alt="GMWallet"
+              className="size-8 rounded-lg border bg-card object-cover shadow-xs"
+              src={`${import.meta.env.BASE_URL}gmwallet-logo.jpg`}
             />
-          </Button>
-          <Button
-            aria-label={t("actions.switchLanguage")}
-            size="icon"
-            title={t("actions.switchLanguage")}
-            variant="outline"
-            onClick={() => void i18n.changeLanguage(isChinese ? "en-US" : "zh-CN")}
-          >
-            <MorphIcon
-              className="size-4.5"
-              data-icon="inline-start"
-              icon={isChinese ? ENGLISH_LANGUAGE_ICON : CHINESE_LANGUAGE_ICON}
-              reducedMotion="user"
-              spring="snappy"
-            />
-          </Button>
-          <Button asChild size="icon" variant="outline">
-            <a
-              aria-label={t("actions.github")}
-              href={REPOSITORY_URL}
-              rel="noreferrer"
-              target="_blank"
-              title={t("actions.github")}
+            <span className="hidden font-semibold tracking-tight sm:inline">{APP_NAME}</span>
+          </Link>
+
+          <nav aria-label={t("nav.main")} className="flex items-center gap-1">
+            <NavLink active={activePage === "icons"} to="/">
+              {t("nav.icons")}
+            </NavLink>
+            <NavLink active={activePage === "usage"} mobileLabel={t("nav.usageMobile")} to="/usage">
+              {t("nav.usage")}
+            </NavLink>
+          </nav>
+
+          <div className="ml-auto flex items-center gap-1">
+            <Button
+              aria-label={`${t("theme.label")}: ${themeLabel(activeTheme, t)}`}
+              size="icon"
+              title={`${t("theme.label")}: ${themeLabel(activeTheme, t)}`}
+              variant="outline"
+              onClick={() => setTheme(nextTheme(activeTheme))}
             >
-              <GitHubIcon />
-            </a>
-          </Button>
+              <MorphIcon
+                className="size-4.5"
+                data-icon="inline-start"
+                icon={themeIcon(activeTheme)}
+                reducedMotion="user"
+                spring="snappy"
+              />
+            </Button>
+            <Button
+              aria-label={t("actions.switchLanguage")}
+              size="icon"
+              title={t("actions.switchLanguage")}
+              variant="outline"
+              onClick={() => void i18n.changeLanguage(isChinese ? "en-US" : "zh-CN")}
+            >
+              <MorphIcon
+                className="size-4.5"
+                data-icon="inline-start"
+                icon={isChinese ? ENGLISH_LANGUAGE_ICON : CHINESE_LANGUAGE_ICON}
+                reducedMotion="user"
+                spring="snappy"
+              />
+            </Button>
+            <Button asChild size="icon" variant="outline">
+              <a
+                aria-label={t("actions.github")}
+                href={REPOSITORY_URL}
+                rel="noreferrer"
+                target="_blank"
+                title={t("actions.github")}
+              >
+                <GitHubIcon />
+              </a>
+            </Button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 }
 
