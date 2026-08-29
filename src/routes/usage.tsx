@@ -1,18 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Check, Copy, PackagePlus, Puzzle, Terminal } from "lucide-react";
+import { Check, Copy, Info, PackagePlus, Puzzle, Terminal } from "lucide-react";
 import type { ReactNode } from "react";
 import { AppFooter, AppHeader } from "@/components/AppChrome";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useCopyFeedback } from "@/hooks/use-copy-feedback";
+import { CATALOG_PATHS, CDN_BASE_URLS } from "../../registry/default/crypto-identity/lib/constants";
 
 export const Route = createFileRoute("/usage")({ component: UsagePage });
 
 const DIRECT_COMMAND =
   "bunx shadcn@latest add https://cdn.jsdmirror.com/gh/GMWalletApp/assets@package/registry/crypto-identity.json";
 const REGISTRY_COMMAND = "bunx shadcn@latest add @gmwallet/crypto-identity";
+const DIRECT_PATHS = [
+  ["网络", "blockchains/{network}/info/logo.png"],
+  ["Token", "blockchains/{network}/assets/{address}/logo.png"],
+  ["交易平台", "support/exchanges/{id}/logo.{ext}"],
+  ["钱包", "support/wallets/{id}/logo.{ext}"],
+  ["DApp", "dapps/{domain}.png"],
+  ["兑换服务", "support/swap-providers/{id}/logo.webp"],
+] as const;
+const CATALOG_FIELDS = [
+  ["网络", "tokenlist.json.zst → tokens[kind=native].logoURI"],
+  ["Token", "tokenlist.json.zst → tokens[].logoURI"],
+  ["交易平台", "support.json.zst → exchanges[].logoURI"],
+  ["钱包", "support.json.zst → wallets[].logoURI"],
+  ["DApp", "dapps.json.zst → dapps[].logoURI"],
+  ["兑换服务", "swap-providers.json.zst → providers[].logoURI"],
+] as const;
+const METAMASK_LOGO =
+  "https://cdn.jsdelivr.net/gh/GMWalletApp/assets@main/support/wallets/metamask/logo.svg";
+const ONE_INCH_LOGO =
+  "https://cdn.jsdelivr.net/gh/GMWalletApp/assets@main/support/swap-providers/1inch/logo.webp";
+const CATALOG_URLS = {
+  tokens: `${CDN_BASE_URLS[0]}/${CATALOG_PATHS.tokens}`,
+  support: `${CDN_BASE_URLS[0]}/${CATALOG_PATHS.support}`,
+  dapps: `${CDN_BASE_URLS[0]}/${CATALOG_PATHS.dapps}`,
+  swapProviders: `${CDN_BASE_URLS[0]}/${CATALOG_PATHS.swapProviders}`,
+} as const;
 
 function UsagePage() {
   return (
@@ -35,39 +63,50 @@ function UsagePage() {
             <CardHeader>
               <CardTitle>任意技术栈</CardTitle>
               <CardDescription>
-                原生 Web、Vue、Svelte、移动端或服务端都可以直接使用 CDN 资源，无需安装组件。
+                原生 Web、Vue、Svelte、移动端或服务端均从压缩目录读取 logoURI，无需安装组件。
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid gap-3 sm:grid-cols-2">
-                {[
-                  ["网络", "blockchains/{network}/info/logo.png"],
-                  ["Token", "blockchains/{network}/assets/{address}/logo.png"],
-                  ["交易平台", "support/exchanges/{name}/logo.svg"],
-                  ["钱包", "support/wallets/{name}/logo.svg"],
-                  ["DApp", "dapps/{name}.png"],
-                  ["兑换服务", "support/swap-providers/{name}/logo.webp"],
-                ].map(([title, path]) => (
-                  <div className="rounded-lg bg-muted/35 p-4" key={title}>
-                    <div className="text-sm font-medium">{title}</div>
-                    <code className="mt-1 block break-all font-mono text-xs text-muted-foreground">
-                      {path}
-                    </code>
+            <CardContent>
+              <Tabs className="gap-4" defaultValue="direct">
+                <TabsList className="grid w-full grid-cols-2 sm:w-fit">
+                  <TabsTrigger value="direct">直接使用</TabsTrigger>
+                  <TabsTrigger value="catalog">目录查询</TabsTrigger>
+                </TabsList>
+                <TabsContent className="flex flex-col gap-4" value="direct">
+                  <ResourceGrid items={DIRECT_PATHS} />
+                  <Alert>
+                    <Info />
+                    <AlertTitle>扩展名以目录记录为准</AlertTitle>
+                    <AlertDescription>
+                      钱包和交易平台可能是 PNG 或 SVG。先取得完整 logoURI，再直接加载或转换 CDN。
+                    </AlertDescription>
+                  </Alert>
+                  <div className="flex flex-col gap-2">
+                    <div className="text-sm font-medium">可复制的 jsDelivr 直链</div>
+                    <CopyBlock value={METAMASK_LOGO} />
+                    <CopyBlock value={ONE_INCH_LOGO} />
                   </div>
-                ))}
-              </div>
-              <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/blockchains/ethereum/info/logo.png" />
-              <p className="text-sm leading-6 text-muted-foreground">
-                批量查找时，解压 tokenlist.json.zst、support.json.zst、dapps.json.zst 或
-                swap-providers.json.zst，并优先使用记录中的 logoURI。切换镜像时只需替换 URL 的 CDN
-                前缀。
-              </p>
-              <div className="grid gap-3">
-                <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/extensions/jsonrpc/data/tokenlist.json.zst" />
-                <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/support/support.json.zst" />
-                <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/support/dapps.json.zst" />
-                <CopyBlock value="https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/support/swap-providers.json.zst" />
-              </div>
+                  <CodeBlock>{`<img
+  src="${METAMASK_LOGO}"
+  alt="MetaMask"
+/>`}</CodeBlock>
+                </TabsContent>
+                <TabsContent className="flex flex-col gap-4" value="catalog">
+                  <ResourceGrid items={CATALOG_FIELDS} />
+                  <p className="text-sm leading-6 text-muted-foreground">
+                    下载并解压对应目录，按 chain、address、id 或 name 匹配记录后使用 logoURI。
+                    组件会将支持的来源统一为 jsDelivr 地址，同时保留镜像回退。
+                  </p>
+                  <CodeBlock>{`curl -sL ${CATALOG_URLS.support} \\
+  | zstd -d -c \\
+  | jq -r '.wallets[] | select(.id == "metamask") | .logoURI'`}</CodeBlock>
+                  <div className="grid gap-2">
+                    {Object.values(CATALOG_URLS).map((url) => (
+                      <CopyBlock key={url} value={url} />
+                    ))}
+                  </div>
+                </TabsContent>
+              </Tabs>
             </CardContent>
           </Card>
 
@@ -184,6 +223,21 @@ function UsagePage() {
   );
 }
 
+function ResourceGrid({ items }: { items: ReadonlyArray<readonly [string, string]> }) {
+  return (
+    <div className="grid gap-3 sm:grid-cols-2">
+      {items.map(([title, path]) => (
+        <div className="rounded-lg bg-muted/35 p-4" key={title}>
+          <div className="text-sm font-medium">{title}</div>
+          <code className="mt-1 block break-all font-mono text-xs text-muted-foreground">
+            {path}
+          </code>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function CopyBlock({ value }: { value: string }) {
   const { copied, copy } = useCopyFeedback(value);
   return (
@@ -192,8 +246,8 @@ function CopyBlock({ value }: { value: string }) {
       <code className="min-w-0 flex-1 overflow-x-auto whitespace-nowrap font-mono text-xs">
         {value}
       </code>
-      <Button aria-label="复制安装命令" size="icon-sm" variant="ghost" onClick={copy}>
-        {copied ? <Check /> : <Copy />}
+      <Button aria-label="复制链接或命令" size="icon-sm" variant="ghost" onClick={copy}>
+        {copied ? <Check data-icon="inline-start" /> : <Copy data-icon="inline-start" />}
       </Button>
     </div>
   );
@@ -201,7 +255,7 @@ function CopyBlock({ value }: { value: string }) {
 
 function CodeBlock({ children }: { children: ReactNode }) {
   return (
-    <pre className="max-w-full overflow-x-auto rounded-lg bg-foreground p-3 text-xs leading-6 text-background sm:p-4">
+    <pre className="max-w-full overflow-x-auto rounded-lg border bg-muted/50 p-3 font-mono text-xs leading-6 text-foreground sm:p-4">
       <code>{children}</code>
     </pre>
   );

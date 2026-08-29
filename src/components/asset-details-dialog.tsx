@@ -15,6 +15,7 @@ import { useCopyFeedback } from "@/hooks/use-copy-feedback";
 import {
   type AssetEntry,
   assetBadge,
+  assetCanonicalLogoUrl,
   assetLogoUrl,
   assetName,
   assetSecondary,
@@ -73,14 +74,18 @@ interface Detail {
 
 function assetRows(asset: AssetEntry): Detail[] {
   const currentLogo = assetLogoUrl(asset);
+  const canonicalLogo = assetCanonicalLogoUrl(asset);
+  const logoRows: Detail[] = [
+    { label: "logoURI", value: canonicalLogo ?? "-", href: canonicalLogo },
+    { label: "resolved URL", value: currentLogo ?? "-", href: currentLogo },
+  ];
   if ("token" in asset) {
     return [
       { label: "type", value: asset.token.type },
       { label: "decimals", value: String(asset.token.decimals) },
       { label: "assetId", value: asset.token.assetId },
       { label: "address", value: asset.token.address || "-" },
-      { label: "logoURI", value: asset.token.logoURI ?? "-", href: asset.token.logoURI },
-      { label: "resolved URL", value: currentLogo ?? "-", href: currentLogo },
+      ...logoRows,
     ];
   }
   return [
@@ -88,8 +93,7 @@ function assetRows(asset: AssetEntry): Detail[] {
     { label: "name", value: asset.item.name },
     { label: "type", value: asset.item.type ?? asset.category },
     ...(asset.item.url ? [{ label: "website", value: asset.item.url, href: asset.item.url }] : []),
-    { label: "logoURI", value: asset.item.logoURI, href: asset.item.logoURI },
-    { label: "resolved URL", value: currentLogo ?? "-", href: currentLogo },
+    ...logoRows,
   ];
 }
 

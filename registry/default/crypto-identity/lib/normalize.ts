@@ -18,7 +18,7 @@ export function normalizeSupportSlug(value?: string | null): string {
   return SUPPORT_SLUG_ALIASES[slug] ?? slug;
 }
 
-export function normalizeDapp(value: string): string {
+export function normalizeDapp(value?: string | null): string {
   const normalized = normalize(value);
   return normalized.endsWith(".png") ? normalized.slice(0, -4) : normalized;
 }

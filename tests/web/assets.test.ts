@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   type AssetEntry,
+  assetCanonicalLogoUrl,
   assetIcon,
   assetKey,
   assetLogoUrl,
@@ -23,6 +24,9 @@ describe("asset helpers", () => {
 
     expect(assetLogoUrl(dapp)).toBe(
       "https://cdn.jsdmirror.com/gh/GMWalletApp/assets@main/dapps/app.uniswap.org.png",
+    );
+    expect(assetCanonicalLogoUrl(dapp)).toBe(
+      "https://cdn.jsdelivr.net/gh/GMWalletApp/assets@main/dapps/app.uniswap.org.png",
     );
     expect(assetIcon(dapp)).toEqual({ type: "dapp", name: "app.uniswap.org" });
   });

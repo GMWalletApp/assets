@@ -1,12 +1,12 @@
 import { decompress } from "fzstd";
 import { CATALOG_PATHS, orderedCdnBaseUrls } from "./constants";
+import { resolveLogoUrls } from "./logo-urls";
 import {
   normalize,
   normalizeDapp,
   normalizeNetworkSlug,
   normalizeSlug,
   normalizeSupportSlug,
-  uniqueUrls,
 } from "./normalize";
 import type { TokenAssetQuery } from "./types";
 
@@ -38,6 +38,7 @@ interface SwapProviderCatalog {
 }
 
 const catalogRequests = new Map<string, Promise<unknown>>();
+const textDecoder = new TextDecoder();
 
 export async function resolveTokenCatalogUrls(
   query: TokenAssetQuery,
@@ -57,7 +58,20 @@ export async function resolveTokenCatalogUrls(
   const match = address
     ? tokens.find(matches)
     : (tokens.find((token) => token.kind === "native" && matches(token)) ?? tokens.find(matches));
-  return match?.logoURI ? mirrorLogoUrls(match.logoURI, preferredBaseUrl) : [];
+  return resolveCatalogAssetLogoUrls(match, preferredBaseUrl);
+}
+
+export async function resolveNetworkCatalogUrls(
+  name: string,
+  preferredBaseUrl?: string,
+): Promise<string[]> {
+  const catalog = await loadCatalog<TokenCatalog>(CATALOG_PATHS.tokens, preferredBaseUrl);
+  const network = normalizeNetworkSlug(name);
+  const match = catalog?.tokens?.find(
+    (token) =>
+      token.logoURI && token.kind === "native" && normalizeNetworkSlug(token.chain) === network,
+  );
+  return resolveCatalogAssetLogoUrls(match, preferredBaseUrl);
 }
 
 export async function resolveSupportCatalogUrls(
@@ -66,12 +80,9 @@ export async function resolveSupportCatalogUrls(
   preferredBaseUrl?: string,
 ): Promise<string[]> {
   const support = await loadCatalog<SupportCatalog>(CATALOG_PATHS.support, preferredBaseUrl);
-  const target = normalizeSupportSlug(name);
   const items = type === "exchange" ? support?.exchanges : support?.wallets;
-  const match = items?.find((item) => {
-    return [item.id, item.name].some((value) => normalizeSupportSlug(value) === target);
-  });
-  return match?.logoURI ? mirrorLogoUrls(match.logoURI, preferredBaseUrl) : [];
+  const match = findNamedCatalogAsset(items, name, normalizeSupportSlug);
+  return resolveCatalogAssetLogoUrls(match, preferredBaseUrl);
 }
 
 export async function resolveDappCatalogUrls(
@@ -79,11 +90,8 @@ export async function resolveDappCatalogUrls(
   preferredBaseUrl?: string,
 ): Promise<string[]> {
   const catalog = await loadCatalog<DappCatalog>(CATALOG_PATHS.dapps, preferredBaseUrl);
-  const target = normalizeDapp(name);
-  const match = catalog?.dapps?.find((item) => {
-    return [item.id, item.name].some((value) => normalizeDapp(value ?? "") === target);
-  });
-  return match?.logoURI ? mirrorLogoUrls(match.logoURI, preferredBaseUrl) : [];
+  const match = findNamedCatalogAsset(catalog?.dapps, name, normalizeDapp);
+  return resolveCatalogAssetLogoUrls(match, preferredBaseUrl);
 }
 
 export async function resolveSwapProviderCatalogUrls(
@@ -94,11 +102,26 @@ export async function resolveSwapProviderCatalogUrls(
     CATALOG_PATHS.swapProviders,
     preferredBaseUrl,
   );
-  const target = normalizeSlug(name);
-  const match = catalog?.providers?.find((item) => {
-    return [item.id, item.name].some((value) => normalizeSlug(value) === target);
-  });
-  return match?.logoURI ? mirrorLogoUrls(match.logoURI, preferredBaseUrl) : [];
+  const match = findNamedCatalogAsset(catalog?.providers, name, normalizeSlug);
+  return resolveCatalogAssetLogoUrls(match, preferredBaseUrl);
+}
+
+function findNamedCatalogAsset(
+  assets: CatalogAsset[] | undefined,
+  name: string,
+  normalizeName: (value?: string | null) => string,
+): CatalogAsset | undefined {
+  const target = normalizeName(name);
+  return assets?.find(
+    (asset) => normalizeName(asset.id) === target || normalizeName(asset.name) === target,
+  );
+}
+
+function resolveCatalogAssetLogoUrls(
+  asset: CatalogAsset | undefined,
+  preferredBaseUrl?: string,
+): string[] {
+  return asset?.logoURI ? resolveLogoUrls(asset.logoURI, preferredBaseUrl) : [];
 }
 
 async function loadCatalog<T>(path: string, preferredBaseUrl?: string): Promise<T | null> {
@@ -125,37 +148,12 @@ async function fetchCatalog<T>(path: string, preferredBaseUrl?: string): Promise
         continue;
       }
       const compressed = new Uint8Array(await response.arrayBuffer());
-      return JSON.parse(new TextDecoder().decode(decompress(compressed))) as T;
+      return JSON.parse(textDecoder.decode(decompress(compressed))) as T;
     } catch {
       // Try the next mirror.
     }
   }
   return null;
-}
-
-function mirrorLogoUrls(logoUrl: string, preferredBaseUrl?: string): string[] {
-  const urls = [logoUrl];
-  try {
-    const parsed = new URL(logoUrl);
-    if (parsed.hostname === "assets-cdn.trustwallet.com") {
-      urls.unshift(`https://cdn.jsdmirror.com/gh/trustwallet/assets@master${parsed.pathname}`);
-    } else if (parsed.hostname === "cdn.jsdelivr.net") {
-      urls.unshift(`https://cdn.jsdmirror.com${parsed.pathname}`);
-    } else if (parsed.hostname === "raw.githubusercontent.com") {
-      const [owner, repository, branch, ...path] = parsed.pathname.split("/").filter(Boolean);
-      if (owner && repository && branch && path.length > 0) {
-        urls.unshift(
-          `https://cdn.jsdmirror.com/gh/${owner}/${repository}@${branch}/${path.join("/")}`,
-        );
-        if (preferredBaseUrl && owner === "GMWalletApp" && repository === "assets") {
-          urls.unshift(`${preferredBaseUrl.replace(/\/$/, "")}/${path.join("/")}`);
-        }
-      }
-    }
-  } catch {
-    // Keep the original URL when it is not parseable.
-  }
-  return uniqueUrls(urls);
 }
 
 export function resetCatalogCache(): void {

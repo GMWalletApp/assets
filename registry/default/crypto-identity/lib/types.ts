@@ -6,7 +6,7 @@ export interface TokenAssetQuery {
   network: string;
   /** Chain-specific token contract address. */
   contractAddress?: string | null;
-  /** Include matches from the complete compressed token catalog. */
+  /** @deprecated Assets are always resolved from the compressed catalog. */
   includeCatalog?: boolean;
 }
 
@@ -14,7 +14,7 @@ interface CatalogAssetQuery<T extends "exchange" | "swap-provider" | "wallet"> {
   type: T;
   /** Catalog asset key or display name. */
   name: string;
-  /** Include display-name matches from the corresponding compressed catalog. */
+  /** @deprecated Assets are always resolved from the compressed catalog. */
   includeCatalog?: boolean;
 }
 
@@ -22,12 +22,12 @@ interface DappAssetQuery {
   type: "dapp";
   /** DApp catalog key or domain name, with or without the png extension. */
   name: string;
-  /** Include ID and display-name matches from the compressed DApp catalog. */
+  /** @deprecated Assets are always resolved from the compressed catalog. */
   includeCatalog?: boolean;
 }
 
-interface DirectAssetQuery<T extends "network"> {
-  type: T;
+interface NetworkAssetQuery {
+  type: "network";
   /** Repository asset key without a file extension. */
   name: string;
 }
@@ -37,7 +37,7 @@ export type AssetQuery =
   | CatalogAssetQuery<"exchange">
   | CatalogAssetQuery<"swap-provider">
   | CatalogAssetQuery<"wallet">
-  | DirectAssetQuery<"network">
+  | NetworkAssetQuery
   | DappAssetQuery;
 
 export type AssetType = AssetQuery["type"];

@@ -38,10 +38,8 @@ describe("CryptoIdentity", () => {
     }
   });
 
-  it("loads the token catalog only after direct mirrors fail", async () => {
-    core.resolveIconUrls
-      .mockResolvedValueOnce(["one.png", "two.png"])
-      .mockResolvedValueOnce(["one.png", "two.png", "catalog.png"]);
+  it("tries catalog-resolved mirrors in order", async () => {
+    core.resolveIconUrls.mockResolvedValue(["one.png", "two.png"]);
     const { container } = render(
       <CryptoIdentity icon={{ type: "token", name: "UNKNOWN", network: "ethereum" }} />,
     );
@@ -52,12 +50,8 @@ describe("CryptoIdentity", () => {
     fireEvent.error(first as HTMLImageElement);
     expect(container.querySelector("img")?.getAttribute("src")).toBe("two.png");
     await act(async () => fireEvent.error(container.querySelector("img") as HTMLImageElement));
-    expect(core.resolveIconUrls).toHaveBeenLastCalledWith(
-      expect.objectContaining({ includeCatalog: true }),
-    );
-    await waitFor(() =>
-      expect(container.querySelector("img")?.getAttribute("src")).toBe("catalog.png"),
-    );
+    expect(core.resolveIconUrls).toHaveBeenCalledOnce();
+    expect(container.querySelector("img")).toBeNull();
   });
 
   it("renders an independent corner icon", async () => {
@@ -149,22 +143,16 @@ describe("CryptoIdentity", () => {
     expect(screen.getByText("ETH")).toBeTruthy();
   });
 
-  it("falls back to the catalog after the final image error", async () => {
-    core.resolveIconUrls.mockResolvedValue(["one.png"]);
+  it("loads the support catalog before rendering a wallet", async () => {
+    core.resolveIconUrls.mockResolvedValue(["wallet.png"]);
     const { container } = render(<CryptoIdentity icon={{ type: "wallet", name: "metamask" }} />);
-    await waitFor(() => expect(container.querySelector("img")).not.toBeNull());
-    fireEvent.error(container.querySelector("img") as HTMLImageElement);
-    await waitFor(() =>
-      expect(core.resolveIconUrls).toHaveBeenLastCalledWith(
-        expect.objectContaining({ includeCatalog: true }),
-      ),
-    );
+    await waitFor(() => expect(core.resolveIconUrls).toHaveBeenCalledOnce());
+    expect(core.resolveIconUrls).toHaveBeenCalledWith({ type: "wallet", name: "metamask" });
+    expect(container.querySelector("img")?.getAttribute("src")).toBe("wallet.png");
   });
 
-  it("falls back to the DApp catalog after a direct path fails", async () => {
-    core.resolveIconUrls
-      .mockResolvedValueOnce(["direct.png"])
-      .mockResolvedValueOnce(["direct.png", "catalog.png"]);
+  it("uses catalog-resolved DApp mirrors without re-resolving", async () => {
+    core.resolveIconUrls.mockResolvedValue(["catalog.png", "origin.png"]);
     const { container } = render(
       <CryptoIdentity icon={{ type: "dapp", name: "app-uniswap-org" }} />,
     );
@@ -172,13 +160,7 @@ describe("CryptoIdentity", () => {
     await waitFor(() => expect(container.querySelector("img")).not.toBeNull());
     fireEvent.error(container.querySelector("img") as HTMLImageElement);
 
-    await waitFor(() =>
-      expect(core.resolveIconUrls).toHaveBeenLastCalledWith(
-        expect.objectContaining({ includeCatalog: true }),
-      ),
-    );
-    await waitFor(() =>
-      expect(container.querySelector("img")?.getAttribute("src")).toBe("catalog.png"),
-    );
+    expect(core.resolveIconUrls).toHaveBeenCalledOnce();
+    expect(container.querySelector("img")?.getAttribute("src")).toBe("origin.png");
   });
 });

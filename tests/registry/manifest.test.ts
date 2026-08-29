@@ -30,6 +30,7 @@ describe("Registry manifest", () => {
       "@ui/crypto-identity/lib/index.ts",
       "@ui/crypto-identity/lib/constants.ts",
       "@ui/crypto-identity/lib/normalize.ts",
+      "@ui/crypto-identity/lib/logo-urls.ts",
       "@ui/crypto-identity/lib/catalog.ts",
       "@ui/crypto-identity/lib/resolve-icon-urls.ts",
     ]);

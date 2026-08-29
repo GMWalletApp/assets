@@ -47,6 +47,11 @@
           "target": "@ui/crypto-identity/lib/normalize.ts"
         },
         {
+          "path": "registry/default/crypto-identity/lib/logo-urls.ts",
+          "type": "registry:lib",
+          "target": "@ui/crypto-identity/lib/logo-urls.ts"
+        },
+        {
           "path": "registry/default/crypto-identity/lib/catalog.ts",
           "type": "registry:lib",
           "target": "@ui/crypto-identity/lib/catalog.ts"

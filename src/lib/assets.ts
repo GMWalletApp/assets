@@ -4,6 +4,10 @@ import {
   CATALOG_PATHS,
   orderedCdnBaseUrls,
 } from "../../registry/default/crypto-identity/lib/constants";
+import {
+  canonicalLogoUrl,
+  resolveLogoUrls,
+} from "../../registry/default/crypto-identity/lib/logo-urls";
 
 type AssetCategory = "native" | "token" | "exchange" | "wallet" | "dapp" | "swap-provider";
 export type AssetFilter = "all" | AssetCategory;
@@ -65,7 +69,6 @@ interface AssetData {
 }
 
 const DEFAULT_CDN_BASE_URL = orderedCdnBaseUrls()[0] ?? "";
-const DEFAULT_CDN_ORIGIN = new URL(DEFAULT_CDN_BASE_URL).origin;
 const textDecoder = new TextDecoder();
 
 export async function fetchAssetData(signal: AbortSignal): Promise<AssetData> {
@@ -140,32 +143,21 @@ export function assetIcon(entry: AssetEntry): CryptoIdentityIcon {
 }
 
 export function assetCornerIcon(entry: AssetEntry): CryptoIdentityIcon | undefined {
-  return entry.category === "token" && "token" in entry
-    ? { type: "network", name: entry.token.chain }
-    : undefined;
+  return entry.category === "token" ? { type: "network", name: entry.token.chain } : undefined;
 }
 
 export function assetLogoUrl(entry: AssetEntry): string | undefined {
-  const logoUrl = "token" in entry ? entry.token.logoURI : entry.item.logoURI;
-  if (!logoUrl) {
-    return logoUrl;
-  }
-  try {
-    const url = new URL(logoUrl);
-    if (url.hostname === "assets-cdn.trustwallet.com") {
-      return `${DEFAULT_CDN_ORIGIN}/gh/trustwallet/assets@master${url.pathname}`;
-    }
-    if (url.hostname === "cdn.jsdelivr.net") {
-      return `${DEFAULT_CDN_ORIGIN}${url.pathname}`;
-    }
-    const repositoryPath = "/GMWalletApp/assets/main/";
-    if (url.hostname === "raw.githubusercontent.com" && url.pathname.startsWith(repositoryPath)) {
-      return `${DEFAULT_CDN_BASE_URL}/${url.pathname.slice(repositoryPath.length)}`;
-    }
-  } catch {
-    return logoUrl;
-  }
-  return logoUrl;
+  const logoUrl = assetSourceLogoUrl(entry);
+  return logoUrl ? resolveLogoUrls(logoUrl)[0] : logoUrl;
+}
+
+export function assetCanonicalLogoUrl(entry: AssetEntry): string | undefined {
+  const logoUrl = assetSourceLogoUrl(entry);
+  return logoUrl ? canonicalLogoUrl(logoUrl) : logoUrl;
+}
+
+function assetSourceLogoUrl(entry: AssetEntry): string | undefined {
+  return "token" in entry ? entry.token.logoURI : entry.item.logoURI;
 }
 
 export function identityBaseUrl(): string {

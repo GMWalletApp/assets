@@ -1,17 +1,11 @@
 import {
   resolveDappCatalogUrls,
+  resolveNetworkCatalogUrls,
   resolveSupportCatalogUrls,
   resolveSwapProviderCatalogUrls,
   resolveTokenCatalogUrls,
 } from "./catalog";
-import { orderedCdnBaseUrls } from "./constants";
-import {
-  normalizeDapp,
-  normalizeNetworkSlug,
-  normalizeSlug,
-  normalizeSupportSlug,
-  uniqueUrls,
-} from "./normalize";
+import { normalizeDapp, normalizeSlug } from "./normalize";
 import type { AssetQuery } from "./types";
 
 /** Resolve ordered icon URL candidates for a token, network, exchange, wallet, DApp, or swap provider. */
@@ -20,17 +14,7 @@ export async function resolveIconUrls(
   preferredBaseUrl?: string,
 ): Promise<string[]> {
   if (query.type === "token") {
-    const contractAddress = query.contractAddress?.trim();
-    const network = normalizeNetworkSlug(query.network);
-    const directUrls =
-      contractAddress && network
-        ? urlsForPath(`blockchains/${network}/assets/${contractAddress}/logo.png`, preferredBaseUrl)
-        : [];
-
-    if (!query.includeCatalog) {
-      return directUrls;
-    }
-    return uniqueUrls([...directUrls, ...(await resolveTokenCatalogUrls(query, preferredBaseUrl))]);
+    return resolveTokenCatalogUrls(query, preferredBaseUrl);
   }
 
   const name = query.type === "dapp" ? normalizeDapp(query.name) : normalizeSlug(query.name);
@@ -40,48 +24,13 @@ export async function resolveIconUrls(
 
   switch (query.type) {
     case "network":
-      return urlsForPath(
-        `blockchains/${normalizeNetworkSlug(name)}/info/logo.png`,
-        preferredBaseUrl,
-      );
-    case "dapp": {
-      const directUrls = urlsForPath(`dapps/${name}.png`, preferredBaseUrl);
-      if (!query.includeCatalog) {
-        return directUrls;
-      }
-      return uniqueUrls([
-        ...directUrls,
-        ...(await resolveDappCatalogUrls(query.name, preferredBaseUrl)),
-      ]);
-    }
-    case "swap-provider": {
-      const directUrls = urlsForPath(`support/swap-providers/${name}/logo.webp`, preferredBaseUrl);
-      if (!query.includeCatalog) {
-        return directUrls;
-      }
-      return uniqueUrls([
-        ...directUrls,
-        ...(await resolveSwapProviderCatalogUrls(query.name, preferredBaseUrl)),
-      ]);
-    }
+      return resolveNetworkCatalogUrls(query.name, preferredBaseUrl);
+    case "dapp":
+      return resolveDappCatalogUrls(query.name, preferredBaseUrl);
+    case "swap-provider":
+      return resolveSwapProviderCatalogUrls(query.name, preferredBaseUrl);
     case "exchange":
-    case "wallet": {
-      const supportName = normalizeSupportSlug(name);
-      const directUrls = urlsForPath(
-        `support/${query.type}s/${supportName}/logo.svg`,
-        preferredBaseUrl,
-      );
-      if (!query.includeCatalog) {
-        return directUrls;
-      }
-      return uniqueUrls([
-        ...directUrls,
-        ...(await resolveSupportCatalogUrls(query.type, query.name, preferredBaseUrl)),
-      ]);
-    }
+    case "wallet":
+      return resolveSupportCatalogUrls(query.type, query.name, preferredBaseUrl);
   }
-}
-
-function urlsForPath(path: string, preferredBaseUrl?: string): string[] {
-  return orderedCdnBaseUrls(preferredBaseUrl).map((baseUrl) => `${baseUrl}/${path}`);
 }

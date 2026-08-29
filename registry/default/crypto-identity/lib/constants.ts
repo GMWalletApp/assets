@@ -1,5 +1,5 @@
-const ASSETS_REPOSITORY = "GMWalletApp/assets";
-const ASSETS_BRANCH = "main";
+export const ASSETS_REPOSITORY = "GMWalletApp/assets";
+export const ASSETS_BRANCH = "main";
 
 export const CDN_BASE_URLS = [
   `https://cdn.jsdmirror.com/gh/${ASSETS_REPOSITORY}@${ASSETS_BRANCH}`,
