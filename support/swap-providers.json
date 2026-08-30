@@ -4419,6 +4419,12 @@
       "url": ""
     },
     {
+      "id": "epsilon",
+      "name": "Epsilon",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/epsilon/logo.webp",
+      "url": "https://www.epsilon.exchange"
+    },
+    {
       "id": "equalizer-exchange",
       "name": "Equalizer Exchange",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/equalizer-exchange/logo.webp",
@@ -12679,6 +12685,12 @@
       "name": "STON.fi",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ston-fi/logo.webp",
       "url": "https://app.ston.fi/"
+    },
+    {
+      "id": "stonx",
+      "name": "STONX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/stonx/logo.webp",
+      "url": "https://ekubo.org"
     },
     {
       "id": "story-hunt",

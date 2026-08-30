@@ -3067,6 +3067,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/tomo-wallet/logo.png"
     },
     {
+      "id": "tonkeeper",
+      "name": "Tonkeeper",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/tonkeeper/logo.png"
+    },
+    {
       "id": "topnod",
       "name": "TopNod",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/topnod/logo.png"

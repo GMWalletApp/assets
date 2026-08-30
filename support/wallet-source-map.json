@@ -1741,6 +1741,9 @@
     "tomo-wallet": {
       "walletConnectId": "5e4a8cc31d062b78a7ad9e017135574809b01c4dbbf30e4dbb467ddd43025618"
     },
+    "tonkeeper": {
+      "walletConnectId": "cbb71bbea17d8cb15f28d636d0e95f62bcdc6ec760f38bf299ff57fa75f0fdb6"
+    },
     "topnod": {
       "walletConnectId": "2889263504a6ad34db5633f47cced37611f35178c159604873a95f00cecab3a4"
     },
