@@ -4296,7 +4296,7 @@
       "id": "ellipsis-finance",
       "name": "Ellipsis Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ellipsis-finance/logo.webp",
-      "url": "https://ellipsis.finance/"
+      "url": ""
     },
     {
       "id": "elonswap",
@@ -4338,7 +4338,7 @@
       "id": "embr-finance",
       "name": "Embr Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/embr-finance/logo.webp",
-      "url": "https://embr.finance"
+      "url": ""
     },
     {
       "id": "emiswap",
@@ -4452,7 +4452,7 @@
       "id": "ergodex",
       "name": "ErgoDEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ergodex/logo.webp",
-      "url": "https://app.ergodex.io/"
+      "url": ""
     },
     {
       "id": "esdtmarket",
@@ -5934,7 +5934,7 @@
       "id": "hurricaneswap",
       "name": "HurricaneSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hurricaneswap/logo.webp",
-      "url": "https://hurricaneswap.com"
+      "url": ""
     },
     {
       "id": "hx-finance",
@@ -7890,7 +7890,7 @@
       "id": "makiswap",
       "name": "MakiSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/makiswap/logo.webp",
-      "url": "https://makiswap.com"
+      "url": ""
     },
     {
       "id": "mama",
@@ -8412,7 +8412,7 @@
       "id": "mistswap",
       "name": "MistSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/mistswap/logo.webp",
-      "url": "https://app.mistswap.fi/swap"
+      "url": ""
     },
     {
       "id": "mm-finance-arbitrum",
@@ -10602,7 +10602,7 @@
       "id": "qilin",
       "name": "Qilin",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/qilin/logo.webp",
-      "url": "https://qilin.fi/"
+      "url": ""
     },
     {
       "id": "qom-x",
@@ -11172,7 +11172,7 @@
       "id": "saber",
       "name": "Saber",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/saber/logo.webp",
-      "url": "https://saberdao.io/"
+      "url": ""
     },
     {
       "id": "saddle-finance",
@@ -15138,7 +15138,7 @@
       "id": "yieldfields",
       "name": "YieldFields",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/yieldfields/logo.webp",
-      "url": "https://yieldfields.finance/"
+      "url": ""
     },
     {
       "id": "yodeswap",
