@@ -1034,6 +1034,9 @@
     "magic-eden": {
       "walletConnectId": "8b830a2b724a9c3fbab63af6f55ed29c9dfa8a55e732dc88c80a196a2ba136c6"
     },
+    "magic-money": {
+      "walletConnectId": "a3f12c5fee46338ca7e4dd7c60f8af132d8e78ca771e33554609aa283fb6f78c"
+    },
     "mathwallet": {
       "walletConnectId": "7674bb4e353bf52886768a3ddc2a4562ce2f4191c80831291218ebd90f5f5e26"
     },

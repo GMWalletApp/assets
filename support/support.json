@@ -1902,6 +1902,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/magic-eden/logo.png"
     },
     {
+      "id": "magic-money",
+      "name": "Magic Money",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/magic-money/logo.png"
+    },
+    {
       "id": "mathwallet",
       "name": "MathWallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/mathwallet/logo.png"

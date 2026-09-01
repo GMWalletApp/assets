@@ -468,7 +468,7 @@
       "id": "alienfi",
       "name": "AlienFi",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/alienfi/logo.webp",
-      "url": "https://www.alien.fi"
+      "url": ""
     },
     {
       "id": "aliensfarm",
@@ -3114,7 +3114,7 @@
       "id": "cronus-finance",
       "name": "Cronus Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cronus-finance/logo.webp",
-      "url": "https://cronusfinance.xyz/#/swap"
+      "url": ""
     },
     {
       "id": "cropper-amm",
@@ -5388,7 +5388,7 @@
       "id": "goonfi",
       "name": "GoonFi",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/goonfi/logo.webp",
-      "url": "null"
+      "url": ""
     },
     {
       "id": "goosefx-v1",
@@ -6642,7 +6642,7 @@
       "id": "junoswap",
       "name": "Junoswap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/junoswap/logo.webp",
-      "url": "https://www.junoswap.com/"
+      "url": ""
     },
     {
       "id": "junoswap-trade-aggregator",
@@ -8841,6 +8841,12 @@
       "url": "https://www.nasdex.xyz"
     },
     {
+      "id": "native-core-clob",
+      "name": "Native Core CLOB",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/native-core-clob/logo.webp",
+      "url": "https://native.org/"
+    },
+    {
       "id": "native-swap",
       "name": "Native Swap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/native-swap/logo.webp",
@@ -9348,7 +9354,7 @@
       "id": "onavax",
       "name": "onAVAX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/onavax/logo.webp",
-      "url": "https://onavax.com"
+      "url": ""
     },
     {
       "id": "one-dex",
@@ -10386,7 +10392,7 @@
       "id": "powswap",
       "name": "PoWSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/powswap/logo.webp",
-      "url": "https://powswap.io/"
+      "url": ""
     },
     {
       "id": "prerich",
@@ -13554,7 +13560,7 @@
       "id": "tessera-v",
       "name": "Tessera V",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tessera-v/logo.webp",
-      "url": "null"
+      "url": ""
     },
     {
       "id": "tesseract-world",
@@ -15288,7 +15294,7 @@
       "id": "zerofi",
       "name": "ZeroFi",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zerofi/logo.webp",
-      "url": "null"
+      "url": ""
     },
     {
       "id": "zeroswap",
