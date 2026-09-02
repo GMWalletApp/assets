@@ -378,13 +378,13 @@
       "id": "alandale-v2",
       "name": "Alandale V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/alandale-v2/logo.webp",
-      "url": ""
+      "url": "https://alandale.xyz"
     },
     {
       "id": "alandale-v3",
       "name": "Alandale V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/alandale-v3/logo.webp",
-      "url": ""
+      "url": "https://alandale.xyz"
     },
     {
       "id": "alcor-exchange",
@@ -714,7 +714,7 @@
       "id": "aptoswap",
       "name": "Aptoswap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aptoswap/logo.webp",
-      "url": "https://aptoswap.net"
+      "url": ""
     },
     {
       "id": "apx-bridge",
@@ -1896,7 +1896,7 @@
       "id": "bluemove-dex",
       "name": "BlueMove DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bluemove-dex/logo.webp",
-      "url": "https://dex.bluemove.net/"
+      "url": ""
     },
     {
       "id": "blueprint",
@@ -3336,7 +3336,7 @@
       "id": "dango-bridge",
       "name": "Dango Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dango-bridge/logo.webp",
-      "url": "https://dango.exchange/"
+      "url": ""
     },
     {
       "id": "dano-finance",
@@ -7440,25 +7440,25 @@
       "id": "lfgswap-arbitrum",
       "name": "LFGSwap Arbitrum",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lfgswap-arbitrum/logo.webp",
-      "url": "https://app.lfgswap.finance/swap?chainId=42161"
+      "url": ""
     },
     {
       "id": "lfgswap-core",
       "name": "LFGSwap Core",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lfgswap-core/logo.webp",
-      "url": "https://app.lfgswap.finance/?chainId=1116"
+      "url": ""
     },
     {
       "id": "lfgswap-ethereumpow",
       "name": "LFGSwap EthereumPoW",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lfgswap-ethereumpow/logo.webp",
-      "url": "https://app.lfgswap.finance/swap"
+      "url": ""
     },
     {
       "id": "lfgswap-xlayer",
       "name": "LFGSwap XLayer",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lfgswap-xlayer/logo.webp",
-      "url": "https://app.lfgswap.finance/swap?chainId=196"
+      "url": ""
     },
     {
       "id": "lfj-aggregator",
@@ -7716,7 +7716,7 @@
       "id": "lpeth",
       "name": "lpETH",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lpeth/logo.webp",
-      "url": "https://www.lpeth.xyz"
+      "url": ""
     },
     {
       "id": "luaswap",
@@ -10797,6 +10797,12 @@
       "url": "https://app.rango.exchange"
     },
     {
+      "id": "raphael-exchange",
+      "name": "Raphael Exchange",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/raphael-exchange/logo.webp",
+      "url": "https://www.raphael.exchange/"
+    },
+    {
       "id": "rari-chain",
       "name": "Rari Chain",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/rari-chain/logo.webp",
@@ -10986,7 +10992,7 @@
       "id": "ritsu-protocol",
       "name": "Ritsu Protocol",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ritsu-protocol/logo.webp",
-      "url": "https://ritsu.xyz"
+      "url": ""
     },
     {
       "id": "rivrdex",
@@ -15468,7 +15474,7 @@
       "id": "zuit-swap",
       "name": "Zuit Swap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zuit-swap/logo.webp",
-      "url": "https://zuit.xyz/"
+      "url": ""
     },
     {
       "id": "zukeswap",
