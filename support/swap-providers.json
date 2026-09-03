@@ -9,6 +9,12 @@
       "url": ""
     },
     {
+      "id": "0swap",
+      "name": "0Swap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/0swap/logo.webp",
+      "url": "https://www.0swap.exchange"
+    },
+    {
       "id": "0x",
       "name": "0x",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/0x/logo.webp",
