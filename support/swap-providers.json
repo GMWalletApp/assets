@@ -1794,7 +1794,7 @@
       "id": "blaspace",
       "name": "BlaSpace",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/blaspace/logo.webp",
-      "url": "https://blaspace.io"
+      "url": ""
     },
     {
       "id": "blast-bridge",
@@ -1806,7 +1806,7 @@
       "id": "blastdex",
       "name": "BlastDEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/blastdex/logo.webp",
-      "url": "https://blastdex.xyz"
+      "url": ""
     },
     {
       "id": "blaster-dex",
@@ -2040,7 +2040,7 @@
       "id": "brewswap",
       "name": "BrewSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/brewswap/logo.webp",
-      "url": "https://earn.brewlabs.info/swap"
+      "url": ""
     },
     {
       "id": "bridge-lz",
@@ -3954,7 +3954,7 @@
       "id": "dracula-finance",
       "name": "Dracula Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dracula-finance/logo.webp",
-      "url": "https://draculafi.xyz/"
+      "url": ""
     },
     {
       "id": "dradex",
@@ -8544,7 +8544,7 @@
       "id": "molten-v4",
       "name": "Molten V4",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/molten-v4/logo.webp",
-      "url": "https://app-v4.glyph.exchange/swap"
+      "url": ""
     },
     {
       "id": "momentum",
@@ -11058,7 +11058,7 @@
       "id": "rockswap",
       "name": "Rockswap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/rockswap/logo.webp",
-      "url": "https://rock-swap.io"
+      "url": ""
     },
     {
       "id": "roguex",
@@ -14298,7 +14298,7 @@
       "id": "vaulta-ram",
       "name": "Vaulta RAM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/vaulta-ram/logo.webp",
-      "url": "https://docs.eosnetwork.com/docs/latest/core-concepts/resources/#ram"
+      "url": ""
     },
     {
       "id": "vax",

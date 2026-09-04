@@ -1146,6 +1146,9 @@
     "nash": {
       "walletConnectId": "7be8d8b5e39bbcee13867c50e47387cd752c12e03b3e6fdf2e0638c7b4e3b69f"
     },
+    "ncolle-wallet": {
+      "walletConnectId": "471798ad9141d6a81eb7c73c99f5070e82194b7eb4732506743f97f6adef9376"
+    },
     "neftiwallet": {
       "walletConnectId": "91628e2ae2228af2145bfac21093ad7be682810ec16af540a9e017ad6b933a81"
     },
@@ -1362,6 +1365,9 @@
     },
     "pitaka": {
       "walletConnectId": "14e5d957c6eb62d3ee8fc6239703ac2d537d7e3552154836ca0beef775f630bc"
+    },
+    "pitope": {
+      "walletConnectId": "56a50b74051329644b80ad7a5d03560a69489d91ac8ad991e7b064ceca55a20f"
     },
     "plasma-wallet": {
       "walletConnectId": "cbe13eb482c76f1fa401ff4c84d9acd0b8bc9af311ca0620a0b192fb28359b4e"

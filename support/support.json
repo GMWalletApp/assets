@@ -2087,6 +2087,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/nash/logo.png"
     },
     {
+      "id": "ncolle-wallet",
+      "name": "Ncolle Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ncolle-wallet/logo.png"
+    },
+    {
       "id": "neftiwallet",
       "name": "NeftiWallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/neftiwallet/logo.png"
@@ -2445,6 +2450,11 @@
       "id": "pitaka",
       "name": "Pitaka",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/pitaka/logo.png"
+    },
+    {
+      "id": "pitope",
+      "name": "pitope",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/pitope/logo.png"
     },
     {
       "id": "plasma-wallet",
