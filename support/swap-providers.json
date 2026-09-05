@@ -6237,6 +6237,12 @@
       "url": ""
     },
     {
+      "id": "ilyris",
+      "name": "Ilyris",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ilyris/logo.webp",
+      "url": ""
+    },
+    {
       "id": "incaswap",
       "name": "IncaSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/incaswap/logo.webp",
@@ -8250,7 +8256,7 @@
       "id": "meteora-damm-v2",
       "name": "Meteora DAMM V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/meteora-damm-v2/logo.webp",
-      "url": "https://v2.meteora.ag/"
+      "url": "https://app.meteora.ag/"
     },
     {
       "id": "meteora-dlmm",
@@ -11517,6 +11523,12 @@
       "url": "https://sega.so/"
     },
     {
+      "id": "seleman-dex",
+      "name": "SELEMAN DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/seleman-dex/logo.webp",
+      "url": "https://seleman.monarcaproject.com"
+    },
+    {
       "id": "selfex",
       "name": "Selfex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/selfex/logo.webp",
@@ -13963,6 +13975,12 @@
       "name": "TurtleSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/turtleswap/logo.webp",
       "url": "https://turtleswap.turtlelabs.finance/"
+    },
+    {
+      "id": "twofold",
+      "name": "Twofold",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/twofold/logo.webp",
+      "url": "https://twofold.fi"
     },
     {
       "id": "txflow-bridge",
