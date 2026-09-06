@@ -1907,6 +1907,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/magic-money/logo.png"
     },
     {
+      "id": "mango",
+      "name": "Mango",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/mango/logo.png"
+    },
+    {
       "id": "mathwallet",
       "name": "MathWallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/mathwallet/logo.png"
@@ -2270,6 +2275,11 @@
       "id": "omni",
       "name": "Omni",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/omni/logo.png"
+    },
+    {
+      "id": "ondex",
+      "name": "Ondex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ondex/logo.png"
     },
     {
       "id": "onekey",

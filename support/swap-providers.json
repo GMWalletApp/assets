@@ -9951,6 +9951,12 @@
       "url": ""
     },
     {
+      "id": "pennysia",
+      "name": "Pennysia",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pennysia/logo.webp",
+      "url": ""
+    },
+    {
       "id": "penumbra-dex",
       "name": "Penumbra Dex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/penumbra-dex/logo.webp",

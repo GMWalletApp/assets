@@ -1037,6 +1037,9 @@
     "magic-money": {
       "walletConnectId": "a3f12c5fee46338ca7e4dd7c60f8af132d8e78ca771e33554609aa283fb6f78c"
     },
+    "mango": {
+      "walletConnectId": "1a0ccb6bfc3f4759c1f50d8b6bd2164718423476846a344479bc90dfdd8201fd"
+    },
     "mathwallet": {
       "walletConnectId": "7674bb4e353bf52886768a3ddc2a4562ce2f4191c80831291218ebd90f5f5e26"
     },
@@ -1255,6 +1258,9 @@
     },
     "omni": {
       "walletConnectId": "afbd95522f4041c71dd4f1a065f971fd32372865b416f95a0b1db759ae33f2a7"
+    },
+    "ondex": {
+      "walletConnectId": "61fddaffb16b9377add32c7435af693593511a4ecc07c2330fcd266dfc521f62"
     },
     "onekey": {
       "walletConnectId": "1aedbcfc1f31aade56ca34c38b0a1607b41cccfa3de93c946ef3b4ba2dfab11c"
