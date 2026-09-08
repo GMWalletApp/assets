@@ -13107,6 +13107,12 @@
       "url": ""
     },
     {
+      "id": "swaponhood",
+      "name": "SwapOnHood",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/swaponhood/logo.webp",
+      "url": ""
+    },
+    {
       "id": "swapp",
       "name": "SWAPP",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/swapp/logo.webp",
@@ -14067,6 +14073,12 @@
       "url": ""
     },
     {
+      "id": "umbrae",
+      "name": "Umbrae",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/umbrae/logo.webp",
+      "url": "https://umbrae.io"
+    },
+    {
       "id": "umbria-network",
       "name": "Umbria Network",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/umbria-network/logo.webp",
@@ -14791,6 +14803,12 @@
       "name": "WEMIX Full Range Deposit",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/wemix-full-range-deposit/logo.webp",
       "url": "https://wemix.fi"
+    },
+    {
+      "id": "weso-defi",
+      "name": "WESO DeFi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/weso-defi/logo.webp",
+      "url": ""
     },
     {
       "id": "whaleex",
