@@ -420,13 +420,13 @@
       "id": "algebra-dex",
       "name": "Algebra DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/algebra-dex/logo.webp",
-      "url": "https://app.algebra.finance"
+      "url": "https://algebra.finance/"
     },
     {
       "id": "algebra-integral",
       "name": "Algebra Integral",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/algebra-integral/logo.webp",
-      "url": "https://app.algebra.finance"
+      "url": "https://algebra.finance/"
     },
     {
       "id": "algodex",
@@ -1200,7 +1200,7 @@
       "id": "azverse-spot",
       "name": "AZverse Spot",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/azverse-spot/logo.webp",
-      "url": "https://www.azverse.xyz"
+      "url": ""
     },
     {
       "id": "b2-buzz",
@@ -2118,7 +2118,7 @@
       "id": "bscstation",
       "name": "BSCStation",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bscstation/logo.webp",
-      "url": "https://defai.bscs.finance/"
+      "url": ""
     },
     {
       "id": "bscswap",
@@ -2346,7 +2346,7 @@
       "id": "candyswap",
       "name": "CandySwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/candyswap/logo.webp",
-      "url": "https://candyswap.exchange/"
+      "url": ""
     },
     {
       "id": "canonic",
@@ -2400,19 +2400,19 @@
       "id": "capybara-amm",
       "name": "Capybara AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/capybara-amm/logo.webp",
-      "url": "https://www.capybara.exchange"
+      "url": ""
     },
     {
       "id": "capybara-clmm",
       "name": "Capybara CLMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/capybara-clmm/logo.webp",
-      "url": "https://www.capybara.exchange"
+      "url": ""
     },
     {
       "id": "capybara-dexs",
       "name": "Capybara Dexs",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/capybara-dexs/logo.webp",
-      "url": "https://www.capybara.exchange"
+      "url": ""
     },
     {
       "id": "carbon-defi",
@@ -2490,31 +2490,31 @@
       "id": "caviarnine-agg",
       "name": "CaviarNine Agg",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/caviarnine-agg/logo.webp",
-      "url": "https://www.caviarnine.com/trade"
+      "url": ""
     },
     {
       "id": "caviarnine-lsu-pool",
       "name": "CaviarNine LSU Pool",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/caviarnine-lsu-pool/logo.webp",
-      "url": "https://www.caviarnine.com/earn/lsu-pools"
+      "url": ""
     },
     {
       "id": "caviarnine-order-book",
       "name": "CaviarNine Order Book",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/caviarnine-order-book/logo.webp",
-      "url": "https://www.caviarnine.com/trade"
+      "url": ""
     },
     {
       "id": "caviarnine-shape-liquidity",
       "name": "CaviarNine Shape Liquidity",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/caviarnine-shape-liquidity/logo.webp",
-      "url": "https://www.caviarnine.com/trade"
+      "url": ""
     },
     {
       "id": "caviarnine-simple-pools",
       "name": "CaviarNine Simple Pools",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/caviarnine-simple-pools/logo.webp",
-      "url": "https://www.caviarnine.com/earn/simple-pool"
+      "url": ""
     },
     {
       "id": "cbridge",
@@ -2544,7 +2544,7 @@
       "id": "cellana-finance",
       "name": "Cellana Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cellana-finance/logo.webp",
-      "url": "https://cellana.finance"
+      "url": ""
     },
     {
       "id": "cennznet-bridge",
@@ -4386,7 +4386,7 @@
       "id": "enibridge",
       "name": "ENIBridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/enibridge/logo.webp",
-      "url": "https://eni.orbiter.finance/"
+      "url": ""
     },
     {
       "id": "enosys-amm-v2",
@@ -4614,7 +4614,7 @@
       "id": "exsat-staking-btc",
       "name": "exSat Staking BTC",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/exsat-staking-btc/logo.webp",
-      "url": "https://esbtc.exsat.network/"
+      "url": "https://exsat.network/app/bridge"
     },
     {
       "id": "extended-spot",
@@ -5886,7 +5886,7 @@
       "id": "houstonswap",
       "name": "HoustonSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/houstonswap/logo.webp",
-      "url": "https://houstonswap.io/"
+      "url": ""
     },
     {
       "id": "hpdex",
@@ -6804,7 +6804,7 @@
       "id": "kaspa-finance-v3",
       "name": "Kaspa Finance V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kaspa-finance-v3/logo.webp",
-      "url": "https://app.kaspafinance.io/swap"
+      "url": ""
     },
     {
       "id": "kaspacom-dex",
@@ -7386,7 +7386,7 @@
       "id": "layerakira",
       "name": "LayerAkira",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/layerakira/logo.webp",
-      "url": "https://app.layerakira.xyz"
+      "url": ""
     },
     {
       "id": "layerzero-v1",
@@ -11130,7 +11130,7 @@
       "id": "router-protocol",
       "name": "Router Protocol",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/router-protocol/logo.webp",
-      "url": "https://app.routerprotocol.com/"
+      "url": ""
     },
     {
       "id": "rsk-bridge",
@@ -11616,7 +11616,7 @@
       "id": "shadowswap",
       "name": "ShadowSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/shadowswap/logo.webp",
-      "url": "https://shadowswap.xyz"
+      "url": ""
     },
     {
       "id": "shape-bridge",
@@ -12228,13 +12228,13 @@
       "id": "sonus-exchange-amm",
       "name": "Sonus Exchange AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sonus-exchange-amm/logo.webp",
-      "url": "https://sonus.exchange"
+      "url": ""
     },
     {
       "id": "sonus-exchange-clmm",
       "name": "Sonus Exchange CLMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sonus-exchange-clmm/logo.webp",
-      "url": "https://sonus.exchange"
+      "url": ""
     },
     {
       "id": "sophon-bridge",
@@ -13230,7 +13230,7 @@
       "id": "swim-protocol",
       "name": "Swim Protocol",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/swim-protocol/logo.webp",
-      "url": "https://swim.io/"
+      "url": ""
     },
     {
       "id": "swing",
@@ -14724,13 +14724,13 @@
       "id": "warpx-v2",
       "name": "WarpX V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/warpx-v2/logo.webp",
-      "url": "https://warpx.exchange/"
+      "url": ""
     },
     {
       "id": "warpx-v3",
       "name": "WarpX V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/warpx-v3/logo.webp",
-      "url": "https://warpx.exchange/"
+      "url": ""
     },
     {
       "id": "wasabee",
