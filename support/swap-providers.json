@@ -495,6 +495,18 @@
       "url": ""
     },
     {
+      "id": "allblue-v2",
+      "name": "AllBlue V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/allblue-v2/logo.webp",
+      "url": "https://allbluedex.io"
+    },
+    {
+      "id": "allblue-v3",
+      "name": "AllBlue V3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/allblue-v3/logo.webp",
+      "url": "https://allbluedex.io"
+    },
+    {
       "id": "allbridge-classic",
       "name": "Allbridge Classic",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/allbridge-classic/logo.webp",
@@ -2847,6 +2859,12 @@
       "url": ""
     },
     {
+      "id": "coffer",
+      "name": "Coffer",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/coffer/logo.webp",
+      "url": " "
+    },
+    {
       "id": "coffer-network",
       "name": "Coffer Network",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/coffer-network/logo.webp",
@@ -3229,12 +3247,6 @@
       "name": "CuanSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cuanswap/logo.webp",
       "url": ""
-    },
-    {
-      "id": "cube",
-      "name": "Cube",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cube/logo.webp",
-      "url": " "
     },
     {
       "id": "cubiswap",
@@ -5239,6 +5251,12 @@
       "name": "Gensuki DEX Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gensuki-dex-aggregator/logo.webp",
       "url": ""
+    },
+    {
+      "id": "ggswap",
+      "name": "GGSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ggswap/logo.webp",
+      "url": "https://gghyper.net/swap"
     },
     {
       "id": "ghostex",
@@ -10059,6 +10077,12 @@
       "url": ""
     },
     {
+      "id": "phera-dex",
+      "name": "Phera DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/phera-dex/logo.webp",
+      "url": "https://phera.pro"
+    },
+    {
       "id": "phezzan-protocol",
       "name": "Phezzan Protocol",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/phezzan-protocol/logo.webp",
@@ -10531,18 +10555,6 @@
       "name": "PumpBTC",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pumpbtc/logo.webp",
       "url": "https://pumpbtc.xyz/"
-    },
-    {
-      "id": "pumpspace-v2",
-      "name": "PumpSpace V2",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pumpspace-v2/logo.webp",
-      "url": "https://pumpspace.io/"
-    },
-    {
-      "id": "pumpspace-v3",
-      "name": "PumpSpace V3",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pumpspace-v3/logo.webp",
-      "url": "https://pumpspace.io/"
     },
     {
       "id": "pumpswap",
@@ -13863,9 +13875,15 @@
       "url": "https://ton.diamonds"
     },
     {
-      "id": "tonco",
-      "name": "TONCO",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tonco/logo.webp",
+      "id": "tonco-v1",
+      "name": "TONCO V1",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tonco-v1/logo.webp",
+      "url": "https://tonco.io"
+    },
+    {
+      "id": "tonco-v2",
+      "name": "TONCO V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tonco-v2/logo.webp",
       "url": "https://tonco.io"
     },
     {
