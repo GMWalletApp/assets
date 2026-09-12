@@ -219,6 +219,12 @@
       "url": "https://apps.acala.network/swap"
     },
     {
+      "id": "accrued",
+      "name": "Accrued",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/accrued/logo.webp",
+      "url": ""
+    },
+    {
       "id": "across",
       "name": "Across",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/across/logo.webp",
@@ -517,6 +523,12 @@
       "name": "Allbridge Core",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/allbridge-core/logo.webp",
       "url": "https://core.allbridge.io"
+    },
+    {
+      "id": "allbridge-next",
+      "name": "Allbridge Next",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/allbridge-next/logo.webp",
+      "url": "https://next.allbridge.io/"
     },
     {
       "id": "alligator",
@@ -865,6 +877,12 @@
       "name": "Arctic",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/arctic/logo.webp",
       "url": ""
+    },
+    {
+      "id": "arcus-aggregator",
+      "name": "Arcus Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/arcus-aggregator/logo.webp",
+      "url": "https://arcus.xyz/"
     },
     {
       "id": "arcus-spot",
@@ -10827,9 +10845,15 @@
       "url": "https://app.rango.exchange"
     },
     {
-      "id": "raphael-exchange",
-      "name": "Raphael Exchange",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/raphael-exchange/logo.webp",
+      "id": "raphael-exchange-amm",
+      "name": "Raphael Exchange AMM",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/raphael-exchange-amm/logo.webp",
+      "url": "https://www.raphael.exchange/"
+    },
+    {
+      "id": "raphael-exchange-cl",
+      "name": "Raphael Exchange CL",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/raphael-exchange-cl/logo.webp",
       "url": "https://www.raphael.exchange/"
     },
     {
@@ -12751,6 +12775,12 @@
       "name": "Stratabook",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/stratabook/logo.webp",
       "url": "https://stratabook.org/"
+    },
+    {
+      "id": "strato-bridge",
+      "name": "STRATO Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/strato-bridge/logo.webp",
+      "url": "https://strato.nexus/"
     },
     {
       "id": "stratum-exchange",
