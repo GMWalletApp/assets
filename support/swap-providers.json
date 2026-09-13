@@ -4161,6 +4161,12 @@
       "url": "https://app.ebisusbay.com/"
     },
     {
+      "id": "ebisus-bay-dex",
+      "name": "Ebisus Bay DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ebisus-bay-dex/logo.webp",
+      "url": ""
+    },
+    {
       "id": "echelon-initia-bridge",
       "name": "Echelon Initia Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/echelon-initia-bridge/logo.webp",
@@ -9207,9 +9213,9 @@
       "url": "https://obric.xyz"
     },
     {
-      "id": "obsidian",
-      "name": "Obsidian",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/obsidian/logo.webp",
+      "id": "obsidian-aggregator",
+      "name": "Obsidian Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/obsidian-aggregator/logo.webp",
       "url": "https://obsidian.finance"
     },
     {
