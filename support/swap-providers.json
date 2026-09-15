@@ -10677,15 +10677,21 @@
       "url": "https://www.qomswap.com"
     },
     {
-      "id": "quainance",
-      "name": "Quainance",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/quainance/logo.webp",
+      "id": "quainance-dex",
+      "name": "Quainance DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/quainance-dex/logo.webp",
       "url": "https://www.quainance.com/"
     },
     {
       "id": "quantoswap",
       "name": "QuantoSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/quantoswap/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "quantumamm",
+      "name": "QuantumAMM",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/quantumamm/logo.webp",
       "url": ""
     },
     {
@@ -11167,6 +11173,12 @@
       "name": "ROUP",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/roup/logo.webp",
       "url": "https://www.rolluper.xyz"
+    },
+    {
+      "id": "route",
+      "name": "Route",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/route/logo.webp",
+      "url": ""
     },
     {
       "id": "router-protocol",
@@ -14862,7 +14874,7 @@
       "id": "weso-defi",
       "name": "WESO DeFi",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/weso-defi/logo.webp",
-      "url": ""
+      "url": "https://weso.world/"
     },
     {
       "id": "whaleex",

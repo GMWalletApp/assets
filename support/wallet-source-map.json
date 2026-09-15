@@ -692,6 +692,9 @@
     "goldbit": {
       "walletConnectId": "746fa59e214ba46cfa688e9540a6b3450b514e89f39bd9c5a00b5a7fdaba8351"
     },
+    "goldpocket": {
+      "walletConnectId": "80ef1e74b7abdcd96dbac45e61235cade99e4fa516daf5f26b6e42d35c6ff408"
+    },
     "gooddollar": {
       "walletConnectId": "689e621a3585ca018fd44ff404bc89079a0e55e9c632574e8bf8d2b1c7918911"
     },
@@ -953,6 +956,9 @@
     "ktc": {
       "walletConnectId": "5fb20bc4cf7c8662f023f465b9ee65fd6a3b266fa5f37c6799745f0a9a2de33b"
     },
+    "kub-wallet": {
+      "walletConnectId": "014d1c4aaa277b04791ac27433485d1440a6aabbcb6b8228719ed1574eac4472"
+    },
     "kucoin-web3-wallet": {
       "walletConnectId": "67f1ec404dbf3bddc509b5fcf615850e05b28c287ccd7167b4fe81b4293ac9df"
     },
@@ -1021,6 +1027,9 @@
     },
     "lumina-wallet": {
       "walletConnectId": "4c33e497bf4017e7df2db570282d27e6e866006d3e0fae5e283c73c10a96df46"
+    },
+    "lumo-wallet": {
+      "walletConnectId": "9ada0299bef5372a03049e5f5ab0f35c48fe944f7b57a70a399dbcdbf56b8a75"
     },
     "lunascape-browser": {
       "walletConnectId": "cb1864a17d4dd1742fb97e95c738543b95f908cea806ff8f090641b6cdebc627"

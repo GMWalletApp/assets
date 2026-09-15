@@ -1337,6 +1337,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/goldbit/logo.png"
     },
     {
+      "id": "goldpocket",
+      "name": "GoldPocket",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/goldpocket/logo.png"
+    },
+    {
       "id": "gooddollar",
       "name": "GoodDollar",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/gooddollar/logo.png"
@@ -1767,6 +1772,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ktc/logo.png"
     },
     {
+      "id": "kub-wallet",
+      "name": "KUB Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/kub-wallet/logo.png"
+    },
+    {
       "id": "kucoin-web3-wallet",
       "name": "KuCoin Web3 Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/kucoin-web3-wallet/logo.png"
@@ -1880,6 +1890,11 @@
       "id": "lumina-wallet",
       "name": "Lumina Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/lumina-wallet/logo.png"
+    },
+    {
+      "id": "lumo-wallet",
+      "name": "Lumo Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/lumo-wallet/logo.png"
     },
     {
       "id": "lunascape-browser",
