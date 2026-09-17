@@ -1536,7 +1536,7 @@
       "id": "bean-exchange",
       "name": "Bean Exchange",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bean-exchange/logo.webp",
-      "url": "https://bean.exchange"
+      "url": ""
     },
     {
       "id": "bebop-aggregator",
@@ -5454,7 +5454,7 @@
       "id": "goswap",
       "name": "GoSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/goswap/logo.webp",
-      "url": "https://goswap.exchange/#/swap"
+      "url": ""
     },
     {
       "id": "graphene-by-velocimeter",
@@ -5514,6 +5514,12 @@
       "id": "grokswap",
       "name": "GrokSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/grokswap/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "grom-exchange",
+      "name": "GROM Exchange",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/grom-exchange/logo.webp",
       "url": ""
     },
     {
@@ -6576,7 +6582,7 @@
       "id": "jellyverse",
       "name": "Jellyverse",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/jellyverse/logo.webp",
-      "url": "https://jellyverse.org/"
+      "url": ""
     },
     {
       "id": "jeton",
@@ -7443,6 +7449,12 @@
       "url": "https://layerzero.network/"
     },
     {
+      "id": "lcx-liberty-dex",
+      "name": "LCX Liberty DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lcx-liberty-dex/logo.webp",
+      "url": "https://dex.lcx.com"
+    },
+    {
       "id": "leadfi-leadbtc",
       "name": "LeadFi leadBTC",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/leadfi-leadbtc/logo.webp",
@@ -7825,6 +7837,12 @@
       "name": "Lunarbase",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lunarbase/logo.webp",
       "url": "https://lunarbase.gg/"
+    },
+    {
+      "id": "lunya-dex",
+      "name": "Lunya DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lunya-dex/logo.webp",
+      "url": ""
     },
     {
       "id": "lydia",
@@ -12528,13 +12546,13 @@
       "id": "stabble-clmm",
       "name": "stabble CLMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/stabble-clmm/logo.webp",
-      "url": "https://stabble.org"
+      "url": ""
     },
     {
       "id": "stabble-stableswap",
       "name": "stabble Stableswap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/stabble-stableswap/logo.webp",
-      "url": "https://stabble.org"
+      "url": ""
     },
     {
       "id": "stable-swap-v2",
@@ -13387,6 +13405,12 @@
       "name": "SyncSwap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/syncswap-v3/logo.webp",
       "url": "https://syncswap.xyz/"
+    },
+    {
+      "id": "synthra-finance",
+      "name": "Synthra Finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/synthra-finance/logo.webp",
+      "url": "https://app.synthra.org"
     },
     {
       "id": "synthswap-v2",
@@ -15012,7 +15036,7 @@
       "id": "world-markets-spot",
       "name": "World Markets Spot",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/world-markets-spot/logo.webp",
-      "url": "https://world.inc/"
+      "url": ""
     },
     {
       "id": "wowmax-exchange",

@@ -2887,6 +2887,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/soulswap/logo.png"
     },
     {
+      "id": "splits",
+      "name": "Splits",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/splits/logo.png"
+    },
+    {
       "id": "spot-on-chain-app",
       "name": "Spot On Chain App",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/spot-on-chain-app/logo.png"
@@ -3113,7 +3118,7 @@
     },
     {
       "id": "tonkeeper",
-      "name": "Tonkeeper",
+      "name": "Keeper",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/tonkeeper/logo.png"
     },
     {

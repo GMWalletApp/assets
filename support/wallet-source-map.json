@@ -1632,6 +1632,9 @@
     "soulswap": {
       "walletConnectId": "6d47c10f046c322b4882dbb6a4d8c8e5e439019402ff872412d3b79bd3a859f4"
     },
+    "splits": {
+      "walletConnectId": "7706f61ad98b5adfa32add8ebdbf5fdc5fa762bc76d0c489eab8e6ce5b69b593"
+    },
     "spot-on-chain-app": {
       "walletConnectId": "1897fdb811ff53a69f9217a98696798b0227c7d77fddf103e8295be551a1e3b6"
     },
