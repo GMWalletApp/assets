@@ -138,7 +138,7 @@
       "id": "7-exchange",
       "name": "7.exchange",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/7-exchange/logo.webp",
-      "url": ""
+      "url": "https://7.exchange"
     },
     {
       "id": "7k-aggregator",
@@ -264,7 +264,7 @@
       "id": "aeon-protocol",
       "name": "AEON Protocol",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aeon-protocol/logo.webp",
-      "url": " "
+      "url": "https://www.aeonprotocol.net/"
     },
     {
       "id": "aequinox",
@@ -300,7 +300,7 @@
       "id": "afi-swap",
       "name": "Afi Swap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/afi-swap/logo.webp",
-      "url": " "
+      "url": "https://swap.afi.run/"
     },
     {
       "id": "afraswap",
@@ -1710,7 +1710,7 @@
       "id": "bitblocks-finance",
       "name": "BitBlocks Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bitblocks-finance/logo.webp",
-      "url": ""
+      "url": "https://bitblocks.finance"
     },
     {
       "id": "bitcoin",
@@ -1866,7 +1866,7 @@
       "id": "blazephoenix",
       "name": "BlazePhoenix",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/blazephoenix/logo.webp",
-      "url": ""
+      "url": "https://blazephoenix.xyz"
     },
     {
       "id": "blazeswap",
@@ -1992,7 +1992,7 @@
       "id": "bond",
       "name": "Bond",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bond/logo.webp",
-      "url": " "
+      "url": "https://bond.xyz/"
     },
     {
       "id": "bonedex",
@@ -2388,7 +2388,7 @@
       "id": "cantex",
       "name": "Cantex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cantex/logo.webp",
-      "url": ""
+      "url": "https://cantex.io"
     },
     {
       "id": "canto",
@@ -2502,7 +2502,7 @@
       "id": "catnip",
       "name": "Catnip",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/catnip/logo.webp",
-      "url": ""
+      "url": "https://catnipexchange.com/"
     },
     {
       "id": "cauldron",
@@ -2658,13 +2658,13 @@
       "id": "cherum-bridge-aggregator",
       "name": "Cherum Bridge Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cherum-bridge-aggregator/logo.webp",
-      "url": ""
+      "url": "https://cherum.io"
     },
     {
       "id": "cherum-dex-aggregator",
       "name": "Cherum DEX Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cherum-dex-aggregator/logo.webp",
-      "url": ""
+      "url": "https://cherum.io"
     },
     {
       "id": "chewyswap",
@@ -2928,7 +2928,7 @@
       "id": "comdex-exchange",
       "name": "COMDEX Exchange",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/comdex-exchange/logo.webp",
-      "url": " "
+      "url": "https://comdex.app"
     },
     {
       "id": "comet-swap-v2",
@@ -3048,7 +3048,7 @@
       "id": "cookieswap",
       "name": "CookieSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cookieswap/logo.webp",
-      "url": " "
+      "url": "https://www.cookieswap.fun/"
     },
     {
       "id": "core-bitcoin-bridge",
@@ -3618,7 +3618,7 @@
       "id": "deluthium",
       "name": "Deluthium",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/deluthium/logo.webp",
-      "url": " "
+      "url": "https://deluthium.ai/"
     },
     {
       "id": "demex-amm",
@@ -3714,7 +3714,7 @@
       "id": "dexr",
       "name": "DEXR",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dexr/logo.webp",
-      "url": " "
+      "url": "https://dexr.finance"
     },
     {
       "id": "dexswap",
@@ -4008,7 +4008,7 @@
       "id": "dreamdex",
       "name": "dreamDEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dreamdex/logo.webp",
-      "url": " "
+      "url": "https://dreamdex.io"
     },
     {
       "id": "drift-amm",
@@ -4020,7 +4020,7 @@
       "id": "dropswap",
       "name": "DropSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dropswap/logo.webp",
-      "url": ""
+      "url": "https://dropswap.finance"
     },
     {
       "id": "dswap",
@@ -4074,13 +4074,13 @@
       "id": "durianfun-amm",
       "name": "Durianfun AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/durianfun-amm/logo.webp",
-      "url": " "
+      "url": "https://durianfun.xyz/"
     },
     {
       "id": "durianfun-dex-aggregator",
       "name": "Durianfun DEX Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/durianfun-dex-aggregator/logo.webp",
-      "url": " "
+      "url": "https://durianfun.xyz/swap"
     },
     {
       "id": "dusa-protocol",
@@ -4566,7 +4566,7 @@
       "id": "eticahub",
       "name": "EticaHub",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/eticahub/logo.webp",
-      "url": " "
+      "url": "https://eticahub.com/swap"
     },
     {
       "id": "etmcv2",
@@ -4914,7 +4914,7 @@
       "id": "fluxflow-v3",
       "name": "FluxFlow V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/fluxflow-v3/logo.webp",
-      "url": " "
+      "url": "https://fluxflow.fi"
     },
     {
       "id": "fluxion-network",
@@ -5034,7 +5034,7 @@
       "id": "frothswap",
       "name": "FrothSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/frothswap/logo.webp",
-      "url": ""
+      "url": "https://froth.meme/"
     },
     {
       "id": "fstswap",
@@ -5274,7 +5274,7 @@
       "id": "gensuki-dex-aggregator",
       "name": "Gensuki DEX Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gensuki-dex-aggregator/logo.webp",
-      "url": ""
+      "url": "https://app.gensuki.xyz/swap"
     },
     {
       "id": "ggswap",
@@ -5724,13 +5724,13 @@
       "id": "helios-v2",
       "name": "Helios V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/helios-v2/logo.webp",
-      "url": ""
+      "url": "https://app.helios.trade"
     },
     {
       "id": "helios-v3",
       "name": "Helios V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/helios-v3/logo.webp",
-      "url": ""
+      "url": "https://app.helios.trade"
     },
     {
       "id": "heliswap",
@@ -5874,7 +5874,7 @@
       "id": "hoodit",
       "name": "Hoodit",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hoodit/logo.webp",
-      "url": ""
+      "url": "https://hoodit.xyz"
     },
     {
       "id": "hop-aggregator",
@@ -5928,7 +5928,7 @@
       "id": "house-of-joshi",
       "name": "House of Joshi",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/house-of-joshi/logo.webp",
-      "url": ""
+      "url": "https://swap.thehouseofjoshi.com"
     },
     {
       "id": "houstonswap",
@@ -6090,7 +6090,7 @@
       "id": "hyperfx",
       "name": "HyperFX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hyperfx/logo.webp",
-      "url": ""
+      "url": "https://hyperfx.finance"
     },
     {
       "id": "hyperindex",
@@ -6138,13 +6138,13 @@
       "id": "hyperlynx-v2",
       "name": "Hyperlynx V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hyperlynx-v2/logo.webp",
-      "url": " "
+      "url": "https://hyperlynx.fi/"
     },
     {
       "id": "hyperlynx-v3",
       "name": "Hyperlynx V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hyperlynx-v3/logo.webp",
-      "url": " "
+      "url": "https://hyperlynx.fi/"
     },
     {
       "id": "hyperswap-on-areum-network",
@@ -6186,7 +6186,7 @@
       "id": "hypurrquant",
       "name": "HypurrQuant",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hypurrquant/logo.webp",
-      "url": " "
+      "url": "https://hypurrquant.com/"
     },
     {
       "id": "ibc",
@@ -6768,7 +6768,7 @@
       "id": "k2-lend",
       "name": "K2 Lend",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/k2-lend/logo.webp",
-      "url": ""
+      "url": "https://k2lend.com"
     },
     {
       "id": "kaco-finance",
@@ -6846,7 +6846,7 @@
       "id": "kasdex",
       "name": "KasDex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kasdex/logo.webp",
-      "url": ""
+      "url": "https://kasdex.app"
     },
     {
       "id": "kaspa-finance-v3",
@@ -7158,7 +7158,7 @@
       "id": "kolswap",
       "name": "KOLSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kolswap/logo.webp",
-      "url": ""
+      "url": "https://kolmarket.ai"
     },
     {
       "id": "kona-stableswap",
@@ -7224,13 +7224,13 @@
       "id": "krokoswap-v2",
       "name": "KrokoSwap V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/krokoswap-v2/logo.webp",
-      "url": " "
+      "url": "https://krokoswap.io/"
     },
     {
       "id": "krokoswap-v3",
       "name": "KrokoSwap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/krokoswap-v3/logo.webp",
-      "url": " "
+      "url": "https://krokoswap.io/"
     },
     {
       "id": "kromatika",
@@ -7272,7 +7272,7 @@
       "id": "kublerx",
       "name": "Kublerx",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kublerx/logo.webp",
-      "url": " "
+      "url": "https://kublerx.com"
     },
     {
       "id": "kujata",
@@ -8844,7 +8844,7 @@
       "id": "myrxswap",
       "name": "MyrxSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/myrxswap/logo.webp",
-      "url": " "
+      "url": "https://myrxwallet.io"
     },
     {
       "id": "myswap-cl",
@@ -9462,7 +9462,7 @@
       "id": "onix-finance",
       "name": "Onix.Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/onix-finance/logo.webp",
-      "url": " "
+      "url": "https://onix.finance/"
     },
     {
       "id": "onsen-swap",
@@ -9522,7 +9522,7 @@
       "id": "openlaunch",
       "name": "Openlaunch",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/openlaunch/logo.webp",
-      "url": ""
+      "url": "https://openlaunchfi.xyz"
     },
     {
       "id": "openleverage",
@@ -9570,7 +9570,7 @@
       "id": "ophis",
       "name": "Ophis",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ophis/logo.webp",
-      "url": " "
+      "url": "https://ophis.fi/"
     },
     {
       "id": "opt-finance",
@@ -9690,7 +9690,7 @@
       "id": "orvex",
       "name": "Orvex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/orvex/logo.webp",
-      "url": ""
+      "url": "https://orvex.fi/"
     },
     {
       "id": "osmosis-dex",
@@ -9714,7 +9714,7 @@
       "id": "owlorderfi",
       "name": "OwlOrderFi",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/owlorderfi/logo.webp",
-      "url": ""
+      "url": "https://owlorderfi.com/"
     },
     {
       "id": "oxedium",
@@ -9942,13 +9942,13 @@
       "id": "parityswap-v2",
       "name": "ParitySwap V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/parityswap-v2/logo.webp",
-      "url": ""
+      "url": "https://app.parityswap.io"
     },
     {
       "id": "parityswap-v3",
       "name": "ParitySwap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/parityswap-v3/logo.webp",
-      "url": ""
+      "url": "https://app.parityswap.io"
     },
     {
       "id": "partyswap",
@@ -9973,6 +9973,12 @@
       "name": "PayCash",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/paycash/logo.webp",
       "url": "https://paycashswap.com"
+    },
+    {
+      "id": "peach-aggregator",
+      "name": "Peach Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/peach-aggregator/logo.webp",
+      "url": ""
     },
     {
       "id": "pearl-v1",
@@ -10254,7 +10260,7 @@
       "id": "plaxswap",
       "name": "Plaxswap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/plaxswap/logo.webp",
-      "url": " "
+      "url": "https://plaxswap.io"
     },
     {
       "id": "plenty",
@@ -10686,7 +10692,7 @@
       "id": "qom-x",
       "name": "Qom X",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/qom-x/logo.webp",
-      "url": ""
+      "url": "https://qomx.io/"
     },
     {
       "id": "qomswap",
@@ -10722,7 +10728,7 @@
       "id": "quay",
       "name": "Quay",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/quay/logo.webp",
-      "url": ""
+      "url": "https://quay.markets"
     },
     {
       "id": "quickswap-dex",
@@ -11226,7 +11232,7 @@
       "id": "rswap",
       "name": "RSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/rswap/logo.webp",
-      "url": " "
+      "url": "https://dex.reddicks.meme"
     },
     {
       "id": "rubic",
@@ -11412,7 +11418,7 @@
       "id": "sato",
       "name": "SATO",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sato/logo.webp",
-      "url": ""
+      "url": "https://sat0.org/"
     },
     {
       "id": "satori-spots",
@@ -11634,7 +11640,7 @@
       "id": "sera",
       "name": "Sera",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sera/logo.webp",
-      "url": " "
+      "url": "https://sera.cx"
     },
     {
       "id": "serum",
@@ -13065,6 +13071,12 @@
       "url": "https://sushi.com/"
     },
     {
+      "id": "sushiswap-v4",
+      "name": "SushiSwap V4",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sushiswap-v4/logo.webp",
+      "url": "https://sushi.com/"
+    },
+    {
       "id": "swaap-maker-v1",
       "name": "Swaap Maker V1",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/swaap-maker-v1/logo.webp",
@@ -13254,7 +13266,7 @@
       "id": "swapwizard",
       "name": "SwapWizard",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/swapwizard/logo.webp",
-      "url": " "
+      "url": "https://swapwizard.xyz/"
     },
     {
       "id": "swapx-algebra",
@@ -13405,12 +13417,6 @@
       "name": "SyncSwap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/syncswap-v3/logo.webp",
       "url": "https://syncswap.xyz/"
-    },
-    {
-      "id": "synthra-finance",
-      "name": "Synthra Finance",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/synthra-finance/logo.webp",
-      "url": "https://app.synthra.org"
     },
     {
       "id": "synthswap-v2",
@@ -13650,7 +13656,7 @@
       "id": "teraswap",
       "name": "TeraSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/teraswap/logo.webp",
-      "url": " "
+      "url": "https://www.teraswap.app/"
     },
     {
       "id": "terra-bridge",
@@ -13698,7 +13704,7 @@
       "id": "textile-fx",
       "name": "Textile FX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/textile-fx/logo.webp",
-      "url": ""
+      "url": "https://app.textilecredit.com"
     },
     {
       "id": "tfm",
@@ -14025,6 +14031,18 @@
       "url": "https://trebleswap.com"
     },
     {
+      "id": "trenchdex-v2",
+      "name": "TrenchDEX V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/trenchdex-v2/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "trenchdex-v3",
+      "name": "TrenchDEX V3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/trenchdex-v3/logo.webp",
+      "url": ""
+    },
+    {
       "id": "trisolaris",
       "name": "Trisolaris",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/trisolaris/logo.webp",
@@ -14064,7 +14082,7 @@
       "id": "turbo",
       "name": "Turbo",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/turbo/logo.webp",
-      "url": " "
+      "url": "https://turbotrade.app"
     },
     {
       "id": "turbos",
@@ -14724,7 +14742,7 @@
       "id": "vurto-swap",
       "name": "Vurto Swap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/vurto-swap/logo.webp",
-      "url": ""
+      "url": "https://swap.vurto.cc/"
     },
     {
       "id": "vvs-flawless",
@@ -14922,13 +14940,13 @@
       "id": "wheelx-fi-bridge-aggregator",
       "name": "WheelX.fi Bridge Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/wheelx-fi-bridge-aggregator/logo.webp",
-      "url": " "
+      "url": "https://wheelx.fi/"
     },
     {
       "id": "wheelx-fi-dex-aggregator",
       "name": "WheelX.fi DEX Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/wheelx-fi-dex-aggregator/logo.webp",
-      "url": " "
+      "url": "https://wheelx.fi/"
     },
     {
       "id": "white-whale-dex",

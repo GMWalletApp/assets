@@ -632,6 +632,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/blofin-wallet/logo.png"
     },
     {
+      "id": "blonect",
+      "name": "Blonect",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/blonect/logo.png"
+    },
+    {
       "id": "bloom",
       "name": "Bloom",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/bloom/logo.png"

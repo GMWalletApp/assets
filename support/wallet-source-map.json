@@ -265,6 +265,9 @@
     "blofin-wallet": {
       "walletConnectId": "9207486640ccbe5641b581b9c63d14f9dfdc446b6039a8d22935adb364d6d0a7"
     },
+    "blonect": {
+      "walletConnectId": "8dc08ffbcb36cd1411194e5b28e4888a887c25c96ad9cc704e2dda9a8d412ee2"
+    },
     "bloom": {
       "walletConnectId": "12ffbeb52b37f08bd8224a50e1cd2173286bf432832579861a5480bd662e349d"
     },
