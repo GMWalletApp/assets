@@ -279,6 +279,12 @@
       "url": ""
     },
     {
+      "id": "aero-lite",
+      "name": "Aero Lite",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aero-lite/logo.webp",
+      "url": "https://aero.xyz/"
+    },
+    {
       "id": "aerodrome-slipstream",
       "name": "Aerodrome Slipstream",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aerodrome-slipstream/logo.webp",
@@ -1779,6 +1785,12 @@
       "url": "https://bitswap.site"
     },
     {
+      "id": "bittensor-dtao",
+      "name": "Bittensor dTAO",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bittensor-dtao/logo.webp",
+      "url": "https://bittensor.com"
+    },
+    {
       "id": "bitverse-dex",
       "name": "Bitverse DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bitverse-dex/logo.webp",
@@ -2341,6 +2353,12 @@
       "name": "CakeWSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cakewswap/logo.webp",
       "url": ""
+    },
+    {
+      "id": "calamari",
+      "name": "Calamari",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/calamari/logo.webp",
+      "url": " "
     },
     {
       "id": "caldera",
@@ -10167,6 +10185,12 @@
       "url": "https://phoenix.trade"
     },
     {
+      "id": "phos-swap",
+      "name": "Phos Swap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/phos-swap/logo.webp",
+      "url": "https://phos.land"
+    },
+    {
       "id": "photonswap-finance",
       "name": "PhotonSwap Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/photonswap-finance/logo.webp",
@@ -13417,6 +13441,12 @@
       "name": "SyncSwap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/syncswap-v3/logo.webp",
       "url": "https://syncswap.xyz/"
+    },
+    {
+      "id": "synthra-v3",
+      "name": "Synthra V3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/synthra-v3/logo.webp",
+      "url": "https://app.synthra.org"
     },
     {
       "id": "synthswap-v2",
