@@ -11631,12 +11631,6 @@
       "url": "https://sega.so/"
     },
     {
-      "id": "seleman-dex",
-      "name": "SELEMAN DEX",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/seleman-dex/logo.webp",
-      "url": "https://seleman.monarcaproject.com"
-    },
-    {
       "id": "selfex",
       "name": "Selfex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/selfex/logo.webp",
@@ -11940,7 +11934,7 @@
       "id": "simpledex",
       "name": "SimpleDEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/simpledex/logo.webp",
-      "url": "https://dex.protonnz.com"
+      "url": "https://simpledex.fun/"
     },
     {
       "id": "singularx",
@@ -14664,7 +14658,7 @@
       "id": "virbicoin-dex",
       "name": "VirBiCoin DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/virbicoin-dex/logo.webp",
-      "url": "https://vbc.digitalregion.jp/"
+      "url": "https://virbicoin.com/"
     },
     {
       "id": "viridian-exchange",
