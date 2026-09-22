@@ -287,6 +287,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/altme/logo.png"
     },
     {
+      "id": "altra-pay",
+      "name": "Altra Pay",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/altra-pay/logo.png"
+    },
+    {
       "id": "amazewallet",
       "name": "AmazeWallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/amazewallet/logo.png"

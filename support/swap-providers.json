@@ -2187,6 +2187,12 @@
       "url": "https://app.bubbleswap.io"
     },
     {
+      "id": "buglefamily",
+      "name": "Buglefamily",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/buglefamily/logo.webp",
+      "url": ""
+    },
+    {
       "id": "bulbaswap-v2",
       "name": "BulbaSwap V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bulbaswap-v2/logo.webp",
