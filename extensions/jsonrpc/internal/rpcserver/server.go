@@ -63,10 +63,11 @@ const (
 	DefaultManagedListDBPath            = "extensions/jsonrpc/data/lists.sqlite"
 	DefaultManagedListFilesDir          = "extensions/jsonrpc/data/lists"
 	DefaultManagedListPublicBaseURL     = "/files"
-	DefaultRepositoryStaticBaseURL      = "https://raw.githubusercontent.com/GMWalletApp/assets/main/data/static"
+	DefaultRepositoryAssetBaseURL       = "https://raw.githubusercontent.com/GMWalletApp/assets/main"
+	DefaultRepositoryStaticBaseURL      = DefaultRepositoryAssetBaseURL + "/data/static"
 	DefaultUSDTFamilyLogoURI            = DefaultRepositoryStaticBaseURL + "/USDT.svg"
 	DefaultPolygonLogoURI               = DefaultRepositoryStaticBaseURL + "/poly.svg"
-	DefaultXLayerLogoURI                = DefaultAssetBaseURL + "/blockchains/xlayer/info/logo.png"
+	DefaultXLayerLogoURI                = DefaultRepositoryAssetBaseURL + "/blockchains/xlayer/info/logo.png"
 )
 
 type Server struct {

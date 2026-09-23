@@ -7380,7 +7380,7 @@
       "symbol": "OKB",
       "decimals": 18,
       "status": "active",
-      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/xlayer/info/logo.png",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/blockchains/xlayer/info/logo.png",
       "logoExists": true,
       "rank": 37,
       "market": {

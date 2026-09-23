@@ -45,6 +45,7 @@ REPO_ROOT = HERE.parents[1]
 OUT_DIR = HERE / "out"
 BLOCKCHAINS_DIR = REPO_ROOT / "blockchains"
 TRUSTWALLET_CDN = "https://assets-cdn.trustwallet.com"
+REPOSITORY_ASSET_BASE = "https://raw.githubusercontent.com/GMWalletApp/assets/main"
 REPOSITORY_STATIC_BASE = "https://raw.githubusercontent.com/GMWalletApp/assets/main/data/static"
 DEFAULT_OVERRIDES_FILE = HERE / "homepage_overrides.json"
 INLINE_OVERRIDES_ENV = "HOMEPAGE_INLINE_OVERRIDES_JSON"
@@ -230,6 +231,8 @@ def tags_for_slot(slot: str) -> list[str]:
 def build_chain_logo_uri(chain: str) -> str:
     if canonical_chain_key(chain) == "polygon":
         return f"{REPOSITORY_STATIC_BASE}/poly.svg"
+    if canonical_chain_key(chain) == "xlayer":
+        return f"{REPOSITORY_ASSET_BASE}/blockchains/xlayer/info/logo.png"
     return f"{TRUSTWALLET_CDN}/blockchains/{chain}/info/logo.png"
 
 
