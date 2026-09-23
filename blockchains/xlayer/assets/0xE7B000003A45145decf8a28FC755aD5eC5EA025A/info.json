@@ -1,0 +1,24 @@
+{
+    "name": "OKX Wrapped ETH",
+    "type": "XLAYER",
+    "symbol": "xETH",
+    "decimals": 18,
+    "website": "https://www.okx.com/xlayer",
+    "description": "OKX Wrapped ETH (xETH) is wrapped Ether bridged to X Layer via OKX.",
+    "explorer": "https://www.oklink.com/xlayer/token/0xE7B000003A45145decf8a28FC755aD5eC5EA025A",
+    "status": "active",
+    "id": "0xE7B000003A45145decf8a28FC755aD5eC5EA025A",
+    "links": [
+        {
+            "name": "docs",
+            "url": "https://www.okx.com/web3/build/docs/waas/x-layer-network-information"
+        },
+        {
+            "name": "github",
+            "url": "https://github.com/okx/xlayer-tokenlist"
+        }
+    ],
+    "tags": [
+        "wrapped"
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "name": "Trust Wallet: X Layer List",
+    "logoURI": "https://trustwallet.com/assets/images/favicon.png",
+    "timestamp": "2026-09-23T11:40:00.000000",
+    "version": {
+        "major": 1,
+        "minor": 0,
+        "patch": 0
+    },
+    "tokens": [
+        {
+            "asset": "c196_t0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+            "type": "XLAYER",
+            "address": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+            "name": "USD₮0",
+            "symbol": "USDT",
+            "decimals": 6,
+            "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/blockchains/xlayer/assets/0x779Ded0c9e1022225f8E0630b35a9b54bE713736/logo.png",
+            "pairs": []
+        },
+        {
+            "asset": "c196_t0xB6CEceAB302E2E4948951eE7843FC24E92933061",
+            "type": "XLAYER",
+            "address": "0xB6CEceAB302E2E4948951eE7843FC24E92933061",
+            "name": "USD Coin",
+            "symbol": "USDC",
+            "decimals": 6,
+            "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/blockchains/xlayer/assets/0xB6CEceAB302E2E4948951eE7843FC24E92933061/logo.png",
+            "pairs": []
+        },
+        {
+            "asset": "c196_t0x4ae46a509F6b1D9056937BA4500cb143933D2dc8",
+            "type": "XLAYER",
+            "address": "0x4ae46a509F6b1D9056937BA4500cb143933D2dc8",
+            "name": "Global Dollar",
+            "symbol": "USDG",
+            "decimals": 6,
+            "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/blockchains/xlayer/assets/0x4ae46a509F6b1D9056937BA4500cb143933D2dc8/logo.png",
+            "pairs": []
+        },
+        {
+            "asset": "c196_t0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+            "type": "XLAYER",
+            "address": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+            "name": "Wrapped OKB",
+            "symbol": "WOKB",
+            "decimals": 18,
+            "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/blockchains/xlayer/assets/0xe538905cf8410324e03A5A23C1c177a474D59b2b/logo.png",
+            "pairs": []
+        },
+        {
+            "asset": "c196_t0xC5015b9d9161Dca7e18e32f6f25C4aD850731Fd4",
+            "type": "XLAYER",
+            "address": "0xC5015b9d9161Dca7e18e32f6f25C4aD850731Fd4",
+            "name": "Dai Stablecoin",
+            "symbol": "DAI",
+            "decimals": 18,
+            "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/blockchains/xlayer/assets/0xC5015b9d9161Dca7e18e32f6f25C4aD850731Fd4/logo.png",
+            "pairs": []
+        },
+        {
+            "asset": "c196_t0xE7B000003A45145decf8a28FC755aD5eC5EA025A",
+            "type": "XLAYER",
+            "address": "0xE7B000003A45145decf8a28FC755aD5eC5EA025A",
+            "name": "OKX Wrapped ETH",
+            "symbol": "xETH",
+            "decimals": 18,
+            "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/blockchains/xlayer/assets/0xE7B000003A45145decf8a28FC755aD5eC5EA025A/logo.png",
+            "pairs": []
+        },
+        {
+            "asset": "c196_t0xb7C00000bcDEeF966b20B3D884B98E64d2b06b4f",
+            "type": "XLAYER",
+            "address": "0xb7C00000bcDEeF966b20B3D884B98E64d2b06b4f",
+            "name": "OKX Wrapped BTC",
+            "symbol": "xBTC",
+            "decimals": 8,
+            "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/blockchains/xlayer/assets/0xb7C00000bcDEeF966b20B3D884B98E64d2b06b4f/logo.png",
+            "pairs": []
+        }
+    ]
+}

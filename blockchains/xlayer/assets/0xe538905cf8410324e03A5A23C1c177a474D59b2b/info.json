@@ -1,0 +1,24 @@
+{
+    "name": "Wrapped OKB",
+    "type": "XLAYER",
+    "symbol": "WOKB",
+    "decimals": 18,
+    "website": "https://www.okx.com/xlayer",
+    "description": "Wrapped OKB (WOKB) is the wrapped form of X Layer native gas token OKB.",
+    "explorer": "https://www.oklink.com/xlayer/token/0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+    "status": "active",
+    "id": "0xe538905cf8410324e03A5A23C1c177a474D59b2b",
+    "links": [
+        {
+            "name": "docs",
+            "url": "https://www.okx.com/web3/build/docs/waas/x-layer-network-information"
+        },
+        {
+            "name": "github",
+            "url": "https://github.com/okx/xlayer-tokenlist"
+        }
+    ],
+    "tags": [
+        "wrapped"
+    ]
+}

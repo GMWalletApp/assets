@@ -1,0 +1,24 @@
+{
+    "name": "USD₮0",
+    "type": "XLAYER",
+    "symbol": "USDT",
+    "decimals": 6,
+    "website": "https://usdt0.to/",
+    "description": "USDT0 brings Tether USD to X Layer as an omnichain stablecoin.",
+    "explorer": "https://www.oklink.com/xlayer/token/0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+    "status": "active",
+    "id": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+    "links": [
+        {
+            "name": "docs",
+            "url": "https://docs.usdt0.to/"
+        },
+        {
+            "name": "x",
+            "url": "https://x.com/usdt0_to"
+        }
+    ],
+    "tags": [
+        "stablecoin"
+    ]
+}

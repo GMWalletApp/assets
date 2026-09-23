@@ -1,0 +1,24 @@
+{
+    "name": "USD Coin",
+    "type": "XLAYER",
+    "symbol": "USDC",
+    "decimals": 6,
+    "website": "https://www.circle.com/usdc",
+    "description": "USD Coin (USDC) on X Layer. Bridged/native deployment curated in GMWallet manual tokens.",
+    "explorer": "https://www.oklink.com/xlayer/token/0xB6CEceAB302E2E4948951eE7843FC24E92933061",
+    "status": "active",
+    "id": "0xB6CEceAB302E2E4948951eE7843FC24E92933061",
+    "links": [
+        {
+            "name": "docs",
+            "url": "https://www.circle.com/en/usdc"
+        },
+        {
+            "name": "coingecko",
+            "url": "https://coingecko.com/en/coins/usd-coin"
+        }
+    ],
+    "tags": [
+        "stablecoin"
+    ]
+}
