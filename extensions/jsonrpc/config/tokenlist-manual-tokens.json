@@ -2053,6 +2053,99 @@
     },
     {
       "kind": "token",
+      "chain": "xlayer",
+      "hot": false,
+      "address": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+      "assetId": "usdt:xlayer:0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+      "type": "XLAYER",
+      "name": "USD₮0",
+      "symbol": "USDT",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://usdt0.to/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://www.oklink.com/xlayer/address/0x779Ded0c9e1022225f8E0630b35a9b54bE713736"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://usdt0.to/ecosystem/x-layer"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "xlayer",
+      "hot": false,
+      "address": "0xb6ceceab302e2e4948951ee7843fc24e92933061",
+      "assetId": "usdc:xlayer:0xb6ceceab302e2e4948951ee7843fc24e92933061",
+      "type": "XLAYER",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://www.circle.com/usdc"
+        },
+        {
+          "name": "explorer",
+          "url": "https://www.oklink.com/xlayer/address/0xb6ceceab302e2e4948951ee7843fc24e92933061"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://web3.okx.com/onchainos/dev-docs/payments/supported-networks"
+        }
+      ]
+    },
+    {
+      "kind": "token",
+      "chain": "xlayer",
+      "hot": false,
+      "address": "0x4ae46a509F6b1D9056937BA4500cb143933D2dc8",
+      "assetId": "usdg:xlayer:0x4ae46a509F6b1D9056937BA4500cb143933D2dc8",
+      "type": "XLAYER",
+      "name": "Global Dollar",
+      "symbol": "USDG",
+      "decimals": 6,
+      "status": "active",
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xe343167631d89B6Ffc58B88d6b7fB0228795491D/logo.png",
+      "logoExists": true,
+      "tags": [
+        "stablecoin"
+      ],
+      "links": [
+        {
+          "name": "website",
+          "url": "https://globaldollar.com/"
+        },
+        {
+          "name": "explorer",
+          "url": "https://www.oklink.com/xlayer/address/0x4ae46a509F6b1D9056937BA4500cb143933D2dc8"
+        },
+        {
+          "name": "official-deployments",
+          "url": "https://docs.paxos.com/guides/stablecoin/usdg/mainnet"
+        }
+      ]
+    },
+    {
+      "kind": "token",
       "chain": "xdai",
       "hot": false,
       "address": "0x420CA0f9B9b604cE0fd9C18EF134C705e5Fa3430",

@@ -119,6 +119,42 @@
       "logoURI": "https://github.com/jpycoin.png",
       "explorer": "https://polygonscan.com/token/0xE7C3D8C9a439feDe00D2600032D5dB0Be71C3c29",
       "source": "manual-override:jpyc-official"
+    },
+    {
+      "chain": "xlayer",
+      "slot": "usdt",
+      "kind": "token",
+      "symbol": "USDT",
+      "name": "USD₮0",
+      "address": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+      "decimals": 6,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "explorer": "https://www.oklink.com/xlayer/address/0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+      "source": "manual-override:usdt0-official"
+    },
+    {
+      "chain": "xlayer",
+      "slot": "usdc",
+      "kind": "token",
+      "symbol": "USDC",
+      "name": "USD Coin",
+      "address": "0xb6ceceab302e2e4948951ee7843fc24e92933061",
+      "decimals": 6,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+      "explorer": "https://www.oklink.com/xlayer/address/0xb6ceceab302e2e4948951ee7843fc24e92933061",
+      "source": "manual-override:okx-official"
+    },
+    {
+      "chain": "xlayer",
+      "slot": "usdg",
+      "kind": "token",
+      "symbol": "USDG",
+      "name": "Global Dollar",
+      "address": "0x4ae46a509F6b1D9056937BA4500cb143933D2dc8",
+      "decimals": 6,
+      "logoURI": "https://assets-cdn.trustwallet.com/blockchains/ethereum/assets/0xe343167631d89B6Ffc58B88d6b7fB0228795491D/logo.png",
+      "explorer": "https://www.oklink.com/xlayer/address/0x4ae46a509F6b1D9056937BA4500cb143933D2dc8",
+      "source": "manual-override:paxos-official"
     }
   ]
 }

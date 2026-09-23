@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-08-16T17:15:05Z",
+  "generatedAt": "2026-09-23T10:41:58Z",
   "chainOrder": [
     "ethereum",
     "bsc",
     "arbitrum",
     "polygon",
     "solana",
-    "tron"
+    "tron",
+    "xlayer"
   ],
   "slotOrder": [
     "native",
@@ -132,6 +133,21 @@
         "usdt",
         "usdc",
         "usdd"
+      ],
+      "tokenCount": 4
+    },
+    {
+      "key": "xlayer",
+      "name": "X Layer",
+      "symbol": "OKB",
+      "chainId": 196,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x75231F58b43240C9718Dd58B4967c5114342a86c/logo.png",
+      "explorer": "https://www.oklink.com/xlayer",
+      "availableSlots": [
+        "native",
+        "usdt",
+        "usdc",
+        "usdg"
       ],
       "tokenCount": 4
     }
@@ -1048,6 +1064,88 @@
       "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/tron/assets/TXDk8mbtRbXeYuMNS83CfKPaYYT8XWv9Hz/logo.png",
       "explorer": "https://tronscan.org/#/token20/TXDk8mbtRbXeYuMNS83CfKPaYYT8XWv9Hz",
       "source": "trustwallet-asset"
+    },
+    {
+      "id": "xlayer:native",
+      "chain": "xlayer",
+      "chainName": "X Layer",
+      "chainId": 196,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x75231F58b43240C9718Dd58B4967c5114342a86c/logo.png",
+      "slot": "native",
+      "kind": "native",
+      "displaySymbol": "OKB",
+      "displayName": "OKB",
+      "tags": [],
+      "symbol": "OKB",
+      "name": "OKB",
+      "address": null,
+      "decimals": 18,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x75231F58b43240C9718Dd58B4967c5114342a86c/logo.png",
+      "explorer": "https://www.oklink.com/xlayer",
+      "source": "trustwallet-chain"
+    },
+    {
+      "id": "xlayer:usdt",
+      "chain": "xlayer",
+      "chainName": "X Layer",
+      "chainId": 196,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x75231F58b43240C9718Dd58B4967c5114342a86c/logo.png",
+      "slot": "usdt",
+      "kind": "token",
+      "displaySymbol": "USDT",
+      "displayName": "Tether",
+      "tags": [
+        "stablecoin"
+      ],
+      "symbol": "USDT",
+      "name": "USD₮0",
+      "address": "0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+      "decimals": 6,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/megaeth/assets/0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb/logo.png",
+      "explorer": "https://www.oklink.com/xlayer/address/0x779Ded0c9e1022225f8E0630b35a9b54bE713736",
+      "source": "manual-override:usdt0-official"
+    },
+    {
+      "id": "xlayer:usdc",
+      "chain": "xlayer",
+      "chainName": "X Layer",
+      "chainId": 196,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x75231F58b43240C9718Dd58B4967c5114342a86c/logo.png",
+      "slot": "usdc",
+      "kind": "token",
+      "displaySymbol": "USDC",
+      "displayName": "USD Coin",
+      "tags": [
+        "stablecoin"
+      ],
+      "symbol": "USDC",
+      "name": "USD Coin",
+      "address": "0xb6ceceab302e2e4948951ee7843fc24e92933061",
+      "decimals": 6,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+      "explorer": "https://www.oklink.com/xlayer/address/0xb6ceceab302e2e4948951ee7843fc24e92933061",
+      "source": "manual-override:okx-official"
+    },
+    {
+      "id": "xlayer:usdg",
+      "chain": "xlayer",
+      "chainName": "X Layer",
+      "chainId": 196,
+      "chainLogoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0x75231F58b43240C9718Dd58B4967c5114342a86c/logo.png",
+      "slot": "usdg",
+      "kind": "token",
+      "displaySymbol": "USDG",
+      "displayName": "Global Dollar",
+      "tags": [
+        "stablecoin"
+      ],
+      "symbol": "USDG",
+      "name": "Global Dollar",
+      "address": "0x4ae46a509F6b1D9056937BA4500cb143933D2dc8",
+      "decimals": 6,
+      "logoURI": "https://cdn.jsdelivr.net/gh/trustwallet/assets@master/blockchains/ethereum/assets/0xe343167631d89B6Ffc58B88d6b7fB0228795491D/logo.png",
+      "explorer": "https://www.oklink.com/xlayer/address/0x4ae46a509F6b1D9056937BA4500cb143933D2dc8",
+      "source": "manual-override:paxos-official"
     }
   ]
 }

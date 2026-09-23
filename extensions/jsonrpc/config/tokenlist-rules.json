@@ -22,7 +22,8 @@
     "plasma": "plasma",
     "polkadot": "polkadot",
     "secret": "secret",
-    "sei-v2": "seievm"
+    "sei-v2": "seievm",
+    "x-layer": "xlayer"
   },
   "nativeMarketMappings": {
     "aptos": [
@@ -41,6 +42,9 @@
       "arbitrum",
       "base",
       "optimism"
+    ],
+    "okb": [
+      "xlayer"
     ],
     "plasma": [
       "plasma"

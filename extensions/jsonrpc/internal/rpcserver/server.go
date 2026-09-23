@@ -66,6 +66,7 @@ const (
 	DefaultRepositoryStaticBaseURL      = "https://raw.githubusercontent.com/GMWalletApp/assets/main/data/static"
 	DefaultUSDTFamilyLogoURI            = DefaultRepositoryStaticBaseURL + "/USDT.svg"
 	DefaultPolygonLogoURI               = DefaultRepositoryStaticBaseURL + "/poly.svg"
+	DefaultXLayerLogoURI                = DefaultAssetBaseURL + "/blockchains/ethereum/assets/0x75231F58b43240C9718Dd58B4967c5114342a86c/logo.png"
 )
 
 type Server struct {

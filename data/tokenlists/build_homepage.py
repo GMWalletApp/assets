@@ -61,6 +61,7 @@ CHAIN_ORDER = [
     "polygon",
     "solana",
     "tron",
+    "xlayer",
 ]
 
 # Trust Wallet chain metadata is not always wallet-friendly at the chain level
@@ -74,6 +75,7 @@ CHAIN_CONFIG = {
     "polygon": {"chainName": "Polygon", "nativeSymbol": "POL", "nativeName": "POL", "chainId": 137},
     "solana": {"chainName": "Solana", "nativeSymbol": "SOL", "nativeName": "Solana", "chainId": None},
     "tron": {"chainName": "TRON", "nativeSymbol": "TRX", "nativeName": "TRON", "chainId": None},
+    "xlayer": {"chainName": "X Layer", "nativeSymbol": "OKB", "nativeName": "OKB", "chainId": 196},
 }
 
 SLOT_ORDER = ["native", "usdt", "usdt0", "usdc", "usde", "usds", "usdd", "usd1", "usdg", "eurc", "eure", "euri", "gyen", "jpyc"]
@@ -89,7 +91,7 @@ SLOT_CHAIN_ALLOWLISTS = {
     "usde": {"ethereum", "smartchain", "arbitrum", "solana"},
     "usdd": {"ethereum", "smartchain", "tron"},
     "usd1": {"ethereum", "smartchain", "solana"},
-    "usdg": {"ethereum", "solana"},
+    "usdg": {"ethereum", "solana", "xlayer"},
     "jpyc": {"ethereum", "polygon"},
 }
 
@@ -228,6 +230,8 @@ def tags_for_slot(slot: str) -> list[str]:
 def build_chain_logo_uri(chain: str) -> str:
     if canonical_chain_key(chain) == "polygon":
         return f"{REPOSITORY_STATIC_BASE}/poly.svg"
+    if canonical_chain_key(chain) == "xlayer":
+        return f"{TRUSTWALLET_CDN}/blockchains/ethereum/assets/0x75231F58b43240C9718Dd58B4967c5114342a86c/logo.png"
     return f"{TRUSTWALLET_CDN}/blockchains/{chain}/info/logo.png"
 
 

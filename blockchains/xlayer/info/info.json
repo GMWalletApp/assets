@@ -1,0 +1,28 @@
+{
+  "name": "X Layer",
+  "website": "https://www.okx.com/xlayer",
+  "description": "X Layer is an EVM-compatible Layer 2 network powered by OKB.",
+  "explorer": "https://www.oklink.com/xlayer",
+  "symbol": "OKB",
+  "rpc_url": "https://rpc.xlayer.tech",
+  "type": "coin",
+  "decimals": 18,
+  "status": "active",
+  "tags": [
+    "defi"
+  ],
+  "links": [
+    {
+      "name": "docs",
+      "url": "https://www.okx.com/web3/build/docs/waas/x-layer-network-information"
+    },
+    {
+      "name": "github",
+      "url": "https://github.com/okx/xlayer-tokenlist"
+    },
+    {
+      "name": "coingecko",
+      "url": "https://coingecko.com/en/coins/okb/"
+    }
+  ]
+}
