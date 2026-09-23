@@ -377,6 +377,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/assure/logo.png"
     },
     {
+      "id": "astracore-wallet",
+      "name": "AstraCore Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/astracore-wallet/logo.png"
+    },
+    {
       "id": "at-wallet",
       "name": "AT.Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/at-wallet/logo.png"

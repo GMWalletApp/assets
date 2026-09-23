@@ -110,6 +110,9 @@
     "assure": {
       "walletConnectId": "792fbacfe787d67595dd4eb38ac308e14b3bbc810393db56f477a92e5ac8764b"
     },
+    "astracore-wallet": {
+      "walletConnectId": "1ed0788773b6e621f205b5d1338fe8aec6247031024679f799d0b2d3dd72b363"
+    },
     "at-wallet": {
       "walletConnectId": "aa01d13483db4c065b7a619b813f9eae1cb60c19bf0fc0ed3c36444a07257bd0"
     },
