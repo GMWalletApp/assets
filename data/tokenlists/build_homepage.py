@@ -230,8 +230,6 @@ def tags_for_slot(slot: str) -> list[str]:
 def build_chain_logo_uri(chain: str) -> str:
     if canonical_chain_key(chain) == "polygon":
         return f"{REPOSITORY_STATIC_BASE}/poly.svg"
-    if canonical_chain_key(chain) == "xlayer":
-        return f"{TRUSTWALLET_CDN}/blockchains/ethereum/assets/0x75231F58b43240C9718Dd58B4967c5114342a86c/logo.png"
     return f"{TRUSTWALLET_CDN}/blockchains/{chain}/info/logo.png"
 
 
