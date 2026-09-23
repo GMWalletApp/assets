@@ -1,0 +1,24 @@
+{
+    "name": "OKX Wrapped BTC",
+    "type": "XLAYER",
+    "symbol": "xBTC",
+    "decimals": 8,
+    "website": "https://www.okx.com/xlayer",
+    "description": "OKX Wrapped BTC (xBTC) is wrapped Bitcoin bridged to X Layer via OKX.",
+    "explorer": "https://www.oklink.com/xlayer/token/0xb7C00000bcDEeF966b20B3D884B98E64d2b06b4f",
+    "status": "active",
+    "id": "0xb7C00000bcDEeF966b20B3D884B98E64d2b06b4f",
+    "links": [
+        {
+            "name": "docs",
+            "url": "https://www.okx.com/web3/build/docs/waas/x-layer-network-information"
+        },
+        {
+            "name": "github",
+            "url": "https://github.com/okx/xlayer-tokenlist"
+        }
+    ],
+    "tags": [
+        "wrapped"
+    ]
+}

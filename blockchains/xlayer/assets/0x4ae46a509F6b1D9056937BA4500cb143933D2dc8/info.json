@@ -1,0 +1,24 @@
+{
+    "name": "Global Dollar",
+    "type": "XLAYER",
+    "symbol": "USDG",
+    "decimals": 6,
+    "website": "https://globaldollar.com/",
+    "description": "Global Dollar (USDG) is a regulated digital dollar stablecoin issued by Paxos.",
+    "explorer": "https://www.oklink.com/xlayer/token/0x4ae46a509F6b1D9056937BA4500cb143933D2dc8",
+    "status": "active",
+    "id": "0x4ae46a509F6b1D9056937BA4500cb143933D2dc8",
+    "links": [
+        {
+            "name": "docs",
+            "url": "https://docs.paxos.com/guides/stablecoin/usdg/mainnet"
+        },
+        {
+            "name": "coingecko",
+            "url": "https://coingecko.com/en/coins/global-dollar"
+        }
+    ],
+    "tags": [
+        "stablecoin"
+    ]
+}
