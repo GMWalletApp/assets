@@ -861,6 +861,12 @@
       "url": "https://archerswap.finance"
     },
     {
+      "id": "archery",
+      "name": "Archery",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/archery/logo.webp",
+      "url": ""
+    },
+    {
       "id": "archly-v1",
       "name": "Archly V1",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/archly-v1/logo.webp",
@@ -10533,6 +10539,12 @@
       "url": ""
     },
     {
+      "id": "powfi",
+      "name": "PowFi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/powfi/logo.webp",
+      "url": "https://powfi.alephium.org"
+    },
+    {
       "id": "powpeg-fast-mode",
       "name": "PowPeg Fast Mode",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/powpeg-fast-mode/logo.webp",
@@ -13597,6 +13609,12 @@
       "name": "Tarina",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tarina/logo.webp",
       "url": ""
+    },
+    {
+      "id": "tartswap-aggregator",
+      "name": "TartSwap Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tartswap-aggregator/logo.webp",
+      "url": "https://tartswap.com"
     },
     {
       "id": "tealswap-v2",
