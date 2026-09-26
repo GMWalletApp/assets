@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "overrides": [
+    {
+      "id": "relay",
+      "name": "Relay",
+      "url": "https://relay.link",
+      "sourceURL": "https://drive.google.com/uc?export=download&id=1zsFjLHEGoO-9ZH10PrdrA6014Bp_L1GI"
+    },
+    {
+      "id": "sunswap",
+      "name": "SunSwap",
+      "url": "https://sun.io",
+      "sourceURL": "https://sun.io/static/media/sun.7e7f365f.svg"
+    },
+    {
+      "id": "usdd",
+      "name": "USDD",
+      "url": "https://usdd.io",
+      "sourceURL": "https://prod-home-cdn-new.usdd.io/logo512.png"
+    }
+  ]
+}

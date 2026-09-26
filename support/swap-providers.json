@@ -11061,6 +11061,12 @@
       "url": "https://redstone.xyz/"
     },
     {
+      "id": "relay",
+      "name": "Relay",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/relay/logo.webp",
+      "url": "https://relay.link"
+    },
+    {
       "id": "relaychain",
       "name": "RelayChain",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/relaychain/logo.webp",
@@ -13017,6 +13023,12 @@
       "url": ""
     },
     {
+      "id": "sunswap",
+      "name": "SunSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sunswap/logo.webp",
+      "url": "https://sun.io"
+    },
+    {
       "id": "sunswap-v1",
       "name": "SUNSwap V1",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sunswap-v1/logo.webp",
@@ -14431,6 +14443,12 @@
       "name": "Ura Dex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ura-dex/logo.webp",
       "url": ""
+    },
+    {
+      "id": "usdd",
+      "name": "USDD",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/usdd/logo.webp",
+      "url": "https://usdd.io"
     },
     {
       "id": "usdt0",
