@@ -893,6 +893,9 @@ func (s *ManagedListService) enrichChainContext(token ManagedToken) ManagedToken
 	if normalizeChain(token.Chain) == "polygon" {
 		token.ChainLogoURI = DefaultPolygonLogoURI
 	}
+	if normalizeChain(token.Chain) == "xlayer" {
+		token.ChainLogoURI = DefaultXLayerLogoURI
+	}
 	info, err := s.store.GetChainInfo(token.Chain)
 	if err != nil {
 		return token
