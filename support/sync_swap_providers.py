@@ -26,6 +26,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 SUPPORT_DIR = REPO_ROOT / "support"
 CATALOG_NAME = "swap-providers.json"
 ALIASES_NAME = "swap-provider-aliases.json"
+OVERRIDES_NAME = "swap-provider-overrides.json"
+OVERRIDES_DIR_NAME = "swap-provider-overrides"
 PROVIDER_DIR_NAME = "swap-providers"
 PROVIDER_ID_RE = re.compile(r"^[a-z0-9]+(?:[-_][a-z0-9]+)*$")
 DEFILLAMA_ICON_HOSTS = {"icons.llama.fi", "icons.llamao.fi"}
@@ -126,6 +128,63 @@ def load_aliases(path: Path) -> list[dict[str, str]]:
     return aliases
 
 
+def validate_https_url(value: Any, context: str) -> str:
+    if not isinstance(value, str) or not value.startswith("https://"):
+        raise ValueError(f"{context} must be an https URL")
+    parsed = urllib.parse.urlparse(value)
+    if not parsed.netloc:
+        raise ValueError(f"{context} must be an https URL with a host")
+    return value
+
+
+def load_overrides(path: Path) -> list[dict[str, str]]:
+    # Older checkouts have no overrides file. Treat that as an empty list.
+    if not path.is_file():
+        return []
+    data = load_json(path)
+    if (
+        not isinstance(data, dict)
+        or data.get("schemaVersion") != 1
+        or not isinstance(data.get("overrides"), list)
+    ):
+        raise ValueError(f"invalid Swap provider overrides: {path}")
+    overrides: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for index, row in enumerate(data["overrides"]):
+        if not isinstance(row, dict):
+            raise ValueError(f"overrides[{index}] must be an object")
+        if set(row) != {"id", "name", "url", "sourceURL"}:
+            raise ValueError(
+                f"overrides[{index}] must contain exactly id, name, url, and sourceURL"
+            )
+        provider_id, name = row.get("id"), row.get("name")
+        if not isinstance(provider_id, str):
+            raise ValueError(f"overrides[{index}].id must be a string")
+        validate_provider_id(provider_id, f"overrides[{index}].id")
+        if provider_id in seen:
+            raise ValueError(f"duplicate Swap provider override: {provider_id}")
+        seen.add(provider_id)
+        if not isinstance(name, str) or not name.strip():
+            raise ValueError(f"overrides[{index}].name must be a non-empty string")
+        url = validate_https_url(row.get("url"), f"overrides[{index}].url")
+        source_url = validate_https_url(
+            row.get("sourceURL"), f"overrides[{index}].sourceURL"
+        )
+        master = path.parent / OVERRIDES_DIR_NAME / provider_id / "logo.webp"
+        if not master.is_file():
+            raise ValueError(f"missing override logo: {provider_id}")
+        validate_defillama_image(master.read_bytes())
+        overrides.append(
+            {
+                "id": provider_id,
+                "name": name.strip(),
+                "url": url,
+                "sourceURL": source_url,
+            }
+        )
+    return overrides
+
+
 def validate_defillama_image(data: bytes) -> bytes:
     try:
         from PIL import Image
@@ -188,6 +247,29 @@ def sync_swap_providers(
 ) -> None:
     source_providers = parse_defillama_protocols(protocols_json)
     aliases = load_aliases(support_dir / ALIASES_NAME)
+    overrides = load_overrides(support_dir / OVERRIDES_NAME)
+    alias_ids = {alias["id"] for alias in aliases}
+    for override in overrides:
+        if override["id"] in alias_ids:
+            raise ValueError(
+                f"Swap provider override conflicts with alias: {override['id']}"
+            )
+    override_ids = {override["id"] for override in overrides}
+    replaced_ids = [
+        provider["id"]
+        for provider in source_providers
+        if provider["id"] in override_ids
+    ]
+    if replaced_ids:
+        print(
+            "note: override takes priority over DefiLlama; skipping download for: "
+            + ", ".join(replaced_ids)
+        )
+    source_providers = [
+        provider
+        for provider in source_providers
+        if provider["id"] not in override_ids
+    ]
     provider_dir = support_dir / PROVIDER_DIR_NAME
     provider_dir.mkdir(parents=True, exist_ok=True)
     missing = [
@@ -255,6 +337,23 @@ def sync_swap_providers(
         }
         providers[alias["id"]] = entry
 
+    # Alias targets resolve only against DefiLlama entries above. Copy official
+    # masters afterwards so an override id cannot satisfy an alias target.
+    for override in overrides:
+        if override["id"] in providers:
+            raise ValueError(
+                f"Swap provider override conflicts with provider: {override['id']}"
+            )
+        master_path = support_dir / OVERRIDES_DIR_NAME / override["id"] / "logo.webp"
+        image = validate_defillama_image(master_path.read_bytes())
+        write_bytes_atomic(provider_dir / override["id"] / "logo.webp", image)
+        providers[override["id"]] = {
+            "id": override["id"],
+            "name": override["name"],
+            "logoURI": f"{base_uri}/{PROVIDER_DIR_NAME}/{override['id']}/logo.webp",
+            "url": override["url"],
+        }
+
     expected_ids = set(providers)
     for path in provider_dir.iterdir():
         if path.is_dir() and path.name not in expected_ids:
@@ -277,7 +376,8 @@ def sync_swap_providers(
     validate_swap_provider_output(support_dir=support_dir, asset_base_uri=base_uri)
     print(
         f"Synced {len(source_providers)} DefiLlama Swap providers "
-        f"and {len(aliases)} aliases"
+        f"and {len(aliases)} aliases "
+        f"and {len(overrides)} overrides"
     )
 
 
@@ -299,6 +399,7 @@ def validate_swap_provider_output(
     if not isinstance(providers, list):
         raise ValueError(f"{CATALOG_NAME} providers must be an array")
     previous_id = ""
+    providers_by_id: dict[str, dict[str, Any]] = {}
     for index, provider in enumerate(providers):
         if not isinstance(provider, dict):
             raise ValueError(f"providers[{index}] must be an object")
@@ -323,6 +424,31 @@ def validate_swap_provider_output(
         logo_path = support_dir / PROVIDER_DIR_NAME / provider_id / "logo.webp"
         require_file(logo_path)
         validate_defillama_image(logo_path.read_bytes())
+        providers_by_id[provider_id] = provider
+
+    overrides_path = support_dir / OVERRIDES_NAME
+    if overrides_path.is_file():
+        for override in load_overrides(overrides_path):
+            entry = providers_by_id.get(override["id"])
+            if entry is None:
+                raise ValueError(
+                    f"catalog is missing override provider: {override['id']}"
+                )
+            if entry["name"] != override["name"] or entry["url"] != override["url"]:
+                raise ValueError(
+                    f"override {override['id']} name or url does not match catalog"
+                )
+            output_path = (
+                support_dir / PROVIDER_DIR_NAME / override["id"] / "logo.webp"
+            )
+            master_path = (
+                support_dir / OVERRIDES_DIR_NAME / override["id"] / "logo.webp"
+            )
+            if output_path.read_bytes() != master_path.read_bytes():
+                raise ValueError(
+                    f"swap-providers/{override['id']}/logo.webp "
+                    "does not match override master"
+                )
 
 
 def parse_args(argv: list[str]) -> argparse.Namespace:
