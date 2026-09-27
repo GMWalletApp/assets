@@ -4785,6 +4785,12 @@
       "url": ""
     },
     {
+      "id": "felynx",
+      "name": "Felynx",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/felynx/logo.webp",
+      "url": ""
+    },
+    {
       "id": "fenix-concentrated-liquidity",
       "name": "Fenix Concentrated Liquidity",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/fenix-concentrated-liquidity/logo.webp",
