@@ -861,9 +861,15 @@
       "url": "https://archerswap.finance"
     },
     {
-      "id": "archery",
-      "name": "Archery",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/archery/logo.webp",
+      "id": "archery-v2",
+      "name": "Archery V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/archery-v2/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "archery-v3",
+      "name": "Archery V3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/archery-v3/logo.webp",
       "url": ""
     },
     {
