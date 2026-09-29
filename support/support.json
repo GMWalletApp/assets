@@ -2452,6 +2452,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/paybolt/logo.png"
     },
     {
+      "id": "paybox",
+      "name": "PayBox",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/paybox/logo.png"
+    },
+    {
       "id": "payperless",
       "name": "Payperless",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/payperless/logo.png"
@@ -3425,6 +3430,11 @@
       "id": "walletverse",
       "name": "Walletverse",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/walletverse/logo.png"
+    },
+    {
+      "id": "walletzero",
+      "name": "WalletZero",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/walletzero/logo.png"
     },
     {
       "id": "walllet-com",

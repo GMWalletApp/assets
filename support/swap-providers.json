@@ -1491,6 +1491,18 @@
       "url": ""
     },
     {
+      "id": "bbbfi-swap-v2",
+      "name": "BBBFi Swap V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bbbfi-swap-v2/logo.webp",
+      "url": "https://www.bbbfi.com/"
+    },
+    {
+      "id": "bbbfi-swap-v3",
+      "name": "BBBFi Swap V3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bbbfi-swap-v3/logo.webp",
+      "url": "https://www.bbbfi.com/"
+    },
+    {
       "id": "bbqswap",
       "name": "BBQSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bbqswap/logo.webp",
@@ -1669,6 +1681,12 @@
       "name": "BEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bex/logo.webp",
       "url": "https://hub.berachain.com/swap/"
+    },
+    {
+      "id": "biatec-dex",
+      "name": "Biatec DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/biatec-dex/logo.webp",
+      "url": ""
     },
     {
       "id": "bidask",
@@ -2647,6 +2665,12 @@
       "name": "Cetus DLMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cetus-dlmm/logo.webp",
       "url": "https://www.cetus.zone"
+    },
+    {
+      "id": "cfoswap",
+      "name": "CfoSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cfoswap/logo.webp",
+      "url": ""
     },
     {
       "id": "cgx-finance",
@@ -5497,6 +5521,12 @@
       "name": "Gondola Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gondola-finance/logo.webp",
       "url": ""
+    },
+    {
+      "id": "goo-exchange",
+      "name": "Goo Exchange",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/goo-exchange/logo.webp",
+      "url": "https://goo.exchange"
     },
     {
       "id": "goonfi",
@@ -15187,6 +15217,12 @@
       "name": "WoofSwap Shibarium",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/woofswap-shibarium/logo.webp",
       "url": "https://www.woofswap.finance"
+    },
+    {
+      "id": "world-by-starra",
+      "name": "World by Starra",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/world-by-starra/logo.webp",
+      "url": ""
     },
     {
       "id": "world-chain",

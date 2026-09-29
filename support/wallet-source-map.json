@@ -1364,6 +1364,9 @@
     "paybolt": {
       "walletConnectId": "5dc61e9d57489bccc11306365361614dac3de1d8eab2a9a7877a95970f68712f"
     },
+    "paybox": {
+      "walletConnectId": "b8cd6f9a61a57b014535463e5754b3a5cdb3319004e315be72dc8bc216df9636"
+    },
     "payperless": {
       "walletConnectId": "d6fbaf5c2026e050920ed6e6ffbf96c8a6145b93a8b79d102def9653bedc9821"
     },
@@ -1957,6 +1960,9 @@
     },
     "walletverse": {
       "walletConnectId": "fb89797a75f4547b3c90c1eeb378d0df0423ea75606bb0193c4d873ef2e2150b"
+    },
+    "walletzero": {
+      "walletConnectId": "e8a1b35436c22924ffdc308e5e3f8874380b36a78ad4214634bfaa58b77450ec"
     },
     "walllet-com": {
       "walletConnectId": "e4a1c7bbe47145640f527c91d25e5d8a4d3db0979668f2d3a95268cfb209f248"
