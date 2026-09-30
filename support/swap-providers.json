@@ -636,7 +636,7 @@
       "id": "anchorswap",
       "name": "AnchorSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/anchorswap/logo.webp",
-      "url": "https://anchorswap.app/"
+      "url": ""
     },
     {
       "id": "ancient8-swap",
@@ -3612,7 +3612,7 @@
       "id": "deflex",
       "name": "Deflex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/deflex/logo.webp",
-      "url": "https://deflex.fi"
+      "url": ""
     },
     {
       "id": "defyswap",
@@ -9435,10 +9435,16 @@
       "url": "https://octo.exchange/"
     },
     {
+      "id": "octra-bridge",
+      "name": "Octra Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/octra-bridge/logo.webp",
+      "url": "https://bridge.octra.org/"
+    },
+    {
       "id": "octus-bridge",
       "name": "Octus Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/octus-bridge/logo.webp",
-      "url": "https://octusbridge.io/bridge"
+      "url": ""
     },
     {
       "id": "odos",
@@ -10555,6 +10561,12 @@
       "name": "Poor Exchange",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/poor-exchange/logo.webp",
       "url": ""
+    },
+    {
+      "id": "popdex-bridge",
+      "name": "Popdex Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/popdex-bridge/logo.webp",
+      "url": "https://popdex.xyz/"
     },
     {
       "id": "portal",
@@ -13584,13 +13596,13 @@
       "id": "synthswap-v2",
       "name": "Synthswap V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/synthswap-v2/logo.webp",
-      "url": "https://synthswap.io"
+      "url": ""
     },
     {
       "id": "synthswap-v3",
       "name": "Synthswap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/synthswap-v3/logo.webp",
-      "url": "https://synthswap.io"
+      "url": ""
     },
     {
       "id": "t3rn-bridge",
@@ -13710,13 +13722,13 @@
       "id": "tealswap-v2",
       "name": "Tealswap V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tealswap-v2/logo.webp",
-      "url": "https://tealswap.com/dashboard"
+      "url": ""
     },
     {
       "id": "tealswap-v3",
       "name": "Tealswap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tealswap-v3/logo.webp",
-      "url": "https://tealswap.com"
+      "url": ""
     },
     {
       "id": "teddyswap",
@@ -14262,7 +14274,7 @@
       "id": "turtleswap",
       "name": "TurtleSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/turtleswap/logo.webp",
-      "url": "https://turtleswap.turtlelabs.finance/"
+      "url": ""
     },
     {
       "id": "twofold",
@@ -14358,7 +14370,7 @@
       "id": "umbria-network",
       "name": "Umbria Network",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/umbria-network/logo.webp",
-      "url": "https://umbria.network"
+      "url": ""
     },
     {
       "id": "unagiswap",
@@ -14785,6 +14797,12 @@
       "name": "Vexchange",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/vexchange/logo.webp",
       "url": ""
+    },
+    {
+      "id": "vfat-swap",
+      "name": "vfat Swap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/vfat-swap/logo.webp",
+      "url": "https://vfat.io/swap"
     },
     {
       "id": "vibrant-finance",
@@ -15828,19 +15846,19 @@
       "id": "zyberswap-amm",
       "name": "Zyberswap AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zyberswap-amm/logo.webp",
-      "url": "https://www.zyberswap.io"
+      "url": ""
     },
     {
       "id": "zyberswap-stableswap",
       "name": "ZyberSwap Stableswap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zyberswap-stableswap/logo.webp",
-      "url": "https://app.zyberswap.io/exchange/swap"
+      "url": ""
     },
     {
       "id": "zyberswap-v3",
       "name": "Zyberswap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zyberswap-v3/logo.webp",
-      "url": "https://www.zyberswap.io/"
+      "url": ""
     },
     {
       "id": "zyxswap",
