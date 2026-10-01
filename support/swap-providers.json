@@ -5523,9 +5523,15 @@
       "url": ""
     },
     {
-      "id": "goo-exchange",
-      "name": "Goo Exchange",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/goo-exchange/logo.webp",
+      "id": "goo-exchange-aggregator",
+      "name": "Goo Exchange Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/goo-exchange-aggregator/logo.webp",
+      "url": "https://goo.exchange"
+    },
+    {
+      "id": "goo-exchange-clmm",
+      "name": "Goo Exchange CLMM",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/goo-exchange-clmm/logo.webp",
       "url": "https://goo.exchange"
     },
     {
@@ -6801,9 +6807,15 @@
       "url": ""
     },
     {
-      "id": "jumper-li-fi-powered",
-      "name": "Jumper (LI.FI powered)",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/jumper-li-fi-powered/logo.webp",
+      "id": "jumper-bridge-aggregator",
+      "name": "Jumper Bridge Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/jumper-bridge-aggregator/logo.webp",
+      "url": "https://jumper.xyz/"
+    },
+    {
+      "id": "jumper-dex-aggregator",
+      "name": "Jumper DEX Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/jumper-dex-aggregator/logo.webp",
       "url": "https://jumper.xyz/"
     },
     {
@@ -9933,6 +9945,12 @@
       "url": "https://pancakeswap.finance/"
     },
     {
+      "id": "pancakeswap-aggregator",
+      "name": "PancakeSwap Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pancakeswap-aggregator/logo.webp",
+      "url": "https://pancakeswap.finance/"
+    },
+    {
       "id": "pancakeswap-amm",
       "name": "PancakeSwap AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pancakeswap-amm/logo.webp",
@@ -9961,6 +9979,12 @@
       "name": "PancakeSwap StableSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pancakeswap-stableswap/logo.webp",
       "url": "https://pancakeswap.finance/swap"
+    },
+    {
+      "id": "pancakeswap-x",
+      "name": "PancakeSwap X",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pancakeswap-x/logo.webp",
+      "url": "https://pancakeswap.finance/"
     },
     {
       "id": "pandaswap",
@@ -11065,6 +11089,12 @@
       "name": "Raydium AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/raydium-amm/logo.webp",
       "url": "https://raydium.io"
+    },
+    {
+      "id": "rayls-swap",
+      "name": "Rayls Swap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/rayls-swap/logo.webp",
+      "url": "https://swap.rayls.com/swap"
     },
     {
       "id": "razor-dex",
@@ -14437,6 +14467,18 @@
       "name": "Unit",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/unit/logo.webp",
       "url": "https://hyperunit.xyz/deposit"
+    },
+    {
+      "id": "unitflow-finance-v2",
+      "name": "Unitflow Finance V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/unitflow-finance-v2/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "unitflow-finance-v3",
+      "name": "Unitflow Finance V3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/unitflow-finance-v3/logo.webp",
+      "url": ""
     },
     {
       "id": "universal-bridge",

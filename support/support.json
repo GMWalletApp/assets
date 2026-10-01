@@ -2607,6 +2607,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/r0ar-mobile-wallet/logo.png"
     },
     {
+      "id": "rabbit",
+      "name": "Rabbit Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/rabbit/logo.svg"
+    },
+    {
       "id": "rabby",
       "name": "rabby",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/rabby/logo.svg"
