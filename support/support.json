@@ -3542,6 +3542,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/youba/logo.png"
     },
     {
+      "id": "your-wallet",
+      "name": "Your Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/your-wallet/logo.png"
+    },
+    {
       "id": "yowallet",
       "name": "YoWallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/yowallet/logo.png"

@@ -303,6 +303,12 @@
       "url": ""
     },
     {
+      "id": "aeva-bridge",
+      "name": "Aeva Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aeva-bridge/logo.webp",
+      "url": "https://aevachain.app/bridge"
+    },
+    {
       "id": "afi-swap",
       "name": "Afi Swap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/afi-swap/logo.webp",
@@ -6915,6 +6921,12 @@
       "url": ""
     },
     {
+      "id": "kaleido-swap",
+      "name": "Kaleido Swap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kaleido-swap/logo.webp",
+      "url": "https://kaleidofi.xyz"
+    },
+    {
       "id": "kaleidocube",
       "name": "KaleidoCube",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kaleidocube/logo.webp",
@@ -8341,6 +8353,12 @@
       "name": "Merchant Moe Liquidity Book",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/merchant-moe-liquidity-book/logo.webp",
       "url": "https://merchantmoe.com/"
+    },
+    {
+      "id": "mercurifi-trade",
+      "name": "Mercurifi Trade",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/mercurifi-trade/logo.webp",
+      "url": "https://launch.mercuri.finance/"
     },
     {
       "id": "mercurity",
