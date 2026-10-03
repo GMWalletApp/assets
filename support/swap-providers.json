@@ -615,6 +615,12 @@
       "url": "https://elvesdex.com"
     },
     {
+      "id": "amahub",
+      "name": "Amahub",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/amahub/logo.webp",
+      "url": ""
+    },
+    {
       "id": "amaterasu-finance",
       "name": "Amaterasu Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/amaterasu-finance/logo.webp",
@@ -5337,6 +5343,12 @@
       "url": "https://web3.gate.com/en/swap"
     },
     {
+      "id": "gdex-spot",
+      "name": "GDEX Spot",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gdex-spot/logo.webp",
+      "url": ""
+    },
+    {
       "id": "gemkeeper",
       "name": "GemKeeper",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gemkeeper/logo.webp",
@@ -7563,6 +7575,12 @@
       "url": ""
     },
     {
+      "id": "latch-protocol",
+      "name": "Latch Protocol",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/latch-protocol/logo.webp",
+      "url": ""
+    },
+    {
       "id": "latteswap",
       "name": "LatteSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/latteswap/logo.webp",
@@ -8941,6 +8959,12 @@
       "name": "Mosaic AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/mosaic-amm/logo.webp",
       "url": "https://mosaic.ag"
+    },
+    {
+      "id": "motoswap-amm",
+      "name": "Motoswap AMM",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/motoswap-amm/logo.webp",
+      "url": "https://motoswap.org/"
     },
     {
       "id": "mswap",
@@ -13119,6 +13143,12 @@
       "url": "https://sundae.fi/"
     },
     {
+      "id": "sundaeswap-v4",
+      "name": "SundaeSwap V4",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sundaeswap-v4/logo.webp",
+      "url": "https://sundae.fi/"
+    },
+    {
       "id": "sunflower-finance",
       "name": "SunFlower Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sunflower-finance/logo.webp",
@@ -14281,6 +14311,12 @@
       "name": "Tristero Darkpool",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tristero-darkpool/logo.webp",
       "url": "https://www.tristero.com/"
+    },
+    {
+      "id": "trnch",
+      "name": "TRNCH",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/trnch/logo.webp",
+      "url": ""
     },
     {
       "id": "tropical-finance",
