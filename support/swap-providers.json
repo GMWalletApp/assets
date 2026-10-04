@@ -3207,6 +3207,12 @@
       "url": ""
     },
     {
+      "id": "cro-trade-aggregator",
+      "name": "cro.trade Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cro-trade-aggregator/logo.webp",
+      "url": "https://cro.trade/explore"
+    },
+    {
       "id": "crodex",
       "name": "Crodex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/crodex/logo.webp",
