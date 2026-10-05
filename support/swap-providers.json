@@ -5352,7 +5352,7 @@
       "id": "gdex-spot",
       "name": "GDEX Spot",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gdex-spot/logo.webp",
-      "url": ""
+      "url": "https://gdex.pro/"
     },
     {
       "id": "gemkeeper",
@@ -7773,9 +7773,15 @@
       "url": "https://lighter.xyz"
     },
     {
-      "id": "lilswap",
-      "name": "LilSwap",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lilswap/logo.webp",
+      "id": "lilswap-bridge-aggregator",
+      "name": "LilSwap Bridge Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lilswap-bridge-aggregator/logo.webp",
+      "url": "https://app.lilswap.xyz"
+    },
+    {
+      "id": "lilswap-dex-aggregator",
+      "name": "LilSwap DEX Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lilswap-dex-aggregator/logo.webp",
       "url": "https://app.lilswap.xyz"
     },
     {
