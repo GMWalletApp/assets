@@ -207,6 +207,12 @@
       "url": ""
     },
     {
+      "id": "abyss-dex",
+      "name": "Abyss DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/abyss-dex/logo.webp",
+      "url": ""
+    },
+    {
       "id": "acala",
       "name": "Acala",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/acala/logo.webp",
