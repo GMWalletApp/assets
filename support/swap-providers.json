@@ -600,7 +600,7 @@
       "id": "alphix",
       "name": "Alphix",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/alphix/logo.webp",
-      "url": "https://www.alphix.fi/swap"
+      "url": ""
     },
     {
       "id": "althea-dex",
@@ -3321,9 +3321,9 @@
       "url": ""
     },
     {
-      "id": "crystal-exchange",
-      "name": "Crystal Exchange",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/crystal-exchange/logo.webp",
+      "id": "crystal-exchange-dex",
+      "name": "Crystal Exchange DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/crystal-exchange-dex/logo.webp",
       "url": "https://crystal.exchange/"
     },
     {
@@ -3834,19 +3834,19 @@
       "id": "dfs-network",
       "name": "DFS Network",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dfs-network/logo.webp",
-      "url": "https://dfs.fun/"
+      "url": ""
     },
     {
       "id": "dfs-v2",
       "name": "DFS V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dfs-v2/logo.webp",
-      "url": "https://dfs.fun/swap"
+      "url": ""
     },
     {
       "id": "dfs-v3",
       "name": "DFS V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dfs-v3/logo.webp",
-      "url": "https://dfs.fun/swap"
+      "url": ""
     },
     {
       "id": "dfx-v2",
@@ -4962,7 +4962,7 @@
       "id": "flatqube",
       "name": "FlatQube",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/flatqube/logo.webp",
-      "url": "https://app.flatqube.io/swap"
+      "url": ""
     },
     {
       "id": "flitswap",
@@ -5430,7 +5430,7 @@
       "id": "gin-finance",
       "name": "Gin Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gin-finance/logo.webp",
-      "url": "https://www.gin.finance"
+      "url": ""
     },
     {
       "id": "ginseng-swap",
@@ -7920,7 +7920,7 @@
       "id": "loopring",
       "name": "Loopring",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/loopring/logo.webp",
-      "url": "https://loopring.org/#/"
+      "url": ""
     },
     {
       "id": "lootswap",
@@ -8862,7 +8862,7 @@
       "id": "moon-swap",
       "name": "Moon Swap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/moon-swap/logo.webp",
-      "url": "https://moonswap.fi"
+      "url": ""
     },
     {
       "id": "moonbase",
@@ -9624,7 +9624,7 @@
       "id": "omniswap",
       "name": "OmniSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/omniswap/logo.webp",
-      "url": "https://swap.omniswap.ai/"
+      "url": ""
     },
     {
       "id": "onavax",
@@ -15150,7 +15150,7 @@
       "id": "wasabee",
       "name": "Wasabee",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/wasabee/logo.webp",
-      "url": "https://wasabee.xyz/pool"
+      "url": ""
     },
     {
       "id": "wasabi-prop-amm",
@@ -15798,13 +15798,13 @@
       "id": "zilswap",
       "name": "ZilSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zilswap/logo.webp",
-      "url": "https://zilswap.io/swap"
+      "url": ""
     },
     {
       "id": "zipswap",
       "name": "ZipSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zipswap/logo.webp",
-      "url": "https://zipswap.fi/#/"
+      "url": ""
     },
     {
       "id": "zircon-gamma",
@@ -15888,19 +15888,19 @@
       "id": "zkswap-stableswap",
       "name": "zkSwap StableSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zkswap-stableswap/logo.webp",
-      "url": "https://zkswap.finance"
+      "url": ""
     },
     {
       "id": "zkswap-v2",
       "name": "zkSwap V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zkswap-v2/logo.webp",
-      "url": "https://zkswap.finance"
+      "url": ""
     },
     {
       "id": "zkswap-v3",
       "name": "zkSwap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zkswap-v3/logo.webp",
-      "url": "https://zkswap.finance"
+      "url": ""
     },
     {
       "id": "zksync-era-txbridge",
@@ -15978,7 +15978,7 @@
       "id": "zyxswap",
       "name": "ZYXSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zyxswap/logo.webp",
-      "url": "https://app.zyxswap.com/#/swap"
+      "url": ""
     }
   ]
 }
