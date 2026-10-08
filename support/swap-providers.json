@@ -891,6 +891,18 @@
       "url": ""
     },
     {
+      "id": "architect-swap-v2",
+      "name": "Architect Swap V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/architect-swap-v2/logo.webp",
+      "url": "https://nlyra.xyz"
+    },
+    {
+      "id": "architect-swap-v3",
+      "name": "Architect Swap V3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/architect-swap-v3/logo.webp",
+      "url": "https://nlyra.xyz"
+    },
+    {
       "id": "archly-v1",
       "name": "Archly V1",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/archly-v1/logo.webp",
@@ -979,6 +991,12 @@
       "name": "Ashswap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ashswap/logo.webp",
       "url": "https://app.ashswap.io/swap/"
+    },
+    {
+      "id": "asset-chain-bridge",
+      "name": "Asset Chain Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/asset-chain-bridge/logo.webp",
+      "url": "https://bridge.assetchain.org/"
     },
     {
       "id": "asset-chain-swap",
@@ -2715,6 +2733,12 @@
       "url": ""
     },
     {
+      "id": "chainlink-ccip",
+      "name": "Chainlink CCIP",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/chainlink-ccip/logo.webp",
+      "url": "https://chain.link/cross-chain"
+    },
+    {
       "id": "chainport",
       "name": "ChainPort",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/chainport/logo.webp",
@@ -3025,6 +3049,12 @@
       "name": "Comet Swap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/comet-swap-v3/logo.webp",
       "url": "https://www.cometswap.app"
+    },
+    {
+      "id": "cometbridge",
+      "name": "CometBridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cometbridge/logo.webp",
+      "url": ""
     },
     {
       "id": "cometh",
@@ -4809,6 +4839,12 @@
       "url": "https://fassets.au.cc/"
     },
     {
+      "id": "fastbtc",
+      "name": "FastBTC",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/fastbtc/logo.webp",
+      "url": "https://sovryn.com/"
+    },
+    {
       "id": "fatexfi",
       "name": "FATExFi",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/fatexfi/logo.webp",
@@ -4915,6 +4951,12 @@
       "name": "firefly",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/firefly/logo.webp",
       "url": "https://fireflydex.io"
+    },
+    {
+      "id": "firefly-labs",
+      "name": "Firefly Labs",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/firefly-labs/logo.webp",
+      "url": "https://fireflylabs.app/"
     },
     {
       "id": "firepotswap",
@@ -5191,6 +5233,12 @@
       "name": "FunDex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/fundex/logo.webp",
       "url": ""
+    },
+    {
+      "id": "fuse-bridge",
+      "name": "Fuse Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/fuse-bridge/logo.webp",
+      "url": "https://console.fuse.io/bridge"
     },
     {
       "id": "fuseon",
@@ -5883,6 +5931,12 @@
       "url": "https://helixapp.com"
     },
     {
+      "id": "helixbox",
+      "name": "Helixbox",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/helixbox/logo.webp",
+      "url": "https://helix.box/"
+    },
+    {
       "id": "hemi",
       "name": "Hemi",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hemi/logo.webp",
@@ -6199,6 +6253,12 @@
       "name": "HyperBrick",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hyperbrick/logo.webp",
       "url": "https://hyperbrick.xyz"
+    },
+    {
+      "id": "hyperbridge",
+      "name": "Hyperbridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hyperbridge/logo.webp",
+      "url": "https://hyperbridge.network/"
     },
     {
       "id": "hypercat",
@@ -7005,6 +7065,12 @@
       "url": "https://kasdex.app"
     },
     {
+      "id": "kaspa-bridge",
+      "name": "Kaspa Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kaspa-bridge/logo.webp",
+      "url": "https://www.kaspabridge.com/"
+    },
+    {
       "id": "kaspa-finance-v3",
       "name": "Kaspa Finance V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kaspa-finance-v3/logo.webp",
@@ -7609,6 +7675,12 @@
       "name": "LayerAkira",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/layerakira/logo.webp",
       "url": ""
+    },
+    {
+      "id": "layerswap",
+      "name": "Layerswap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/layerswap/logo.webp",
+      "url": "https://layerswap.io/app"
     },
     {
       "id": "layerzero-v1",
@@ -8343,6 +8415,12 @@
       "url": ""
     },
     {
+      "id": "memebridge",
+      "name": "MeMeBridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/memebridge/logo.webp",
+      "url": "https://memebridge.xyz/"
+    },
+    {
       "id": "memedex",
       "name": "MemeDex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/memedex/logo.webp",
@@ -8431,6 +8509,12 @@
       "name": "MerlinSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/merlinswap/logo.webp",
       "url": "https://merlinswap.org"
+    },
+    {
+      "id": "mes-protocol",
+      "name": "MES Protocol",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/mes-protocol/logo.webp",
+      "url": "https://www.mesprotocol.com/"
     },
     {
       "id": "meshswap",
@@ -8635,6 +8719,12 @@
       "name": "MinerSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/minerswap/logo.webp",
       "url": ""
+    },
+    {
+      "id": "minibridge",
+      "name": "MiniBridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/minibridge/logo.webp",
+      "url": "https://minibridge.chaineye.tools/"
     },
     {
       "id": "miniswap",
@@ -8983,6 +9073,12 @@
       "name": "Motoswap AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/motoswap-amm/logo.webp",
       "url": "https://motoswap.org/"
+    },
+    {
+      "id": "movement-bridge",
+      "name": "Movement Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/movement-bridge/logo.webp",
+      "url": "https://bridge.movementnetwork.xyz/"
     },
     {
       "id": "mswap",
@@ -9687,6 +9783,12 @@
       "url": "https://oolongswap.com/#/"
     },
     {
+      "id": "oooo",
+      "name": "oooo",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/oooo/logo.webp",
+      "url": ""
+    },
+    {
       "id": "oortswap",
       "name": "OortSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/oortswap/logo.webp",
@@ -10327,6 +10429,12 @@
       "name": "Pharaoh V3 Legacy",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pharaoh-v3-legacy/logo.webp",
       "url": "https://www.phar.gg/"
+    },
+    {
+      "id": "pheasant-network",
+      "name": "Pheasant Network",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pheasant-network/logo.webp",
+      "url": "https://pheasant.network/"
     },
     {
       "id": "pheasantswap",
@@ -11239,6 +11347,12 @@
       "name": "Retro",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/retro/logo.webp",
       "url": "https://retro.finance/"
+    },
+    {
+      "id": "retrobridge",
+      "name": "RetroBridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/retrobridge/logo.webp",
+      "url": "https://retrobridge.io/"
     },
     {
       "id": "revoswap",
@@ -12279,6 +12393,12 @@
       "url": "https://www.snap.club/"
     },
     {
+      "id": "snowbridge",
+      "name": "Snowbridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/snowbridge/logo.webp",
+      "url": "https://app.snowbridge.network/"
+    },
+    {
       "id": "snowflake-exchange",
       "name": "Snowflake Exchange",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/snowflake-exchange/logo.webp",
@@ -12775,6 +12895,12 @@
       "name": "SquadSwap WOW",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/squadswap-wow/logo.webp",
       "url": "https://squadswap.com/"
+    },
+    {
+      "id": "squid",
+      "name": "Squid",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/squid/logo.webp",
+      "url": "https://www.squidrouter.com/"
     },
     {
       "id": "squidswap",
@@ -13731,6 +13857,12 @@
       "url": "https://taffy.finance/"
     },
     {
+      "id": "taifoon",
+      "name": "Taifoon",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/taifoon/logo.webp",
+      "url": "https://www.taifoon.io/bridge"
+    },
+    {
       "id": "taiko-bridge",
       "name": "Taiko Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/taiko-bridge/logo.webp",
@@ -14281,6 +14413,12 @@
       "name": "Trado Spot",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/trado-spot/logo.webp",
       "url": ""
+    },
+    {
+      "id": "train-protocol",
+      "name": "TRAIN Protocol",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/train-protocol/logo.webp",
+      "url": "https://app.train.tech/"
     },
     {
       "id": "trainswap",
@@ -15531,6 +15669,12 @@
       "url": ""
     },
     {
+      "id": "xswap",
+      "name": "XSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/xswap/logo.webp",
+      "url": "https://xswap.link/"
+    },
+    {
       "id": "xswap-dex",
       "name": "xSwap DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/xswap-dex/logo.webp",
@@ -15828,6 +15972,12 @@
       "id": "zkbase",
       "name": "ZKBase",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zkbase/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "zkbridge",
+      "name": "zkBridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/zkbridge/logo.webp",
       "url": ""
     },
     {
