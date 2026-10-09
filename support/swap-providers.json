@@ -1347,6 +1347,12 @@
       "url": ""
     },
     {
+      "id": "baibai",
+      "name": "BaiBai",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/baibai/logo.webp",
+      "url": "https://www.baibai.cx"
+    },
+    {
       "id": "bakeryswap",
       "name": "BakerySwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bakeryswap/logo.webp",
@@ -3769,6 +3775,18 @@
       "name": "Derify Protocol",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/derify-protocol/logo.webp",
       "url": "https://derify.exchange/trade"
+    },
+    {
+      "id": "derive-v2-spot",
+      "name": "Derive V2 Spot",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/derive-v2-spot/logo.webp",
+      "url": "https://app.derive.xyz"
+    },
+    {
+      "id": "derive-v3-spot",
+      "name": "Derive V3 Spot",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/derive-v3-spot/logo.webp",
+      "url": "https://app.derive.xyz"
     },
     {
       "id": "deriverse",
@@ -10341,6 +10359,12 @@
       "url": ""
     },
     {
+      "id": "pentaswap",
+      "name": "PentaSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pentaswap/logo.webp",
+      "url": "https://pentaswap.io"
+    },
+    {
       "id": "penumbra-dex",
       "name": "Penumbra Dex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/penumbra-dex/logo.webp",
@@ -12451,6 +12475,18 @@
       "name": "SoDEX Spot",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sodex-spot/logo.webp",
       "url": "https://ssi.sosovalue.com/share/MAG7.ssi/0TC050BY?tid=ssi-invite-share-0TC050BY"
+    },
+    {
+      "id": "soheil-fi-aggregator",
+      "name": "Soheil.fi Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/soheil-fi-aggregator/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "soheil-fi-bridge-aggregator",
+      "name": "Soheil.fi Bridge Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/soheil-fi-bridge-aggregator/logo.webp",
+      "url": ""
     },
     {
       "id": "solana",
