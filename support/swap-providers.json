@@ -417,6 +417,12 @@
       "url": "https://alandale.xyz"
     },
     {
+      "id": "alcor-bridge",
+      "name": "Alcor Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/alcor-bridge/logo.webp",
+      "url": "https://alcor.exchange"
+    },
+    {
       "id": "alcor-exchange",
       "name": "Alcor Exchange",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/alcor-exchange/logo.webp",
@@ -2253,6 +2259,12 @@
       "url": ""
     },
     {
+      "id": "btr",
+      "name": "BTR",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/btr/logo.webp",
+      "url": "https://btr.markets"
+    },
+    {
       "id": "bubbleswap-v1",
       "name": "Bubbleswap V1",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bubbleswap-v1/logo.webp",
@@ -3601,6 +3613,12 @@
       "name": "Deepstate",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/deepstate/logo.webp",
       "url": "https://deepstate.sh/"
+    },
+    {
+      "id": "deepswap",
+      "name": "DeepSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/deepswap/logo.webp",
+      "url": ""
     },
     {
       "id": "defi-app-aggregator",
@@ -9153,12 +9171,6 @@
       "url": "https://mvcswap.com"
     },
     {
-      "id": "myrxswap",
-      "name": "MyrxSwap",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/myrxswap/logo.webp",
-      "url": "https://myrxwallet.io"
-    },
-    {
       "id": "myswap-cl",
       "name": "mySwap CL",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/myswap-cl/logo.webp",
@@ -10032,6 +10044,18 @@
       "id": "otsea",
       "name": "OTSea",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/otsea/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "ouro-dex-v2",
+      "name": "Ouro DEX V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ouro-dex-v2/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "ouro-dex-v3",
+      "name": "Ouro DEX V3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ouro-dex-v3/logo.webp",
       "url": ""
     },
     {
@@ -14682,6 +14706,12 @@
       "id": "uniswap",
       "name": "Uniswap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/uniswap/logo.webp",
+      "url": "https://app.uniswap.org/"
+    },
+    {
+      "id": "uniswap-aggregator",
+      "name": "Uniswap Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/uniswap-aggregator/logo.webp",
       "url": "https://app.uniswap.org/"
     },
     {
