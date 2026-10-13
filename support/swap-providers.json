@@ -1809,6 +1809,12 @@
       "url": "https://bitcoin.org/"
     },
     {
+      "id": "bitcoin-swap-amm",
+      "name": "Bitcoin Swap AMM",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bitcoin-swap-amm/logo.webp",
+      "url": "https://btcw.tech/swap/"
+    },
+    {
       "id": "bitcow",
       "name": "bitCow",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bitcow/logo.webp",
@@ -2371,6 +2377,12 @@
       "name": "Burve Protocol",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/burve-protocol/logo.webp",
       "url": "https://app.burve.io/"
+    },
+    {
+      "id": "bush",
+      "name": "Bush",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bush/logo.webp",
+      "url": ""
     },
     {
       "id": "busta-exchange",
@@ -3603,6 +3615,12 @@
       "url": "https://deepbook.tech"
     },
     {
+      "id": "deepcore",
+      "name": "DeepCore",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/deepcore/logo.webp",
+      "url": ""
+    },
+    {
       "id": "deepstate",
       "name": "Deepstate",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/deepstate/logo.webp",
@@ -3985,6 +4003,18 @@
       "name": "Dirol",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dirol/logo.webp",
       "url": "https://www.dirol.io/"
+    },
+    {
+      "id": "ditto-bridge",
+      "name": "Ditto Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ditto-bridge/logo.webp",
+      "url": "https://app.dittonetwork.io"
+    },
+    {
+      "id": "ditto-swap",
+      "name": "Ditto Swap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ditto-swap/logo.webp",
+      "url": "https://app.dittonetwork.io"
     },
     {
       "id": "diviswap",
@@ -10087,6 +10117,12 @@
       "name": "PacaSwap DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pacaswap-dex/logo.webp",
       "url": "https://pacaswap.com/dashboard"
+    },
+    {
+      "id": "pacifica-bridge",
+      "name": "Pacifica Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pacifica-bridge/logo.webp",
+      "url": "https://app.pacifica.fi"
     },
     {
       "id": "pacifica-spot",
