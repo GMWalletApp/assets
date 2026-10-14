@@ -2763,12 +2763,6 @@
       "url": ""
     },
     {
-      "id": "chainlink-ccip",
-      "name": "Chainlink CCIP",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/chainlink-ccip/logo.webp",
-      "url": "https://chain.link/cross-chain"
-    },
-    {
       "id": "chainport",
       "name": "ChainPort",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/chainport/logo.webp",
