@@ -345,6 +345,12 @@
       "url": "https://app.afx.xyz/trade"
     },
     {
+      "id": "agglayer",
+      "name": "Agglayer",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/agglayer/logo.webp",
+      "url": "https://agglayer.dev/"
+    },
+    {
       "id": "aggre",
       "name": "Aggre",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aggre/logo.webp",
@@ -8673,15 +8679,15 @@
       "url": "https://bridge.metis.io/home"
     },
     {
-      "id": "metric-v1",
-      "name": "Metric V1",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/metric-v1/logo.webp",
+      "id": "metric-v0",
+      "name": "Metric V0",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/metric-v0/logo.webp",
       "url": "https://www.metric.xyz/"
     },
     {
-      "id": "metric-v2",
-      "name": "Metric V2",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/metric-v2/logo.webp",
+      "id": "metric-v1",
+      "name": "Metric V1",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/metric-v1/logo.webp",
       "url": "https://www.metric.xyz/"
     },
     {
