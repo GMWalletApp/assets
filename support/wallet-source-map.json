@@ -65,6 +65,9 @@
     "ambire": {
       "web3iconsId": "ambire"
     },
+    "ambire-extension": {
+      "walletConnectId": "a4f12b9c4280cf1279da1b719ee9be9f0daccb849dea4134a22da99b5e0085ed"
+    },
     "ammer-wallet": {
       "walletConnectId": "541517cf964687d18414ff05d2623b9c0a122a7a06ac5a5702fd92c4f2b87b1c"
     },
@@ -1101,6 +1104,9 @@
     "midoin": {
       "walletConnectId": "73232eaed7a1e4876f3efb13c3d526dfe4e293a152e1380095a62eb4c5814a87"
     },
+    "mindgtc": {
+      "walletConnectId": "b766b00b0f3dac98ce16d5903224c84ec684a61f4fa9b9ddb70540ebc74cb662"
+    },
     "minerva-wallet": {
       "walletConnectId": "49bb9d698dbdf2c3d4627d66f99dd9fe90bba1eec84b143f56c64a51473c60bd"
     },
@@ -1671,6 +1677,9 @@
     "status-legacy": {
       "walletConnectId": "af9a6dfff9e63977bbde28fb23518834f08b696fe8bff6dd6827acad1814c6be"
     },
+    "stella": {
+      "web3iconsId": "stella"
+    },
     "stickey-wallet": {
       "walletConnectId": "71a83ffbaa7fa38419e8f548a6499c78c8d429163631cf483483fc7efc6b7aae"
     },
@@ -1970,6 +1979,9 @@
     "walllet-com": {
       "walletConnectId": "e4a1c7bbe47145640f527c91d25e5d8a4d3db0979668f2d3a95268cfb209f248"
     },
+    "wats-wallet": {
+      "walletConnectId": "8fa611cc66c3c59088d265e4064a77a6d5a497a5e61816a769ad663d4e97a01c"
+    },
     "webauth": {
       "walletConnectId": "c34de246586459b8a33e82efe825fec5f75ac6cee50098e76abfd8161de827f2"
     },
@@ -2008,6 +2020,9 @@
     },
     "xfun-wallet": {
       "walletConnectId": "c39d8ee468e50474fdf3a0bd6b981be404d4671e2702a3d633aae95bcbaa032a"
+    },
+    "xlliance-io": {
+      "walletConnectId": "6c3b9969df2fd5b09f62271ae3e1e1f8f39d69a89efbb85578cf4ed9699e2607"
     },
     "xova": {
       "walletConnectId": "1cf4c1fcf6bea70a78e28518698b8a10636c0305dd0d24463021d85e71f21841"

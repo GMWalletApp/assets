@@ -302,6 +302,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ambire/logo.svg"
     },
     {
+      "id": "ambire-extension",
+      "name": "Ambire Extension",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ambire-extension/logo.png"
+    },
+    {
       "id": "ammer-wallet",
       "name": "Ammer Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ammer-wallet/logo.png"
@@ -2012,6 +2017,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/midoin/logo.png"
     },
     {
+      "id": "mindgtc",
+      "name": "MindGTC",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/mindgtc/logo.png"
+    },
+    {
       "id": "minerva-wallet",
       "name": "Minerva Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/minerva-wallet/logo.png"
@@ -2952,6 +2962,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/status-legacy/logo.png"
     },
     {
+      "id": "stella",
+      "name": "Stella",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/stella/logo.svg"
+    },
+    {
       "id": "stickey-wallet",
       "name": "Stickey Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/stickey-wallet/logo.png"
@@ -3447,6 +3462,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/walllet-com/logo.png"
     },
     {
+      "id": "wats-wallet",
+      "name": "WATS Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/wats-wallet/logo.png"
+    },
+    {
       "id": "webauth",
       "name": "WebAuth",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/webauth/logo.png"
@@ -3510,6 +3530,11 @@
       "id": "xfun-wallet",
       "name": "XFUN Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/xfun-wallet/logo.png"
+    },
+    {
+      "id": "xlliance-io",
+      "name": "Xlliance.io",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/xlliance-io/logo.png"
     },
     {
       "id": "xova",

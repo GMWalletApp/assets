@@ -1983,6 +1983,18 @@
       "url": "https://blazeswap.xyz/"
     },
     {
+      "id": "blazpay-bridge-aggregator",
+      "name": "Blazpay Bridge Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/blazpay-bridge-aggregator/logo.webp",
+      "url": "https://blazpay.com"
+    },
+    {
+      "id": "blazpay-dex-aggregator",
+      "name": "Blazpay DEX Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/blazpay-dex-aggregator/logo.webp",
+      "url": "https://blazpay.com"
+    },
+    {
       "id": "blinkswap",
       "name": "Blinkswap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/blinkswap/logo.webp",
@@ -2131,6 +2143,18 @@
       "name": "bopAMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bopamm/logo.webp",
       "url": "https://bebop.xyz/"
+    },
+    {
+      "id": "bordrless-bridge",
+      "name": "Bordrless Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bordrless-bridge/logo.webp",
+      "url": "https://bordrless.app"
+    },
+    {
+      "id": "bordrless-dex",
+      "name": "Bordrless DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bordrless-dex/logo.webp",
+      "url": "https://bordrless.app"
     },
     {
       "id": "bored-candy-city",
@@ -2754,7 +2778,7 @@
       "id": "chadfinance",
       "name": "ChadFinance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/chadfinance/logo.webp",
-      "url": "https://chadfinance.xyz"
+      "url": ""
     },
     {
       "id": "chainflip-amm",
@@ -2853,10 +2877,10 @@
       "url": "https://chimpx.ai/"
     },
     {
-      "id": "choice-exchange",
-      "name": "Choice Exchange",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/choice-exchange/logo.webp",
-      "url": "https://choice.exchange"
+      "id": "chord",
+      "name": "Chord",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/chord/logo.webp",
+      "url": ""
     },
     {
       "id": "chronos-v1",
@@ -5607,16 +5631,16 @@
       "url": "https://glyph.exchange"
     },
     {
+      "id": "gmx-amm",
+      "name": "GMX AMM",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gmx-amm/logo.webp",
+      "url": "https://gmx.io"
+    },
+    {
       "id": "gmx-v1-amm",
       "name": "GMX V1 AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gmx-v1-amm/logo.webp",
       "url": "https://gmx.io/"
-    },
-    {
-      "id": "gmx-v2-amm",
-      "name": "GMX V2 AMM",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gmx-v2-amm/logo.webp",
-      "url": "https://gmx.io"
     },
     {
       "id": "goat-swap",
@@ -5916,7 +5940,7 @@
       "id": "hashport",
       "name": "Hashport",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hashport/logo.webp",
-      "url": "https://www.hashport.network"
+      "url": ""
     },
     {
       "id": "hatom-tao-bridge",
@@ -8814,7 +8838,7 @@
       "id": "mint-bridge",
       "name": "Mint Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/mint-bridge/logo.webp",
-      "url": "https://bridge.mintchain.io/"
+      "url": ""
     },
     {
       "id": "mintswap-finance",
@@ -10908,7 +10932,7 @@
       "id": "prerich",
       "name": "prerich",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/prerich/logo.webp",
-      "url": "https://www.prerich.com"
+      "url": ""
     },
     {
       "id": "primitive",
@@ -12768,7 +12792,7 @@
       "id": "sophon-bridge",
       "name": "Sophon Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sophon-bridge/logo.webp",
-      "url": "https://sophon.xyz/"
+      "url": ""
     },
     {
       "id": "sorare-bridge",
@@ -13770,7 +13794,7 @@
       "id": "swellchain-bridge",
       "name": "Swellchain Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/swellchain-bridge/logo.webp",
-      "url": "https://superbridge.swellnetwork.io"
+      "url": ""
     },
     {
       "id": "swerve",
