@@ -3171,6 +3171,12 @@
       "url": ""
     },
     {
+      "id": "confluence",
+      "name": "Confluence",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/confluence/logo.webp",
+      "url": ""
+    },
+    {
       "id": "connext",
       "name": "Connext",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/connext/logo.webp",
