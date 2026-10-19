@@ -13233,6 +13233,12 @@
       "url": "https://steamm.fi"
     },
     {
+      "id": "steelswap",
+      "name": "SteelSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/steelswap/logo.webp",
+      "url": "https://steelswap.io"
+    },
+    {
       "id": "stellar-amm",
       "name": "Stellar AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/stellar-amm/logo.webp",
