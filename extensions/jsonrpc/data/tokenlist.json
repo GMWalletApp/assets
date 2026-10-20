@@ -1,6 +1,6 @@
 {
   "source": "trustwallet+coingecko",
-  "updatedAt": "2026-09-28T05:46:38Z",
+  "updatedAt": "2026-10-20T17:20:25Z",
   "tokens": [
     {
       "kind": "token",
@@ -135868,6 +135868,21 @@
           "url": "https://github.com/pactus-project/Whitepaper/releases/latest/download/pactus_whitepaper.pdf"
         }
       ]
+    },
+    {
+      "kind": "native",
+      "chain": "pearl",
+      "hot": false,
+      "is_top": true,
+      "address": "",
+      "assetId": "pearl",
+      "type": "coin",
+      "name": "Pearl",
+      "symbol": "PRL",
+      "decimals": 8,
+      "status": "active",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/blockchains/pearl/info/logo.png",
+      "logoExists": true
     },
     {
       "kind": "native",

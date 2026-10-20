@@ -68,6 +68,7 @@ const (
 	DefaultUSDTFamilyLogoURI            = DefaultRepositoryStaticBaseURL + "/USDT.svg"
 	DefaultPolygonLogoURI               = DefaultRepositoryStaticBaseURL + "/poly.svg"
 	DefaultXLayerLogoURI                = DefaultRepositoryAssetBaseURL + "/blockchains/xlayer/info/logo.png"
+	DefaultPearlLogoURI                 = DefaultRepositoryAssetBaseURL + "/blockchains/pearl/info/logo.png"
 )
 
 type Server struct {

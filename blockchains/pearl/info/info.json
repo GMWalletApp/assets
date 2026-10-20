@@ -1,0 +1,10 @@
+{
+  "name": "Pearl",
+  "website": "https://pearlresearch.ai/",
+  "description": "Pearl is the native blockchain network of Pearl Research Labs. PRL is the native coin of the Pearl network.",
+  "explorer": "https://explorer.pearlresearch.ai/",
+  "symbol": "PRL",
+  "type": "coin",
+  "decimals": 8,
+  "status": "active"
+}

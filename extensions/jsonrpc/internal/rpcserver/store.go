@@ -434,6 +434,9 @@ func (s *Store) chainLogoURI(chain string) string {
 	if normalizeChain(chain) == "xlayer" {
 		return DefaultXLayerLogoURI
 	}
+	if normalizeChain(chain) == "pearl" {
+		return DefaultPearlLogoURI
+	}
 	return fmt.Sprintf("%s/blockchains/%s/info/logo.png", s.assetBaseURL, chain)
 }
 
