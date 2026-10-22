@@ -285,9 +285,15 @@
       "url": ""
     },
     {
-      "id": "aero-lite",
-      "name": "Aero Lite",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aero-lite/logo.webp",
+      "id": "aero",
+      "name": "Aero",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aero/logo.webp",
+      "url": "https://aero.xyz/"
+    },
+    {
+      "id": "aero-v2",
+      "name": "Aero V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aero-v2/logo.webp",
       "url": "https://aero.xyz/"
     },
     {
@@ -1543,6 +1549,12 @@
       "name": "BaySwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bayswap/logo.webp",
       "url": ""
+    },
+    {
+      "id": "bb84",
+      "name": "bb84",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bb84/logo.webp",
+      "url": "https://bb84.com"
     },
     {
       "id": "bbbfi-swap-v2",
@@ -3126,6 +3138,12 @@
       "id": "commudao-gameswap",
       "name": "CommuDAO GameSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/commudao-gameswap/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "communityv3",
+      "name": "CommunityV3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/communityv3/logo.webp",
       "url": ""
     },
     {
@@ -5649,6 +5667,12 @@
       "url": "https://gmx.io/"
     },
     {
+      "id": "gnoswap",
+      "name": "GnoSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gnoswap/logo.webp",
+      "url": ""
+    },
+    {
       "id": "goat-swap",
       "name": "Goat Swap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/goat-swap/logo.webp",
@@ -6216,6 +6240,12 @@
       "id": "hpdex",
       "name": "Hpdex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hpdex/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "hsr",
+      "name": "HSR",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hsr/logo.webp",
       "url": ""
     },
     {
@@ -7785,9 +7815,15 @@
       "url": "https://layerzero.network/"
     },
     {
-      "id": "lcx-liberty-dex",
-      "name": "LCX Liberty DEX",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lcx-liberty-dex/logo.webp",
+      "id": "lcx-liberty-dex-aggregator",
+      "name": "LCX Liberty DEX Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lcx-liberty-dex-aggregator/logo.webp",
+      "url": "https://dex.lcx.com"
+    },
+    {
+      "id": "lcx-liberty-dex-bridge-aggregator",
+      "name": "LCX Liberty DEX Bridge Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lcx-liberty-dex-bridge-aggregator/logo.webp",
       "url": "https://dex.lcx.com"
     },
     {
@@ -8131,6 +8167,12 @@
       "name": "LuaSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/luaswap/logo.webp",
       "url": ""
+    },
+    {
+      "id": "lucid-labs",
+      "name": "Lucid Labs",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lucid-labs/logo.webp",
+      "url": "https://www.lucidlabs.fi"
     },
     {
       "id": "luigiswap",
@@ -9265,6 +9307,12 @@
       "name": "Naka Dex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/naka-dex/logo.webp",
       "url": "https://nakachain.xyz/swap"
+    },
+    {
+      "id": "nami",
+      "name": "Nami",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/nami/logo.webp",
+      "url": "https://nami.fi/"
     },
     {
       "id": "nano-swap",
@@ -15171,10 +15219,16 @@
       "url": ""
     },
     {
-      "id": "vetrade",
-      "name": "VeTrade",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/vetrade/logo.webp",
+      "id": "vetrade-dex-aggregator",
+      "name": "VeTrade DEX Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/vetrade-dex-aggregator/logo.webp",
       "url": "https://vetrade.vet/swap"
+    },
+    {
+      "id": "vetrade-v3",
+      "name": "VeTrade V3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/vetrade-v3/logo.webp",
+      "url": "https://vetrade.vet"
     },
     {
       "id": "vexchange",
@@ -15636,6 +15690,12 @@
       "id": "world-markets-spot",
       "name": "World Markets Spot",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/world-markets-spot/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "wormswap",
+      "name": "WormSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/wormswap/logo.webp",
       "url": ""
     },
     {

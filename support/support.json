@@ -888,7 +888,7 @@
     },
     {
       "id": "credit-wallet",
-      "name": "Credit Wallet",
+      "name": "PenguinWallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/credit-wallet/logo.png"
     },
     {
@@ -995,6 +995,11 @@
       "id": "deficloud",
       "name": "Deficloud",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/deficloud/logo.png"
+    },
+    {
+      "id": "deneb",
+      "name": "Deneb",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/deneb/logo.png"
     },
     {
       "id": "dexari",
@@ -1295,6 +1300,11 @@
       "id": "gamic",
       "name": "Gamic",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/gamic/logo.png"
+    },
+    {
+      "id": "garuda-wallet",
+      "name": "Garuda Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/garuda-wallet/logo.png"
     },
     {
       "id": "gatewallet",

@@ -486,6 +486,9 @@
     "deficloud": {
       "walletConnectId": "de0876834d89cfbc7d50c9082727480c784c33ec559349b0541c452cd9e10ed0"
     },
+    "deneb": {
+      "walletConnectId": "7f99d267a0c8ea3ad7c3d47cbdf7ca91c07a2470da0547cca16a98491db2d6e8"
+    },
     "dexari": {
       "walletConnectId": "063c520962a445617ad3fc9ccb9744c81104dd11e34e3d61c6a6a42cc0a6beb3"
     },
@@ -667,6 +670,9 @@
     },
     "gamic": {
       "walletConnectId": "b1998499e7502d1d10eddb209edc25b1a7aa7977d6ce6664b066474d66f43bdf"
+    },
+    "garuda-wallet": {
+      "walletConnectId": "9218495a6860945a9acdb563687e441274952b6903929dd4e077ab9fd8f84beb"
     },
     "gatewallet": {
       "walletConnectId": "aba1f652e61fd536e8a7a5cd5e0319c9047c435ef8f7e907717361ff33bb3588"
