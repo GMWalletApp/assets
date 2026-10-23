@@ -285,15 +285,15 @@
       "url": ""
     },
     {
-      "id": "aero",
-      "name": "Aero",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aero/logo.webp",
+      "id": "aero-basic",
+      "name": "Aero Basic",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aero-basic/logo.webp",
       "url": "https://aero.xyz/"
     },
     {
-      "id": "aero-v2",
-      "name": "Aero V2",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aero-v2/logo.webp",
+      "id": "aero-slipstream",
+      "name": "Aero Slipstream",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aero-slipstream/logo.webp",
       "url": "https://aero.xyz/"
     },
     {
@@ -1815,9 +1815,15 @@
       "url": "https://biswap.org/pool"
     },
     {
-      "id": "bitblocks-finance",
-      "name": "BitBlocks Finance",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bitblocks-finance/logo.webp",
+      "id": "bitblocks-finance-v2",
+      "name": "BitBlocks Finance V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bitblocks-finance-v2/logo.webp",
+      "url": "https://bitblocks.finance"
+    },
+    {
+      "id": "bitblocks-finance-v3",
+      "name": "BitBlocks Finance V3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bitblocks-finance-v3/logo.webp",
       "url": "https://bitblocks.finance"
     },
     {
@@ -3933,6 +3939,12 @@
       "url": "https://dexr.finance"
     },
     {
+      "id": "dexstock",
+      "name": "Dexstock",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dexstock/logo.webp",
+      "url": ""
+    },
+    {
       "id": "dexswap",
       "name": "dexSWAP",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dexswap/logo.webp",
@@ -5118,6 +5130,12 @@
       "id": "flitswap",
       "name": "FlitSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/flitswap/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "flowrouter",
+      "name": "FlowRouter",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/flowrouter/logo.webp",
       "url": ""
     },
     {
@@ -12855,9 +12873,15 @@
       "url": "https://sorare.com/"
     },
     {
-      "id": "soroswap",
-      "name": "Soroswap",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/soroswap/logo.webp",
+      "id": "soroswap-aggregator",
+      "name": "Soroswap Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/soroswap-aggregator/logo.webp",
+      "url": "https://soroswap.finance/"
+    },
+    {
+      "id": "soroswap-amm",
+      "name": "Soroswap AMM",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/soroswap-amm/logo.webp",
       "url": "https://soroswap.finance/"
     },
     {
@@ -14583,6 +14607,12 @@
       "url": ""
     },
     {
+      "id": "tradewood",
+      "name": "TradeWood",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tradewood/logo.webp",
+      "url": ""
+    },
+    {
       "id": "trado-spot",
       "name": "Trado Spot",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/trado-spot/logo.webp",
@@ -15681,9 +15711,9 @@
       "url": ""
     },
     {
-      "id": "world-chain",
-      "name": "World Chain",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/world-chain/logo.webp",
+      "id": "world-chain-bridge",
+      "name": "World Chain Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/world-chain-bridge/logo.webp",
       "url": "https://world.org/"
     },
     {
