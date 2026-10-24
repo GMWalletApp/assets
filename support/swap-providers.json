@@ -6807,6 +6807,12 @@
       "url": "https://interport.fi"
     },
     {
+      "id": "intersoon",
+      "name": "InterSoon",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/intersoon/logo.webp",
+      "url": "https://intersoon.soo.network"
+    },
+    {
       "id": "intrinsic",
       "name": "Intrinsic",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/intrinsic/logo.webp",
@@ -10849,6 +10855,12 @@
       "name": "PolyDEX-Cryption Network",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/polydex-cryption-network/logo.webp",
       "url": ""
+    },
+    {
+      "id": "polygon-bridge",
+      "name": "Polygon Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/polygon-bridge/logo.webp",
+      "url": "https://polygon.technology/"
     },
     {
       "id": "polygon-zkevm-bridge",
