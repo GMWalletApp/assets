@@ -2895,6 +2895,24 @@
       "url": "https://chimpx.ai/"
     },
     {
+      "id": "choice-exchange-clmm",
+      "name": "Choice Exchange CLMM",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/choice-exchange-clmm/logo.webp",
+      "url": "https://choice.exchange"
+    },
+    {
+      "id": "choice-exchange-v1",
+      "name": "Choice Exchange V1",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/choice-exchange-v1/logo.webp",
+      "url": "https://choice.exchange"
+    },
+    {
+      "id": "choice-exchange-v2",
+      "name": "Choice Exchange V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/choice-exchange-v2/logo.webp",
+      "url": "https://choice.exchange"
+    },
+    {
       "id": "chord",
       "name": "Chord",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/chord/logo.webp",
@@ -2977,6 +2995,12 @@
       "name": "CLAMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/clamm/logo.webp",
       "url": "https://app.clamm.io"
+    },
+    {
+      "id": "cleave-protocol",
+      "name": "Cleave Protocol",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cleave-protocol/logo.webp",
+      "url": ""
     },
     {
       "id": "cleopatra-cl",
