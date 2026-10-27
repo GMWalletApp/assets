@@ -1491,6 +1491,12 @@
       "url": "https://docs.base.org/base-chain/network-information/bridges-mainnet"
     },
     {
+      "id": "base-uniswap-v4-zero-slippage-atomic-rfq-hook",
+      "name": "Base Uniswap v4 Zero-Slippage Atomic RFQ Hook",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/base-uniswap-v4-zero-slippage-atomic-rfq-hook/logo.webp",
+      "url": "https://github.com/lucascordone-spec/base-univ4-rfq-hook"
+    },
+    {
       "id": "base3d",
       "name": "Base3D",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/base3d/logo.webp",
@@ -3453,9 +3459,9 @@
       "url": ""
     },
     {
-      "id": "crystal-exchange-dex",
-      "name": "Crystal Exchange DEX",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/crystal-exchange-dex/logo.webp",
+      "id": "crystal-dex",
+      "name": "Crystal DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/crystal-dex/logo.webp",
       "url": "https://crystal.exchange/"
     },
     {
@@ -6093,9 +6099,9 @@
       "url": "https://helix.box/"
     },
     {
-      "id": "hemi",
-      "name": "Hemi",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hemi/logo.webp",
+      "id": "hemi-bridge",
+      "name": "Hemi Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hemi-bridge/logo.webp",
       "url": "https://hemi.xyz/"
     },
     {
