@@ -723,6 +723,12 @@
       "url": "https://app.anqa.ag/"
     },
     {
+      "id": "anubis-bridge",
+      "name": "Anubis Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/anubis-bridge/logo.webp",
+      "url": "https://app.anubisbridge.com/"
+    },
+    {
       "id": "ao-bridge",
       "name": "AO Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ao-bridge/logo.webp",
@@ -2487,6 +2493,12 @@
       "url": ""
     },
     {
+      "id": "byzanlink-stocks",
+      "name": "Byzanlink Stocks",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/byzanlink-stocks/logo.webp",
+      "url": "https://markets.byzanlink.com"
+    },
+    {
       "id": "c3-exchange",
       "name": "C3 Exchange",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/c3-exchange/logo.webp",
@@ -2977,6 +2989,12 @@
       "name": "Citrea Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/citrea-bridge/logo.webp",
       "url": "https://citrea.xyz/bridge"
+    },
+    {
+      "id": "citrea-token-bridge",
+      "name": "Citrea Token Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/citrea-token-bridge/logo.webp",
+      "url": "https://citrea.xyz/"
     },
     {
       "id": "cl8y-dex",
@@ -11755,6 +11773,12 @@
       "name": "Rooster Protocol V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/rooster-protocol-v2/logo.webp",
       "url": "https://www.rooster.trade/"
+    },
+    {
+      "id": "rootstock-token-bridge",
+      "name": "Rootstock Token Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/rootstock-token-bridge/logo.webp",
+      "url": "https://dapp.tokenbridge.rootstock.io/"
     },
     {
       "id": "rose",
