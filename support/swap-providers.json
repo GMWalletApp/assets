@@ -2493,9 +2493,9 @@
       "url": ""
     },
     {
-      "id": "byzanlink-stocks",
-      "name": "Byzanlink Stocks",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/byzanlink-stocks/logo.webp",
+      "id": "byzanlink-aggregator",
+      "name": "Byzanlink Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/byzanlink-aggregator/logo.webp",
       "url": "https://markets.byzanlink.com"
     },
     {
@@ -5473,6 +5473,12 @@
       "name": "FWX DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/fwx-dex/logo.webp",
       "url": "https://app.fwx.finance/10143"
+    },
+    {
+      "id": "fynd-amm",
+      "name": "Fynd AMM",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/fynd-amm/logo.webp",
+      "url": "https://swap.fynd.xyz/pools"
     },
     {
       "id": "gainzswap",
@@ -14457,6 +14463,12 @@
       "url": "https://thirdfy.com/"
     },
     {
+      "id": "thogamm",
+      "name": "ThogAMM",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/thogamm/logo.webp",
+      "url": "https://github.com/thogard785/thog-amm-integration-guide"
+    },
+    {
       "id": "thorchain-dex",
       "name": "THORChain DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/thorchain-dex/logo.webp",
@@ -14673,6 +14685,12 @@
       "url": ""
     },
     {
+      "id": "tradecraft",
+      "name": "Tradecraft",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tradecraft/logo.webp",
+      "url": ""
+    },
+    {
       "id": "tradewood",
       "name": "TradeWood",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tradewood/logo.webp",
@@ -14742,7 +14760,7 @@
       "id": "trnch",
       "name": "TRNCH",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/trnch/logo.webp",
-      "url": ""
+      "url": "https://trnch.fun/heat"
     },
     {
       "id": "tropical-finance",
