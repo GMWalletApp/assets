@@ -639,12 +639,6 @@
       "url": "https://elvesdex.com"
     },
     {
-      "id": "amahub",
-      "name": "Amahub",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/amahub/logo.webp",
-      "url": ""
-    },
-    {
       "id": "amaterasu-finance",
       "name": "Amaterasu Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/amaterasu-finance/logo.webp",
@@ -762,7 +756,7 @@
       "id": "apex-defi",
       "name": "Apex DeFi",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/apex-defi/logo.webp",
-      "url": "https://apexdefi.xyz"
+      "url": ""
     },
     {
       "id": "apexswap",
@@ -2496,6 +2490,12 @@
       "id": "byzanlink-aggregator",
       "name": "Byzanlink Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/byzanlink-aggregator/logo.webp",
+      "url": "https://markets.byzanlink.com"
+    },
+    {
+      "id": "byzanlink-bridge-aggregator",
+      "name": "Byzanlink Bridge Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/byzanlink-bridge-aggregator/logo.webp",
       "url": "https://markets.byzanlink.com"
     },
     {
@@ -4464,7 +4464,7 @@
       "id": "echelon-initia-bridge",
       "name": "Echelon Initia Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/echelon-initia-bridge/logo.webp",
-      "url": "https://echelon.market/"
+      "url": ""
     },
     {
       "id": "echo-bridge",
@@ -5238,7 +5238,7 @@
       "id": "fluxbeam",
       "name": "FluxBeam",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/fluxbeam/logo.webp",
-      "url": "https://fluxbeam.xyz"
+      "url": ""
     },
     {
       "id": "fluxflow-v3",
@@ -5841,9 +5841,9 @@
       "url": "https://www.gravitybridge.net"
     },
     {
-      "id": "gravity-by-galxe",
-      "name": "Gravity by Galxe",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gravity-by-galxe/logo.webp",
+      "id": "gravity-by-galxe-bridge",
+      "name": "Gravity by Galxe Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gravity-by-galxe-bridge/logo.webp",
       "url": "https://gravity.xyz/"
     },
     {
@@ -6462,13 +6462,13 @@
       "id": "hyperdex-aggregator",
       "name": "HyperDex Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hyperdex-aggregator/logo.webp",
-      "url": ""
+      "url": "https://hyperdex.app"
     },
     {
       "id": "hyperdex-bridge-aggregator",
       "name": "HyperDex Bridge Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hyperdex-bridge-aggregator/logo.webp",
-      "url": ""
+      "url": "https://hyperdex.app"
     },
     {
       "id": "hyperdrome",
@@ -13656,13 +13656,13 @@
       "id": "supswap-v2",
       "name": "SupSwap V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/supswap-v2/logo.webp",
-      "url": "https://supswap.xyz"
+      "url": ""
     },
     {
       "id": "supswap-v3",
       "name": "SupSwap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/supswap-v3/logo.webp",
-      "url": "https://supswap.xyz"
+      "url": ""
     },
     {
       "id": "surfswap-classic",

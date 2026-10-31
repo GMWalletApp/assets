@@ -1273,7 +1273,7 @@
     },
     {
       "id": "freighter",
-      "name": "Freighter",
+      "name": "Varial",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/freighter/logo.png"
     },
     {
@@ -2280,6 +2280,11 @@
       "id": "oasys-passport",
       "name": "Oasys Passport",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/oasys-passport/logo.png"
+    },
+    {
+      "id": "oath-wallet",
+      "name": "Oath Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/oath-wallet/logo.png"
     },
     {
       "id": "oblio-wallet",

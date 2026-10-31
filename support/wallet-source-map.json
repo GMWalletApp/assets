@@ -1263,6 +1263,9 @@
     "oasys-passport": {
       "walletConnectId": "37aacf1e6bf6793c892e42c3f7623a61d9ffcb4337010804cc3193c4d596cf5c"
     },
+    "oath-wallet": {
+      "walletConnectId": "79f336977e239d92625bdecf3f2e20a2d8f9974b5fa884d23ec02c9b82e075ce"
+    },
     "oblio-wallet": {
       "walletConnectId": "02957f0659df422d5b8fa31a054a15140479cebdd715dfa1ba875a93a4236b05"
     },
