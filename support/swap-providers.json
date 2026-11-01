@@ -11655,9 +11655,9 @@
       "url": "https://rialto.xyz/swap"
     },
     {
-      "id": "ride-markets",
-      "name": "Ride Markets",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ride-markets/logo.webp",
+      "id": "ride-markets-aggregator",
+      "name": "Ride Markets Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ride-markets-aggregator/logo.webp",
       "url": "https://ride.markets/"
     },
     {
