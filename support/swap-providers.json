@@ -3126,7 +3126,7 @@
       "id": "coinbase-bridge",
       "name": "Coinbase Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/coinbase-bridge/logo.webp",
-      "url": "https://www.coinbase.com/"
+      "url": "https://help.coinbase.com/en/exchange/crypto-transfers/wrapped-assets"
     },
     {
       "id": "coincollect",
@@ -12151,6 +12151,18 @@
       "name": "Scrollswap Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/scrollswap-finance/logo.webp",
       "url": ""
+    },
+    {
+      "id": "scrooge-bridge-aggregator",
+      "name": "Scrooge Bridge Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/scrooge-bridge-aggregator/logo.webp",
+      "url": "https://scrooge.exchange"
+    },
+    {
+      "id": "scrooge-dex-aggregator",
+      "name": "Scrooge DEX Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/scrooge-dex-aggregator/logo.webp",
+      "url": "https://scrooge.exchange"
     },
     {
       "id": "sdex",
