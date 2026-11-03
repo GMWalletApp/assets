@@ -2553,6 +2553,12 @@
       "url": "https://camelot.exchange/"
     },
     {
+      "id": "camelot-v4",
+      "name": "Camelot V4",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/camelot-v4/logo.webp",
+      "url": "https://camelot.exchange/"
+    },
+    {
       "id": "canary",
       "name": "Canary",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/canary/logo.webp",
@@ -15429,6 +15435,12 @@
       "url": ""
     },
     {
+      "id": "volt-protocol",
+      "name": "Volt Protocol",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/volt-protocol/logo.webp",
+      "url": ""
+    },
+    {
       "id": "voltage-amm",
       "name": "Voltage AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/voltage-amm/logo.webp",
@@ -15594,6 +15606,12 @@
       "id": "warpx-v3",
       "name": "WarpX V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/warpx-v3/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "wars-dex",
+      "name": "WARs DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/wars-dex/logo.webp",
       "url": ""
     },
     {
