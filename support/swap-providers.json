@@ -8253,6 +8253,12 @@
       "url": ""
     },
     {
+      "id": "lubics",
+      "name": "Lubics",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lubics/logo.webp",
+      "url": ""
+    },
+    {
       "id": "lucid-labs",
       "name": "Lucid Labs",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lucid-labs/logo.webp",
