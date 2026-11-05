@@ -696,7 +696,7 @@
       "id": "anetabtc",
       "name": "anetaBTC",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/anetabtc/logo.webp",
-      "url": "https://anetabtc.io"
+      "url": ""
     },
     {
       "id": "angstrom",
@@ -714,7 +714,7 @@
       "id": "anqa",
       "name": "Anqa",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/anqa/logo.webp",
-      "url": "https://app.anqa.ag/"
+      "url": ""
     },
     {
       "id": "anubis-bridge",
@@ -864,7 +864,7 @@
       "id": "arbswap-amm",
       "name": "Arbswap AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/arbswap-amm/logo.webp",
-      "url": "https://arbswap.io/"
+      "url": ""
     },
     {
       "id": "arbswap-stableswap",
@@ -1182,7 +1182,7 @@
       "id": "aura-aggregator",
       "name": "Aura Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aura-aggregator/logo.webp",
-      "url": "https://app.aur.ag/"
+      "url": ""
     },
     {
       "id": "auragi-finance",
@@ -1962,7 +1962,7 @@
       "id": "blast-bridge",
       "name": "Blast Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/blast-bridge/logo.webp",
-      "url": "https://blast.io/en/bridge"
+      "url": ""
     },
     {
       "id": "blastdex",
@@ -2034,7 +2034,7 @@
       "id": "blockng",
       "name": "BlockNG",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/blockng/logo.webp",
-      "url": "https://blockng.money"
+      "url": ""
     },
     {
       "id": "bloctoswap",
@@ -2910,13 +2910,13 @@
       "id": "chimpx-ai-aggregator",
       "name": "ChimpX AI Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/chimpx-ai-aggregator/logo.webp",
-      "url": "https://chimpx.ai/"
+      "url": "https://chimpx.ai"
     },
     {
       "id": "chimpx-ai-dex",
       "name": "ChimpX AI DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/chimpx-ai-dex/logo.webp",
-      "url": "https://chimpx.ai/"
+      "url": "https://chimpx.ai"
     },
     {
       "id": "choice-exchange-clmm",
@@ -3684,7 +3684,7 @@
       "id": "ddex",
       "name": "DDEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ddex/logo.webp",
-      "url": "https://ddex.io/"
+      "url": ""
     },
     {
       "id": "de1",
@@ -5196,13 +5196,13 @@
       "id": "flowswap-v2",
       "name": "FlowSwap V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/flowswap-v2/logo.webp",
-      "url": "https://flowswap.io"
+      "url": ""
     },
     {
       "id": "flowswap-v3",
       "name": "FlowSwap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/flowswap-v3/logo.webp",
-      "url": "https://flowswap.io"
+      "url": ""
     },
     {
       "id": "flowx-aggregator",
@@ -6126,7 +6126,7 @@
       "id": "helixbox",
       "name": "Helixbox",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/helixbox/logo.webp",
-      "url": "https://helix.box/"
+      "url": ""
     },
     {
       "id": "hemi-bridge",
@@ -6150,7 +6150,7 @@
       "id": "hera-finance",
       "name": "Hera Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hera-finance/logo.webp",
-      "url": "https://staking.hera.finance"
+      "url": ""
     },
     {
       "id": "heraswap",
@@ -6498,7 +6498,7 @@
       "id": "hyperindex",
       "name": "HyperInDex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hyperindex/logo.webp",
-      "url": "https://www.hyperindex.trade"
+      "url": ""
     },
     {
       "id": "hyperion",
@@ -6570,13 +6570,13 @@
       "id": "hypertrade-v2",
       "name": "Hypertrade V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hypertrade-v2/logo.webp",
-      "url": "https://ht.xyz"
+      "url": ""
     },
     {
       "id": "hypertrade-v3",
       "name": "Hypertrade V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hypertrade-v3/logo.webp",
-      "url": "https://ht.xyz"
+      "url": ""
     },
     {
       "id": "hyphen",
@@ -6798,7 +6798,7 @@
       "id": "inriswap",
       "name": "INRISwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/inriswap/logo.webp",
-      "url": "https://platform.inri.life/swap/"
+      "url": ""
     },
     {
       "id": "inswap",
@@ -6870,7 +6870,7 @@
       "id": "intersoon",
       "name": "InterSoon",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/intersoon/logo.webp",
-      "url": "https://intersoon.soo.network"
+      "url": ""
     },
     {
       "id": "intrinsic",
@@ -7074,7 +7074,7 @@
       "id": "juiceswap",
       "name": "Juiceswap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/juiceswap/logo.webp",
-      "url": "https://bapp.juiceswap.com/"
+      "url": ""
     },
     {
       "id": "jujube-finance",
@@ -7272,7 +7272,7 @@
       "id": "kaspa-bridge",
       "name": "Kaspa Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kaspa-bridge/logo.webp",
-      "url": "https://www.kaspabridge.com/"
+      "url": ""
     },
     {
       "id": "kaspa-finance-v3",
@@ -7518,13 +7518,13 @@
       "id": "knightswap-finance",
       "name": "KnightSwap Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/knightswap-finance/logo.webp",
-      "url": "https://knightswap.financial"
+      "url": ""
     },
     {
       "id": "knit-finance",
       "name": "Knit Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/knit-finance/logo.webp",
-      "url": "https://knit.finance"
+      "url": ""
     },
     {
       "id": "ko-one",
@@ -8610,7 +8610,7 @@
       "id": "megalon",
       "name": "Megalon",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/megalon/logo.webp",
-      "url": "https://megalon.app"
+      "url": ""
     },
     {
       "id": "megaswap",
@@ -8886,7 +8886,7 @@
       "id": "microchain",
       "name": "Microchain",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/microchain/logo.webp",
-      "url": "https://www.microchain.systems"
+      "url": ""
     },
     {
       "id": "milkydex",
@@ -9492,7 +9492,7 @@
       "id": "neptune",
       "name": "Neptune",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/neptune/logo.webp",
-      "url": "https://nep.finance/"
+      "url": ""
     },
     {
       "id": "neptunehub",
@@ -9966,7 +9966,7 @@
       "id": "oneswap",
       "name": "OneSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/oneswap/logo.webp",
-      "url": "https://www.oneswap.net"
+      "url": ""
     },
     {
       "id": "oni-exchange",
@@ -10488,13 +10488,13 @@
       "id": "parity-dex",
       "name": "Parity DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/parity-dex/logo.webp",
-      "url": "https://app.parity.exchange/"
+      "url": ""
     },
     {
       "id": "parity-dex-cl",
       "name": "Parity DEX CL",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/parity-dex-cl/logo.webp",
-      "url": "https://app.parity.exchange/"
+      "url": ""
     },
     {
       "id": "parityswap-v2",
@@ -10602,7 +10602,7 @@
       "id": "pepeteam-dex",
       "name": "PepeTeam DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pepeteam-dex/logo.webp",
-      "url": "https://dex.pepe.team/"
+      "url": ""
     },
     {
       "id": "pepu-bridge",
@@ -10746,7 +10746,7 @@
       "id": "photonswap-finance",
       "name": "PhotonSwap Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/photonswap-finance/logo.webp",
-      "url": "https://photonswap.finance"
+      "url": ""
     },
     {
       "id": "phux",
@@ -10992,7 +10992,7 @@
       "id": "poolshark",
       "name": "Poolshark",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/poolshark/logo.webp",
-      "url": "https://www.poolshark.fi/"
+      "url": ""
     },
     {
       "id": "poolside",
@@ -11400,7 +11400,7 @@
       "id": "rabbit-swap",
       "name": "Rabbit Swap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/rabbit-swap/logo.webp",
-      "url": "https://rabbitswap.xyz"
+      "url": ""
     },
     {
       "id": "raccoonswap",
@@ -12138,7 +12138,7 @@
       "id": "scribe-v4",
       "name": "Scribe V4",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/scribe-v4/logo.webp",
-      "url": "https://scribe.exchange"
+      "url": ""
     },
     {
       "id": "scribeswap",
@@ -12522,7 +12522,7 @@
       "id": "silkswap",
       "name": "SilkSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/silkswap/logo.webp",
-      "url": "https://silkswap.me"
+      "url": ""
     },
     {
       "id": "silverswap",
@@ -12918,19 +12918,19 @@
       "id": "sonic-market-amm",
       "name": "Sonic Market AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sonic-market-amm/logo.webp",
-      "url": "https://www.sonic.market"
+      "url": ""
     },
     {
       "id": "sonic-market-liquidity-vault",
       "name": "Sonic Market Liquidity Vault",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sonic-market-liquidity-vault/logo.webp",
-      "url": "https://www.sonic.market/trade"
+      "url": ""
     },
     {
       "id": "sonic-market-orderbook",
       "name": "Sonic Market OrderBook",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sonic-market-orderbook/logo.webp",
-      "url": "https://www.sonic.market"
+      "url": ""
     },
     {
       "id": "sonicswap",
@@ -13500,7 +13500,7 @@
       "id": "stride-hyperlane",
       "name": "Stride Hyperlane",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/stride-hyperlane/logo.webp",
-      "url": "https://bridge.stride.zone/"
+      "url": ""
     },
     {
       "id": "stronghands",
@@ -14808,7 +14808,7 @@
       "id": "ttswap",
       "name": "TTswap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ttswap/logo.webp",
-      "url": "https://ttswap.space/#/swap"
+      "url": ""
     },
     {
       "id": "turbo",
@@ -14874,7 +14874,7 @@
       "id": "udex",
       "name": "uDEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/udex/logo.webp",
-      "url": "https://udex.one/home"
+      "url": ""
     },
     {
       "id": "udonswap",
@@ -15211,6 +15211,12 @@
       "name": "Veax CLMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/veax-clmm/logo.webp",
       "url": "https://veax.com/"
+    },
+    {
+      "id": "vectaswap",
+      "name": "VectaSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/vectaswap/logo.webp",
+      "url": ""
     },
     {
       "id": "velar-amm",
