@@ -6663,6 +6663,12 @@
       "url": ""
     },
     {
+      "id": "ignite-dex",
+      "name": "Ignite DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ignite-dex/logo.webp",
+      "url": ""
+    },
+    {
       "id": "iguana-stableswap",
       "name": "Iguana Stableswap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/iguana-stableswap/logo.webp",
@@ -7909,6 +7915,12 @@
       "name": "LCX Liberty DEX Bridge Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lcx-liberty-dex-bridge-aggregator/logo.webp",
       "url": "https://dex.lcx.com"
+    },
+    {
+      "id": "ldex",
+      "name": "LDEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ldex/logo.webp",
+      "url": ""
     },
     {
       "id": "leadfi-leadbtc",
