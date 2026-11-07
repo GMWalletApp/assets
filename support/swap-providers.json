@@ -10569,6 +10569,18 @@
       "url": "https://www.pearl.exchange"
     },
     {
+      "id": "peddleswap-v2",
+      "name": "PeddleSwap V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/peddleswap-v2/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "peddleswap-v3",
+      "name": "PeddleSwap V3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/peddleswap-v3/logo.webp",
+      "url": ""
+    },
+    {
       "id": "pegasys-v2",
       "name": "PegaSys V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pegasys-v2/logo.webp",
@@ -11757,9 +11769,15 @@
       "url": ""
     },
     {
-      "id": "rocketswap-anubis",
-      "name": "RocketSwap Anubis",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/rocketswap-anubis/logo.webp",
+      "id": "rocketswap-anubis-v2",
+      "name": "RocketSwap Anubis V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/rocketswap-anubis-v2/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "rocketswap-anubis-v3",
+      "name": "Rocketswap Anubis V3",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/rocketswap-anubis-v3/logo.webp",
       "url": ""
     },
     {
