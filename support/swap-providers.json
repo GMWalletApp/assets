@@ -2235,6 +2235,12 @@
       "url": ""
     },
     {
+      "id": "bridged-finance",
+      "name": "Bridged Finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bridged-finance/logo.webp",
+      "url": ""
+    },
+    {
       "id": "bridgekek",
       "name": "BridgeKek",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bridgekek/logo.webp",
@@ -7429,6 +7435,12 @@
       "name": "Kinesis Labs",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kinesis-labs/logo.webp",
       "url": ""
+    },
+    {
+      "id": "kinetiq-elysium-bridge",
+      "name": "Kinetiq Elysium Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kinetiq-elysium-bridge/logo.webp",
+      "url": "https://elysium.kinetiq.xyz"
     },
     {
       "id": "kinetix-amm-v2",
