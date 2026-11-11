@@ -223,7 +223,7 @@
     },
     {
       "id": "ab-pay",
-      "name": "AB Pay",
+      "name": "GS Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ab-pay/logo.png"
     },
     {
@@ -1417,6 +1417,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/hai-by-hacken/logo.png"
     },
     {
+      "id": "hakopass-wallet",
+      "name": "Hakopass Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/hakopass-wallet/logo.png"
+    },
+    {
       "id": "halo-wallet",
       "name": "Halo Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/halo-wallet/logo.png"
@@ -2415,6 +2420,11 @@
       "id": "ownbit",
       "name": "Ownbit",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ownbit/logo.png"
+    },
+    {
+      "id": "ownbit-cda81196",
+      "name": "Ownbit",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ownbit-cda81196/logo.png"
     },
     {
       "id": "oxalus-wallet",

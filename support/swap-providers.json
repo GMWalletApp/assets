@@ -1023,6 +1023,12 @@
       "url": "https://swap.assetchain.org"
     },
     {
+      "id": "assetclaw",
+      "name": "AssetClaw",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/assetclaw/logo.webp",
+      "url": ""
+    },
+    {
       "id": "astar-exchange-v2",
       "name": "Astar Exchange V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/astar-exchange-v2/logo.webp",
@@ -1494,7 +1500,7 @@
       "id": "base-uniswap-v4-zero-slippage-atomic-rfq-hook",
       "name": "Base Uniswap v4 Zero-Slippage Atomic RFQ Hook",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/base-uniswap-v4-zero-slippage-atomic-rfq-hook/logo.webp",
-      "url": "https://github.com/lucascordone-spec/base-univ4-rfq-hook"
+      "url": ""
     },
     {
       "id": "base3d",
@@ -1854,7 +1860,7 @@
       "id": "bitdrome-finance",
       "name": "Bitdrome Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bitdrome-finance/logo.webp",
-      "url": "https://app.bitdrome.finance/#/bevm/swap"
+      "url": ""
     },
     {
       "id": "bitflow",
@@ -2172,13 +2178,13 @@
       "id": "bordrless-bridge",
       "name": "Bordrless Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bordrless-bridge/logo.webp",
-      "url": "https://bordrless.app"
+      "url": ""
     },
     {
       "id": "bordrless-dex",
       "name": "Bordrless DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bordrless-dex/logo.webp",
-      "url": "https://bordrless.app"
+      "url": ""
     },
     {
       "id": "bored-candy-city",
@@ -3888,7 +3894,7 @@
       "id": "deluthium",
       "name": "Deluthium",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/deluthium/logo.webp",
-      "url": "https://deluthium.ai/"
+      "url": ""
     },
     {
       "id": "demex-amm",
@@ -4374,7 +4380,7 @@
       "id": "dungeon-dex",
       "name": "Dungeon DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dungeon-dex/logo.webp",
-      "url": "https://dex.dungeongames.io/dungeon/pools"
+      "url": "https://dex.dungeongames.io/"
     },
     {
       "id": "durianfun-amm",
@@ -6084,7 +6090,7 @@
       "id": "heaven",
       "name": "Heaven",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/heaven/logo.webp",
-      "url": "https://heaven.xyz/"
+      "url": ""
     },
     {
       "id": "hebeswap",
@@ -6096,6 +6102,12 @@
       "id": "hela-bridge",
       "name": "HeLa Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hela-bridge/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "helios-dex",
+      "name": "Helios DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/helios-dex/logo.webp",
       "url": ""
     },
     {
@@ -6229,6 +6241,12 @@
       "name": "Holdstation Wallet Miniapp",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/holdstation-wallet-miniapp/logo.webp",
       "url": "https://holdstation.exchange/"
+    },
+    {
+      "id": "homer-swap",
+      "name": "Homer Swap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/homer-swap/logo.webp",
+      "url": ""
     },
     {
       "id": "honeyplay-amm",
@@ -7098,7 +7116,7 @@
       "id": "julswap",
       "name": "JulSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/julswap/logo.webp",
-      "url": "https://julswap.com/#/swap"
+      "url": ""
     },
     {
       "id": "jumbo-exchange",
@@ -7236,6 +7254,12 @@
       "id": "kaliber",
       "name": "Kaliber",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kaliber/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "kalos-dex",
+      "name": "Kalos DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kalos-dex/logo.webp",
       "url": ""
     },
     {
@@ -7602,7 +7626,7 @@
       "id": "kokonut-swap",
       "name": "Kokonut Swap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kokonut-swap/logo.webp",
-      "url": "https://kokonutswap.finance"
+      "url": ""
     },
     {
       "id": "kolswap",
@@ -8124,7 +8148,7 @@
       "id": "liquidcore",
       "name": "LiquidCore",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/liquidcore/logo.webp",
-      "url": "https://liqd.ag"
+      "url": ""
     },
     {
       "id": "liquidity-finance",
@@ -8148,7 +8172,7 @@
       "id": "liquidswap-hl",
       "name": "Liquidswap HL",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/liquidswap-hl/logo.webp",
-      "url": "https://liqd.ag/"
+      "url": ""
     },
     {
       "id": "liquify",
@@ -10572,7 +10596,7 @@
       "id": "pearl-v1-5",
       "name": "Pearl V1.5",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/pearl-v1-5/logo.webp",
-      "url": "https://www.pearl.exchange/"
+      "url": ""
     },
     {
       "id": "pearl-v2",
@@ -15072,7 +15096,7 @@
       "id": "unizen",
       "name": "Unizen",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/unizen/logo.webp",
-      "url": "https://www.unizen.io"
+      "url": ""
     },
     {
       "id": "up-v2",
@@ -15780,7 +15804,7 @@
       "id": "white-whale-dex",
       "name": "White Whale Dex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/white-whale-dex/logo.webp",
-      "url": "https://app.whitewhale.money/"
+      "url": ""
     },
     {
       "id": "wigoswap",

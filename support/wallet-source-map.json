@@ -740,6 +740,9 @@
     "hai-by-hacken": {
       "walletConnectId": "95b58bd89109b2bd9989c9956a8e3f5822003126bae800d9f77455c4009db5ba"
     },
+    "hakopass-wallet": {
+      "walletConnectId": "fc3d0bec269eb7662b262b00c71eb3243dee0d00f4e834ac9cc35f789e097d5c"
+    },
     "halo-wallet": {
       "walletConnectId": "24fd8104e07aa1802aef51426222f23868013b83655fb6686c8478744dd2fda1"
     },
@@ -1342,6 +1345,9 @@
     },
     "ownbit": {
       "walletConnectId": "dcdcfb02dd871af8633875431eb42f095370b104304c35fe2ac77f8ae2045dad"
+    },
+    "ownbit-cda81196": {
+      "walletConnectId": "cda811962d7d0dc37728162c74ae2316bc710f82b8ab13724e474623e70ebd2d"
     },
     "oxalus-wallet": {
       "walletConnectId": "159b0423ce9075d5662f588f805931d989627affab3e63e4dd7ebc62b9c6738c"
