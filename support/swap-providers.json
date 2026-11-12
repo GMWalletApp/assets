@@ -759,6 +759,12 @@
       "url": ""
     },
     {
+      "id": "apex-dex",
+      "name": "APEX DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/apex-dex/logo.webp",
+      "url": ""
+    },
+    {
       "id": "apexswap",
       "name": "ApexSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/apexswap/logo.webp",
@@ -5943,6 +5949,12 @@
       "url": "https://www.gullnetwork.com"
     },
     {
+      "id": "gully-core",
+      "name": "Gully Core",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gully-core/logo.webp",
+      "url": ""
+    },
+    {
       "id": "gvex",
       "name": "GVEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gvex/logo.webp",
@@ -6307,6 +6319,12 @@
       "name": "Horiza",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/horiza/logo.webp",
       "url": ""
+    },
+    {
+      "id": "horizen-bridge",
+      "name": "Horizen Bridge",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/horizen-bridge/logo.webp",
+      "url": "https://horizen.io/"
     },
     {
       "id": "horizondex",
@@ -13549,6 +13567,12 @@
       "name": "STRATO Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/strato-bridge/logo.webp",
       "url": "https://strato.nexus/"
+    },
+    {
+      "id": "strato-dex",
+      "name": "STRATO DEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/strato-dex/logo.webp",
+      "url": "https://app.strato.nexus/"
     },
     {
       "id": "stratum-exchange",

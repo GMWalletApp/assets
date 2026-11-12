@@ -252,6 +252,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/adf-wallet/logo.png"
     },
     {
+      "id": "aetherflow-wallet",
+      "name": "Aetherflow Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/aetherflow-wallet/logo.png"
+    },
+    {
       "id": "airgap-wallet",
       "name": "AirGap Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/airgap-wallet/logo.png"
@@ -660,6 +665,11 @@
       "id": "blue",
       "name": "Blue Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/blue/logo.svg"
+    },
+    {
+      "id": "bmov",
+      "name": "BMOV",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/bmov/logo.png"
     },
     {
       "id": "bonuz-social-wallet",
@@ -3525,6 +3535,11 @@
       "id": "wombat",
       "name": "Wombat",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/wombat/logo.png"
+    },
+    {
+      "id": "worldwallet",
+      "name": "WorldWallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/worldwallet/logo.png"
     },
     {
       "id": "wow-earn",

@@ -34,6 +34,9 @@
     "adf-wallet": {
       "walletConnectId": "4f854044eea00196b92017037b384bf16118c6606b3a90c60e998af1fb2c01b0"
     },
+    "aetherflow-wallet": {
+      "walletConnectId": "897e4fad3475be2e7f26ca6ea5b587e8cc038f9cc5d0cf4642c91de8f0de10b6"
+    },
     "airgap-wallet": {
       "walletConnectId": "a0718f5fb1493e4aaac72cff62d162cb85db40ed68fd8700298f36f1d5c4b73d"
     },
@@ -282,6 +285,9 @@
     },
     "blue": {
       "web3iconsId": "blue"
+    },
+    "bmov": {
+      "walletConnectId": "6a92dcd48aa64e7d2703b03291e856e141850ed13636892e934265a974af9769"
     },
     "bonuz-social-wallet": {
       "walletConnectId": "2c5b687e9f6ce2b5d53541ffdf6aa23d7f645c57dc553dbabd465471c1347689"
@@ -2017,6 +2023,9 @@
     },
     "wombat": {
       "walletConnectId": "cb604c517064f096976972384dc89948a5c850bca9b04866a443e10171d5965d"
+    },
+    "worldwallet": {
+      "walletConnectId": "04206657a7f679124c0a35d4db562249ff68b74016ab0d1822dc75377a6b4851"
     },
     "wow-earn": {
       "walletConnectId": "b06656d0b04f34279945f36452bc4089e8b62a44e1d58f9e98807525ac37af06"
