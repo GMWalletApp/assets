@@ -7281,6 +7281,12 @@
       "url": ""
     },
     {
+      "id": "kalos-trade",
+      "name": "Kalos Trade",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kalos-trade/logo.webp",
+      "url": ""
+    },
+    {
       "id": "kame-aggregator",
       "name": "Kame Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kame-aggregator/logo.webp",
