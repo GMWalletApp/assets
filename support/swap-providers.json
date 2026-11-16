@@ -369,6 +369,12 @@
       "url": "https://agni.finance/"
     },
     {
+      "id": "agora-dex-aggregator",
+      "name": "Agora DEX Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/agora-dex-aggregator/logo.webp",
+      "url": ""
+    },
+    {
       "id": "ags-finance",
       "name": "AGS Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ags-finance/logo.webp",
@@ -1206,6 +1212,12 @@
       "id": "auraswap",
       "name": "AuraSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/auraswap/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "aurixdex",
+      "name": "AurixDEX",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/aurixdex/logo.webp",
       "url": ""
     },
     {
@@ -5805,6 +5817,12 @@
       "url": "https://goldstation.io"
     },
     {
+      "id": "goliath-amm",
+      "name": "Goliath AMM",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/goliath-amm/logo.webp",
+      "url": ""
+    },
+    {
       "id": "gondola-finance",
       "name": "Gondola Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gondola-finance/logo.webp",
@@ -6849,6 +6867,12 @@
       "url": ""
     },
     {
+      "id": "instaswap",
+      "name": "InstaSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/instaswap/logo.webp",
+      "url": "https://instaswap.com"
+    },
+    {
       "id": "inswap",
       "name": "InSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/inswap/logo.webp",
@@ -7567,6 +7591,12 @@
       "name": "KlaySwap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/klayswap-v3/logo.webp",
       "url": "https://klayswap.com/dashboard"
+    },
+    {
+      "id": "kleosswap",
+      "name": "KleosSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kleosswap/logo.webp",
+      "url": ""
     },
     {
       "id": "klex-finance",
@@ -9606,6 +9636,12 @@
       "id": "nest-amm",
       "name": "nest AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/nest-amm/logo.webp",
+      "url": "https://app.usenest.xyz/"
+    },
+    {
+      "id": "nest-avr",
+      "name": "nest AVR",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/nest-avr/logo.webp",
       "url": "https://app.usenest.xyz/"
     },
     {
@@ -13497,6 +13533,12 @@
       "url": "https://steelswap.io"
     },
     {
+      "id": "stelaxis",
+      "name": "Stelaxis",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/stelaxis/logo.webp",
+      "url": ""
+    },
+    {
       "id": "stellar-amm",
       "name": "Stellar AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/stellar-amm/logo.webp",
@@ -13543,6 +13585,18 @@
       "name": "stETH Exchange",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/steth-exchange/logo.webp",
       "url": "https://steth.exchange/"
+    },
+    {
+      "id": "stoa",
+      "name": "Stoa",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/stoa/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "stockiumswap",
+      "name": "StockiumSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/stockiumswap/logo.webp",
+      "url": ""
     },
     {
       "id": "ston-fi",
@@ -14335,6 +14389,12 @@
       "name": "TartSwap Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tartswap-aggregator/logo.webp",
       "url": "https://tartswap.com"
+    },
+    {
+      "id": "taurusfi",
+      "name": "TaurusFi",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/taurusfi/logo.webp",
+      "url": ""
     },
     {
       "id": "tealswap-v2",
