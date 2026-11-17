@@ -2349,9 +2349,15 @@
       "url": ""
     },
     {
-      "id": "btr",
-      "name": "BTR",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/btr/logo.webp",
+      "id": "btr-v1",
+      "name": "BTR V1",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/btr-v1/logo.webp",
+      "url": "https://btr.markets"
+    },
+    {
+      "id": "btr-v2",
+      "name": "BTR V2",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/btr-v2/logo.webp",
       "url": "https://btr.markets"
     },
     {
@@ -5931,6 +5937,12 @@
       "url": ""
     },
     {
+      "id": "growstreams-spot",
+      "name": "GrowStreams Spot",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/growstreams-spot/logo.webp",
+      "url": "https://growstreams.xyz"
+    },
+    {
       "id": "groypfi",
       "name": "GroypFi",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/groypfi/logo.webp",
@@ -7308,6 +7320,12 @@
       "id": "kalos-trade",
       "name": "Kalos Trade",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kalos-trade/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "kalos-v4",
+      "name": "Kalos V4",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/kalos-v4/logo.webp",
       "url": ""
     },
     {
