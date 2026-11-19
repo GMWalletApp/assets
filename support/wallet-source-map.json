@@ -43,6 +43,9 @@
     "aktionariat-wallet": {
       "walletConnectId": "6b16d70ace02b208c67e06ad00ed8110f46e91cc075e0fd98c68b825587d4076"
     },
+    "albedo": {
+      "web3iconsId": "albedo"
+    },
     "alephium-wallet": {
       "walletConnectId": "4b3713c23d5b38f8ae42e0682e81b1286828b0b48ad2e983ba5b928b47f937f4"
     },
@@ -660,7 +663,8 @@
       "walletConnectId": "6bb31b6f40516f9f638741ee0237f009ebb464f79e00ac24972f7c487591ae3a"
     },
     "freighter": {
-      "walletConnectId": "997a355c8f682468706a76cff1b004a7115f505fb962dac54b6e9b442dd1c380"
+      "walletConnectId": "997a355c8f682468706a76cff1b004a7115f505fb962dac54b6e9b442dd1c380",
+      "web3iconsId": "freighter"
     },
     "frontier": {
       "walletConnectId": "85db431492aa2e8672e93f4ea7acf10c88b97b867b0d373107af63dc4880f041"
@@ -1033,6 +1037,9 @@
     },
     "lit": {
       "web3iconsId": "lit"
+    },
+    "lobstr": {
+      "web3iconsId": "lobstr"
     },
     "lobstr-wallet": {
       "walletConnectId": "76a3d548a08cf402f5c7d021f24fd2881d767084b387a5325df88bc3d4b6f21b"
@@ -1493,6 +1500,9 @@
       "web3iconsId": "rabby",
       "walletConnectId": "18388be9ac2d02726dbac9777c96efaac06d744b2f6d580fccdd4127a6d01fd1"
     },
+    "rabet": {
+      "web3iconsId": "rabet"
+    },
     "rainbow": {
       "web3iconsId": "rainbow",
       "walletConnectId": "1ae92b26df02f0abca6304df07debccd18262fdf5fe82daa81593582dac9a369"
@@ -1932,6 +1942,9 @@
     "valora": {
       "walletConnectId": "d01c7758d741b363e637a817a09bcf579feae4db9f5bb16f599fdd1f66e2f974"
     },
+    "varial": {
+      "web3iconsId": "varial"
+    },
     "velgazm": {
       "walletConnectId": "26237272f132a7bea0380cc54b25967e84ffa8d78b9d5d68fe65d08f6dece444"
     },
@@ -2029,6 +2042,9 @@
     },
     "wow-earn": {
       "walletConnectId": "b06656d0b04f34279945f36452bc4089e8b62a44e1d58f9e98807525ac37af06"
+    },
+    "xbull": {
+      "web3iconsId": "xbull"
     },
     "xcapit": {
       "walletConnectId": "24fa79ebaafca330af474d828d3d1d4b20b4d7f93f7d2fd4986ddafee5e51b14"

@@ -15,6 +15,12 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/aevo/logo.svg"
     },
     {
+      "id": "aquarius",
+      "name": "Aquarius",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/aquarius/logo.svg"
+    },
+    {
       "id": "balancer",
       "name": "Balancer",
       "type": "dex",
@@ -171,6 +177,12 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/robinhood/logo.svg"
     },
     {
+      "id": "soroswap",
+      "name": "Soroswap",
+      "type": "dex",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/exchanges/soroswap/logo.svg"
+    },
+    {
       "id": "sushiswap",
       "name": "Sushi Swap",
       "type": "dex",
@@ -265,6 +277,11 @@
       "id": "aktionariat-wallet",
       "name": "Aktionariat Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/aktionariat-wallet/logo.png"
+    },
+    {
+      "id": "albedo",
+      "name": "Albedo",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/albedo/logo.svg"
     },
     {
       "id": "alephium-wallet",
@@ -1283,8 +1300,8 @@
     },
     {
       "id": "freighter",
-      "name": "Varial",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/freighter/logo.png"
+      "name": "Freighter",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/freighter/logo.svg"
     },
     {
       "id": "frontier",
@@ -1900,6 +1917,11 @@
       "id": "lit",
       "name": "lit protocol",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/lit/logo.svg"
+    },
+    {
+      "id": "lobstr",
+      "name": "LOBSTR",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/lobstr/logo.svg"
     },
     {
       "id": "lobstr-wallet",
@@ -2662,6 +2684,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/rabby/logo.svg"
     },
     {
+      "id": "rabet",
+      "name": "Rabet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/rabet/logo.svg"
+    },
+    {
       "id": "rainbow",
       "name": "rainbow",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/rainbow/logo.svg"
@@ -3387,6 +3414,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/valora/logo.png"
     },
     {
+      "id": "varial",
+      "name": "Varial",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/varial/logo.svg"
+    },
+    {
       "id": "velgazm",
       "name": "Velgazm",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/velgazm/logo.png"
@@ -3545,6 +3577,11 @@
       "id": "wow-earn",
       "name": "WOW EARN",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/wow-earn/logo.png"
+    },
+    {
+      "id": "xbull",
+      "name": "xBull",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/xbull/logo.svg"
     },
     {
       "id": "xcapit",
