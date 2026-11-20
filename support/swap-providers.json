@@ -10023,12 +10023,6 @@
       "url": "https://okiedokie.fun/"
     },
     {
-      "id": "okx-bridge",
-      "name": "OKX Bridge",
-      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/okx-bridge/logo.webp",
-      "url": "https://www.okx.com/web3/dex-swap/bridge"
-    },
-    {
       "id": "okx-swap",
       "name": "OKX Swap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/okx-swap/logo.webp",

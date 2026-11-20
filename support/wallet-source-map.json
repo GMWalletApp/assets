@@ -663,8 +663,8 @@
       "walletConnectId": "6bb31b6f40516f9f638741ee0237f009ebb464f79e00ac24972f7c487591ae3a"
     },
     "freighter": {
-      "walletConnectId": "997a355c8f682468706a76cff1b004a7115f505fb962dac54b6e9b442dd1c380",
-      "web3iconsId": "freighter"
+      "web3iconsId": "freighter",
+      "walletConnectId": "997a355c8f682468706a76cff1b004a7115f505fb962dac54b6e9b442dd1c380"
     },
     "frontier": {
       "walletConnectId": "85db431492aa2e8672e93f4ea7acf10c88b97b867b0d373107af63dc4880f041"
