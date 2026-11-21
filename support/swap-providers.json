@@ -4911,6 +4911,12 @@
       "url": "https://etherex.finance/"
     },
     {
+      "id": "etherfi-cash-swaps",
+      "name": "EtherFi Cash Swaps",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/etherfi-cash-swaps/logo.webp",
+      "url": "https://www.ether.fi"
+    },
+    {
       "id": "ethervista",
       "name": "Ethervista",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ethervista/logo.webp",
@@ -8376,6 +8382,12 @@
       "id": "lpeth",
       "name": "lpETH",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lpeth/logo.webp",
+      "url": ""
+    },
+    {
+      "id": "lpstation",
+      "name": "LPStation",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/lpstation/logo.webp",
       "url": ""
     },
     {
@@ -14991,6 +15003,12 @@
       "url": ""
     },
     {
+      "id": "true-markets-swap",
+      "name": "True Markets Swap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/true-markets-swap/logo.webp",
+      "url": "https://truemarkets.co"
+    },
+    {
       "id": "tsunami-v3",
       "name": "Tsunami V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/tsunami-v3/logo.webp",
@@ -15763,6 +15781,12 @@
       "name": "Waka Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/waka-finance/logo.webp",
       "url": ""
+    },
+    {
+      "id": "wallet-v-routing",
+      "name": "Wallet V Routing",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/wallet-v-routing/logo.webp",
+      "url": "https://walletv.io/"
     },
     {
       "id": "wan-bridge",
