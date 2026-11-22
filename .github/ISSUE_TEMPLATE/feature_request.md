@@ -18,8 +18,3 @@ A clear and concise description of any alternative solutions or features you've 
 
 **Additional context**
 Add any other context or screenshots about the feature request here.
-
-
----
-
-By submitting this contribution, you agree to the [GM Wallet Contributor Terms 2.2](https://github.com/GMWalletApp/assets/blob/HEAD/LICENSE#L696).
