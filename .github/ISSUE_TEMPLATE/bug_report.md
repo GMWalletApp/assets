@@ -40,4 +40,4 @@ Add any other context about the problem here.
 
 ---
 
-By submitting this contribution, you agree to the [GM Wallet Contributor Terms 2.2](https://github.com/GMWalletApp/assets/blob/HEAD/CONTRIBUTING.md).
+By submitting this contribution, you agree to the [GM Wallet Contributor Terms 2.2](https://github.com/GMWalletApp/assets/blob/HEAD/LICENSE#L702).
