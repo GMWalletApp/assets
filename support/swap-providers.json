@@ -14157,6 +14157,12 @@
       "url": "https://swarm.com/"
     },
     {
+      "id": "sweep-finance",
+      "name": "Sweep Finance",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sweep-finance/logo.webp",
+      "url": ""
+    },
+    {
       "id": "sweetswap",
       "name": "SweetSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/sweetswap/logo.webp",
