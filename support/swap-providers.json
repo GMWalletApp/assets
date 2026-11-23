@@ -10407,6 +10407,12 @@
       "url": "https://owlorderfi.com/"
     },
     {
+      "id": "owlswap",
+      "name": "OwlSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/owlswap/logo.webp",
+      "url": ""
+    },
+    {
       "id": "oxedium",
       "name": "Oxedium",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/oxedium/logo.webp",
