@@ -30,6 +30,7 @@ validators_settings:
       - "azure-pipelines.yml"
       - "jest.config.js"
       - "LICENSE"
+      - "LICENSE-Trust-Wallet"
       - "package-lock.json"
       - "package.json"
       - "README.md"
