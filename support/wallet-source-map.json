@@ -295,6 +295,9 @@
     "bonuz-social-wallet": {
       "walletConnectId": "2c5b687e9f6ce2b5d53541ffdf6aa23d7f645c57dc553dbabd465471c1347689"
     },
+    "boredefi-wallet": {
+      "walletConnectId": "eb0bdc6fe501894c13f99860b8d2cdfd507e3e9dca319faf2117688d04b1fe29"
+    },
     "brave-wallet": {
       "walletConnectId": "163d2cf19babf05eb8962e9748f9ebe613ed52ebf9c8107c9a0f104bfcf161b3"
     },
@@ -452,6 +455,9 @@
     },
     "cvl-wallet": {
       "walletConnectId": "835dc63f69f65113220e700112363fef2a5f1d72d6c0eef4f2c7dc66bf64b955"
+    },
+    "cybercoin": {
+      "walletConnectId": "f90b87d6eacd9e16c157fbe344b5c90eafe5b8ad7bdfe8af7adb06510a2924d5"
     },
     "cyberwallet": {
       "walletConnectId": "ce216ac7310971159adda1ac271fc6e6590d2c02da43b894ac11919084196e40"
@@ -1641,6 +1647,9 @@
     "shinobi-wallet": {
       "walletConnectId": "51d2c02e306827d2d0f0dadaa00f22575c623aa19c403f09f4b9c42c67098bb1"
     },
+    "simi-wallet": {
+      "walletConnectId": "3b94c3d146b4d6d06d8e25dfe5e30ed0d92de482c488bf4be857e1b441ccce45"
+    },
     "sinohope": {
       "walletConnectId": "cb9d66ecab6a3a98bff2de2653e4e1ce44e84130a7ab323a2892a5c456956ffe"
     },
@@ -1776,6 +1785,9 @@
     },
     "temple": {
       "web3iconsId": "temple"
+    },
+    "temple-wallet-mobile": {
+      "walletConnectId": "4d0813bfbcaf2e0645b5bef6fa06d08dc643effd6aaace0aa3faee481b5ea48a"
     },
     "the-pulse-wallet": {
       "walletConnectId": "a2eb8a1c403a4440b2f578e9deb185b8e22cf4ec2a2a58441032b84b13aaab87"

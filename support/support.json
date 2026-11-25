@@ -235,7 +235,7 @@
     },
     {
       "id": "ab-pay",
-      "name": "GS Wallet",
+      "name": "AB Pay",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/ab-pay/logo.png"
     },
     {
@@ -694,6 +694,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/bonuz-social-wallet/logo.png"
     },
     {
+      "id": "boredefi-wallet",
+      "name": "BoreDefi Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/boredefi-wallet/logo.png"
+    },
+    {
       "id": "brave-wallet",
       "name": "Brave Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/brave-wallet/logo.png"
@@ -952,6 +957,11 @@
       "id": "cvl-wallet",
       "name": "CVL Wallet",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/cvl-wallet/logo.png"
+    },
+    {
+      "id": "cybercoin",
+      "name": "CyberCoin",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/cybercoin/logo.png"
     },
     {
       "id": "cyberwallet",
@@ -2914,6 +2924,11 @@
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/shinobi-wallet/logo.png"
     },
     {
+      "id": "simi-wallet",
+      "name": "Simi Wallet",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/simi-wallet/logo.png"
+    },
+    {
       "id": "sinohope",
       "name": "Sinohope",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/sinohope/logo.png"
@@ -3137,6 +3152,11 @@
       "id": "temple",
       "name": "Temple",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/temple/logo.svg"
+    },
+    {
+      "id": "temple-wallet-mobile",
+      "name": "Temple Wallet Mobile",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/wallets/temple-wallet-mobile/logo.png"
     },
     {
       "id": "the-pulse-wallet",

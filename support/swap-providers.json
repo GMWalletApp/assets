@@ -2004,7 +2004,7 @@
       "id": "blasterswap-v2",
       "name": "Blasterswap V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/blasterswap-v2/logo.webp",
-      "url": "https://blasterswap.com/"
+      "url": ""
     },
     {
       "id": "blasterswap-v3",
@@ -2364,13 +2364,13 @@
       "id": "bubbleswap-v1",
       "name": "Bubbleswap V1",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bubbleswap-v1/logo.webp",
-      "url": "https://app.bubbleswap.io"
+      "url": ""
     },
     {
       "id": "bubbleswap-v2",
       "name": "Bubbleswap V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/bubbleswap-v2/logo.webp",
-      "url": "https://app.bubbleswap.io"
+      "url": ""
     },
     {
       "id": "buglefamily",
@@ -3342,7 +3342,7 @@
       "id": "cookieswap",
       "name": "CookieSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cookieswap/logo.webp",
-      "url": "https://www.cookieswap.fun/"
+      "url": ""
     },
     {
       "id": "core-bitcoin-bridge",
@@ -4302,13 +4302,13 @@
       "id": "dove-swap-v2",
       "name": "Dove Swap V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dove-swap-v2/logo.webp",
-      "url": "https://swap.dovish.finance"
+      "url": ""
     },
     {
       "id": "dove-swap-v3",
       "name": "Dove Swap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/dove-swap-v3/logo.webp",
-      "url": "https://swap.dovish.finance"
+      "url": ""
     },
     {
       "id": "drachma",
@@ -4710,13 +4710,13 @@
       "id": "elysium-bridge",
       "name": "Elysium Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/elysium-bridge/logo.webp",
-      "url": "https://bridge.elysiumchain.tech"
+      "url": ""
     },
     {
       "id": "elysiumswap",
       "name": "ElysiumSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/elysiumswap/logo.webp",
-      "url": "https://swap.elysiumchain.tech/exchange/swap"
+      "url": ""
     },
     {
       "id": "emberswap",
@@ -5244,7 +5244,7 @@
       "id": "flowrouter",
       "name": "FlowRouter",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/flowrouter/logo.webp",
-      "url": ""
+      "url": "https://flowrouter.xyz"
     },
     {
       "id": "flowswap-v2",
@@ -6207,6 +6207,12 @@
       "url": ""
     },
     {
+      "id": "helmswap",
+      "name": "HelmSwap",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/helmswap/logo.webp",
+      "url": ""
+    },
+    {
       "id": "hemi-bridge",
       "name": "Hemi Bridge",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/hemi-bridge/logo.webp",
@@ -7062,7 +7068,7 @@
       "id": "jaine",
       "name": "JAINE",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/jaine/logo.webp",
-      "url": "https://jaine.app/"
+      "url": ""
     },
     {
       "id": "jbtc",
@@ -9444,7 +9450,7 @@
       "id": "motoswap-amm",
       "name": "Motoswap AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/motoswap-amm/logo.webp",
-      "url": "https://motoswap.org/"
+      "url": ""
     },
     {
       "id": "movement-bridge",
@@ -11190,7 +11196,7 @@
       "id": "portal-to-bitcoin",
       "name": "Portal To Bitcoin",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/portal-to-bitcoin/logo.webp",
-      "url": "https://portaltobitcoin.com"
+      "url": ""
     },
     {
       "id": "position-exchange",
@@ -11688,7 +11694,7 @@
       "id": "razor-dex",
       "name": "Razor DEX",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/razor-dex/logo.webp",
-      "url": "https://app.razordex.xyz/"
+      "url": ""
     },
     {
       "id": "rbx",
@@ -11994,7 +12000,7 @@
       "id": "roup",
       "name": "ROUP",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/roup/logo.webp",
-      "url": "https://www.rolluper.xyz"
+      "url": ""
     },
     {
       "id": "route",
@@ -12186,13 +12192,13 @@
       "id": "saros-amm",
       "name": "Saros AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/saros-amm/logo.webp",
-      "url": "https://saros.xyz/pools"
+      "url": ""
     },
     {
       "id": "saros-dlmm",
       "name": "Saros DLMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/saros-dlmm/logo.webp",
-      "url": "https://dlmm.saros.xyz/"
+      "url": ""
     },
     {
       "id": "saru",
@@ -12702,7 +12708,7 @@
       "id": "silverswap",
       "name": "SilverSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/silverswap/logo.webp",
-      "url": "https://silverswap.io"
+      "url": ""
     },
     {
       "id": "simitciswap",
@@ -13290,13 +13296,13 @@
       "id": "spiritswap-amm",
       "name": "SpiritSwap AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/spiritswap-amm/logo.webp",
-      "url": "https://www.spiritswap.finance/chain/ftm/swap"
+      "url": ""
     },
     {
       "id": "spiritswap-v3",
       "name": "SpiritSwap V3",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/spiritswap-v3/logo.webp",
-      "url": "https://www.spiritswap.finance/chain/ftm/swap"
+      "url": ""
     },
     {
       "id": "splash-protocol",
@@ -15726,7 +15732,7 @@
       "id": "vulcandex",
       "name": "VulcanDex",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/vulcandex/logo.webp",
-      "url": "https://vulcanforged.com/"
+      "url": ""
     },
     {
       "id": "vultisig",
@@ -16213,6 +16219,12 @@
       "name": "Xops Finance",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/xops-finance/logo.webp",
       "url": ""
+    },
+    {
+      "id": "xoxno-aggregator",
+      "name": "XOXNO Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/xoxno-aggregator/logo.webp",
+      "url": "https://xoxno.com"
     },
     {
       "id": "xpress-protocol",
