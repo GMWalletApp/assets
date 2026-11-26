@@ -3591,6 +3591,12 @@
       "url": "https://curve.finance"
     },
     {
+      "id": "curve-stellar",
+      "name": "Curve Stellar",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/curve-stellar/logo.webp",
+      "url": "https://stellar.curve.finance"
+    },
+    {
       "id": "cyberblast-v2",
       "name": "Cyberblast V2",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/cyberblast-v2/logo.webp",
@@ -10935,6 +10941,12 @@
       "url": ""
     },
     {
+      "id": "picoswap-aggregator",
+      "name": "PicoSwap Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/picoswap-aggregator/logo.webp",
+      "url": "https://app.picoswap.xyz"
+    },
+    {
       "id": "picwe",
       "name": "PICWE",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/picwe/logo.webp",
@@ -14679,6 +14691,12 @@
       "url": "https://thena.fi/"
     },
     {
+      "id": "theorem",
+      "name": "Theorem",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/theorem/logo.webp",
+      "url": ""
+    },
+    {
       "id": "thetaswap",
       "name": "ThetaSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/thetaswap/logo.webp",
@@ -15714,6 +15732,12 @@
       "id": "voltswap",
       "name": "VoltSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/voltswap/logo.webp",
+      "url": "https://voltswap.finance"
+    },
+    {
+      "id": "voltswap-aggregator",
+      "name": "VoltSwap Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/voltswap-aggregator/logo.webp",
       "url": "https://voltswap.finance"
     },
     {
