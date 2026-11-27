@@ -2679,6 +2679,12 @@
       "url": ""
     },
     {
+      "id": "carbium",
+      "name": "Carbium",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/carbium/logo.webp",
+      "url": "https://carbium.sh/quote"
+    },
+    {
       "id": "carbon-defi",
       "name": "Carbon Defi",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/carbon-defi/logo.webp",
@@ -5995,6 +6001,12 @@
       "name": "GuacSwap",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/guacswap/logo.webp",
       "url": "https://guacamole.gg"
+    },
+    {
+      "id": "guanaco",
+      "name": "Guanaco",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/guanaco/logo.webp",
+      "url": ""
     },
     {
       "id": "gullnetwork-amm",
@@ -11685,6 +11697,18 @@
       "url": "https://rarichain.org/"
     },
     {
+      "id": "ravn-bridge-aggregator",
+      "name": "RAVN Bridge Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ravn-bridge-aggregator/logo.webp",
+      "url": "https://ravn.exchange"
+    },
+    {
+      "id": "ravn-dex-aggregator",
+      "name": "RAVN DEX Aggregator",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/ravn-dex-aggregator/logo.webp",
+      "url": "https://ravn.exchange"
+    },
+    {
       "id": "rawr-trade",
       "name": "Rawr Trade",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/rawr-trade/logo.webp",
@@ -15738,7 +15762,7 @@
       "id": "voltswap-aggregator",
       "name": "VoltSwap Aggregator",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/voltswap-aggregator/logo.webp",
-      "url": "https://voltswap.finance"
+      "url": "https://voltswap.org/"
     },
     {
       "id": "voltswap-v2",
