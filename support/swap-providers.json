@@ -6009,6 +6009,12 @@
       "url": ""
     },
     {
+      "id": "guave",
+      "name": "Guave",
+      "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/guave/logo.webp",
+      "url": ""
+    },
+    {
       "id": "gullnetwork-amm",
       "name": "GullNetwork AMM",
       "logoURI": "https://raw.githubusercontent.com/GMWalletApp/assets/main/support/swap-providers/gullnetwork-amm/logo.webp",
